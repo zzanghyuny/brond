@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+:root{
+  --paper:#FFFFFF;
+  --ink:#111111;
+  --ink-soft:#555555;
+  --ink-faint:#8A8A8A;
+  --hair:#E3E3E3;
+  --soft-bg:#FAFAFA;
+}
+
+*{ box-sizing:border-box; }
+html{ background:var(--paper); }
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Nanum Gothic','Malgun Gothic','Apple SD Gothic Neo',sans-serif;
+  line-height:1.8;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{ background:#111; color:#fff; }
+a{ color:var(--ink); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+a:focus-visible, button:focus-visible{ outline:2px solid var(--ink); outline-offset:2px; }
+
+.wrap{ max-width:700px; margin:0 auto; padding:0 24px; }
+
+h1,h2,h3{ font-family:'Nanum Gothic',sans-serif; font-weight:800; color:var(--ink); margin:0; text-wrap:balance; }
+b, strong{ font-weight:800; }
+
+.hairline{ height:1px; background:var(--hair); }
+
+/* ---- site header / nav (site-wide pages, not individual posts) ---- */
+.site-header{ padding:20px 0; }
+.site-header .sh-row{ display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.brand{ display:flex; align-items:center; gap:10px; font-weight:800; font-size:18px; color:var(--ink); }
+.brand .mark{
+  width:30px; height:30px; border-radius:50%; background:var(--ink); color:#fff;
+  display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; flex:none;
+}
+.site-nav{ display:flex; gap:22px; flex-wrap:wrap; }
+.site-nav a{ font-size:14.5px; color:var(--ink-soft); font-weight:700; }
+.site-nav a:hover{ color:var(--ink); }
+
+/* ---- hero ---- */
+.hero{ padding:34px 0 30px; }
+.hero h1{ font-size:clamp(24px,4.4vw,32px); line-height:1.42; }
+.hero p{ color:var(--ink-soft); font-size:15.5px; margin:14px 0 0; }
+
+/* ---- post list / cards ---- */
+.section-title{ font-size:15px; color:var(--ink-faint); letter-spacing:.02em; padding:30px 0 4px; }
+.post-list{ padding:10px 0 40px; display:flex; flex-direction:column; }
+.post-card{ display:block; padding:22px 0; border-top:1px solid var(--hair); }
+.post-card:hover{ text-decoration:none; }
+.post-card:hover .post-title{ text-decoration:underline; }
+.post-card .post-tag{ font-size:12px; color:var(--ink-faint); border:1px solid var(--hair); border-radius:5px; padding:3px 8px; display:inline-block; }
+.post-title{ font-size:18px; font-weight:800; margin:10px 0 6px; line-height:1.5; }
+.post-excerpt{ font-size:14.5px; color:var(--ink-soft); margin:0; }
+.post-meta{ font-size:13px; color:var(--ink-faint); margin-top:8px; }
+
+.placeholder-card{ padding:40px 0; text-align:center; color:var(--ink-faint); font-size:14.5px; border-top:1px solid var(--hair); }
+
+/* ---- generic content page (about / privacy / contact) ---- */
+.page{ padding:36px 0 60px; }
+.page h1{ font-size:26px; margin-bottom:8px; }
+.page .page-sub{ color:var(--ink-faint); font-size:14px; margin:0 0 26px; }
+.page section{ padding:26px 0; }
+.page section + section{ border-top:1px solid var(--hair); }
+.page h2{ font-size:17px; margin-bottom:10px; }
+.page p{ margin:12px 0; color:var(--ink); }
+.page ul.plain{ margin:12px 0; padding-left:22px; }
+.page ul.plain li{ margin:8px 0; }
+
+/* ---- contact ---- */
+.contact-card{ border:1px solid var(--hair); padding:22px 20px; margin-top:10px; }
+.contact-card .row{ display:flex; gap:14px; padding:8px 0; border-bottom:1px solid var(--hair); font-size:15px; }
+.contact-card .row:last-child{ border-bottom:none; }
+.contact-card .row dt{ flex:0 0 96px; font-weight:700; color:var(--ink); }
+.contact-card .row dd{ margin:0; color:var(--ink); }
+
+footer{ padding:30px 0 60px; }
+footer .wrap{ border-top:1px solid var(--hair); padding-top:22px; }
+footer p{ font-size:12.5px; color:var(--ink-faint); line-height:1.8; margin:4px 0; }
+footer a{ color:var(--ink-faint); text-decoration:underline; }
+
+@media (max-width:520px){
+  .site-nav{ gap:14px; }
+}

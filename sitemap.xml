@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 도메인이 정해지면 아래 YOUR-DOMAIN-HERE.com을 실제 도메인으로 바꿔주세요.
+     새 포스팅을 추가할 때마다 <url> 블록을 하나씩 추가하면 됩니다. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://YOUR-DOMAIN-HERE.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN-HERE.com/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN-HERE.com/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN-HERE.com/privacy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <!-- 새 포스팅 예시:
+  <url>
+    <loc>https://YOUR-DOMAIN-HERE.com/posts/geomam-prugio-pravenue.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  -->
+</urlset>
