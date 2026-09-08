@@ -35,11 +35,9 @@ b, strong{ font-weight:800; }
 /* ---- site header / nav (site-wide pages, not individual posts) ---- */
 .site-header{ padding:20px 0; }
 .site-header .sh-row{ display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
-.brand{ display:flex; align-items:center; gap:10px; font-weight:800; font-size:18px; color:var(--ink); }
-.brand .mark{
-  width:30px; height:30px; border-radius:50%; background:var(--ink); color:#fff;
-  display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; flex:none;
-}
+.brand{ display:flex; align-items:baseline; font-size:19px; letter-spacing:-.01em; }
+.brand .b{ font-weight:800; color:var(--ink); }
+.brand .rest{ font-weight:400; color:var(--ink-soft); }
 .site-nav{ display:flex; gap:22px; flex-wrap:wrap; }
 .site-nav a{ font-size:14.5px; color:var(--ink-soft); font-weight:700; }
 .site-nav a:hover{ color:var(--ink); }
