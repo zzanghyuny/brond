@@ -97,3 +97,37 @@ footer a{ color:var(--ink-faint); text-decoration:underline; }
 @media (max-width:520px){
   .site-nav{ gap:14px; }
 }
+
+/* ---- 포스팅 피드 (미리보기 일부 + 흐림 효과, 더보기 페이지네이션) ---- */
+.feed-list{ display:flex; flex-direction:column; }
+.feed-card{ display:block; padding:26px 0; border-top:1px solid var(--hair); }
+.feed-card:hover{ text-decoration:none; }
+.feed-card:hover .post-title{ text-decoration:underline; }
+.feed-card .post-tag{ font-size:12px; color:var(--ink-faint); border:1px solid var(--hair); border-radius:5px; padding:3px 8px; display:inline-block; }
+.feed-card .post-title{ font-size:18px; font-weight:800; margin:10px 0 4px; line-height:1.5; }
+.feed-card .post-meta{ font-size:13px; color:var(--ink-faint); margin:0; }
+.feed-preview{
+  position:relative;
+  max-height:120px;
+  overflow:hidden;
+  margin-top:12px;
+  font-size:14.5px;
+  color:var(--ink-soft);
+  line-height:1.75;
+}
+.feed-preview p{ margin:0 0 10px; }
+.feed-fade{
+  position:absolute; left:0; right:0; bottom:0; height:64px;
+  background:linear-gradient(to bottom, rgba(255,255,255,0), var(--paper));
+  pointer-events:none;
+}
+.feed-more{ display:inline-block; margin-top:14px; font-size:13.5px; font-weight:700; color:var(--ink-faint); }
+.feed-card:hover .feed-more{ color:var(--ink); }
+
+.load-more-wrap{ padding:10px 0 30px; text-align:center; }
+.load-more-btn{
+  display:inline-block; padding:11px 26px; border:1px solid var(--hair);
+  background:var(--paper); color:var(--ink); font-size:13.5px; font-weight:700;
+  border-radius:999px; cursor:pointer; font-family:inherit;
+}
+.load-more-btn:hover{ background:var(--soft-bg); }
