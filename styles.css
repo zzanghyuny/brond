@@ -60,6 +60,17 @@ b, strong{ font-weight:800; }
 
 .placeholder-card{ padding:40px 0; text-align:center; color:var(--ink-faint); font-size:14.5px; border-top:1px solid var(--hair); }
 
+/* ---- home category tiles ---- */
+.cat-grid{ padding:10px 0 40px; display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--hair); border:1px solid var(--hair); }
+.cat-card{ display:block; background:var(--paper); padding:26px 22px; }
+.cat-card:hover{ text-decoration:none; background:var(--soft-bg); }
+.cat-card:hover .cat-name{ text-decoration:underline; }
+.cat-name{ font-size:17px; font-weight:800; color:var(--ink); }
+.cat-desc{ font-size:13.5px; color:var(--ink-soft); margin:8px 0 0; line-height:1.6; }
+@media (max-width:520px){
+  .cat-grid{ grid-template-columns:1fr; }
+}
+
 /* ---- generic content page (about / privacy / contact) ---- */
 .page{ padding:36px 0 60px; }
 .page h1{ font-size:26px; margin-bottom:8px; }
