@@ -12,6 +12,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://www.brandongsan.com/posts/jeongja-thesharp-bundanghighest.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.brandongsan.com/posts/geomam-prugio-pravenue.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
