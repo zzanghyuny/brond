@@ -19,6 +19,19 @@
 
 const POSTS = [
   {
+    id: "brand-is-not-the-hero",
+    category: "brand",
+    tag: "브랜드 언박싱 No.001",
+    title: "브랜드가 사라져야 광고가 산다 — 나이키부터 아파트 광고까지, 좋은 광고 12편의 공통점",
+    date: "2026-09-13",
+    dateLabel: "2026. 9. 13",
+    url: "posts/brand-is-not-the-hero.html",
+    preview: `
+      <p>좋은 광고를 보고 나면 브랜드보다 그 안의 사람이 먼저 떠오를 때가 있다. 나이키·도브·애플·에어비앤비·코카콜라 등 유명 광고 5편에서 원칙을 먼저 확인하고, 그 원칙을 코르코란·스테이지·KCC건설 스위첸 등 부동산 광고 7편에 적용해봤다.</p>
+      <p>Brand = Hero가 아니라 Customer = Hero, Brand = Guide — 광고가 끝난 뒤 "이 브랜드 좋다"가 아니라 "나도 저렇게 살고 싶다"가 남는 광고들의 공통점.</p>
+    `
+  },
+  {
     id: "jeongja-thesharp-bundanghighest",
     category: "realestate",
     tag: "청약 언박싱 No.003",

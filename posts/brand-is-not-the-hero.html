@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>브랜드가 사라져야 광고가 산다</title>
+<meta name="description" content="브동산 브랜드이야기 — 나이키·도브·애플부터 부동산 광고 7편, KCC건설 스위첸 '문명의 충돌'까지. 브랜드가 아니라 사람을 주인공으로 세운 12편의 광고에서 발견한 공통점.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+  :root{
+    --paper:#FFFFFF;
+    --ink:#111111;
+    --ink-soft:#555555;
+    --ink-faint:#8A8A8A;
+    --hair:#E3E3E3;
+    --soft-bg:#FAFAFA;
+  }
+
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Nanum Gothic','Malgun Gothic','Apple SD Gothic Neo',sans-serif;
+    line-height:1.8;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{ background:#111; color:#fff; }
+  a{ color:var(--ink); }
+  a:focus-visible, button:focus-visible, input:focus-visible{ outline:2px solid var(--ink); outline-offset:2px; }
+
+  .wrap{ max-width:700px; margin:0 auto; padding:0 24px; }
+
+  h1,h2,h3{ font-family:'Nanum Gothic',sans-serif; font-weight:800; color:var(--ink); margin:0; text-wrap:balance; }
+  b, strong{ font-weight:800; }
+
+  .top-eyebrow{ padding:36px 0 0; }
+  .top-eyebrow .wrap{ color:var(--ink-faint); font-size:13px; letter-spacing:.02em; }
+
+  .brand-mark{ display:inline-block; font-size:15px; line-height:1; }
+  .brand-mark .bm-b{ font-weight:800; color:var(--ink); }
+  .brand-mark .bm-rest{ font-weight:400; color:var(--ink-soft); }
+
+  .titleblock{ padding:14px 0 22px; }
+  .titleblock h1{ font-size:clamp(24px,4.4vw,32px); line-height:1.42; font-weight:800; }
+
+  .byline{ display:flex; align-items:center; gap:10px; padding:6px 0 22px; flex-wrap:wrap; }
+  .byline .avatar{
+    width:30px; height:30px; border-radius:50%; background:var(--ink); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; flex:none;
+  }
+  .byline .who{ font-size:14.5px; font-weight:700; color:var(--ink); }
+  .byline .dot{ color:var(--hair); }
+  .byline .when{ font-size:13.5px; color:var(--ink-faint); }
+  .byline .tag{ margin-left:auto; font-size:12px; color:var(--ink-faint); border:1px solid var(--hair); border-radius:5px; padding:3px 8px; }
+
+  .hairline{ height:1px; background:var(--hair); }
+
+  .cover{ margin:26px 0; border-radius:2px; overflow:hidden; position:relative; height:220px; background:var(--soft-bg); }
+  .cover img{ width:100%; height:220px; object-fit:cover; object-position:center 30%; display:block; }
+  .cover-cap{ font-size:12px; color:var(--ink-faint); margin-top:8px; }
+
+  .content{ padding:30px 0 10px; }
+  section{ padding:38px 0; }
+  section + section{ border-top:1px solid var(--hair); }
+
+  h2{ font-size:21px; margin-bottom:16px; }
+  h3{ font-size:16.5px; margin:22px 0 10px; }
+  p{ margin:14px 0; }
+  .lede{ color:var(--ink); }
+
+  .case{ padding:22px 0; }
+  .case + .case{ border-top:1px solid var(--hair); }
+  .case .kicker{ font-size:12px; color:var(--ink-faint); font-weight:800; letter-spacing:.03em; }
+  .case h3{ margin:6px 0 4px; }
+  .case .sub{ font-size:13.5px; color:var(--ink-soft); margin-bottom:10px; }
+  .case p{ font-size:14.5px; }
+
+  .checklist{ border:1px solid var(--hair); padding:20px 22px; margin:18px 0; }
+  .checklist ol{ margin:0; padding-left:20px; }
+  .checklist li{ margin:10px 0; font-size:14.5px; }
+  .checklist li::marker{ color:var(--ink); font-weight:800; }
+
+  .note{ font-size:13px; color:var(--ink-faint); margin-top:8px; }
+
+  .photo-block{ margin:16px 0 4px; }
+  .photo-block img{ border:1px solid var(--hair); }
+
+  .sponsor{ border:1px solid var(--ink); padding:22px 20px; }
+  .sponsor-top{ display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; }
+  .ad-badge{ font-size:11px; font-weight:800; letter-spacing:.06em; border:1px solid var(--ink); padding:2px 8px; }
+  .sponsor-note{ font-size:11.5px; color:var(--ink-faint); }
+  .ad-apply{ margin-top:6px; padding-top:6px; display:flex; align-items:center; justify-content:space-between; gap:12px 16px; flex-wrap:wrap; }
+  .ad-apply-text{ font-size:13px; color:var(--ink-soft); }
+  .ad-apply-actions{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .btn-outline{ font-family:'Nanum Gothic'; font-weight:800; font-size:12.5px; background:transparent; color:var(--ink); border:1px solid var(--ink); padding:7px 14px; cursor:pointer; text-decoration:none; display:inline-block; }
+  .ad-email-copy{ display:inline-flex; align-items:center; gap:6px; font-size:12.5px; color:var(--ink-soft); }
+  .ad-email-copy code{ font-family:inherit; background:#F5F5F5; padding:3px 7px; border:1px solid var(--hair); }
+  .copy-btn{ font-family:'Nanum Gothic'; font-weight:700; font-size:11.5px; background:none; border:1px solid var(--hair); color:var(--ink-soft); padding:3px 8px; cursor:pointer; }
+  .copy-btn.copied{ border-color:var(--ink); color:var(--ink); }
+
+  footer{ padding:34px 0 60px; }
+  footer p{ font-size:12.5px; color:var(--ink-faint); line-height:1.8; }
+</style>
+</head>
+<body>
+<div class="top-eyebrow"><div class="wrap"><span class="brand-mark"><span class="bm-b">브</span><span class="bm-rest">동산</span></span></div></div>
+
+<div class="wrap">
+  <div class="titleblock">
+    <h1>브랜드가 사라져야 광고가 산다 — 나이키부터 아파트 광고까지, 좋은 광고 12편의 공통점</h1>
+  </div>
+  <div class="byline">
+    <span class="avatar">브</span>
+    <span class="who">브동산</span>
+    <span class="dot">·</span>
+    <span class="when">2026. 9. 13</span>
+    <span class="tag">브랜드 언박싱 No.001</span>
+  </div>
+</div>
+<div class="hairline"></div>
+
+<div class="wrap content">
+
+  <div class="cover">
+    <img src="images/brand-is-not-the-hero/nike-find-your-greatness.jpg" alt="Nike Find Your Greatness 캠페인 'Jogger' 편 — 평범한 소년이 새벽길을 달리는 장면" style="width:100%;display:block;">
+  </div>
+  <div class="cover-cap">이미지: Nike 'Find Your Greatness — Jogger' 캠페인 화면 캡처</div>
+
+  <section id="s1">
+    <p class="lede">광고를 만든 회사는 자기 브랜드의 장점을 열심히 이야기했는데, 정작 광고가 끝나고 나면 무슨 이야기를 했는지 기억이 잘 나지 않을 때가 있다. 반대로 제품이나 브랜드 설명은 거의 없었는데, 이상하게 한 사람의 표정·한 장면·하나의 감정이 오래 남는 광고도 있다.</p>
+    <p>이 차이는 어디서 올까 — 이번 글에서는 <b>"이 광고에서 진짜 주인공은 누구인가"</b>라는 질문 하나로, 먼저 나이키·도브·애플 등 유명 브랜드 광고 5편을 보고, 그다음 이 원칙을 부동산 광고 7편에 적용해봤다. 마지막은 국내 사례인 KCC건설 스위첸의 '문명의 충돌'로 마무리한다.</p>
+    <p class="note">이 글은 브동산이 광고를 공부하며 남기는 브랜드 언박싱 시리즈의 첫 번째 글이다. 좋은 사례를 발견할 때마다 새 글로 이어갈 예정이다.</p>
+  </section>
+
+  <section id="s2">
+    <h2>PART 1. 유명 브랜드 광고 5편 — 브랜드가 뒤로 물러나는 순간</h2>
+    <p>먼저 대형 브랜드 사례로 원칙을 확인한다. 다섯 편 모두 제품 스펙이나 회사 자랑 대신, 보는 사람의 감정과 삶의 한 장면을 앞에 세운다.</p>
+
+    <div class="case">
+      <div class="kicker">01</div>
+      <h3>Nike — Find Your Greatness</h3>
+      <div class="sub">브랜드가 아니라 '나의 가능성'을 주인공으로 만드는 법</div>
+      <p><b>무슨 광고인가.</b> 2012년 런던 올림픽 시기에 나온 캠페인. 대표 편인 'Jogger'에서는 세계적인 선수 대신 평범한 소년이 어두운 새벽길을 천천히 달려온다. 운동화의 기능 설명은 없다.</p>
+      <p><b>왜 인상적인가.</b> Nike가 하는 말은 "Nike가 얼마나 대단한가"가 아니라 "당신도 당신만의 위대함을 가질 수 있다"이다. Nike의 광고인데 Nike가 주인공이 아니라, 달리는 사람이 주인공이고 Nike는 그 가능성을 믿게 해주는 조력자에 가깝다. Brand → Hero가 아니라 Customer → Hero, Brand → Guide 구조다.</p>
+      <div class="photo-block">
+        <img src="images/brand-is-not-the-hero/nike-find-your-greatness.jpg" alt="Nike Find Your Greatness Jogger 편 화면" style="width:100%;display:block;">
+      </div>
+      <div class="cover-cap">이미지: Nike 캠페인 화면 캡처 — <a href="https://www.youtube.com/watch?v=Tz2643pkb6k" target="_blank" rel="noopener">캠페인 영상 ↗</a></div>
+    </div>
+
+    <div class="case">
+      <div class="kicker">02</div>
+      <h3>Dove — Real Beauty Sketches</h3>
+      <div class="sub">브랜드가 말하지 않고, 소비자가 스스로 깨닫게 만드는 광고</div>
+      <p><b>무슨 광고인가.</b> 여성에게 자기 얼굴을 직접 설명하게 하고, 법의학 몽타주 전문가가 그 설명만으로 얼굴을 그린다. 이어서 같은 사람을 본 다른 사람의 설명으로 다시 그린 그림과 비교하면 상당한 차이가 난다.</p>
+      <p><b>왜 인상적인가.</b> Dove는 비누나 화장품의 성능을 이야기하지 않는다. "나는 나 자신을 너무 부정적으로 보고 있었던 건 아닐까"라는 자각의 순간 자체가 광고의 클라이맥스다. 소비자에게 설명하는 광고가 아니라, 소비자가 스스로 깨닫게 하는 광고다.</p>
+      <div class="photo-block">
+        <img src="images/brand-is-not-the-hero/dove-real-beauty-sketches.jpg" alt="Dove Real Beauty Sketches 캠페인 화면" style="width:100%;display:block;">
+      </div>
+      <div class="cover-cap">이미지: Dove 캠페인 화면 캡처 — <a href="https://www.dove.com/us/en/campaigns/purpose/real-beauty-sketches.html" target="_blank" rel="noopener">Dove 공식 캠페인 페이지 ↗</a></div>
+    </div>
+
+    <div class="case">
+      <div class="kicker">03</div>
+      <h3>Apple — Shot on iPhone</h3>
+      <div class="sub">제품이 아니라 사용자의 결과물을 전시하다</div>
+      <p><b>무슨 광고인가.</b> iPhone 카메라의 화질을 설명하는 대신, 사람들이 iPhone으로 찍은 사진을 광고판에 그대로 건다. 사진을 찍은 사람도, 창작한 사람도 Apple이 아니라 사용자다. Apple은 실제로 사용자 사진에 사용료를 지급하는 방식까지 공식적으로 운영해왔다.</p>
+      <p><b>왜 인상적인가.</b> "우리 카메라는 좋습니다"가 아니라 "이 사람들이 이것을 만들었습니다"로 광고의 구조가 바뀐다. 제품이 사라진 게 아니라, 제품으로 무언가를 만들어낸 사람이 주인공 자리를 가져간다.</p>
+      <div class="photo-block">
+        <img src="images/brand-is-not-the-hero/apple-shot-on-iphone.jpg" alt="Apple Shot on iPhone 옥외광고 캠페인 화면" style="width:100%;display:block;">
+      </div>
+      <div class="cover-cap">이미지: Apple 캠페인 화면 캡처 — <a href="https://www.apple.com/newsroom/2019/01/share-your-best-photos-shot-on-iphone/" target="_blank" rel="noopener">Apple Newsroom ↗</a></div>
+    </div>
+
+    <div class="case">
+      <div class="kicker">04</div>
+      <h3>Airbnb — Belong Anywhere</h3>
+      <div class="sub">숙박을 파는 대신 '소속감'을 이야기하다</div>
+      <p><b>무슨 광고인가.</b> 좋은 숙소·편리한 예약·다양한 지역·합리적인 가격을 말할 법한데, Airbnb는 "Belong Anywhere"를 내세운다. 어디를 여행하느냐보다 그곳에서 내가 어떤 느낌을 받느냐에 초점을 맞춘다. Airbnb는 공식적으로도 자신의 미션을 "help people belong anywhere"라고 설명한다.</p>
+      <p><b>왜 인상적인가.</b> 집은 상품이지만 광고의 주인공은 소속감과 사람 사이의 연결이다. Product → Experience로 넘어가는 순간 광고가 다루는 이야기의 크기가 달라진다.</p>
+      <div class="photo-block">
+        <img src="images/brand-is-not-the-hero/airbnb-belong-anywhere.jpg" alt="Airbnb Live There 캠페인 화면" style="width:100%;display:block;">
+      </div>
+      <div class="cover-cap">이미지: Airbnb 캠페인 화면 캡처 — <a href="https://news.airbnb.com/our-continued-commitment-to-inclusive-travel" target="_blank" rel="noopener">Airbnb Newsroom ↗</a></div>
+    </div>
+
+    <div class="case">
+      <div class="kicker">05</div>
+      <h3>Coca-Cola — Share a Coke</h3>
+      <div class="sub">로고를 앞세우는 대신 '나와 너의 관계'를 앞세우다</div>
+      <p><b>무슨 광고인가.</b> 2011년 호주에서 시작된 캠페인. 콜라병의 Coca-Cola 로고 대신 사람들의 이름을 넣어, 친구나 사랑하는 사람과 콜라를 나누고 추억을 만드는 행동을 캠페인의 중심에 놓았다.</p>
+      <p><b>왜 인상적인가.</b> 광고의 주인공은 Coca-Cola가 아니라 "누구에게 이 콜라를 건넬 것인가"다. 제품은 "우리 콜라는 맛있습니다"를 말하는 대신, 사람과 사람을 이어주는 매개체가 된다.</p>
+      <div class="photo-block">
+        <img src="images/brand-is-not-the-hero/cocacola-share-a-coke.jpg" alt="Coca-Cola Share a Coke 캠페인 화면" style="width:100%;display:block;">
+      </div>
+      <div class="cover-cap">이미지: Coca-Cola 캠페인 화면 캡처 — <a href="https://www.coca-cola.com/xe/en/media-center/share-a-coke" target="_blank" rel="noopener">Coca-Cola 공식 자료 ↗</a></div>
+    </div>
+
+    <p class="note">다섯 사례를 나란히 놓고 보면 패턴이 보인다. Nike(운동화)는 나의 가능성을, Dove(뷰티 제품)는 나 자신에 대한 인식을, Apple(iPhone)은 사용자의 창작물을, Airbnb(숙박)는 소속감을, Coca-Cola(음료)는 사람과 사람의 관계를 진짜 주인공으로 세운다. "Look at us"(우리가 얼마나 좋은지 보세요)가 아니라 "Look at you"(당신은 어떤 사람인가)를 이야기하는 것이다.</p>
+  </section>
+
+  <section id="s3">
+    <h2>PART 2. 부동산 광고 7편 — 같은 원칙, 집이라는 무대</h2>
+    <p>부동산은 특히 상품 중심으로 흘러가기 쉬운 카테고리다. 역세권·대단지·조경·커뮤니티·마감재·평면·프리미엄 라이프 — 전부 중요한 이야기지만, 좋은 주거 광고는 한 단계 더 나아가 "그래서 여기에서 사람들은 어떻게 살게 되는가"를 묻는다.</p>
+
+    <div class="case">
+      <div class="kicker">01</div>
+      <h3>Corcoran — Live Who You Are</h3>
+      <div class="sub">집을 '거래 대상'에서 '나를 표현하는 공간'으로 바꾼 사례</div>
+      <p><b>무슨 광고인가.</b> 미국 부동산 회사 Corcoran이 2005년 시작한 캠페인으로, Tina Barney·Annie Leibovitz 등 유명 사진가와 작업했다. 집의 면적이나 자재를 보여주는 대신, 그 집에서 살아가는 사람이 어떤 사람인지를 보여준다. "House → Identity"로 바꾼 것이다.</p>
+      <p><b>왜 인상적인가.</b> 한 줄로 정리하면 "What does your home say about you?" — 부동산 광고가 상품 광고에서 자기표현의 광고로 넘어간 사례다.</p>
+      <div class="photo-block">
+        <img src="images/brand-is-not-the-hero/corcoran-live-who-you-are.jpg" alt="Corcoran Live Who You Are 캠페인 화면" style="width:100%;display:block;">
+      </div>
+      <div class="cover-cap">이미지: Corcoran 캠페인 화면 캡처 — <a href="https://view.ceros.com/corcoran/live-who-you-are-7-1-11" target="_blank" rel="noopener">Corcoran Brand Archive ↗</a></div>
+    </div>
+
+    <div class="case">
+      <div class="kicker">02</div>
+      <h3>Stage Apartments — The Stage is Yours</h3>
+      <div class="sub">집을 주인공이 아니라 '삶의 무대'로 정의하다</div>
+      <p><b>무슨 광고인가.</b> LA 다운타운의 주거 프로젝트로, 브랜드 매니페스토는 "Life is a drama, and we are all actors in it"에서 출발한다. House는 물리적 공간, Home은 감정이며, 집은 우리의 삶·가치·욕망을 펼치는 무대라는 것이다. 최종 메시지는 "The Stage is yours."</p>
+      <p><b>왜 인상적인가.</b> Brand = Stage, Customer = Actor. 브랜드가 주인공 자리를 아예 포기한 사례다.</p>
+      <div class="photo-block">
+        <img src="images/brand-is-not-the-hero/stage-apartments.jpg" alt="Stage Apartments 브랜딩 옥외광고" style="width:100%;display:block;">
+      </div>
+      <div class="cover-cap">이미지: Stage Apartments 브랜딩 캠페인 화면 캡처 — <a href="https://www.behance.net/gallery/73166557/Stage-Apartments-Branding" target="_blank" rel="noopener">Behance ↗</a></div>
+    </div>
+
+    <div class="case">
+      <div class="kicker">03</div>
+      <h3>Echelon Seaport — It's not just where you live. It's how.</h3>
+      <div class="sub">주소보다 '어떻게 사는가'를 보여준 럭셔리 주거 캠페인</div>
+      <p><b>무슨 광고인가.</b> 보스턴 Seaport의 고급 주거 프로젝트. 캠페인의 질문은 "Where do you live?"가 아니라 "How do you live?"다. 전형적인 부동산 feature 언어 대신 패션 에디토리얼 같은 이미지와 사람 중심의 라이프스타일 이미지를 사용했다.</p>
+      <p><b>왜 인상적인가.</b> 주소를 파는 것이 아니라 "어떤 방식으로 살아가는 사람인가"를 판다. feature-driven real estate language를 lifestyle-driven storytelling으로 바꾼 사례다.</p>
+      <div class="photo-block">
+        <img src="images/brand-is-not-the-hero/echelon-seaport.jpg" alt="Echelon Seaport 주거 프로젝트 화면" style="width:100%;display:block;">
+      </div>
+      <div class="cover-cap">이미지: Echelon Seaport 프로젝트 화면 캡처 — <a href="https://www.adamsdesignboston.com/projects/branding-echelon-seaport-boston/" target="_blank" rel="noopener">Adams Design Boston ↗</a></div>
+    </div>
+
+    <div class="case">
+      <div class="kicker">04</div>
+      <h3>Mahindra Lifespaces — Crafting Life</h3>
+      <div class="sub">'건물을 짓는다'에서 '삶을 만든다'로</div>
+      <p><b>무슨 광고인가.</b> 인도 부동산 브랜드 Mahindra Lifespaces의 캠페인. 이름부터 "Crafting Life" — 집을 짓는다는 이야기가 아니라 삶을 만들어간다는 이야기다. "우리가 좋은 건물을 지었습니다"가 아니라 "사람들이 좋은 삶을 만들어갈 수 있는 기반을 만듭니다"로 개발사의 역할이 바뀐다.</p>
+      <p><b>왜 인상적인가.</b> Building → Life 구조. 건축물이 목적이 아니라, 건축물이 만들어주는 삶의 결과가 목적이다.</p>
+      <div class="photo-block">
+        <img src="images/brand-is-not-the-hero/mahindra-crafting-life.jpg" alt="Mahindra Lifespaces Crafting Life 캠페인 화면" style="width:100%;display:block;">
+      </div>
+      <div class="cover-cap">이미지: Mahindra Lifespaces 캠페인 화면 캡처 — <a href="https://www.mahindra.com/news-room/press-release/en/mahindra-lifespaces-announces-crafting-life-campaigns" target="_blank" rel="noopener">Mahindra 공식 발표 ↗</a></div>
+    </div>
+
+    <div class="case">
+      <div class="kicker">05</div>
+      <h3>Alcinos Residencial — Stories Without Limits</h3>
+      <div class="sub">공간이 아니라 '집에서 벌어지는 이야기'를 먼저 보여주다</div>
+      <p><b>무슨 광고인가.</b> 여러 개의 에피소드로 가족의 일상을 보여주는 콘텐츠 시리즈. 아이들이 놀고, 가족이 대화하고, 함께 시간을 보내는 모습이 이어지는데 집의 장점은 굳이 설명하지 않는다.</p>
+      <p><b>왜 인상적인가.</b> "이 집에는 이런 공간이 있습니다"가 아니라 "이 집에서는 이런 일이 일어납니다"가 된다. 공간이 먼저 나오는 것이 아니라, 그 공간에서 벌어지는 이야기가 먼저 나온다.</p>
+      <p class="note">자료: <a href="https://www.dvlfilmhouse.com/post/alcinos-residencial-building-a-campaign-where-home-becomes-a-story" target="_blank" rel="noopener">캠페인 제작사 설명 ↗</a> — 이 사례는 대표 이미지를 확인할 수 있는 공개 자료를 찾지 못해 이미지 없이 소개합니다.</p>
+    </div>
+
+    <div class="case">
+      <div class="kicker">06</div>
+      <h3>Seeff — Home is our Story</h3>
+      <div class="sub">에이전트 중심에서 고객 중심으로 '렌즈를 뒤집은' 사례</div>
+      <p><b>무슨 광고인가.</b> 남아프리카 부동산 회사 Seeff의 브랜드 리포지셔닝. 기존 부동산 광고가 "부동산 회사 → 고객"을 바라봤다면, 카메라를 뒤집어 "고객 → 고객의 이야기"를 바라보자는 것이다. 표현 그대로 "Turn the lens around."</p>
+      <p><b>왜 인상적인가.</b> 부동산 광고의 변화는 더 멋진 집을 보여주는 것이 아니라, 카메라의 방향을 바꾸는 것일 수도 있다는 것을 보여준다.</p>
+      <div class="photo-block">
+        <img src="images/brand-is-not-the-hero/seeff-home-is-our-story.jpg" alt="Seeff Home is our Story 캠페인 화면" style="width:100%;display:block;">
+      </div>
+      <div class="cover-cap">이미지: Seeff 캠페인 화면 캡처 — <a href="https://www.seeff.com/news/7-reasons-behind-seeff-richards-bays-success/" target="_blank" rel="noopener">Seeff 공식 ↗</a></div>
+    </div>
+
+    <div class="case">
+      <div class="kicker">07</div>
+      <h3>KCC건설 스위첸 — 문명의 충돌</h3>
+      <div class="sub">마지막에 남는 가장 강력한 국내 사례: 아파트가 아니라 '함께 사는 사람'을 보여주다</div>
+      <p><b>무슨 광고인가.</b> 2020년 공개된 '문명의 충돌'은 결혼 4년 차 젊은 부부의 이야기로 시작한다. 말투도, 식습관도, 생활패턴도, 집 안의 온도까지 다른 두 사람. KCC건설은 이를 "서로 다른 두 문명이 만나 생기게 되는 충돌"이라고 표현한다.</p>
+      <p><b>왜 인상적인가.</b> 아파트 광고인데 아파트가 거의 주인공이 아니다. 입지도, 평면도, 커뮤니티 시설도, 고급 마감재도 이야기하지 않는다. 대신 두 사람이 같이 살아가는 아주 사소한 일상을 보여주고, "가족이 된다는 것은 서로의 다른 문명에 부딪혀보고 이해하는 과정들의 반복"이라는 메시지를 남긴다. 이후 '문명의 충돌2 – 신문명의 출현'으로 이야기가 이어졌고, 대한민국광고대상 등 여러 광고제에서 수상했다.</p>
+      <div class="photo-block">
+        <img src="images/brand-is-not-the-hero/kcc-switzen-civilization-clash.jpg" alt="KCC건설 스위첸 문명의 충돌 광고 화면" style="width:100%;display:block;">
+      </div>
+      <div class="cover-cap">이미지: KCC건설 스위첸 '문명의 충돌' 광고 화면 캡처 — <a href="https://www.kccworld.net/promote/movieList.do?brdSeq=402597" target="_blank" rel="noopener">KCC World ↗</a></div>
+    </div>
+  </section>
+
+  <section id="s4">
+    <h2>마무리 — 결국 좋은 광고는 무엇을 보여주는가</h2>
+    <p>일반 브랜드에서 출발해 부동산 광고까지 따라가 보니, "브랜드가 주인공이 되지 않는다"는 말은 로고나 제품을 적게 보여주라는 뜻이 아니었다. Nike는 운동화를 말하기보다 가능성을, Dove는 화장품을 말하기보다 자기 인식을, Apple은 카메라를 말하기보다 사용자의 창작물을, Airbnb는 숙박을 말하기보다 소속감을 이야기했다. 부동산에서는 이 원칙이 더 명확해진다 — 집은 결국 사람이 살아가는 무대이기 때문이다.</p>
+    <p>Corcoran은 '내가 누구인지'를, Stage는 '내 삶의 무대'를, Echelon은 '어떻게 사는가'를, Mahindra는 '만들어가는 삶'을, Alcinos는 '가족의 이야기'를, Seeff는 '나의 집 이야기'를 보여준다. 그리고 스위첸의 '문명의 충돌'은 가장 일상적인 부부의 관계를 통해 '집'이라는 개념 자체를 다시 생각하게 만든다.</p>
+    <p>정리하면, 브랜드가 말하는 광고("Look at us")와 제품이 말하는 광고("Look at this")를 넘어, 가장 좋은 광고는 사람을 주인공으로 세운다("Look at you"). Brand = Hero가 아니라 Customer = Hero, Brand = Guide·Stage·Enabler가 되는 것이다. 광고가 끝난 뒤 "저 브랜드 참 대단하다"가 아니라 "저런 삶을 나도 살고 싶다"가 남는다면, 그 광고는 이미 성공한 셈이다.</p>
+
+    <h3>광고를 기획할 때 체크할 질문</h3>
+    <div class="checklist">
+      <ol>
+        <li>이 광고에서 진짜 주인공을 누구로 세울 것인가?</li>
+        <li>브랜드 이름을 빼도 이 이야기가 성립하도록 기획했는가?</li>
+        <li>제품 기능을 설명하기 전에, 그 제품이 바꿔줄 사람의 욕망·감정·관계부터 그렸는가?</li>
+        <li>브랜드를 Hero가 아니라 Guide·Stage·Enabler로 설계했는가?</li>
+        <li>광고가 끝난 뒤 "이 브랜드 좋다"가 아니라 "나도 저렇게 살고 싶다"가 남도록 만들었는가?</li>
+      </ol>
+    </div>
+    <p class="note">브동산이 앞으로 청약·분양 콘텐츠를 만들 때도 이 다섯 질문을 기획 기준으로 삼으려 한다 — 단지 자랑이 아니라, 그 집에서 만들어질 삶을 먼저 보여주는 방향으로. 이 시리즈는 계속 쌓입니다 — 다음 브랜드 언박싱에서 또 다른 사례로 이어집니다.</p>
+  </section>
+
+  <section id="ad">
+    <div class="sponsor">
+      <div class="sponsor-top">
+        <span class="ad-badge">AD · 광고</span>
+        <span class="sponsor-note">브동산 콘텐츠에 광고를 싣고 싶으신가요?</span>
+      </div>
+      <div class="ad-apply">
+        <span class="ad-apply-text">청약·분양 담당자, 브랜드 마케팅 담당자 모두 문의 가능합니다.</span>
+        <div class="ad-apply-actions">
+          <a class="btn-outline" href="mailto:0324jhkim@gmail.com?subject=%5B%EB%B8%8C%EB%8F%99%EC%82%B0%5D%20%EA%B4%91%EA%B3%A0%20%EB%AC%B8%EC%9D%98&body=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94%2C%20%EB%B8%8C%EB%8F%99%EC%82%B0%20%EA%B4%91%EA%B3%A0%20%EB%AC%B8%EC%9D%98%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4.%0A%0A%EC%97%85%EC%B2%B4%EB%AA%85%3A%20%0A%EC%97%B0%EB%9D%BD%EC%B2%98%3A%20%0A%EB%AC%B8%EC%9D%98%20%EB%82%B4%EC%9A%A9%3A%20">광고 신청하기</a>
+          <span class="ad-email-copy"><code id="ad-email">0324jhkim@gmail.com</code><button class="copy-btn" type="button" onclick="brdCopyEmail('ad-email', this)">복사</button></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="hairline" style="margin-bottom:20px;"></div>
+    <p>
+      본 콘텐츠는 <b>브동산</b>이 국내외에 공개된 광고 캠페인 사례를 참고해 정리한 스터디·인사이트 콘텐츠이며, 언급된 브랜드·캠페인·제작사와는 어떠한 제휴·협찬 관계도 없습니다. 각 사례의 사실관계는 해당 브랜드의 공식 자료 및 공개된 캠페인 소개를 기준으로 작성했으나, 이후 캠페인 내용이나 설명이 달라졌을 수 있습니다. 본문의 캠페인 화면 이미지는 각 사례를 소개·평가하는 목적으로 인용한 것이며, 저작권은 원 브랜드·제작사에 있습니다. 원본은 사례별 캡션의 링크에서 확인할 수 있습니다.
+    </p>
+  </div>
+</footer>
+
+<script>
+function brdCopyEmail(id, btn){
+  var text = document.getElementById(id).textContent;
+  function done(){
+    var orig = btn.textContent;
+    btn.textContent = '복사됨';
+    btn.classList.add('copied');
+    setTimeout(function(){ btn.textContent = orig; btn.classList.remove('copied'); }, 1500);
+  }
+  function fallbackCopy(){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch(e) {}
+    document.body.removeChild(ta);
+    done();
+  }
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+}
+</script>
+
+</body>
+</html>
