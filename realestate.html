@@ -28,30 +28,16 @@
 </div>
 
 <div class="wrap">
-  <div class="post-list">
-    <a class="post-card" href="posts/jeongja-thesharp-bundanghighest.html">
-      <span class="post-tag">청약 언박싱 No.003</span>
-      <div class="post-title">더샵 분당하이스트 | 정자역 리모델링 대장주, 84㎡ 25억대 청약의 적정가는</div>
-      <p class="post-excerpt">분당구 정자동, 리모델링 1,149세대 — 9월 22~23일 청약, 입지·상품·공급·적정가 분석까지.</p>
-      <div class="post-meta">2026. 9. 12</div>
-    </a>
-    <a class="post-card" href="posts/geomam-prugio-pravenue.html">
-      <span class="post-tag">청약 언박싱 No.001</span>
-      <div class="post-title">검암역 푸르지오 프라베뉴 | 더블역세권 공공분양, 접수 하루 전 청약 포인트</div>
-      <p class="post-excerpt">인천 서구 검암동 공공주택지구, 441세대 규모. 입지·상품·공급 분석까지.</p>
-      <div class="post-meta">2026. 8. 30</div>
-    </a>
-    <a class="post-card" href="posts/sangdong-lottecastle-signature.html">
-      <span class="post-tag">청약 언박싱 No.002</span>
-      <div class="post-title">상동역 롯데캐슬 시그니처 | 7호선 초역세권 대단지, 16억 국민평형의 청약 성적표</div>
-      <p class="post-excerpt">경기 부천 상동, 1,859세대 규모 — 청약 결과와 적정가 분석까지.</p>
-      <div class="post-meta">2026. 8. 27</div>
-    </a>
-    <!--
-      새 부동산 포스팅을 추가할 때는 이 자리에 .post-card 블록을 하나씩 더 추가하면 됩니다.
-    -->
-  </div>
+  <!--
+    새 부동산 포스팅을 추가할 때는 여기가 아니라 posts-data.js 파일에
+    객체 하나만 추가하면 됩니다 (category: "realestate"). 이 페이지는
+    자동으로 최신순 5개씩 보여주고, 미리보기 일부만 노출 후 흐려지는
+    효과와 "더보기" 버튼이 자동으로 적용됩니다.
+  -->
+  <div data-feed data-category="realestate" data-page-size="5" data-empty-text="첫 청약·분양 이야기를 준비 중입니다. 곧 만나보실 수 있어요."></div>
 </div>
+<script src="posts-data.js"></script>
+<script src="feed.js"></script>
 
 <footer>
   <div class="wrap">
