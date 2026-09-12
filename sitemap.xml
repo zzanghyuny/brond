@@ -12,6 +12,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://www.brandongsan.com/posts/sangdong-lottecastle-signature.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.brandongsan.com/brand.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
