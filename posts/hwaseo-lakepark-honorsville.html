@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>화서역 호수공원 아너스빌</title>
+<meta name="description" content="브동산 청약·분양 — 화서역 호수공원 아너스빌, 수원시 유일 비규제지역 서호공원 앞 476세대의 청약 포인트와 적정가 분석.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+  :root{
+    --paper:#FFFFFF;
+    --ink:#111111;
+    --ink-soft:#555555;
+    --ink-faint:#8A8A8A;
+    --hair:#E3E3E3;
+    --hair-strong:#111111;
+    --soft-bg:#FAFAFA;
+  }
+
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Nanum Gothic','Malgun Gothic','Apple SD Gothic Neo',sans-serif;
+    line-height:1.8;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{ background:#111; color:#fff; }
+  a{ color:var(--ink); }
+  a:focus-visible, button:focus-visible, input:focus-visible{ outline:2px solid var(--ink); outline-offset:2px; }
+
+  .wrap{ max-width:700px; margin:0 auto; padding:0 24px; }
+
+  h1,h2,h3{ font-family:'Nanum Gothic',sans-serif; font-weight:800; color:var(--ink); margin:0; text-wrap:balance; }
+  b, strong{ font-weight:800; }
+  .num{ font-variant-numeric:tabular-nums; }
+
+  /* ---- masthead / byline ---- */
+  .top-eyebrow{ padding:36px 0 0; }
+  .top-eyebrow .wrap{ color:var(--ink-faint); font-size:13px; letter-spacing:.02em; }
+
+  .brand-mark{ display:inline-block; font-size:15px; line-height:1; }
+  .brand-mark .bm-b{ font-weight:800; color:var(--ink); }
+  .brand-mark .bm-rest{ font-weight:400; color:var(--ink-soft); }
+
+  .titleblock{ padding:14px 0 22px; }
+  .titleblock h1{ font-size:clamp(26px,4.6vw,34px); line-height:1.42; font-weight:800; }
+
+  .byline{ display:flex; align-items:center; gap:10px; padding:6px 0 22px; flex-wrap:wrap; }
+  .byline .avatar{
+    width:30px; height:30px; border-radius:50%; background:var(--ink); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; flex:none;
+  }
+  .byline .who{ font-size:14.5px; font-weight:700; color:var(--ink); }
+  .byline .dot{ color:var(--hair); }
+  .byline .when{ font-size:13.5px; color:var(--ink-faint); }
+  .byline .tag{
+    margin-left:auto; font-size:12px; color:var(--ink-faint); border:1px solid var(--hair);
+    border-radius:5px; padding:3px 8px;
+  }
+
+  .hairline{ height:1px; background:var(--hair); }
+
+  /* ---- cover graphic (the one place color is allowed) ---- */
+  .cover{ margin:26px 0; border-radius:2px; overflow:hidden; position:relative; height:220px; }
+  .cover img{ width:100%; height:220px; object-fit:cover; object-position:center 40%; display:block; }
+  .cover svg{ width:100%; height:100%; display:block; }
+  .cover-cap{ font-size:12px; color:var(--ink-faint); margin-top:8px; }
+
+  /* ---- content rhythm ---- */
+  .content{ padding:30px 0 10px; }
+  section{ padding:38px 0; }
+  section + section{ border-top:1px solid var(--hair); }
+  .content > .hairline{ margin:0 0 0; }
+
+  h2{ font-size:21px; margin-bottom:16px; }
+  h3{ font-size:16.5px; margin:22px 0 10px; }
+  p{ margin:14px 0; }
+  .lede{ color:var(--ink); }
+
+  ul.plain{ margin:14px 0; padding-left:22px; }
+  ul.plain li{ margin:9px 0; }
+  ul.plain li::marker{ color:var(--ink); }
+
+  dl.spec{ margin:14px 0; }
+  dl.spec .row{ display:flex; gap:14px; padding:8px 0; border-bottom:1px solid var(--hair); font-size:15px; }
+  dl.spec .row dt{ flex:0 0 128px; font-weight:700; color:var(--ink); }
+  dl.spec .row dd{ margin:0; color:var(--ink); }
+
+  .quote{ border-left:3px solid var(--ink); padding:4px 0 4px 18px; margin:20px 0; }
+  .quote .qt{ font-weight:800; font-size:14.5px; margin-bottom:6px; }
+  .quote p{ margin:0; font-size:14.5px; color:var(--ink-soft); }
+
+  .tablewrap{ overflow-x:auto; margin:16px 0; }
+  table{ width:100%; border-collapse:collapse; min-width:460px; }
+  th,td{ text-align:left; padding:10px 12px; font-size:14.5px; border-bottom:1px solid var(--hair); }
+  thead th{ font-weight:800; border-bottom:2px solid var(--ink); }
+  td.figure, th.figure{ font-variant-numeric:tabular-nums; }
+  .note{ font-size:13px; color:var(--ink-faint); margin-top:8px; }
+
+  .bar-row{ display:grid; grid-template-columns:64px 1fr 56px; gap:12px; align-items:center; margin:10px 0; }
+  .bar-label{ font-size:13.5px; color:var(--ink-soft); }
+  .bar-track{ height:8px; background:#EFEFEF; }
+  .bar-fill{ height:100%; background:var(--ink); }
+  .bar-fill.dim{ background:#BBBBBB; }
+  .bar-val{ font-size:13.5px; text-align:right; font-variant-numeric:tabular-nums; }
+  .bar-val.dim{ color:var(--ink-faint); }
+
+  .stat-pair{ display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:18px 0; }
+  .stat-box{ border:1px solid var(--hair); padding:16px 18px; }
+  .stat-box .sk{ font-size:12.5px; color:var(--ink-faint); }
+  .stat-box .sv{ font-size:28px; font-weight:800; margin-top:4px; font-variant-numeric:tabular-nums; }
+  .stat-box .sbar{ height:6px; background:#EFEFEF; margin-top:12px; }
+  .stat-box .sbar > div{ height:100%; background:var(--ink); }
+  .delta{ display:inline-block; margin-top:14px; font-weight:800; font-size:13.5px; border-bottom:2px solid var(--ink); padding-bottom:2px; }
+
+  .split{ display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:16px 0; }
+  .split .box h3{ margin-top:0; }
+  .split ul.plain{ margin-top:8px; }
+
+  .sponsor{ border:1px solid var(--ink); padding:22px 20px; }
+  .sponsor-top{ display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; }
+  .ad-badge{ font-size:11px; font-weight:800; letter-spacing:.06em; border:1px solid var(--ink); padding:2px 8px; }
+  .sponsor-note{ font-size:11.5px; color:var(--ink-faint); }
+  .agent{ display:flex; gap:14px; align-items:center; flex-wrap:wrap; margin-top:16px; padding-top:16px; border-top:1px solid var(--hair); }
+  .agent .avatar{ width:46px; height:46px; border-radius:50%; background:var(--ink); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; flex:none; }
+  .agent-info{ flex:1; min-width:180px; }
+  .agent-info .name{ font-weight:800; font-size:15px; }
+  .agent-info .role{ font-size:12.5px; color:var(--ink-faint); }
+  .agent-info .desc{ font-size:13px; color:var(--ink-soft); margin-top:4px; }
+  .agent-side{ display:flex; flex-direction:column; align-items:flex-end; gap:8px; }
+  .agent-side .phone{ font-size:13px; color:var(--ink-soft); }
+  .btn{ font-family:'Nanum Gothic'; font-weight:800; font-size:13.5px; background:var(--ink); color:#fff; border:none; padding:9px 16px; cursor:pointer; }
+  .ad-apply{ margin-top:16px; padding-top:14px; border-top:1px dashed var(--hair); display:flex; align-items:center; justify-content:space-between; gap:12px 16px; flex-wrap:wrap; }
+  .ad-apply-text{ font-size:12.5px; color:var(--ink-faint); }
+  .ad-apply-actions{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .btn-outline{ font-family:'Nanum Gothic'; font-weight:800; font-size:12.5px; background:transparent; color:var(--ink); border:1px solid var(--ink); padding:7px 14px; cursor:pointer; text-decoration:none; display:inline-block; }
+  .ad-email-copy{ display:inline-flex; align-items:center; gap:6px; font-size:12.5px; color:var(--ink-soft); }
+  .ad-email-copy code{ font-family:inherit; background:#F5F5F5; padding:3px 7px; border:1px solid var(--hair); }
+  .copy-btn{ font-family:'Nanum Gothic'; font-weight:700; font-size:11.5px; background:none; border:1px solid var(--hair); color:var(--ink-soft); padding:3px 8px; cursor:pointer; }
+  .copy-btn.copied{ border-color:var(--ink); color:var(--ink); }
+
+  footer{ padding:34px 0 60px; }
+  footer p{ font-size:12.5px; color:var(--ink-faint); }
+
+  .photo-block{ margin:22px 0; }
+  .photo-block img{ border:1px solid var(--hair); }
+
+  .radar-wrap{ margin:20px 0 10px; }
+  .radar-wrap svg{ width:100%; max-width:340px; display:block; margin:0 auto; }
+  .radar-legend{ display:flex; flex-wrap:wrap; gap:14px 18px; justify-content:center; margin-top:6px; }
+  .lg-item{ font-size:12.5px; color:var(--ink-soft); display:inline-flex; align-items:center; gap:6px; }
+  .lg-swatch{ width:16px; height:0; display:inline-block; border-top-width:2px; }
+  .lg-site{ border-top:3px solid var(--ink); }
+  .lg-c1{ border-top:2px dashed var(--ink-soft); }
+  .lg-c2{ border-top:2px dotted var(--ink-faint); }
+
+  .map-wrap{ margin:20px 0 6px; border:1px solid var(--hair); }
+  .map-wrap img{ width:100%; height:auto; display:block; }
+
+  @media (max-width:520px){
+    .stat-pair, .split{ grid-template-columns:1fr; }
+    .bar-row{ grid-template-columns:52px 1fr 44px; }
+    .agent-side{ align-items:stretch; width:100%; }
+  }
+</style>
+</head>
+<body>
+<div class="top-eyebrow"><div class="wrap"><span class="brand-mark"><span class="bm-b">브</span><span class="bm-rest">동산</span></span></div></div>
+
+<div class="wrap">
+
+  <div class="titleblock">
+    <h1>화서역 호수공원 아너스빌 | 수원시 유일 비규제지역, 서호공원 앞 476세대 청약의 적정가는</h1>
+  </div>
+  <div class="byline">
+    <span class="avatar">브</span>
+    <span class="who">브동산</span>
+    <span class="dot">·</span>
+    <span class="when">2026. 9. 13</span>
+    <span class="tag">청약 언박싱 No.005</span>
+  </div>
+</div>
+<div class="hairline"></div>
+
+<div class="wrap content">
+
+  <div class="cover">
+    <img src="images/hwaseo-lakepark-honorsville/overview-02.jpg" alt="화서역 호수공원 아너스빌 조감 이미지, 서호 호수뷰" style="width:100%;display:block;">
+  </div>
+  <div class="cover-cap">이미지: 공식 홈페이지 — 화서역 호수공원 아너스빌 조감 이미지</div>
+
+  <section id="s1">
+    <h2>1. 핵심 요약 — 이 단지, 적정가는 얼마일까?</h2>
+    <p class="lede">공식 분양 정보만으로는 "비싸다/싸다"를 판단하기 어렵습니다. 브동산은 같은 84㎡ 타입 기준으로 인근 단지의 시세를 입지·브랜드·연식 차이만큼 보정해 이 단지의 <b>적정가</b>를 직접 산출합니다.</p>
+
+    <div class="stat-pair">
+      <div class="stat-box">
+        <div class="sk">브동산 적정가 (84㎡)</div>
+        <div class="sv">11.1<span style="font-size:15px;font-weight:400;"> 억원</span></div>
+        <div class="sbar"><div style="width:100%"></div></div>
+      </div>
+      <div class="stat-box">
+        <div class="sk">실제 분양가 평균 (84㎡, 추정)</div>
+        <div class="sv">8.5<span style="font-size:15px;font-weight:400;"> 억원</span></div>
+        <div class="sbar"><div style="width:77%"></div></div>
+        <span class="delta">약 31% 저평가 · 해석에는 유의 필요</span>
+      </div>
+    </div>
+
+    <div class="map-wrap">
+      <img src="images/hwaseo-lakepark-honorsville/site-map.jpg" alt="화서역 호수공원 아너스빌 사업지, 비교단지 2곳, 배정초등학교 위치 지도" style="width:100%;display:block;">
+    </div>
+    <div class="cover-cap">지도: SITE(빨강, 화서역 호수공원 아너스빌)·비교단지(초록, 힐스테이트수원파크포레·화서역푸르지오브리시엘)·배정초등학교(파랑, 탑동초등학교) 위치 — Google 지도 기반, 브동산 작도</div>
+
+    <div class="radar-wrap">
+      <svg viewBox="0 0 240 260" role="img" aria-label="입지, 브랜드, 상품성, 연식 4개 축으로 본 3개 단지 비교 레이더 차트">
+        <g>
+          <polygon points="120,30 210,120 120,210 30,120" fill="none" stroke="#E3E3E3" stroke-width="1"/>
+          <polygon points="120,48 192,120 120,192 48,120" fill="none" stroke="#E3E3E3" stroke-width="1"/>
+          <polygon points="120,66 174,120 120,174 66,120" fill="none" stroke="#E3E3E3" stroke-width="1"/>
+          <polygon points="120,84 156,120 120,156 84,120" fill="none" stroke="#E3E3E3" stroke-width="1"/>
+          <polygon points="120,102 138,120 120,138 102,120" fill="none" stroke="#E3E3E3" stroke-width="1"/>
+        </g>
+        <polygon points="120,59.25 210,120 120,180.75 52.5,120" fill="none" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="1.5 3"/>
+        <polygon points="120,45.75 210,120 120,183 61.5,120" fill="none" stroke="#555555" stroke-width="1.5" stroke-dasharray="5 3"/>
+        <polygon points="120,61.5 174,120 120,196.5 30,120" fill="rgba(17,17,17,0.08)" stroke="#111111" stroke-width="2"/>
+        <text x="120" y="20" text-anchor="middle" font-size="12" fill="#555555">입지</text>
+        <text x="222" y="124" text-anchor="middle" font-size="12" fill="#555555">브랜드</text>
+        <text x="120" y="228" text-anchor="middle" font-size="12" fill="#555555">상품성</text>
+        <text x="18" y="124" text-anchor="middle" font-size="12" fill="#555555">연식</text>
+      </svg>
+      <div class="radar-legend">
+        <span class="lg-item"><i class="lg-swatch lg-site"></i>SITE · 화서역 호수공원 아너스빌</span>
+        <span class="lg-item"><i class="lg-swatch lg-c1"></i>힐스테이트수원파크포레</span>
+        <span class="lg-item"><i class="lg-swatch lg-c2"></i>화서역푸르지오브리시엘</span>
+      </div>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>평가 항목</th><th>SITE · 화서역 호수공원 아너스빌<br><span class="note" style="margin-top:2px;">(삼환기업·476세대·2029년 10월 입주예정)</span></th><th>힐스테이트수원파크포레<br><span class="note" style="margin-top:2px;">(현대건설·482세대·2024년 12월 입주)</span></th><th>화서역푸르지오브리시엘<br><span class="note" style="margin-top:2px;">(대우건설·665세대·2023년 9월 입주)</span></th></tr></thead>
+        <tbody>
+          <tr><td>입지(40)</td><td class="figure">26</td><td class="figure">27</td><td class="figure">33</td></tr>
+          <tr><td>브랜드(20)</td><td class="figure">12</td><td class="figure">20</td><td class="figure">20</td></tr>
+          <tr><td>상품성(40)</td><td class="figure">34</td><td class="figure">27</td><td class="figure">28</td></tr>
+          <tr><td>종합평점</td><td class="figure"><b>72</b></td><td class="figure">74</td><td class="figure">81</td></tr>
+          <tr><td>연식가산율</td><td class="figure">기준(신축)</td><td class="figure">4년10개월차·×1.097</td><td class="figure">6년1개월차·×1.122</td></tr>
+          <tr><td>84㎡ 기준가</td><td class="figure">-</td><td class="figure">8.8억(2026년 실거래 평균)</td><td class="figure">12.4억(2025년 실거래 평균)</td></tr>
+          <tr><td>보정가격</td><td class="figure">-</td><td class="figure">9.5억</td><td class="figure">12.7억</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">평점은 브동산이 교통·주거·교육 여건과 브랜드·세대수·조망·주차 등을 종합해 자체 산정한 값입니다. 84㎡ 기준가는 두 비교단지 모두 최근 1년 내 실거래 평균입니다.</p>
+
+    <ul class="plain">
+      <li><b>입지:</b> SITE는 화서역(1호선, 신분당선 연장 예정)·구운역(신분당선 예정)과 직선거리 약 1.8~2km로, 도보 역세권이라기보다는 버스·자전거 생활권에 가깝습니다. 대신 서호공원·여기산공원을 바로 끼고 있는 것이 확실한 강점입니다. 브리시엘은 화서역 도보 7분으로 세 단지 중 역세권 프리미엄이 가장 뚜렷합니다.</li>
+      <li><b>브랜드:</b> 힐스테이트(현대건설)·푸르지오(대우건설)는 대기업 상위 브랜드로 동일 등급이며, SITE는 SM그룹 삼환기업의 '아너스빌' 브랜드로 중견 건설사 등급입니다.</li>
+      <li><b>상품성:</b> SITE는 안면인식 로비폰·도어카메라 등 최신 스마트홈 특화와 서호 호수뷰(일부 세대) 설계가 강점이지만, 476세대 규모나 주차·조망은 동호수에 따라 편차가 있습니다.</li>
+      <li><b>브동산 적정가 기준으로는 저평가 신호.</b> 84㎡ 기준 적정가는 약 11.1억원으로, 실제 분양가 평균(약 8.5억원)보다 높게 나옵니다. 다만 두 비교단지 모두 SITE보다 연식이 있어(4~6년차) 연령보정 배율이 크게 작용했고, 브리시엘은 화서역 역세권 프리미엄이 강하게 반영된 단지라는 점에서 그대로 "확실한 저가매수"로 단정하기보다는 참고 지표로 보는 편이 안전합니다.</li>
+      <li><b>청약 일정은 9월 22~23일.</b> 특별공급 9월 21일, 일반공급 1순위 9월 22일·2순위 9월 23일 접수, 당첨자 발표는 10월 1일입니다.</li>
+    </ul>
+
+    <p>이 단지의 가장 뚜렷한 강점 중 하나는 <b>"수원시 유일 비규제지역"</b>이라는 점입니다. 분양가상한제가 적용되지 않아 84㎡ 기준 최고 8.98억원까지 자율적으로 책정됐지만, 반대로 대출·전매·재당첨 관련 규제에서 비교적 자유롭다는 뜻이기도 합니다. 중도금 무이자, 발코니 확장비 무상 제공 등 초기 자금 부담을 낮추는 조건도 함께 제시돼 있습니다.</p>
+  </section>
+
+  <section id="s2">
+    <h2>2. 입지 분석</h2>
+    <p class="lede">공식 홈페이지는 수원역·화서역·구운역(예정)의 "트리플라인"을 내세우지만, 세 역 모두 SITE에서 도보 10분 이내는 아닙니다. 대신 서호공원·여기산공원이 단지 바로 앞에 있고, 수원 R&D사이언스파크·탑동 이노베이션밸리 등 첨단산업 개발 호재가 몰려 있는 권선구 생활권이라는 점이 실질적인 강점입니다.</p>
+
+    <div class="photo-block">
+      <img src="images/hwaseo-lakepark-honorsville/location.jpg" alt="화서역 호수공원 아너스빌 위치 및 교통망 안내" style="width:100%;display:block;">
+    </div>
+    <div class="cover-cap">이미지: 공식 홈페이지 위치도·교통망 — GTX-C, 구운역(신분당선 연장 예정) 등 계획 노선은 확정 전이며 변경될 수 있습니다</div>
+
+    <p>배정초등학교는 <b>탑동초등학교</b>(수원시 권선구 탑동로 55)로, SITE에서 서쪽으로 약 800m 거리입니다. 학급당 학생수는 22명 수준으로 과밀 우려는 낮은 편입니다. 국가 학업성취도 전수조사는 2017년 이후 폐지돼 공식 순위는 공개되지 않는데, 참고용 민간 지표인 리치고 기준으로는 학군 등급 2.9등급(전국 상위 50%, 경기 상위 52%)으로 중간 수준입니다. 배정 예정 중학교는 구운중(특목·자사고 진학률 0.4%)과 서호중(0.9%)으로, 두 곳 모두 특목·자사고 진학률 자체는 낮은 지역입니다. 다만 이 등급·진학률은 공식 지표가 아닌 민간 참고 지표라는 점은 유의해야 합니다.</p>
+    <p>생활 인프라 측면에서는 국립농업박물관·서호공원 맨발걷기 황토길이 도보권에 있고, 스타필드 수원·롯데몰 타임빌라스·AK플라자 등 대형 상권도 있지만 대부분 1.5km 안팎으로 도보보다는 차량 이용 권역에 가깝습니다. 삼성디지털시티까지 차량 약 10분대 거리라 직주근접 수요도 기대해볼 만한 입지입니다.</p>
+  </section>
+
+  <section id="s3">
+    <h2>3. 상품 분석</h2>
+    <p class="lede">SM그룹 삼환기업이 시공하는 '아너스빌' 브랜드로, 서호공원을 마주 보고 조성되는 총 476세대(7개동) 규모입니다. 전용 84~99㎡ 중대형 타입 위주로 구성됐습니다.</p>
+
+    <dl class="spec">
+      <div class="row"><dt>사업 주체</dt><dd>삼환기업(시행·시공, SM그룹)</dd></div>
+      <div class="row"><dt>위치</dt><dd>경기 수원시 권선구 서둔동 212-1</dd></div>
+      <div class="row"><dt>규모</dt><dd>지하 4층~지상 15층, 7개동, 총 476세대(특별공급 153·일반공급 323)</dd></div>
+      <div class="row"><dt>타입</dt><dd>전용 84·94·99㎡ (84A~E, 94A~B, 99A 8개 세부타입)</dd></div>
+      <div class="row"><dt>입주 예정</dt><dd>2029년 10월</dd></div>
+    </dl>
+
+    <div class="photo-block">
+      <img src="images/hwaseo-lakepark-honorsville/overview-01.jpg" alt="화서역 호수공원 아너스빌 단지 조감 이미지" style="width:100%;display:block;">
+    </div>
+    <div class="cover-cap">이미지: 공식 홈페이지 단지 조감 이미지 — 101~107동 7개동 구성</div>
+
+    <h3>타입별 세대수</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>타입</th><th>전용면적</th><th>세대수</th></tr></thead>
+        <tbody>
+          <tr><td>84A</td><td class="figure">84.7459㎡</td><td class="figure">27세대</td></tr>
+          <tr><td>84B</td><td class="figure">84.8508㎡</td><td class="figure">84세대</td></tr>
+          <tr><td>84C</td><td class="figure">84.6391㎡</td><td class="figure">39세대</td></tr>
+          <tr><td>84D</td><td class="figure">84.9663㎡</td><td class="figure">70세대</td></tr>
+          <tr><td>84E</td><td class="figure">84.9739㎡</td><td class="figure">14세대</td></tr>
+          <tr><td>94A</td><td class="figure">94.9503㎡</td><td class="figure">147세대</td></tr>
+          <tr><td>94B</td><td class="figure">94.9610㎡</td><td class="figure">14세대</td></tr>
+          <tr><td>99A</td><td class="figure">99.6774㎡</td><td class="figure">81세대</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">94A가 147세대로 가장 많은 주력 타입입니다. 합계 476세대로 공식 세대수와 일치합니다.</p>
+
+    <h3>분양가</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>구분</th><th>금액</th></tr></thead>
+        <tbody>
+          <tr><td>전체 구간</td><td class="figure">8억 1,400만~9억 1,100만원</td></tr>
+          <tr><td>84㎡ 기준(추정)</td><td class="figure">약 8.14억~8.98억원, 평균 약 8.5억원</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">분양가상한제가 적용되지 않는 민영주택으로, 타입·동호수별 정확한 확정 가격은 입주자모집공고문을 기준으로 확인하시기 바랍니다.</p>
+
+    <h3>타입별 평면도</h3>
+    <p class="note">공식 홈페이지에는 84·94·99㎡ 총 8개 세부 평면이 있습니다. 8개 이하라 전 타입을 모두 소개합니다.</p>
+
+    <div class="photo-block">
+      <img src="images/hwaseo-lakepark-honorsville/unit-84a.jpg" alt="화서역 호수공원 아너스빌 84제곱미터 A 평면도" style="width:100%;display:block;">
+    </div>
+    <div class="cover-cap">이미지: 공식 홈페이지 평면도 — 84A · 27세대 (전용 84.7459㎡ · 공급 110.3043㎡)</div>
+
+    <div class="photo-block">
+      <img src="images/hwaseo-lakepark-honorsville/unit-84b.jpg" alt="화서역 호수공원 아너스빌 84제곱미터 B 평면도" style="width:100%;display:block;">
+    </div>
+    <div class="cover-cap">이미지: 공식 홈페이지 평면도 — 84B · 84세대 (전용 84.8508㎡ · 공급 109.5720㎡)</div>
+
+    <div class="photo-block">
+      <img src="images/hwaseo-lakepark-honorsville/unit-84c.jpg" alt="화서역 호수공원 아너스빌 84제곱미터 C 평면도" style="width:100%;display:block;">
+    </div>
+    <div class="cover-cap">이미지: 공식 홈페이지 평면도 — 84C · 39세대 (전용 84.6391㎡ · 공급 109.4560㎡)</div>
+
+    <div class="photo-block">
+      <img src="images/hwaseo-lakepark-honorsville/unit-84d.jpg" alt="화서역 호수공원 아너스빌 84제곱미터 D 평면도" style="width:100%;display:block;">
+    </div>
+    <div class="cover-cap">이미지: 공식 홈페이지 평면도 — 84D · 70세대 (전용 84.9663㎡ · 공급 110.3141㎡)</div>
+
+    <div class="photo-block">
+      <img src="images/hwaseo-lakepark-honorsville/unit-84e.jpg" alt="화서역 호수공원 아너스빌 84제곱미터 E 평면도" style="width:100%;display:block;">
+    </div>
+    <div class="cover-cap">이미지: 공식 홈페이지 평면도 — 84E · 14세대 (전용 84.9739㎡ · 공급 110.0074㎡)</div>
+
+    <div class="photo-block">
+      <img src="images/hwaseo-lakepark-honorsville/unit-94a.jpg" alt="화서역 호수공원 아너스빌 94제곱미터 A 평면도" style="width:100%;display:block;">
+    </div>
+    <div class="cover-cap">이미지: 공식 홈페이지 평면도 — 94A · 147세대, 최다 타입 (전용 94.9503㎡ · 공급 122.4832㎡)</div>
+
+    <div class="photo-block">
+      <img src="images/hwaseo-lakepark-honorsville/unit-94b.jpg" alt="화서역 호수공원 아너스빌 94제곱미터 B 평면도" style="width:100%;display:block;">
+    </div>
+    <div class="cover-cap">이미지: 공식 홈페이지 평면도 — 94B · 14세대 (전용 94.9610㎡ · 공급 122.8089㎡)</div>
+
+    <div class="photo-block">
+      <img src="images/hwaseo-lakepark-honorsville/unit-99a.jpg" alt="화서역 호수공원 아너스빌 99제곱미터 A 평면도" style="width:100%;display:block;">
+    </div>
+    <div class="cover-cap">이미지: 공식 홈페이지 평면도 — 99A · 81세대 (전용 99.6774㎡ · 공급 127.9532㎡)</div>
+  </section>
+
+  <section id="s4">
+    <h2>4. 공급이 많을까, 적을까</h2>
+    <p class="lede">476세대 자체는 중소 규모지만, 권선구 일대는 첨단산업 개발 호재와 맞물려 향후 수요가 늘어날 가능성이 있는 지역입니다. 다만 같은 시기의 순수 아파트 신규 공급은 이 단지가 사실상 유일합니다.</p>
+
+    <div class="stat-pair">
+      <div class="stat-box">
+        <div class="sk">2029년 준공 예정 개발사업</div>
+        <div class="sv num">SITE + 탑동 이노베이션밸리</div>
+        <div class="sbar"><div style="width:60%"></div></div>
+      </div>
+      <div class="stat-box">
+        <div class="sk">서둔동 일대 순수 신규 아파트 공급</div>
+        <div class="sv num">SITE가 사실상 유일</div>
+        <div class="sbar"><div style="width:90%"></div></div>
+      </div>
+    </div>
+
+    <p>권선구 탑동 일원에는 26만㎡ 규모의 R&D 중심 업무시설인 '탑동 이노베이션밸리'가 2029년 준공을 목표로 진행 중이고, 입북동 일원에는 AI·반도체·바이오 기업 유치를 노리는 '수원 R&D사이언스파크'가, 인근에는 약 100만 평 규모의 '수원 경제자유구역' 지정도 추진되고 있습니다. 이런 개발이 계획대로 진행되면 고소득 전문직 수요가 유입될 수 있는 재료지만, 아직 착공 전이거나 구역 지정 단계인 사업이 많아 실현 시점은 불확실합니다.</p>
+    <p>반면 서둔동·탑동 일대의 순수 주거용 신규 아파트 공급은 최근 수년간 뜸했던 편이라, SITE는 이 지역에서 당분간 보기 드문 신축 대단지 청약이 될 가능성이 높습니다. 다만 이는 "공급이 없다"는 뜻이지 "수요가 확실히 넘친다"는 뜻은 아니므로, 비규제지역이라는 점과 함께 과열보다는 냉정한 판단이 필요한 구간입니다.</p>
+  </section>
+
+  <section id="s5">
+    <h2>5. 결론</h2>
+    <div class="split">
+      <div class="box">
+        <h3>강점</h3>
+        <ul class="plain">
+          <li>수원시 유일 비규제지역 — 대출·전매·재당첨 규제에서 비교적 자유로움</li>
+          <li>서호공원·여기산공원을 마주한 호수뷰 특화 설계, 신축 스마트홈 사양</li>
+          <li>탑동 이노베이션밸리·수원 R&D사이언스파크 등 권선구 개발 호재</li>
+          <li>중도금 무이자, 발코니 확장비 무상 등 초기 자금 부담 완화 조건</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>리스크</h3>
+        <ul class="plain">
+          <li>화서역·구운역(예정) 모두 직선거리 1.8~2km 안팎, 실제로는 도보 역세권이 아님</li>
+          <li>입주 예정이 2029년 10월로 다른 청약 단지 대비 대기 기간이 긴 편</li>
+          <li>시공사(삼환기업)가 힐스테이트·푸르지오 대비 브랜드 인지도가 낮은 중견 건설사</li>
+          <li>브동산 모형상 저평가로 나오지만 비교단지 2곳 모두 연식차·역세권 프리미엄 영향이 커서 해석에 유의 필요</li>
+        </ul>
+      </div>
+    </div>
+    <p>종합하면 이 단지는 "수원시 유일 비규제지역 + 서호공원 호수뷰"라는 뚜렷한 차별점이 있는 반면, 역세권과는 거리가 있고 입주까지 3년 이상 기다려야 한다는 점이 부담입니다. 브동산 모형상 저평가 신호가 나왔다고 해서 그대로 "저가 매수 기회"로 받아들이기보다는, 탑동 이노베이션밸리 등 개발 호재의 실현 가능성과 실제 청약 경쟁률을 함께 지켜본 뒤 판단하는 것을 권합니다.</p>
+  </section>
+
+  <section id="ad">
+    <div class="sponsor">
+      <div class="sponsor-top">
+        <span class="ad-badge">AD · 광고</span>
+        <span class="sponsor-note">예시로 구성한 가상의 상담 카드입니다</span>
+      </div>
+      <div class="agent">
+        <span class="avatar">화</span>
+        <div class="agent-info">
+          <div class="name">이서연 팀장 (가상 예시)</div>
+          <div class="role">화서역 호수공원 아너스빌 청약·분양권 상담 · OO공인중개사사무소</div>
+          <div class="desc">타입별 청약 전략, 분양권 시세 상담 가능. 평일 09:00–19:00 응대.</div>
+        </div>
+        <div class="agent-side">
+          <span class="phone">010-0000-0000 (예시)</span>
+          <button class="btn" type="button">상담 신청하기</button>
+        </div>
+      </div>
+      <div class="ad-apply">
+        <span class="ad-apply-text">이 자리에 광고를 원하는 부동산·분양 담당자이신가요?</span>
+        <div class="ad-apply-actions">
+          <a class="btn-outline" href="mailto:0324jhkim@gmail.com?subject=%5B%EB%B8%8C%EB%8F%99%EC%82%B0%5D%20%EA%B4%91%EA%B3%A0%20%EB%AC%B8%EC%9D%98%20-%20%ED%99%94%EC%84%9C%EC%97%AD%20%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90%20%EC%95%84%EB%84%88%EC%8A%A4%EB%B9%8C&body=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94%2C%20%EB%B8%8C%EB%8F%99%EC%82%B0%20%EA%B4%91%EA%B3%A0%20%EB%AC%B8%EC%9D%98%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4.%0A%0A%EC%97%85%EC%B2%B4%EB%AA%85%3A%20%0A%EC%97%B0%EB%9D%BD%EC%B2%98%3A%20%0A%EB%AC%B8%EC%9D%98%20%EB%8B%A8%EC%A7%80%3A%20%ED%99%94%EC%84%9C%EC%97%AD%20%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90%20%EC%95%84%EB%84%88%EC%8A%A4%EB%B9%8C%0A%EB%AC%B8%EC%9D%98%20%EB%82%B4%EC%9A%A9%3A%20">광고 신청하기</a>
+          <span class="ad-email-copy"><code id="ad-email">0324jhkim@gmail.com</code><button class="copy-btn" type="button" onclick="brdCopyEmail('ad-email', this)">복사</button></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="hairline" style="margin-bottom:20px;"></div>
+    <p>
+      본 콘텐츠는 <b>브동산</b>이 공식 홈페이지(화서역 호수공원 아너스빌)와 언론 보도(아주경제, 인포스탁데일리, 알씨캐스트 등), 공개된 분양·시세 정보를 종합해 작성한 정보성 콘텐츠이며, 투자 권유나 청약·매수 대행이 아닙니다. 분양가·시세 등 수치는 각 자료 시점 기준이며 이후 달라질 수 있습니다. 실제 계약이나 매수 결정 전에는 반드시 청약홈(applyhome.co.kr), 입주자모집공고문, 최신 실거래가를 직접 확인하시기 바랍니다. 하단 상담 카드는 유료 광고 영역이며, 본 시안에서는 실감을 위해 가상의 예시 정보로 구성했습니다.
+    </p>
+  </div>
+</footer>
+
+<script>
+function brdCopyEmail(id, btn){
+  var text = document.getElementById(id).textContent;
+  function done(){
+    var orig = btn.textContent;
+    btn.textContent = '복사됨';
+    btn.classList.add('copied');
+    setTimeout(function(){ btn.textContent = orig; btn.classList.remove('copied'); }, 1500);
+  }
+  function fallbackCopy(){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch(e) {}
+    document.body.removeChild(ta);
+    done();
+  }
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+}
+</script>
+
+</body>
+</html>

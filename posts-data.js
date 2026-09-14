@@ -19,6 +19,19 @@
 
 const POSTS = [
   {
+    id: "hwaseo-lakepark-honorsville",
+    category: "realestate",
+    tag: "청약 언박싱 No.005",
+    title: "화서역 호수공원 아너스빌 | 수원시 유일 비규제지역, 서호공원 앞 476세대 청약의 적정가는",
+    date: "2026-09-13",
+    dateLabel: "2026. 9. 13",
+    url: "posts/hwaseo-lakepark-honorsville.html",
+    preview: `
+      <p>서호공원·여기산공원을 마주한 수원시 유일 비규제지역 청약, 화서역 호수공원 아너스빌. 브동산 적정가(84㎡) 11.1억원 · 실제 분양가 평균(추정) 8.5억원 — 약 31% 저평가 신호가 나왔지만, 해석에는 유의가 필요합니다.</p>
+      <p>9월 22~23일 청약을 앞두고 있으며, 탑동 이노베이션밸리·수원 R&D사이언스파크 등 권선구 개발 호재와 함께 대출·전매 규제에서 자유로운 비규제지역이라는 점이 특징입니다.</p>
+    `
+  },
+  {
     id: "brand-is-not-the-hero",
     category: "brand",
     tag: "브랜드 언박싱 No.001",
