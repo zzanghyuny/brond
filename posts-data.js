@@ -19,6 +19,19 @@
 
 const POSTS = [
   {
+    id: "incheon-guwol-artpark",
+    category: "realestate",
+    tag: "청약 언박싱 No.006",
+    title: "힐스테이트 구월아트파크 | 예술회관역 직통연결 주상복합, 청약 미달 56%의 적정가는",
+    date: "2026-09-16",
+    dateLabel: "2026. 9. 16",
+    url: "posts/incheon-guwol-artpark.html",
+    preview: `
+      <p>인천1호선 예술회관역과 지하로 직통연결되는 주상복합, 힐스테이트 구월아트파크. 이미 지난 5월 청약을 마쳤고 결과는 278세대(56%) 미달이었습니다. 브동산 적정가(84㎡) 7.5억원 · 실제 분양가 평균 8.25억원 — 약 9% 고평가 신호로, 모형과 실제 시장 반응이 같은 방향을 가리킨 드문 사례입니다.</p>
+      <p>옛 롯데백화점 인천점 부지에 최고 39층으로 조성되며, 현재는 청약 미달 이후 선착순 동호지정 계약이 진행 중입니다.</p>
+    `
+  },
+  {
     id: "hwaseo-lakepark-honorsville",
     category: "realestate",
     tag: "청약 언박싱 No.005",
