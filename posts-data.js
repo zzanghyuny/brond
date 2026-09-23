@@ -19,6 +19,19 @@
 
 const POSTS = [
   {
+    id: "ssangyong-the-platinum-centum",
+    category: "realestate",
+    tag: "청약 언박싱 No.008",
+    title: "쌍용 더 플래티넘 센텀 | 지역주택조합 490세대, 망미동 84㎡ 13억대 청약의 적정가는",
+    date: "2026-09-23",
+    dateLabel: "2026. 9. 23",
+    url: "posts/ssangyong-the-platinum-centum.html",
+    preview: `
+      <p>부산 수영구 망미동, 지역주택조합 방식으로 짓는 490세대 쌍용건설 '더 플래티넘' 브랜드. 브동산 적정가(84㎡) 8.48억원 · 실제 분양가 평균 12.6억원 — 약 49%라는 이례적으로 큰 폭의 고평가 신호가 나왔습니다.</p>
+      <p>망미초등학교 바로 앞 초품아 입지와 센텀 생활권 인프라는 강점이지만, 공식 홍보와 달리 망미역까지 약 790m로 역세권이라 보기엔 애매하고 배산역은 도보권 밖입니다. 특별공급은 9월 28일부터 시작됩니다.</p>
+    `
+  },
+  {
     id: "marketing-is-brand-management",
     category: "brand",
     tag: "브랜드 언박싱 No.002",

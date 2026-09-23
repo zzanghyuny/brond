@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>쌍용 더 플래티넘 센텀</title>
+<meta name="description" content="브동산 청약·분양 — 쌍용 더 플래티넘 센텀, 부산 수영구 망미동 지역주택조합 490세대의 청약 일정과 적정가 분석.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+  :root{
+    --paper:#FFFFFF;
+    --ink:#111111;
+    --ink-soft:#555555;
+    --ink-faint:#8A8A8A;
+    --hair:#E3E3E3;
+    --hair-strong:#111111;
+    --soft-bg:#FAFAFA;
+  }
+
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Nanum Gothic','Malgun Gothic','Apple SD Gothic Neo',sans-serif;
+    line-height:1.8;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{ background:#111; color:#fff; }
+  a{ color:var(--ink); }
+  a:focus-visible, button:focus-visible, input:focus-visible{ outline:2px solid var(--ink); outline-offset:2px; }
+
+  .wrap{ max-width:700px; margin:0 auto; padding:0 24px; }
+
+  h1,h2,h3{ font-family:'Nanum Gothic',sans-serif; font-weight:800; color:var(--ink); margin:0; text-wrap:balance; }
+  b, strong{ font-weight:800; }
+  .num{ font-variant-numeric:tabular-nums; }
+
+  /* ---- masthead / byline ---- */
+  .top-eyebrow{ padding:36px 0 0; }
+  .top-eyebrow .wrap{ color:var(--ink-faint); font-size:13px; letter-spacing:.02em; }
+
+  .brand-mark{ display:inline-block; font-size:15px; line-height:1; }
+  .brand-mark .bm-b{ font-weight:800; color:var(--ink); }
+  .brand-mark .bm-rest{ font-weight:400; color:var(--ink-soft); }
+
+  .titleblock{ padding:14px 0 22px; }
+  .titleblock h1{ font-size:clamp(26px,4.6vw,34px); line-height:1.42; font-weight:800; }
+
+  .byline{ display:flex; align-items:center; gap:10px; padding:6px 0 22px; flex-wrap:wrap; }
+  .byline .avatar{
+    width:30px; height:30px; border-radius:50%; background:var(--ink); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; flex:none;
+  }
+  .byline .who{ font-size:14.5px; font-weight:700; color:var(--ink); }
+  .byline .dot{ color:var(--hair); }
+  .byline .when{ font-size:13.5px; color:var(--ink-faint); }
+  .byline .tag{
+    margin-left:auto; font-size:12px; color:var(--ink-faint); border:1px solid var(--hair);
+    border-radius:5px; padding:3px 8px;
+  }
+
+  .hairline{ height:1px; background:var(--hair); }
+
+  /* ---- cover graphic (the one place color is allowed) ---- */
+  .cover{ margin:26px 0; border-radius:2px; overflow:hidden; position:relative; height:220px; }
+  .cover img{ width:100%; height:220px; object-fit:cover; object-position:center 55%; display:block; }
+  .cover svg{ width:100%; height:100%; display:block; }
+  .cover-cap{ font-size:12px; color:var(--ink-faint); margin-top:8px; }
+
+  /* ---- content rhythm ---- */
+  .content{ padding:30px 0 10px; }
+  section{ padding:38px 0; }
+  section + section{ border-top:1px solid var(--hair); }
+  .content > .hairline{ margin:0 0 0; }
+
+  h2{ font-size:21px; margin-bottom:16px; }
+  h3{ font-size:16.5px; margin:22px 0 10px; }
+  p{ margin:14px 0; }
+  .lede{ color:var(--ink); }
+
+  ul.plain{ margin:14px 0; padding-left:22px; }
+  ul.plain li{ margin:9px 0; }
+  ul.plain li::marker{ color:var(--ink); }
+
+  dl.spec{ margin:14px 0; }
+  dl.spec .row{ display:flex; gap:14px; padding:8px 0; border-bottom:1px solid var(--hair); font-size:15px; }
+  dl.spec .row dt{ flex:0 0 128px; font-weight:700; color:var(--ink); }
+  dl.spec .row dd{ margin:0; color:var(--ink); }
+
+  .quote{ border-left:3px solid var(--ink); padding:4px 0 4px 18px; margin:20px 0; }
+  .quote .qt{ font-weight:800; font-size:14.5px; margin-bottom:6px; }
+  .quote p{ margin:0; font-size:14.5px; color:var(--ink-soft); }
+
+  .tablewrap{ overflow-x:auto; margin:16px 0; }
+  table{ width:100%; border-collapse:collapse; min-width:460px; }
+  th,td{ text-align:left; padding:10px 12px; font-size:14.5px; border-bottom:1px solid var(--hair); }
+  thead th{ font-weight:800; border-bottom:2px solid var(--ink); }
+  td.figure, th.figure{ font-variant-numeric:tabular-nums; }
+  .note{ font-size:13px; color:var(--ink-faint); margin-top:8px; }
+
+  .bar-row{ display:grid; grid-template-columns:64px 1fr 56px; gap:12px; align-items:center; margin:10px 0; }
+  .bar-label{ font-size:13.5px; color:var(--ink-soft); }
+  .bar-track{ height:8px; background:#EFEFEF; }
+  .bar-fill{ height:100%; background:var(--ink); }
+  .bar-fill.dim{ background:#BBBBBB; }
+  .bar-val{ font-size:13.5px; text-align:right; font-variant-numeric:tabular-nums; }
+  .bar-val.dim{ color:var(--ink-faint); }
+
+  .stat-pair{ display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:18px 0; }
+  .stat-box{ border:1px solid var(--hair); padding:16px 18px; }
+  .stat-box .sk{ font-size:12.5px; color:var(--ink-faint); }
+  .stat-box .sv{ font-size:28px; font-weight:800; margin-top:4px; font-variant-numeric:tabular-nums; }
+  .stat-box .sbar{ height:6px; background:#EFEFEF; margin-top:12px; }
+  .stat-box .sbar > div{ height:100%; background:var(--ink); }
+  .delta{ display:inline-block; margin-top:14px; font-weight:800; font-size:13.5px; border-bottom:2px solid var(--ink); padding-bottom:2px; }
+
+  .split{ display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:16px 0; }
+  .split .box h3{ margin-top:0; }
+  .split ul.plain{ margin-top:8px; }
+
+  .sponsor{ border:1px solid var(--ink); padding:22px 20px; }
+  .sponsor-top{ display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; }
+  .ad-badge{ font-size:11px; font-weight:800; letter-spacing:.06em; border:1px solid var(--ink); padding:2px 8px; }
+  .sponsor-note{ font-size:11.5px; color:var(--ink-faint); }
+  .agent{ display:flex; gap:14px; align-items:center; flex-wrap:wrap; margin-top:16px; padding-top:16px; border-top:1px solid var(--hair); }
+  .agent .avatar{ width:46px; height:46px; border-radius:50%; background:var(--ink); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; flex:none; }
+  .agent-info{ flex:1; min-width:180px; }
+  .agent-info .name{ font-weight:800; font-size:15px; }
+  .agent-info .role{ font-size:12.5px; color:var(--ink-faint); }
+  .agent-info .desc{ font-size:13px; color:var(--ink-soft); margin-top:4px; }
+  .agent-side{ display:flex; flex-direction:column; align-items:flex-end; gap:8px; }
+  .agent-side .phone{ font-size:13px; color:var(--ink-soft); }
+  .btn{ font-family:'Nanum Gothic'; font-weight:800; font-size:13.5px; background:var(--ink); color:#fff; border:none; padding:9px 16px; cursor:pointer; }
+  .ad-apply{ margin-top:16px; padding-top:14px; border-top:1px dashed var(--hair); display:flex; align-items:center; justify-content:space-between; gap:12px 16px; flex-wrap:wrap; }
+  .ad-apply-text{ font-size:12.5px; color:var(--ink-faint); }
+  .ad-apply-actions{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .btn-outline{ font-family:'Nanum Gothic'; font-weight:800; font-size:12.5px; background:transparent; color:var(--ink); border:1px solid var(--ink); padding:7px 14px; cursor:pointer; text-decoration:none; display:inline-block; }
+  .ad-email-copy{ display:inline-flex; align-items:center; gap:6px; font-size:12.5px; color:var(--ink-soft); }
+  .ad-email-copy code{ font-family:inherit; background:#F5F5F5; padding:3px 7px; border:1px solid var(--hair); }
+  .copy-btn{ font-family:'Nanum Gothic'; font-weight:700; font-size:11.5px; background:none; border:1px solid var(--hair); color:var(--ink-soft); padding:3px 8px; cursor:pointer; }
+  .copy-btn.copied{ border-color:var(--ink); color:var(--ink); }
+
+  footer{ padding:34px 0 60px; }
+  footer p{ font-size:12.5px; color:var(--ink-faint); }
+
+  .photo-block{ margin:22px 0; }
+  .photo-block img{ border:1px solid var(--hair); }
+
+  .radar-wrap{ margin:20px 0 10px; }
+  .radar-wrap svg{ width:100%; max-width:340px; display:block; margin:0 auto; }
+  .radar-legend{ display:flex; flex-wrap:wrap; gap:14px 18px; justify-content:center; margin-top:6px; }
+  .lg-item{ font-size:12.5px; color:var(--ink-soft); display:inline-flex; align-items:center; gap:6px; }
+  .lg-swatch{ width:16px; height:0; display:inline-block; border-top-width:2px; }
+  .lg-site{ border-top:3px solid var(--ink); }
+  .lg-c1{ border-top:2px dashed var(--ink-soft); }
+  .lg-c2{ border-top:2px dotted var(--ink-faint); }
+
+  .map-wrap{ margin:20px 0 6px; border:1px solid var(--hair); }
+  .map-wrap img{ width:100%; height:auto; display:block; }
+  .map-wrap svg{ width:100%; height:auto; display:block; background:#FAFAFA; }
+
+  @media (max-width:520px){
+    .stat-pair, .split{ grid-template-columns:1fr; }
+    .bar-row{ grid-template-columns:52px 1fr 44px; }
+    .agent-side{ align-items:stretch; width:100%; }
+  }
+</style>
+</head>
+<body>
+<div class="top-eyebrow"><div class="wrap"><span class="brand-mark"><span class="bm-b">브</span><span class="bm-rest">동산</span></span></div></div>
+
+<div class="wrap">
+
+  <div class="titleblock">
+    <h1>쌍용 더 플래티넘 센텀 | 지역주택조합 490세대, 망미동 84㎡ 13억대 청약의 적정가는</h1>
+  </div>
+  <div class="byline">
+    <span class="avatar">브</span>
+    <span class="who">브동산</span>
+    <span class="dot">·</span>
+    <span class="when">2026. 9. 23</span>
+    <span class="tag">청약 언박싱 No.008</span>
+  </div>
+</div>
+<div class="hairline"></div>
+
+<div class="wrap content">
+
+  <div class="cover">
+    <img src="images/ssangyong-the-platinum-centum/cover.jpg" alt="쌍용 더 플래티넘 센텀 조감 이미지" style="width:100%;display:block;">
+  </div>
+  <div class="cover-cap">이미지: 공식 홈페이지 — 쌍용 더 플래티넘 센텀 조감 이미지</div>
+
+  <section id="s1">
+    <h2>1. 핵심 요약 — 이 단지, 적정가는 얼마일까?</h2>
+    <p class="lede">부산 수영구 망미동, 지역주택조합 방식으로 짓는 490세대 규모의 쌍용건설 '더 플래티넘' 브랜드다. 전체 세대 중 일반에게 열린 물량은 53세대뿐이고, 그마저도 84㎡ 43세대가 대부분이다. 브동산은 같은 84㎡ 타입 기준으로 인근 두 단지의 분양가를 입지·브랜드·연식 차이만큼 보정해 이 단지의 <b>적정가</b>를 직접 산출해봤다.</p>
+
+    <div class="stat-pair">
+      <div class="stat-box">
+        <div class="sk">브동산 적정가 (84㎡)</div>
+        <div class="sv">8.48<span style="font-size:15px;font-weight:400;"> 억원</span></div>
+        <div class="sbar"><div style="width:67%"></div></div>
+      </div>
+      <div class="stat-box">
+        <div class="sk">실제 분양가 평균 (84㎡)</div>
+        <div class="sv">12.6<span style="font-size:15px;font-weight:400;"> 억원</span></div>
+        <div class="sbar"><div style="width:100%"></div></div>
+        <span class="delta">약 49% 고평가</span>
+      </div>
+    </div>
+
+    <div class="map-wrap">
+      <svg viewBox="0 0 640 460" role="img" aria-label="쌍용 더 플래티넘 센텀 사업지, 비교단지 2곳, 배정초등학교 위치를 나타낸 브동산 자체 제작 개략도">
+        <rect x="0" y="0" width="640" height="460" fill="#FAFAFA"/>
+        <path d="M470 0 C 440 90, 480 180, 450 260 C 430 330, 470 400, 440 460" stroke="#E3E3E3" stroke-width="12" fill="none"/>
+        <text x="486" y="24" font-size="11" fill="#8A8A8A">수영강 →</text>
+
+        <!-- compass -->
+        <g transform="translate(580,36)">
+          <line x1="0" y1="10" x2="0" y2="-14" stroke="#555555" stroke-width="1.5"/>
+          <polygon points="0,-18 -5,-8 5,-8" fill="#555555"/>
+          <text x="0" y="24" font-size="11" text-anchor="middle" fill="#555555">N</text>
+        </g>
+
+        <!-- connecting lines (site to comps) -->
+        <line x1="404" y1="228" x2="351" y2="37" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="3 3"/>
+        <line x1="404" y1="248" x2="314" y2="352" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="3 3"/>
+
+        <!-- comp1 : 센텀파크SK뷰 -->
+        <rect x="343" y="29" width="16" height="16" fill="#FFFFFF" stroke="#555555" stroke-width="2.5"/>
+        <text x="365" y="36" font-size="13" fill="#111111">센텀파크SK뷰</text>
+        <text x="365" y="52" font-size="11" fill="#8A8A8A">비교단지1 · 연제구 연산동</text>
+
+        <!-- 망미역 (transit ref) -->
+        <circle cx="316" cy="296" r="4" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+        <text x="326" y="300" font-size="11" fill="#8A8A8A">망미역(3호선)</text>
+
+        <!-- 수영역 (transit ref) -->
+        <circle cx="401" cy="431" r="4" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.5"/>
+        <text x="411" y="435" font-size="11" fill="#8A8A8A">수영역(2·3호선 환승)</text>
+
+        <!-- SITE -->
+        <rect x="413" y="217" width="22" height="22" fill="#111111"/>
+        <text x="300" y="210" font-size="14" font-weight="800" fill="#111111">SITE · 쌍용더플래티넘센텀</text>
+        <text x="300" y="228" font-size="11" fill="#8A8A8A">(수영구 망미동 253-1)</text>
+
+        <!-- 망미초 (SITE's school) -->
+        <rect x="397" y="222" width="12" height="12" fill="#FFFFFF" stroke="#111111" stroke-width="2" stroke-dasharray="2 2"/>
+        <text x="300" y="256" font-size="12" fill="#555555">망미초등학교 (배정초)</text>
+        <text x="300" y="272" font-size="11" fill="#8A8A8A">SITE 북서측 약 110m</text>
+
+        <!-- comp2 : 광안센텀비스타동원 -->
+        <rect x="306" y="344" width="16" height="16" fill="#FFFFFF" stroke="#555555" stroke-width="2.5"/>
+        <text x="328" y="351" font-size="13" fill="#111111">광안센텀비스타동원</text>
+        <text x="328" y="367" font-size="11" fill="#8A8A8A">비교단지2 · 수영구 광안동</text>
+
+        <!-- distance legend -->
+        <g transform="translate(20,420)">
+          <rect x="0" y="-10" width="600" height="30" fill="#FFFFFF" stroke="#E3E3E3"/>
+          <text x="14" y="10" font-size="11.5" fill="#555555">SITE ↔ 망미역 약 790m · SITE ↔ 센텀파크SK뷰 약 1.5km · SITE ↔ 광안센텀비스타동원 약 1.0km (브동산 구글맵 실측)</text>
+        </g>
+
+        <text x="20" y="452" font-size="10.5" fill="#8A8A8A">■ 검정=SITE · □(회색 테두리)=비교단지 · □(점선 테두리)=배정초등학교 · ○=인근 지하철역</text>
+      </svg>
+    </div>
+    <div class="cover-cap">지도: SITE·비교단지 2곳·배정초등학교 상대 위치 — 브동산이 구글맵 좌표 실측을 바탕으로 자체 제작한 개략도(축척·형태는 개략적 표현이며 실제 지도가 아니다)</div>
+
+    <div class="radar-wrap">
+      <svg viewBox="0 0 240 260" role="img" aria-label="입지, 브랜드, 상품성, 연식 4개 축으로 본 3개 단지 비교 레이더 차트">
+        <g>
+          <polygon points="120,30 210,120 120,210 30,120" fill="none" stroke="#E3E3E3" stroke-width="1"/>
+          <polygon points="120,48 192,120 120,192 48,120" fill="none" stroke="#E3E3E3" stroke-width="1"/>
+          <polygon points="120,66 174,120 120,174 66,120" fill="none" stroke="#E3E3E3" stroke-width="1"/>
+          <polygon points="120,84 156,120 120,156 84,120" fill="none" stroke="#E3E3E3" stroke-width="1"/>
+          <polygon points="120,102 138,120 120,138 102,120" fill="none" stroke="#E3E3E3" stroke-width="1"/>
+        </g>
+        <polygon points="120,93 210,120 120,176.25 36.3,120" fill="none" stroke="#8A8A8A" stroke-width="1.5" stroke-dasharray="1.5 3"/>
+        <polygon points="120,45.75 156,120 120,180.75 43.5,120" fill="none" stroke="#555555" stroke-width="1.5" stroke-dasharray="5 3"/>
+        <polygon points="120,72.75 174,120 120,187.5 30,120" fill="rgba(17,17,17,0.08)" stroke="#111111" stroke-width="2"/>
+        <text x="120" y="20" text-anchor="middle" font-size="12" fill="#555555">입지</text>
+        <text x="222" y="124" text-anchor="middle" font-size="12" fill="#555555">브랜드</text>
+        <text x="120" y="228" text-anchor="middle" font-size="12" fill="#555555">상품성</text>
+        <text x="18" y="124" text-anchor="middle" font-size="12" fill="#555555">연식</text>
+      </svg>
+      <div class="radar-legend">
+        <span class="lg-item"><i class="lg-swatch lg-site"></i>SITE · 쌍용더플래티넘센텀</span>
+        <span class="lg-item"><i class="lg-swatch lg-c1"></i>센텀파크SK뷰</span>
+        <span class="lg-item"><i class="lg-swatch lg-c2"></i>광안센텀비스타동원</span>
+      </div>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>평가 항목</th><th>SITE · 쌍용더플래티넘센텀<br><span class="note" style="margin-top:2px;">(쌍용건설·490세대·2029년 1월 입주예정)</span></th><th>센텀파크SK뷰<br><span class="note" style="margin-top:2px;">(SK에코플랜트·309세대·2028년 상반기 입주예정)</span></th><th>광안센텀비스타동원<br><span class="note" style="margin-top:2px;">(동원개발·525세대·2027년 9월 입주예정)</span></th></tr></thead>
+        <tbody>
+          <tr><td>입지(40)</td><td class="figure">21</td><td class="figure">12</td><td class="figure">33</td></tr>
+          <tr><td>브랜드(20)</td><td class="figure">12</td><td class="figure">20</td><td class="figure">8</td></tr>
+          <tr><td>상품성(40)</td><td class="figure">30</td><td class="figure">25</td><td class="figure">27</td></tr>
+          <tr><td>종합평점</td><td class="figure"><b>63</b></td><td class="figure">57</td><td class="figure">68</td></tr>
+          <tr><td>연식가산율</td><td class="figure">기준(신축)</td><td class="figure">8개월차·×1.007</td><td class="figure">16개월차·×1.013</td></tr>
+          <tr><td>84㎡ 기준가</td><td class="figure">-</td><td class="figure">8.30억(84A·B 가중평균)</td><td class="figure">8.41억(84A 기준)</td></tr>
+          <tr><td>보정가격</td><td class="figure">-</td><td class="figure">8.86억</td><td class="figure">8.09억</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">평점은 브동산이 교통·주거·교육 여건과 브랜드·세대수·조망·주차 등을 종합해 자체 산정한 값이다. 교통환경 세부점수는 구글맵 좌표 실측 거리를 기준으로 산정했다. 84㎡ 기준가는 두 비교단지 모두 완공 전 단지라 KB시세 대신 공개된 분양가를 기준으로 삼았다.</p>
+
+    <ul class="plain">
+      <li><b>입지:</b> SITE는 망미역까지 약 790m로 역세권이라 보기엔 다소 애매하고, 공식 홍보자료가 함께 내세우는 배산역은 구글맵 실측 약 1.8km로 사실상 도보권이 아니다. 반면 광안센텀비스타동원은 망미역 300m·수영역(환승) 500m의 더블역세권이라 입지 점수에서 SITE를 크게 앞선다.</li>
+      <li><b>브랜드:</b> 센텀파크SK뷰(SK에코플랜트)가 20점 만점으로 가장 높고, SITE(쌍용건설, 2026년 시공능력평가 19위)는 12점, 광안센텀비스타동원(동원개발, 부산 지역 건설사)은 8점이다.</li>
+      <li><b>상품성:</b> SITE는 남향위주 4베이 구조와 수영강·센텀시티 더블조망을 내세워 세 단지 중 가장 높게 나왔지만, 세대수 대비 격차가 크지는 않다.</li>
+      <li><b>브동산 적정가 기준으로는 뚜렷한 고평가 신호.</b> 84㎡ 기준 적정가는 약 8.48억원인데, 실제 분양가 평균은 약 12.6억원으로 격차가 약 49%에 달한다. 두 비교단지의 보정가격이 8.86억원과 8.09억원으로 비교적 근접해 있어(연식 차이가 크지 않은 두 신축 비교라는 점에서), 이번 고평가 신호는 다른 사례보다 신뢰도가 높은 편이라고 볼 수 있다.</li>
+      <li><b>사업방식이 지역주택조합이다.</b> 재건축·재개발이나 민간 시행 분양과 달리 조합 설립·토지 확보 단계의 불확실성이 남아있는 사업 구조이며, 이 부분은 3장에서 더 자세히 다룬다.</li>
+    </ul>
+
+    <p>정리하면 브동산 모형은 이 단지에 뚜렷한 고평가 신호를 준다. 실제로 "센텀 생활권인 건 알겠지만 너무 비싸다"는 지역 반응이 이미 나오고 있고, 같은 '더 플래티넘' 브랜드의 다른 지역 단지(춘천 등)에서도 고분양가로 인한 미달 사례가 있었다는 점은 참고할 만하다.</p>
+  </section>
+
+  <section id="s2">
+    <h2>2. 입지 분석</h2>
+    <p class="lede">부산 수영구 망미동 253-1번지, 수영강 서편·센텀시티 바로 북쪽에 위치한다. 공식 홈페이지는 "도보권 지하철역"을 내세우지만, 브동산이 구글맵 좌표로 직접 실측해보니 체감 거리는 마케팅 문구보다 다소 애매했다.</p>
+
+    <div class="photo-block">
+      <img src="images/ssangyong-the-platinum-centum/location.jpg" alt="쌍용 더 플래티넘 센텀 입지환경 안내" style="width:100%;display:block;">
+    </div>
+    <div class="cover-cap">이미지: 공식 홈페이지 입지환경 안내 — 코스트코, 신세계·롯데백화점, F1963, 벡스코 등 센텀 생활권 인프라를 강조하고 있다</div>
+
+    <p>교통은 부산도시철도 3호선 망미역이 가장 가까운데, 브동산이 구글맵 좌표로 직선거리를 실측한 결과 약 790m(도보 약 10분)로 나왔다. 공식 홈페이지가 함께 언급하는 배산역은 실측 약 1.8km로, 사실상 도보 이용이 어려운 거리다. 2·3호선 환승역인 수영역도 약 1.3km 떨어져 있어 환승역 인접이라고 보기는 어렵다. 정리하면 SITE는 '역세권'이라기보다는 '준역세권' 정도로 보는 것이 정확하다.</p>
+    <p>배정초등학교는 <b>망미초등학교</b>로, SITE 북서측 약 110m 거리에 있어 사실상 단지 바로 앞의 초품아 입지다. 공식 홍보자료는 망미초를 "그린스마트 미래학교"로 소개하고 있는데, 이는 노후 교사를 스마트교실 중심으로 전면 개축하는 교육부 사업 대상교라는 뜻이다. 학생 수는 약 389명(32학급, 학교알리미 기준)으로 학급당 인원이 적은 편이며, 인접 중학교의 특목고·자사고 진학률 등은 민간 참고 지표(리치고 기준)로만 확인되고 국가 공식 학업성취도 조사는 2017년 폐지돼 별도로 존재하지 않는다.</p>
+    <p>생활 인프라는 세 단지 중 SITE가 가장 우수한 편이다. 코스트코 수영점, 신세계백화점·롯데백화점 센텀시티점, 복합문화공간 F1963, 벡스코, 수영강 산책로가 모두 도보~단거리 차량 권역에 있다. 다만 이 인프라의 상당 부분은 SITE만의 강점이 아니라 '센텀 생활권'이라는 넓은 지역 전체가 공유하는 것이라, 광안센텀비스타동원 역시 유사한 생활권 이점을 누린다는 점은 감안할 필요가 있다.</p>
+  </section>
+
+  <section id="s3">
+    <h2>3. 상품 분석</h2>
+    <p class="lede">지역주택조합 방식으로 추진되는 지하 2층~지상 35층, 6개동, 총 490세대 규모의 단지다. 이 중 조합원 물량을 제외한 일반분양은 53세대뿐이며, 그마저도 84㎡ 43세대(특별공급 22·일반공급 21)가 대부분을 차지한다.</p>
+
+    <dl class="spec">
+      <div class="row"><dt>사업 방식</dt><dd>지역주택조합(시공 쌍용건설)</dd></div>
+      <div class="row"><dt>위치</dt><dd>부산광역시 수영구 망미동 253-1번지 일원</dd></div>
+      <div class="row"><dt>규모</dt><dd>지하 2층~지상 35층, 6개동, 총 490세대(일반분양 53세대)</dd></div>
+      <div class="row"><dt>타입</dt><dd>전용 63A·63B·74B·84 총 4개 타입(59㎡ 없음)</dd></div>
+      <div class="row"><dt>입주 예정</dt><dd>2029년 1월</dd></div>
+    </dl>
+
+    <h3>타입별 일반분양 세대수 및 분양가</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>타입</th><th>세대수</th><th>분양가 구간</th></tr></thead>
+        <tbody>
+          <tr><td>63A</td><td class="figure">5세대</td><td class="figure">9.12억~9.38억</td></tr>
+          <tr><td>63B</td><td class="figure">2세대</td><td class="figure">9.11억~9.16억</td></tr>
+          <tr><td>74B</td><td class="figure">3세대</td><td class="figure">10.41억~11.02억</td></tr>
+          <tr><td>84</td><td class="figure">43세대</td><td class="figure">11.98억~13.21억</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">일반분양 물량 기준이며, 나머지 세대는 조합원분이다. 발코니 확장비·추가 선택품목 비용은 별도다. 정확한 확정 가격과 계약조건은 입주자모집공고문을 기준으로 확인해야 한다.</p>
+
+    <h3>청약 일정</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>구분</th><th>일정</th></tr></thead>
+        <tbody>
+          <tr><td>입주자모집공고</td><td class="figure">2026. 9. 18</td></tr>
+          <tr><td>특별공급</td><td class="figure">2026. 9. 28(월)</td></tr>
+          <tr><td>1순위 청약(해당·기타지역)</td><td class="figure">2026. 9. 29(화)</td></tr>
+          <tr><td>2순위 청약</td><td class="figure">2026. 9. 30(수)</td></tr>
+          <tr><td>당첨자 발표</td><td class="figure">2026. 10. 7(수)</td></tr>
+          <tr><td>정당계약</td><td class="figure">2026. 10. 19~21</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">지역주택조합 일반분양분은 청약통장 없이도 신청 가능한 경우가 많지만, 조합 규약과 공급 조건에 따라 달라질 수 있다. 정확한 자격 요건은 모집공고문과 청약홈(applyhome.co.kr)에서 반드시 재확인해야 한다.</p>
+
+    <h3>배치도·평면도</h3>
+    <p class="note">이번 조사 시점(청약 접수 직전)에는 공식 홈페이지에 동호수배치도·타입별 평면도가 별도로 공개돼 있지 않았다. 확보되는 대로 본 포스팅에 추가할 예정이다.</p>
+  </section>
+
+  <section id="s4">
+    <h2>4. 공급이 많을까, 적을까</h2>
+    <p class="lede">부산 수영구는 2026년 한 해 약 1,233세대가 입주할 예정이고, 인접한 연제구는 신규 입주 물량이 거의 없어 공급 감소 효과가 반영되는 지역으로 꼽힌다. 다만 SITE가 속한 좁은 의미의 '센텀 생활권'만 놓고 보면 이야기가 조금 다르다.</p>
+
+    <div class="stat-pair">
+      <div class="stat-box">
+        <div class="sk">SITE 전체 세대수</div>
+        <div class="sv num">490<span style="font-size:15px;font-weight:400;"> 세대</span></div>
+        <div class="sbar"><div style="width:100%"></div></div>
+      </div>
+      <div class="stat-box">
+        <div class="sk">SITE 일반분양 물량</div>
+        <div class="sv num">53<span style="font-size:15px;font-weight:400;"> 세대</span></div>
+        <div class="sbar"><div style="width:11%"></div></div>
+      </div>
+    </div>
+
+    <p>SITE와 도보~차량 10분 권역 안에서만 광안센텀비스타동원(525세대, 2027년 9월 입주)과 센텀파크SK뷰(309세대, 2028년 상반기 입주)가 순차적으로 입주를 앞두고 있다. 세 단지를 합치면 2027~2029년 사이 센텀·광안 생활권 일대에 약 1,300세대가 넘는 신축이 몰리는 셈이라, SITE 입주 시점(2029년 1월)에는 두 비교단지가 이미 입주를 마친 '기존 신축'이 되어 SITE와 직접 경쟁하는 구도가 만들어진다.</p>
+    <p>여기에 SITE 자체의 일반분양 물량이 53세대뿐이라는 점도 함께 봐야 한다. 시장에 풀리는 물량 자체가 워낙 적어 청약 경쟁률만으로 단지 인기를 판단하기는 어렵고, 지역주택조합 특성상 조합원 모집·추가 분담금 이슈가 일반분양가에도 영향을 줬을 가능성을 감안할 필요가 있다.</p>
+  </section>
+
+  <section id="s5">
+    <h2>5. 결론</h2>
+    <div class="split">
+      <div class="box">
+        <h3>강점</h3>
+        <ul class="plain">
+          <li>망미초등학교 바로 앞 초품아 입지, 학급당 인원도 적은 편</li>
+          <li>코스트코·백화점·F1963·수영강 산책로 등 센텀 생활권 인프라 직접 이용</li>
+          <li>남향위주 4베이 구조, 수영강·센텀시티 더블조망 설계</li>
+          <li>최고 35층 스카이라인, 490세대 규모의 준대단지</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>리스크</h3>
+        <ul class="plain">
+          <li>사업방식이 지역주택조합 — 조합원 분쟁·사업 지연 등 일반 분양과는 다른 불확실성 존재</li>
+          <li>망미역 약 790m·수영역 약 1.3km로 홍보만큼의 역세권은 아니고, 배산역은 약 1.8km로 사실상 도보권 밖</li>
+          <li>브동산 적정가(8.48억) 대비 실제 분양가(약 12.6억)가 약 49% 높아, 비교단지 대비 고평가 신호가 뚜렷함</li>
+          <li>같은 '더 플래티넘' 브랜드의 타 지역 단지에서 고분양가로 인한 청약 미달 사례가 있었음</li>
+          <li>일반분양 53세대에 불과해 시장 유동성 자체가 제한적</li>
+        </ul>
+      </div>
+    </div>
+    <p>종합하면 이 단지는 초품아 입지와 센텀 생활권 인프라라는 뚜렷한 강점이 있지만, 지역주택조합이라는 사업 구조와 비교단지 대비 상당히 높은 분양가라는 두 가지 리스크를 함께 안고 있다. 브동산 모형상으로는 이례적으로 큰 폭의 고평가 신호가 나왔고, 두 비교단지의 보정가격 자체는 비교적 근접해 신뢰도도 낮지 않은 편이다. 특별공급은 9월 28일부터 시작되니, 조합 사업 진행 상황과 분담금 구조를 모집공고문에서 꼼꼼히 확인한 뒤 청약 여부를 판단하는 것을 권한다.</p>
+  </section>
+
+  <section id="ad">
+    <div class="sponsor">
+      <div class="sponsor-top">
+        <span class="ad-badge">AD · 광고</span>
+        <span class="sponsor-note">예시로 구성한 가상의 상담 카드다</span>
+      </div>
+      <div class="agent">
+        <span class="avatar">쌍</span>
+        <div class="agent-info">
+          <div class="name">박수영 팀장 (가상 예시)</div>
+          <div class="role">쌍용 더 플래티넘 센텀 청약·계약 상담 · OO공인중개사사무소</div>
+          <div class="desc">지역주택조합 분담금 구조, 타입별 청약 조건 상담 가능. 평일 09:00–19:00 응대.</div>
+        </div>
+        <div class="agent-side">
+          <span class="phone">010-0000-0000 (예시)</span>
+          <button class="btn" type="button">상담 신청하기</button>
+        </div>
+      </div>
+      <div class="ad-apply">
+        <span class="ad-apply-text">이 자리에 광고를 원하는 부동산·분양 담당자이신가요?</span>
+        <div class="ad-apply-actions">
+          <a class="btn-outline" href="mailto:0324jhkim@gmail.com?subject=%5B%EB%B8%8C%EB%8F%99%EC%82%B0%5D%20%EA%B4%91%EA%B3%A0%20%EB%AC%B8%EC%9D%98%20-%20%EC%8C%8D%EC%9A%A9%20%EB%8D%94%20%ED%94%8C%EB%9E%98%ED%8B%B0%EB%84%98%20%EC%84%BC%ED%85%80&body=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94%2C%20%EB%B8%8C%EB%8F%99%EC%82%B0%20%EA%B4%91%EA%B3%A0%20%EB%AC%B8%EC%9D%98%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4.%0A%0A%EC%97%85%EC%B2%B4%EB%AA%85%3A%20%0A%EC%97%B0%EB%9D%BD%EC%B2%98%3A%20%0A%EB%AC%B8%EC%9D%98%20%EB%8B%A8%EC%A7%80%3A%20%EC%8C%8D%EC%9A%A9%20%EB%8D%94%20%ED%94%8C%EB%9E%98%ED%8B%B0%EB%84%98%20%EC%84%BC%ED%85%80%0A%EB%AC%B8%EC%9D%98%20%EB%82%B4%EC%9A%A9%3A%20">광고 신청하기</a>
+          <span class="ad-email-copy"><code id="ad-email">0324jhkim@gmail.com</code><button class="copy-btn" type="button" onclick="brdCopyEmail('ad-email', this)">복사</button></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="hairline" style="margin-bottom:20px;"></div>
+    <p>
+      본 콘텐츠는 <b>브동산</b>이 공식 홈페이지(쌍용 더 플래티넘 센텀)와 공개된 분양·시세 정보를 종합해 작성한 정보성 콘텐츠이며, 투자 권유나 청약·매수 대행이 아니다. 비교단지 가격은 분양가 기준으로 산정했으며, 완공 전 단지라 실거래·분양권 프리미엄은 반영하지 않았다. 분양가·청약일정·시세 등 수치는 각 자료 시점 기준이며 이후 달라질 수 있다. 실제 계약이나 매수 결정 전에는 반드시 청약홈(applyhome.co.kr), 입주자모집공고문, 최신 실거래가를 직접 확인해야 한다. 하단 상담 카드는 유료 광고 영역이며, 본 시안에서는 실감을 위해 가상의 예시 정보로 구성했다.
+    </p>
+  </div>
+</footer>
+
+<script>
+function brdCopyEmail(id, btn){
+  var text = document.getElementById(id).textContent;
+  function done(){
+    var orig = btn.textContent;
+    btn.textContent = '복사됨';
+    btn.classList.add('copied');
+    setTimeout(function(){ btn.textContent = orig; btn.classList.remove('copied'); }, 1500);
+  }
+  function fallbackCopy(){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch(e) {}
+    document.body.removeChild(ta);
+    done();
+  }
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+}
+</script>
+
+</body>
+</html>
