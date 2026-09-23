@@ -19,6 +19,19 @@
 
 const POSTS = [
   {
+    id: "marketing-is-brand-management",
+    category: "brand",
+    tag: "브랜드 언박싱 No.002",
+    title: "마케팅은 브랜드 관리다 — 세스 고딘의 40년 마케팅론을 관통하는 결론 하나",
+    date: "2026-09-23",
+    dateLabel: "2026. 9. 23",
+    url: "posts/marketing-is-brand-management.html",
+    preview: `
+      <p>Permission Marketing(1999)부터 This Is Marketing(2018)까지, 세스 고딘의 40년 마케팅론을 관통하는 결론은 하나 — 마케팅은 결국 브랜드를 관리하는 일이라는 것.</p>
+      <p>신뢰는 빌리는 게 아니라 쌓는 것, 무난함이 가장 위험한 전략이라는 것, 부족을 이끄는 리더십, 최소유효시장 — 네 가지 개념을 부동산 청약 마케팅에 적용해봤다.</p>
+    `
+  },
+  {
     id: "gwangmyeong-city-pradium-eduheim",
     category: "realestate",
     tag: "청약 언박싱 No.007",
