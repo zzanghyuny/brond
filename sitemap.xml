@@ -52,6 +52,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.brandongsan.com/posts/gwangmyeong-city-pradium-eduheim.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.brandongsan.com/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

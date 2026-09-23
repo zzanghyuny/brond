@@ -19,6 +19,19 @@
 
 const POSTS = [
   {
+    id: "gwangmyeong-city-pradium-eduheim",
+    category: "realestate",
+    tag: "청약 언박싱 No.007",
+    title: "광명 시티프라디움 에듀하임 | 구름산지구 A6블록, 서울 옆세권 426세대 청약의 적정가는",
+    date: "2026-09-23",
+    dateLabel: "2026. 9. 23",
+    url: "posts/gwangmyeong-city-pradium-eduheim.html",
+    preview: `
+      <p>광명 구름산지구 A6블록에 들어서는 시티건설의 426세대, 광명 시티프라디움 에듀하임. 브동산 적정가(84㎡) 12.7억원 · 실제 분양가 평균 11.3억원 — 약 12% 저평가 신호가 나왔지만, 비교단지 간 편차가 커 해석에는 유의가 필요합니다.</p>
+      <p>특별공급은 9월 29일부터 시작되며, "서울 옆세권" 마케팅과 달리 실제로는 도보권 지하철역이 없는 도로교통 중심 입지라는 점이 눈에 띕니다.</p>
+    `
+  },
+  {
     id: "incheon-guwol-artpark",
     category: "realestate",
     tag: "청약 언박싱 No.006",
