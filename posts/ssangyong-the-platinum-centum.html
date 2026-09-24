@@ -128,6 +128,7 @@
   .stat-box .sbar{ height:6px; background:#EFEFEF; margin-top:12px; }
   .stat-box .sbar > div{ height:100%; background:var(--ink); }
   .delta{ display:inline-block; margin-top:14px; font-weight:800; font-size:13.5px; border-bottom:2px solid var(--ink); padding-bottom:2px; }
+  .premium{ font-size:13.5px; font-weight:800; color:var(--ink-soft); margin-top:6px; }
 
   .split{ display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:16px 0; }
   .split .box h3{ margin-top:0; }
@@ -162,6 +163,8 @@
   .photo-block img{ border:1px solid var(--hair); }
 
   .radar-wrap{ margin:20px 0 10px; }
+  .bridge-wrap{ margin:20px 0 10px; border:1px solid var(--hair); padding:10px 12px; }
+  .bridge-wrap svg{ width:100%; height:auto; display:block; }
   .radar-wrap svg{ width:100%; max-width:340px; display:block; margin:0 auto; }
   .radar-legend{ display:flex; flex-wrap:wrap; gap:14px 18px; justify-content:center; margin-top:6px; }
   .lg-item{ font-size:12.5px; color:var(--ink-soft); display:inline-flex; align-items:center; gap:6px; }
@@ -187,7 +190,7 @@
 <div class="wrap">
 
   <div class="titleblock">
-    <h1>쌍용 더 플래티넘 센텀 | 지역주택조합 490세대, 망미동 84㎡ 13억대 청약의 적정가는</h1>
+    <h1>쌍용 더 플래티넘 센텀 | 지역주택조합 490세대, 예상 프리미엄은 -4.1억</h1>
   </div>
   <div class="byline">
     <span class="avatar">브</span>
@@ -213,7 +216,8 @@
     <div class="stat-pair">
       <div class="stat-box">
         <div class="sk">브동산 적정가 (84㎡)</div>
-        <div class="sv">8.48<span style="font-size:15px;font-weight:400;"> 억원</span></div>
+        <div class="sv">8.46<span style="font-size:15px;font-weight:400;"> 억원</span></div>
+        <div class="premium">예상 프리미엄 -4.1억</div>
         <div class="sbar"><div style="width:67%"></div></div>
       </div>
       <div class="stat-box">
@@ -304,6 +308,35 @@
       </div>
     </div>
 
+    <div class="bridge-wrap">
+<svg viewBox="0 0 640 310" role="img" aria-label="비교단지 현재시세가 평점·연령 보정을 거쳐 SITE 적정가로 이어지는 과정을 보여주는 브동산 적정가 산출 브릿지 차트">
+<rect x="0" y="0" width="640" height="310" fill="#FAFAFA"/>
+<line x1="129.0" y1="20" x2="129.0" y2="219" stroke="#BBBBBB" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="0" y="36" font-size="12.5" font-weight="800" fill="#111111">센텀파크SK뷰</text>
+<text x="140.2" y="52" text-anchor="middle" font-size="10.5" fill="#8A8A8A">평점·연령 ×1.07</text>
+<line x1="112.7" y1="66" x2="167.7" y2="66" stroke="#555555" stroke-width="1.5"/>
+<circle cx="112.7" cy="66" r="5.5" fill="#FFFFFF" stroke="#555555" stroke-width="2"/>
+<rect x="162.7" y="61" width="10" height="10" fill="#111111"/>
+<text x="103.7" y="70" text-anchor="end" font-size="11" font-weight="400" fill="#8A8A8A">8.3억</text><text x="176.7" y="70" text-anchor="start" font-size="11" font-weight="700" fill="#111111">8.84억</text>
+<text x="0" y="122" font-size="12.5" font-weight="800" fill="#111111">광안센텀비스타동원</text>
+<text x="106.6" y="138" text-anchor="middle" font-size="10.5" fill="#8A8A8A">평점·연령 ×0.96</text>
+<line x1="123.9" y1="152" x2="89.2" y2="152" stroke="#555555" stroke-width="1.5"/>
+<circle cx="123.9" cy="152" r="5.5" fill="#FFFFFF" stroke="#555555" stroke-width="2"/>
+<rect x="84.2" y="147" width="10" height="10" fill="#111111"/>
+<text x="80.2" y="156" text-anchor="end" font-size="11" font-weight="700" fill="#111111">8.07억</text><text x="132.9" y="156" text-anchor="start" font-size="11" font-weight="400" fill="#8A8A8A">8.41억</text>
+<line x1="0" y1="194" x2="640" y2="194" stroke="#E3E3E3" stroke-width="1"/>
+<text x="0" y="218" font-size="12.5" font-weight="800" fill="#111111">쌍용 더 플래티넘 센텀 (SITE)</text>
+<text x="339.9" y="234" text-anchor="middle" font-size="11" font-weight="800" fill="#111111">예상 프리미엄 -4.14억</text>
+<line x1="129.0" y1="248" x2="550.8" y2="248" stroke="#111111" stroke-width="2"/>
+<circle cx="550.8" cy="248" r="5.5" fill="#FFFFFF" stroke="#111111" stroke-width="2"/>
+<path d="M 123.0 248 L 129.0 242 L 135.0 248 L 129.0 254 Z" fill="#111111"/>
+<text x="120.0" y="270" text-anchor="end" font-size="11" font-weight="800" fill="#111111">적정가 8.46억</text>
+<text x="559.8" y="270" text-anchor="start" font-size="11" font-weight="400" fill="#8A8A8A">실제분양가 12.6억</text>
+<text x="0" y="298" font-size="10.5" fill="#8A8A8A">○=현재시세/실제분양가 · ■=평점·연령 보정 후 보정가격 · ◆=SITE 적정가(두 보정가격 평균) · 점선=적정가 기준선</text>
+</svg>
+    </div>
+    <div class="cover-cap">적정가 산출 브릿지: 비교단지 현재시세가 평점·연령 보정을 거쳐 보정가격이 되고, 그 평균이 SITE 적정가가 되는 과정 — 브동산 모형 자체 시각화</div>
+
     <div class="tablewrap">
       <table>
         <thead><tr><th>평가 항목</th><th>SITE · 쌍용더플래티넘센텀<br><span class="note" style="margin-top:2px;">(쌍용건설·490세대·2029년 1월 입주예정)</span></th><th>센텀파크SK뷰<br><span class="note" style="margin-top:2px;">(SK에코플랜트·309세대·2028년 상반기 입주예정)</span></th><th>광안센텀비스타동원<br><span class="note" style="margin-top:2px;">(동원개발·525세대·2027년 9월 입주예정)</span></th></tr></thead>
@@ -312,9 +345,9 @@
           <tr><td>브랜드(20)</td><td class="figure">12</td><td class="figure">20</td><td class="figure">8</td></tr>
           <tr><td>상품성(40)</td><td class="figure">30</td><td class="figure">25</td><td class="figure">27</td></tr>
           <tr><td>종합평점</td><td class="figure"><b>63</b></td><td class="figure">57</td><td class="figure">68</td></tr>
-          <tr><td>연식가산율</td><td class="figure">기준(신축)</td><td class="figure">8개월차·×1.007</td><td class="figure">16개월차·×1.013</td></tr>
+          <tr><td>연식가산율</td><td class="figure">기준(신축)</td><td class="figure">8개월차·×1.0053</td><td class="figure">16개월차·×1.0107</td></tr>
           <tr><td>84㎡ 기준가</td><td class="figure">-</td><td class="figure">8.30억(84A·B 가중평균)</td><td class="figure">8.41억(84A 기준)</td></tr>
-          <tr><td>보정가격</td><td class="figure">-</td><td class="figure">8.86억</td><td class="figure">8.09억</td></tr>
+          <tr><td>보정가격</td><td class="figure">-</td><td class="figure">8.84억</td><td class="figure">8.07억</td></tr>
         </tbody>
       </table>
     </div>
@@ -324,7 +357,7 @@
       <li><b>입지:</b> SITE는 망미역까지 약 790m로 역세권이라 보기엔 다소 애매하고, 공식 홍보자료가 함께 내세우는 배산역은 구글맵 실측 약 1.8km로 사실상 도보권이 아니다. 반면 광안센텀비스타동원은 망미역 300m·수영역(환승) 500m의 더블역세권이라 입지 점수에서 SITE를 크게 앞선다.</li>
       <li><b>브랜드:</b> 센텀파크SK뷰(SK에코플랜트)가 20점 만점으로 가장 높고, SITE(쌍용건설, 2026년 시공능력평가 19위)는 12점, 광안센텀비스타동원(동원개발, 부산 지역 건설사)은 8점이다.</li>
       <li><b>상품성:</b> SITE는 남향위주 4베이 구조와 수영강·센텀시티 더블조망을 내세워 세 단지 중 가장 높게 나왔지만, 세대수 대비 격차가 크지는 않다.</li>
-      <li><b>브동산 적정가 기준으로는 뚜렷한 고평가 신호.</b> 84㎡ 기준 적정가는 약 8.48억원인데, 실제 분양가 평균은 약 12.6억원으로 격차가 약 49%에 달한다. 두 비교단지의 보정가격이 8.86억원과 8.09억원으로 비교적 근접해 있어(연식 차이가 크지 않은 두 신축 비교라는 점에서), 이번 고평가 신호는 다른 사례보다 신뢰도가 높은 편이라고 볼 수 있다.</li>
+      <li><b>브동산 적정가 기준으로는 뚜렷한 고평가 신호.</b> 84㎡ 기준 적정가는 약 8.46억원인데, 실제 분양가 평균은 약 12.6억원으로 격차가 약 49%에 달한다. 두 비교단지의 보정가격이 8.86억원과 8.09억원으로 비교적 근접해 있어(연식 차이가 크지 않은 두 신축 비교라는 점에서), 이번 고평가 신호는 다른 사례보다 신뢰도가 높은 편이라고 볼 수 있다.</li>
       <li><b>사업방식이 지역주택조합이다.</b> 재건축·재개발이나 민간 시행 분양과 달리 조합 설립·토지 확보 단계의 불확실성이 남아있는 사업 구조이며, 이 부분은 3장에서 더 자세히 다룬다.</li>
     </ul>
 
@@ -429,7 +462,7 @@
         <ul class="plain">
           <li>사업방식이 지역주택조합 — 조합원 분쟁·사업 지연 등 일반 분양과는 다른 불확실성 존재</li>
           <li>망미역 약 790m·수영역 약 1.3km로 홍보만큼의 역세권은 아니고, 배산역은 약 1.8km로 사실상 도보권 밖</li>
-          <li>브동산 적정가(8.48억) 대비 실제 분양가(약 12.6억)가 약 49% 높아, 비교단지 대비 고평가 신호가 뚜렷함</li>
+          <li>브동산 적정가(8.46억) 대비 실제 분양가(약 12.6억)가 약 49% 높아, 비교단지 대비 고평가 신호가 뚜렷함</li>
           <li>같은 '더 플래티넘' 브랜드의 타 지역 단지에서 고분양가로 인한 청약 미달 사례가 있었음</li>
           <li>일반분양 53세대에 불과해 시장 유동성 자체가 제한적</li>
         </ul>
@@ -471,23 +504,23 @@
     <div class="related-list">
       <a class="related-item" href="jinju-panmun-lakesummit-wellga.html">
         <span class="r-tag">청약 언박싱 No.009</span>
-        <span class="r-title">진주 판문지구 레이크써밋 웰가 | 진양호를 품은 690세대, 판문·평거 더블생활권 청약의 적정가는</span>
+        <span class="r-title">진주 판문지구 레이크써밋 웰가 | 진양호를 품은 690세대, 예상 프리미엄은 +1.1억</span>
       </a>
       <a class="related-item" href="gwangmyeong-city-pradium-eduheim.html">
         <span class="r-tag">청약 언박싱 No.007</span>
-        <span class="r-title">광명 시티프라디움 에듀하임 | 구름산지구 A6블록, 서울 옆세권 426세대 청약의 적정가는</span>
+        <span class="r-title">광명 시티프라디움 에듀하임 | 구름산지구 A6블록, 예상 프리미엄은 -0.2억</span>
       </a>
       <a class="related-item" href="incheon-guwol-artpark.html">
         <span class="r-tag">청약 언박싱 No.006</span>
-        <span class="r-title">힐스테이트 구월아트파크 | 예술회관역 직통연결 주상복합, 청약 미달 56%의 적정가는</span>
+        <span class="r-title">힐스테이트 구월아트파크 | 예술회관역 직통연결 주상복합, 예상 프리미엄은 -1.3억</span>
       </a>
       <a class="related-item" href="mokdong-yunseulxi.html">
         <span class="r-tag">청약 언박싱 No.004</span>
-        <span class="r-title">목동 윤슬자이 | 오목교역 초역세권 하이엔드 오피스텔, 전용 114㎡ 30억대 청약의 적정가는</span>
+        <span class="r-title">목동 윤슬자이 | 오목교역 초역세권 하이엔드 오피스텔, 예상 프리미엄은 +4.8억</span>
       </a>
       <a class="related-item" href="hwaseo-lakepark-honorsville.html">
         <span class="r-tag">청약 언박싱 No.005</span>
-        <span class="r-title">화서역 호수공원 아너스빌 | 수원시 유일 비규제지역, 서호공원 앞 476세대 청약의 적정가는</span>
+        <span class="r-title">화서역 호수공원 아너스빌 | 수원시 유일 비규제지역, 예상 프리미엄은 +1.6억</span>
       </a>
     </div>
     <div class="list-more"><a class="btn-list" href="https://brandongsan.com/realestate.html">청약·분양 목록 전체보기</a></div>
