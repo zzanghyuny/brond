@@ -40,11 +40,14 @@
 
   /* ---- masthead / byline ---- */
   .top-eyebrow{ padding:36px 0 0; }
-  .top-eyebrow .wrap{ color:var(--ink-faint); font-size:13px; letter-spacing:.02em; }
+  .top-eyebrow .wrap{ color:var(--ink-faint); font-size:13px; letter-spacing:.02em; display:flex; align-items:center; justify-content:space-between; gap:12px; }
 
-  .brand-mark{ display:inline-block; font-size:15px; line-height:1; }
+  .brand-mark{ display:inline-block; font-size:15px; line-height:1; text-decoration:none; }
   .brand-mark .bm-b{ font-weight:800; color:var(--ink); }
   .brand-mark .bm-rest{ font-weight:400; color:var(--ink-soft); }
+
+  .list-btn{ display:inline-flex; align-items:center; gap:4px; font-size:12px; color:var(--ink-soft); border:1px solid var(--hair); border-radius:4px; padding:4px 10px; text-decoration:none; flex:none; }
+  .list-btn:hover{ border-color:var(--ink); color:var(--ink); }
 
   .titleblock{ padding:14px 0 22px; }
   .titleblock h1{ font-size:clamp(26px,4.6vw,34px); line-height:1.42; font-weight:800; }
@@ -169,7 +172,7 @@
 </style>
 </head>
 <body>
-<div class="top-eyebrow"><div class="wrap"><span class="brand-mark"><span class="bm-b">브</span><span class="bm-rest">동산</span></span></div></div>
+<div class="top-eyebrow"><div class="wrap"><a class="brand-mark" href="https://brandongsan.com/"><span class="bm-b">브</span><span class="bm-rest">동산</span></a><a class="list-btn" href="https://brandongsan.com/realestate.html">☰ 목록</a></div></div>
 
 <div class="wrap">
 
@@ -212,9 +215,69 @@
     </div>
 
     <div class="map-wrap">
-      <img src="images/hwaseo-lakepark-honorsville/site-map.jpg" alt="화서역 호수공원 아너스빌 사업지, 비교단지 2곳, 배정초등학교 위치 지도" style="width:100%;display:block;">
+      <svg viewBox="0 0 640 460" role="img" aria-label="화서역 호수공원 아너스빌 사업지, 비교단지 2곳, 배정초등학교, 주요 생활시설 위치를 나타낸 브동산 자체 제작 개략도">
+        <rect x="0" y="0" width="640" height="460" fill="#FAFAFA"/>
+        <path d="M330 240 C 380 220, 420 260, 400 320 C 385 360, 340 370, 310 340 C 285 315, 295 260, 330 240 Z" fill="#E9EEF1" stroke="#DCE3E6" stroke-width="1"/>
+        <text x="335" y="300" font-size="12" fill="#8A8A8A">서호</text>
+
+        <!-- compass -->
+        <g transform="translate(590,36)">
+          <line x1="0" y1="10" x2="0" y2="-14" stroke="#555555" stroke-width="1.5"/>
+          <polygon points="0,-18 -5,-8 5,-8" fill="#555555"/>
+          <text x="0" y="24" font-size="11" text-anchor="middle" fill="#555555">N</text>
+        </g>
+
+        <!-- connecting lines -->
+        <line x1="276" y1="328" x2="303" y2="308" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="3 3"/>
+        <line x1="300" y1="300" x2="360" y2="90" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="3 3"/>
+        <line x1="255" y1="325" x2="125" y2="240" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="3 3"/>
+
+        <!-- 주요 생활시설 -->
+        <circle cx="360" cy="60" r="3" fill="#AAAAAA"/>
+        <text x="370" y="56" font-size="11.5" fill="#555555">화서역(1호선·수인분당선)</text>
+
+        <circle cx="420" cy="45" r="3" fill="#AAAAAA"/>
+        <text x="430" y="42" font-size="11.5" fill="#555555">스타필드·이마트트레이더스</text>
+
+        <circle cx="270" cy="60" r="3" fill="#AAAAAA"/>
+        <text x="180" y="56" font-size="11.5" fill="#555555">구운역(예정)</text>
+
+        <circle cx="380" cy="260" r="3" fill="#AAAAAA"/>
+        <text x="390" y="256" font-size="11.5" fill="#555555">여기산공원·국립농업박물관</text>
+
+        <circle cx="340" cy="380" r="3" fill="#AAAAAA"/>
+        <text x="350" y="394" font-size="11.5" fill="#555555">서호돌레길·낙조전망대</text>
+
+        <!-- comp2 : 화서역푸르지오브리시엘 (화서역 인근) -->
+        <rect x="352" y="82" width="16" height="16" fill="#FFFFFF" stroke="#555555" stroke-width="2.5"/>
+        <text x="330" y="72" font-size="13" fill="#111111">화서역푸르지오브리시엘</text>
+        <text x="330" y="112" font-size="11" fill="#8A8A8A">비교단지2 · 화서역 도보 약 7분</text>
+
+        <!-- comp1 : 힐스테이트수원파크포레 -->
+        <rect x="303" y="300" width="16" height="16" fill="#FFFFFF" stroke="#555555" stroke-width="2.5"/>
+        <text x="325" y="296" font-size="13" fill="#111111">힐스테이트수원파크포레</text>
+        <text x="325" y="326" font-size="11" fill="#8A8A8A">비교단지1 · SITE 인근, 역세권 아님</text>
+
+        <!-- SITE -->
+        <rect x="252" y="322" width="22" height="22" fill="#111111"/>
+        <text x="130" y="368" font-size="14" font-weight="800" fill="#111111">SITE · 화서역 호수공원 아너스빌</text>
+        <text x="130" y="386" font-size="11" fill="#8A8A8A">(서호공원·여기산공원 인접)</text>
+
+        <!-- 배정초 : 탑동초등학교 -->
+        <rect x="112" y="234" width="12" height="12" fill="#111111" stroke="#111111" stroke-width="2" stroke-dasharray="2 2"/>
+        <text x="30" y="224" font-size="12" fill="#555555">탑동초등학교</text>
+        <text x="30" y="256" font-size="11" fill="#8A8A8A">(배정초, SITE 서쪽 약 800m)</text>
+
+        <!-- distance legend -->
+        <g transform="translate(20,428)">
+          <rect x="0" y="-10" width="600" height="24" fill="#FFFFFF" stroke="#E3E3E3"/>
+          <text x="14" y="6" font-size="11" fill="#555555">SITE ↔ 힐스테이트수원파크포레 인접 · SITE ↔ 화서역푸르지오브리시엘 약 2km (브동산 실측 추정)</text>
+        </g>
+
+        <text x="20" y="452" font-size="10.5" fill="#8A8A8A">■ 검정=SITE · □(회색 테두리)=비교단지 · □(점선 테두리, 검정)=배정초등학교 · ●=주요 생활시설</text>
+      </svg>
     </div>
-    <div class="cover-cap">지도: SITE(빨강, 화서역 호수공원 아너스빌)·비교단지(초록, 힐스테이트수원파크포레·화서역푸르지오브리시엘)·배정초등학교(파랑, 탑동초등학교) 위치 — Google 지도 기반, 브동산 작도</div>
+    <div class="cover-cap">지도: SITE·비교단지 2곳(힐스테이트수원파크포레·화서역푸르지오브리시엘)·배정초등학교(탑동초등학교)·주요 생활시설 상대 위치 — 브동산이 공식 입지환경 이미지와 실측을 바탕으로 자체 제작한 개략도(축척·형태는 개략적 표현이며 실제 지도가 아닙니다)</div>
 
     <div class="radar-wrap">
       <svg viewBox="0 0 240 260" role="img" aria-label="입지, 브랜드, 상품성, 연식 4개 축으로 본 3개 단지 비교 레이더 차트">

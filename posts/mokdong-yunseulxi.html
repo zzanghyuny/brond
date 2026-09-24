@@ -40,11 +40,14 @@
 
   /* ---- masthead / byline ---- */
   .top-eyebrow{ padding:36px 0 0; }
-  .top-eyebrow .wrap{ color:var(--ink-faint); font-size:13px; letter-spacing:.02em; }
+  .top-eyebrow .wrap{ color:var(--ink-faint); font-size:13px; letter-spacing:.02em; display:flex; align-items:center; justify-content:space-between; gap:12px; }
 
-  .brand-mark{ display:inline-block; font-size:15px; line-height:1; }
+  .brand-mark{ display:inline-block; font-size:15px; line-height:1; text-decoration:none; }
   .brand-mark .bm-b{ font-weight:800; color:var(--ink); }
   .brand-mark .bm-rest{ font-weight:400; color:var(--ink-soft); }
+
+  .list-btn{ display:inline-flex; align-items:center; gap:4px; font-size:12px; color:var(--ink-soft); border:1px solid var(--hair); border-radius:4px; padding:4px 10px; text-decoration:none; flex:none; }
+  .list-btn:hover{ border-color:var(--ink); color:var(--ink); }
 
   .titleblock{ padding:14px 0 22px; }
   .titleblock h1{ font-size:clamp(26px,4.6vw,34px); line-height:1.42; font-weight:800; }
@@ -158,9 +161,9 @@
   .lg-c1{ border-top:2px dashed var(--ink-soft); }
   .lg-c2{ border-top:2px dotted var(--ink-faint); }
 
-  .map-wrap{ margin:20px 0 6px; border:1px solid var(--hair); position:relative; }
+  .map-wrap{ margin:20px 0 6px; border:1px solid var(--hair); }
   .map-wrap img{ width:100%; height:auto; display:block; }
-  .map-wrap svg{ position:absolute; top:0; left:0; width:100%; height:100%; }
+  .map-wrap svg{ width:100%; height:auto; display:block; background:#FAFAFA; }
 
   @media (max-width:520px){
     .stat-pair, .split{ grid-template-columns:1fr; }
@@ -170,7 +173,7 @@
 </style>
 </head>
 <body>
-<div class="top-eyebrow"><div class="wrap"><span class="brand-mark"><span class="bm-b">브</span><span class="bm-rest">동산</span></span></div></div>
+<div class="top-eyebrow"><div class="wrap"><a class="brand-mark" href="https://brandongsan.com/"><span class="bm-b">브</span><span class="bm-rest">동산</span></a><a class="list-btn" href="https://brandongsan.com/realestate.html">☰ 목록</a></div></div>
 
 <div class="wrap">
 
@@ -213,9 +216,77 @@
     </div>
 
     <div class="map-wrap">
-      <img src="images/mokdong-yunseulxi/site-map.jpg" alt="목동 윤슬자이 사업지, 비교단지 2곳, 배정초등학교 위치 지도" style="width:100%;display:block;">
+      <svg viewBox="0 0 640 460" role="img" aria-label="목동 윤슬자이 사업지, 비교단지 2곳, 배정초등학교, 주요 생활시설 위치를 나타낸 브동산 자체 제작 개략도">
+        <rect x="0" y="0" width="640" height="460" fill="#FAFAFA"/>
+        <path d="M40 60 C 220 20, 420 70, 610 40" stroke="#E3E3E3" stroke-width="9" fill="none"/>
+        <text x="40" y="30" font-size="11" fill="#8A8A8A">국회대로 방면</text>
+        <path d="M600 40 C 585 160, 600 300, 585 460" stroke="#DCE7EF" stroke-width="14" fill="none"/>
+        <text x="592" y="120" font-size="11" fill="#8A8A8A">안양천</text>
+
+        <!-- compass -->
+        <g transform="translate(590,90)">
+          <line x1="0" y1="10" x2="0" y2="-14" stroke="#555555" stroke-width="1.5"/>
+          <polygon points="0,-18 -5,-8 5,-8" fill="#555555"/>
+          <text x="0" y="24" font-size="11" text-anchor="middle" fill="#555555">N</text>
+        </g>
+
+        <!-- connecting lines (site to comps/school) -->
+        <line x1="270" y1="185" x2="330" y2="175" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="3 3"/>
+        <line x1="255" y1="205" x2="255" y2="330" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="3 3"/>
+        <line x1="270" y1="200" x2="470" y2="355" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="3 3"/>
+
+        <!-- 주요 생활시설 (공식 홈페이지 입지환경 이미지 기준) -->
+        <circle cx="330" cy="260" r="3" fill="#AAAAAA"/>
+        <text x="340" y="264" font-size="11.5" fill="#555555">오목공원</text>
+
+        <circle cx="200" cy="260" r="3" fill="#AAAAAA"/>
+        <text x="130" y="264" font-size="11.5" fill="#555555">목운중</text>
+
+        <circle cx="120" cy="300" r="3" fill="#AAAAAA"/>
+        <text x="45" y="304" font-size="11.5" fill="#555555">이마트 목동점</text>
+
+        <circle cx="440" cy="230" r="3" fill="#AAAAAA"/>
+        <text x="450" y="226" font-size="11.5" fill="#555555">행복한백화점</text>
+
+        <circle cx="450" cy="330" r="3" fill="#AAAAAA"/>
+        <text x="460" y="326" font-size="11.5" fill="#555555">현대백화점 목동점</text>
+
+        <!-- 서정초 (인근 기존교, 배정초 아님) -->
+        <rect x="70" y="400" width="12" height="12" fill="#FFFFFF" stroke="#111111" stroke-width="2" stroke-dasharray="2 2"/>
+        <text x="88" y="410" font-size="12" fill="#555555">서정초 (인근 기존교)</text>
+
+        <!-- comp1 : 목동7단지 -->
+        <rect x="330" y="167" width="16" height="16" fill="#FFFFFF" stroke="#555555" stroke-width="2.5"/>
+        <text x="352" y="164" font-size="13" fill="#111111">목동7단지</text>
+        <text x="352" y="180" font-size="11" fill="#8A8A8A">비교단지1 · SITE와 동일 블록</text>
+
+        <!-- SITE -->
+        <rect x="245" y="175" width="22" height="22" fill="#111111"/>
+        <text x="60" y="168" font-size="14" font-weight="800" fill="#111111">SITE · 목동윤슬자이</text>
+        <text x="60" y="186" font-size="11" fill="#8A8A8A">(목동 924·924-3·924-5)</text>
+
+        <!-- comp2 : 목동센트럴푸르지오 (오목교역 인근) -->
+        <rect x="464" y="347" width="16" height="16" fill="#FFFFFF" stroke="#555555" stroke-width="2.5"/>
+        <text x="486" y="345" font-size="13" fill="#111111">목동센트럴푸르지오</text>
+        <text x="486" y="361" font-size="11" fill="#8A8A8A">비교단지2 · 오목교역 인근</text>
+        <circle cx="500" cy="390" r="3" fill="#AAAAAA"/>
+        <text x="440" y="405" font-size="11.5" fill="#555555">오목교역(5호선)</text>
+
+        <!-- 배정초 : 서울목동초등학교 -->
+        <rect x="249" y="324" width="12" height="12" fill="#111111" stroke="#111111" stroke-width="2" stroke-dasharray="2 2"/>
+        <text x="270" y="329" font-size="12" fill="#555555">서울목동초등학교</text>
+        <text x="270" y="345" font-size="11" fill="#8A8A8A">(배정초, SITE 남측)</text>
+
+        <!-- distance legend -->
+        <g transform="translate(20,428)">
+          <rect x="0" y="-10" width="600" height="24" fill="#FFFFFF" stroke="#E3E3E3"/>
+          <text x="14" y="6" font-size="11" fill="#555555">SITE ↔ 목동7단지 인접(동일 블록) · SITE ↔ 목동센트럴푸르지오 약 900m (브동산 실측 추정)</text>
+        </g>
+
+        <text x="20" y="452" font-size="10.5" fill="#8A8A8A">■ 검정=SITE · □(회색 테두리)=비교단지 · □(점선 테두리, 검정)=배정초등학교 · □(점선, 흰 배경)=인근 기존교 · ●=주요 생활시설</text>
+      </svg>
     </div>
-    <div class="cover-cap">지도: SITE(빨강, 목동 윤슬자이)·비교단지(초록, 목동7단지·목동센트럴푸르지오)·배정초등학교(파랑, 서울목동초등학교) 위치 — OpenStreetMap 기반, 브동산 작도 · © OpenStreetMap contributors</div>
+    <div class="cover-cap">지도: SITE·비교단지 2곳(목동7단지·목동센트럴푸르지오)·배정초등학교(서울목동초등학교)·주요 생활시설 상대 위치 — 브동산이 공식 입지환경 이미지와 실측을 바탕으로 자체 제작한 개략도(축척·형태는 개략적 표현이며 실제 지도가 아닙니다)</div>
 
     <div class="radar-wrap">
       <svg viewBox="0 0 240 260" role="img" aria-label="입지, 브랜드, 상품성, 연식 4개 축으로 본 3개 단지 비교 레이더 차트">

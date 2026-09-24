@@ -40,11 +40,14 @@
 
   /* ---- masthead / byline ---- */
   .top-eyebrow{ padding:36px 0 0; }
-  .top-eyebrow .wrap{ color:var(--ink-faint); font-size:13px; letter-spacing:.02em; }
+  .top-eyebrow .wrap{ color:var(--ink-faint); font-size:13px; letter-spacing:.02em; display:flex; align-items:center; justify-content:space-between; gap:12px; }
 
-  .brand-mark{ display:inline-block; font-size:15px; line-height:1; }
+  .brand-mark{ display:inline-block; font-size:15px; line-height:1; text-decoration:none; }
   .brand-mark .bm-b{ font-weight:800; color:var(--ink); }
   .brand-mark .bm-rest{ font-weight:400; color:var(--ink-soft); }
+
+  .list-btn{ display:inline-flex; align-items:center; gap:4px; font-size:12px; color:var(--ink-soft); border:1px solid var(--hair); border-radius:4px; padding:4px 10px; text-decoration:none; flex:none; }
+  .list-btn:hover{ border-color:var(--ink); color:var(--ink); }
 
   .titleblock{ padding:14px 0 22px; }
   .titleblock h1{ font-size:clamp(26px,4.6vw,34px); line-height:1.42; font-weight:800; }
@@ -170,7 +173,7 @@
 </style>
 </head>
 <body>
-<div class="top-eyebrow"><div class="wrap"><span class="brand-mark"><span class="bm-b">브</span><span class="bm-rest">동산</span></span></div></div>
+<div class="top-eyebrow"><div class="wrap"><a class="brand-mark" href="https://brandongsan.com/"><span class="bm-b">브</span><span class="bm-rest">동산</span></a><a class="list-btn" href="https://brandongsan.com/realestate.html">☰ 목록</a></div></div>
 
 <div class="wrap">
 

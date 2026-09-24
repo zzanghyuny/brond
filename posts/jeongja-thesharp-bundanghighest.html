@@ -40,11 +40,14 @@
 
   /* ---- masthead / byline ---- */
   .top-eyebrow{ padding:36px 0 0; }
-  .top-eyebrow .wrap{ color:var(--ink-faint); font-size:13px; letter-spacing:.02em; }
+  .top-eyebrow .wrap{ color:var(--ink-faint); font-size:13px; letter-spacing:.02em; display:flex; align-items:center; justify-content:space-between; gap:12px; }
 
-  .brand-mark{ display:inline-block; font-size:15px; line-height:1; }
+  .brand-mark{ display:inline-block; font-size:15px; line-height:1; text-decoration:none; }
   .brand-mark .bm-b{ font-weight:800; color:var(--ink); }
   .brand-mark .bm-rest{ font-weight:400; color:var(--ink-soft); }
+
+  .list-btn{ display:inline-flex; align-items:center; gap:4px; font-size:12px; color:var(--ink-soft); border:1px solid var(--hair); border-radius:4px; padding:4px 10px; text-decoration:none; flex:none; }
+  .list-btn:hover{ border-color:var(--ink); color:var(--ink); }
 
   .titleblock{ padding:14px 0 22px; }
   .titleblock h1{ font-size:clamp(26px,4.6vw,34px); line-height:1.42; font-weight:800; }
@@ -169,7 +172,7 @@
 </style>
 </head>
 <body>
-<div class="top-eyebrow"><div class="wrap"><span class="brand-mark"><span class="bm-b">브</span><span class="bm-rest">동산</span></span></div></div>
+<div class="top-eyebrow"><div class="wrap"><a class="brand-mark" href="https://brandongsan.com/"><span class="bm-b">브</span><span class="bm-rest">동산</span></a><a class="list-btn" href="https://brandongsan.com/realestate.html">☰ 목록</a></div></div>
 
 <div class="wrap">
 
@@ -211,20 +214,70 @@
       </div>
     </div>
 
-    <div class="map-wrap" style="position:relative;">
-      <img src="images/jeongja-thesharp-bundanghighest/site-map.jpg" alt="더샵 분당하이스트 사업지, 비교단지 2곳, 배정초등학교 위치 지도" style="width:100%;display:block;">
-      <svg viewBox="0 0 1935 1576" preserveAspectRatio="none" style="position:absolute;top:0;left:0;width:100%;height:100%;" role="img" aria-label="사업지, 비교단지 2곳, 배정초등학교 위치를 표시한 지도">
-        <circle cx="1677" cy="1274" r="26" fill="none" stroke="#E23B3B" stroke-width="7"/>
-        <circle cx="1677" cy="1274" r="8" fill="#E23B3B"/>
-        <circle cx="1379" cy="1179" r="26" fill="none" stroke="#2E7D46" stroke-width="7"/>
-        <circle cx="1379" cy="1179" r="8" fill="#2E7D46"/>
-        <circle cx="833" cy="111" r="26" fill="none" stroke="#2E7D46" stroke-width="7"/>
-        <circle cx="833" cy="111" r="8" fill="#2E7D46"/>
-        <circle cx="1307" cy="1383" r="26" fill="none" stroke="#1F5FA8" stroke-width="7"/>
-        <circle cx="1307" cy="1383" r="8" fill="#1F5FA8"/>
+    <div class="map-wrap">
+      <svg viewBox="0 0 640 460" role="img" aria-label="더샵 분당하이스트 사업지, 비교단지 2곳, 배정초등학교, 주요 생활시설 위치를 나타낸 브동산 자체 제작 개략도">
+        <rect x="0" y="0" width="640" height="460" fill="#FAFAFA"/>
+        <path d="M330 0 C 310 120, 340 260, 320 460" stroke="#E3E3E3" stroke-width="10" fill="none"/>
+        <text x="340" y="24" font-size="11" fill="#8A8A8A">탄천 방면</text>
+
+        <!-- compass -->
+        <g transform="translate(590,36)">
+          <line x1="0" y1="10" x2="0" y2="-14" stroke="#555555" stroke-width="1.5"/>
+          <polygon points="0,-18 -5,-8 5,-8" fill="#555555"/>
+          <text x="0" y="24" font-size="11" text-anchor="middle" fill="#555555">N</text>
+        </g>
+
+        <!-- connecting lines -->
+        <line x1="290" y1="215" x2="210" y2="175" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="3 3"/>
+        <line x1="270" y1="200" x2="150" y2="70" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="3 3"/>
+        <line x1="290" y1="235" x2="250" y2="290" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="3 3"/>
+
+        <!-- 주요 생활시설 (공식 홈페이지 입지환경 이미지 기준) -->
+        <circle cx="300" cy="150" r="3" fill="#AAAAAA"/>
+        <text x="310" y="146" font-size="11.5" fill="#555555">정자역(신분당선·수인분당선)</text>
+
+        <circle cx="340" cy="120" r="3" fill="#AAAAAA"/>
+        <text x="350" y="116" font-size="11.5" fill="#555555">SK하이닉스·NAVER</text>
+
+        <circle cx="230" cy="230" r="3" fill="#AAAAAA"/>
+        <text x="170" y="244" font-size="11.5" fill="#555555">정자동 카페거리·학원가</text>
+
+        <circle cx="400" cy="260" r="3" fill="#AAAAAA"/>
+        <text x="410" y="256" font-size="11.5" fill="#555555">정자공원</text>
+
+        <circle cx="420" cy="330" r="3" fill="#AAAAAA"/>
+        <text x="430" y="326" font-size="11.5" fill="#555555">분당서울대병원</text>
+
+        <!-- comp2 : 파크뷰아파트 (먼 거리) -->
+        <rect x="142" y="62" width="16" height="16" fill="#FFFFFF" stroke="#555555" stroke-width="2.5"/>
+        <text x="70" y="52" font-size="13" fill="#111111">파크뷰아파트</text>
+        <text x="70" y="88" font-size="11" fill="#8A8A8A">비교단지2 · 2004년 준공, 연식차 큼</text>
+
+        <!-- comp1 : 더샵분당티에르원 -->
+        <rect x="200" y="167" width="16" height="16" fill="#FFFFFF" stroke="#555555" stroke-width="2.5"/>
+        <text x="60" y="165" font-size="13" fill="#111111">더샵분당티에르원</text>
+        <text x="60" y="181" font-size="11" fill="#8A8A8A">비교단지1 · SITE 인근</text>
+
+        <!-- SITE -->
+        <rect x="279" y="204" width="22" height="22" fill="#111111"/>
+        <text x="308" y="212" font-size="14" font-weight="800" fill="#111111">SITE · 더샵 분당하이스트</text>
+        <text x="308" y="230" font-size="11" fill="#8A8A8A">(정자역 도보 약 500m)</text>
+
+        <!-- 배정초 : 성남신기초등학교 -->
+        <rect x="244" y="284" width="12" height="12" fill="#111111" stroke="#111111" stroke-width="2" stroke-dasharray="2 2"/>
+        <text x="150" y="315" font-size="12" fill="#555555">성남신기초등학교</text>
+        <text x="150" y="331" font-size="11" fill="#8A8A8A">(배정초, SITE 바로 인근)</text>
+
+        <!-- distance legend -->
+        <g transform="translate(20,428)">
+          <rect x="0" y="-10" width="600" height="24" fill="#FFFFFF" stroke="#E3E3E3"/>
+          <text x="14" y="6" font-size="11" fill="#555555">SITE ↔ 더샵분당티에르원 인접 · SITE ↔ 파크뷰아파트 약 1.3km (브동산 실측 추정)</text>
+        </g>
+
+        <text x="20" y="452" font-size="10.5" fill="#8A8A8A">■ 검정=SITE · □(회색 테두리)=비교단지 · □(점선 테두리, 검정)=배정초등학교 · ●=주요 생활시설</text>
       </svg>
     </div>
-    <div class="cover-cap">지도: SITE(빨강, 더샵 분당하이스트)·비교단지(초록, 더샵분당티에르원·파크뷰아파트)·배정초등학교(파랑, 성남신기초등학교) 위치</div>
+    <div class="cover-cap">지도: SITE·비교단지 2곳(더샵분당티에르원·파크뷰아파트)·배정초등학교(성남신기초등학교)·주요 생활시설 상대 위치 — 브동산이 공식 입지환경 이미지와 실측을 바탕으로 자체 제작한 개략도(축척·형태는 개략적 표현이며 실제 지도가 아닙니다)</div>
 
     <div class="radar-wrap">
       <svg viewBox="0 0 240 260" role="img" aria-label="입지, 브랜드, 상품성, 연식 4개 축으로 본 3개 단지 비교 레이더 차트">
