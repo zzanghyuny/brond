@@ -131,3 +131,21 @@ footer a{ color:var(--ink-faint); text-decoration:underline; }
   border-radius:999px; cursor:pointer; font-family:inherit;
 }
 .load-more-btn:hover{ background:var(--soft-bg); }
+
+/* ---- 브랜드 이야기 카드 (전체 피드 안에서 살짝 구분) ---- */
+.feed-card--brand{
+  background:var(--soft-bg);
+  border-top-color:var(--hair);
+  padding-left:16px; padding-right:16px;
+  margin:0 -16px;
+}
+
+/* ---- 청약·분양 지역 서브카테고리 알약 ---- */
+.region-pills{ display:flex; flex-wrap:wrap; gap:8px; padding:2px 0 18px; }
+.region-pill{
+  border:1px solid var(--hair); background:var(--paper); color:var(--ink-soft);
+  font-size:13px; font-weight:700; font-family:inherit;
+  border-radius:999px; padding:6px 14px; cursor:pointer;
+}
+.region-pill:hover{ background:var(--soft-bg); }
+.region-pill.active{ background:var(--ink); color:#fff; border-color:var(--ink); }
