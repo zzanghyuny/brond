@@ -19,6 +19,19 @@
 
 const POSTS = [
   {
+    id: "jinju-panmun-lakesummit-wellga",
+    category: "realestate",
+    tag: "청약 언박싱 No.009",
+    title: "진주 판문지구 레이크써밋 웰가 | 진양호를 품은 690세대, 판문·평거 더블생활권 청약의 적정가는",
+    date: "2026-09-24",
+    dateLabel: "2026. 9. 24",
+    url: "posts/jinju-panmun-lakesummit-wellga.html",
+    preview: `
+      <p>진양호를 남쪽으로 낀 진주 판문지구, 흥한주택종합건설의 690세대 '레이크써밋 웰가'. 브동산 적정가(84㎡) 7.1억원 · 실제 분양가 평균 5.3억원 — 약 34% 저평가 신호가 나왔지만, 비교단지 간 편차가 커 해석에는 유의가 필요합니다.</p>
+      <p>특별공급은 9월 28일부터 시작되며, 세대당 1.88대의 넉넉한 주차와 27층 스카이라운지의 진양호 조망이 특징입니다. 다만 진주 전역이 공통으로 안고 있는 철도·지하철 접근성의 한계도 함께 짚어봤습니다.</p>
+    `
+  },
+  {
     id: "ssangyong-the-platinum-centum",
     category: "realestate",
     tag: "청약 언박싱 No.008",
