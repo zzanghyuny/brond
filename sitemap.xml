@@ -12,6 +12,21 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://www.brandongsan.com/posts/yeongju-hyosung-harrington-place.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.brandongsan.com/posts/changwon-hanshin-thehue.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.brandongsan.com/posts/cityociel-9danji.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.brandongsan.com/posts/godeok-hillstate-elist-a65bl.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
