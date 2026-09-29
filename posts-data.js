@@ -75,6 +75,18 @@ const POSTS = [
     `
   },
   {
+    id: "hcmc-lime-photodermatitis",
+    category: "vietnam",
+    tag: "베트남 호치민 이야기 No.2",
+    title: "손등에 얼룩덜룩 생긴 자국, 라임 때문이었더라고요",
+    date: "2026-09-29",
+    dateLabel: "2026. 9. 29",
+    url: "posts/hcmc-lime-photodermatitis.html",
+    preview: `
+      <p>손등에 갈색으로 얼룩진 자국이 생겨 놀랐는데, 알고 보니 라임즙과 햇빛이 만나 생기는 식물광선피부염("라임 색소침착")이었다. 호치민 주재원들도 잘 모르는 이 증상의 원인과 예방법을 정리했다.</p>
+    `
+  },
+  {
     id: "hcmc-taodien-thuthiem-commute",
     category: "vietnam",
     tag: "베트남 호치민 이야기 No.1",
