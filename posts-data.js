@@ -23,6 +23,97 @@
 
 const POSTS = [
   {
+    id: "chungjeongno-station-xi-rene",
+    category: "realestate",
+    region: "서울",
+    tag: "청약 언박싱 No.045",
+    title: "서울 - 충정로역자이르네 | 2·5호선 충정로역 직통연결 299세대, 예상 프리미엄은 +5,880만",
+    date: "2026-09-29",
+    dateLabel: "2026. 9. 29",
+    url: "posts/chungjeongno-station-xi-rene.html",
+    preview: `
+      <p>서울 중구 중림동, 2·5호선 충정로역과 직통 연결되는 자이S&D의 충정로역자이르네 299세대. 84㎡ 가중평균 분양가(23.47억원) 기준 브동산 적정가는 24.06억원으로, 예상 프리미엄은 +5,880만(약 2% 저평가)이다. 일반공급 1순위 평균 44.5대 1로 흥행했다.</p>
+    `
+  },
+  {
+    id: "gangbyeon-station-central-ipark",
+    category: "realestate",
+    region: "서울",
+    tag: "청약 언박싱 No.044",
+    title: "서울 - 강변역 센트럴 아이파크 | 한양연립 모아타운 재건축 68세대, 예상 프리미엄은 +5.76억",
+    date: "2026-09-29",
+    dateLabel: "2026. 9. 29",
+    url: "posts/gangbyeon-station-central-ipark.html",
+    preview: `
+      <p>서울 광진구 구의동, 한양연립 등을 모아타운 방식으로 재건축하는 HDC현대산업개발의 강변역 센트럴 아이파크 68세대. 84㎡ 기준 브동산 적정가는 18.46억원, 실제 분양가(12.70억원) 대비 예상 프리미엄은 +5.76억(약 31% 저평가)이다. 특별공급 263대 1, 일반공급 1순위 평균 494대 1로 100% 완판됐다.</p>
+    `
+  },
+  {
+    id: "gwacheon-prugio-labienoo",
+    category: "realestate",
+    region: "경기",
+    tag: "청약 언박싱 No.043",
+    title: "경기 - 과천 푸르지오 라비엔오 | 과천지식정보타운 지하2~35층 679세대, 예상 프리미엄은 +15.71억",
+    date: "2026-09-29",
+    dateLabel: "2026. 9. 29",
+    url: "posts/gwacheon-prugio-labienoo.html",
+    preview: `
+      <p>과천지식정보타운 S4블록, 2021년 12월 입주를 마친 대우건설의 과천 푸르지오 라비엔오. 2020년 원분양가(84D 7.45억원) 기준 브동산 적정가는 23.16억원으로 예상 프리미엄은 +15.71억(약 68% 저평가)이다. 최근에도 신혼부부·노부모부양 특별공급 2세대가 2020년 분양가 그대로 재공급되고 있다.</p>
+    `
+  },
+  {
+    id: "gwacheon-prugio-bellarte",
+    category: "realestate",
+    region: "경기",
+    tag: "청약 언박싱 No.042",
+    title: "경기 - 과천 푸르지오 벨라르테 | 과천지식정보타운 초품아 504세대, 예상 프리미엄은 +16.95억",
+    date: "2026-09-29",
+    dateLabel: "2026. 9. 29",
+    url: "posts/gwacheon-prugio-bellarte.html",
+    preview: `
+      <p>과천지식정보타운 S6블록, 2022년 10월 입주를 마친 대우건설 컨소시엄의 과천 푸르지오 벨라르테. 2020년 원분양가(84㎡ 약 6.09억원) 기준 브동산 적정가는 23.04억원으로 예상 프리미엄은 +16.95억(약 74% 저평가)이다. 최근 99㎡ B형 1세대가 2020년 분양가 그대로 "반값 로또" 무순위로 재공급됐다.</p>
+    `
+  },
+  {
+    id: "acro-riversky",
+    category: "realestate",
+    region: "서울",
+    tag: "청약 언박싱 No.041",
+    title: "서울 - 아크로 리버스카이 | 노량진뉴타운8구역 하이엔드 987세대, 예상 프리미엄은 -1.94억",
+    date: "2026-09-29",
+    dateLabel: "2026. 9. 29",
+    url: "posts/acro-riversky.html",
+    preview: `
+      <p>서울 동작구 노량진동, 노량진뉴타운8구역을 재개발하는 DL이앤씨의 아크로 리버스카이 987세대. 84㎡ 최고 분양가(27.96억원) 기준 브동산 적정가는 26.02억원으로 예상 프리미엄은 -1.94억(약 7% 고평가)이다. 다만 1순위 평균 19.8대 1로 전 주택형이 마감돼 모형과 시장 반응이 엇갈리는 사례다.</p>
+    `
+  },
+  {
+    id: "thesharp-cheongju-greenity",
+    category: "realestate",
+    region: "충북",
+    tag: "청약 언박싱 No.040",
+    title: "충북 - 더샵 청주그리니티 | 개신동 구룡공원 앞 1,191세대, 예상 프리미엄은 +3.0억",
+    date: "2026-09-29",
+    dateLabel: "2026. 9. 29",
+    url: "posts/thesharp-cheongju-greenity.html",
+    preview: `
+      <p>충북 청주시 서원구 개신동, 구룡공원을 앞마당처럼 누리는 포스코건설의 더샵 청주그리니티 1,191세대. 84㎡ 기준 브동산 적정가는 6.64억원, 실제 분양가(3.65억원) 대비 예상 프리미엄은 +2.99억(약 45% 저평가)이다. 1순위 평균 15.0대 1로 전 타입이 마감됐다.</p>
+    `
+  },
+  {
+    id: "hoecheon-central-paragon",
+    category: "realestate",
+    region: "경기",
+    tag: "청약 언박싱 No.039",
+    title: "경기 - 회천중앙역 파라곤 | 양주 회천지구 비규제지역 845세대, 예상 프리미엄은 +5,060만",
+    date: "2026-09-29",
+    dateLabel: "2026. 9. 29",
+    url: "posts/hoecheon-central-paragon.html",
+    preview: `
+      <p>경기 양주시 회정동, 회천지구 A10-1블록에 공급된 이지건설의 회천중앙역 파라곤 845세대. 84㎡ 기준 브동산 적정가는 5.65억원으로 실제 분양가(5.14억원) 대비 예상 프리미엄은 +5,060만(약 9% 저평가)이다. 비규제지역이지만 일부 매체는 "역대 최고가 분양"이라며 우려를 제기했다.</p>
+    `
+  },
+  {
     id: "hillstate-songpa-thegrid",
     category: "realestate",
     region: "서울",
