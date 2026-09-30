@@ -166,6 +166,18 @@ const POSTS = [
     `
   },
   {
+    id: "hcmc-meat-and-meet-buffet",
+    category: "vietnam",
+    tag: "베트남 호치민 이야기 No.3",
+    title: "호치민 고기부페 미트앤미트 — 두 아들과 다녀온 가성비 숯불 부페",
+    date: "2026-09-30",
+    dateLabel: "2026. 9. 30",
+    url: "posts/hcmc-meat-and-meet-buffet.html",
+    preview: `
+      <p>1인 249,000동에 숯불 고기와 부페를 마음껏 즐길 수 있는 호치민 한국식 고기부페 미트앤미트. 깔끔한 매장에 치킨·라면·아이스크림까지 아이들이 좋아할 메뉴가 많아, 2살·6살 두 아들과 가기 좋은 가성비 외식 장소로 정리했다.</p>
+    `
+  },
+  {
     id: "hcmc-lime-photodermatitis",
     category: "vietnam",
     tag: "베트남 호치민 이야기 No.2",
