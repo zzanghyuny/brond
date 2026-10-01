@@ -23,6 +23,19 @@
 
 const POSTS = [
   {
+    id: "thesharp-bundang-centro",
+    category: "realestate",
+    region: "경기",
+    tag: "청약 언박싱 No.051",
+    title: "경기 - 더샵 분당센트로 | 오리역 리모델링 647세대, 임의공급 5차까지 이어진 20억 국평, 예상 프리미엄은 +6.3억",
+    date: "2026-10-01",
+    dateLabel: "2026. 10. 1",
+    url: "posts/thesharp-bundang-centro.html",
+    preview: `
+      <p>경기 성남 구미동 더샵 분당센트로, 무지개마을4단지 리모델링 647세대(일반분양 84세대). 1차 1순위 평균 51.3대 1이었으나 고분양가 탓에 계약 포기가 이어져 임의공급이 5차까지 진행됐다.</p><p>5차 공급가 84N 20.72억원 기준 브동산 적정가는 27.05억원, 예상 프리미엄은 +6.3억(약 31% 저평가)이다. 다만 비교단지 연식 보정 상한의 영향이 커 해석에 유의가 필요하다.</p>
+    `
+  },
+  {
     id: "incheon-gyeyang-a17-lh",
     category: "realestate",
     region: "인천",
