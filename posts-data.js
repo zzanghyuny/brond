@@ -23,6 +23,19 @@
 
 const POSTS = [
   {
+    id: "incheon-gyeyang-a17-lh",
+    category: "realestate",
+    region: "인천",
+    tag: "청약 언박싱 No.050",
+    title: "인천 - 인천계양 A17블록 신혼희망타운 | 3기 신도시 전용 55㎡ 단일면적 309세대, 예상 프리미엄은 -520만",
+    date: "2026-10-01",
+    dateLabel: "2026. 10. 1",
+    url: "posts/incheon-gyeyang-a17-lh.html",
+    preview: `
+      <p>인천 계양구 3기 신도시 인천계양 A17블록, LH 신혼희망타운(공공분양) 309세대. 전용 55㎡ 평균 분양가 5.04억원 기준 브동산 적정가는 4.99억원으로 예상 프리미엄은 -520만(약 1% 고평가)이다.</p><p>본청약 신규 신청자 물량은 176세대이며 접수는 10월 26~27일이다. 수익공유형 모기지 의무가입과 전매제한 3년 조건을 함께 봐야 한다.</p>
+    `
+  },
+  {
     id: "drefine-artia-noryangjin2",
     category: "realestate",
     region: "서울",
