@@ -23,6 +23,71 @@
 
 const POSTS = [
   {
+    id: "gyeonghuigung-efit",
+    category: "realestate",
+    region: "서울",
+    tag: "청약 언박싱 No.056",
+    title: "서울 - 경희궁 에피트 | 종로 교남동 228세대 소규모 신축, 브동산 적정가는 22.2억 (분양가는 공고 후 업데이트)",
+    date: "2026-10-02",
+    dateLabel: "2026. 10. 2",
+    url: "posts/gyeonghuigung-efit.html",
+    preview: `
+      <p>서울 종로구 교남동 경희궁 에피트, 도시정비형 재개발 228세대(일반분양 135세대). 입주자모집공고 전 브동산 84㎡ 적정가는 22.2억원이다.</p><p>분양가는 공고 후 업데이트하며 예상 프리미엄을 추가할 예정이다.</p>
+    `
+  },
+  {
+    id: "banpo-dh-classtre",
+    category: "realestate",
+    region: "서울",
+    tag: "청약 언박싱 No.055",
+    title: "서울 - 반포 디에이치 클래스트 | 5,007세대 반포주공1단지, 브동산 적정가는 72억 (분양가는 공고 후 업데이트)",
+    date: "2026-10-02",
+    dateLabel: "2026. 10. 2",
+    url: "posts/banpo-dh-classtre.html",
+    preview: `
+      <p>서울 반포주공1단지 재건축 반포 디에이치 클래스트(5,007세대, 일반분양 1,832세대). 입주자모집공고 전 브동산 84㎡ 적정가는 72.0억원이다.</p><p>분양가상한제 적용 분양가는 공고 후 업데이트하며 예상 프리미엄을 추가할 예정이다.</p>
+    `
+  },
+  {
+    id: "acmer-dongtan",
+    category: "realestate",
+    region: "경기",
+    tag: "청약 언박싱 No.054",
+    title: "경기 - 아크메르 동탄 | 동탄1신도시 49층 1,808세대, 브동산 적정가는 19.7억 (분양가는 공고 후 업데이트)",
+    date: "2026-10-02",
+    dateLabel: "2026. 10. 2",
+    url: "posts/acmer-dongtan.html",
+    preview: `
+      <p>경기 화성 동탄1신도시 아크메르 동탄, 포스코이앤씨 시공 최고 49층 1,808세대. 입주자모집공고(예정 10월 15일) 전 브동산 84㎡ 적정가는 19.70억원이다.</p><p>분양가는 공고 후 업데이트하며 예상 프리미엄을 추가할 예정이다.</p>
+    `
+  },
+  {
+    id: "ulsan-jungsan-diachae",
+    category: "realestate",
+    region: "울산",
+    tag: "청약 언박싱 No.053",
+    title: "울산 - 중산디아채 | LH 분양전환 잔여세대 선착순 8호, 2억원대 국평 예상 프리미엄은 +8,160만",
+    date: "2026-10-02",
+    dateLabel: "2026. 10. 2",
+    url: "posts/ulsan-jungsan-diachae.html",
+    preview: `
+      <p>울산 북구 중산동 중산디아채, LH 분양전환 잔여세대 선착순 8호(전용 84㎡ 2억 100만~2억 2,450만원, 12월 23일까지). 브동산 적정가는 2.95억원으로 예상 프리미엄은 +8,160만이다.</p><p>다만 같은 단지 시세(2.06~2.26억원)와 분양가가 비슷해 모형 결과는 구축 감가 미반영분을 감안해 해석해야 한다.</p>
+    `
+  },
+  {
+    id: "incheon-gajeong2-b2-lh",
+    category: "realestate",
+    region: "인천",
+    tag: "청약 언박싱 No.052",
+    title: "인천 - 인천가정2 B2블록 공공분양 | 마지막 공공분양 잔여세대 252세대, 예상 프리미엄은 -2,730만",
+    date: "2026-10-02",
+    dateLabel: "2026. 10. 2",
+    url: "posts/incheon-gajeong2-b2-lh.html",
+    preview: `
+      <p>인천 서구 인천가정2지구 마지막 공공분양, B2블록 잔여세대 252세대. 84㎡ 분양가 중앙값 6.05억원 기준 브동산 적정가는 5.78억원으로 예상 프리미엄은 -2,730만이다.</p><p>접수는 10월 6~7일이며 전매제한 3년·거주의무 3년이 붙는다.</p>
+    `
+  },
+  {
     id: "thesharp-bundang-centro",
     category: "realestate",
     region: "경기",
