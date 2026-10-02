@@ -23,6 +23,19 @@
 
 const POSTS = [
   {
+    id: "paju-unjeong-jungang-city-pradium",
+    category: "realestate",
+    region: "경기",
+    tag: "청약 언박싱 No.060",
+    title: "경기 - GTX 운정중앙역 시티프라디움 | 파주 운정3지구 48층 944세대, 브동산 적정가는 7.4억 (분양가는 공고 후 업데이트)",
+    date: "2026-10-02",
+    dateLabel: "2026. 10. 2",
+    url: "posts/paju-unjeong-jungang-city-pradium.html",
+    preview: `
+      <p>경기 파주 운정3지구 GTX 운정중앙역 시티프라디움, 시티건설 3블록 48층·4블록 45층 944세대. 입주자모집공고(10월 예정) 전 브동산 84㎡ 적정가는 7.4억원이다.</p><p>분양가는 공고 후 업데이트하며 예상 프리미엄을 추가할 예정이다.</p>
+    `
+  },
+  {
     id: "daegu-thesharp-dongin-centriche",
     category: "realestate",
     region: "대구",
