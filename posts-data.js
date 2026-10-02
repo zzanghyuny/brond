@@ -23,6 +23,45 @@
 
 const POSTS = [
   {
+    id: "daegu-thesharp-dongin-centriche",
+    category: "realestate",
+    region: "대구",
+    tag: "청약 언박싱 No.057",
+    title: "대구 - 더샵 동인센트리체 | 동인동 49층 314세대, 브동산 적정가는 5.9억 (분양가는 공고 후 업데이트)",
+    date: "2026-10-02",
+    dateLabel: "2026. 10. 2",
+    url: "posts/daegu-thesharp-dongin-centriche.html",
+    preview: `
+      <p>대구 중구 동인동1가 더샵 동인센트리체, 포스코이앤씨 49층 주상복합 314세대. 입주자모집공고(10월 예정) 전 브동산 84㎡ 적정가는 5.9억원이다.</p><p>분양가는 공고 후 업데이트하며 예상 프리미엄을 추가할 예정이다.</p>
+    `
+  },
+  {
+    id: "yangpyeong-ssangyong-platinum-hangang",
+    category: "realestate",
+    region: "경기",
+    tag: "청약 언박싱 No.058",
+    title: "경기 - 쌍용 더 플래티넘 한강 | 양평 양서면 333세대, 브동산 적정가는 5.3억 (분양가는 공고 후 업데이트)",
+    date: "2026-10-02",
+    dateLabel: "2026. 10. 2",
+    url: "posts/yangpyeong-ssangyong-platinum-hangang.html",
+    preview: `
+      <p>경기 양평군 양서면 쌍용 더 플래티넘 한강, 지하 2층~지상 19층 333세대. 입주자모집공고(10월 2일 예정) 전 브동산 84㎡ 적정가는 5.3억원이다.</p><p>분양가는 공고 후 업데이트하며 예상 프리미엄을 추가할 예정이다.</p>
+    `
+  },
+  {
+    id: "hyangnam-station-grove-switzen",
+    category: "realestate",
+    region: "경기",
+    tag: "청약 언박싱 No.059",
+    title: "경기 - 향남역 그로브 스위첸 | 화성 향남 933세대, 브동산 적정가는 5.0억 (분양가는 공고 후 업데이트)",
+    date: "2026-10-02",
+    dateLabel: "2026. 10. 2",
+    url: "posts/hyangnam-station-grove-switzen.html",
+    preview: `
+      <p>경기 화성 향남읍 향남역 그로브 스위첸, KCC건설 지하 2층~지상 29층 933세대. 입주자모집공고(10월 2일 예정) 전 브동산 84㎡ 적정가는 5.0억원이다.</p><p>분양가는 공고 후 업데이트하며 예상 프리미엄을 추가할 예정이다.</p>
+    `
+  },
+  {
     id: "gyeonghuigung-efit",
     category: "realestate",
     region: "서울",
