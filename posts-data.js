@@ -23,6 +23,32 @@
 
 const POSTS = [
   {
+    id: "sangdaewon2-redevelopment",
+    category: "realestate",
+    region: "경기",
+    tag: "청약 언박싱 No.065",
+    title: "경기 - 상대원2구역 재개발 | 성남 중원구 4,885세대 대단지, 브동산 적정가는 15.2억 (분양 시기 미정)",
+    date: "2026-10-05",
+    dateLabel: "2026. 10. 5",
+    url: "posts/sangdaewon2-redevelopment.html",
+    preview: `
+      <p>경기 성남 중원구 상대원2구역 재개발, 4,885가구 초대형 단지. 시공사 갈등으로 분양 시기는 미정이며 브동산 84㎡ 적정가는 15.2억원이다.</p><p>분양 시기와 분양가가 정해지면 업데이트하며 예상 프리미엄을 추가할 예정이다.</p>
+    `
+  },
+  {
+    id: "godeokgangil3-land-lease",
+    category: "realestate",
+    region: "서울",
+    tag: "청약 언박싱 No.064",
+    title: "서울 - 고덕강일3단지 토지임대부 | SH 공공분양 1,305세대, 59㎡ 환산 적정가는 12.6억 (분양가는 공고 후 업데이트)",
+    date: "2026-10-05",
+    dateLabel: "2026. 10. 5",
+    url: "posts/godeokgangil3-land-lease.html",
+    preview: `
+      <p>서울 강동구 강일동 고덕강일3단지 토지임대부 분양주택, SH 공급 1,305세대. 본청약(10월 예정) 전 브동산 59㎡ 환산 적정가는 12.6억원이다.</p><p>토지임대부라 분양가와 직접 비교하지 않으며, 공고 후 확정 분양가를 반영해 업데이트할 예정이다.</p>
+    `
+  },
+  {
     id: "bangbae-forest-xi",
     category: "realestate",
     region: "서울",
