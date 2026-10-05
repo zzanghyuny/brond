@@ -23,6 +23,45 @@
 
 const POSTS = [
   {
+    id: "bangbae-forest-xi",
+    category: "realestate",
+    region: "서울",
+    tag: "청약 언박싱 No.063",
+    title: "서울 - 방배 포레스트자이 | 방배13구역 GS건설 2,228세대, 브동산 적정가는 36.3억 (분양가는 공고 후 업데이트)",
+    date: "2026-10-05",
+    dateLabel: "2026. 10. 5",
+    url: "posts/bangbae-forest-xi.html",
+    preview: `
+      <p>서울 서초구 방배13구역 방배 포레스트자이, GS건설 2,228세대 대단지. 입주자모집공고 전 브동산 84㎡ 적정가는 36.3억원이다.</p><p>분양가는 공고 후 업데이트하며 예상 프리미엄을 추가할 예정이다.</p>
+    `
+  },
+  {
+    id: "bangbae-leel",
+    category: "realestate",
+    region: "서울",
+    tag: "청약 언박싱 No.062",
+    title: "서울 - 방배 르엘 | 방배14구역 롯데건설 492세대, 브동산 적정가는 34.1억 (분양가는 공고 후 업데이트)",
+    date: "2026-10-05",
+    dateLabel: "2026. 10. 5",
+    url: "posts/bangbae-leel.html",
+    preview: `
+      <p>서울 서초구 방배14구역 방배 르엘, 롯데건설 492세대 소단지. 입주자모집공고 전 브동산 84㎡ 적정가는 34.1억원이다.</p><p>분양가는 공고 후 업데이트하며 예상 프리미엄을 추가할 예정이다.</p>
+    `
+  },
+  {
+    id: "heukseok-dh-kentronine",
+    category: "realestate",
+    region: "서울",
+    tag: "청약 언박싱 No.061",
+    title: "서울 - 디에이치 켄트로나인 | 흑석뉴타운 1,500세대 대단지, 브동산 적정가는 33.4억 (분양가는 공고 후 업데이트)",
+    date: "2026-10-05",
+    dateLabel: "2026. 10. 5",
+    url: "posts/heukseok-dh-kentronine.html",
+    preview: `
+      <p>서울 동작구 흑석9구역 디에이치 켄트로나인, 현대건설 흑석뉴타운 1,500세대대 단지. 입주자모집공고 전 브동산 84㎡ 적정가는 33.4억원이다.</p><p>분양가는 공고 후 업데이트하며 예상 프리미엄을 추가할 예정이다.</p>
+    `
+  },
+  {
     id: "paju-unjeong-jungang-city-pradium",
     category: "realestate",
     region: "경기",
