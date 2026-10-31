@@ -2,6 +2,9 @@
 
 `scripts/sync-workflow.ps1`가 대상 파일 변경 시 자동으로 항목을 추가한다(최신이 위).
 
+## 2026-10-31 (auto-sync)
+- docs/publishing-workflow.md
+
 ## 2026-10-31
 - CLAUDE.md
 - .claude/skills/

@@ -75,3 +75,6 @@
 - `.claude/skills/beodongsan-naver-copy/` — 네이버용 HTML 변환 스킬(최신 규칙 반영)
 - `docs/content-rules.md`, `docs/aside-handoff.md`, `docs/skill-changelog.md`
 - `posts-manifest.json`, `scripts/build-manifest.ps1`, `scripts/sync-workflow.ps1`, `scripts/README.md`
+
+## 9. 자동 동기화
+`scripts/sync-workflow.ps1`(Windows 작업 스케줄러, 매일 08:00)이 `CLAUDE.md`, `.claude/skills/`, `docs/`, `templates/`, `posts-manifest.json`의 변경분만 `chore: sync publishing workflow YYYY-MM-DD`로 커밋·push하고 `docs/skill-changelog.md`에 기록한다. 변경이 없으면 아무것도 하지 않는다. 등록 방법은 `scripts/README.md` 참고. `posts/`, `naver-html/` 등 콘텐츠는 이 스크립트가 아니라 Claude Code가 작성 시점에 커밋한다.
