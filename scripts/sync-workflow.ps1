@@ -1,4 +1,4 @@
-﻿﻿# sync-workflow.ps1
+﻿# sync-workflow.ps1
 # Daily sync of the publishing-workflow files to GitHub. Commits/pushes ONLY when target files changed.
 # Targets: CLAUDE.md, .claude/skills/, docs/, templates/ (if present), posts-manifest.json
 # Never touches website sources or deploy settings. Aborts if a secret-like pattern is found.
