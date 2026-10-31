@@ -1,0 +1,17 @@
+# Skill / workflow changelog
+
+`scripts/sync-workflow.ps1`가 대상 파일 변경 시 자동으로 항목을 추가한다(최신이 위).
+
+## 2026-10-31
+- CLAUDE.md
+- .claude/skills/
+- docs/
+- posts-manifest.json
+
+## 2026-10-31
+- 네이버용 HTML 저장 위치를 로컬 PC 폴더에서 GitHub `naver-html/{slug}.html`로 변경(Paul·Aside가 GitHub에서 내려받아 발행)
+- 네이버 제목 구분자를 ` / `에서 ` | `(세로선)로 변경
+- 네이버용에서 차트(레이더·브릿지) 이미지 제거, 위치 개략도 PNG만 사용
+- HTML 상단 메타 주석 + `posts-manifest.json`(slug/제목/카테고리/태그/대표이미지 후보/발행 기록) 도입, `noindex` + `robots.txt` Disallow
+- 역할 분리: Claude Code(작성·네이버용 HTML·커밋/push·배포 확인) / Aside(네이버 에디터 이미지 업로드·카테고리·발행)
+- 추가: `docs/publishing-workflow.md`, `docs/content-rules.md`, `docs/aside-handoff.md`, `.claude/skills/beodongsan-naver-copy/`, `scripts/`

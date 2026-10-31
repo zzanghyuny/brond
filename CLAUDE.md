@@ -16,3 +16,12 @@ master 문서는 claude.ai 클라우드 채팅 세션 기준으로 작성돼 일
 - master 4-6에 따라 필요한 사진(대표사진/교통망·위치도/조감도·배치도·평면도/적정가용 지도)을 Paul에게 요청되어 있는지 확인.
 - master 4-3의 적정가 산출 절차, 4-4의 지도 마킹 색 규칙(SITE=빨강, 비교단지=초록, 배정초등학교=파랑)을 그대로 따를 것.
 - 작업 중 master 문서와 실제 최신 게시물([posts/](posts/)) 코드가 다르면 실제 코드 쪽을 우선 참고하고 master 문서 업데이트가 필요한지 Paul에게 확인(master 10-1 교훈).
+
+## 포스팅 운영 방식 변경 (2026.10.31) — 네이버용 HTML은 GitHub에 올린다
+
+- **네이버용 HTML은 로컬 PC 폴더(`D:\Paul Kim\네이버용` 등)에 저장하지 않고 `naver-html/{slug}.html`로 저장해 커밋·push한다.** Paul과 Aside가 GitHub에서 내려받아 네이버 블로그에 발행한다(발행은 Aside, 작성·push·배포확인은 Claude Code).
+- 네이버 제목 구분자는 **세로선 ` | `** (예: `아크메르 동탄 | 예상프리미엄 +2.9억, 분양가 평면 총정리`). 슬래시(` / `) 아님.
+- 네이버용에는 차트(레이더·브릿지) 이미지를 넣지 않는다. 위치 개략도 `chart-map.png`만 쓴다.
+- `naver-html/*.html`에는 `<meta name="robots" content="noindex,nofollow">`와 상단 메타 주석(slug/title/category/naver_category/tags/cover_candidates)을 넣고, `posts-manifest.json`을 `scripts/build-manifest.ps1`로 갱신한다.
+- 자세한 규칙: `docs/publishing-workflow.md`, `docs/content-rules.md`, `docs/aside-handoff.md`, 스킬 `.claude/skills/beodongsan-naver-copy/SKILL.md`. 이 섹션이 master 문서·스킬의 이전 네이버 규칙(로컬 저장·차트 PNG)과 충돌하면 이 섹션을 따른다.
+- 매일 오전 8시 `scripts/sync-workflow.ps1`(Windows 작업 스케줄러)이 CLAUDE.md·`.claude/skills/`·`docs/`·`posts-manifest.json` 변경분만 자동 커밋·push한다(`scripts/README.md`).
