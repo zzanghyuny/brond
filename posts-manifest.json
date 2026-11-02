@@ -9,6 +9,71 @@
   },
   "posts": [
     {
+      "slug": "uijeongbu-feliztower-yangwoo",
+      "number": 84,
+      "title": "경기 - 의정부역 펠리스타워 양우내안애 | 49층 1,252세대 중 일반분양 414세대, 브동산 적정가는 8.05억 (분양가는 공고 후 업데이트)",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-02",
+      "site_url": "https://www.brandongsan.com/posts/uijeongbu-feliztower-yangwoo.html",
+      "naver_html": "naver-html/uijeongbu-feliztower-yangwoo.html",
+      "naver_title": "의정부역 펠리스타워 양우내안애 | 브동산 적정가 8.05억, 분양가는 공고 후 업데이트",
+      "naver_tags": [
+        "의정부역펠리스타워",
+        "양우내안애",
+        "의정부역펠리스타워양우내안애",
+        "의정부청약",
+        "의정부동",
+        "양우건설",
+        "의정부역",
+        "GTX-C",
+        "청약",
+        "분양예정",
+        "경기청약",
+        "부동산정보",
+        "의정부역센트럴자이",
+        "롯데캐슬골드파크"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/uijeongbu-feliztower-yangwoo/cover.jpg"
+      ],
+      "naver_published": false,
+      "naver_post_id": null,
+      "published_at": null
+    },
+    {
+      "slug": "armusee-xi-ansan",
+      "number": 83,
+      "title": "경기 - 아르뮤제자이 | 안산 성포동 옛 홈플러스 부지 49층 984세대, 브동산 적정가는 9.14억 (분양가는 공고 후 업데이트)",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-02",
+      "site_url": "https://www.brandongsan.com/posts/armusee-xi-ansan.html",
+      "naver_html": "naver-html/armusee-xi-ansan.html",
+      "naver_title": "아르뮤제자이 | 브동산 적정가 9.14억, 분양가는 공고 후 업데이트",
+      "naver_tags": [
+        "아르뮤제자이",
+        "안산성포동",
+        "안산청약",
+        "상록구",
+        "GS건설",
+        "자이",
+        "홈플러스안산점부지",
+        "청약",
+        "분양예정",
+        "경기청약",
+        "부동산정보",
+        "안산센트럴푸르지오",
+        "안산파크푸르지오"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/armusee-xi-ansan/cover.jpg"
+      ],
+      "naver_published": false,
+      "naver_post_id": null,
+      "published_at": null
+    },
+    {
       "slug": "pyeongtaek-godeok-woomi-lynn-premier",
       "number": 82,
       "title": "경기 - 평택 고덕 우미 린 더 프리미어 | 고덕 국제화계획지구 623세대 분양가상한제, 84㎡ 평균 분양가 5.82억, 예상 프리미엄은 +1.1억",
