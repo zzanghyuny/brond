@@ -23,6 +23,19 @@
 
 const POSTS = [
   {
+    id: "pyeongtaek-godeok-woomi-lynn-premier",
+    category: "realestate",
+    region: "경기",
+    tag: "청약 언박싱 No.082",
+    title: "경기 - 평택 고덕 우미 린 더 프리미어 | 고덕 국제화계획지구 623세대 분양가상한제, 84㎡ 평균 분양가 5.82억, 예상 프리미엄은 +1.1억",
+    date: "2026-11-02",
+    dateLabel: "2026. 11. 2",
+    url: "posts/pyeongtaek-godeok-woomi-lynn-premier.html",
+    preview: `
+      <p>경기 평택시 고덕 국제화계획지구 Abc-33블록의 '평택 고덕 우미 린 더 프리미어'는 623세대 전 가구가 일반분양이며 84㎡ 평균 분양가는 가중평균 5.82억원이다. 브동산 적정가는 6.93억원으로 예상 프리미엄은 +1.1억(약 19% 저평가)이다.</p><p>2026년 10월 30일 입주자모집공고 후 11월 9일 특별공급, 10~11일 일반공급 청약, 17일 당첨자 발표를 거쳐 11월 29일~12월 1일 계약하며 입주는 2029년 5월 예정이다. 분양가상한제 적용 단지다.</p>
+    `
+  },
+  {
     id: "hanwha-forena-jije",
     category: "realestate",
     region: "경기",
