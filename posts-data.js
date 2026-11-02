@@ -23,6 +23,18 @@
 
 const POSTS = [
   {
+    id: "why-84-and-59-sqm",
+    category: "space",
+    tag: "공간이야기 No.001",
+    title: "85도 60도 아닌 84와 59 — 국민평형 숫자는 어디서 나왔을까",
+    date: "2026-11-03",
+    dateLabel: "2026. 11. 3",
+    url: "posts/why-84-and-59-sqm.html",
+    preview: `
+      <p>분양공고를 열면 거의 모든 단지에 84와 59가 있다. 그런데 기준이 85㎡라면 85가, 60㎡라면 60이 적혀 있어야 하는데 실제 숫자는 84.99, 84.93, 59.9955처럼 선 바로 아래에 붙어 있다.</p><p>1973년 국민주택규모 85㎡의 계산부터 60㎡ 선의 정체, 가구원수 5.2명에서 2.16명까지 법령과 통계로 두 숫자의 출처를 추적했다.</p>
+    `
+  },
+  {
     id: "uijeongbu-feliztower-yangwoo",
     category: "realestate",
     region: "경기",

@@ -5,8 +5,16 @@
     <link>https://www.brandongsan.com/</link>
     <description>브랜드와 부동산에 관한 인사이트를 공유하는 공간, 브동산. 청약·분양 정보를 담백하고 과장 없이 전달합니다.</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 03 Nov 2026 02:56:31 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 03:10:00 +0900</lastBuildDate>
     <atom:link href="https://www.brandongsan.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>85도 60도 아닌 84와 59 — 국민평형 숫자는 어디서 나왔을까</title>
+      <link>https://www.brandongsan.com/posts/why-84-and-59-sqm.html</link>
+      <guid isPermaLink="true">https://www.brandongsan.com/posts/why-84-and-59-sqm.html</guid>
+      <pubDate>Tue, 03 Nov 2026 09:00:00 +0900</pubDate>
+      <category>공간이야기</category>
+      <description>분양공고를 열면 거의 모든 단지에 84와 59가 있다. 그런데 기준이 85㎡라면 85가, 60㎡라면 60이 적혀 있어야 하는데 실제 숫자는 84.99, 84.93, 59.9955처럼 선 바로 아래에 붙어 있다. 1973년 국민주택규모 85㎡의 계산부터 60㎡ 선의 정체, 가구원수 5.2명에서 2.16명까지 법령과 통계로 두 숫자의 출처를 추적했다.</description>
+    </item>
     <item>
       <title>경기 - 의정부역 펠리스타워 양우내안애 | 49층 1,252세대 중 일반분양 414세대, 브동산 적정가는 8.05억 (분양가는 공고 후 업데이트)</title>
       <link>https://www.brandongsan.com/posts/uijeongbu-feliztower-yangwoo.html</link>
@@ -267,15 +275,6 @@
       <category>부동산이야기</category>
       <category>대구</category>
       <description>대구 중구 동인동1가 더샵 동인센트리체, 포스코이앤씨 지하 4층~지상 49층 2개 동 314세대. 84㎡ 분양가 평균 약 8.36억원 기준 브동산 적정가는 5.93억원으로 예상 프리미엄은 -2.4억(약 29% 고평가)이다. 청약은 10월 12일 특별공급, 13일 1순위이며 전매제한 6개월·거주의무 없음이다.</description>
-    </item>
-    <item>
-      <title>서울 - 경희궁 에피트 | 종로 교남동 228세대 소규모 신축, 브동산 적정가는 22.2억 (분양가는 공고 후 업데이트)</title>
-      <link>https://www.brandongsan.com/posts/gyeonghuigung-efit.html</link>
-      <guid isPermaLink="true">https://www.brandongsan.com/posts/gyeonghuigung-efit.html</guid>
-      <pubDate>Fri, 02 Oct 2026 09:00:00 +0900</pubDate>
-      <category>부동산이야기</category>
-      <category>서울</category>
-      <description>서울 종로구 교남동 경희궁 에피트, 도시정비형 재개발 228세대(일반분양 135세대). 입주자모집공고 전 브동산 84㎡ 적정가는 22.2억원이다. 입주자모집공고는 11월 6일 예정으로 연기됐으며 청약접수는 11월 16일, 당첨자 확인은 11월 25일 예정이다. 분양가는 공고 후 업데이트하며 예상 프리미엄을 추가할 예정이다.</description>
     </item>
   </channel>
 </rss>
