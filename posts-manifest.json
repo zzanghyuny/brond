@@ -9,6 +9,38 @@
   },
   "posts": [
     {
+      "slug": "hanwha-forena-jije",
+      "number": 81,
+      "title": "경기 - 한화포레나 지제역 | 평택 세교동 1,098세대, 84㎡ 평균 분양가 6.95억, 예상 프리미엄은 +1.9억",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-02",
+      "site_url": "https://www.brandongsan.com/posts/hanwha-forena-jije.html",
+      "naver_html": "naver-html/hanwha-forena-jije.html",
+      "naver_title": "한화포레나 지제역 | 예상프리미엄 +1.9억, 분양가 청약일정 총정리",
+      "naver_tags": [
+        "한화포레나지제역",
+        "포레나지제역",
+        "평택지제역",
+        "세교동",
+        "평택청약",
+        "한화건설",
+        "포레나",
+        "청약",
+        "분양가",
+        "경기청약",
+        "부동산정보",
+        "지제역더샵센트럴시티",
+        "평택지제역자이"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/hanwha-forena-jije/cover.jpg"
+      ],
+      "naver_published": false,
+      "naver_post_id": null,
+      "published_at": null
+    },
+    {
       "slug": "hillstate-isu-central",
       "number": 80,
       "title": "서울 - 힐스테이트 이수역센트럴 | 사당동 931세대 중 일반분양 170세대, 84㎡ 평균 분양가 21.67억, 예상 프리미엄은 +2.26억",
