@@ -9,6 +9,41 @@
   },
   "posts": [
     {
+      "slug": "why-84-and-59-sqm",
+      "number": 1,
+      "title": "85도 60도 아닌 84와 59 — 국민평형 숫자는 어디서 나왔을까",
+      "category": "공간",
+      "naver_category": "공간이야기",
+      "date": "2026-11-03",
+      "site_url": "https://www.brandongsan.com/posts/why-84-and-59-sqm.html",
+      "naver_html": "naver-html/why-84-and-59-sqm.html",
+      "naver_title": "85도 60도 아닌 84와 59 | 국민평형 숫자는 어디서 나왔을까",
+      "naver_tags": [
+        "국민평형",
+        "국평",
+        "국민주택규모",
+        "전용면적",
+        "공급면적",
+        "25평",
+        "청약",
+        "주택공급규칙",
+        "재건축소형주택",
+        "아파트평수",
+        "가구원수",
+        "공간이야기",
+        "부동산상식",
+        "아파트면적",
+        "분양공고"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/why-84-and-59-sqm/cover.png",
+        "https://www.brandongsan.com/posts/images/why-84-and-59-sqm/number-line.png"
+      ],
+      "naver_published": true,
+      "naver_post_id": "224463081437",
+      "published_at": "2026-11-03T06:36:57+07:00"
+    },
+    {
       "slug": "uijeongbu-feliztower-yangwoo",
       "number": 84,
       "title": "경기 - 의정부역 펠리스타워 양우내안애 | 49층 1,252세대 중 일반분양 414세대, 브동산 적정가는 8.05억 (분양가는 공고 후 업데이트)",
