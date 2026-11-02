@@ -9,6 +9,40 @@
   },
   "posts": [
     {
+      "slug": "switzen-civilization-clash",
+      "number": 3,
+      "title": "아이를 키워본 사람이라면, 이 광고를 그냥 지나치기 어렵다 — 스위첸 ‘문명의 충돌’에서 ‘식구의 부활’까지",
+      "category": "브랜드",
+      "naver_category": "브랜드이야기",
+      "date": "2026-11-03",
+      "site_url": "https://www.brandongsan.com/posts/switzen-civilization-clash.html",
+      "naver_html": "naver-html/switzen-civilization-clash.html",
+      "naver_title": "스위첸 광고, 아이 키워본 사람은 왜 울컥했을까 | 문명의 충돌 2부터 식구의 부활까지",
+      "naver_tags": [
+        "스위첸",
+        "스위첸광고",
+        "KCC건설",
+        "문명의충돌",
+        "문명의충돌2",
+        "신문명의출현",
+        "식구의부활",
+        "아파트광고",
+        "광고분석",
+        "브랜딩",
+        "브랜드마케팅",
+        "현실육아",
+        "육아공감",
+        "이노션",
+        "광고캠페인"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/switzen-civilization-clash/cover.jpg"
+      ],
+      "naver_published": false,
+      "naver_post_id": null,
+      "published_at": null
+    },
+    {
       "slug": "why-84-and-59-sqm",
       "number": 1,
       "title": "85도 60도 아닌 84와 59 — 국민평형 숫자는 어디서 나왔을까",
