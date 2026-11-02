@@ -3,6 +3,7 @@
 | 파일 | 역할 |
 |---|---|
 | `build-manifest.ps1` | `posts-data.js` + `naver-html/*.html` → `posts-manifest.json` 생성/갱신 (기존 발행 기록 보존) |
+| `build-feed.ps1` | `posts-data.js` → `feed.xml` (RSS 2.0, 최신 30개, 서치어드바이저·서치콘솔 제출용). 새 글을 추가할 때마다 실행 |
 | `sync-workflow.ps1` | 운영 문서·스킬·manifest **변경분만** GitHub에 커밋·push (변경 없으면 아무것도 안 함) |
 
 ## sync-workflow.ps1 동작

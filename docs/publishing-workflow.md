@@ -53,6 +53,7 @@
 1. `posts/{slug}.html` 작성 + 이미지 `posts/images/{slug}/` 저장, `posts-data.js` 등록, `sitemap.xml` 추가.
 2. `naver-html/{slug}.html` 생성(위 규칙).
 3. `scripts/build-manifest.ps1` 실행 → `posts-manifest.json` 갱신(기존 발행 기록은 보존).
+3-1. `scripts/build-feed.ps1` 실행 → `feed.xml` 갱신(RSS 2.0, `posts-data.js` 최신 30개). 새 글을 올릴 때마다 반드시 실행하고 `feed.xml`도 같은 커밋에 포함한다.
 4. 커밋·push → 웹사이트 배포 확인(포스팅 URL과 이미지 URL이 200인지).
 5. Paul/Aside에게 "naver-html/{slug}.html 준비됨"을 알린다.
 
@@ -74,7 +75,7 @@
 - `CLAUDE.md` — Claude Code 전용 규칙(이 문서와 충돌 시 이 문서의 네이버 규칙을 따른다)
 - `.claude/skills/beodongsan-naver-copy/` — 네이버용 HTML 변환 스킬(최신 규칙 반영)
 - `docs/content-rules.md`, `docs/aside-handoff.md`, `docs/skill-changelog.md`
-- `posts-manifest.json`, `scripts/build-manifest.ps1`, `scripts/sync-workflow.ps1`, `scripts/README.md`
+- `posts-manifest.json`, `feed.xml`, `scripts/build-manifest.ps1`, `scripts/build-feed.ps1`, `scripts/sync-workflow.ps1`, `scripts/README.md`
 
 ## 9. 자동 동기화
 `scripts/sync-workflow.ps1`(Windows 작업 스케줄러, 매일 08:00)이 `CLAUDE.md`, `.claude/skills/`, `docs/`, `templates/`, `posts-manifest.json`의 변경분만 `chore: sync publishing workflow YYYY-MM-DD`로 커밋·push하고 `docs/skill-changelog.md`에 기록한다. 변경이 없으면 아무것도 하지 않는다. 등록 방법은 `scripts/README.md` 참고. `posts/`, `naver-html/` 등 콘텐츠는 이 스크립트가 아니라 Claude Code가 작성 시점에 커밋한다.

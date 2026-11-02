@@ -34,6 +34,9 @@ Vercel에 자동 배포되게 해줘.
 ```
 (파일 개수·경로·커밋 메시지는 그때그때 실제 작업 내용에 맞춰 채운다.)
 
+## feed.xml 갱신 (RSS) — 새 글을 올릴 때마다
+새 포스팅이 `posts-data.js`에 등록되면, 커밋 전에 `powershell -NoProfile -ExecutionPolicy Bypass -File scripts\build-feed.ps1`을 실행해 `feed.xml`(RSS 2.0, 최신 30개)을 다시 만들고 같은 커밋에 포함한다. 수동 편집 금지. 콘텐츠 방에서는 지시문의 파일 목록에 `feed.xml`을 넣을 필요 없이 "posts-data.js 반영 후 scripts/build-feed.ps1 실행해서 feed.xml도 같이 커밋" 한 줄만 덧붙인다. `naver-html/`은 RSS에 넣지 않는다.
+
 ## 클로드 코드(배포 담당) 쪽에서 할 일
 `brond · main` 환경에 연결된 상태에서 위와 같은 형식의 지시(첨부 파일 + 경로 매핑 + 커밋 메시지)를 받으면:
 - 각 첨부 파일을 지정된 경로에 정확히 그대로 저장한다 — 내용을 재작성하거나 수정하지 않는다(이미 완성된 결과물이다).
