@@ -1,0 +1,24 @@
+{
+  "redirects": [
+    {
+      "source": "/vietnam-story.html",
+      "destination": "/space-story.html",
+      "permanent": false
+    },
+    {
+      "source": "/posts/hcmc-meat-and-meet-buffet.html",
+      "destination": "/space-story.html",
+      "permanent": false
+    },
+    {
+      "source": "/posts/hcmc-lime-photodermatitis.html",
+      "destination": "/space-story.html",
+      "permanent": false
+    },
+    {
+      "source": "/posts/hcmc-taodien-thuthiem-commute.html",
+      "destination": "/space-story.html",
+      "permanent": false
+    }
+  ]
+}

@@ -26,7 +26,7 @@
     var emptyText = container.getAttribute("data-empty-text") || "곧 새로운 이야기로 찾아올게요.";
     var regionFilterEnabled = container.getAttribute("data-region-filter") === "true";
 
-    var basePosts = (typeof POSTS !== "undefined" ? POSTS.slice() : []);
+    var basePosts = (typeof POSTS !== "undefined" ? POSTS.slice() : []).filter(function (p) { return p.category !== "vietnam" && p.hidden !== true; });
     if (category) {
       basePosts = basePosts.filter(function (p) { return p.category === category; });
     }

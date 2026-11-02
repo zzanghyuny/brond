@@ -5,7 +5,7 @@
 
   각 항목:
   - id        : 파일명과 동일한 슬러그 (참고용)
-  - category  : "realestate" 또는 "brand" 또는 "vietnam"
+  - category  : "realestate" 또는 "brand" 또는 "space" (vietnam은 보관·비노출)
   - region    : realestate 전용, 2글자 지역명("서울"·"경기"·"인천"·"부산"·"경남" 등).
                 brand 포스팅은 생략(비워둠). 청약·분양 페이지의 지역 서브카테고리
                 필터와, 포스팅 제목 맨 앞의 "지역 - 단지명" 표기에 함께 쓰입니다.
@@ -675,6 +675,7 @@ const POSTS = [
   {
     id: "hcmc-meat-and-meet-buffet",
     category: "vietnam",
+    hidden: true,
     tag: "베트남 호치민 이야기 No.3",
     title: "호치민 고기부페 미트앤미트 — 두 아들과 다녀온 가성비 숯불 부페",
     date: "2026-09-30",
@@ -687,6 +688,7 @@ const POSTS = [
   {
     id: "hcmc-lime-photodermatitis",
     category: "vietnam",
+    hidden: true,
     tag: "베트남 호치민 이야기 No.2",
     title: "쌀국수 먹을 때 라임 짜고 손 안 씻으면 생기는 일 — 베트남 여행객이 꼭 기억해야 할 라임 색소침착",
     date: "2026-09-29",
@@ -699,6 +701,7 @@ const POSTS = [
   {
     id: "hcmc-taodien-thuthiem-commute",
     category: "vietnam",
+    hidden: true,
     tag: "베트남 호치민 이야기 No.1",
     title: "타오디엔에서 투티엠까지 — 메트로로 가본 주재원 출근길",
     date: "2026-09-28",
