@@ -1,4 +1,4 @@
-﻿# build-manifest.ps1
+# build-manifest.ps1
 # posts-data.js + naver-html/*.html  ->  posts-manifest.json
 # Existing publish records (naver_published / naver_post_id / published_at) are preserved.
 # Usage:  powershell -NoProfile -ExecutionPolicy Bypass -File scripts\build-manifest.ps1
@@ -11,7 +11,7 @@ $manifestPath = Join-Path $RepoPath 'posts-manifest.json'
 $naverDir     = Join-Path $RepoPath 'naver-html'
 $base         = 'https://www.brandongsan.com/'
 
-$catKo    = @{ realestate = '부동산'; brand = '브랜드'; vietnam = '호치민' }
+$catKo    = @{ realestate = '부동산'; brand = '브랜드'; vietnam = '호치민'; space = '공간' }
 $catNaver = @{ realestate = '부동산이야기'; brand = '브랜드이야기'; vietnam = '호치민이야기' }
 
 # previous publish records

@@ -1,4 +1,4 @@
-﻿# build-feed.ps1
+# build-feed.ps1
 # posts-data.js  ->  feed.xml (RSS 2.0, newest N posts)
 # Run after adding a post to posts-data.js, before commit/push.
 # Usage:  powershell -NoProfile -ExecutionPolicy Bypass -File scripts\build-feed.ps1 [-Count 30]
@@ -11,7 +11,7 @@ $indexPath = Join-Path $RepoPath 'index.html'
 $feedPath  = Join-Path $RepoPath 'feed.xml'
 $base      = 'https://www.brandongsan.com/'
 
-$catKo = @{ realestate = '청약·분양'; brand = '브랜드이야기'; vietnam = '호치민이야기' }
+$catKo = @{ realestate = '부동산이야기'; brand = '브랜드이야기'; space = '공간이야기' }
 $inv   = New-Object System.Globalization.CultureInfo('en-US')
 $kst   = New-Object TimeSpan(9, 0, 0)
 
@@ -41,6 +41,8 @@ $posts = @(); $i = 0
 foreach ($b in $blocks) {
   $slug = Get-Field $b 'id'
   if (-not $slug) { continue }
+  # 보관된 호치민 글과 명시적으로 숨긴 글은 RSS에 노출하지 않는다.
+  if ((Get-Field $b 'category') -eq 'vietnam' -or $b -match '(?m)^\s*hidden:\s*true\s*,?') { continue }
   $i++
   $tag = Get-Field $b 'tag'
   $num = -1
