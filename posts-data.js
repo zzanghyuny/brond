@@ -23,6 +23,18 @@
 
 const POSTS = [
   {
+    id: "switzen-civilization-clash",
+    category: "brand",
+    tag: "브랜드 언박싱 No.003",
+    title: "아이를 키워본 사람이라면, 이 광고를 그냥 지나치기 어렵다 — 스위첸 ‘문명의 충돌’에서 ‘식구의 부활’까지",
+    date: "2026-11-03",
+    dateLabel: "2026. 11. 3",
+    url: "posts/switzen-civilization-clash.html",
+    preview: `
+      <p>문명의 충돌 2를 보다가 울었다. 아파트 광고였다. 단지 이름도 분양가도 나오지 않는 2분 10초짜리 영상인데 끝날 즈음에는 눈이 젖어 있었다.</p><p>2020년 문명의 충돌, 2023년 문명의 충돌 2, 2024년 식구의 부활까지 스위첸의 세 캠페인을 장면 캡처와 함께 다시 보며, 집을 파는 광고가 어떻게 사람을 울리고 브랜드로 돌아오는지 인사이트 7가지로 정리했다.</p>
+    `
+  },
+  {
     id: "why-84-and-59-sqm",
     category: "space",
     tag: "공간이야기 No.001",
