@@ -33,7 +33,9 @@
         "호반써밋송도"
       ],
       "cover_candidates": [],
-      "naver_published": false
+      "naver_published": true,
+      "naver_post_id": "224464912646",
+      "published_at": "2026-11-04T15:15:00+07:00"
     },
     {
       "slug": "yongdu-lottecastle",
@@ -60,7 +62,9 @@
         "청량리역한양수자인그라시엘"
       ],
       "cover_candidates": [],
-      "naver_published": false
+      "naver_published": true,
+      "naver_post_id": "224464911342",
+      "published_at": "2026-11-04T15:15:00+07:00"
     },
     {
       "slug": "switzen-civilization-clash",
