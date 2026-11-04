@@ -23,6 +23,32 @@
 
 const POSTS = [
   {
+    id: "songdo-logebien-moaelgaa",
+    category: "realestate",
+    region: "인천",
+    tag: "청약 언박싱 No.086",
+    title: "인천 - 송도 대광로제비앙 모아엘가 | 11공구 RC2블록 592세대, 84㎡ 적정가 6.41억(분양가 미공개)",
+    date: "2026-11-04",
+    dateLabel: "2026. 11. 4",
+    url: "posts/songdo-logebien-moaelgaa.html",
+    preview: `
+      <p>인천 송도국제도시 11공구 RC2블록의 '송도 대광로제비앙 모아엘가'는 지하 1층~지상 29층 7개 동 592세대, 전용 84㎡ 단일 구성이다. 브동산 모형 84㎡ 적정가는 6.41억원이다.</p><p>2026년 11월 분양 예정이지만 분양가·청약일정·입주예정월은 미공개라 예상 프리미엄은 산출하지 않았고, 공고 후 갱신한다.</p>
+    `
+  },
+  {
+    id: "yongdu-lottecastle",
+    category: "realestate",
+    region: "서울",
+    tag: "청약 언박싱 No.085",
+    title: "서울 - 용두동 롯데캐슬 | 홈플러스 동대문점 부지 417세대, 84㎡ 적정가 20.57억(분양가 미공개)",
+    date: "2026-11-04",
+    dateLabel: "2026. 11. 4",
+    url: "posts/yongdu-lottecastle.html",
+    preview: `
+      <p>서울 동대문구 용두동 33-1 일대 옛 홈플러스 동대문점 부지의 '용두동 롯데캐슬'은 지하 7층~지상 49층 3개 동 417세대(일반분양 340세대 보도) 주상복합이다. 브동산 모형 84㎡ 적정가는 20.57억원이다.</p><p>2026년 12월 분양 예정이지만 분양가·청약일정·입주 시기는 모두 미공개라 예상 프리미엄은 산출하지 않았고, 공고 후 갱신한다.</p>
+    `
+  },
+  {
     id: "switzen-civilization-clash",
     category: "brand",
     tag: "브랜드 언박싱 No.003",

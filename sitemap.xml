@@ -471,5 +471,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.brandongsan.com/posts/yongdu-lottecastle.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.brandongsan.com/posts/songdo-logebien-moaelgaa.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url><loc>https://www.brandongsan.com/space-story.html</loc></url>
 </urlset>
