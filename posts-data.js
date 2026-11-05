@@ -29,7 +29,7 @@ const POSTS = [
   { id: "wangsuk-hanshin-theh-centum", category: "realestate", region: "경기", tag: "청약 언박싱 No.091", title: "경기 - 왕숙 한신더휴 센텀 | 분양가 공개 전, 확인된 정보와 청약 체크포인트", date: "2026-11-05", dateLabel: "2026. 11. 5", url: "posts/wangsuk-hanshin-theh-centum.html", preview: "<p>왕숙 A-17블록의 공공분양 계획과 모집공고 전 확인사항을 살펴본다.</p>" },
   { id: "songdo-the-sharp-granter-g5-6-musunwi", category: "realestate", region: "인천", tag: "청약 언박싱 No.092", title: "인천 - 더샵 송도그란테르 G5-6블록 | 무순위 118K 1세대, 분양가·청약조건 정리", date: "2026-11-05", dateLabel: "2026. 11. 5", url: "posts/songdo-the-sharp-granter-g5-6-musunwi.html", preview: "<p>송도그란테르 G5-6블록 무순위 1세대의 공급금액과 신청 조건을 살펴본다.</p>" },
   { id: "balcony-story", category: "space", tag: "공간이야기 No.003", title: "우리 집 베란다는 어디로 사라졌을까", date: "2026-11-05", dateLabel: "2026. 11. 5", url: "posts/balcony-story.html", preview: `<p>예전 집에는 빨래도 널고 화분도 두던 베란다가 있었다. 요즘 집에서는 그 자리가 거실이 된 것 같다. 우리 집 베란다는 어디로 사라졌을까?</p>` },
-  { id: "same-84-different-space", category: "space", tag: "공간이야기 No.002", title: "같은 84㎡인데 왜 우리 집은 더 좁을까", date: "2026-11-05", dateLabel: "2026. 11. 5", url: "posts/same-84-different-space.html", preview: `<p>같은 84㎡라는데, 친구 집은 왜 우리 집보다 넓어 보일까? 평면도를 한 장씩 펼쳐 봤다.</p>` },
+  { id: "same-84-different-space", category: "space", tag: "공간이야기 No.002", title: "같은 84㎡인데 왜 우리 집은 더 좁을까", date: "2026-11-05", dateLabel: "2026. 11. 5", url: "posts/same-84-different-space.html", preview: `<p>같은 84㎡라는데 친구 집에 가면 왜 더 넓게 느껴질까? 이유는 계약서에 적히지 않는 면적에 있었다.</p>` },
   {
     id: "songdo-logebien-moaelgaa",
     category: "realestate",
