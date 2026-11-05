@@ -19,6 +19,17 @@
       "source": "/posts/hcmc-taodien-thuthiem-commute.html",
       "destination": "/space-story.html",
       "permanent": false
+    },
+    {
+      "source": "/((?!ads\\.txt$).*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "brandongsan.com"
+        }
+      ],
+      "destination": "https://www.brandongsan.com/$1",
+      "permanent": true
     }
   ]
 }
