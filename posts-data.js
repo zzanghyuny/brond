@@ -22,6 +22,12 @@
 */
 
 const POSTS = [
+  { id: "guri-galmae-insville-decent", category: "realestate", region: "경기", tag: "청약 언박싱 No.087", title: "경기 - 구리갈매역세권 신안인스빌 디센트 | 분양가·청약 일정, 적정가 판단 보류", date: "2026-11-05", dateLabel: "2026. 11. 5", url: "posts/guri-galmae-insville-decent.html", preview: "<p>구리갈매역세권 B-1블록의 공급가격과 청약 일정, 전매·거주의무를 살펴본다.</p>" },
+  { id: "ansan-sinkil2-b1-public", category: "realestate", region: "경기", tag: "청약 언박싱 No.088", title: "경기 - 안산신길2 B-1블록 | 분양가·청약일정·유상옵션 정정 총정리", date: "2026-11-05", dateLabel: "2026. 11. 5", url: "posts/ansan-sinkil2-b1-public.html", preview: "<p>안산신길2 B-1블록의 신규 공급물량과 분양가, LH 정정공고를 정리한다.</p>" },
+  { id: "yongin-jungang-hights-guseong", category: "realestate", region: "경기", tag: "청약 언박싱 No.089", title: "경기 - 중앙하이츠 구성 플랫폼시티 | 분양가 청약일정 총정리", date: "2026-11-05", dateLabel: "2026. 11. 5", url: "posts/yongin-jungang-hights-guseong.html", preview: "<p>중앙하이츠 구성 플랫폼시티의 공급 구성과 청약 일정, 가격 정보를 살펴본다.</p>" },
+  { id: "gyeyang-daebang-elium-eduhpark", category: "realestate", region: "인천", tag: "청약 언박싱 No.090", title: "인천 - 계양신도시 대방 엘리움 에듀파크 | 공고 전 일정·공급정보 정리", date: "2026-11-05", dateLabel: "2026. 11. 5", url: "posts/gyeyang-daebang-elium-eduhpark.html", preview: "<p>계양 A21블록의 공개된 사업 정보와 예정 일정을 정리한다.</p>" },
+  { id: "wangsuk-hanshin-theh-centum", category: "realestate", region: "경기", tag: "청약 언박싱 No.091", title: "경기 - 왕숙 한신더휴 센텀 | 분양가 공개 전, 확인된 정보와 청약 체크포인트", date: "2026-11-05", dateLabel: "2026. 11. 5", url: "posts/wangsuk-hanshin-theh-centum.html", preview: "<p>왕숙 A-17블록의 공공분양 계획과 모집공고 전 확인사항을 살펴본다.</p>" },
+  { id: "songdo-the-sharp-granter-g5-6-musunwi", category: "realestate", region: "인천", tag: "청약 언박싱 No.092", title: "인천 - 더샵 송도그란테르 G5-6블록 | 무순위 118K 1세대, 분양가·청약조건 정리", date: "2026-11-05", dateLabel: "2026. 11. 5", url: "posts/songdo-the-sharp-granter-g5-6-musunwi.html", preview: "<p>송도그란테르 G5-6블록 무순위 1세대의 공급금액과 신청 조건을 살펴본다.</p>" },
   { id: "balcony-story", category: "space", tag: "공간이야기 No.003", title: "우리 집 베란다는 어디로 사라졌을까", date: "2026-11-05", dateLabel: "2026. 11. 5", url: "posts/balcony-story.html", preview: `<p>예전 집에는 빨래도 널고 화분도 두던 베란다가 있었다. 요즘 집에서는 그 자리가 거실이 된 것 같다. 우리 집 베란다는 어디로 사라졌을까?</p>` },
   { id: "same-84-different-space", category: "space", tag: "공간이야기 No.002", title: "같은 84㎡인데 왜 우리 집은 더 좁을까", date: "2026-11-05", dateLabel: "2026. 11. 5", url: "posts/same-84-different-space.html", preview: `<p>같은 84㎡라는데, 친구 집은 왜 우리 집보다 넓어 보일까? 평면도를 한 장씩 펼쳐 봤다.</p>` },
   {
