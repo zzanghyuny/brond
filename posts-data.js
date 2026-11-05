@@ -22,6 +22,8 @@
 */
 
 const POSTS = [
+  { id: "balcony-story", category: "space", tag: "공간이야기 No.003", title: "우리 집 베란다는 어디로 사라졌을까", date: "2026-11-05", dateLabel: "2026. 11. 5", url: "posts/balcony-story.html", preview: `<p>예전 집에는 빨래도 널고 화분도 두던 베란다가 있었다. 요즘 집에서는 그 자리가 거실이 된 것 같다. 우리 집 베란다는 어디로 사라졌을까?</p>` },
+  { id: "same-84-different-space", category: "space", tag: "공간이야기 No.002", title: "같은 84㎡인데 왜 우리 집은 더 좁을까", date: "2026-11-05", dateLabel: "2026. 11. 5", url: "posts/same-84-different-space.html", preview: `<p>같은 84㎡라는데, 친구 집은 왜 우리 집보다 넓어 보일까? 평면도를 한 장씩 펼쳐 봤다.</p>` },
   {
     id: "songdo-logebien-moaelgaa",
     category: "realestate",

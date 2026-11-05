@@ -5,9 +5,76 @@
   "category_map": {
     "부동산": "부동산이야기",
     "브랜드": "브랜드이야기",
-    "호치민": "호치민이야기"
+    "호치민": "호치민이야기",
+    "공간": "공간이야기"
   },
   "posts": [
+    {
+      "slug": "balcony-story",
+      "number": 3,
+      "title": "우리 집 베란다는 어디로 사라졌을까",
+      "category": "공간",
+      "naver_category": "공간이야기",
+      "date": "2026-11-05",
+      "site_url": "https://www.brandongsan.com/posts/balcony-story.html",
+      "naver_html": "naver-html/balcony-story.html",
+      "naver_title": "우리 집 베란다는 어디로 사라졌을까 | 발코니 확장의 이야기",
+      "naver_tags": [
+        "베란다",
+        "발코니",
+        "발코니확장",
+        "베란다차이",
+        "아파트발코니",
+        "주거공간",
+        "공간이야기",
+        "아파트평면",
+        "대피공간",
+        "건축법",
+        "주거이야기",
+        "집이야기",
+        "인테리어",
+        "단열",
+        "브동산"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/balcony-story/cover.png"
+      ],
+      "naver_published": false,
+      "naver_post_id": null,
+      "published_at": null
+    },
+    {
+      "slug": "same-84-different-space",
+      "number": 2,
+      "title": "같은 84㎡인데 왜 우리 집은 더 좁을까",
+      "category": "공간",
+      "naver_category": "공간이야기",
+      "date": "2026-11-05",
+      "site_url": "https://www.brandongsan.com/posts/same-84-different-space.html",
+      "naver_html": "naver-html/same-84-different-space.html",
+      "naver_title": "같은 84㎡인데 왜 우리 집은 더 좁을까 | 평면과 발코니 살펴보기",
+      "naver_tags": [
+        "같은84",
+        "84평면",
+        "전용면적",
+        "공급면적",
+        "아파트평면도",
+        "발코니확장",
+        "아파트구조",
+        "아파트동선",
+        "평면비교",
+        "아파트인테리어",
+        "집고르기",
+        "공간이야기",
+        "부동산상식"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/same-84-different-space/cover.png"
+      ],
+      "naver_published": false,
+      "naver_post_id": null,
+      "published_at": null
+    },
     {
       "slug": "songdo-logebien-moaelgaa",
       "number": 86,
