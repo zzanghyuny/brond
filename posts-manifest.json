@@ -323,7 +323,9 @@
         "래미안엘리니티",
         "청량리역한양수자인그라시엘"
       ],
-      "cover_candidates": [],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/yongdu-lottecastle/press-cg.jpg"
+      ],
       "naver_published": true,
       "naver_post_id": "224464911342",
       "published_at": "2026-11-04T15:15:00+07:00"
@@ -656,8 +658,7 @@
         "중랑구아파트"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/junghwa-raon-private-centro/aerial.jpg",
-        "https://www.brandongsan.com/posts/images/junghwa-raon-private-centro/perspective.jpg"
+        "https://www.brandongsan.com/posts/images/junghwa-raon-private-centro/aerial.jpg"
       ],
       "naver_published": true,
       "naver_post_id": "224461823945",
@@ -887,7 +888,7 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/siheung-elif-theprime/cover.jpg"
+        "https://www.brandongsan.com/posts/images/siheung-elif-theprime/cover-official.jpg"
       ],
       "naver_published": true,
       "naver_post_id": "224460501136",
