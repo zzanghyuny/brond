@@ -20,18 +20,16 @@
       "naver_html": "naver-html/guri-galmae-insville-decent.html",
       "naver_title": "구리갈매역세권 신안인스빌 디센트 | 분양가·청약 일정, 적정가 판단 보류",
       "naver_tags": [
-        "구리갈매신안인스빌디센트",
-        "구리갈매역세권",
-        "갈매역",
-        "별내역",
-        "구리시",
-        "구리갈매",
+        "구리갈매역세권신안인스빌디센트",
         "신안인스빌",
-        "신안",
-        "청약",
+        "구리갈매",
+        "갈매역",
+        "구리청약",
+        "공공주택지구",
+        "B1블록",
         "분양가",
         "청약일정",
-        "아파트분양",
+        "경기청약",
         "부동산정보"
       ],
       "cover_candidates": [],
@@ -96,7 +94,9 @@
         "e편한세상구성역플랫폼시티",
         "구성역효성해링턴플레이스"
       ],
-      "cover_candidates": [],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/yongin-jungang-hights-guseong/cover.jpg"
+      ],
       "naver_published": true,
       "naver_post_id": "224466593050",
       "published_at": "2026-11-05T22:06:00+07:00"
@@ -188,7 +188,9 @@
         "연수구아파트",
         "부동산정보"
       ],
-      "cover_candidates": [],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/songdo-the-sharp-granter-g5-6-musunwi/layout.jpg"
+      ],
       "naver_published": true,
       "naver_post_id": "224466594679",
       "published_at": "2026-11-05T22:09:00+07:00"
