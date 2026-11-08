@@ -1,0 +1,179 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>삼도이동 토지임대부 분양주택</title><meta name="description" content="브동산 부동산이야기 — 삼도이동 토지임대부 분양주택 청약 정보와 분양가를 정리한다."><style>
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+  :root{
+    --paper:#FFFFFF;
+    --ink:#111111;
+    --ink-soft:#555555;
+    --ink-faint:#8A8A8A;
+    --hair:#E3E3E3;
+    --hair-strong:#111111;
+    --soft-bg:#FAFAFA;
+  }
+
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Nanum Gothic','Malgun Gothic','Apple SD Gothic Neo',sans-serif;
+    line-height:1.8;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{ background:#111; color:#fff; }
+  a{ color:var(--ink); }
+  a:focus-visible, button:focus-visible, input:focus-visible{ outline:2px solid var(--ink); outline-offset:2px; }
+
+  .wrap{ max-width:700px; margin:0 auto; padding:0 24px; }
+
+  h1,h2,h3{ font-family:'Nanum Gothic',sans-serif; font-weight:800; color:var(--ink); margin:0; text-wrap:balance; }
+  b, strong{ font-weight:800; }
+  .num{ font-variant-numeric:tabular-nums; }
+
+  /* ---- masthead / byline ---- */
+  .top-eyebrow{ padding:36px 0 0; }
+  .top-eyebrow .wrap{ color:var(--ink-faint); font-size:13px; letter-spacing:.02em; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+
+  .brand-mark{ display:inline-block; font-size:15px; line-height:1; text-decoration:none; }
+  .brand-mark .bm-b{ font-weight:800; color:var(--ink); }
+  .brand-mark .bm-rest{ font-weight:400; color:var(--ink-soft); }
+
+  .list-btn{ display:inline-flex; align-items:center; gap:4px; font-size:12px; color:var(--ink-soft); border:1px solid var(--hair); border-radius:4px; padding:4px 10px; text-decoration:none; flex:none; }
+  .list-btn:hover{ border-color:var(--ink); color:var(--ink); }
+
+  .related-list{ margin:14px 0 4px; }
+  .related-item{ display:block; padding:13px 0; border-bottom:1px solid var(--hair); text-decoration:none; }
+  .related-item .r-tag{ display:block; font-size:11.5px; color:var(--ink-faint); margin-bottom:4px; }
+  .related-item .r-title{ display:block; font-size:15px; font-weight:700; color:var(--ink); line-height:1.5; }
+  .related-empty{ font-size:14px; color:var(--ink-faint); padding:14px 0; }
+  .list-more{ margin-top:20px; text-align:center; }
+  .btn-list{ display:inline-block; font-family:'Nanum Gothic'; font-weight:700; font-size:13px; color:var(--ink); border:1px solid var(--ink); padding:9px 20px; text-decoration:none; }
+
+  .titleblock{ padding:14px 0 22px; }
+  .titleblock h1{ font-size:clamp(26px,4.6vw,34px); line-height:1.42; font-weight:800; }
+
+  .byline{ display:flex; align-items:center; gap:10px; padding:6px 0 22px; flex-wrap:wrap; }
+  .byline .avatar{
+    width:30px; height:30px; border-radius:50%; background:var(--ink); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; flex:none;
+  }
+  .byline .who{ font-size:14.5px; font-weight:700; color:var(--ink); }
+  .byline .dot{ color:var(--hair); }
+  .byline .when{ font-size:13.5px; color:var(--ink-faint); }
+  .byline .tag{
+    margin-left:auto; font-size:12px; color:var(--ink-faint); border:1px solid var(--hair);
+    border-radius:5px; padding:3px 8px;
+  }
+
+  .hairline{ height:1px; background:var(--hair); }
+
+  /* ---- cover graphic (the one place color is allowed) ---- */
+  .cover{ margin:26px 0; border-radius:2px; overflow:hidden; position:relative; }
+  .cover img{ width:100%; height:auto; display:block; }
+  .cover svg{ width:100%; height:100%; display:block; }
+  .cover-cap{ font-size:12px; color:var(--ink-faint); margin-top:8px; }
+
+  /* ---- content rhythm ---- */
+  .content{ padding:30px 0 10px; }
+  section{ padding:38px 0; }
+  section + section{ border-top:1px solid var(--hair); }
+  .content > .hairline{ margin:0 0 0; }
+
+  h2{ font-size:21px; margin-bottom:16px; }
+  h3{ font-size:16.5px; margin:22px 0 10px; }
+  p{ margin:14px 0; }
+  .lede{ color:var(--ink); }
+
+  ul.plain{ margin:14px 0; padding-left:22px; }
+  ul.plain li{ margin:9px 0; }
+  ul.plain li::marker{ color:var(--ink); }
+
+  dl.spec{ margin:14px 0; }
+  dl.spec .row{ display:flex; gap:14px; padding:8px 0; border-bottom:1px solid var(--hair); font-size:15px; }
+  dl.spec .row dt{ flex:0 0 128px; font-weight:700; color:var(--ink); }
+  dl.spec .row dd{ margin:0; color:var(--ink); }
+
+  .quote{ border-left:3px solid var(--ink); padding:4px 0 4px 18px; margin:20px 0; }
+  .quote .qt{ font-weight:800; font-size:14.5px; margin-bottom:6px; }
+  .quote p{ margin:0; font-size:14.5px; color:var(--ink-soft); }
+
+  .tablewrap{ overflow-x:auto; margin:16px 0; }
+  table{ width:100%; border-collapse:collapse; min-width:460px; }
+  th,td{ text-align:left; padding:10px 12px; font-size:14.5px; border-bottom:1px solid var(--hair); }
+  thead th{ font-weight:800; border-bottom:2px solid var(--ink); }
+  td.figure, th.figure{ font-variant-numeric:tabular-nums; }
+  .note{ font-size:13px; color:var(--ink-faint); margin-top:8px; }
+
+  .bar-row{ display:grid; grid-template-columns:64px 1fr 56px; gap:12px; align-items:center; margin:10px 0; }
+  .bar-label{ font-size:13.5px; color:var(--ink-soft); }
+  .bar-track{ height:8px; background:#EFEFEF; }
+  .bar-fill{ height:100%; background:var(--ink); }
+  .bar-fill.dim{ background:#BBBBBB; }
+  .bar-val{ font-size:13.5px; text-align:right; font-variant-numeric:tabular-nums; }
+  .bar-val.dim{ color:var(--ink-faint); }
+
+  .stat-pair{ display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:18px 0; }
+  .stat-box{ border:1px solid var(--hair); padding:16px 18px; }
+  .stat-box .sk{ font-size:12.5px; color:var(--ink-faint); }
+  .stat-box .sv{ font-size:28px; font-weight:800; margin-top:4px; font-variant-numeric:tabular-nums; }
+  .stat-box .sbar{ height:6px; background:#EFEFEF; margin-top:12px; }
+  .stat-box .sbar > div{ height:100%; background:var(--ink); }
+  .delta{ display:inline-block; margin-top:14px; font-weight:800; font-size:13.5px; border-bottom:2px solid var(--ink); padding-bottom:2px; }
+  .premium{ font-size:13.5px; font-weight:800; color:var(--ink-soft); margin-top:6px; }
+
+  .split{ display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:16px 0; }
+  .split .box h3{ margin-top:0; }
+  .split ul.plain{ margin-top:8px; }
+
+  .sponsor{ border:1px solid var(--ink); padding:22px 20px; }
+  .sponsor-top{ display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; }
+  .ad-badge{ font-size:11px; font-weight:800; letter-spacing:.06em; border:1px solid var(--ink); padding:2px 8px; }
+  .sponsor-note{ font-size:11.5px; color:var(--ink-faint); }
+  .agent{ display:flex; gap:14px; align-items:center; flex-wrap:wrap; margin-top:16px; padding-top:16px; border-top:1px solid var(--hair); }
+  .agent .avatar{ width:46px; height:46px; border-radius:50%; background:var(--ink); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; flex:none; }
+  .agent-info{ flex:1; min-width:180px; }
+  .agent-info .name{ font-weight:800; font-size:15px; }
+  .agent-info .role{ font-size:12.5px; color:var(--ink-faint); }
+  .agent-info .desc{ font-size:13px; color:var(--ink-soft); margin-top:4px; }
+  .agent-side{ display:flex; flex-direction:column; align-items:flex-end; gap:8px; }
+  .agent-side .phone{ font-size:13px; color:var(--ink-soft); }
+  .btn{ font-family:'Nanum Gothic'; font-weight:800; font-size:13.5px; background:var(--ink); color:#fff; border:none; padding:9px 16px; cursor:pointer; }
+  .ad-apply{ margin-top:16px; padding-top:14px; border-top:1px dashed var(--hair); display:flex; align-items:center; justify-content:space-between; gap:12px 16px; flex-wrap:wrap; }
+  .ad-apply-text{ font-size:12.5px; color:var(--ink-faint); }
+  .ad-apply-actions{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .btn-outline{ font-family:'Nanum Gothic'; font-weight:800; font-size:12.5px; background:transparent; color:var(--ink); border:1px solid var(--ink); padding:7px 14px; cursor:pointer; text-decoration:none; display:inline-block; }
+  .ad-email-copy{ display:inline-flex; align-items:center; gap:6px; font-size:12.5px; color:var(--ink-soft); }
+  .ad-email-copy code{ font-family:inherit; background:#F5F5F5; padding:3px 7px; border:1px solid var(--hair); }
+  .copy-btn{ font-family:'Nanum Gothic'; font-weight:700; font-size:11.5px; background:none; border:1px solid var(--hair); color:var(--ink-soft); padding:3px 8px; cursor:pointer; }
+  .copy-btn.copied{ border-color:var(--ink); color:var(--ink); }
+
+  footer{ padding:34px 0 60px; }
+  footer p{ font-size:12.5px; color:var(--ink-faint); }
+
+  .photo-block{ margin:22px 0; }
+  .photo-block img{ border:1px solid var(--hair); }
+
+  .radar-wrap{ margin:20px 0 10px; }
+  .bridge-wrap{ margin:20px 0 10px; border:1px solid var(--hair); padding:10px 12px; }
+  .bridge-wrap svg{ width:100%; height:auto; display:block; }
+  .radar-wrap svg{ width:100%; max-width:340px; display:block; margin:0 auto; }
+  .radar-legend{ display:flex; flex-wrap:wrap; gap:14px 18px; justify-content:center; margin-top:6px; }
+  .lg-item{ font-size:12.5px; color:var(--ink-soft); display:inline-flex; align-items:center; gap:6px; }
+  .lg-swatch{ width:16px; height:0; display:inline-block; border-top-width:2px; }
+  .lg-site{ border-top:3px solid var(--ink); }
+  .lg-c1{ border-top:2px dashed var(--ink-soft); }
+  .lg-c2{ border-top:2px dotted var(--ink-faint); }
+
+  .map-wrap{ margin:20px 0 6px; border:1px solid var(--hair); }
+  .map-wrap img{ width:100%; height:auto; display:block; }
+  .map-wrap svg{ width:100%; height:auto; display:block; background:#FAFAFA; }
+
+  @media (max-width:520px){
+    .stat-pair, .split{ grid-template-columns:1fr; }
+    .bar-row{ grid-template-columns:52px 1fr 44px; }
+    .agent-side{ align-items:stretch; width:100%; }
+  }
+  dl.spec dd, dl.spec .row > *{ min-width:0; overflow-wrap:anywhere; word-break:keep-all; }
+  dl.spec .row{ min-width:0; }
+</style></head><body><div class="top-eyebrow"><div class="wrap"><a class="brand-mark" href="https://brandongsan.com/"><span class="bm-b">브</span><span class="bm-rest">동산</span></a><a class="list-btn" href="https://brandongsan.com/realestate.html">☰ 목록</a></div></div><div class="wrap"><div class="titleblock"><h1>제주 - 삼도이동 토지임대부 분양주택 | 건물만 분양받는 72세대, 꼭 알아야 할 조건</h1></div><div class="byline"><span class="avatar">브</span><span class="who">서당개</span><span class="dot">·</span><span class="when">2026. 11. 8</span><span class="tag">청약 언박싱 No.097</span></div></div><div class="hairline"></div><div class="wrap content"><div class="cover"><img src="images/jeju-samdo-land-lease/cover.jpg" alt="삼도이동 토지임대부 분양주택 조감도" style="width:100%;display:block;"></div><div class="cover-cap">이미지: 공식 홈페이지 — 대표 조감 이미지. 실제와 다를 수 있다.</div><section id="s1"><h2>1. 핵심 요약 — 이 단지, 적정가는 얼마일까?</h2><dl class="summary-brief"><div><dt>01 · 사업 개요</dt><dd>제주시 삼도이동에 1지구 32세대와 2지구 40세대, 총 72세대로 공급되는 공공 토지임대부 분양주택이다. 49A와 59A 두 타입이며, 매수자는 건물과 공용부분을 소유하고 토지는 제주특별자치도개발공사(JPDC) 소유로 남는다. 입주는 2027년 11~12월 예정이다.</dd></div><div><dt>02 · 청약 현황</dt><dd>청약 일정 2026년 10월 27일 공고 기준 특별공급 11월 16일, 1순위 11월 17일, 2순위 11월 18일이다. 1지구와 2지구의 당첨자 발표일은 각각 11월 24일·25일이다.</dd></div><div><dt>03 · 가격 판단</dt><dd>분양가·월 임대료 1지구 59A 건물분양가는 2.90억~3.02억원이고 월 토지임대료는 29만8,840원이다. 49A는 2.42억~2.52억원, 월 24만7,050원이다.</dd></div><div><dt>04 · 핵심 조건</dt><dd>체크포인트 전매제한 10년·거주의무 5년이며, 토지소유권은 JPDC에 남는다. 일반 소유권 아파트 실거래와 단순 프리미엄 비교는 하지 않았다.</dd></div></dl><div class="stat-pair"><div class="stat-box"><div class="sk">브동산 판단</div><div class="sv">일반 아파트 적정가 산정 제외</div><div class="premium">월 토지임대료 298,840원</div></div><div class="stat-box"><div class="sk">실제 분양가</div><div class="sv">59A 건물분양가 2.90~3.02억원</div><div class="premium">공고문 기준</div></div></div><div class="tablewrap"><table><thead><tr><th>비교단지</th><th>동일 크기 실거래</th><th>연식·규모</th><th>보정가격</th></tr></thead><tbody><tr><td>골든타워2차</td><td class="figure">60.23㎡·2026.01.15·3층 실거래 2.65억</td><td>2018년 사용승인·14세대</td><td class="figure"><b>참고값</b></td></tr><tr><td>일도2차신천지</td><td class="figure">59.98㎡·2026.04.27·4층 실거래 2.39억</td><td>1994년 사용승인·228세대</td><td class="figure"><b>참고값</b></td></tr></tbody></table></div><p class="note">비교 기준가는 동일 전용면적대의 신고된 실거래 총액이다. 호가·평당가·㎡당가는 사용하지 않았다. 토지임대부 상품은 구조가 달라 별도 설명을 따른다.</p></section><section id="s2"><h2>2. 입지 분석</h2><p>사업지는 1지구 제주시 삼도이동 1244-1번지, 2지구 1246-1번지 외 4필지다. 현장과 분양홍보관의 위치가 다르므로 방문 전 공식 안내를 확인해야 한다. 제주 도심의 기존 생활권이라는 위치 특성은 있지만, 토지 소유권이 분리된 상품 구조가 일반 아파트와 가장 큰 차이다.</p><div class="photo-block"><img src="images/jeju-samdo-land-lease/district1.png" alt="삼도이동 토지임대부 분양주택 공식 홈페이지 1지구 조감 이미지" style="width:100%;display:block;"></div><p class="note">이미지: 공식 홈페이지 — 공식 홈페이지 1지구 조감 이미지. CG·계획 이미지는 실제와 다를 수 있다.</p></section><section id="s3"><h2>3. 상품 분석</h2><p>1지구는 49A 8세대·59A 24세대, 2지구는 49A 8세대·59A 32세대다. 1지구 기준 49A 건물분양가는 2.42억~2.52억원, 59A는 2.90억~3.02억원이며 발코니 확장비는 별도다. 월 토지임대료는 49A 24만7,050원, 59A 29만8,840원이다.</p><div class="photo-block"><img src="images/jeju-samdo-land-lease/chart-map.jpg" alt="삼도이동 토지임대부 분양주택 브동산 자체 제작 위치 개략도" style="width:100%;display:block;"></div><p class="note">차트: 브동산 자체 제작 — 브동산 자체 제작 위치 개략도(공개 자료를 바탕으로 한 개략·평가 시각화)</p><div class="photo-block"><img src="images/jeju-samdo-land-lease/chart-radar.jpg" alt="삼도이동 토지임대부 분양주택 브동산 자체 제작 평점 비교 차트" style="width:100%;display:block;"></div><p class="note">차트: 브동산 자체 제작 — 브동산 자체 제작 평점 비교 차트(공개 자료를 바탕으로 한 개략·평가 시각화)</p><div class="photo-block"><img src="images/jeju-samdo-land-lease/chart-bridge.jpg" alt="삼도이동 토지임대부 분양주택 브동산 자체 제작 적정가 산출 브릿지" style="width:100%;display:block;"></div><p class="note">차트: 브동산 자체 제작 — 브동산 자체 제작 적정가 산출 브릿지(공개 자료를 바탕으로 한 개략·평가 시각화)</p><div class="photo-block"><img src="images/jeju-samdo-land-lease/siteplan.jpg" alt="삼도이동 토지임대부 분양주택 공식 홈페이지 단지 배치도" style="width:100%;display:block;"></div><p class="note">이미지: 공식 홈페이지 — 공식 홈페이지 단지 배치도. CG·계획 이미지는 실제와 다를 수 있다.</p><div class="photo-block"><img src="images/jeju-samdo-land-lease/plan49.png" alt="삼도이동 토지임대부 분양주택 공식 홈페이지 49A 평면도" style="width:100%;display:block;"></div><p class="note">이미지: 공식 홈페이지 — 공식 홈페이지 49A 평면도. CG·계획 이미지는 실제와 다를 수 있다.</p><div class="photo-block"><img src="images/jeju-samdo-land-lease/plan59.png" alt="삼도이동 토지임대부 분양주택 공식 홈페이지 59A 평면도" style="width:100%;display:block;"></div><p class="note">이미지: 공식 홈페이지 — 공식 홈페이지 59A 평면도. CG·계획 이미지는 실제와 다를 수 있다.</p></section><section id="s4"><h2>4. 공급과 청약 조건</h2><p>제주특별자치도 1년 이상 계속 거주자가 우선이고, 공고일 기준 거주기간을 충족하지 못한 제주 거주자는 기타지역으로 구분된다. 전매제한은 10년, 거주의무는 최초 입주가능일부터 5년이다. 계약은 2027년 1월 25~29일 예정이다.</p></section><section id="s5"><h2>5. 결론</h2><div class="split"><div class="box"><h3>강점</h3><ul class="plain"><li>공식 공고와 홈페이지 자료를 기준으로 공급·타입·일정을 확인했다.</li><li>같은 크기 실거래만 비교 기준으로 썼다.</li></ul></div><div class="box"><h3>리스크</h3><ul class="plain"><li>층·향·옵션과 향후 시장 상황에 따라 실제 체감 가격은 달라질 수 있다.</li><li>청약 자격과 계약 조건은 모집공고 원문을 우선해야 한다.</li></ul></div></div><p>토지임대차 계약은 최초 40년 이내이며, 소유자 75% 이상 요청 시 추가 40년 범위에서 갱신할 수 있다. 임대료는 최초 2년 동안 증액 청구가 제한되지만 이후 제주시 평균 지가상승률 등을 고려해 조정될 수 있다. 월 임대료의 최대 60%를 보증금으로 전환하는 선택지가 공고문에 예시로 나오지만, 적용 이율·조건은 입주 전 확정된다. 전매제한 중 매각하려면 JPDC에 매입 신청을 해야 하는 구조이므로 일반 아파트의 자유로운 거래와 다르다.</p></section><section id="sources"><h2>자료 출처</h2><ul class="plain"><li>공식 홈페이지 및 입주자모집공고문</li><li>청약홈·LH청약플러스 공고 상세</li><li>국토교통부 실거래가 공개자료를 인용한 비교단지 실거래 기록</li></ul></section></div></body></html>
