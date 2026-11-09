@@ -25,3 +25,6 @@ master 문서는 claude.ai 클라우드 채팅 세션 기준으로 작성돼 일
 - `naver-html/*.html`에는 `<meta name="robots" content="noindex,nofollow">`와 상단 메타 주석(slug/title/category/naver_category/tags/cover_candidates)을 넣고, `posts-manifest.json`을 `scripts/build-manifest.ps1`로 갱신한다.
 - 자세한 규칙: `docs/publishing-workflow.md`, `docs/content-rules.md`, `docs/aside-handoff.md`, 스킬 `.claude/skills/beodongsan-naver-copy/SKILL.md`. 이 섹션이 master 문서·스킬의 이전 네이버 규칙(로컬 저장·차트 PNG)과 충돌하면 이 섹션을 따른다.
 - 매일 오전 8시 `scripts/sync-workflow.ps1`(Windows 작업 스케줄러)이 CLAUDE.md·`.claude/skills/`·`docs/`·`posts-manifest.json` 변경분만 자동 커밋·push한다(`scripts/README.md`).
+
+## 네이버 발행본은 승인 샘플과 똑같이 (2026.11.09, 항상 적용)
+- 네이버용 HTML은 `docs/naver-sample/gwanggyo-jayeon-centreville-naver.html`과 **똑같은 양식·구조·서식**으로 쓴다(README 참고). 차트 3종은 `scripts/beodongsan/make_naver_charts.py`의 `chart_a`/`chart_b`/`chart_map`(샘플과 같은 그래프 형태)로 만들고 `posts/images/<slug>/chart-a-score.png`·`chart-b-price.png`·`chart-map-naver.png`로 저장해 절대경로 URL로 참조한다. 스킬 문서(.claude/skills)와 충돌하면 이 샘플이 이긴다.
