@@ -18,7 +18,7 @@
       "date": "2026-11-08",
       "site_url": "https://www.brandongsan.com/posts/mullae-lottecastle-newstay.html",
       "naver_html": "naver-html/mullae-lottecastle-newstay.html",
-      "naver_title": "문래 롯데캐슬 | 뉴스테이 8년 끝나면 분양전환 될까, 59㎡ 추정 시세 10.44억",
+      "naver_title": "문래 롯데캐슬, 8년 임대 끝나면 내 집 될까? 분양전환·임대조건 총정리",
       "naver_tags": [
         "문래롯데캐슬",
         "뉴스테이",
@@ -37,9 +37,9 @@
       "cover_candidates": [
         "https://www.brandongsan.com/posts/images/mullae-lottecastle-newstay/press1.jpg"
       ],
-      "naver_published": false,
-      "naver_post_id": null,
-      "published_at": null
+      "naver_published": true,
+      "naver_post_id": "224471040074",
+      "published_at": "2026-11-09T17:27:03.603Z"
     },
     {
       "slug": "jeju-samdo-land-lease",
