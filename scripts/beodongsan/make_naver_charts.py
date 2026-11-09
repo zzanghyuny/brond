@@ -71,7 +71,7 @@ def chart_a(path, d):
     lx = [46, 466, 886][:n]
     for i, (x, nm) in enumerate(zip(lx, names)):
         ax.add_patch(Rectangle((x, 87), 22, 22, fc=SERIES_FILL[i], ec='#333333', lw=1.4))
-        txt(ax, x + 34, 98, nm, 20, False, '#111111')
+        txt(ax, x + 34, 98, nm, min(20, 372.0 / max(len(nm), 1)), False, '#111111')
     totals = [sum(s) for s in d['scores']]
     cats = [('입지(40)', 40, [s[0] for s in d['scores']]),
             ('브랜드(20)', 20, [s[1] for s in d['scores']]),
@@ -107,7 +107,7 @@ def chart_b(path, d):
     y = 98
     pitch = 78 if has_actual else 92
     for label, v, fc, ec in rows:
-        txt(ax, 32, y, label, 15.5, False, '#111111')
+        txt(ax, 32, y, label, min(15.5, 268.0 / max(len(label), 1)), False, '#111111')
         w = wmax * v / mx
         ax.add_patch(Rectangle((x0, y - 19), w, 38, fc=fc, ec=ec, lw=2))
         txt(ax, x0 + w + 10, y, f'{v:.2f}억', 20, True)
@@ -153,7 +153,7 @@ def chart_map(path, d):
     # --- 좌표 -> 픽셀 (종횡비 유지, 실제 위치 관계를 최대한 보존)
     pts = [e['en'] for _, e in ents if 'en' in e] + [a['en'] for a in areas if 'en' in a]
     xs = [p[0] for p in pts]; ys = [p[1] for p in pts]
-    L, R, T, B = 150, 800, 170, 600
+    L, R, T, B = 150, 800, 205, 600
     spanx = max(max(xs) - min(xs), 1); spany = max(max(ys) - min(ys), 1)
     s = min((R - L) / spanx, (B - T) / spany)
     cx = (min(xs) + max(xs)) / 2; cy = (min(ys) + max(ys)) / 2
@@ -196,14 +196,12 @@ def chart_map(path, d):
         ry = a.get('ry_px') or a.get('ry', 280) * s
         ax.add_patch(Ellipse(p, 2 * rx, 2 * ry, fc='#EDEDED', ec='#DDDDDD', lw=1.5, zorder=0))
         txt(ax, p[0], p[1], a['name'], 17, False, '#888888', ha='center', linespacing=1.4)
-    # --- 점선(SITE -> 대표 역)
+    # --- 점선(SITE -> 대표 역) — 거리 라벨은 라벨 배치 뒤에 둔다
     sx, sy = d['site']['_p']
     for e in d.get('stations', []):
         if e.get('line_to_site'):
             x, y = e['_p']
             ax.plot([x, sx], [y, sy], color='#BBBBBB', lw=1.6, ls=(0, (4, 3)), zorder=1)
-            ax.text((x + sx) / 2 + 12, (y + sy) / 2, e['line_to_site'], fontproperties=FP, fontsize=px2pt(16),
-                    color='#888888', ha='left', va='center')
     # --- 마커 + 라벨(겹치지 않는 방향 선택)
     fig.canvas.draw()
     rend = fig.canvas.get_renderer()
@@ -216,6 +214,7 @@ def chart_map(path, d):
     def overlap(a, b, pad=4):
         return not (a[2] + pad < b[0] or b[2] + pad < a[0] or a[3] + pad < b[1] or b[3] + pad < a[1])
 
+    placed.append((30, 22, 551, 103)); placed.append((900, 20, 945, 112)); placed.append((26, 665, 940, 695))
     # 마커 bbox 선등록
     msz = {'site': 40, 'comp': 32, 'station': 16, 'school': 28, 'fac': 12}
     for k, e in ents:
@@ -269,11 +268,25 @@ def chart_map(path, d):
             mt.remove()
             if st is not None:
                 st.remove()
+    for e in d.get('stations', []):
+        if e.get('line_to_site'):
+            x, y = e['_p']; mx, my = (x + sx) / 2, (y + sy) / 2
+            for ox, oy, ha in ((14, 0, 'left'), (14, 24, 'left'), (-14, 0, 'right'), (-14, 24, 'right'), (14, -24, 'left'), (0, 34, 'center'), (0, -34, 'center')):
+                t = ax.text(mx + ox, my + oy, e['line_to_site'], fontproperties=FP, fontsize=px2pt(16), color='#888888', ha=ha, va='center', zorder=4)
+                bb = bbox_of(t)
+                if all(not overlap(bb, p) for p in placed) and 0 <= bb[0] and bb[2] <= W:
+                    placed.append(bb); break
+                t.remove()
     # --- 안내 박스 / N / 범례
     note = d.get('note')
     if note:
-        ax.add_patch(Rectangle((30, 22), 521, 81, fc='white', ec='#DDDDDD', lw=1.4, zorder=5))
-        txt(ax, 42, 63, note, 15.5, False, '#555555', va='center', linespacing=1.45, zorder=6)
+        nt = txt(ax, 42, 63, note, 15.5, False, '#555555', va='center', linespacing=1.45, zorder=6)
+        fig.canvas.draw()
+        bb = nt.get_window_extent(fig.canvas.get_renderer())
+        nw = max(521, bb.width + 26)
+        nh = max(81, bb.height + 24)
+        ax.add_patch(Rectangle((30, 22), nw, nh, fc='white', ec='#DDDDDD', lw=1.4, zorder=5))
+        nt.set_position((42, 22 + nh / 2))
     ax.annotate('', xy=(921, 28), xytext=(921, 70), arrowprops=dict(arrowstyle='-|>', color='#000000', lw=2), zorder=5)
     txt(ax, 921, 100, 'N', 16, False, '#555555', ha='center')
     txt(ax, 30, 683, d.get('legend', '■ 검정=SITE · □(회색 테두리)=비교단지 · □(점선 테두리)=학교 · ●(검정)=지하철역 · ●(회색)=생활시설'),
