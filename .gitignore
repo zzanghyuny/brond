@@ -22,6 +22,9 @@ cookies*
 .claude/settings.local.json
 scripts/*.log
 *.log
+scripts/beodongsan/kbcache.json
+scripts/beodongsan/geo_cache.json
+scripts/beodongsan/__pycache__/
 node_modules/
 tmp/
 Thumbs.db
