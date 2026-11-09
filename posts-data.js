@@ -22,6 +22,7 @@
 */
 
 const POSTS = [
+  { id: "elementary-enrollment-30man", category: "space", tag: "공간이야기 No.004", title: "초등 입학생 30만 명 붕괴, 내 집값에는 어떤 영향이 있을까", date: "2026-11-09", dateLabel: "2026. 11. 9", url: "posts/elementary-enrollment-30man.html", preview: `<p>올해 초등학교에 입학한 아이가 30만 명 안팎이라고 한다. 통계를 낸 이래 처음 보는 숫자라는데, 이 숫자가 우리 집값과는 어떤 관계가 있을까?</p>` },
   { id: "mullae-lottecastle-newstay", category: "realestate", region: "서울", tag: "청약 언박싱 No.098", title: "서울 - 문래 롯데캐슬 | 8년 임대 끝나면 내 집 될까? 분양전환·임대조건 총정리", date: "2026-11-08", dateLabel: "2026. 11. 8", url: "posts/mullae-lottecastle-newstay.html", preview: "<p>문래 롯데캐슬의 임대조건과 분양전환 여부를 정리했다. 2020년 4월 입주 시작을 기준으로 2028년 무렵 추정하며, 법정 입주지정기간 개시일 및 계약 확인이 필요하다. 공식 분양전환 계획과 가격은 미확정이다.</p>" },
   { id: "siheung-geomo-artera", category: "realestate", region: "경기", tag: "청약 언박싱 No.094", title: "경기 - 시흥 거모 아테라 | 59㎡ 평균 분양가 4.58억, 브동산 적정가 3.59억", date: "2026-11-08", dateLabel: "2026. 11. 8", url: "posts/siheung-geomo-artera.html", preview: `<p>시흥 거모 아테라의 공식 공고·분양가·청약 조건을 정리했다.</p><p>59㎡ 평균 4.58억원 · 예상 프리미엄 -9,900만</p>` },
   { id: "gwangju-jeil-foredu", category: "realestate", region: "경기", tag: "청약 언박싱 No.095", title: "경기 - 제일풍경채 광주 포에듀 | 84㎡ 평균 분양가 6.71억, 적정가 6.00억", date: "2026-11-08", dateLabel: "2026. 11. 8", url: "posts/gwangju-jeil-foredu.html", preview: `<p>제일풍경채 광주 포에듀의 공식 공고·분양가·청약 조건을 정리했다.</p><p>84㎡ 가중평균 6.71억원 · 예상 프리미엄 -7,100만</p>` },

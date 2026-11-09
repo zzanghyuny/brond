@@ -10,6 +10,38 @@
   },
   "posts": [
     {
+      "slug": "elementary-enrollment-30man",
+      "number": 4,
+      "title": "초등 입학생 30만 명 붕괴, 내 집값에는 어떤 영향이 있을까",
+      "category": "공간",
+      "naver_category": "공간이야기",
+      "date": "2026-11-09",
+      "site_url": "https://www.brandongsan.com/posts/elementary-enrollment-30man.html",
+      "naver_html": "naver-html/elementary-enrollment-30man.html",
+      "naver_title": "입학생 30만 명 붕괴 | 내 집값에는 어떤 영향이 있을까?",
+      "naver_tags": [
+        "초등입학생",
+        "입학생30만명",
+        "저출생",
+        "학령인구감소",
+        "신입생0명",
+        "폐교",
+        "학교통폐합",
+        "학군지",
+        "집값",
+        "부동산전망",
+        "아파트",
+        "배정초",
+        "교육통계",
+        "브동산",
+        "공간이야기"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/elementary-enrollment-30man/cover.png"
+      ],
+      "naver_published": false
+    },
+    {
       "slug": "mullae-lottecastle-newstay",
       "number": 98,
       "title": "서울 - 문래 롯데캐슬 | 8년 임대 끝나면 내 집 될까? 분양전환·임대조건 총정리",
