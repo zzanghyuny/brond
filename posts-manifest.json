@@ -11,7 +11,7 @@
   "posts": [
     {
       "slug": "mullae-lottecastle-newstay",
-      "number": 94,
+      "number": 98,
       "title": "서울 - 문래 롯데캐슬 | 뉴스테이 8년, 분양전환 되나? 59㎡ 추정 시세는 10.44억",
       "category": "부동산",
       "naver_category": "부동산이야기",
@@ -37,7 +37,133 @@
       "cover_candidates": [
         "https://www.brandongsan.com/posts/images/mullae-lottecastle-newstay/press1.jpg"
       ],
-      "naver_published": false
+      "naver_published": false,
+      "naver_post_id": null,
+      "published_at": null
+    },
+    {
+      "slug": "jeju-samdo-land-lease",
+      "number": 97,
+      "title": "제주 - 삼도이동 토지임대부 분양주택 | 건물만 분양받는 72세대, 꼭 알아야 할 조건",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-08",
+      "site_url": "https://www.brandongsan.com/posts/jeju-samdo-land-lease.html",
+      "naver_html": "naver-html/jeju-samdo-land-lease.html",
+      "naver_title": "제주 삼도이동 토지임대부 | 월 토지임대료·전매·거주의무 총정리",
+      "naver_tags": [
+        "삼도이동토지임대부",
+        "제주토지임대부",
+        "JPDC",
+        "제주청약",
+        "토지임대부주택",
+        "공공분양",
+        "삼도이동",
+        "59㎡",
+        "49㎡",
+        "전매제한",
+        "거주의무",
+        "분양가"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/jeju-samdo-land-lease/cover.jpg"
+      ],
+      "naver_published": true,
+      "naver_post_id": "224470877542",
+      "published_at": "2026-11-09T13:43:12.456+00:00"
+    },
+    {
+      "slug": "namchuncheon-centreville",
+      "number": 96,
+      "title": "강원 - 남춘천 센트레빌 | 84㎡ 평균 분양가 5.96억, 적정가 6.85억",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-08",
+      "site_url": "https://www.brandongsan.com/posts/namchuncheon-centreville.html",
+      "naver_html": "naver-html/namchuncheon-centreville.html",
+      "naver_title": "남춘천 센트레빌 | 84㎡ 분양가 5.96억, 적정가와 청약 총정리",
+      "naver_tags": [
+        "남춘천센트레빌",
+        "춘천청약",
+        "효자동",
+        "동부건설",
+        "KT에스테이트",
+        "84㎡",
+        "분양가",
+        "청약일정",
+        "춘천부동산",
+        "센트레빌",
+        "신축아파트",
+        "브동산"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/namchuncheon-centreville/cover.jpg"
+      ],
+      "naver_published": false,
+      "naver_post_id": null,
+      "published_at": null
+    },
+    {
+      "slug": "gwangju-jeil-foredu",
+      "number": 95,
+      "title": "경기 - 제일풍경채 광주 포에듀 | 84㎡ 평균 분양가 6.71억, 적정가 6.00억",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-08",
+      "site_url": "https://www.brandongsan.com/posts/gwangju-jeil-foredu.html",
+      "naver_html": "naver-html/gwangju-jeil-foredu.html",
+      "naver_title": "제일풍경채 광주 포에듀 | 84㎡ 분양가 6.71억, 적정가와 청약 총정리",
+      "naver_tags": [
+        "제일풍경채광주포에듀",
+        "광주탄벌A지구",
+        "탄벌동",
+        "광주청약",
+        "제일건설",
+        "84㎡",
+        "분양가",
+        "청약일정",
+        "경기광주부동산",
+        "신축아파트",
+        "청약홈",
+        "브동산"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/gwangju-jeil-foredu/cover.jpg"
+      ],
+      "naver_published": false,
+      "naver_post_id": null,
+      "published_at": null
+    },
+    {
+      "slug": "siheung-geomo-artera",
+      "number": 94,
+      "title": "경기 - 시흥 거모 아테라 | 59㎡ 평균 분양가 4.58억, 브동산 적정가 3.59억",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-08",
+      "site_url": "https://www.brandongsan.com/posts/siheung-geomo-artera.html",
+      "naver_html": "naver-html/siheung-geomo-artera.html",
+      "naver_title": "시흥 거모 아테라 | 59㎡ 분양가 4.58억, 적정가와 청약 총정리",
+      "naver_tags": [
+        "시흥거모아테라",
+        "시흥청약",
+        "거모동",
+        "아테라",
+        "신혼희망타운",
+        "공공분양",
+        "LH청약",
+        "59㎡",
+        "분양가",
+        "청약일정",
+        "시흥부동산",
+        "금호건설"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/siheung-geomo-artera/cover.jpg"
+      ],
+      "naver_published": false,
+      "naver_post_id": null,
+      "published_at": null
     },
     {
       "slug": "gwanggyo-centreville-general-vs-equity",
