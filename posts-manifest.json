@@ -10,6 +10,36 @@
   },
   "posts": [
     {
+      "slug": "mullae-lottecastle-newstay",
+      "number": 94,
+      "title": "서울 - 문래 롯데캐슬 | 뉴스테이 8년, 분양전환 되나? 59㎡ 추정 시세는 10.44억",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-08",
+      "site_url": "https://www.brandongsan.com/posts/mullae-lottecastle-newstay.html",
+      "naver_html": "naver-html/mullae-lottecastle-newstay.html",
+      "naver_title": "문래 롯데캐슬 | 뉴스테이 8년 끝나면 분양전환 될까, 59㎡ 추정 시세 10.44억",
+      "naver_tags": [
+        "문래롯데캐슬",
+        "뉴스테이",
+        "공공지원민간임대주택",
+        "분양전환",
+        "문래동",
+        "영등포구청약",
+        "임대주택",
+        "청년주택",
+        "롯데건설",
+        "위례뉴스테이",
+        "부동산정보",
+        "임대료인상률",
+        "민간임대주택특별법"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/mullae-lottecastle-newstay/press1.jpg"
+      ],
+      "naver_published": false
+    },
+    {
       "slug": "gwanggyo-centreville-general-vs-equity",
       "number": 93,
       "title": "경기 - 광교 자연앤 센트레빌 | 일반분양 vs 지분적립형, 실제로 얼마가 필요할까",

@@ -22,6 +22,7 @@
 */
 
 const POSTS = [
+  { id: "mullae-lottecastle-newstay", category: "realestate", region: "서울", tag: "청약 언박싱 No.094", title: "서울 - 문래 롯데캐슬 | 뉴스테이 8년, 분양전환 되나? 59㎡ 추정 시세는 10.44억", date: "2026-11-08", dateLabel: "2026. 11. 8", url: "posts/mullae-lottecastle-newstay.html", preview: "<p>2020년 4월 입주한 뉴스테이(공공지원 민간임대) 문래 롯데캐슬. 8년 표준 임대기간은 2028년 4월 전후 끝난다. 분양전환 의무가 없다는 사실과, 만약 매매가 가능하다면 매길 참고 시세 10.44억원(59㎡)을 함께 정리했다.</p>" },
   { id: "gwanggyo-centreville-general-vs-equity", category: "realestate", region: "경기", tag: "청약 언박싱 No.093", title: "경기 - 광교 자연앤 센트레빌 | 일반분양 vs 지분적립형, 실제로 얼마가 필요할까", date: "2026-11-06", dateLabel: "2026. 11. 6", url: "posts/gwanggyo-centreville-general-vs-equity.html", preview: "<p>84㎡ 일반분양은 입주까지 9.49억원, 59㎡ 지분적립형은 입주 때 2.37억~5.01억원. 같은 단지, 다른 돈의 구조를 공고문 기준으로 계산했다.</p>" },
   { id: "guri-galmae-insville-decent", category: "realestate", region: "경기", tag: "청약 언박싱 No.087", title: "경기 - 구리갈매역세권 신안인스빌 디센트 | 213세대, 84㎡ 적정가 7.52억, 예상 프리미엄은 사실상 무피", date: "2026-11-05", dateLabel: "2026. 11. 5", url: "posts/guri-galmae-insville-decent.html", preview: "<p>갈매역세권 B-1블록 213세대. 84㎡ 공고 분양가 7.2~7.9억 대비 브동산 적정가는 7.52억으로 산출됐다.</p>" },
   { id: "ansan-sinkil2-b1-public", category: "realestate", region: "경기", tag: "청약 언박싱 No.088", title: "경기 - 안산신길2 B-1블록 | LH 공공분양 387세대(사전청약 263세대), 84㎡ 평균 분양가 5.84억, 예상 프리미엄 -1,680만", date: "2026-11-05", dateLabel: "2026. 11. 5", url: "posts/ansan-sinkil2-b1-public.html", preview: "<p>LH 공공분양 387세대 중 신규 청약 124세대. 84㎡ 평균 분양가 5.84억 대비 브동산 적정가는 5.67억이다.</p>" },
