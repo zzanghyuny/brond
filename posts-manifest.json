@@ -10,6 +10,38 @@
   },
   "posts": [
     {
+      "slug": "hannam-the-hill-190",
+      "number": 99,
+      "title": "서울 - 한남더힐 | 옥주현 190억 거래, 역대 최고가를 숫자로 뜯어보기",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-11",
+      "site_url": "https://www.brandongsan.com/posts/hannam-the-hill-190.html",
+      "naver_html": "naver-html/hannam-the-hill-190.html",
+      "naver_title": "옥주현 190억 한남더힐 | 역대 최고가를 만든 거래, 숫자로 뜯어보기",
+      "naver_tags": [
+        "옥주현",
+        "옥주현아파트",
+        "옥주현190억",
+        "한남더힐",
+        "한남더힐190억",
+        "한남더힐최고가",
+        "한남동아파트",
+        "용산구아파트",
+        "초고가아파트",
+        "아파트실거래가",
+        "연예인아파트",
+        "아파트경매",
+        "한남더힐실거래가",
+        "부동산뉴스",
+        "부동산정보"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/hannam-the-hill-190/cover.png"
+      ],
+      "naver_published": false
+    },
+    {
       "slug": "elementary-enrollment-30man",
       "number": 4,
       "title": "초등 입학생 30만 명 붕괴, 내 집값에는 어떤 영향이 있을까",
