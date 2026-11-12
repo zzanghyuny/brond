@@ -22,6 +22,7 @@
 */
 
 const POSTS = [
+  { id: "anyang-xi-the-forest-unranked", category: "realestate", region: "경기", tag: "청약 언박싱 No.100", title: "경기 - 안양자이 더 포레스트 | 무순위 청약, 59㎡ 잔여 1세대 자격과 일정 총정리", date: "2026-11-12", dateLabel: "2026. 11. 12", url: "posts/anyang-xi-the-forest-unranked.html", preview: `<p>3년 전 청약했던 단지에 이번에는 딱 한 세대가 무순위로 나왔다. 안양자이 더 포레스트 59㎡, 접수는 11월 16일 하루다. 자격과 가격부터 확인하자.</p>` },
   { id: "hannam-the-hill-190", category: "realestate", region: "서울", tag: "청약 언박싱 No.099", title: "서울 - 한남더힐 | 옥주현 190억 거래, 역대 최고가를 숫자로 뜯어보기", date: "2026-11-11", dateLabel: "2026. 11. 11", url: "posts/hannam-the-hill-190.html", preview: `<p>서울 한남동 한남더힐에서 190억 원짜리 거래가 나왔다는 보도가 있었다. 한남더힐 역대 최고가라는데, 이 숫자를 어떻게 읽어야 할까?</p>` },
   { id: "elementary-enrollment-30man", category: "space", tag: "공간이야기 No.004", title: "초등 입학생 30만 명 붕괴, 내 집값에는 어떤 영향이 있을까", date: "2026-11-09", dateLabel: "2026. 11. 9", url: "posts/elementary-enrollment-30man.html", preview: `<p>올해 초등학교에 입학한 아이가 30만 명 안팎이라고 한다. 통계를 낸 이래 처음 보는 숫자라는데, 이 숫자가 우리 집값과는 어떤 관계가 있을까?</p>` },
   { id: "mullae-lottecastle-newstay", category: "realestate", region: "서울", tag: "청약 언박싱 No.098", title: "서울 - 문래 롯데캐슬 | 8년 임대 끝나면 내 집 될까? 분양전환·임대조건 총정리", date: "2026-11-08", dateLabel: "2026. 11. 8", url: "posts/mullae-lottecastle-newstay.html", preview: "<p>문래 롯데캐슬의 임대조건과 분양전환 여부를 정리했다. 2020년 4월 입주 시작을 기준으로 2028년 무렵 추정하며, 법정 입주지정기간 개시일 및 계약 확인이 필요하다. 공식 분양전환 계획과 가격은 미확정이다.</p>" },
