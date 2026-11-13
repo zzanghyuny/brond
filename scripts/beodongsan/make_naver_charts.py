@@ -152,6 +152,8 @@ def chart_map(path, d):
     areas = d.get('areas', [])
     # --- 좌표 -> 픽셀 (종횡비 유지, 실제 위치 관계를 최대한 보존)
     pts = [e['en'] for _, e in ents if 'en' in e] + [a['en'] for a in areas if 'en' in a]
+    if not pts:
+        pts = [(0, 0), (1, 1)]
     xs = [p[0] for p in pts]; ys = [p[1] for p in pts]
     L, R, T, B = 150, 800, 205, 600
     spanx = max(max(xs) - min(xs), 1); spany = max(max(ys) - min(ys), 1)
