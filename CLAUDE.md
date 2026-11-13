@@ -28,3 +28,6 @@ master 문서는 claude.ai 클라우드 채팅 세션 기준으로 작성돼 일
 
 ## 네이버 발행본은 승인 샘플과 똑같이 (2026.11.09, 항상 적용)
 - 네이버용 HTML은 `docs/naver-sample/gwanggyo-jayeon-centreville-naver.html`과 **똑같은 양식·구조·서식**으로 쓴다(README 참고). 차트 3종은 `scripts/beodongsan/make_naver_charts.py`의 `chart_a`/`chart_b`/`chart_map`(샘플과 같은 그래프 형태)로 만들고 `posts/images/<slug>/chart-a-score.png`·`chart-b-price.png`·`chart-map-naver.png`로 저장해 절대경로 URL로 참조한다. 스킬 문서(.claude/skills)와 충돌하면 이 샘플이 이긴다.
+
+## 청약 포스팅 맨 아래 "광고 문의" 카드는 쓰지 않는다 (2026.11.13, 항상 적용)
+- 청약(부동산) 포스팅 하단의 `section#ad`(`.sponsor` 광고 문의 카드·"광고 문의하기" 버튼)는 의미가 없어 94개 포스팅에서 모두 제거했다. **앞으로 새로 만드는 포스팅과 기존 글을 복제한 템플릿에도 넣지 않는다.** 기존 글을 스캐폴드로 복사할 때는 이 블록이 남아 있지 않은지 확인한다. 네이버용 HTML에는 원래 없다.
