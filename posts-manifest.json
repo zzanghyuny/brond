@@ -10,6 +10,38 @@
   },
   "posts": [
     {
+      "slug": "gyeongsan-richel-eduforet",
+      "number": 106,
+      "title": "경북 - 리첼 에듀포레 경산역 | 경산역 도보권 일반분양 201세대, 84㎡ 평균 분양가 6.03억, 예상 프리미엄은 -1.19억",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-14",
+      "site_url": "https://www.brandongsan.com/posts/gyeongsan-richel-eduforet.html",
+      "naver_html": "naver-html/gyeongsan-richel-eduforet.html",
+      "naver_title": "리첼 에듀포레 경산역 | 예상프리미엄 -1.19억, 분양가 평면 총정리",
+      "naver_tags": [
+        "리첼에듀포레경산역",
+        "경산역",
+        "경산청약",
+        "사정동아파트",
+        "경산아파트분양",
+        "지역주택조합",
+        "세영리첼",
+        "강변사정동지역주택조합",
+        "경산미분양",
+        "비규제지역청약",
+        "경산분양가",
+        "대경선경산역",
+        "84분양가",
+        "부동산정보"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/gyeongsan-richel-eduforet/aerial.jpg",
+        "https://www.brandongsan.com/posts/images/gyeongsan-richel-eduforet/chart-map-naver.png"
+      ],
+      "naver_published": false
+    },
+    {
       "slug": "ulsan-hwajeong1-arel",
       "number": 103,
       "title": "울산 - 화정1지구 아르엘 | 동구 화정동 802세대, 84㎡ 평균 분양가 5.56억, 예상 프리미엄은 -4,930만",
