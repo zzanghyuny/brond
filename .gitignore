@@ -31,3 +31,4 @@ Thumbs.db
 .DS_Store
 kbcache.json
 geo_cache.json
+*.json.*.tmp
