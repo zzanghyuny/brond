@@ -22,6 +22,28 @@ WARN = []
 BEFORE_AFTER = {}
 
 
+SHORT_BY_STEM = [
+    ('chart-a', '평점 비교표'), ('chart-b', '적정가격 그래프'), ('chart-map', '위치 개략도'), ('chart-c', '청약 일정'),
+    ('chart-radar', '레이더 차트'), ('chart-bridge', '적정가 산출 그래프'), ('stat', '핵심 수치 박스'), ('table', '표'),
+    ('cover', '대표 조감도'), ('aerial', '광역 조감도'), ('location', '입지 정보'), ('site-layout', '단지 배치도'), ('siteplan', '단지 배치도'),
+    ('unit-layout', '동호수 배치도'), ('dongho', '동호수 배치도'), ('community', '커뮤니티'), ('overview', '단지 개요'), ('map', '위치도'),
+]
+
+
+def shortlabel(stem, alt=''):
+    """사진 자리표시 옆에 붙는 짧은 라벨(≤14자)."""
+    st = stem.lower()
+    m = re.match(r'^(?:\d+-)?plan[-_]?(.*)$', st)
+    if m:
+        return ('평면도 ' + m.group(1).upper()).strip()
+    for k, v in SHORT_BY_STEM:
+        if k in st:
+            return v
+    a = htmllib.unescape(alt or '').strip()
+    a = re.split(r'[:：·(—-]', a)[0].strip() or '이미지'
+    return a if len(a) <= 14 else a[:13] + '…'
+
+
 def load_manifest():
     d = json.load(open(os.path.join(ROOT, 'posts-manifest.json'), encoding='utf-8'))
     return d if isinstance(d, list) else d.get('posts', d.get('items'))
@@ -196,13 +218,14 @@ def merge_runs(slug, outdir, blocks):
         last_cap_end = run[-1]['cap_k'][1] if run[-1]['cap_k'] else end
         nums = [int(x) for r in run for x in re.findall(r'^이미지\s*(\d+)', r['cap'] or '')]
         span = ('이미지 %02d–%02d 묶음' % (nums[0], nums[-1])) if len(nums) >= 2 else ('%d장 묶음' % len(run))
-        pages, cur, curh = [], [], 0
+        pages, cur, curh, curr = [], [], 0, []
+        pshort = []
         for r in run:
             pim = _part_image(r, os.path.join(outdir, r['b']['file']))
             if cur and curh + GAP + pim.height > MERGE_MAXH:
-                pages.append(cur); cur, curh = [], 0
-            curh += (GAP if cur else 0) + pim.height; cur.append(pim)
-        pages.append(cur)
+                pages.append(cur); pshort.append(curr); cur, curh, curr = [], 0, []
+            curh += (GAP if cur else 0) + pim.height; cur.append(pim); curr.append(r)
+        pages.append(cur); pshort.append(curr)
         for pi, pg in enumerate(pages, 1):
             H = sum(x.height for x in pg) + GAP * (len(pg) - 1)
             canvas = Image.new('RGB', (MAXW, H), 'white'); y = 0
@@ -212,7 +235,11 @@ def merge_runs(slug, outdir, blocks):
             nf = '%02d-set%s.jpg' % (seq, ('-%d' % pi) if len(pages) > 1 else '')
             _save_jpeg(canvas, os.path.join(tmpdir, nf))
             lab = span + ((' (%d/%d)' % (pi, len(pages))) if len(pages) > 1 else '')
-            out.append(dict(kind='img', n=seq, file=nf, label=lab, merged=True))
+            rr = pshort[pi - 1]
+            first = rr[0]['head'] or rr[0]['b'].get('short') or '이미지'
+            first = first if len(first) <= 9 else first[:8] + '…'
+            sh = '%s 외 %d장' % (first, len(rr) - 1) if len(rr) > 1 else first
+            out.append(dict(kind='img', n=seq, file=nf, label=lab, merged=True, short=sh, count=len(rr)))
             files.append(nf)
         i = last_cap_end
     shutil.rmtree(outdir); os.rename(tmpdir, outdir)
@@ -250,7 +277,7 @@ def build(slug, entry):
             fn = '%02d-stat.png' % n
             jobs.append({'html': ''.join(str(g) for g in group), 'out': os.path.join(outdir, fn)})
             imgfiles.append(fn)
-            blocks.append(dict(kind='img', n=n, file=fn, label='스탯 박스 3개(적정가격·분양가·예상 프리미엄)'))
+            blocks.append(dict(kind='img', n=n, file=fn, label='스탯 박스 3개(적정가격·분양가·예상 프리미엄)', short='핵심 수치 박스'))
         elif c.name == 'div':
             for sub in c.find_all(['div'], class_='stat'):
                 pass
@@ -262,7 +289,7 @@ def build(slug, entry):
             fn = '%02d-table.png' % n
             jobs.append({'html': str(c), 'out': os.path.join(outdir, fn)})
             imgfiles.append(fn)
-            blocks.append(dict(kind='img', n=n, file=fn, label='표(이미지로 넣기)'))
+            blocks.append(dict(kind='img', n=n, file=fn, label='표(이미지로 넣기)', short='표'))
         elif c.name == 'img' or (c.name == 'p' and c.find('img')):
             im = c if c.name == 'img' else c.find('img')
             lp = local_image(slug, im.get('src', ''))
@@ -275,7 +302,8 @@ def build(slug, entry):
                 dst = save_image(lp, os.path.join(outdir, '%02d-%s' % (n, stem)))
                 fn = os.path.basename(dst)
                 imgfiles.append(fn)
-            blocks.append(dict(kind='img', n=n, file=fn, label=htmllib.escape(im.get('alt', '') or '이미지')))
+            blocks.append(dict(kind='img', n=n, file=fn, label=htmllib.escape(im.get('alt', '') or '이미지'),
+                               short=shortlabel(os.path.splitext(os.path.basename(lp))[0] if lp else '', im.get('alt', ''))))
         elif c.name in ('h2', 'h3') and text:
             blocks.append(dict(kind='text', tag=c.name, html=clean_inline(c)))
         elif c.name == 'p' and text:
@@ -309,7 +337,7 @@ CSS = """
 :root{--ink:#111;--mut:#666;--hair:#ddd;--soft:#f5f5f5;--bg:#fff}
 @media(prefers-color-scheme:dark){:root{--ink:#f2f2f2;--mut:#9a9a9a;--hair:#333;--soft:#161616;--bg:#000}}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;padding-bottom:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;padding-bottom:24px}
 .w{max-width:560px;margin:0 auto;padding:0 14px}
 header{padding:18px 0 6px}h1{font-size:19px;line-height:1.35;margin:0 0 4px}.sub{color:var(--mut);font-size:13.5px}
 .howto{border:1px solid var(--ink);background:var(--soft);padding:12px 14px;font-size:14.5px;margin:12px 0}
@@ -328,19 +356,31 @@ header{padding:18px 0 6px}h1{font-size:19px;line-height:1.35;margin:0 0 4px}.sub
 .blk img{width:100%;height:auto;display:block;border:1px solid var(--hair)}
 .hint{font-size:12.5px;color:var(--mut);margin-top:6px}
 .list{border:1px solid var(--hair);margin:14px 0}.list a{display:block;padding:14px;border-bottom:1px solid var(--hair);color:inherit;text-decoration:none}.list a:last-child{border:0}.list small{color:var(--mut);display:block}
-#bar{position:fixed;left:0;right:0;bottom:0;background:var(--bg);border-top:1.5px solid var(--ink);padding:10px 14px calc(10px + env(safe-area-inset-bottom));z-index:9;font-size:14.5px;font-weight:700}
+#bar[hidden]{display:none}#bar{position:fixed;left:0;right:0;bottom:0;background:var(--bg);border-top:1.5px solid var(--ink);padding:10px 14px calc(10px + env(safe-area-inset-bottom));z-index:9;font-size:14.5px;font-weight:700}
 #bar i{display:block;height:6px;background:var(--hair);margin-top:6px}#bar i b{display:block;height:6px;background:var(--ink);width:0}
+.sec{margin:20px 0}.sec>h2{font-size:17px;margin:0 0 6px}details.sec>summary{font-weight:800;font-size:16px;padding:12px;border:1px solid var(--hair);cursor:pointer}
+.btn.big{font-size:18px;min-height:58px}.btn.sm{min-height:40px;font-size:14px;padding:8px 12px;flex:0 0 auto;margin-top:6px}
+.prev{font-size:14px;border:1px solid var(--hair);padding:10px;margin-top:8px;max-height:420px;overflow:auto}.prev h2{font-size:16px;margin:8px 0 2px}.prev h3{font-size:15px;margin:6px 0 2px}.prev p{margin:4px 0}
+.rows .row{display:flex;gap:10px;border:1px solid var(--hair);margin:8px 0;padding:8px}.rows img{width:92px;height:92px;object-fit:cover;object-position:top;border:1px solid var(--hair);flex:0 0 auto}
+.rt{display:flex;flex-direction:column;min-width:0}.rt b{font-size:16px}.rt span{font-size:14px}.rt small{color:var(--mut);font-size:12px;overflow-wrap:anywhere}
 .blk{overflow-wrap:anywhere}.final ul{margin:6px 0 0;padding-left:0;list-style:none}.final li{padding:8px 0;border-bottom:1px solid var(--hair)}
 """
 
 JS = """
 const KEY='naverkit:'+document.body.dataset.slug;let st={};try{st=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
-function upd(){const all=[...document.querySelectorAll('.blk[data-i]')];const n=all.filter(b=>b.querySelector('.chk input').checked).length;
+function upd(){const all=[...document.querySelectorAll('.blk[data-i]')].filter(b=>b.querySelector('.chk input'));const n=all.filter(b=>b.querySelector('.chk input').checked).length;if(!all.length)return;
 document.getElementById('cnt').textContent=n+'/'+all.length+' 완료';document.querySelector('#bar i b').style.width=(100*n/all.length)+'%'}
-document.querySelectorAll('.blk[data-i]').forEach(b=>{const cb=b.querySelector('.chk input');const k=b.dataset.i;
+document.querySelectorAll('.blk[data-i]').forEach(b=>{const cb=b.querySelector('.chk input');if(!cb)return;const k=b.dataset.i;
 if(st[k]){cb.checked=true;b.classList.add('done')}
 cb.addEventListener('change',()=>{b.classList.toggle('done',cb.checked);st[k]=cb.checked;try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}upd()})});
 upd();
+async function copyBody(btn){const d=document.getElementById('prev');const el=document.getElementById('bodysrc');const html=el.innerHTML.trim();const text=JSON.parse(document.getElementById('bodyplain').textContent);let ok=false;
+try{await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([text],{type:'text/plain'})})]);ok=true}catch(e){}
+if(!ok){const was=d.open;d.open=true;try{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);ok=document.execCommand('copy');s.removeAllRanges()}catch(e){}d.open=was}
+if(!ok){try{await navigator.clipboard.writeText(text);ok=true}catch(e){}}
+const o=btn.textContent;btn.textContent=ok?'복사됨 ✓ 이제 에디터에 붙여넣으세요':'복사 실패 — 미리보기를 길게 눌러 전체 선택';btn.classList.toggle('ok',ok);setTimeout(()=>{btn.textContent=o;btn.classList.remove('ok')},2600)}
+const CB=document.getElementById('copybody');if(CB)CB.addEventListener('click',()=>copyBody(CB));
+const ALT=document.getElementById('alt');if(ALT)ALT.addEventListener('toggle',()=>{document.getElementById('bar').hidden=!ALT.open;document.body.style.paddingBottom=ALT.open?'84px':'24px'});
 async function doCopy(btn){const b=btn.closest('.blk');const el=b.querySelector('.src');const html=el.innerHTML.trim();const text=el.innerText.trim();let ok=false;
 try{await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([text],{type:'text/plain'})})]);ok=true}catch(e){}
 if(!ok){try{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);ok=document.execCommand('copy');s.removeAllRanges()}catch(e){}}
@@ -360,57 +400,105 @@ catch(err){SA.textContent=LAB;if(err&&err.name!=='AbortError')fallback('공유�
 """
 
 
+CAPNUM = re.compile(r'^\s*이미지\s*\d+\s*[·.:\-]\s*')
+
+
+def body_copy(blocks):
+    """본문 전체 복사용 HTML/plain. 이미지 자리는 【사진 NN】 단독 문단(번호 = 저장된 파일 번호)."""
+    H, T = [], []
+    for b in blocks:
+        if b['kind'] == 'img':
+            lab = b.get('short') or '이미지'
+            H.append('<p>&nbsp;</p><p><b>【사진 %02d】</b> · %s</p><p>&nbsp;</p>' % (b['n'], htmllib.escape(lab)))
+            T.append('\n【사진 %02d】 · %s\n' % (b['n'], lab))
+            continue
+        plain = re.sub(r'<br\s*/?>', '\n', b['html']); plain = htmllib.unescape(re.sub(r'<[^>]+>', '', plain)).strip()
+        if b['tag'] == 'h2':
+            H.append('<p>&nbsp;</p><h2>%s</h2>' % b['html']); T.append('\n' + plain)
+        elif b['tag'] == 'h3':
+            H.append('<h3>%s</h3>' % b['html']); T.append(plain)
+        elif b['tag'] == 'note':
+            h = CAPNUM.sub('', b['html'])
+            H.append('<p style="font-size:13px;color:#777">%s</p>' % h)
+            T.append(CAPNUM.sub('', plain))
+        else:
+            H.append('<p>%s</p>' % b['html']); T.append(plain)
+    return '\n'.join(H), re.sub(r'\n{3,}', '\n\n', '\n\n'.join(T)).strip()
+
+
 def write_page(slug, entry, title, tags, cover, blocks, nimg, files=()):
     num = entry.get('number')
-    parts = []
     idx = 0
 
     def chk(i):
         return '<label class="chk"><input type="checkbox"> 완료</label>'
 
-    def text_block(label, html, tag='p'):
+    def text_block(label, html, tag='p', check=True):
         nonlocal idx
         idx += 1
         return ('<div class="blk" data-i="%d"><div class="lab"><span>%s</span></div>'
                 '<div class="src %s">%s</div><div class="btns"><button class="btn" data-copy>복사</button>%s</div></div>'
-                % (idx, label, tag, html, chk(idx)))
+                % (idx, label, tag, html, chk(idx) if check else ''))
 
-    parts.append(text_block('① 제목', htmllib.escape(title), 'p'))
-    parts.append(text_block('② 태그 (쉼표로 구분 · # 없이)', htmllib.escape(','.join(tags)), 'p'))
+    # 상단: 제목·태그
+    top = [text_block('① 제목', htmllib.escape(title), 'p', False), text_block('② 태그 (쉼표로 구분 · # 없이)', htmllib.escape(','.join(tags)), 'p', False)]
+    idx = 0
+    # 본문 전체 복사
+    bh, bt = body_copy(blocks)
+    nph = sum(1 for b in blocks if b['kind'] == 'img' and b.get('file'))
+    bodysec = ('<section class="sec"><h2>③ 본문 전체 복사</h2>'
+               '<div class="hint">버튼 한 번으로 본문 전체를 복사합니다. 사진이 들어갈 자리는 <b>【사진 번호】</b> 줄로 표시되어 있습니다. 붙여넣은 뒤 그 줄을 찾아 같은 번호 사진을 넣으세요.</div>'
+               '<div class="btns"><button class="btn big" id="copybody">본문 전체 복사 (자리표시 %d곳)</button></div>'
+               '<details id="prev"><summary>붙여넣을 내용 미리보기</summary><div class="src prev" id="bodysrc">%s</div></details>'
+               '<script type="application/json" id="bodyplain">%s</script></section>'
+               % (nph, bh, json.dumps(bt, ensure_ascii=False).replace('</', '<\\/')))
+    # 사진 자리표시 ↔ 파일
+    files_json = htmllib.escape(json.dumps(['%s/%s' % (slug, f) for f in files], ensure_ascii=False), True)
+    rows = []
+    for b in blocks:
+        if b['kind'] == 'img' and b.get('file'):
+            rows.append('<div class="row"><img loading="lazy" src="%s/%s" alt=""><div class="rt"><b>【사진 %02d】</b><span>%s</span><small>%s</small>'
+                        '<a class="btn sm" href="%s/%s" download>이미지 저장</a></div></div>'
+                        % (slug, b['file'], b['n'], htmllib.escape(b.get('short') or ''), htmllib.escape(b['file']), slug, b['file']))
+    photosec = ('<section class="sec"><h2>④ 사진 자리표시 ↔ 파일</h2>'
+                '<div class="btns"><button class="btn big" id="saveall" data-files="%s" data-zip="%s.zip">이미지 전체 사진첩에 저장 (%d장)</button></div>'
+                '<div class="btns"><a class="btn ghost" href="%s.zip" download>zip으로 받기</a></div>'
+                '<div class="hint" id="shmsg">공유 기능이 없는 브라우저에서는 zip이 대신 내려받아집니다. 파일 이름 앞 번호가 【사진 번호】와 같습니다. PC에서도 같은 이미지를 사진 버튼으로 올리면 외부 링크가 아니라 네이버에 올라간 이미지가 됩니다.</div>'
+                '<div class="rows">%s</div></section>' % (files_json, slug, len(files), slug, ''.join(rows)))
+    # 대안: 블록별 복사
+    alt = []
     for b in blocks:
         if b['kind'] == 'text':
-            parts.append(text_block(TAGLABEL.get(b['tag'], '본문'), b['html'], b['tag']))
+            alt.append(text_block(TAGLABEL.get(b['tag'], '본문'), CAPNUM.sub('', b['html']) if b['tag'] == 'note' else b['html'], b['tag']))
         else:
             idx += 1
-            if b['file']:
+            if b.get('file'):
                 body = ('<img src="%s/%s" alt="%s"><div class="btns"><a class="btn" href="%s/%s" download>이미지 저장</a>%s</div>'
-                        '<div class="hint">저장이 안 되면 이미지를 길게 눌러 저장하세요.</div>'
-                        % (slug, b['file'], b['label'], slug, b['file'], chk(idx)))
+                        % (slug, b['file'], htmllib.escape(b.get('short') or ''), slug, b['file'], chk(idx)))
             else:
                 body = '<div class="hint">이미지 파일을 찾지 못했습니다.</div><div class="btns">%s</div>' % chk(idx)
-            parts.append('<div class="blk" data-i="%d"><div class="lab"><span>사진 %02d · 여기에 삽입</span><span>%s</span></div>%s</div>'
-                         % (idx, b['n'], b['label'], body))
-    final = ('<div class="blk final"><div class="lab"><span>마지막 · 발행 체크리스트</span></div><ul>'
+            alt.append('<div class="blk" data-i="%d"><div class="lab"><span>【사진 %02d】 · 여기에 삽입</span><span>%s</span></div>%s</div>'
+                       % (idx, b['n'], htmllib.escape(b.get('short') or ''), body))
+    altsec = ('<details class="sec" id="alt"><summary>블록별 복사 (대안)</summary>'
+              '<div class="hint">본문 전체 복사가 잘 안 될 때, 위에서부터 한 블록씩 복사해 붙여넣는 방법입니다. 완료 체크는 이 목록에서만 기록됩니다.</div>%s</details>'
+              % ''.join(alt))
+    final = ('<div class="blk final"><div class="lab"><span>⑥ 발행 체크리스트</span></div><ul>'
              '<li>카테고리: <b>부동산이야기</b></li><li>제목 · 태그 입력 확인</li>'
-             '<li>대표 이미지(썸네일): %s</li><li>이미지가 순서대로 들어갔는지 훑어보기</li><li>발행 버튼</li></ul></div>'
+             '<li>대표 이미지(썸네일): %s</li><li>【사진】 자리표시 줄이 모두 지워지고 사진으로 바뀌었는지 훑어보기</li><li>발행 버튼</li></ul></div>'
              % htmllib.escape(cover or '첫 번째 이미지'))
     header = ('<header class="w"><div class="sub"><a href="index.html">← 키트 목록</a></div><h1>%s</h1>'
-              '<div class="sub">청약 언박싱 No.%s · 이미지 %d장</div></header>' % (htmllib.escape(title), num or '', nimg))
-    files_json = htmllib.escape(json.dumps(['%s/%s' % (slug, f) for f in files], ensure_ascii=False), True)
-    howto = ('<div class="howto"><b>앱에서 올리는 법 (4단계)</b><ol>'
-             '<li><b>이미지 전체 저장</b> — 아래 버튼을 누르고 공유창에서 \'이미지 저장\'을 고릅니다.</li>'
-             '<li>네이버 앱 <b>새 글</b> → 이 페이지의 제목·본문 블록을 <b>위에서부터 [복사] → 붙여넣기</b>.</li>'
-             '<li>이미지 자리마다 앱의 <b>사진 버튼</b> → 같은 번호(01, 02…) 사진을 고릅니다. 여러 장을 한꺼번에 고를 때는 번호 순서대로 눌러야 그 순서로 들어갑니다.</li>'
-             '<li>태그·카테고리(부동산이야기)·대표이미지를 확인하고 발행합니다.</li></ol>'
-             '<div class="btns"><button class="btn" id="saveall" data-files="%s" data-zip="%s.zip">이미지 전체 사진첩에 저장 (%d장)</button></div>'
-             '<div class="btns"><a class="btn ghost" href="%s.zip" download>zip으로 받기</a></div>'
-             '<div class="hint" id="shmsg">공유 기능이 없는 브라우저에서는 zip이 대신 내려받아집니다. PC에서도 같은 이미지를 사진 버튼으로 올리면 외부 링크가 아니라 네이버에 올라간 이미지가 됩니다.</div></div>'
-             % (files_json, slug, len(files), slug))
+              '<div class="sub">청약 언박싱 No.%s · 사진 %d장</div></header>' % (htmllib.escape(title), num or '', nimg))
+    howto = ('<div class="howto"><b>앱에서 올리는 법 (6단계)</b><ol>'
+             '<li><b>제목 복사</b> → 새 글 제목에 붙여넣기</li><li><b>태그 복사</b> → 태그 칸에 붙여넣기</li>'
+             '<li><b>본문 전체 복사</b> 후 본문에 붙여넣기</li>'
+             '<li><b>이미지 전체 사진첩에 저장</b> (공유창에서 \'이미지 저장\')</li>'
+             '<li>에디터에서 <b>【사진 번호】</b> 줄을 찾아 그 자리에서 사진 버튼 → 같은 번호 파일 선택 (자리표시 줄은 지우기)</li>'
+             '<li>카테고리·대표이미지 확인 후 발행</li></ol></div>')
     page = ('<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
             '<meta name="robots" content="noindex,nofollow"><title>네이버 발행 키트 · %s</title><style>%s</style></head>'
-            '<body data-slug="%s">%s<main class="w">%s%s%s</main>'
-            '<div id="bar"><span id="cnt"></span><i><b></b></i></div><script>%s</script></body></html>'
-            % (htmllib.escape(title), CSS, slug, header, howto, ''.join(parts), final, JS))
+            '<body data-slug="%s">%s<main class="w">%s%s%s%s%s%s</main>'
+            '<div id="bar" hidden><span id="cnt"></span><i><b></b></i></div><script>%s</script></body></html>'
+            % (htmllib.escape(title), CSS, slug, header, howto, ''.join(top), bodysec, photosec, final, altsec, JS))
     open(os.path.join(KIT, slug + '.html'), 'w', encoding='utf-8').write(page)
 
 
@@ -426,11 +514,12 @@ def write_index(manifest):
     page = ('<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
             '<meta name="robots" content="noindex,nofollow"><title>네이버 발행 키트</title><style>%s</style></head><body>'
             '<header class="w"><h1>네이버 발행 키트</h1><div class="sub">폰에서 복사·저장하며 올리는 용도</div></header>'
-            '<main class="w"><div class="howto"><b>앱에서 올리는 법 (4단계)</b><ol>'
-            '<li>글을 열고 <b>이미지 전체 사진첩에 저장</b> 버튼 → 공유창에서 \'이미지 저장\'</li>'
-            '<li>네이버 앱 새 글에서 제목·본문 블록을 <b>위에서부터 [복사] → 붙여넣기</b></li>'
-            '<li>이미지 자리마다 <b>사진 버튼</b> → 같은 번호 이미지 선택</li>'
-            '<li>태그·카테고리·대표이미지 확인 후 발행</li></ol></div><div class="list">%s</div></main></body></html>'
+            '<main class="w"><div class="howto"><b>앱에서 올리는 법 (6단계)</b><ol>'
+            '<li>글을 열고 <b>제목 복사</b> → 새 글 제목에 붙여넣기</li><li><b>태그 복사</b> → 태그 칸에 붙여넣기</li>'
+            '<li><b>본문 전체 복사</b> 후 본문에 붙여넣기 (사진 자리는 【사진 번호】 줄로 표시)</li>'
+            '<li><b>이미지 전체 사진첩에 저장</b> (공유창에서 \'이미지 저장\')</li>'
+            '<li>에디터에서 <b>【사진 번호】</b> 줄을 찾아 그 자리에서 사진 버튼 → 같은 번호 파일 선택 (자리표시 줄은 지우기)</li>'
+            '<li>카테고리·대표이미지 확인 후 발행</li></ol></div><div class="list">%s</div></main></body></html>'
             % (CSS, items))
     open(os.path.join(KIT, 'index.html'), 'w', encoding='utf-8').write(page)
 
