@@ -10,6 +10,39 @@
   },
   "posts": [
     {
+      "slug": "bucheon-daejang-haustory-decent",
+      "number": 101,
+      "title": "경기 - 부천대장 하우스토리 디센트 | 84㎡ 분양가 8.47억, 브동산 적정가 6.01억",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-14",
+      "site_url": "https://www.brandongsan.com/posts/bucheon-daejang-haustory-decent.html",
+      "naver_html": "naver-html/bucheon-daejang-haustory-decent.html",
+      "naver_title": "부천대장 하우스토리 디센트 | 브동산 적정가로 보는 예상 프리미엄",
+      "naver_tags": [
+        "부천대장하우스토리디센트",
+        "부천대장지구",
+        "대장지구A2",
+        "부천대장공공분양",
+        "3기신도시",
+        "남광토건",
+        "하우스토리",
+        "공공분양",
+        "분양가상한제",
+        "청약",
+        "분양가",
+        "예상프리미엄",
+        "대장홍대선",
+        "부천청약",
+        "부동산정보"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/bucheon-daejang-haustory-decent/cover.jpg",
+        "https://www.brandongsan.com/posts/images/bucheon-daejang-haustory-decent/chart-b-price.png"
+      ],
+      "naver_published": false
+    },
+    {
       "slug": "anyang-xi-the-forest-unranked",
       "number": 100,
       "title": "경기 - 안양자이 더 포레스트 | 무순위 청약, 59㎡ 잔여 1세대 자격과 일정 총정리",
