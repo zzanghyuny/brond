@@ -22,6 +22,7 @@
 */
 
 const POSTS = [
+  { id: "ansan-sinkil2-a6-newlywed", category: "realestate", region: "경기", tag: "청약 언박싱 No.105", title: "경기 - 안산신길2 A-6블록 신혼희망타운 | 공공분양 251세대, 55㎡ 분양가 4.47억, 예상 프리미엄 -1,300만", date: "2026-11-14", dateLabel: "2026. 11. 14", url: "posts/ansan-sinkil2-a6-newlywed.html", preview: `<p>LH 신혼희망타운 공공분양 251세대. 55㎡ 분양가 4.47억 대비 브동산 적정가는 4.34억으로, 예상 프리미엄은 -1,300만 수준이다.</p>` },
   { id: "bucheon-daejang-haustory-decent", category: "realestate", region: "경기", tag: "청약 언박싱 No.101", title: "경기 - 부천대장 하우스토리 디센트 | 84㎡ 분양가 8.47억, 브동산 적정가 7.91억", date: "2026-11-14", dateLabel: "2026. 11. 14", url: "posts/bucheon-daejang-haustory-decent.html", preview: `<p>분양가상한제가 적용된 3기 신도시 공공분양이라 싸다는 말이 많다. 그런데 역세권·초품아와 3기 신도시 개발잠재력을 반영해 계산한 84㎡ 적정가는 7.91억, 분양가는 8.47억이다. 이 차이는 어떻게 읽어야 할까?</p>` },
   { id: "anyang-xi-the-forest-unranked", category: "realestate", region: "경기", tag: "청약 언박싱 No.100", title: "경기 - 안양자이 더 포레스트 | 무순위 청약, 59㎡ 잔여 1세대 자격과 일정 총정리", date: "2026-11-12", dateLabel: "2026. 11. 12", url: "posts/anyang-xi-the-forest-unranked.html", preview: `<p>3년 전 청약했던 단지에 이번에는 딱 한 세대가 무순위로 나왔다. 안양자이 더 포레스트 59㎡, 접수는 11월 16일 하루다. 자격과 가격부터 확인하자.</p>` },
   { id: "hannam-the-hill-190", category: "realestate", region: "서울", tag: "청약 언박싱 No.099", title: "서울 - 한남더힐 | 옥주현 190억 거래, 역대 최고가를 숫자로 뜯어보기", date: "2026-11-11", dateLabel: "2026. 11. 11", url: "posts/hannam-the-hill-190.html", preview: `<p>서울 한남동 한남더힐에서 190억 원짜리 거래가 나왔다는 보도가 있었다. 한남더힐 역대 최고가라는데, 이 숫자를 어떻게 읽어야 할까?</p>` },
