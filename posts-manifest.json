@@ -10,6 +10,39 @@
   },
   "posts": [
     {
+      "slug": "gold-vs-apartment-trading-costs",
+      "number": 102,
+      "title": "전국 - 금과 아파트 | 금 1돈 사고팔 때 10만 원 차이, 부동산 거래비용과 비교하면",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-14",
+      "site_url": "https://www.brandongsan.com/posts/gold-vs-apartment-trading-costs.html",
+      "naver_html": "naver-html/gold-vs-apartment-trading-costs.html",
+      "naver_title": "금 1돈 사고팔 때 10만 원 차이 | 부동산 취득세·양도세와 비교해 보면?",
+      "naver_tags": [
+        "금시세",
+        "금값",
+        "금한돈시세",
+        "금시세전망",
+        "금살때팔때",
+        "금값차이",
+        "금투자",
+        "부동산투자",
+        "취득세",
+        "중개수수료",
+        "양도세",
+        "아파트거래비용",
+        "금vs부동산",
+        "골드바",
+        "부동산정보"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/gold-vs-apartment-trading-costs/cover.png",
+        "https://www.brandongsan.com/posts/images/gold-vs-apartment-trading-costs/cost.png"
+      ],
+      "naver_published": false
+    },
+    {
       "slug": "gyeongsan-richel-eduforet",
       "number": 106,
       "title": "경북 - 리첼 에듀포레 경산역 | 경산역 도보권 일반분양 201세대, 84㎡ 평균 분양가 6.03억, 예상 프리미엄 -1.19억",

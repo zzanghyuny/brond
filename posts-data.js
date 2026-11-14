@@ -22,6 +22,7 @@
 */
 
 const POSTS = [
+  { id: "gold-vs-apartment-trading-costs", category: "realestate", region: "전국", tag: "청약 언박싱 No.102", title: "전국 - 금과 아파트 | 금 1돈 사고팔 때 10만 원 차이, 부동산 거래비용과 비교하면", date: "2026-11-14", dateLabel: "2026. 11. 14", url: "posts/gold-vs-apartment-trading-costs.html", preview: `<p>금값이 내려왔다는 뉴스 뒤에는 늘 같은 질문이 따라온다. 지금 금을 살까, 집을 살까? 어디가 오를지 맞히기 전에 먼저 확인할 것이 있다. 사고팔 때 얼마가 드는가다.</p>` },
   {
     id: "ulsan-hwajeong1-arel",
     category: "realestate",
