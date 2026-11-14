@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /naver-html/
+Disallow: /naver-kit/
 
 Sitemap: https://www.brandongsan.com/sitemap.xml
