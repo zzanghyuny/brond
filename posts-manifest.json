@@ -203,7 +203,9 @@
         "https://www.brandongsan.com/posts/images/bucheon-daejang-haustory-decent/cover.jpg",
         "https://www.brandongsan.com/posts/images/bucheon-daejang-haustory-decent/chart-b-price.png"
       ],
-      "naver_published": false
+      "naver_published": true,
+      "naver_post_id": "224476917011",
+      "published_at": "2026-11-14T15:47:15+09:00"
     },
     {
       "slug": "anyang-xi-the-forest-unranked",
@@ -237,7 +239,9 @@
         "https://www.brandongsan.com/posts/images/anyang-xi-the-forest-unranked/aerial.jpg",
         "https://www.brandongsan.com/posts/images/anyang-xi-the-forest-unranked/cover.png"
       ],
-      "naver_published": false
+      "naver_published": true,
+      "naver_post_id": "224473967594",
+      "published_at": "2026-11-12T09:57:01+09:00"
     },
     {
       "slug": "hannam-the-hill-190",
@@ -269,7 +273,9 @@
       "cover_candidates": [
         "https://www.brandongsan.com/posts/images/hannam-the-hill-190/cover.png"
       ],
-      "naver_published": false
+      "naver_published": true,
+      "naver_post_id": "224473969537",
+      "published_at": "2026-11-12T09:58:29+09:00"
     },
     {
       "slug": "elementary-enrollment-30man",
@@ -301,7 +307,9 @@
       "cover_candidates": [
         "https://www.brandongsan.com/posts/images/elementary-enrollment-30man/cover.png"
       ],
-      "naver_published": false
+      "naver_published": true,
+      "naver_post_id": "224473970577",
+      "published_at": "2026-11-12T09:59:13+09:00"
     },
     {
       "slug": "mullae-lottecastle-newstay",
@@ -395,9 +403,9 @@
         "https://www.brandongsan.com/posts/images/namchuncheon-centreville/cover.jpg",
         "https://www.brandongsan.com/posts/images/namchuncheon-centreville/location.jpg"
       ],
-      "naver_published": false,
-      "naver_post_id": null,
-      "published_at": null
+      "naver_published": true,
+      "naver_post_id": "224469214071",
+      "published_at": "2026-11-08T15:42:38+09:00"
     },
     {
       "slug": "gwangju-jeil-foredu",
@@ -427,9 +435,9 @@
       "cover_candidates": [
         "https://www.brandongsan.com/posts/images/gwangju-jeil-foredu/cover.jpg"
       ],
-      "naver_published": false,
-      "naver_post_id": null,
-      "published_at": null
+      "naver_published": true,
+      "naver_post_id": "224469211470",
+      "published_at": "2026-11-08T15:39:37+09:00"
     },
     {
       "slug": "siheung-geomo-artera",
@@ -459,9 +467,9 @@
       "cover_candidates": [
         "https://www.brandongsan.com/posts/images/siheung-geomo-artera/cover.jpg"
       ],
-      "naver_published": false,
-      "naver_post_id": null,
-      "published_at": null
+      "naver_published": true,
+      "naver_post_id": "224469201505",
+      "published_at": "2026-11-08T15:28:21+09:00"
     },
     {
       "slug": "gwanggyo-centreville-general-vs-equity",
