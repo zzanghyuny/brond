@@ -267,7 +267,9 @@ def build(slug, entry):
         c = kids[i]
         cls = c.get('class') or []
         text = c.get_text(' ', strip=True).replace('\xa0', '').strip()
-        if c.name == 'h1' or c.name == 'hr':
+        if c.name == 'h1' and text:
+            blocks.append(dict(kind='text', tag='h1', html=clean_inline(c)))
+        elif c.name == 'hr':
             pass
         elif c.name == 'div' and 'stat' in cls:
             group = [c]
@@ -308,7 +310,10 @@ def build(slug, entry):
             blocks.append(dict(kind='text', tag=c.name, html=clean_inline(c)))
         elif c.name == 'p' and text:
             kind_note = 'note' in cls
-            blocks.append(dict(kind='text', tag='note' if kind_note else 'p', html=clean_inline(c)))
+            tg = 'note' if kind_note else 'p'
+            if tg == 'p' and text.startswith('브동산 ·') and not any(b.get('tag') == 'byline' for b in blocks):
+                tg = 'byline'
+            blocks.append(dict(kind='text', tag=tg, html=clean_inline(c)))
         elif c.name == 'ul' or c.name == 'ol':
             for li in c.find_all('li'):
                 blocks.append(dict(kind='text', tag='p', html='• ' + clean_inline(li)))
@@ -331,7 +336,7 @@ def build(slug, entry):
     return len(blocks), len(imgfiles)
 
 
-TAGLABEL = {'h2': '큰 소제목 — 굵게 + 큰 글씨', 'h3': '작은 소제목 — 굵게', 'p': '본문', 'note': '작은 회색 글씨(설명·메모)'}
+TAGLABEL = {'h1': '글 제목 (본문 맨 위 큰 글씨)', 'byline': '작은 안내줄(No.·날짜)', 'h2': '큰 소제목 — 굵게 + 큰 글씨', 'h3': '작은 소제목 — 굵게', 'p': '본문', 'note': '작은 회색 글씨(설명·메모)'}
 
 CSS = """
 :root{--ink:#111;--mut:#666;--hair:#ddd;--soft:#f5f5f5;--bg:#fff}
@@ -346,7 +351,7 @@ header{padding:18px 0 6px}h1{font-size:19px;line-height:1.35;margin:0 0 4px}.sub
 .blk.done{opacity:.45}
 .lab{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12.5px;color:var(--mut);margin-bottom:8px}
 .src{font-size:16px;word-break:keep-all;overflow-wrap:anywhere}
-.src.h2{font-size:19px;font-weight:800}.src.h3{font-size:17px;font-weight:800}.src.note{font-size:13.5px;color:var(--mut)}
+.src.h1{font-size:21px;font-weight:800}.src.byline{font-size:13px;color:var(--mut)}.src.h2{font-size:19px;font-weight:800}.src.h3{font-size:17px;font-weight:800}.src.note{font-size:13.5px;color:var(--mut)}
 .btns{display:flex;gap:8px;align-items:center;margin-top:10px;flex-wrap:wrap}
 .btn,.btn:visited{appearance:none;border:1.5px solid var(--ink);background:var(--ink);color:var(--bg);font:700 16px/1 inherit;padding:13px 18px;min-height:48px;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;cursor:pointer;flex:1 1 0}
 .btn.ghost{background:transparent;color:var(--ink)}
@@ -381,7 +386,7 @@ if(!ok){try{await navigator.clipboard.writeText(text);ok=true}catch(e){}}
 const o=btn.textContent;btn.textContent=ok?'복사됨 ✓ 이제 에디터에 붙여넣으세요':'복사 실패 — 미리보기를 길게 눌러 전체 선택';btn.classList.toggle('ok',ok);setTimeout(()=>{btn.textContent=o;btn.classList.remove('ok')},2600)}
 const CB=document.getElementById('copybody');if(CB)CB.addEventListener('click',()=>copyBody(CB));
 const ALT=document.getElementById('alt');if(ALT)ALT.addEventListener('toggle',()=>{document.getElementById('bar').hidden=!ALT.open;document.body.style.paddingBottom=ALT.open?'84px':'24px'});
-async function doCopy(btn){const b=btn.closest('.blk');const el=b.querySelector('.src');const html=el.innerHTML.trim();const text=el.innerText.trim();let ok=false;
+async function doCopy(btn){const b=btn.closest('.blk');const el=b.querySelector('.src');const html=(b.dataset.clip||el.innerHTML).trim();const text=el.innerText.trim();let ok=false;
 try{await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([text],{type:'text/plain'})})]);ok=true}catch(e){}
 if(!ok){try{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);ok=document.execCommand('copy');s.removeAllRanges()}catch(e){}}
 if(!ok){try{await navigator.clipboard.writeText(text);ok=true}catch(e){}}
@@ -403,26 +408,52 @@ catch(err){SA.textContent=LAB;if(err&&err.name!=='AbortError')fallback('공유�
 CAPNUM = re.compile(r'^\s*이미지\s*\d+\s*[·.:\-]\s*')
 
 
+# 붙여넣기 글꼴 규칙 (Paul 승인 샘플 m.blog.naver.com/bds_unboxing/224461686139, SE ONE 측정값)
+# 글꼴=시스템 기본(지정 안 함), 색=#000000, byline 13 / 제목 24 굵게 / h2 19 굵게 / h3 15 굵게 / 본문·캡션 16
+CLIP_STYLE = {
+    'h1': 'font-size:24px;font-weight:700;color:#000000;',
+    'h2': 'font-size:19px;font-weight:700;color:#000000;',
+    'h3': 'font-size:15px;font-weight:700;color:#000000;',
+    'byline': 'font-size:13px;font-weight:400;color:#000000;',
+    'note': 'font-size:16px;font-weight:400;color:#000000;',
+    'p': 'font-size:16px;font-weight:400;color:#000000;',
+}
+
+
+def clip_inner(inner):
+    inner = inner.replace('<b>', '<b style="font-weight:700;">')
+    inner = re.sub(r'<a href="([^"]*)">', r'<a href="\1" style="color:#000000;">', inner)
+    return inner
+
+
+def clip_block(tag, inner):
+    """클립보드용 HTML 한 문단. 모든 문단을 <p style=...>로 통일해 에디터가 글자 크기 프리셋으로 받게 한다."""
+    return '<p style="%s">%s</p>' % (CLIP_STYLE.get(tag, CLIP_STYLE['p']), clip_inner(inner))
+
+
+BLANK = '<p style="font-size:16px;color:#000000;">&nbsp;</p>'
+
+
 def body_copy(blocks):
     """본문 전체 복사용 HTML/plain. 이미지 자리는 【사진 NN】 단독 문단(번호 = 저장된 파일 번호)."""
     H, T = [], []
     for b in blocks:
         if b['kind'] == 'img':
             lab = b.get('short') or '이미지'
-            H.append('<p>&nbsp;</p><p><b>【사진 %02d】</b> · %s</p><p>&nbsp;</p>' % (b['n'], htmllib.escape(lab)))
+            H.append(BLANK + clip_block('p', '<b>【사진 %02d】</b> · %s' % (b['n'], htmllib.escape(lab))) + BLANK)
             T.append('\n【사진 %02d】 · %s\n' % (b['n'], lab))
             continue
         plain = re.sub(r'<br\s*/?>', '\n', b['html']); plain = htmllib.unescape(re.sub(r'<[^>]+>', '', plain)).strip()
         if b['tag'] == 'h2':
-            H.append('<p>&nbsp;</p><h2>%s</h2>' % b['html']); T.append('\n' + plain)
-        elif b['tag'] == 'h3':
-            H.append('<h3>%s</h3>' % b['html']); T.append(plain)
+            H.append(BLANK + clip_block('h2', b['html'])); T.append('\n' + plain)
+        elif b['tag'] == 'h1':
+            H.append(BLANK + clip_block('h1', b['html'])); T.append(plain)
         elif b['tag'] == 'note':
             h = CAPNUM.sub('', b['html'])
-            H.append('<p style="font-size:13px;color:#777">%s</p>' % h)
+            H.append(clip_block('note', h))
             T.append(CAPNUM.sub('', plain))
         else:
-            H.append('<p>%s</p>' % b['html']); T.append(plain)
+            H.append(clip_block(b['tag'], b['html'])); T.append(plain)
     return '\n'.join(H), re.sub(r'\n{3,}', '\n\n', '\n\n'.join(T)).strip()
 
 
@@ -433,12 +464,13 @@ def write_page(slug, entry, title, tags, cover, blocks, nimg, files=()):
     def chk(i):
         return '<label class="chk"><input type="checkbox"> 완료</label>'
 
-    def text_block(label, html, tag='p', check=True):
+    def text_block(label, html, tag='p', check=True, clip=None):
         nonlocal idx
         idx += 1
-        return ('<div class="blk" data-i="%d"><div class="lab"><span>%s</span></div>'
+        ca = (' data-clip="%s"' % htmllib.escape(clip, True)) if clip else ''
+        return ('<div class="blk" data-i="%d"%s><div class="lab"><span>%s</span></div>'
                 '<div class="src %s">%s</div><div class="btns"><button class="btn" data-copy>복사</button>%s</div></div>'
-                % (idx, label, tag, html, chk(idx) if check else ''))
+                % (idx, ca, label, tag, html, chk(idx) if check else ''))
 
     # 상단: 제목·태그
     top = [text_block('① 제목', htmllib.escape(title), 'p', False), text_block('② 태그 (쉼표로 구분 · # 없이)', htmllib.escape(','.join(tags)), 'p', False)]
@@ -469,7 +501,8 @@ def write_page(slug, entry, title, tags, cover, blocks, nimg, files=()):
     alt = []
     for b in blocks:
         if b['kind'] == 'text':
-            alt.append(text_block(TAGLABEL.get(b['tag'], '본문'), CAPNUM.sub('', b['html']) if b['tag'] == 'note' else b['html'], b['tag']))
+            _h = CAPNUM.sub('', b['html']) if b['tag'] == 'note' else b['html']
+            alt.append(text_block(TAGLABEL.get(b['tag'], '본문'), _h, b['tag'], True, clip_block(b['tag'], _h)))
         else:
             idx += 1
             if b.get('file'):
