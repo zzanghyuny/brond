@@ -42,6 +42,38 @@
       "naver_published": false
     },
     {
+      "slug": "hoban-summit-choryang",
+      "number": 102,
+      "title": "부산 - 호반써밋 초량 | 초량3구역 재개발 일반분양 236세대, 84㎡ 평균 분양가 7.25억, 예상 프리미엄 -4,900만",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-14",
+      "site_url": "https://www.brandongsan.com/posts/hoban-summit-choryang.html",
+      "naver_html": "naver-html/hoban-summit-choryang.html",
+      "naver_title": "호반써밋 초량 | 예상프리미엄 -4,900만, 분양가 평면 총정리",
+      "naver_tags": [
+        "호반써밋초량",
+        "초량3구역",
+        "부산동구청약",
+        "초량역",
+        "호반건설",
+        "부산재개발",
+        "부산아파트분양",
+        "초량3동",
+        "부산청약",
+        "84분양가",
+        "비규제지역",
+        "전매제한6개월",
+        "부동산정보"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/hoban-summit-choryang/chart-map-naver.png"
+      ],
+      "naver_published": false,
+      "naver_post_id": null,
+      "published_at": null
+    },
+    {
       "slug": "bucheon-daejang-haustory-decent",
       "number": 101,
       "title": "경기 - 부천대장 하우스토리 디센트 | 84㎡ 분양가 8.47억, 브동산 적정가 7.91억",
