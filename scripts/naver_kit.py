@@ -10,13 +10,16 @@ naver-html/<slug>.html 을 폰에서 블록 단위로 복사·저장할 수 있�
 """
 import sys, os, re, json, shutil, zipfile, subprocess, html as htmllib, glob
 from bs4 import BeautifulSoup, NavigableString
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KIT = os.path.join(ROOT, 'naver-kit')
 SITE = 'https://www.brandongsan.com/'
 MAXW, MAXKB = 1000, 450
+FONT = '/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc'
+MERGE_MAXH, MERGE_MAXKB, GAP = 4500, 800, 24
 WARN = []
+BEFORE_AFTER = {}
 
 
 def load_manifest():
@@ -84,6 +87,136 @@ def render_fragments(jobs):
     json.dump(jobs, open(jf, 'w', encoding='utf-8'), ensure_ascii=False)
     subprocess.run(['node', os.path.join(ROOT, 'scripts', 'naver_kit_render.js'), jf], check=True)
     os.remove(jf)
+
+
+def _wrap(draw, text, font, maxw, maxlines=2):
+    lines, cur = [], ''
+    for ch in text:
+        if draw.textlength(cur + ch, font=font) <= maxw:
+            cur += ch
+        else:
+            lines.append(cur); cur = ch
+    if cur:
+        lines.append(cur)
+    if len(lines) > maxlines:
+        lines = lines[:maxlines]; lines[-1] = lines[-1][:-1] + '…'
+    return lines
+
+
+def _bar(text, size, bold=False, W=MAXW):
+    font = ImageFont.truetype(FONT, size)
+    tmp = ImageDraw.Draw(Image.new('RGB', (W, 10)))
+    lines = _wrap(tmp, text, font, W - 48)
+    lh = size + 12
+    im = Image.new('RGB', (W, 20 + lh * len(lines)), 'white')
+    d = ImageDraw.Draw(im)
+    for k, ln in enumerate(lines):
+        d.text((24, 10 + k * lh), ln, font=font, fill=(17, 17, 17), stroke_width=1 if bold else 0, stroke_fill=(17, 17, 17))
+    return im
+
+
+def _part_image(part, path):
+    """제목바(선택) + 캡션바(선택) + 이미지를 세로로 쌓은 한 조각."""
+    im = Image.open(path).convert('RGB')
+    if im.width != MAXW:
+        im = im.resize((MAXW, max(1, round(im.height * MAXW / im.width))), Image.LANCZOS)
+    pieces = []
+    if part.get('head'):
+        pieces.append(_bar(part['head'], 36, True))
+    if part.get('cap'):
+        pieces.append(_bar(part['cap'], 30))
+    pieces.append(im)
+    h = sum(x.height for x in pieces)
+    out = Image.new('RGB', (MAXW, h), 'white')
+    y = 0
+    for x in pieces:
+        out.paste(x, (0, y)); y += x.height
+    return out
+
+
+def _save_jpeg(im, dst):
+    q = 85
+    while True:
+        im.save(dst, 'JPEG', quality=q, optimize=True)
+        if os.path.getsize(dst) <= MERGE_MAXKB * 1024 or (q <= 62 and im.width <= 720):
+            return
+        if q > 62:
+            q -= 8
+        else:
+            im = im.resize((round(im.width * .9), round(im.height * .9)), Image.LANCZOS)
+
+
+def merge_runs(slug, outdir, blocks):
+    """연속 이미지 블록(사이에 짧은 캡션·h3 제목만 있는 경우)을 세로로 이어 붙인 큰 이미지로 합친다.
+    반환: 새 블록 리스트, 최종 파일명 리스트(게시 순서)."""
+    tmpdir = outdir + '_new'
+    shutil.rmtree(tmpdir, ignore_errors=True); os.makedirs(tmpdir)
+    out, files, seq = [], [], 0
+
+    def is_img(b):
+        return b['kind'] == 'img' and b.get('file')
+
+    def is_cap(b):
+        return b['kind'] == 'text' and b['tag'] == 'note' and len(re.sub('<[^>]+>', '', b['html'])) <= 70
+
+    def is_head(b):
+        return b['kind'] == 'text' and b['tag'] == 'h3' and len(re.sub('<[^>]+>', '', b['html'])) <= 40
+
+    i = 0
+    while i < len(blocks):
+        b = blocks[i]
+        if not is_img(b):
+            out.append(b); i += 1; continue
+        run = [dict(head=None, cap=None, b=b)]
+        j = i + 1
+        while True:
+            k = j
+            cap = None
+            if k < len(blocks) and is_cap(blocks[k]):
+                cap = re.sub('<[^>]+>', '', htmllib.unescape(blocks[k]['html'])).strip(); k += 1
+            run[-1]['cap_k'] = (j, k) if cap else None
+            run[-1]['cap'] = cap
+            head = None
+            m = k
+            if m < len(blocks) and is_head(blocks[m]):
+                head = re.sub('<[^>]+>', '', htmllib.unescape(blocks[m]['html'])).strip(); m += 1
+            if m < len(blocks) and is_img(blocks[m]):
+                run.append(dict(head=head, cap=None, b=blocks[m])); j = m + 1
+                continue
+            break
+        end = j  # 마지막 이미지 다음 위치(캡션 포함 전)
+        if len(run) == 1:
+            seq += 1
+            stem = re.sub(r'^\d+-', '', os.path.splitext(b['file'])[0]); ext = os.path.splitext(b['file'])[1]
+            nf = '%02d-%s%s' % (seq, stem, ext)
+            shutil.copy(os.path.join(outdir, b['file']), os.path.join(tmpdir, nf))
+            nb = dict(b); nb.update(n=seq, file=nf); out.append(nb); files.append(nf)
+            i += 1; continue
+        # 합치기: 마지막 이미지의 캡션까지 흡수
+        last_cap_end = run[-1]['cap_k'][1] if run[-1]['cap_k'] else end
+        nums = [int(x) for r in run for x in re.findall(r'^이미지\s*(\d+)', r['cap'] or '')]
+        span = ('이미지 %02d–%02d 묶음' % (nums[0], nums[-1])) if len(nums) >= 2 else ('%d장 묶음' % len(run))
+        pages, cur, curh = [], [], 0
+        for r in run:
+            pim = _part_image(r, os.path.join(outdir, r['b']['file']))
+            if cur and curh + GAP + pim.height > MERGE_MAXH:
+                pages.append(cur); cur, curh = [], 0
+            curh += (GAP if cur else 0) + pim.height; cur.append(pim)
+        pages.append(cur)
+        for pi, pg in enumerate(pages, 1):
+            H = sum(x.height for x in pg) + GAP * (len(pg) - 1)
+            canvas = Image.new('RGB', (MAXW, H), 'white'); y = 0
+            for x in pg:
+                canvas.paste(x, (0, y)); y += x.height + GAP
+            seq += 1
+            nf = '%02d-set%s.jpg' % (seq, ('-%d' % pi) if len(pages) > 1 else '')
+            _save_jpeg(canvas, os.path.join(tmpdir, nf))
+            lab = span + ((' (%d/%d)' % (pi, len(pages))) if len(pages) > 1 else '')
+            out.append(dict(kind='img', n=seq, file=nf, label=lab, merged=True))
+            files.append(nf)
+        i = last_cap_end
+    shutil.rmtree(outdir); os.rename(tmpdir, outdir)
+    return out, files
 
 
 def build(slug, entry):
@@ -154,6 +287,9 @@ def build(slug, entry):
         i += 1
 
     render_fragments(jobs)
+    n_before = len(imgfiles)
+    blocks, imgfiles = merge_runs(slug, outdir, blocks)
+    BEFORE_AFTER[slug] = (n_before, len(imgfiles))
     # zip
     zp = os.path.join(KIT, slug + '.zip')
     with zipfile.ZipFile(zp, 'w', zipfile.ZIP_DEFLATED) as z:
@@ -163,7 +299,7 @@ def build(slug, entry):
     title = entry.get('naver_title') or soup.find('h1').get_text(strip=True)
     tags = entry.get('naver_tags') or []
     cover = ', '.join(os.path.basename(c) for c in (entry.get('cover_candidates') or []))
-    write_page(slug, entry, title, tags, cover, blocks, len(imgfiles))
+    write_page(slug, entry, title, tags, cover, blocks, len(imgfiles), imgfiles)
     return len(blocks), len(imgfiles)
 
 
@@ -213,10 +349,18 @@ const o=btn.textContent;btn.textContent=ok?'복사됨 ✓':'복사 실패 — �
 if(ok){const cb=b.querySelector('.chk input');if(cb&&!cb.checked){cb.checked=true;cb.dispatchEvent(new Event('change'))}}
 setTimeout(()=>{btn.textContent=o;btn.classList.remove('ok')},1600)}
 document.addEventListener('click',e=>{const t=e.target.closest('[data-copy]');if(t)doCopy(t)});
+const SA=document.getElementById('saveall');
+if(SA){const LAB=SA.textContent;SA.addEventListener('click',async()=>{const msg=document.getElementById('shmsg');const urls=JSON.parse(SA.dataset.files);
+const fallback=(why)=>{msg.textContent=why+' zip을 대신 내려받습니다.';const a=document.createElement('a');a.href=SA.dataset.zip;a.download='';document.body.appendChild(a);a.click();a.remove()};
+try{if(!navigator.canShare||!navigator.share){fallback('이 브라우저는 한꺼번에 저장 공유를 지원하지 않습니다.');return}
+SA.textContent='이미지 준비 중…';const files=[];for(const u of urls){const r=await fetch(u);const b=await r.blob();files.push(new File([b],u.split('/').pop(),{type:b.type||'image/jpeg'}))}
+if(!navigator.canShare({files})){SA.textContent=LAB;fallback('이 기기는 이 개수의 파일 공유를 허용하지 않습니다.');return}
+await navigator.share({files,title:document.title});SA.textContent=LAB}
+catch(err){SA.textContent=LAB;if(err&&err.name!=='AbortError')fallback('공유에 실패했습니다.')}})}
 """
 
 
-def write_page(slug, entry, title, tags, cover, blocks, nimg):
+def write_page(slug, entry, title, tags, cover, blocks, nimg, files=()):
     num = entry.get('number')
     parts = []
     idx = 0
@@ -244,7 +388,7 @@ def write_page(slug, entry, title, tags, cover, blocks, nimg):
                         % (slug, b['file'], b['label'], slug, b['file'], chk(idx)))
             else:
                 body = '<div class="hint">이미지 파일을 찾지 못했습니다.</div><div class="btns">%s</div>' % chk(idx)
-            parts.append('<div class="blk" data-i="%d"><div class="lab"><span>이미지 %02d · 여기에 삽입</span><span>%s</span></div>%s</div>'
+            parts.append('<div class="blk" data-i="%d"><div class="lab"><span>사진 %02d · 여기에 삽입</span><span>%s</span></div>%s</div>'
                          % (idx, b['n'], b['label'], body))
     final = ('<div class="blk final"><div class="lab"><span>마지막 · 발행 체크리스트</span></div><ul>'
              '<li>카테고리: <b>부동산이야기</b></li><li>제목 · 태그 입력 확인</li>'
@@ -252,11 +396,16 @@ def write_page(slug, entry, title, tags, cover, blocks, nimg):
              % htmllib.escape(cover or '첫 번째 이미지'))
     header = ('<header class="w"><div class="sub"><a href="index.html">← 키트 목록</a></div><h1>%s</h1>'
               '<div class="sub">청약 언박싱 No.%s · 이미지 %d장</div></header>' % (htmllib.escape(title), num or '', nimg))
-    howto = ('<div class="howto"><b>폰에서 올리는 법</b><ol>'
-             '<li>먼저 아래 <b>이미지 전체 받기(zip)</b>로 사진을 폰에 저장합니다.</li>'
-             '<li>네이버 앱 글쓰기를 열고, 이 페이지에서 위에서부터 <b>[복사] → 앱에 붙여넣기</b>를 반복합니다.</li>'
-             '<li>이미지 칸에서는 앱의 사진 추가로 같은 번호 사진을 넣습니다. 끝나면 맨 아래 체크리스트로 발행합니다.</li></ol>'
-             '<div class="btns"><a class="btn ghost" href="%s.zip" download>이미지 전체 받기 (zip)</a></div></div>' % slug)
+    files_json = htmllib.escape(json.dumps(['%s/%s' % (slug, f) for f in files], ensure_ascii=False), True)
+    howto = ('<div class="howto"><b>앱에서 올리는 법 (4단계)</b><ol>'
+             '<li><b>이미지 전체 저장</b> — 아래 버튼을 누르고 공유창에서 \'이미지 저장\'을 고릅니다.</li>'
+             '<li>네이버 앱 <b>새 글</b> → 이 페이지의 제목·본문 블록을 <b>위에서부터 [복사] → 붙여넣기</b>.</li>'
+             '<li>이미지 자리마다 앱의 <b>사진 버튼</b> → 같은 번호(01, 02…) 사진을 고릅니다. 여러 장을 한꺼번에 고를 때는 번호 순서대로 눌러야 그 순서로 들어갑니다.</li>'
+             '<li>태그·카테고리(부동산이야기)·대표이미지를 확인하고 발행합니다.</li></ol>'
+             '<div class="btns"><button class="btn" id="saveall" data-files="%s" data-zip="%s.zip">이미지 전체 사진첩에 저장 (%d장)</button></div>'
+             '<div class="btns"><a class="btn ghost" href="%s.zip" download>zip으로 받기</a></div>'
+             '<div class="hint" id="shmsg">공유 기능이 없는 브라우저에서는 zip이 대신 내려받아집니다. PC에서도 같은 이미지를 사진 버튼으로 올리면 외부 링크가 아니라 네이버에 올라간 이미지가 됩니다.</div></div>'
+             % (files_json, slug, len(files), slug))
     page = ('<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
             '<meta name="robots" content="noindex,nofollow"><title>네이버 발행 키트 · %s</title><style>%s</style></head>'
             '<body data-slug="%s">%s<main class="w">%s%s%s</main>'
@@ -277,9 +426,11 @@ def write_index(manifest):
     page = ('<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
             '<meta name="robots" content="noindex,nofollow"><title>네이버 발행 키트</title><style>%s</style></head><body>'
             '<header class="w"><h1>네이버 발행 키트</h1><div class="sub">폰에서 복사·저장하며 올리는 용도</div></header>'
-            '<main class="w"><div class="howto"><b>3단계</b><ol><li>글을 고르고 이미지 zip을 폰에 저장</li>'
-            '<li>[복사] → 네이버 앱 본문에 붙여넣기 (위에서부터 순서대로)</li>'
-            '<li>이미지 칸마다 같은 번호 사진을 추가하고 마지막에 발행</li></ol></div><div class="list">%s</div></main></body></html>'
+            '<main class="w"><div class="howto"><b>앱에서 올리는 법 (4단계)</b><ol>'
+            '<li>글을 열고 <b>이미지 전체 사진첩에 저장</b> 버튼 → 공유창에서 \'이미지 저장\'</li>'
+            '<li>네이버 앱 새 글에서 제목·본문 블록을 <b>위에서부터 [복사] → 붙여넣기</b></li>'
+            '<li>이미지 자리마다 <b>사진 버튼</b> → 같은 번호 이미지 선택</li>'
+            '<li>태그·카테고리·대표이미지 확인 후 발행</li></ol></div><div class="list">%s</div></main></body></html>'
             % (CSS, items))
     open(os.path.join(KIT, 'index.html'), 'w', encoding='utf-8').write(page)
 
@@ -298,7 +449,8 @@ def main(argv):
         if s not in by:
             print('unknown slug', s); continue
         nb, ni = build(s, by[s])
-        print('%s: %d blocks, %d images' % (s, nb, ni))
+        ba = BEFORE_AFTER.get(s, (ni, ni))
+        print('%s: %d blocks, images %d -> %d' % (s, nb, ba[0], ba[1]))
     write_index(manifest)
     for w in WARN:
         print('WARN', w)
