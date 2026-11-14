@@ -5,6 +5,14 @@ description: "브동산 사이트(zzanghyuny/brond)의 포스팅(posts/*.html)�
 
 # 브동산 포스팅 → 네이버 블로그용 HTML (C안 재구성형, 2026-10-31 개정)
 
+> ## ⚠ 모바일 기준 (2026.11.14, 최우선 — 아래 PC 기준 크기·차트 스크립트(13번)보다 이 섹션이 이긴다)
+> 네이버 글·이미지는 **폰 폭 기준**으로 만든다. 전문: `docs/naver-mobile-spec.md`.
+> - 차트 이미지: 캔버스 폭 1000px, 글씨 28px 이상(값 32px, 제목 36px). 생성은 저장소의 `scripts/beodongsan/make_naver_charts.py`(`chart_a`/`chart_b`/`chart_map`/`chart_c`, 기본 `mobile=True`)만 쓴다. 이 문서 13번의 스크립트는 구버전이니 쓰지 않는다. 만든 PNG는 390px로 줄여 읽히는지 확인한다.
+> - 표는 4열 이하, 아니면 이미지로. 문단은 2~3문장. 공식 사진은 가로 ≤1000px·≤400KB.
+> - 폰 발행용으로 글마다 `naver-kit/<slug>.html`(블록별 복사·이미지 저장 버튼)을 함께 만든다(`scripts/naver_kit.py <slug>`).
+> - 섹션 구성·문체·굵은 3수치 문장·`이미지 NN` 번호 규칙은 승인 샘플(`docs/naver-sample/`) 그대로.
+
+
 공통 문서: `docs/publishing-workflow.md`(전체 흐름), `docs/content-rules.md`(공통 규칙), `docs/aside-handoff.md`(Aside 발행 절차). 이 스킬은 그중 **네이버용 HTML 생성** 부분의 실행 규칙이다.
 
 ## 무엇이 바뀌었나 (2026-10-31)
