@@ -22,6 +22,17 @@
 */
 
 const POSTS = [
+  {
+    id: "ulsan-hwajeong1-arel",
+    category: "realestate",
+    region: "울산",
+    tag: "청약 언박싱 No.103",
+    title: "울산 - 화정1지구 아르엘 | 동구 화정동 802세대, 84㎡ 평균 분양가 5.56억, 예상 프리미엄은 -4,930만",
+    date: "2026-11-14",
+    dateLabel: "2026. 11. 14",
+    url: "posts/ulsan-hwajeong1-arel.html",
+    preview: `<p>2026년 11월 13일 입주자모집공고가 나왔다. 84㎡ 580세대의 가중평균 분양가는 5.56억원으로 브동산 적정가 5.07억원보다 높아 예상 프리미엄은 -4,930만(약 9% 고평가)이다. 청약은 11월 23~25일, 입주는 2029년 11월 예정이다.</p>`
+  },
   { id: "ansan-sinkil2-a6-newlywed", category: "realestate", region: "경기", tag: "청약 언박싱 No.105", title: "경기 - 안산신길2 A-6블록 신혼희망타운 | 공공분양 251세대, 55㎡ 분양가 4.47억, 예상 프리미엄 -1,300만", date: "2026-11-14", dateLabel: "2026. 11. 14", url: "posts/ansan-sinkil2-a6-newlywed.html", preview: `<p>LH 신혼희망타운 공공분양 251세대. 55㎡ 분양가 4.47억 대비 브동산 적정가는 4.34억으로, 예상 프리미엄은 -1,300만 수준이다.</p>` },
   { id: "hoban-summit-choryang", category: "realestate", region: "부산", tag: "청약 언박싱 No.102", title: "부산 - 호반써밋 초량 | 초량3구역 재개발 일반분양 236세대, 84㎡ 평균 분양가 7.25억, 예상 프리미엄 -4,900만", date: "2026-11-14", dateLabel: "2026. 11. 14", url: "posts/hoban-summit-choryang.html", preview: `<p>부산 동구 초량3구역 재개발 일반분양 236세대. 84㎡A 세대수 가중평균 분양가 7.25억 대비 브동산 적정가는 6.76억으로, 예상 프리미엄은 -4,900만 수준이다.</p>` },
   { id: "bucheon-daejang-haustory-decent", category: "realestate", region: "경기", tag: "청약 언박싱 No.101", title: "경기 - 부천대장 하우스토리 디센트 | 84㎡ 분양가 8.47억, 브동산 적정가 7.91억", date: "2026-11-14", dateLabel: "2026. 11. 14", url: "posts/bucheon-daejang-haustory-decent.html", preview: `<p>분양가상한제가 적용된 3기 신도시 공공분양이라 싸다는 말이 많다. 그런데 역세권·초품아와 3기 신도시 개발잠재력을 반영해 계산한 84㎡ 적정가는 7.91억, 분양가는 8.47억이다. 이 차이는 어떻게 읽어야 할까?</p>` },
