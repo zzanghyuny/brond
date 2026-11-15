@@ -63,7 +63,10 @@ def _canvas(w, h):
 
 
 # ------------------------------------------------------------------ 차트 A
-SERIES_FILL = ['#000000', '#777777', '#BBBBBB']
+# 포인트 색: 쇼츠·클립·릴스 시네마틱 영상의 고급 황동색(2026.11.15, Paul). 나머지는 흑백 유지.
+ACCENT = '#C8A45C'
+ACCENT_BG = '#FBF7EC'
+SERIES_FILL = [ACCENT, '#777777', '#BBBBBB']
 
 
 def _chart_a_desktop(path, d):
@@ -102,7 +105,7 @@ def _chart_b_desktop(path, d):
     rows = []
     for nm, v in zip(d['comp_names'], d['comp_adjusted']):
         rows.append((f'{nm} 보정가격', v, '#999999', '#222222'))
-    rows.append(('브동산 분석 적정가격 (평균)', d['fair'], '#000000', '#000000'))
+    rows.append(('브동산 분석 적정가격 (평균)', d['fair'], ACCENT, '#000000'))
     has_actual = d.get('actual') is not None
     if has_actual:
         rows.append((f"실제 분양가 ({d.get('actual_label', tp + ' 가중평균')})", d['actual'], '#FFFFFF', '#222222'))
@@ -117,7 +120,7 @@ def _chart_b_desktop(path, d):
         txt(ax, x0 + w + 10, y, f'{v:.2f}억', 20, True)
         y += pitch
     by0 = 402
-    ax.add_patch(Rectangle((32, by0), 903, 68, fc='#F3F3F3', ec='#333333', lw=2))
+    ax.add_patch(Rectangle((32, by0), 903, 68, fc=ACCENT_BG, ec=ACCENT, lw=3))
     if has_actual:
         box = f"예상 프리미엄 {d['premium_text']} ({d['pct_text']})"
     else:
@@ -142,7 +145,7 @@ def _chart_map_desktop(path, d):
       'schools': [{'name':'매원초','en':(x,y)}],
       'facilities': [{'name':'아주대병원','en':(x,y)}],
       'areas': [{'name':'원천호수\\n(광교호수공원)','en':(x,y),'rx':m,'ry':m}],   # 호수·공원 등(타원)
-      'legend': '■ 검정=SITE · □(회색 테두리)=비교단지 · □(점선 테두리)=학교 · ●(검정)=지하철역 · ●(회색)=생활시설'
+      'legend': '■ 황동=SITE · □(회색 테두리)=비교단지 · □(점선 테두리)=학교 · ●(검정)=지하철역 · ●(회색)=생활시설'
     }
     en = 임의 기준(m) 동쪽·북쪽 좌표. 위경도는 latlon_to_en 으로 변환. 'px':(x,y) 를 주면 픽셀 좌표를 직접 지정한다.
     """
@@ -231,7 +234,7 @@ def _chart_map_desktop(path, d):
         x, y = e['_p']
         h = msz[k] / 2
         if k == 'site':
-            ax.add_patch(Rectangle((x - h, y - h), 2 * h, 2 * h, fc='#000000', ec='#000000', zorder=3))
+            ax.add_patch(Rectangle((x - h, y - h), 2 * h, 2 * h, fc=ACCENT, ec='#000000', lw=2.4, zorder=3))
         elif k == 'comp':
             ax.add_patch(Rectangle((x - h + 2, y - h + 2), 2 * h - 4, 2 * h - 4, fc='white', ec='#555555', lw=3.4, zorder=3))
         elif k == 'station':
@@ -295,7 +298,7 @@ def _chart_map_desktop(path, d):
         nt.set_position((42, 22 + nh / 2))
     ax.annotate('', xy=(921, 28), xytext=(921, 70), arrowprops=dict(arrowstyle='-|>', color='#000000', lw=2), zorder=5)
     txt(ax, 921, 100, 'N', 16, False, '#555555', ha='center')
-    txt(ax, 30, 683, d.get('legend', '■ 검정=SITE · □(회색 테두리)=비교단지 · □(점선 테두리)=학교 · ●(검정)=지하철역 · ●(회색)=생활시설'),
+    txt(ax, 30, 683, d.get('legend', '■ 황동=SITE · □(회색 테두리)=비교단지 · □(점선 테두리)=학교 · ●(검정)=지하철역 · ●(회색)=생활시설'),
         15.5, False, '#555555')
     fig.savefig(path, facecolor='white'); plt.close(fig)
 
@@ -313,7 +316,7 @@ def _chart_c_desktop(path, d):
     step = (x1 - x0) / max(len(ev) - 1, 1)
     for i, (dt, nm, filled) in enumerate(ev):
         x = x0 + i * step
-        ax.scatter([x], [ly], s=260, zorder=3, facecolor='#111111' if filled else 'white', edgecolor='#111111', linewidth=2)
+        ax.scatter([x], [ly], s=260, zorder=3, facecolor=ACCENT if filled else 'white', edgecolor='#111111', linewidth=2)
         txt(ax, x, ly - 58, dt, 24, True, ha='center')
         txt(ax, x, ly + 56, nm, 16, False, '#555555', ha='center')
     txt(ax, 34, H - 26, d.get('footer', ''), 14, False, '#777777')
@@ -390,7 +393,7 @@ def chart_b(path, d, mobile=True):
     tp = d.get('type', '84㎡')
     has_actual = d.get('actual') is not None
     rows = [(f'{nm} 보정가격', v, '#999999', '#222222') for nm, v in zip(d['comp_names'], d['comp_adjusted'])]
-    rows.append(('브동산 분석 적정가격 (평균)', d['fair'], '#000000', '#000000'))
+    rows.append(('브동산 분석 적정가격 (평균)', d['fair'], ACCENT, '#000000'))
     if has_actual:
         rows.append((f"실제 분양가 ({d.get('actual_label', tp + ' 가중평균')})", d['actual'], '#FFFFFF', '#222222'))
     title = f'{tp} 적정가격과 분양가 (억원)'
@@ -412,7 +415,7 @@ def chart_b(path, d, mobile=True):
         txt(ax, x0 + w + 14, y + 68, f'{v:.2f}억', 36, True)
         y += pitch
     by0 = y + 10
-    ax.add_patch(Rectangle((40, by0), W - 80, box_h, fc='#F3F3F3', ec='#333333', lw=2.5))
+    ax.add_patch(Rectangle((40, by0), W - 80, box_h, fc=ACCENT_BG, ec=ACCENT, lw=3.5))
     if has_actual:
         txt(ax, W / 2, by0 + 52, '예상 프리미엄', 32, False, '#333333', ha='center')
         txt(ax, W / 2, by0 + 118, f"{d['premium_text']} ({d['pct_text']})", 44 if _est_w(f"{d['premium_text']} ({d['pct_text']})", 44) < W - 120 else 38, True, ha='center')
@@ -442,7 +445,7 @@ def chart_c(path, d, mobile=True):
     ax.plot([lx, lx], [ytop + 30, ytop + pitch * (len(ev) - 1) + 30], color='#222222', lw=4, zorder=1)
     for i, (dt, nm, filled) in enumerate(ev):
         y = ytop + 30 + i * pitch
-        ax.scatter([lx], [y], s=520, zorder=3, facecolor='#111111' if filled else 'white', edgecolor='#111111', linewidth=3)
+        ax.scatter([lx], [y], s=520, zorder=3, facecolor=ACCENT if filled else 'white', edgecolor='#111111', linewidth=3)
         txt(ax, 140, y, dt, 38, True)
         txt(ax, 140 + _est_w(dt, 38) + 30, y, nm, 32, False, '#333333')
     for i, t in enumerate(foot):
@@ -470,7 +473,7 @@ def chart_map(path, d, mobile=True):
     nlines = _wrap(note, 26, 820) if note else []
     note_w = (max(_est_w(t, 26) for t in nlines) + 40) if nlines else 0
     note_h = len(nlines) * 38 + 26 if nlines else 0
-    legend = d.get('legend', '■ 검정=SITE · □(회색 테두리)=비교단지 · □(점선 테두리)=학교 · ●(검정)=지하철역 · ●(회색)=생활시설')
+    legend = d.get('legend', '■ 황동=SITE · □(회색 테두리)=비교단지 · □(점선 테두리)=학교 · ●(검정)=지하철역 · ●(회색)=생활시설')
     llines = _wrap(legend, 26, W - 60)
     leg_h = len(llines) * 36 + 24
     T = 24 + note_h + 110 if note_h else 130
@@ -549,7 +552,7 @@ def chart_map(path, d, mobile=True):
     for k, e in sorted(ents, key=lambda t: order[t[0]]):
         x, y = e['_p']; hh = msz[k] / 2
         if k == 'site':
-            ax.add_patch(Rectangle((x - hh, y - hh), 2 * hh, 2 * hh, fc='#000000', ec='#000000', zorder=3))
+            ax.add_patch(Rectangle((x - hh, y - hh), 2 * hh, 2 * hh, fc=ACCENT, ec='#000000', lw=3.4, zorder=3))
         elif k == 'comp':
             ax.add_patch(Rectangle((x - hh + 3, y - hh + 3), 2 * hh - 6, 2 * hh - 6, fc='white', ec='#555555', lw=5, zorder=3))
         elif k == 'station':
