@@ -75,3 +75,9 @@ Aside 배포용. 각 단지마다 영상(`<이름>.mp4`, 1080×1920 세로, 30~3
 ## 참고
 - `armusee-xi-ansan`·`ulsan-arel`·`bucheon-daejang`·`hoban-choryang` 4편은 효과음 도입 전 버전(음악만), 나머지 6편은 효과음 포함.
 - 광주 포에듀·시흥 거모는 비교단지 기준(2016년 이후 준공·500세대 이상)이 정해지기 전에 쓴 글의 숫자다. 글을 다시 계산하면 숫자가 바뀔 수 있다.
+
+## 유튜브 가로 풀영상 (1920×1080, 3분 58초)
+
+- `sudogwon-firstcome-top30-202611-youtube.mp4` + 썸네일 `sudogwon-firstcome-top30-202611-youtube-thumbnail.png`(1280×720)
+- 제목·설명·챕터(타임스탬프)·해시태그는 `sudogwon-firstcome-top30-202611-youtube.txt`를 그대로 복사해 쓴다.
+- 생성기: `scripts/longform/make_firstcome_long.py` (쇼츠와 같은 검정·황동 톤, 드론·펄스 음악 + 효과음, 나레이션 없음)
