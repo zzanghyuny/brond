@@ -36,6 +36,19 @@ CFG = {
     feature=dict(img='community-b1.jpg', title='단지 커뮤니티', cap='지하 1층 주민공동시설', cap2='작은도서관 · 맘스카페 · 피트니스 · GX룸', c0=(0.5,0.5), c1=(0.5,0.5), z=(1.0,1.2), box=(820,680)),
     place=dict(img='environment-map-1000.jpg', title='입지', cap='사대문 안 도심 입지', cap2='서대문역 인근 · 공식 입지환경 지도', graded=False, box=(820,780)),
  ),
+ 'mullae': dict(
+    dir=_IMGROOT+'mullae-harrington-place/', out='mullae-harrington-place',
+    name='해링턴 플레이스 문래', name_px=72, loc_txt='서울 영등포구 문래동', avg=17.92, rng='층별 16.44 ~ 18.27억 · 세대수 가중평균',
+    comps=[('영등포자이 디그니티 · 2026.03 (실거래)', 22.0), ('아크로타워스퀘어 · 2017.08', 20.65)],
+    cvmax=24.0, fair=18.83, prem='+9,060만', pct='약 5%', gapword='낮음', gvmax=21.0, thumb_sub='분양가, 저평가일까?',
+    plabel='84㎡ 평균 분양가',
+    disc='브동산 모형 추정치 · 확정 수익 아님 · 84㎡ 평균 · 2026.11.13 기준',
+    info=[('청약', '11월 23일 ~ 26일'), ('전매제한', '3년'), ('계약금', '10%')],
+    scenes=[('title',2.6),('aerial',3.6),('price',3.2),('comps',3.9),('gap',4.3),('feature',3.4),('place',3.4),('info',2.6),('end',3.0)],
+    aerial=dict(img='aerial-naver.jpg', t1='서울 영등포구 문래동', l1='지하 3층 ~ 지상 29층', l2='218세대 · 전 가구 전용 84㎡', src='조감도는 CG이며 실제와 다를 수 있음 · 출처: 언론 게재 이미지'),
+    feature=dict(img='perspective-naver.jpg', title='단지 투시도', cap='지상 29층 · 문래동3가', cap2='투시도는 CG이며 실제와 다를 수 있음', c0=(0.5,0.78), c1=(0.5,0.30), z=(1.15,1.35), box=(700,860)),
+    place=dict(img='location-official.jpg', title='입지', cap='영등포 도심권 · 지하철 생활권', cap2='공식 위치도 · GTX-B 계획은 변경될 수 있음', graded=False, box=(840,580)),
+ ),
  'ulsan': dict(
     dir=_IMGROOT+'ulsan-hwajeong1-arel/', out='ulsan-arel',
     name='화정1지구 아르엘', loc_txt='울산 동구 화정동', avg=5.56, rng='층별 5.23 ~ 5.67억 · 세대수 가중평균',
@@ -157,7 +170,7 @@ def build(key):
         mv.bar(img, 860, c.get('glabel', '실제 분양가 (84㎡ 평균)'), c['avg'], c['gvmax'], (t - 1.4) / 1.3, BRASS, ease((t - 1.3) / 0.6))
         k = ease((t - 2.8) / 1.0)
         draw_text(img, (CX, 1010 - 10 * (1 - k)), c['prem'], 190, WHITE, spacing=2, bold=3, alpha=k)
-        draw_text(img, (CX, 1235), f"분양가가 적정가격보다 {c['pct']} 높음", 44, WHITE, bold=0, alpha=ease((t - 3.4) / 0.8))
+        draw_text(img, (CX, 1235), f"분양가가 적정가격보다 {c['pct']} {c.get('gapword', '높음')}", 44, WHITE, bold=0, alpha=ease((t - 3.4) / 0.8))
         disc(img, 1.0)
         return img
 
