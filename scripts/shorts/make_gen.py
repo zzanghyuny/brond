@@ -237,8 +237,36 @@ def build(key):
         return finish(img, fi)
     return c, DUR, frame, scenes
 
+def make_thumbnail(key, path):
+    """썸네일(커버) 이미지 1080x1920: 대표 이미지를 어둡게 깔고 단지명·예상 프리미엄을 황동 포인트로."""
+    from PIL import ImageFilter
+    c = CFG[key]
+    ld = lambda n: Image.open(c['dir'] + n).convert('RGB')
+    hero = c.get('aerial', {}).get('img') or c.get('loc', {}).get('img') or c.get('place', {}).get('img')
+    src = grade(ld(hero), bright=0.55)
+    bw = int(H * src.width / src.height)
+    bg = src.resize((bw, H), Image.BICUBIC).crop(((bw - W) // 2, 0, (bw - W) // 2 + W, H))
+    bg = bg.filter(ImageFilter.GaussianBlur(2))
+    a = np.asarray(bg).astype(np.float32)
+    yy = np.linspace(0, 1, H)[:, None, None]
+    shade = 0.35 + 0.65 * np.clip(np.abs(yy - 0.5) * 2.2, 0, 1)   # 가운데는 밝게, 위아래는 어둡게
+    a = a * (1 - 0.55 * shade) * 0.8
+    img = Image.fromarray(np.clip(a, 0, 255).astype(np.uint8))
+    px = c.get('name_px') or (118 if len(c['name']) <= 8 else 98)
+    px = int(px * 1.15) if len(c['name']) > 10 else int(px * 1.1)
+    draw_text(img, (CX, 560), '브동산', 50, BRASS, spacing=20, bold=1)
+    hline(img, 640, CX - 300, CX + 300, 1.0)
+    draw_text(img, (CX, 700), c['name'], px, WHITE, spacing=4, bold=2)
+    draw_text(img, (CX, 860), '예상 프리미엄', 60, WHITE, spacing=10, bold=1)
+    draw_text(img, (CX, 960), c['prem'], 200, BRASS, spacing=2, bold=3)
+    hline(img, 1230, CX - 300, CX + 300, 1.0)
+    draw_text(img, (CX, 1270), c.get('thumb_sub', '분양가는 적정한 걸까?'), 54, WHITE, spacing=4, bold=1)
+    img.save(path)
+    return path
+
 if __name__ == '__main__':
     key = sys.argv[1]; stills = [float(x) for x in sys.argv[2:]]
+    if key.endswith('--thumb') or (stills == [] and False): pass
     c, DUR, frame, scenes = build(key)
     OUT = mv.OUT
     if stills:
@@ -256,3 +284,4 @@ if __name__ == '__main__':
     final = OUT + f"{c['out']}-shorts.mp4"
     subprocess.run(['ffmpeg','-loglevel','error','-y','-i',outp,'-i',OUT+f'audio_{key}.wav','-map','0:v','-map','1:a','-c:v','copy','-c:a','aac','-b:a','192k','-t',str(DUR),'-movflags','+faststart',final],check=True)
     print('done', final)
+    print('thumb', make_thumbnail(key, OUT + f"{c['out']}-thumbnail.png"))
