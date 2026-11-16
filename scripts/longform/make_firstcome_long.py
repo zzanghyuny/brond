@@ -33,7 +33,7 @@ IMG = os.path.join(ROOT, 'posts', 'images', SLUG) + '/'
 OUT = os.environ.get('LONG_OUT', '/tmp/long-out/'); os.makedirs(OUT, exist_ok=True)
 D = json.load(open(os.path.join(ROOT, 'scripts', 'firstcome', 'result2.json')))
 
-W, H, FPS = 1920, 1080, 30
+W, H, FPS = int(os.environ.get('FC_W', 1920)), int(os.environ.get('FC_H', 1080)), 30  # 세로 버전은 FC_W/FC_H로 바꿔 import
 FONT = '/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc'
 BRASS = (200, 164, 92); WHITE = (244, 241, 234); GRAY = (150, 148, 142); DIM = (90, 88, 84); BG = (8, 8, 9)
 CX = W // 2
