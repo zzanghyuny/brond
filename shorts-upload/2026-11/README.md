@@ -81,3 +81,10 @@ Aside 배포용. 각 단지마다 영상(`<이름>.mp4`, 1080×1920 세로, 30~3
 - `sudogwon-firstcome-top30-202611-youtube.mp4` + 썸네일 `sudogwon-firstcome-top30-202611-youtube-thumbnail.png`(1280×720)
 - 제목·설명·챕터(타임스탬프)·해시태그는 `sudogwon-firstcome-top30-202611-youtube.txt`를 그대로 복사해 쓴다.
 - 생성기: `scripts/longform/make_firstcome_long.py` (쇼츠와 같은 검정·황동 톤, 드론·펄스 음악 + 효과음, 나레이션 없음)
+
+## 쇼츠·네이버 클립·릴스 세로 영상 (1080×1920, 1분 27초)
+
+- `sudogwon-firstcome-top30-202611-shorts.mp4` + 썸네일 `sudogwon-firstcome-top30-202611-shorts-thumbnail.png`(1080×1920)
+- 제목·설명·해시태그는 `sudogwon-firstcome-top30-202611-shorts.txt`
+- 구성: 오프닝 → 한눈에(웃돈 남는 곳 2곳) → 30~21위·20~11위 순위판 → TOP 10 단지 카드 → 한줄평 3묶음 → 마무리
+- 생성기: `scripts/longform/make_firstcome_shorts.py`
