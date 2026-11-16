@@ -140,7 +140,7 @@ def site_html():
     body = f"""<h2>1. 핵심 요약 — 지금 동·호수를 골라 살 수 있는 {N}곳, 남는 곳이 있나?</h2>
 <p>청약통장 없이 동·호수를 골라 계약할 수 있는 {AREAS} 미분양 선착순 단지 {N}곳을 브동산 모형으로 계산했다. <b>{summary_sentence()}</b></p>
 <div class='stat'><div class='note'>1위 · {H.escape(top[0]['name'])}</div><div class='big'>{pct(top[0])} ({fmt(top[0]['final'], True)})</div><div>기준 분양가 {eok(top[0]['base'])} · 적정가격 {eok(top[0]['fair'])}</div></div>
-<p><b>{'· '.join(f"{o['rank']}위 {H.escape(o['name'])}({pct(o)})" for o in top)}.</b> {dist_sentence()}</p>
+<p><b>{' · '.join(f"{o['rank']}위 {H.escape(o['name'])}({pct(o)})" for o in top)}.</b> {dist_sentence()}</p>
 <img src='images/{SLUG}/chart-top.png' style='width:100%;display:block;' alt='{LABEL} 미분양 선착순 TOP{N} 예상 프리미엄 증감률 순위 그래프'>
 <p class='note'>이미지 01 · 분양가 대비 예상 프리미엄(%) 순위. 괄호 안은 금액.</p>
 {rank_tbl}

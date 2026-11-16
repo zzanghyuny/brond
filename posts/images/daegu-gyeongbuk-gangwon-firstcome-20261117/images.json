@@ -1,0 +1,72 @@
+{
+ "dalseo-prugio": {
+  "aerial": {
+   "file": "dalseo-prugio-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  },
+  "location": {
+   "file": "dalseo-prugio-location.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  }
+ },
+ "dalseo-xi-zenik": {
+  "aerial": {
+   "file": "dalseo-xi-zenik-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  },
+  "location": {
+   "file": "dalseo-xi-zenik-location.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  }
+ },
+ "gyeongsan-hoban": {
+  "aerial": {
+   "file": "gyeongsan-hoban-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  },
+  "location": {
+   "file": "gyeongsan-hoban-location.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  }
+ },
+ "yeongju-harrington": {
+  "aerial": {
+   "file": "yeongju-harrington-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  },
+  "location": {
+   "file": "yeongju-harrington-location.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  }
+ },
+ "richmond-soyang": {
+  "aerial": {
+   "file": "richmond-soyang-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  },
+  "location": {
+   "file": "richmond-soyang-location.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  }
+ },
+ "chuncheon-urbanforet": {
+  "aerial": {
+   "file": "chuncheon-urbanforet-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  },
+  "location": {
+   "file": "chuncheon-urbanforet-location.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  }
+ },
+ "gangneung-umirin": {
+  "aerial": {
+   "file": "gangneung-umirin-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  },
+  "location": {
+   "file": "gangneung-umirin-location.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  }
+ }
+}

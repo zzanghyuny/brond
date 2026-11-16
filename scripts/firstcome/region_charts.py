@@ -87,15 +87,15 @@ def summary():
 
 def picks():
     groups = F.META.get('groups', [])
-    H = 170 + sum(120 + 52 * len(g[2]) for g in groups) + 20 * len(groups) + 60; fig, ax = canvas(H)
+    H = 170 + sum(136 + 52 * len(g[2]) for g in groups) + 20 * len(groups) + 60; fig, ax = canvas(H)
     put(ax, 40, 56, "브동산 한줄평 · 이렇게 보세요", 40, True); put(ax, 40, 108, "통장 없이, 원하는 동·호수를 고를 수 있는 선착순", 28, False, SOFT)
     ax.plot([40, 960], [140, 140], color=ACCENT, lw=3); y = 170
     for k, (t1, t2, names) in enumerate(groups):
-        hh = 100 + 52 * len(names)
+        hh = 116 + 52 * len(names)
         ax.add_patch(Rectangle((40, y), 920, hh, fc=ACCENT_BG if k == 0 else 'white', ec=ACCENT if k == 0 else '#CFCFCF', lw=3))
         ax.add_patch(Rectangle((40, y), 14, hh, fc=ACCENT if k == 0 else '#5A5A5A', ec='none'))
         put(ax, 80, y + 36, t1, 36, True); put(ax, 80, y + 76, t2, 28, False, MID)
-        for j, n in enumerate(names): put(ax, 80, y + 112 + 52 * j, f"· {n}", 30, False, INK)
+        for j, n in enumerate(names): put(ax, 80, y + 132 + 52 * j, f"· {n}", 30, False, INK)
         y += hh + 20
     put(ax, 40, H - 36, "순위·금액은 본문 표와 같은 기준입니다", 26, False, SOFT)
     save(fig, "chart-picks.png")
