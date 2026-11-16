@@ -10,6 +10,41 @@
   },
   "posts": [
     {
+      "slug": "sudogwon-firstcome-top30-202611",
+      "number": 1,
+      "title": "수도권 - 미분양 선착순 단지 TOP30 | 지금 해볼 만한 단지가 있을까?, 1위 오산헤리티지자이 예상 프리미엄은 +1,450만",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-16",
+      "site_url": "https://www.brandongsan.com/posts/sudogwon-firstcome-top30-202611.html",
+      "naver_html": "naver-html/sudogwon-firstcome-top30-202611.html",
+      "naver_title": "수도권 미분양 선착순 단지 TOP30 | 지금 해볼 만한 단지 있을까?",
+      "naver_tags": [
+        "미분양아파트",
+        "선착순분양",
+        "수도권미분양",
+        "잔여세대",
+        "동호수지정",
+        "줍줍",
+        "예상프리미엄",
+        "브레인시티",
+        "고덕국제신도시",
+        "오산헤리티지자이",
+        "고촌센트럴자이",
+        "상동역롯데캐슬",
+        "힐스테이트구월아트파크",
+        "분양가비교",
+        "브동산"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/sudogwon-firstcome-top30-202611/chart-summary.png",
+        "https://www.brandongsan.com/posts/images/sudogwon-firstcome-top30-202611/gochon-xi-aerial.jpg"
+      ],
+      "naver_published": false,
+      "naver_post_id": null,
+      "published_at": null
+    },
+    {
       "slug": "gold-vs-apartment-trading-costs",
       "number": 102,
       "title": "전국 - 금과 아파트 | 금 1돈 사고팔 때 10만 원 차이, 부동산 거래비용과 비교하면",

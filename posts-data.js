@@ -22,6 +22,7 @@
 */
 
 const POSTS = [
+  { id: "sudogwon-firstcome-top30-202611", category: "realestate", region: "수도권", tag: "미분양 랭킹 No.001", title: "수도권 - 미분양 선착순 단지 TOP30 | 지금 해볼 만한 단지가 있을까?, 1위 오산헤리티지자이 예상 프리미엄은 +1,450만", date: "2026-11-16", dateLabel: "2026. 11. 16", url: "posts/sudogwon-firstcome-top30-202611.html", preview: `<p>청약통장 없이 동·호수를 골라 계약할 수 있는 수도권 미분양 선착순 단지 30곳을 브동산 모형으로 계산해 분양가 대비 증감률 순으로 정리했다. 분양가보다 적정가격이 높게 나온 곳은 2곳뿐이고, 1위 오산헤리티지자이가 +1.8%(+1,450만)다.</p>` },
   { id: "gold-vs-apartment-trading-costs", category: "realestate", region: "전국", tag: "청약 언박싱 No.102", title: "전국 - 금과 아파트 | 금 1돈 사고팔 때 10만 원 차이, 부동산 거래비용과 비교하면", date: "2026-11-14", dateLabel: "2026. 11. 14", url: "posts/gold-vs-apartment-trading-costs.html", preview: `<p>금값이 내려왔다는 뉴스 뒤에는 늘 같은 질문이 따라온다. 지금 금을 살까, 집을 살까? 어디가 오를지 맞히기 전에 먼저 확인할 것이 있다. 사고팔 때 얼마가 드는가다.</p>` },
   {
     id: "ulsan-hwajeong1-arel",

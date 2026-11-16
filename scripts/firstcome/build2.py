@@ -117,19 +117,13 @@ for o in d:
     if o['basis']: extra=f"<li class='note'>원 계산값 {fmt(o['raw'])}에 {o['basis']}을 적용</li>"
     cards+=f"""<h3>{o['rank']}위. {o['name']} <span class='note'>{pct(o)}</span></h3>
 <p class='note'>{o['region']} · {o['builder']} · {o['n']:,}세대 · {o['yr']}.{o['mo']:02d} {status_word(o)} · 평점 {o['score']}점</p>
-<table><tbody><tr><th>분양가</th><td>{o['price_note']}{f" → 실질 {eok(o['base'])}" if o.get('benefit') else ''}</td></tr><tr><th>비교 기준</th><td>{ct}</td></tr><tr><th>적정가격</th><td>{eok(o['fair'])}</td></tr><tr><th>예상 프리미엄</th><td><b>{fmt(o['final'])} ({pct(o)})</b></td></tr></tbody></table>
+<table class='kv'><tbody><tr><th>분양가</th><td>{o['price_note']}{f" → 실질 {eok(o['base'])}" if o.get('benefit') else ''}</td></tr><tr><th>비교 기준</th><td>{ct}</td></tr><tr><th>적정가격</th><td>{eok(o['fair'])}</td></tr><tr><th>예상 프리미엄</th><td><b>{fmt(o['final'])} ({pct(o)})</b></td></tr></tbody></table>
 {imgpair(o)}
 <p>{T[o['key']][0]}</p>
 {f"<ul>{nt}{extra}</ul>" if (nt or extra) else ''}
 <p><b>{T[o['key']][1]}</b></p>
 """
-site=f"""<!doctype html><html lang='ko'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
-<title>수도권 미분양 선착순 단지 TOP30, 지금 해볼 만한 단지가 있을까? | 브동산</title>
-<meta name='description' content='{D_KO} 기준 수도권 미분양 선착순 아파트 30곳의 예상 프리미엄을 브동산 모형으로 계산해 분양가 대비 증감률 순으로 정리했다. 플러스는 2곳뿐이었다.'>
-<style>{STYLE}</style></head><body>
-<p class='byline'>브동산 · 수도권 미분양 선착순 랭킹 · {D_SP}</p>
-<h1>수도권 미분양 선착순 단지 TOP30, 지금 해볼 만한 단지가 있을까?</h1>
-<h2>1. 핵심 요약 — 지금 동·호수를 골라 살 수 있는 30곳, 남는 곳이 있나?</h2>
+SITE_BODY=f"""<h2>1. 핵심 요약 — 지금 동·호수를 골라 살 수 있는 30곳, 남는 곳이 있나?</h2>
 <p>청약통장 없이 동·호수를 골라 계약할 수 있는 수도권 미분양 선착순 단지 30곳을 브동산 모형으로 계산했다. <b>분양가보다 적정가격이 높게 나온 곳은 {NP}곳뿐이고, 그마저 +2%를 넘지 않았다.</b></p>
 <div class='stat'><div class='note'>1위 · {top[0]['name']}</div><div class='big'>{pct(top[0])} ({fmt(top[0]['final'])})</div><div>기준 분양가 {eok(top[0]['base'])} · 적정가격 {eok(top[0]['fair'])}</div></div>
 <p><b>1위 {top[0]['name']}({pct(top[0])}), 2위 {top[1]['name']}({pct(top[1])}), 3위 {top[2]['name']}({pct(top[2])})까지가 사실상 무피권이다.</b> 0~−5% 구간에 {NS}곳이 몰려 있고, −10%보다 나쁜 단지도 {NB}곳이다.</p>
@@ -154,7 +148,30 @@ site=f"""<!doctype html><html lang='ko'><head><meta charset='utf-8'><meta name='
 <h3>출처</h3>
 <ul>{''.join(f"<li class='note'><a href='{u}'>{t}</a></li>" for t,u in SRC)}</ul>
 <p class='note'>본 글은 정보 제공 목적이며 투자 권유나 매수·계약 대행이 아니다. 브동산 모형은 공개 실거래와 자체 평점으로 계산한 추정치이며, 실제 계약 전에는 입주자모집공고와 분양 사무실 안내를 확인해야 한다.</p>
-</body></html>"""
+"""
+SITE_BODY=SITE_BODY.replace("<div class='wrap'>","<div class='tblwrap'>")
+TITLE_S=f"수도권 - 미분양 선착순 단지 TOP30 | 지금 해볼 만한 단지가 있을까?, 1위 {top[0]['name']} 예상 프리미엄은 {fmt(top[0]['final'],False)}"
+DESC=f"{D_KO} 기준 수도권 미분양 선착순 아파트 30곳의 예상 프리미엄을 브동산 모형으로 계산해 분양가 대비 증감률 순으로 정리했다. 플러스는 {NP}곳뿐이었다."
+import re as _re
+_ref=open('../../posts/gyeonghuigung-efit.html',encoding='utf-8').read()
+_head=_ref[:_ref.index('<body')]
+_head=_re.sub(r'https://www.brandongsan.com/posts/[a-z0-9-]+\.html',f'https://www.brandongsan.com/posts/{SLUG}.html',_head)
+_head=_re.sub(r'<title>.*?</title>',f'<title>수도권 미분양 선착순 단지 TOP30 | 브동산</title>',_head,flags=_re.S)
+_head=_re.sub(r'<meta name="description" content="[^"]*">',f'<meta name="description" content="{DESC}">',_head)
+EXTRA="<style>.note{font-size:13px;color:#8A8A8A}.stat{border:1px solid #111;padding:14px 16px;margin:12px 0}.big{font-size:22px;font-weight:800}td.num{text-align:right;white-space:nowrap}.tblwrap{overflow-x:auto}.content table{width:100%;min-width:0;border-collapse:collapse;margin:14px 0;font-size:14px}.content th,.content td{border:1px solid #D8D8D8;padding:7px;vertical-align:top;text-align:left}.content th{background:#F5F5F5}.content td,.content th{white-space:normal;overflow-wrap:anywhere;word-break:keep-all}.content td.num{white-space:nowrap}.content .note{overflow-wrap:anywhere}.content img{max-width:100%;display:block}.content{padding-left:24px;padding-right:24px}.content h2{margin-top:44px}.tblwrap table{min-width:620px}.tblwrap td,.tblwrap th{overflow-wrap:normal}.tblwrap td:nth-child(2){min-width:170px}.content table.kv{table-layout:fixed}.content table.kv th{width:26%}</style>"
+_head=_head.replace('</head>',EXTRA+'\n</head>')
+_foot=f"""<footer><div class="wrap"><div class="hairline" style="margin-bottom:20px;"></div><p>본 콘텐츠는 <b>브동산</b>이 공식·분양 홈페이지, 분양 홍보 페이지, 리치고·집품 등 공개 실거래·시세, 공개된 언론 보도를 참고해 작성한 정보성 콘텐츠다. 투자 권유나 청약·매수·계약 대행이 아니며, 분양가·조건·잔여 세대는 수시로 바뀐다. 단지 이미지는 분양 홍보 페이지의 조감도·위치도이며 실제와 다를 수 있다. 적정가는 비교단지의 시세를 평점·연식으로 보정한 브동산 자체 산출값으로 실제 거래가를 보장하지 않는다. 계약 전에는 입주자모집공고와 분양 사무실 안내를 반드시 확인하기 바란다.</p></div></footer></body></html>"""
+site=_head+f"""<body>
+<div class="top-eyebrow"><div class="wrap"><a class="brand-mark" href="https://brandongsan.com/"><span class="bm-b">브</span><span class="bm-rest">동산</span></a><a class="list-btn" href="https://brandongsan.com/realestate.html">☰ 목록</a></div></div>
+<div class="wrap">
+<div class="titleblock"><h1>{TITLE_S}</h1></div>
+<div class="byline"><span class="avatar">브</span><span class="who">브동산</span><span class="dot">·</span><span class="when">{D_SP}</span><span class="tag">미분양 랭킹 No.001</span></div>
+</div>
+<div class="hairline"></div>
+<div class="wrap content">
+"""+SITE_BODY+"""
+</div>
+"""+_foot
 open(f'{OUT}/{SLUG}.html','w').write(site)
 
 # ---------- 네이버 ----------
