@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""수도권 미분양 선착순 TOP30 — 쇼츠·네이버 클립·릴스용 세로(1080x1920) 영상, 약 80초.
+"""미분양 선착순 TOP N(수도권·지방 권역, RID 환경변수) — 쇼츠·네이버 클립·릴스용 세로(1080x1920) 영상, 약 80초.
 
 가로 풀영상(make_firstcome_long.py)과 같은 무드·도구를 세로 화면에 맞춰 다시 배치한다.
 구성: 오프닝 → 훅 → 한눈에(2곳) → 30~21위 순위판 → 20~11위 순위판 → TOP 10 카드(10~4위 빠르게, TOP3 길게) → 한줄평 3묶음 → 마무리.
@@ -16,6 +16,8 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 from multiprocessing import Pool
 import make_firstcome_long as L
+import fcdata as FC
+LABEL, NN = FC.LABEL, FC.N
 from make_firstcome_long import (text, tw, wrap, hline, ease, ease_out, kenburns, fitbox, ld, fmt, pct, blank, overlay, finish, push,
                                  grade, BRASS, WHITE, GRAY, BG, D, T, NP, B1, B2, B3, D_DOT, SLUG, IMG, OUT, FPS, GROUPS)
 import sfx
@@ -30,11 +32,11 @@ def s_open(t, L_):
     img = blank()
     text(img, (CX, 560), '브동산', 46, BRASS, sp=18, a=ease((t - 0.4) / 0.7))
     hline(img, 650, CX - 330, CX + 330, ease_out((t - 0.2) / 1.0))
-    text(img, (CX, 690 - 14 * (1 - ease_out((t - 0.8) / 0.9))), '수도권 미분양', 92, WHITE, sp=6, bold=2, a=ease((t - 0.8) / 0.8))
+    text(img, (CX, 690 - 14 * (1 - ease_out((t - 0.8) / 0.9))), f'{LABEL} 미분양', 92 if len(LABEL) <= 4 else 80, WHITE, sp=6, bold=2, a=ease((t - 0.8) / 0.8))
     text(img, (CX, 810 - 14 * (1 - ease_out((t - 1.1) / 0.9))), '선착순', 92, WHITE, sp=10, bold=2, a=ease((t - 1.1) / 0.8))
-    text(img, (CX, 940 - 14 * (1 - ease_out((t - 1.5) / 0.9))), 'TOP 30', 170, BRASS, sp=12, bold=4, a=ease((t - 1.5) / 0.8))
+    text(img, (CX, 940 - 14 * (1 - ease_out((t - 1.5) / 0.9))), f'TOP {NN}', 170, BRASS, sp=12, bold=4, a=ease((t - 1.5) / 0.8))
     hline(img, 1170, CX - 330, CX + 330, ease_out((t - 2.0) / 0.9), w=1)
-    text(img, (CX, 1200), '지금 해볼 만한 단지가 있을까?', 50, WHITE, sp=3, bold=1, a=ease((t - 2.4) / 0.8))
+    text(img, (CX, 1200), FC.HOOK, 50, WHITE, sp=3, bold=1, a=ease((t - 2.4) / 0.8))
     return img
 
 def s_hook(t, L_):
@@ -50,7 +52,7 @@ def s_glance(t, L_):
     text(img, (CX, 330), '분양가보다 적정가격이 높은 단지', 44, WHITE, bold=1, a=ease((t - 0.2) / 0.7))
     n = int(round(NP * ease_out((t - 0.5) / 1.2)))
     text(img, (CX, 400), f'{n}', 330, BRASS, bold=5, a=ease((t - 0.5) / 0.5))
-    text(img, (CX, 790), f'30곳 중 단 {NP}곳', 64, WHITE, sp=2, bold=2, a=ease((t - 1.6) / 0.7))
+    text(img, (CX, 790), (f'{NN}곳 중 단 {NP}곳' if NP else f'{NN}곳 중 0곳'), 64, WHITE, sp=2, bold=2, a=ease((t - 1.6) / 0.7))
     rows = [('플러스', NP, BRASS), ('0 ~ -5%', B1, (225, 222, 214)), ('-5 ~ -10%', B2, (150, 148, 142)), ('-10% 이하', B3, (95, 93, 90))]
     mx = max(r[1] for r in rows)
     for i, (lab, v, c) in enumerate(rows):
@@ -109,7 +111,7 @@ def s_card(o, top=False):
             else: pimg = fitbox(ld(f'{k_}-location.jpg', 'dark'), W, bh, t / L_)
             img.paste(pimg, (0, y0))
             d.line((0, y0, W, y0), fill=BRASS, width=2); d.line((0, y0 + bh, W, y0 + bh), fill=BRASS, width=2)
-            text(img, (SL, y0 + bh + 10), '분양 홍보 페이지(아파트투유) · CG·홍보물로 실제와 다를 수 있음', 22, GRAY, anchor='l', bold=0, a=ease((t - 0.5) / 0.6))
+            text(img, (SL, y0 + bh + 10), f"{FC.IMGJ.get(k_, {}).get('aerial', FC.IMGJ.get(k_, {}).get('location', {})).get('src', '분양 홍보 페이지')} · CG·홍보물로 실제와 다를 수 있음", 22, GRAY, anchor='l', bold=0, a=ease((t - 0.5) / 0.6))
         else:
             d.rectangle((SL, y0, SR, y0 + bh), outline=(46, 45, 42), width=2)
             text(img, (CX, y0 + 110), f"{o['rank']:02d}", 280, (30, 29, 27), bold=4)
@@ -158,20 +160,23 @@ def s_groups(t, L_):
 
 def s_end(t, L_):
     img = blank()
-    text(img, (CX, 640), '웃돈은 작아도,', 80, WHITE, sp=4, bold=2, a=ease(t / 0.6))
-    text(img, (CX, 760), '고를 수 있는 시장', 80, BRASS, sp=4, bold=2, a=ease((t - 0.4) / 0.6))
+    text(img, (CX, 640), (FC.META.get('end_lines') or (['웃돈은 작아도,', (FC.META.get('end_lines') or (['웃돈은 작아도,', '고를 수 있는 시장'] if FC.NP else ['웃돈보다,', '살 집을 고르는 시장']))[1]] if FC.NP else ['웃돈보다,', '살 집을 고르는 시장']))[0], 80, WHITE, sp=4, bold=2, a=ease(t / 0.6))
+    text(img, (CX, 760), (FC.META.get('end_lines') or (['웃돈은 작아도,', '고를 수 있는 시장'] if FC.NP else ['웃돈보다,', '살 집을 고르는 시장']))[1], 80, BRASS, sp=4, bold=2, a=ease((t - 0.4) / 0.6))
     hline(img, 920, CX - 220, CX + 220, ease_out((t - 0.9) / 0.8))
-    text(img, (CX, 960), '보름마다 다시 계산합니다', 46, WHITE, sp=2, bold=1, a=ease((t - 1.3) / 0.6))
+    text(img, (CX, 960), f'{FC.CYCLE} 다시 계산합니다', 46, WHITE, sp=2, bold=1, a=ease((t - 1.3) / 0.6))
     text(img, (CX, 1040), '더 궁금한 단지는 댓글로 남겨주세요', 40, BRASS, sp=2, bold=1, a=ease((t - 1.7) / 0.6))
     text(img, (CX, 1130), '숫자로 읽는 브동산', 38, GRAY, sp=12, bold=0, a=ease((t - 2.1) / 0.6))
     disc(img, ease(t / 0.6))
     return img
 
 def build():
-    sc = [(s_open, 4.6, 'open'), (s_hook, 4.4, 'hook'), (s_glance, 6.8, 'glance'),
-          (s_board(20, 30, '30위 ~ 21위'), 6.0, 'board'), (s_board(10, 20, '20위 ~ 11위'), 6.0, 'board'),
-          (s_divider('TOP 10', '시세 수준에 가장 가까운 열 곳'), 2.4, 'div')]
-    for o in reversed(D[:10]):
+    sc = [(s_open, 4.6, 'open'), (s_hook, 4.4, 'hook'), (s_glance, 6.8, 'glance')]
+    starts = list(range(10, NN, 10))[::-1]   # 순위판: 11위 이후를 10위씩(큰 순위부터)
+    for a in starts:
+        b = min(NN, a + 10); sc.append((s_board(a, b, f'{b}위 ~ {a + 1}위'), 6.0, 'board'))
+    tk = min(10, NN)
+    sc.append((s_divider(f'TOP {tk}', f'분양가가 시세에 가장 가까운 {tk}곳'), 2.4, 'div'))
+    for o in reversed(D[:tk]):
         sc.append((s_card(o, top=o['rank'] <= 3), 6.2 if o['rank'] <= 3 else 3.8, 'top' if o['rank'] <= 3 else 'cx'))
     sc += [(s_groups, 6.4, 'groups'), (s_end, 4.8, 'end')]
     out, cur = [], 0.0
@@ -214,27 +219,32 @@ def events():
 
 def thumbnail(path):
     top = D[0]
-    hero = IMG + (f"{top['key']}-aerial.jpg" if os.path.exists(IMG + f"{top['key']}-aerial.jpg") else f"{D[1]['key']}-aerial.jpg")
-    src = grade(Image.open(hero).convert('RGB'), 0.55); bw = int(H * src.width / src.height)
+    _c = [IMG + f"{o['key']}-aerial.jpg" for o in D if os.path.exists(IMG + f"{o['key']}-aerial.jpg")]
+    src = grade(Image.open(_c[0]).convert('RGB'), 0.55) if _c else Image.new('RGB', (W, H), (40, 40, 40)); bw = int(H * src.width / src.height)
     bg = src.resize((bw, H), Image.BICUBIC).crop(((bw - W) // 2, 0, (bw - W) // 2 + W, H)).filter(ImageFilter.GaussianBlur(2))
     a = np.asarray(bg).astype(np.float32); yy = np.linspace(0, 1, H)[:, None, None]
     a = a * (1 - 0.55 * (0.35 + 0.65 * np.clip(np.abs(yy - 0.5) * 2.2, 0, 1))) * 0.8
     img = Image.fromarray(np.clip(a, 0, 255).astype(np.uint8))
     text(img, (CX, 470), '브동산', 50, BRASS, sp=20, bold=1)
     hline(img, 550, CX - 320, CX + 320, 1.0, BRASS, 3)
-    text(img, (CX, 590), '수도권 미분양 선착순', 74, WHITE, sp=3, bold=2)
-    text(img, (CX, 690), 'TOP 30', 190, WHITE, sp=10, bold=5)
-    text(img, (CX, 950), '웃돈 남는 곳', 70, WHITE, sp=4, bold=2)
-    text(img, (CX, 1040), f'단 {NP}곳', 200, BRASS, sp=4, bold=5)
+    text(img, (CX, 590), f'{LABEL} 미분양 선착순', 74 if len(LABEL) <= 4 else 64, WHITE, sp=3, bold=2)
+    text(img, (CX, 690), f'TOP {NN}', 190, WHITE, sp=10, bold=5)
+    if NP:
+        text(img, (CX, 950), '웃돈 남는 곳', 70, WHITE, sp=4, bold=2)
+        text(img, (CX, 1040), f'단 {NP}곳', 200, BRASS, sp=4, bold=5)
+    else:
+        text(img, (CX, 950), '시세에 가장 가까운 곳', 64, WHITE, sp=3, bold=2)
+        text(img, (CX, 1040), pct(top), 180, BRASS, sp=4, bold=5)
     hline(img, 1300, CX - 320, CX + 320, 1.0, BRASS, 3)
     text(img, (CX, 1330), '지금 해볼 만한 단지는?', 54, WHITE, sp=3, bold=1)
     img.save(path); return path
 
 def describe(path):
-    t = [f'제목: 수도권 미분양 선착순 TOP30 | 웃돈 남는 곳 단 {NP}곳, 1위는?', '',
-         f'설명: {D_DOT} 기준 수도권 미분양 선착순 아파트 30곳의 예상 프리미엄을 브동산 모형으로 계산했습니다. 플러스는 {NP}곳, 1위 {D[0]["name"]} {pct(D[0])}. 단지별 계산은 브동산 홈페이지(brandongsan.com)에서 확인하세요.',
+    ttl = FC.META.get('sh_title') or (f'{LABEL} 미분양 선착순 TOP{NN} | 웃돈 남는 곳 단 {NP}곳, 1위는?' if NP else f'{LABEL} 미분양 선착순 TOP{NN} | 시세에 가장 가까운 곳은?')
+    t = ['제목: ' + ttl, '',
+         f'설명: {D_DOT} 기준 {FC.AREAS} 미분양 선착순 아파트 {NN}곳의 예상 프리미엄을 브동산 모형으로 계산했습니다. 플러스는 {NP}곳, 1위 {D[0]["name"]} {pct(D[0])}. 단지별 계산은 브동산 홈페이지(brandongsan.com)에서 확인하세요.',
          '', '브동산 모형 추정치이며 확정 수익이 아닙니다. 계약 전 입주자모집공고와 분양 사무실 안내를 확인하세요. 더 궁금한 단지는 댓글로 남겨주세요.',
-         '', '해시태그: #미분양 #선착순분양 #수도권아파트 #줍줍 #예상프리미엄 #브동산', '', f'길이: {DUR:.1f}초 · 1080x1920 · 쇼츠·네이버 클립·릴스 공용']
+         '', '해시태그: #미분양 #선착순분양 ' + ' '.join('#' + x + '아파트' for x in FC.AREAS.split('·')) + ' #줍줍 #예상프리미엄 #브동산', '', f'길이: {DUR:.1f}초 · 1080x1920 · 쇼츠·네이버 클립·릴스 공용']
     open(path, 'w', encoding='utf-8').write('\n'.join(t) + '\n'); return path
 
 if __name__ == '__main__':
