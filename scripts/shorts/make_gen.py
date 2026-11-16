@@ -62,6 +62,48 @@ CFG = {
     feature=dict(img='landscape.jpg', title='조경 특화', cap='시그니처 라운지 · 테라스 캠핑 가든', cap2='센트럴 웨이브 · 물놀이터 · 공식 홈페이지 CG', c0=(0.3,0.3), c1=(0.6,0.6), z=(1.0,1.35), box=(780,780)),
     place=dict(img='location.jpg', title='입지', cap='논산시청 약 560m · 내동 생활권', cap2='공식 위치도 · KTX 논산역 인근', graded=False, box=(800,760)),
  ),
+ 'gwangju': dict(
+    dir=_IMGROOT+'gwangju-jeil-foredu/', out='gwangju-jeil-foredu',
+    name='제일풍경채 광주 포에듀', name_px=64, loc_txt='경기 광주시 탄벌동', avg=6.71, rng='층별 6.03 ~ 6.91억 · 세대수 가중평균',
+    ctitle='비교단지 실거래', csub='84㎡ 실거래 · 국토교통부 신고 기준',
+    comps=[('두산위브광주센트럴파크 · 2024.10', 5.85), ('경남아너스빌1단지 · 2011.07', 4.23)],
+    cvmax=7.0, fair=6.00, prem='-7,100만', pct='약 12%', gvmax=7.4,
+    disc='브동산 모형 추정치 · 확정 수익 아님 · 84㎡ 평균 · 2026.11.06 공고 기준',
+    info=[('청약', '11월 16일 ~ 18일'), ('전매제한', '6개월'), ('당첨 발표', '11월 24일')],
+    scenes=[('title',2.6),('aerial',3.6),('price',3.2),('comps',3.9),('gap',4.3),('layout',3.4),('feature',3.4),('place',3.2),('info',2.6),('end',3.0)],
+    aerial=dict(img='cover.jpg', t1='경기 광주시 탄벌동', l1='지하 2층 ~ 지상 29층 · 6개 동', l2='572세대 · 전 세대 84㎡', src='이미지는 CG이며 실제와 다를 수 있음 · 출처: 공식 분양 홈페이지'),
+    layout=dict(img='siteplan.jpg', title='단지 배치', cap='6개 동 · 572세대', c0=(0.5,0.45), c1=(0.5,0.5), z=(1.0,1.3), box=(820,640)),
+    feature=dict(img='community.jpg', title='단지 커뮤니티', cap='EDU ZONE · HEALTHY ZONE', cap2='공식 홈페이지 커뮤니티 안내', c0=(0.5,0.2), c1=(0.5,0.6), z=(1.0,1.0), box=(780,760)),
+    place=dict(img='location.jpg', title='입지', cap='탄벌동 생활권', cap2='공식 위치도 · 교통·개발 계획은 변경될 수 있음', graded=False, box=(840,560)),
+ ),
+ 'gyeongsan': dict(
+    dir=_IMGROOT+'gyeongsan-richel-eduforet/', out='gyeongsan-richel-eduforet',
+    name='리첼 에듀포레 경산역', name_px=64, loc_txt='경북 경산시 사정동', avg=6.03, rng='층별 5.91 ~ 6.38억 · 세대수 가중평균',
+    comps=[('중방스타힐스 · 2023.09', 3.85), ('힐스테이트펜타힐즈 · 2021.03', 5.20)],
+    cvmax=6.4, fair=4.83, prem='-1.19억', pct='약 25%', gvmax=6.8,
+    disc='브동산 모형 추정치 · 확정 수익 아님 · 84㎡ 평균 · 2026.11.13 기준',
+    info=[('청약', '11월 13일 ~ 17일'), ('전매제한', '없음'), ('당첨 발표', '11월 23일')],
+    scenes=[('title',2.6),('aerial',3.6),('price',3.2),('comps',3.9),('gap',4.3),('layout',3.4),('feature',3.4),('place',3.2),('info',2.6),('end',3.0)],
+    aerial=dict(img='aerial.jpg', t1='경북 경산시 사정동', l1='지하 2층 ~ 지상 29층 · 4개 동', l2='410세대 중 일반분양 201세대', src='조감도는 CG이며 실제와 다를 수 있음 · 출처: 공식 분양 홈페이지'),
+    layout=dict(img='layout.jpg', title='단지 배치', cap='4개 동 · 410세대', c0=(0.5,0.5), c1=(0.5,0.5), z=(1.0,1.3), box=(840,500)),
+    feature=dict(img='land.jpg', title='단지 조경', cap='단지 조경 특화', cap2='공식 홈페이지 CG · 실제와 다를 수 있음', c0=(0.5,0.5), c1=(0.55,0.45), z=(1.0,1.3), box=(820,620)),
+    place=dict(img='location.jpg', title='입지', cap='경산역 역세권', cap2='공식 위치도 · 경산시장·NC백화점 인근', graded=False, box=(800,700)),
+ ),
+ 'siheung': dict(
+    dir=_IMGROOT+'siheung-geomo-artera/', out='siheung-geomo-artera',
+    name='시흥 거모 아테라', loc_txt='경기 시흥시 거모동', avg=4.58, rng='59A · 59B · 59C 평균',
+    plabel='59㎡ 평균 분양가', glabel='실제 분양가 (59㎡ 평균)',
+    ctitle='비교단지 실거래', csub='59㎡ 실거래 · 국토교통부 신고 기준',
+    comps=[('시흥장현예다음아르테 · 2022.12', 2.90), ('안산신길온천역휴먼빌 · 2005.07', 2.95)],
+    cvmax=3.6, fair=3.59, prem='-9,900만', pct='약 28%', gvmax=5.0,
+    disc='브동산 모형 추정치 · 확정 수익 아님 · 59㎡ 평균 · 2026.11.06 공고 기준',
+    info=[('청약', '11월 26일 ~ 27일'), ('대상', '신혼부부 등'), ('당첨 발표', '12월 8일')],
+    scenes=[('title',2.6),('aerial',3.6),('price',3.2),('comps',3.9),('gap',4.3),('layout',3.4),('feature',3.4),('place',3.2),('info',2.6),('end',3.0)],
+    aerial=dict(img='cover.jpg', t1='경기 시흥시 거모동', l1='민간참여 공공분양 · 총 720세대', l2='신혼희망타운 본청약', src='조감도는 CG이며 실제와 다를 수 있음 · 출처: 공식 분양 홈페이지'),
+    layout=dict(img='siteplan.jpg', title='단지 배치', cap='총 720세대 · 55㎡·59㎡', c0=(0.5,0.3), c1=(0.5,0.42), z=(1.0,1.3), box=(780,800)),
+    feature=dict(img='community1.jpg', title='단지 커뮤니티', cap='주민공동시설 피트니스', cap2='공식 홈페이지 CG · 실제와 다를 수 있음', c0=(0.5,0.5), c1=(0.55,0.5), z=(1.0,1.25), box=(840,520)),
+    place=dict(img='location.jpg', title='입지', cap='시흥 거모동 생활권', cap2='공식 입지환경 · 교통 계획은 변경될 수 있음', graded=False, c0=(0.5,0.2), c1=(0.5,0.3), z=(1.0,1.15), box=(760,820)),
+ ),
  'ulsan': dict(
     dir=_IMGROOT+'ulsan-hwajeong1-arel/', out='ulsan-arel',
     name='화정1지구 아르엘', loc_txt='울산 동구 화정동', avg=5.56, rng='층별 5.23 ~ 5.67억 · 세대수 가중평균',
@@ -167,8 +209,8 @@ def build(key):
 
     def comps(t):
         img = Image.new('RGB', (W, H), BG)
-        draw_text(img, (CX, 420), '비교단지 KB시세', 54, BRASS, spacing=10, bold=1, alpha=ease(t / 0.7))
-        draw_text(img, (CX, 495), '84㎡ 일반거래가 · 2026.11.13', 36, GRAY, bold=0, alpha=ease(t / 0.7))
+        draw_text(img, (CX, 420), c.get('ctitle', '비교단지 KB시세'), 54, BRASS, spacing=10, bold=1, alpha=ease(t / 0.7))
+        draw_text(img, (CX, 495), c.get('csub', '84㎡ 일반거래가 · 2026.11.13'), 36, GRAY, bold=0, alpha=ease(t / 0.7))
         mv.bar(img, 760, c['comps'][0][0], c['comps'][0][1], c['cvmax'], (t - 0.8) / 1.4, (225, 222, 214), ease((t - 0.6) / 0.6))
         mv.bar(img, 1000, c['comps'][1][0], c['comps'][1][1], c['cvmax'], (t - 1.8) / 1.4, (150, 148, 142), ease((t - 1.6) / 0.6))
         draw_text(img, (CX, 1200), '신축 입주 시점과 점수 차이를 보정해 평균', 38, WHITE, bold=0, alpha=ease((t - 3.2) / 0.8))
