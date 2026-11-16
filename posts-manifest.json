@@ -1751,35 +1751,37 @@
     {
       "slug": "gyeonghuigung-efit",
       "number": 56,
-      "title": "서울 - 경희궁 에피트 | 종로 교남동 228세대 소규모 신축, 브동산 적정가는 22.2억 (분양가는 공고 후 업데이트)",
+      "title": "서울 - 경희궁 에피트 | 종로 교남동 사대문 안 일반분양 134세대, 84㎡ 평균 분양가 24.78억, 예상 프리미엄 -3.06억",
       "category": "부동산",
       "naver_category": "부동산이야기",
-      "date": "2026-10-02",
+      "date": "2026-11-16",
       "site_url": "https://www.brandongsan.com/posts/gyeonghuigung-efit.html",
       "naver_html": "naver-html/gyeonghuigung-efit.html",
-      "naver_title": "경희궁 에피트 | 브동산 적정가 22.2억, 분양가 공개 전 총정리",
+      "naver_title": "경희궁 에피트 | 예상프리미엄 -3.06억, 분양가 총정리",
       "naver_tags": [
         "경희궁에피트",
+        "경희궁에피트분양가",
+        "경희궁에피트청약",
         "교남동",
         "종로구",
         "돈의문2구역",
         "HL디앤아이한라",
         "에피트",
         "서울청약",
-        "분양예정",
-        "적정가",
-        "청약",
-        "분양가",
+        "서대문역",
         "경희궁자이",
+        "84분양가",
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/gyeonghuigung-efit/cover.jpg",
-        "https://www.brandongsan.com/posts/images/gyeonghuigung-efit/aerial.jpg"
+        "https://www.brandongsan.com/posts/images/gyeonghuigung-efit/aerial-2.jpg",
+        "https://www.brandongsan.com/posts/images/gyeonghuigung-efit/site-layout.jpg"
       ],
       "naver_published": true,
       "naver_post_id": "224429691604",
-      "published_at": "2026-11-02T23:00:00+07:00"
+      "published_at": "2026-11-02T23:00:00+07:00",
+      "naver_republish_needed": true,
+      "naver_republish_reason": "2026-11-16 입주자모집공고(11.13) 반영 개정 — 분양가·일정·적정가·예상 프리미엄 갱신. 이미 발행된 네이버 글(naver_post_id)을 새 내용으로 수정 발행해야 함"
     },
     {
       "slug": "acmer-dongtan",
