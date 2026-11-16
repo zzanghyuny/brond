@@ -116,12 +116,12 @@ for o in d:
     extra=''
     if o['basis']: extra=f"<li class='note'>원 계산값 {fmt(o['raw'])}에 {o['basis']}을 적용</li>"
     cards+=f"""<h3>{o['rank']}위. {o['name']} <span class='note'>{pct(o)}</span></h3>
+<p><b>{T[o['key']][1]}</b></p>
 <p class='note'>{o['region']} · {o['builder']} · {o['n']:,}세대 · {o['yr']}.{o['mo']:02d} {status_word(o)} · 평점 {o['score']}점</p>
 <table class='kv'><tbody><tr><th>분양가</th><td>{o['price_note']}{f" → 실질 {eok(o['base'])}" if o.get('benefit') else ''}</td></tr><tr><th>비교 기준</th><td>{ct}</td></tr><tr><th>적정가격</th><td>{eok(o['fair'])}</td></tr><tr><th>예상 프리미엄</th><td><b>{fmt(o['final'])} ({pct(o)})</b></td></tr></tbody></table>
 {imgpair(o)}
 <p>{T[o['key']][0]}</p>
 {f"<ul>{nt}{extra}</ul>" if (nt or extra) else ''}
-<p><b>{T[o['key']][1]}</b></p>
 """
 SITE_BODY=f"""<h2>1. 핵심 요약 — 지금 동·호수를 골라 살 수 있는 30곳, 남는 곳이 있나?</h2>
 <p>청약통장 없이 동·호수를 골라 계약할 수 있는 수도권 미분양 선착순 단지 30곳을 브동산 모형으로 계산했다. <b>분양가보다 적정가격이 높게 나온 곳은 {NP}곳뿐이고, 그마저 +2%를 넘지 않았다.</b></p>
@@ -184,9 +184,9 @@ def ncards(a,b,title,summ):
     h=f"<h3>{title}</h3>\n<!-- [이미지 삽입 자리] chart-m-{gi}.png : {title} 순위 그래프(모바일용) -->\n<img src='{BASE}chart-m-{gi}.png' alt='{title} 예상 프리미엄 순위' style='width:100%;display:block;'>\n<p class='note'>{title} · 분양가 대비 예상 프리미엄(%), 괄호는 금액</p>\n{BL}"
     for o in d[a:b]:
         h+=f"""<p><b>{o['rank']}위 {o['name']} · {pct(o)} ({fmt(o['final'],False)})</b></p>
+<p><b>{T[o['key']][1]}</b></p>
 {imgstack(o)}
 <p>{o['region']} · {o['builder']} · {o['n']:,}세대 · {o['yr']}.{o['mo']:02d} {status_word(o)} · {o['price_note']}</p>
-<p>{T[o['key']][1]}</p>
 {BL}"""
     return h+f"<p><b>{summ}</b></p>"
 def chunk(a,b):
