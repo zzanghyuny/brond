@@ -1,0 +1,132 @@
+{
+ "geoje-marinepiece": {
+  "aerial": {
+   "file": "geoje-marinepiece-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  },
+  "location": {
+   "file": "geoje-marinepiece-location.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  }
+ },
+ "geoje-asterium": {
+  "aerial": {
+   "file": "geoje-asterium-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  },
+  "location": {
+   "file": "geoje-asterium-location.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  }
+ },
+ "gimhae-laciel": {
+  "aerial": {
+   "file": "gimhae-laciel-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  }
+ },
+ "gimhae-sinmun-ipark": {
+  "aerial": {
+   "file": "gimhae-sinmun-ipark-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  }
+ },
+ "changwon-megacentum": {
+  "aerial": {
+   "file": "changwon-megacentum-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  },
+  "location": {
+   "file": "changwon-megacentum-location.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  }
+ },
+ "yangsan-parkpalice": {
+  "aerial": {
+   "file": "yangsan-parkpalice-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  }
+ },
+ "yangsan-thesky": {
+  "aerial": {
+   "file": "yangsan-thesky-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  },
+  "location": {
+   "file": "yangsan-thesky-location.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  }
+ },
+ "gwangju-songam": {
+  "aerial": {
+   "file": "gwangju-songam-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  },
+  "location": {
+   "file": "gwangju-songam-location.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  }
+ },
+ "cheomdan3-hoban": {
+  "aerial": {
+   "file": "cheomdan3-hoban-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  },
+  "location": {
+   "file": "cheomdan3-hoban-location.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  }
+ },
+ "gwangju-jungang-lotte": {
+  "aerial": {
+   "file": "gwangju-jungang-lotte-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  },
+  "location": {
+   "file": "gwangju-jungang-lotte-location.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  }
+ },
+ "gwangju-champions": {
+  "aerial": {
+   "file": "gwangju-champions-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  },
+  "location": {
+   "file": "gwangju-champions-location.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  }
+ },
+ "iksan-felipia": {
+  "aerial": {
+   "file": "iksan-felipia-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  },
+  "location": {
+   "file": "iksan-felipia-location.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  }
+ },
+ "jeonju-artiem": {
+  "aerial": {
+   "file": "jeonju-artiem-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유) — 대표 이미지는 단지 상부 투시도"
+  },
+  "location": {
+   "file": "jeonju-artiem-location.jpg",
+   "src": "분양 홍보 페이지(아파트투유) — 대표 이미지는 단지 상부 투시도"
+  }
+ },
+ "yeosu-soje": {},
+ "suncheon-greenwell": {},
+ "jeju-yeondong": {
+  "aerial": {
+   "file": "jeju-yeondong-aerial.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  },
+  "location": {
+   "file": "jeju-yeondong-location.jpg",
+   "src": "분양 홍보 페이지(아파트투유)"
+  }
+ }
+}

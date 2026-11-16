@@ -1,0 +1,1285 @@
+{
+ "rid": "gyeongnam-honam-jeju",
+ "label": "경남·호남·제주",
+ "areas": "경남·광주·전북·전남·제주",
+ "date": "2026-11-17",
+ "comps": {
+  "gj_forena": {
+   "name": "포레나거제장평",
+   "yr": 2021,
+   "mo": 2,
+   "n": 817,
+   "brand": 16,
+   "trans": 15,
+   "conv": 7,
+   "edu": 6,
+   "price": 2.725,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/44313",
+   "view": 6
+  },
+  "gj_euro": {
+   "name": "e편한세상거제유로스카이",
+   "yr": 2023,
+   "mo": 11,
+   "n": 1113,
+   "brand": 20,
+   "trans": 17,
+   "conv": 8,
+   "edu": 6,
+   "price": 4.575,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/354285",
+   "view": 6
+  },
+  "gj_dclive": {
+   "name": "더샵거제디클리브",
+   "yr": 2024,
+   "mo": 1,
+   "n": 1288,
+   "brand": 20,
+   "trans": 13,
+   "conv": 6,
+   "edu": 6,
+   "price": 3.8,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/381074",
+   "view": 6
+  },
+  "gh_xi": {
+   "name": "장유자이더파크",
+   "yr": 2024,
+   "mo": 3,
+   "n": 587,
+   "brand": 20,
+   "trans": 15,
+   "conv": 7,
+   "edu": 7,
+   "price": 4.85,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/432863",
+   "view": 6
+  },
+  "gh_yulha": {
+   "name": "율하자이힐스테이트",
+   "yr": 2019,
+   "mo": 5,
+   "n": 1245,
+   "brand": 20,
+   "trans": 16,
+   "conv": 8,
+   "edu": 7,
+   "price": 4.97,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/35411",
+   "view": 6
+  },
+  "cw_lotte": {
+   "name": "창원롯데캐슬센텀골드",
+   "yr": 2023,
+   "mo": 12,
+   "n": 956,
+   "brand": 20,
+   "trans": 15,
+   "conv": 8,
+   "edu": 6,
+   "price": 5.9,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/384586",
+   "view": 6
+  },
+  "cw_metro": {
+   "name": "창원메트로시티석전",
+   "yr": 2019,
+   "mo": 12,
+   "n": 1763,
+   "brand": 12,
+   "trans": 17,
+   "conv": 8,
+   "edu": 6,
+   "price": 5.9,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/36915",
+   "view": 6
+  },
+  "ys_kcc": {
+   "name": "양산KCC스위첸",
+   "yr": 2019,
+   "mo": 10,
+   "n": 553,
+   "brand": 16,
+   "trans": 13,
+   "conv": 6,
+   "edu": 6,
+   "price": 3.3,
+   "deal": "KB 일반거래가 2026.11.13(84.69㎡ 166세대 타입)",
+   "src": "https://kbland.kr/c/33914",
+   "view": 6
+  },
+  "ys_trimage": {
+   "name": "트리마제양산1단지",
+   "yr": 2024,
+   "mo": 7,
+   "n": 1066,
+   "brand": 16,
+   "trans": 15,
+   "conv": 7,
+   "edu": 6,
+   "price": 4.375,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/425758",
+   "view": 6
+  },
+  "ys_brown": {
+   "name": "양산브라운스톤",
+   "yr": 2023,
+   "mo": 1,
+   "n": 842,
+   "brand": 12,
+   "trans": 13,
+   "conv": 7,
+   "edu": 6,
+   "price": 4.4,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/50072",
+   "view": 6
+  },
+  "ys_daebang": {
+   "name": "양산대방노블랜드7차메가시티",
+   "yr": 2017,
+   "mo": 7,
+   "n": 2130,
+   "brand": 12,
+   "trans": 16,
+   "conv": 8,
+   "edu": 7,
+   "price": 5.2,
+   "deal": "KB 일반거래가 2026.11.13(일반층)",
+   "src": "https://kbland.kr/c/30062",
+   "view": 6
+  },
+  "gj_hyocheon": {
+   "name": "효천1중흥S-클래스에코시티",
+   "yr": 2019,
+   "mo": 1,
+   "n": 832,
+   "brand": 12,
+   "trans": 0,
+   "conv": 6,
+   "edu": 6,
+   "price": 4.3,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/34616",
+   "view": 6
+  },
+  "gj_yangwoo": {
+   "name": "양우내안애프레스티지(주월동)",
+   "yr": 2021,
+   "mo": 3,
+   "n": 594,
+   "brand": 12,
+   "trans": 0,
+   "conv": 7,
+   "edu": 7,
+   "price": 5.1,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/42439",
+   "view": 6
+  },
+  "cd_grand": {
+   "name": "첨단제일풍경채그랑포레",
+   "yr": 2026,
+   "mo": 10,
+   "n": 1845,
+   "brand": 12,
+   "trans": 0,
+   "conv": 4,
+   "edu": 5,
+   "price": 5.142,
+   "deal": "리치고 34평 시세 2026.11.16(9~11월 실거래 4.71~5.25억)",
+   "src": "https://m.richgo.ai/realty/danji/a2xurOo",
+   "view": 6
+  },
+  "cd_hs": {
+   "name": "힐스테이트신용더리버",
+   "yr": 2024,
+   "mo": 4,
+   "n": 1647,
+   "brand": 20,
+   "trans": 0,
+   "conv": 7,
+   "edu": 7,
+   "price": 5.725,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/1047454",
+   "view": 6
+  },
+  "jg_daegwang": {
+   "name": "금호지구대광로제비앙",
+   "yr": 2022,
+   "mo": 3,
+   "n": 361,
+   "brand": 12,
+   "trans": 0,
+   "conv": 7,
+   "edu": 7,
+   "price": 4.9,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/490264",
+   "view": 6
+  },
+  "jg_yeomju": {
+   "name": "더샵염주센트럴파크",
+   "yr": 2022,
+   "mo": 10,
+   "n": 1976,
+   "brand": 20,
+   "trans": 8,
+   "conv": 8,
+   "edu": 8,
+   "price": 6.8,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/46926",
+   "view": 6
+  },
+  "ch_zenith": {
+   "name": "S클래스더제니스",
+   "yr": 2024,
+   "mo": 4,
+   "n": 2240,
+   "brand": 12,
+   "trans": 16,
+   "conv": 8,
+   "edu": 6,
+   "price": 7.05,
+   "deal": "KB 일반거래가 2026.11.13(84.97㎡ 374세대 타입)",
+   "src": "https://kbland.kr/c/312948",
+   "view": 6
+  },
+  "ch_gyerim": {
+   "name": "계림아이파크SK뷰",
+   "yr": 2022,
+   "mo": 10,
+   "n": 1715,
+   "brand": 20,
+   "trans": 4,
+   "conv": 7,
+   "edu": 6,
+   "price": 6.65,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/47871",
+   "view": 6
+  },
+  "is_desian": {
+   "name": "익산부송데시앙",
+   "yr": 2025,
+   "mo": 11,
+   "n": 745,
+   "brand": 16,
+   "trans": 14,
+   "conv": 6,
+   "edu": 6,
+   "price": 3.775,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/731701",
+   "view": 6
+  },
+  "is_forena": {
+   "name": "포레나익산부송",
+   "yr": 2021,
+   "mo": 5,
+   "n": 626,
+   "brand": 16,
+   "trans": 16,
+   "conv": 7,
+   "edu": 7,
+   "price": 4.0,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/41502",
+   "view": 6
+  },
+  "jj_ua": {
+   "name": "우아한시티",
+   "yr": 2021,
+   "mo": 8,
+   "n": 998,
+   "brand": 16,
+   "trans": 15,
+   "conv": 7,
+   "edu": 6,
+   "price": 5.5,
+   "deal": "KB 일반거래가 2026.11.13(84.94㎡ 355세대 타입)",
+   "src": "https://kbland.kr/c/45360",
+   "view": 6
+  },
+  "jj_clasia": {
+   "name": "KTX전주역클래시아더스카이",
+   "yr": 2021,
+   "mo": 2,
+   "n": 323,
+   "brand": 8,
+   "trans": 15,
+   "conv": 6,
+   "edu": 6,
+   "price": 3.85,
+   "deal": "KB 일반거래가 2026.11.13(84.60㎡ 109세대 타입)",
+   "src": "https://kbland.kr/c/42009",
+   "view": 6
+  },
+  "jj_eco": {
+   "name": "에코시티더샵",
+   "yr": 2018,
+   "mo": 1,
+   "n": 724,
+   "brand": 20,
+   "trans": 16,
+   "conv": 8,
+   "edu": 8,
+   "price": 5.925,
+   "deal": "KB 일반거래가 2026.11.13(84.93㎡ 111세대 타입)",
+   "src": "https://kbland.kr/c/32138",
+   "view": 6
+  },
+  "ys_woongcheon": {
+   "name": "여수웅천포레나2단지",
+   "yr": 2019,
+   "mo": 3,
+   "n": 1448,
+   "brand": 16,
+   "trans": 15,
+   "conv": 7,
+   "edu": 6,
+   "price": 4.275,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/35663",
+   "view": 6
+  },
+  "ys_jukrim": {
+   "name": "힐스테이트죽림젠트리스",
+   "yr": 2021,
+   "mo": 11,
+   "n": 989,
+   "brand": 20,
+   "trans": 13,
+   "conv": 6,
+   "edu": 6,
+   "price": 4.425,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/47695",
+   "view": 6
+  },
+  "sc_prugio": {
+   "name": "순천푸르지오더퍼스트",
+   "yr": 2025,
+   "mo": 7,
+   "n": 560,
+   "brand": 20,
+   "trans": 13,
+   "conv": 6,
+   "edu": 5,
+   "price": 4.113,
+   "deal": "리치고 34평 시세 2026.11.16",
+   "src": "https://m.richgo.ai/realty/danji/a2SlBcK",
+   "view": 6
+  },
+  "sc_eco8": {
+   "name": "중흥에코시티8단지(신대지구)",
+   "yr": 2018,
+   "mo": 7,
+   "n": 931,
+   "brand": 12,
+   "trans": 16,
+   "conv": 8,
+   "edu": 7,
+   "price": 5.125,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/32106",
+   "view": 6
+  },
+  "jj_central2": {
+   "name": "e편한세상연동센트럴파크2단지",
+   "yr": 2023,
+   "mo": 6,
+   "n": 102,
+   "brand": 20,
+   "trans": 15,
+   "conv": 9,
+   "edu": 7,
+   "price": 7.648,
+   "deal": "리치고 32평(84㎡) 시세 2026.11.16 · 09.26 실거래 7.83억",
+   "src": "https://m.richgo.ai/realty/danji/a3sgGda",
+   "view": 6
+  },
+  "jj_noh": {
+   "name": "노형뜨란채",
+   "yr": 2006,
+   "mo": 1,
+   "n": 1068,
+   "brand": 8,
+   "trans": 16,
+   "conv": 9,
+   "edu": 8,
+   "price": 5.75,
+   "deal": "KB 일반거래가 2026.11.13(84㎡대 주력 타입)",
+   "src": "https://kbland.kr/c/14591",
+   "view": 6
+  }
+ },
+ "ceil": {},
+ "sites": [
+  {
+   "key": "geoje-marinepiece",
+   "name": "거제 푸르지오 마린피스",
+   "region": "거제 장평동",
+   "sido": "경남",
+   "cls": "local",
+   "yr": 2029,
+   "mo": 11,
+   "n": 423,
+   "brand": 20,
+   "builder": "대우건설",
+   "trans": 15,
+   "conv": 7,
+   "edu": 6,
+   "view": 7,
+   "price": 5.14,
+   "price_note": "84㎡ 4.11~5.14억(2026.07 공고 확정가)",
+   "comps": [
+    "gj_forena",
+    "gj_euro"
+   ],
+   "conf": "상",
+   "firstcome_src": "분양 홍보 페이지 \"선착순 동·호 지정·계약금 5%\" 게시 https://apttoyou.kr/marinepiece/ · 상담사 블로그 2026.11.10 \"잔여세대 선착순 동호지정\" https://blog.naver.com/parang8033/224472015771",
+   "price_src": "https://apttoyou.kr/marinepiece/",
+   "img": {
+    "aerial": "https://apttoyou.kr/marinepiece/img/hero.jpg",
+    "location": "https://apttoyou.kr/marinepiece/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "geoje-asterium",
+   "name": "센트레빌 아스테리움 거제",
+   "region": "거제 상동동",
+   "sido": "경남",
+   "cls": "local",
+   "yr": 2029,
+   "mo": 8,
+   "n": 1307,
+   "brand": 16,
+   "builder": "동부건설",
+   "trans": 13,
+   "conv": 6,
+   "edu": 6,
+   "price": 5.29,
+   "price_note": "84A·B 4.87~5.29억(11층 이상 최고가)",
+   "comps": [
+    "gj_dclive",
+    "gj_euro"
+   ],
+   "conf": "상",
+   "firstcome_src": "상담사 블로그 2026.11.11 \"선착순 동호지정\" https://blog.naver.com/parang8033/224472077544 · 2026.11.07 \"잔여세대 선착순 계약 중\" https://blog.naver.com/k115002/224468423118",
+   "price_src": "https://apttoyou.kr/asterium/price",
+   "img": {
+    "aerial": "https://apttoyou.kr/asterium/img/hero.jpg",
+    "location": "https://apttoyou.kr/asterium/img/lo2.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "warn": "1·2순위에서 84A 941세대 모집에 204건만 접수돼 남은 물량이 많다. 블로그에 \"계약금 0원\" 특별조건이 돌지만 공식 공고 조건이 아니라 계산에 넣지 않았다"
+  },
+  {
+   "key": "gimhae-laciel",
+   "name": "신문 대상 웰라움 라시엘",
+   "region": "김해 신문동",
+   "sido": "경남",
+   "cls": "local",
+   "yr": 2029,
+   "mo": 1,
+   "n": 375,
+   "brand": 8,
+   "builder": "대상건설",
+   "trans": 14,
+   "conv": 6,
+   "edu": 6,
+   "price": 4.993,
+   "price_note": "84A 4.60~4.99억 · 84B 4.60~4.99억",
+   "comps": [
+    "gh_xi",
+    "gh_yulha"
+   ],
+   "conf": "상",
+   "firstcome_src": "분양 홍보 페이지 \"선착순 동·호 지정 계약 중\"(공식 홈페이지 게시 인용) https://apttoyou.kr/laciel/ · 상담사 블로그 2026.11.13 https://blog.naver.com/parang8033/224475272081 · 2026.11.15 https://blog.naver.com/hhh1394/224477246172",
+   "price_src": "https://apttoyou.kr/laciel/price",
+   "img": {
+    "aerial": "https://apttoyou.kr/laciel/img/hero.jpg",
+    "location": "https://apttoyou.kr/laciel/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "warn": "상담사 블로그(2026.11.14)에 \"계약 축하금 1,000만원·입주 시 환매 조건\"이 소개되지만 공식 공고로 확인되지 않아 분양가에서 빼지 않았다"
+  },
+  {
+   "key": "gimhae-sinmun-ipark",
+   "name": "김해 신문 센트럴 아이파크",
+   "region": "김해 신문동(장유신문지구 A34-1BL)",
+   "sido": "경남",
+   "cls": "local",
+   "yr": 2029,
+   "mo": 3,
+   "n": 1379,
+   "brand": 20,
+   "builder": "HDC현대산업개발",
+   "trans": 13,
+   "conv": 7,
+   "edu": 6,
+   "price": 5.517,
+   "price_note": "84A 4.33~5.52억 · 84B 4.41~5.63억(발코니 확장 무상)",
+   "comps": [
+    "gh_xi",
+    "gh_yulha"
+   ],
+   "conf": "상",
+   "firstcome_src": "상담사 블로그 2026.11.16 \"회사보유분 줍줍\" https://blog.naver.com/bella_luv/224479023602 · 2026.11.02 \"선착순 동호수 지정\" https://blog.naver.com/leucocyt/224462423459",
+   "price_src": "https://apttoyou.kr/sinmuncentral/price",
+   "img": {
+    "aerial": "https://apttoyou.kr/sinmuncentral/img/hero.jpg",
+    "location": "https://apttoyou.kr/sinmuncentral/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "changwon-megacentum",
+   "name": "창원 한신더휴 메가센텀",
+   "region": "창원 마산회원구 회원동",
+   "sido": "경남",
+   "cls": "local",
+   "yr": 2029,
+   "mo": 8,
+   "n": 2016,
+   "brand": 12,
+   "builder": "한신공영",
+   "trans": 13,
+   "conv": 7,
+   "edu": 6,
+   "price": 6.115,
+   "price_note": "84㎡ 5.29~6.12억",
+   "comps": [
+    "cw_lotte",
+    "cw_metro"
+   ],
+   "conf": "상",
+   "firstcome_src": "상담사 블로그 2026.11.16 \"청약통장 없이 원하는 동과 층을 직접 고를 수 있는 시기\" https://blog.naver.com/qkqnd2829/224479758468 · 무순위 1차(9.11 계약) 후 잔여세대 상담 https://apttoyou.kr/megacentum/",
+   "price_src": "https://apttoyou.kr/megacentum/price",
+   "img": {
+    "aerial": "https://apttoyou.kr/megacentum/img/hero.jpg",
+    "location": "https://apttoyou.kr/megacentum/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "warn": "중개사 블로그(2026.11.16)가 34평 분양권 거래 91건, 최근 6.19억원 실거래를 집계했다. 고층 최고가는 이 분양권 시세와 비슷한 수준이다"
+  },
+  {
+   "key": "yangsan-parkpalice",
+   "name": "양산자이 파크팰리체",
+   "region": "양산 평산동(웅상)",
+   "sido": "경남",
+   "cls": "local",
+   "yr": 2028,
+   "mo": 7,
+   "n": 842,
+   "brand": 20,
+   "builder": "GS건설",
+   "trans": 13,
+   "conv": 6,
+   "edu": 6,
+   "price": 5.153,
+   "price_note": "84㎡ 4.57~5.15억",
+   "comps": [
+    "ys_kcc",
+    "ys_trimage"
+   ],
+   "conf": "상",
+   "firstcome_src": "분양 홍보 페이지 \"선착순 계약 진행 중·동호수 지정\" https://apttoyou.kr/parkpalice/ · 상담사 블로그 2026.11.16 https://blog.naver.com/jbpk60/224479001191",
+   "price_src": "https://apttoyou.kr/parkpalice/price",
+   "img": {
+    "aerial": "https://apttoyou.kr/parkpalice/img/hero.jpg",
+    "location": "https://apttoyou.kr/parkpalice/img/g_lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "yangsan-thesky",
+   "name": "힐스테이트 양산더스카이",
+   "region": "양산 물금읍",
+   "sido": "경남",
+   "cls": "local",
+   "yr": 2029,
+   "mo": 4,
+   "n": 598,
+   "brand": 20,
+   "builder": "현대건설",
+   "trans": 13,
+   "conv": 7,
+   "edu": 6,
+   "price": 5.295,
+   "price_note": "84㎡ 4.83~5.30억(계약 시 500만원 정액·중도금 무이자)",
+   "comps": [
+    "ys_brown",
+    "ys_daebang"
+   ],
+   "conf": "중",
+   "warn": "+5%를 넘어 비교단지를 다시 봤다. 같은 물금 신도시 10년 이내 신축 중 연식·규모가 가장 가까운 두 곳이라 그대로 뒀다. 가촌리 양산코오롱하늘채(2020년, KB 3.10억)를 넣으면 적정가가 내려가 마이너스로 바뀐다",
+   "firstcome_src": "분양 홍보 페이지 \"선착순 동·호 지정 계약 진행 중\"(2026.08.07 계약 안내) https://apttoyou.kr/thesky/ · 상담사 블로그 2026.11.16 \"회사보유분\" https://blog.naver.com/love7190/224478996637",
+   "price_src": "https://apttoyou.kr/thesky/price",
+   "img": {
+    "aerial": "https://apttoyou.kr/thesky/img/hero.jpg",
+    "location": "https://apttoyou.kr/thesky/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "gwangju-songam",
+   "name": "송암공원 중흥S클래스 SK뷰",
+   "region": "광주 남구 송하동",
+   "sido": "광주",
+   "cls": "metro",
+   "yr": 2027,
+   "mo": 12,
+   "n": 1575,
+   "brand": 16,
+   "builder": "중흥토건·SK에코플랜트",
+   "trans": 0,
+   "conv": 6,
+   "edu": 6,
+   "price": 5.545,
+   "price_note": "84A 4.99~5.55억 · 84C 4.95~5.50억",
+   "comps": [
+    "gj_hyocheon",
+    "gj_yangwoo"
+   ],
+   "conf": "중",
+   "firstcome_src": "분양 홍보 페이지 \"선착순 동·호 지정\"(공식 홈페이지 인용) https://apttoyou.kr/songamsclass/ · 상담사 블로그 2026.11.16 https://blog.naver.com/woow1981/224479102287",
+   "price_src": "https://apttoyou.kr/songamsclass/",
+   "img": {
+    "aerial": "https://apttoyou.kr/songamsclass/img/hero2.jpg",
+    "location": "https://apttoyou.kr/songamsclass/img/g_map.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "warn": "중흥S-클래스(12점)와 SK뷰(20점) 공동 브랜드라 16점으로 매겼다. 광주 남구 송하동 일대는 도시철도가 없고 경전선 효천역(약 700m)만 있다"
+  },
+  {
+   "key": "cheomdan3-hoban",
+   "name": "첨단3지구 호반써밋 A7",
+   "region": "광주 북구 월출동(첨단3지구 A7BL)",
+   "sido": "광주",
+   "cls": "metro",
+   "yr": 2028,
+   "mo": 9,
+   "n": 356,
+   "brand": 16,
+   "builder": "호반건설",
+   "trans": 0,
+   "conv": 4,
+   "edu": 5,
+   "price": 5.43,
+   "price_note": "A7 84A 4.94~5.43억 · 84B 4.89~5.37억(분양가상한제)",
+   "comps": [
+    "cd_grand",
+    "cd_hs"
+   ],
+   "conf": "중",
+   "firstcome_src": "상담사 블로그 2026.11.16 \"선착순 동·호 지정 A7 전용 84㎡\" https://blog.naver.com/parang8033/224479296508 · 2026.11.15 \"부적격·회사보유분 선착순 동호지정\" https://blog.naver.com/peter_xx/224477772880",
+   "price_src": "https://apttoyou.kr/chumdansummit/",
+   "img": {
+    "aerial": "https://apttoyou.kr/chumdansummit/img/g_aerial7.jpg",
+    "location": "https://apttoyou.kr/chumdansummit/img/g_map.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "warn": "84㎡는 A7블록(356세대)에만 있어 A7만 계산했다. 분양가상한제 단지라 재당첨 제한 10년·전매제한 1년이 붙는다"
+  },
+  {
+   "key": "gwangju-jungang-lotte",
+   "name": "중앙공원 롯데캐슬 시그니처",
+   "region": "광주 서구 풍암·금호동",
+   "sido": "광주",
+   "cls": "metro",
+   "yr": 2027,
+   "mo": 8,
+   "n": 2772,
+   "brand": 20,
+   "builder": "롯데건설",
+   "trans": 0,
+   "conv": 7,
+   "edu": 8,
+   "price": 8.053,
+   "price_note": "84㎡ 7.26~8.05억(2-2BL 84A 10층 이상 최고가)",
+   "comps": [
+    "jg_daegwang",
+    "jg_yeomju"
+   ],
+   "conf": "중",
+   "firstcome_src": "상담사 블로그 2026.11.13 \"잔여세대 계약 포인트\" https://blog.naver.com/misoung-/224475687095 · 2026.11.13 \"잔여세대 및 선착순\" https://blog.naver.com/familychecknote/224475775830 · 분양 홍보 페이지 잔여세대 문의 https://apttoyou.kr/jungangcastle/",
+   "price_src": "https://apttoyou.kr/jungangcastle/price",
+   "img": {
+    "aerial": "https://apttoyou.kr/jungangcastle/img/hero.jpg",
+    "location": "https://apttoyou.kr/jungangcastle/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "warn": "-20%를 넘어 비교단지를 다시 봤다. 화정동 유니버시아드힐스테이트 3단지(2016년 2,185세대, KB 5.25억)로 바꿔도 적정가는 5.6억원대로 비슷해 그대로 뒀다. 서구 신축 최고 시세(더샵염주센트럴파크 6.8억)보다 1억원 이상 높은 분양가가 원인이다. 최근 영업 글이 1블록 44평(대형) 위주라 84㎡ 잔여 물량은 견본주택에서 확인해야 한다. 계약금 10%(1차 2,000만원 정액)로 다른 지방 단지보다 초기 부담이 크다"
+  },
+  {
+   "key": "gwangju-champions",
+   "name": "올 뉴 챔피언스시티 1차",
+   "region": "광주 북구 임동",
+   "sido": "광주",
+   "cls": "metro",
+   "yr": 2030,
+   "mo": 11,
+   "n": 3216,
+   "brand": 16,
+   "builder": "우미건설·신영씨앤디",
+   "trans": 0,
+   "conv": 9,
+   "edu": 6,
+   "price": 8.7,
+   "price_note": "84㎡(A~F) 7.08~8.70억",
+   "comps": [
+    "ch_zenith",
+    "ch_gyerim"
+   ],
+   "conf": "상",
+   "firstcome_src": "상담사 블로그 2026.11.10 \"10월 31일부터 동·호수를 직접 고르는 선착순 계약\" https://blog.naver.com/dnckd1254/224471286334",
+   "price_src": "https://apttoyou.kr/championscity/price",
+   "img": {
+    "aerial": "https://apttoyou.kr/championscity/img/hero.jpg",
+    "location": "https://apttoyou.kr/championscity/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "warn": "-20%를 넘어 비교단지를 다시 봤지만 같은 임동의 2024년 신축 S클래스더제니스가 가장 가까운 기준이라 그대로 뒀다. 84A 최고가(고층) 기준이다. 같은 84㎡ 저층은 7억원 초반이라 격차가 1억원 넘게 줄어든다. 더현대 광주가 같은 부지에 들어서는 점은 편의 점수(9)에만 반영했다"
+  },
+  {
+   "key": "iksan-felipia",
+   "name": "익산 펠리피아",
+   "region": "익산 팔봉동",
+   "sido": "전북",
+   "cls": "local",
+   "yr": 2028,
+   "mo": 12,
+   "n": 572,
+   "brand": 8,
+   "builder": "세움종합건설",
+   "trans": 13,
+   "conv": 5,
+   "edu": 5,
+   "price": 4.18,
+   "price_note": "84㎡ 3.76~4.18억",
+   "comps": [
+    "is_desian",
+    "is_forena"
+   ],
+   "conf": "중",
+   "firstcome_src": "상담사 블로그 2026.11.11 \"선착순 동·호 지정 계약 방식\" https://blog.naver.com/bella_luv/224472944992 · 분양 홍보 페이지 \"잔여세대 선착순\" https://apttoyou.kr/felipia/",
+   "price_src": "https://apttoyou.kr/felipia/price",
+   "img": {
+    "aerial": "https://apttoyou.kr/felipia/img/hero.jpg",
+    "location": "https://apttoyou.kr/felipia/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "warn": "팔봉동에는 같은 급 신축이 없어 약 2km 떨어진 부송동 신축 두 곳과 비교했다"
+  },
+  {
+   "key": "jeonju-artiem",
+   "name": "아르티엠 라 테라스",
+   "region": "전주 덕진구 우아동3가",
+   "sido": "전북",
+   "cls": "local",
+   "yr": 2029,
+   "mo": 5,
+   "n": 300,
+   "brand": 8,
+   "builder": "세영건설",
+   "trans": 15,
+   "conv": 6,
+   "edu": 6,
+   "price": 5.12,
+   "price_note": "84A 4.39~5.12억(동·라인별 두 갈래) · 84B 최고 5.26억",
+   "comps": [
+    "jj_clasia",
+    "jj_eco"
+   ],
+   "conf": "상",
+   "l5": "처음 고른 우아한시티(998세대·DL건설, 5.50억)로는 +9%가 나와 재검토했다. 같은 우아동3가에서 규모(323세대)와 브랜드 급이 SITE(300세대·세영건설)에 더 가까운 KTX전주역클래시아더스카이로 바꿨다",
+   "firstcome_src": "상담사 블로그 2026.11.08 \"선착순 분양\" https://blog.naver.com/pparky/224469256106 · 2026.11.03 \"잔여호실 선착순 분양\" https://blog.naver.com/law09999/224464012428",
+   "price_src": "https://apttoyou.kr/artiemlaterrace/price",
+   "img": {
+    "aerial": "https://apttoyou.kr/artiemlaterrace/img/hero.jpg",
+    "location": "https://apttoyou.kr/artiemlaterrace/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유) — 대표 이미지는 단지 상부 투시도"
+   },
+   "warn": "84A가 동·라인에 따라 4.39~4.52억원과 4.97~5.12억원 두 갈래로 나뉜다. 102·103동 라인을 고르면 격차가 6천만원 이상 줄어든다"
+  },
+  {
+   "key": "yeosu-soje",
+   "name": "여수 소제 중흥S-클래스 우미린",
+   "region": "여수 소호동(소제지구 A3·A4BL)",
+   "sido": "전남",
+   "cls": "local",
+   "yr": 2029,
+   "mo": 4,
+   "n": 1679,
+   "brand": 12,
+   "builder": "중흥건설·우미건설",
+   "trans": 13,
+   "conv": 5,
+   "edu": 5,
+   "price": 4.91,
+   "price_note": "A4BL 84A 3.95~4.91억(분양가상한제, 계약금 1,000만원 정액)",
+   "comps": [
+    "ys_woongcheon",
+    "ys_jukrim"
+   ],
+   "conf": "중",
+   "firstcome_src": "상담사 블로그 2026.11.16 \"잔여 로열층 확인·동호수 컨설팅·1,000만원 정액제\" https://blog.naver.com/woow1981/224479091681 (2026.04.24 공고, 5월 계약 후 잔여 판매)",
+   "price_src": "https://soje-jnw.com/pdf/gonggo_a4_full.pdf",
+   "img": {
+    "aerial": "",
+    "location": "",
+    "src": ""
+   },
+   "warn": "소제지구는 이제 막 조성되는 택지라 바로 옆 웅천 신축(포레나 2단지)과 죽림 신축을 비교 기준으로 썼다. 분양가는 A4블록 공고 기준이다"
+  },
+  {
+   "key": "suncheon-greenwell",
+   "name": "순천 지에이그린웰 하이드원",
+   "region": "순천 덕암동",
+   "sido": "전남",
+   "cls": "local",
+   "yr": 2027,
+   "mo": 9,
+   "n": 475,
+   "brand": 8,
+   "builder": "지에이건설",
+   "trans": 13,
+   "conv": 6,
+   "edu": 5,
+   "price": 4.511,
+   "price_note": "84A 4.09~4.51억 · 84B 최고 4.60억",
+   "comps": [
+    "sc_prugio",
+    "sc_eco8"
+   ],
+   "conf": "중",
+   "firstcome_src": "상담사 블로그 2026.11.12 \"잔여세대 선착순 동호수 지정 계약\" https://blog.naver.com/bab000009/224474731540 · 2026.11.13 https://blog.naver.com/pilttong/224475778456",
+   "price_src": "https://files-scs.pstatic.net/2024/12/15/TzeHR1Kq0F/순천 지에이그린웰 하이드원 입주자모집공고문.pdf",
+   "img": {
+    "aerial": "",
+    "location": "",
+    "src": ""
+   },
+   "warn": "상담사 블로그가 \"최대 2,900만원 지원·계약금 0원\"을 안내하지만 평형별 적용 조건이 확인되지 않아 분양가에서 빼지 않았다"
+  },
+  {
+   "key": "jeju-yeondong",
+   "name": "이안 연동스퀘어",
+   "region": "제주시 연동",
+   "sido": "제주",
+   "cls": "local",
+   "yr": 2028,
+   "mo": 4,
+   "n": 96,
+   "brand": 8,
+   "builder": "대우산업개발",
+   "trans": 15,
+   "conv": 9,
+   "edu": 7,
+   "price": 8.64,
+   "price_note": "84㎡ 7.77~8.64억(2025.11 공고)",
+   "comps": [
+    "jj_central2",
+    "jj_noh"
+   ],
+   "conf": "하",
+   "firstcome_src": "분양 홍보 페이지: 공식 홈페이지 팝업 \"계약금 1,000만원 입주 시까지·선착순 계약\"(2026.09) https://apttoyou.kr/yeondongsquare/ · 상담사 블로그 2026.10.28 \"잔여세대\" https://blog.naver.com/jinsu00616/224456527769",
+   "price_src": "https://apttoyou.kr/yeondongsquare/price",
+   "img": {
+    "aerial": "https://apttoyou.kr/yeondongsquare/img/hero.jpg",
+    "location": "https://apttoyou.kr/yeondongsquare/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "warn": "제주시 도심에 10년 이내 신축 대단지가 없어 2006년식 노형뜨란채를 함께 썼다(하향 편향 가능성). 96세대 1개동 소단지라 상품성 점수가 낮다"
+  }
+ ],
+ "excluded": [
+  {
+   "name": "김해 안동 에피트",
+   "reason": "사업주체가 안동지역주택조합(일반분양분 765세대, HUG 보증)이라 지역주택조합 제외 규칙에 따라 뺐다. 선착순 동·호 지정 자체는 확인(블로그 2026.11.02). 포함 시 비교단지 김해푸르지오하이엔드 4.70억·연지공원푸르지오 5.20억(KB) 준비됨"
+  },
+  {
+   "name": "힐스테이트 거제시그니처",
+   "reason": "1회차 무순위 129세대 청약 11월 23일 접수 예정(아직 선착순 아님)"
+  },
+  {
+   "name": "진주 판문지구 레이크써밋 웰가",
+   "reason": "1순위 34.95대 1, 10월 정당계약 후 최근 1개월 선착순 영업 글 없음"
+  },
+  {
+   "name": "포레나힐스테이트 진주",
+   "reason": "1순위 21.2대 1, 9월 정당계약 후 최근 1개월 선착순 근거 없음"
+  },
+  {
+   "name": "함안가야 휴니온아르떼",
+   "reason": "마지막 선착순 영업 글이 2026.10.12로 최근 1개월 밖"
+  },
+  {
+   "name": "e편한세상 삼천포 오션프라임",
+   "reason": "준공 후 선착순 동·호 지정은 확인(블로그 2026.11.13)됐으나 84㎡ 공고 분양가 원문을 확보하지 못함(블로그 \"34평 3억대\"만). 자기 시세는 리치고 36평 4.02억"
+  },
+  {
+   "name": "익산 중흥S-클래스 퍼스트파크",
+   "reason": "준공 후 선착순 동·호 지정 확인(블로그 2026.11.11), KB 84㎡ 3.95억도 있으나 84㎡ 분양가 원문을 확보하지 못함"
+  },
+  {
+   "name": "첨단 라펜트힐",
+   "reason": "전용 201~244㎡만 있어 84㎡·59㎡ 없음"
+  },
+  {
+   "name": "제주 삼도이동 토지임대부 분양주택",
+   "reason": "공공 토지임대부, 청약 11.16~18 접수 중"
+  },
+  {
+   "name": "익산역 하늘채 더퍼스트",
+   "reason": "LH 공공분양"
+  },
+  {
+   "name": "광양 푸르지오 센터파크",
+   "reason": "59·84㎡ 완판, 105㎡만 잔여(기사 기준)"
+  },
+  {
+   "name": "나주 빛가람LH1·3단지, 무안 남악휴먼시아",
+   "reason": "LH 공공주택 잔여세대 일반매각(민간 신규 분양 아님)"
+  },
+  {
+   "name": "남악 동부센트레빌 리버파크·여수 율촌 국제미소래·광양 중동센텀유블레스",
+   "reason": "민간임대(분양전환형)"
+  },
+  {
+   "name": "중외공원 힐스테이트 2·3단지",
+   "reason": "12월 입주 예정, 선착순 분양 근거 확인 못함"
+  }
+ ],
+ "texts": {
+  "yangsan-thesky": [
+   "양산 물금신도시 서남초 바로 옆, 2개 단지 598세대 힐스테이트다. 84㎡ 최고가 5.30억원이 같은 물금의 양산브라운스톤(4.40억원)과 대방노블랜드7차메가시티(5.20억원)를 보정한 적정가 5.63억원보다 낮다.",
+   "16곳 중 유일하게 의미 있는 플러스(+6.4%)다. 초등학교를 단지 옆에 두고 계약 시 500만원으로 시작하는, 물금 실거주자에게 좋은 기회다."
+  ],
+  "changwon-megacentum": [
+   "마산회원구 회원2구역 재개발로 짓는 2,016세대 대단지다. 84㎡ 최고가 6.12억원이 창원롯데캐슬센텀골드·창원메트로시티석전(둘 다 KB 5.90억원)을 보정한 6.22억원과 거의 같다. 34평 분양권 거래도 활발하다(중개사 집계 91건, 최근 6.19억원).",
+   "마산 20년 만의 2,016세대 랜드마크를 시세 그대로 고른다. 회원초를 단지 앞에 둔 가족 실거주자에게 기회다."
+  ],
+  "suncheon-greenwell": [
+   "순천역 인근 덕암동 원도심에 들어서는 475세대로, 2027년 9월 입주한다. 84A 최고가 4.51억원은 같은 덕암동 순천푸르지오더퍼스트와 신대지구 중흥에코시티8단지를 보정한 4.44억원과 거의 같다.",
+   "1년 안에 들어가는 순천역세권 신축을 시세 그대로 고른다. 원도심에서 새 아파트를 찾던 실거주자에게 기회다."
+  ],
+  "jeonju-artiem": [
+   "KTX 전주역 앞 우아동3가, 84㎡ 단일 300세대에 일부 타입은 프라이빗 테라스를 둔다. 같은 동 KTX전주역클래시아더스카이와 에코시티더샵을 보정한 적정가 5.00억원이 84A 최고가 5.12억원과 비슷하다.",
+   "전주역 역세권 신축을 시세 수준에 고른다. 102·103동 라인(4.39~4.52억원)을 고르면 오히려 시세보다 싸게 들어가는, 실거주자의 기회다."
+  ],
+  "cheomdan3-hoban": [
+   "광주연구개발특구 첨단3지구 A7블록 356세대로, 분양가상한제가 적용됐다. 같은 지구에서 지난달 입주한 첨단제일풍경채그랑포레(리치고 5.14억원)와 신용동 힐스테이트신용더리버를 보정하면 5.30억원으로 84A 최고가 5.43억원과 비슷하다.",
+   "같은 지구 새 아파트 시세 그대로의 상한제 분양가다. 첨단 산단·AI 클러스터로 출퇴근할 실거주자에게 기회다."
+  ],
+  "gwangju-songam": [
+   "송암공원 민간공원 특례사업으로 공원과 함께 짓는 광주 남구 1,575세대이고, 2027년 12월 입주한다. 효천지구 중흥S-클래스에코시티와 주월동 양우내안애프레스티지를 보정한 5.39억원이 84A 최고가 5.55억원과 거의 같다.",
+   "1년 뒤 들어가는 공원 품은 대단지를 시세 수준에 고른다. 효천초를 걸어서 보낼 가족 실거주자에게 기회다."
+  ],
+  "gimhae-sinmun-ipark": [
+   "장유신문지구 A34-1블록 1,379세대 아이파크로, 84㎡B는 김해 첫 5베이 평면이다. 같은 신문동 장유자이더파크와 율하 중심의 율하자이힐스테이트를 보정한 5.32억원이 84A 최고가 5.52억원과 비슷하다.",
+   "발코니 확장 무상에 신문초를 걸어서 다니는 대단지다. 시세 수준에 원하는 층을 고를 수 있는, 장유 실거주자의 기회다."
+  ],
+  "yeosu-soje": [
+   "여수 소제지구 첫 분양으로 A3·A4블록 합계 1,679세대이고, 분양가상한제가 적용됐다. 바로 옆 웅천의 여수웅천포레나2단지와 죽림 힐스테이트죽림젠트리스를 보정하면 4.54억원으로, A4블록 84A 최고가 4.91억원과 차이가 크지 않다.",
+   "계약금 1,000만원으로 입주까지 가는 바다 옆 새 도시 대단지다. 저층(3.95억~4.44억원)을 고르면 웅천 신축 시세보다 싸게 사는, 실거주자의 기회다."
+  ],
+  "gimhae-laciel": [
+   "장유신문지구 375세대 웰라움으로, 84㎡ 최고가가 4.99억원이다. 같은 신문동 장유자이더파크(4.85억원)와 율하 중심의 율하자이힐스테이트(4.97억원)를 단지 규모·브랜드 차이로 보정하면 4.51억원이다.",
+   "대형 브랜드 옆에서 4억원대 신축을 고른다. 중도금 무이자에 저층(4.60억원대)을 고르면 격차가 거의 사라지는, 신혼·가족 실거주자의 기회다."
+  ],
+  "iksan-felipia": [
+   "익산 팔봉동 572세대로, 84㎡ 3.76억~4.18억원이다. 팔봉동에 같은 급 신축이 없어 약 2km 떨어진 부송동 익산부송데시앙·포레나익산부송과 비교하면 적정가는 3.66억원이다.",
+   "3억원대 후반부터 고르는 새 아파트다. 팔봉초가 약 560m이고 코스트코가 들어올 예정이라, 저층을 고르는 실거주자에게 기회다."
+  ],
+  "yangsan-parkpalice": [
+   "양산 웅상 평산동 842세대, 양산의 첫 자이다. 84㎡ 최고가 5.15억원이 같은 평산동 양산KCC스위첸(3.30억원)과 덕계동 트리마제양산1단지(4.38억원)를 보정한 4.31억원보다 높다.",
+   "평산초가 걸어서 5분인 웅상 첫 자이다. 2028년 입주까지 길게 보는 실거주라면 저층(4.57억원)부터 보는 것이 좋다."
+  ],
+  "jeju-yeondong": [
+   "제주도청까지 약 550m, 연동 한복판의 96세대 1개동 아파트다. 바로 옆 e편한세상연동센트럴파크2단지(리치고 7.65억원)와 노형뜨란채를 보정한 7.38억원보다 84㎡ 최고가 8.64억원이 높다.",
+   "제주 도심 연동에서 보기 드문 신축이다. 계약금 1,000만원으로 입주까지 가니, 저층(7.77억원)을 고르는 도심 실거주자에게 맞는 기회다."
+  ],
+  "geoje-asterium": [
+   "거제 상동동 1,307세대 센트레빌로, 고현초가 약 340m다. 같은 상동동 더샵거제디클리브(3.80억원)와 고현동 e편한세상거제유로스카이(4.58억원)를 보정한 4.24억원보다 84㎡ 최고가 5.29억원이 높다.",
+   "거제에서 드문 1,300세대 신축 대단지를 원하는 동·호수로 고른다. 1층(4.87억원)부터 보면 고현 생활권 실거주자의 선택지가 된다."
+  ],
+  "geoje-marinepiece": [
+   "삼성중공업 거제조선소와 맞닿은 장평동, 36층 4개동 423세대 푸르지오로 안방 오션뷰 특화(일부 세대 제외)를 내세운다. 같은 장평동 포레나거제장평(2.73억원)과 고현동 e편한세상거제유로스카이(4.58억원)를 보정한 3.96억원보다 84㎡ 최고가 5.14억원이 높다.",
+   "바다를 보며 조선소까지 걸어서 출근하는 직주근접 단지다. 저층(4.11억원)을 고르면 격차가 크게 줄어드는, 조선소 실거주자의 기회다."
+  ],
+  "gwangju-champions": [
+   "옛 전방·일신방직 부지에 최고 49층 3,216세대로 짓고, 더현대 광주가 같은 부지에 들어선다. 같은 임동 S클래스더제니스(KB 7.05억원)와 계림아이파크SK뷰(6.65억원)를 보정한 6.81억원보다 84A 최고가 8.70억원이 높다.",
+   "더현대 광주를 단지 옆에 두는 복합개발 대단지다. 계약금 1,000만원으로 시작해 저층 7억원 초반부터 보면 실거주 선택지가 된다."
+  ],
+  "gwangju-jungang-lotte": [
+   "중앙공원을 품은 서구 풍암·금호동 2,772세대 롯데캐슬로, 2027년 8월 입주한다. 금호지구대광로제비앙(4.90억원)과 더샵염주센트럴파크(6.80억원)를 보정한 6.28억원보다 84A 최고가 8.05억원이 높다.",
+   "중앙공원과 풍암호수를 앞마당으로 쓰는 대단지다. 9개월 뒤 입주라 공원 생활을 바로 시작하려는 실거주자라면 84㎡ 저층(7.26억원)부터 볼 만하다."
+  ]
+ },
+ "meta": {
+  "title_hook": "실거주로 해볼 만한 곳은?",
+  "groups": [
+   [
+    "지금 볼 만한 곳",
+    "시세 수준 + 학교·역·대단지 요건 좋음",
+    [
+     "힐스테이트 양산더스카이",
+     "창원 한신더휴 메가센텀",
+     "순천 지에이그린웰 하이드원",
+     "첨단3지구 호반써밋 A7",
+     "송암공원 중흥S클래스 SK뷰",
+     "김해 신문 센트럴 아이파크"
+    ]
+   ],
+   [
+    "조건·저층으로 기회",
+    "계약금 정액·중도금 무이자·저층 할인 폭 큼",
+    [
+     "아르티엠 라 테라스",
+     "여수 소제 중흥S-클래스 우미린",
+     "신문 대상 웰라움 라시엘",
+     "익산 펠리피아",
+     "양산자이 파크팰리체"
+    ]
+   ],
+   [
+    "입지 보고 들어갈 곳",
+    "시세보다 비싸지만 랜드마크·조망·도심 요건",
+    [
+     "올 뉴 챔피언스시티 1차",
+     "중앙공원 롯데캐슬 시그니처",
+     "거제 푸르지오 마린피스",
+     "센트레빌 아스테리움 거제",
+     "이안 연동스퀘어"
+    ]
+   ]
+  ],
+  "risks": [
+   "이 권역 선착순 단지는 대부분 계약금 정액제(500만~1,000만원)와 중도금 무이자·이자후불제를 내건다. 이 조건들은 분양가에서 빼지 않았다. 신문 대상 웰라움 라시엘의 \"계약 축하금 1,000만원\", 순천 지에이그린웰 하이드원의 \"최대 2,900만원 지원\", 센트레빌 아스테리움 거제의 \"계약금 0원\"은 상담사 블로그에만 나오고 평형별 적용이 확인되지 않아 계산에 넣지 않았다. 계약 전에 견본주택에서 서면으로 확인하자. 반대로 중앙공원 롯데캐슬 시그니처는 계약금이 10%(1차 2,000만원)라 다른 단지보다 초기 부담이 크다.",
+   "모든 단지를 84㎡ 대표 타입 최고가(대개 최고층) 기준으로 계산했다. 같은 84㎡라도 올 뉴 챔피언스시티 1차는 7.08억~8.70억원, 거제 푸르지오 마린피스는 4.11억~5.14억원, 아르티엠 라 테라스는 동·라인에 따라 4.39억~5.12억원으로 1억원 안팎 차이가 난다. 저층이나 싼 라인을 고르면 마이너스 폭은 크게 줄거나 사라진다.",
+   "지방이라 KB 시세가 없는 새 아파트가 많다. 첨단제일풍경채그랑포레·순천푸르지오더퍼스트·e편한세상연동센트럴파크2단지는 리치고 시세를 썼다. 제주 연동은 도심에 10년 이내 신축 대단지가 없어 2006년식 노형뜨란채를 함께 썼고, 익산 펠리피아는 팔봉동에 같은 급 신축이 없어 2km 떨어진 부송동과 비교했다. 거제는 조선업 경기에 따라 기존 신축 시세가 2억원대 후반~4억원대로 넓게 퍼져 있어, 같은 동 비교단지에 따라 결과가 크게 달라진다. 전남은 아파트투유 목록에 없어 블로그·기사로 찾은 2곳만 담았고, 분양가 원문을 못 구한 준공 후 미분양 2곳(삼천포·익산)은 뺐다."
+  ],
+  "conclusion": [
+   "경남·호남·제주 16곳 중 힐스테이트 양산더스카이(+3,370만원)와 창원 한신더휴 메가센텀(+1,060만원)이 시세보다 싸거나 같고, 순천·전주·광주 첨단·광주 송암·김해 신문 아이파크 다섯 곳이 -1천만원 안쪽이다. 일곱 곳이 분양가의 2% 안에 들어온다. 통장 없이, 원하는 동·호수를, 시세 수준에 고를 수 있다는 뜻이다.",
+   "광주 챔피언스시티·중앙공원 롯데캐슬, 거제 두 곳, 제주 연동은 주변 신축 시세보다 1억~2억원 가까이 비싸다. 숫자만 보면 서두를 이유는 없다. 다만 더현대 광주 옆 49층, 74만평 공원 앞, 바다 조망, 도청 앞 도심처럼 그 자리여야 하는 이유가 분명한 실거주자라면, 저층과 계약 조건으로 격차를 줄여 원하는 호수를 먼저 고를 수 있다는 점이 선착순의 장점이다.",
+   "남은 동·호수와 판촉 조건은 매주 바뀐다. 계약 전에 같은 동네 신축의 최근 실거래와 견본주택의 호실별 금액을 나란히 놓고 비교하자."
+  ],
+  "sources": [
+   [
+    "아파트투유 — 경남 아파트 분양 목록(선착순·잔여세대 표시)",
+    "https://apttoyou.kr/gyeongnam-apt"
+   ],
+   [
+    "아파트투유 — 광주 아파트 분양 목록",
+    "https://apttoyou.kr/gwangju-apt"
+   ],
+   [
+    "아파트투유 — 전북 아파트 분양 목록",
+    "https://apttoyou.kr/jeonbuk-apt"
+   ],
+   [
+    "아파트투유 — 제주 아파트 분양 목록",
+    "https://apttoyou.kr/jeju-apt"
+   ],
+   [
+    "아파트투유 — 거제 푸르지오 마린피스(공고 분양가·선착순 동·호 지정)",
+    "https://apttoyou.kr/marinepiece/"
+   ],
+   [
+    "아파트투유 — 센트레빌 아스테리움 거제(분양가·주변 실거래)",
+    "https://apttoyou.kr/asterium/price"
+   ],
+   [
+    "아파트투유 — 신문 대상 웰라움 라시엘(분양가·선착순)",
+    "https://apttoyou.kr/laciel/price"
+   ],
+   [
+    "아파트투유 — 김해 신문 센트럴 아이파크(주택형별 분양가)",
+    "https://apttoyou.kr/sinmuncentral/price"
+   ],
+   [
+    "아파트투유 — 창원 한신더휴 메가센텀(분양가·무순위)",
+    "https://apttoyou.kr/megacentum/price"
+   ],
+   [
+    "아파트투유 — 양산자이 파크팰리체(분양가·선착순)",
+    "https://apttoyou.kr/parkpalice/price"
+   ],
+   [
+    "아파트투유 — 힐스테이트 양산더스카이(분양가·선착순 동·호 지정)",
+    "https://apttoyou.kr/thesky/price"
+   ],
+   [
+    "아파트투유 — 송암공원 중흥S클래스 SK뷰(분양가·선착순)",
+    "https://apttoyou.kr/songamsclass/"
+   ],
+   [
+    "아파트투유 — 첨단3지구 호반써밋(블록별 분양가)",
+    "https://apttoyou.kr/chumdansummit/"
+   ],
+   [
+    "아파트투유 — 중앙공원 롯데캐슬 시그니처(분양가·계약금)",
+    "https://apttoyou.kr/jungangcastle/price"
+   ],
+   [
+    "아파트투유 — 광주 챔피언스시티(주택형별 분양가)",
+    "https://apttoyou.kr/championscity/price"
+   ],
+   [
+    "아파트투유 — 익산 펠리피아(분양가·잔여세대 선착순)",
+    "https://apttoyou.kr/felipia/price"
+   ],
+   [
+    "아파트투유 — 아르티엠 라 테라스(동·라인별 분양가)",
+    "https://apttoyou.kr/artiemlaterrace/price"
+   ],
+   [
+    "아파트투유 — 이안 연동스퀘어(분양가·선착순 팝업)",
+    "https://apttoyou.kr/yeondongsquare/price"
+   ],
+   [
+    "여수 소제 중흥S-클래스 우미린 A4BL 입주자모집공고(2026.04.24)",
+    "https://soje-jnw.com/pdf/gonggo_a4_full.pdf"
+   ],
+   [
+    "순천 지에이그린웰 하이드원 입주자모집공고(2024.12.10)",
+    "https://files-scs.pstatic.net/2024/12/15/TzeHR1Kq0F/순천 지에이그린웰 하이드원 입주자모집공고문.pdf"
+   ],
+   [
+    "상담사 블로그 2026.11.10 — 거제 푸르지오 마린피스 잔여세대 선착순 동호지정",
+    "https://blog.naver.com/parang8033/224472015771"
+   ],
+   [
+    "상담사 블로그 2026.11.11 — 센트레빌 아스테리움 거제 선착순 동호지정",
+    "https://blog.naver.com/parang8033/224472077544"
+   ],
+   [
+    "상담사 블로그 2026.11.13 — 신문 대상 웰라움 라시엘 선착순 동호지정",
+    "https://blog.naver.com/parang8033/224475272081"
+   ],
+   [
+    "상담사 블로그 2026.11.16 — 김해 신문 센트럴 아이파크 회사보유분",
+    "https://blog.naver.com/bella_luv/224479023602"
+   ],
+   [
+    "상담사 블로그 2026.11.16 — 창원 한신더휴 메가센텀 잔여세대",
+    "https://blog.naver.com/qkqnd2829/224479758468"
+   ],
+   [
+    "중개사 블로그 2026.11.16 — 창원 한신더휴 메가센텀 34평 분양권 실거래",
+    "https://blog.naver.com/starbright3/224479490661"
+   ],
+   [
+    "상담사 블로그 2026.11.16 — 양산자이 파크팰리체",
+    "https://blog.naver.com/jbpk60/224479001191"
+   ],
+   [
+    "상담사 블로그 2026.11.16 — 힐스테이트 양산더스카이 회사보유분",
+    "https://blog.naver.com/love7190/224478996637"
+   ],
+   [
+    "상담사 블로그 2026.11.16 — 송암공원 중흥S클래스 SK뷰",
+    "https://blog.naver.com/woow1981/224479102287"
+   ],
+   [
+    "상담사 블로그 2026.11.16 — 호반써밋 첨단3지구 A7 84㎡ 선착순 동·호 지정",
+    "https://blog.naver.com/parang8033/224479296508"
+   ],
+   [
+    "상담사 블로그 2026.11.13 — 중앙공원 롯데캐슬 시그니처 잔여세대",
+    "https://blog.naver.com/misoung-/224475687095"
+   ],
+   [
+    "블로그 2026.11.10 — 챔피언스시티 1차 선착순 계약(10.31부터)",
+    "https://blog.naver.com/dnckd1254/224471286334"
+   ],
+   [
+    "상담사 블로그 2026.11.11 — 익산 펠리피아 선착순 동·호 지정",
+    "https://blog.naver.com/bella_luv/224472944992"
+   ],
+   [
+    "상담사 블로그 2026.11.08 — 전주 아르티엠 라테라스 선착순 분양",
+    "https://blog.naver.com/pparky/224469256106"
+   ],
+   [
+    "상담사 블로그 2026.11.16 — 여수 소제지구 중흥S클래스 우미린 계약조건",
+    "https://blog.naver.com/woow1981/224479091681"
+   ],
+   [
+    "상담사 블로그 2026.11.12 — 순천 지에이그린웰 하이드원 잔여세대 선착순",
+    "https://blog.naver.com/bab000009/224474731540"
+   ],
+   [
+    "상담사 블로그 2026.10.28 — 이안 연동스퀘어 잔여세대",
+    "https://blog.naver.com/jinsu00616/224456527769"
+   ],
+   [
+    "KB부동산 — 비교단지 84㎡ 일반거래가(2026.11.13 기준)",
+    "https://kbland.kr/"
+   ],
+   [
+    "리치고 — 첨단제일풍경채그랑포레 34평 시세",
+    "https://m.richgo.ai/realty/danji/a2xurOo"
+   ],
+   [
+    "리치고 — 순천푸르지오더퍼스트 34평 시세",
+    "https://m.richgo.ai/realty/danji/a2SlBcK"
+   ],
+   [
+    "리치고 — e편한세상연동센트럴파크2단지 32평 시세",
+    "https://m.richgo.ai/realty/danji/a3sgGda"
+   ]
+  ],
+  "tags": [
+   "경남미분양",
+   "호남미분양",
+   "제주미분양",
+   "미분양아파트",
+   "선착순분양",
+   "잔여세대",
+   "동호수지정",
+   "예상프리미엄",
+   "힐스테이트양산더스카이",
+   "창원한신더휴메가센텀",
+   "김해신문센트럴아이파크",
+   "송암공원중흥S클래스SK뷰",
+   "챔피언스시티",
+   "여수소제중흥우미린",
+   "브동산"
+  ],
+  "series_no": 5,
+  "risk_items": [
+   [
+    "판촉 조건",
+    "계약 축하금·지원금·계약금 0원은 블로그에만 나와 계산에서 뺐습니다. 견본주택에서 서면으로 확인하세요"
+   ],
+   [
+    "층·타입",
+    "최고층 기준입니다. 챔피언스시티는 같은 84㎡도 7.08~8.70억으로 차이가 큽니다"
+   ],
+   [
+    "비교 기준",
+    "지방은 KB 시세가 없는 신축이 많아 리치고 시세를 쓴 곳이 있습니다"
+   ],
+   [
+    "양산더스카이",
+    "물금 신축 2곳 기준 +6.4%입니다. 가촌리 구축과 비교하면 마이너스가 됩니다"
+   ]
+  ]
+ }
+}

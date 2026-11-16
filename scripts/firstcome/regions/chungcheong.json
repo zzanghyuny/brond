@@ -1,0 +1,1478 @@
+{
+ "rid": "chungcheong",
+ "label": "충청권",
+ "areas": "충남·대전·충북·세종",
+ "date": "2026-11-17",
+ "comps": {
+  "cs_lakeside": {
+   "name": "천안푸르지오레이크사이드",
+   "yr": 2023,
+   "mo": 5,
+   "n": 1023,
+   "brand": 20,
+   "trans": 14,
+   "conv": 7,
+   "edu": 7,
+   "price": 5.75,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/50467",
+   "view": 6
+  },
+  "cs_vista": {
+   "name": "천안성성비스타동원",
+   "yr": 2024,
+   "mo": 7,
+   "n": 1195,
+   "brand": 12,
+   "trans": 14,
+   "conv": 7,
+   "edu": 7,
+   "price": 5.675,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/438321",
+   "view": 6
+  },
+  "dj_hs": {
+   "name": "힐스테이트두정역",
+   "yr": 2025,
+   "mo": 2,
+   "n": 997,
+   "brand": 20,
+   "trans": 16,
+   "conv": 8,
+   "edu": 7,
+   "price": 5.375,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/1083996",
+   "view": 6
+  },
+  "dj_hr": {
+   "name": "두정역효성해링턴플레이스",
+   "yr": 2020,
+   "mo": 4,
+   "n": 2586,
+   "brand": 16,
+   "trans": 16,
+   "conv": 8,
+   "edu": 7,
+   "price": 5.05,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/37639",
+   "view": 6
+  },
+  "bs_hanra": {
+   "name": "천안부성한라비발디",
+   "yr": 2024,
+   "mo": 12,
+   "n": 654,
+   "brand": 16,
+   "trans": 13,
+   "conv": 5,
+   "edu": 6,
+   "price": 4.4,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/555302",
+   "view": 6
+  },
+  "nt2": {
+   "name": "한화포레나천안노태2단지",
+   "yr": 2024,
+   "mo": 12,
+   "n": 777,
+   "brand": 16,
+   "trans": 14,
+   "conv": 7,
+   "edu": 7,
+   "price": 5.25,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/477787",
+   "view": 6
+  },
+  "bd_lins": {
+   "name": "천안불당린스트라우스1·2단지",
+   "yr": 2017,
+   "mo": 7,
+   "n": 1152,
+   "brand": 12,
+   "trans": 17,
+   "conv": 9,
+   "edu": 9,
+   "price": 7.35,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/30223",
+   "view": 6
+  },
+  "sr_hoban": {
+   "name": "호반써밋포레센트",
+   "yr": 2023,
+   "mo": 12,
+   "n": 594,
+   "brand": 16,
+   "trans": 13,
+   "conv": 5,
+   "edu": 6,
+   "price": 4.225,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/477784",
+   "view": 6
+  },
+  "cd_lotte": {
+   "name": "천안롯데캐슬더청당",
+   "yr": 2025,
+   "mo": 8,
+   "n": 1199,
+   "brand": 20,
+   "trans": 14,
+   "conv": 6,
+   "edu": 6,
+   "price": 4.6,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/647434",
+   "view": 6
+  },
+  "bb_edream": {
+   "name": "e편한세상탕정퍼스트드림",
+   "yr": 2025,
+   "mo": 1,
+   "n": 893,
+   "brand": 20,
+   "trans": 14,
+   "conv": 6,
+   "edu": 6,
+   "price": 5.325,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/658237",
+   "view": 6
+  },
+  "tj_jw3": {
+   "name": "지웰시티센트럴푸르지오3단지",
+   "yr": 2022,
+   "mo": 1,
+   "n": 852,
+   "brand": 20,
+   "trans": 16,
+   "conv": 8,
+   "edu": 7,
+   "price": 7.8,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/45124",
+   "view": 6
+  },
+  "mj_neo": {
+   "name": "힐스테이트모종네오루체",
+   "yr": 2023,
+   "mo": 8,
+   "n": 927,
+   "brand": 20,
+   "trans": 16,
+   "conv": 7,
+   "edu": 6,
+   "price": 4.3,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/354150",
+   "view": 6
+  },
+  "mj_castle": {
+   "name": "아산모종캐슬어울림1단지",
+   "yr": 2017,
+   "mo": 2,
+   "n": 792,
+   "brand": 16,
+   "trans": 16,
+   "conv": 7,
+   "edu": 6,
+   "price": 3.35,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/30066",
+   "view": 6
+  },
+  "gj_well": {
+   "name": "공주월송지평더웰",
+   "yr": 2022,
+   "mo": 12,
+   "n": 376,
+   "brand": 8,
+   "trans": 13,
+   "conv": 5,
+   "edu": 6,
+   "price": 4.3,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/312524",
+   "view": 6
+  },
+  "gj_koa": {
+   "name": "공주신관코아루센트럴파크",
+   "yr": 2018,
+   "mo": 7,
+   "n": 722,
+   "brand": 8,
+   "trans": 18,
+   "conv": 8,
+   "edu": 6,
+   "price": 3.7,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/map?xy=공주신관코아루센트럴파크",
+   "view": 6
+  },
+  "hs_xi": {
+   "name": "홍성자이",
+   "yr": 2023,
+   "mo": 12,
+   "n": 483,
+   "brand": 20,
+   "trans": 16,
+   "conv": 7,
+   "edu": 6,
+   "price": 3.6,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/428053",
+   "view": 6
+  },
+  "np_yubora": {
+   "name": "내포신도시반도유보라마크에디션",
+   "yr": 2025,
+   "mo": 1,
+   "n": 955,
+   "brand": 16,
+   "trans": 14,
+   "conv": 6,
+   "edu": 7,
+   "price": 3.7,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/435025",
+   "view": 6
+  },
+  "ss_prugio": {
+   "name": "서산푸르지오더센트럴",
+   "yr": 2023,
+   "mo": 9,
+   "n": 861,
+   "brand": 20,
+   "trans": 14,
+   "conv": 7,
+   "edu": 6,
+   "price": 5.2,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/324294",
+   "view": 6
+  },
+  "ss_jh": {
+   "name": "서산예천2지구중흥S-클래스더퍼스트",
+   "yr": 2021,
+   "mo": 1,
+   "n": 1273,
+   "brand": 12,
+   "trans": 14,
+   "conv": 7,
+   "edu": 6,
+   "price": 4.625,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/41980",
+   "view": 6
+  },
+  "dj_tree": {
+   "name": "도안우미린트리쉐이드",
+   "yr": 2026,
+   "mo": 6,
+   "n": 1754,
+   "brand": 12,
+   "trans": 0,
+   "conv": 6,
+   "edu": 7,
+   "price": 7.0,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/658239",
+   "view": 6
+  },
+  "dj_ipark2": {
+   "name": "대전아이파크시티2단지",
+   "yr": 2021,
+   "mo": 10,
+   "n": 1306,
+   "brand": 20,
+   "trans": 0,
+   "conv": 8,
+   "edu": 8,
+   "price": 8.6,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/45278",
+   "view": 6
+  },
+  "dj_elc": {
+   "name": "대전하늘채엘센트로",
+   "yr": 2024,
+   "mo": 7,
+   "n": 474,
+   "brand": 16,
+   "trans": 4,
+   "conv": 7,
+   "edu": 7,
+   "price": 5.25,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/432856",
+   "view": 6
+  },
+  "dj_mok": {
+   "name": "목동더샵리슈빌",
+   "yr": 2022,
+   "mo": 5,
+   "n": 993,
+   "brand": 20,
+   "trans": 4,
+   "conv": 8,
+   "edu": 7,
+   "price": 6.95,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/47315",
+   "view": 6
+  },
+  "dj_sky": {
+   "name": "대전하늘채스카이앤",
+   "yr": 2024,
+   "mo": 8,
+   "n": 998,
+   "brand": 16,
+   "trans": 4,
+   "conv": 8,
+   "edu": 6,
+   "price": 5.35,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/323272",
+   "view": 6
+  },
+  "dj_hmr": {
+   "name": "대전해모로더센트라",
+   "yr": 2024,
+   "mo": 2,
+   "n": 862,
+   "brand": 16,
+   "trans": 12,
+   "conv": 8,
+   "edu": 6,
+   "price": 6.2,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/381585",
+   "view": 6
+  },
+  "dj_east": {
+   "name": "이스트시티1단지",
+   "yr": 2018,
+   "mo": 11,
+   "n": 1345,
+   "brand": 16,
+   "trans": 10,
+   "conv": 7,
+   "edu": 6,
+   "price": 5.425,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/34831",
+   "view": 6
+  },
+  "dj_sh": {
+   "name": "신흥SK뷰",
+   "yr": 2022,
+   "mo": 4,
+   "n": 1588,
+   "brand": 20,
+   "trans": 8,
+   "conv": 7,
+   "edu": 6,
+   "price": 5.6,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/46676",
+   "view": 6
+  },
+  "es_first": {
+   "name": "음성푸르지오더퍼스트",
+   "yr": 2024,
+   "mo": 10,
+   "n": 1048,
+   "brand": 20,
+   "trans": 13,
+   "conv": 5,
+   "edu": 5,
+   "price": 3.05,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/438477",
+   "view": 6
+  },
+  "es_dm": {
+   "name": "음성동문디이스트",
+   "yr": 2024,
+   "mo": 7,
+   "n": 687,
+   "brand": 8,
+   "trans": 13,
+   "conv": 5,
+   "edu": 5,
+   "price": 2.6,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/438478",
+   "view": 6
+  },
+  "bc_xi": {
+   "name": "북천안자이포레스트",
+   "yr": 2016,
+   "mo": 5,
+   "n": 1348,
+   "brand": 20,
+   "trans": 12,
+   "conv": 5,
+   "edu": 6,
+   "price": 2.8,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/c/687344",
+   "view": 6
+  },
+  "gw_city": {
+   "name": "시티프라디움(음성 금왕)",
+   "yr": 2017,
+   "mo": 4,
+   "n": 428,
+   "brand": 12,
+   "trans": 15,
+   "conv": 6,
+   "edu": 5,
+   "price": 2.325,
+   "deal": "KB 일반거래가 2026.11.13",
+   "src": "https://kbland.kr/map?xy=음성 금왕 시티프라디움",
+   "view": 6
+  }
+ },
+ "ceil": {},
+ "sites": [
+  {
+   "key": "cheonan-humanvill",
+   "name": "천안 휴먼빌 퍼스트시티",
+   "region": "천안 서북구 부대동",
+   "sido": "충남",
+   "cls": "local",
+   "yr": 2029,
+   "mo": 5,
+   "n": 1541,
+   "brand": 8,
+   "builder": "일신건영",
+   "trans": 10,
+   "conv": 5,
+   "edu": 5,
+   "price": 5.563,
+   "price_note": "84D 4.75~5.56억(84A 4.56~5.46억)",
+   "comps": [
+    "bs_hanra",
+    "dj_hs"
+   ],
+   "conf": "중",
+   "firstcome_src": "https://blog.naver.com/woomirin1234/224476327559 (2026.11.14 분양 상담 글) · https://blog.naver.com/hsjpro12/224479043532 (2026.11.16, 선착순 분양 언급)",
+   "price_src": "https://apttoyou.kr/firstcity/",
+   "img": {
+    "aerial": "https://apttoyou.kr/firstcity/img/hero.jpg",
+    "location": "https://apttoyou.kr/firstcity/img/g_lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "grancity-philhouse",
+   "name": "천안아산역 그랑시티 필하우스",
+   "region": "아산 배방읍 휴대지구",
+   "sido": "충남",
+   "cls": "local",
+   "yr": 2029,
+   "mo": 8,
+   "n": 1534,
+   "brand": 8,
+   "builder": "한성건설",
+   "trans": 10,
+   "conv": 5,
+   "edu": 5,
+   "price": 4.806,
+   "price_note": "84A 4.55~4.81억(84B 최고 4.83억)",
+   "comps": [
+    "bb_edream",
+    "tj_jw3"
+   ],
+   "conf": "중",
+   "warn": "천안아산역 핵심 단지(지웰시티 센트럴 푸르지오, KB 7.8억)가 비교군에 들어가 적정가가 높게 나왔다. 휴대지구는 역에서 직선 2km라 실제 시세는 배방 신축(5.3억)과 그 사이일 수 있다",
+   "firstcome_src": "https://blog.naver.com/ellegarden0723/224479423345 (2026.11.16 미분양 분양 상담 글, 정당계약 11.9~11 종료 후) · https://blog.naver.com/pilttong/224476668432 (2026.11.14 회사보유분)",
+   "price_src": "https://mhb-blog.com/?p=10470",
+   "img": {
+    "aerial": "https://apttoyou.kr/grancityphilhouse/img/hero.jpg",
+    "location": "https://apttoyou.kr/grancityphilhouse/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "asan-belcore",
+   "name": "아산 벨코어 스위첸",
+   "region": "아산 모종동",
+   "sido": "충남",
+   "cls": "local",
+   "yr": 2025,
+   "mo": 12,
+   "n": 299,
+   "brand": 16,
+   "builder": "KCC건설",
+   "trans": 19,
+   "conv": 9,
+   "edu": 6,
+   "price": 4.65,
+   "price_note": "84㎡ 4.30~4.65억(2022 공고)",
+   "comps": [
+    "mj_neo",
+    "mj_castle"
+   ],
+   "done": true,
+   "conf": "중",
+   "warn": "준공 단지지만 84㎡ 자기 단지 KB 시세·최근 실거래가 확인되지 않아 이웃 단지 비교로 계산했다. 2년 잔금 유예·계약축하금 조건은 세대마다 다르다",
+   "firstcome_src": "https://blog.naver.com/tanker911/224468487095 (2026.11.10 분양 상담 글) · 아파트투유: KCC건설 공식 페이지 분양중·선착순 동호지정 안내",
+   "price_src": "https://apttoyou.kr/belcore/",
+   "img": {
+    "aerial": "https://apttoyou.kr/belcore/img/hero.jpg",
+    "location": "https://apttoyou.kr/belcore/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "cheonan-deast",
+   "name": "천안 동문 디 이스트 파크시티",
+   "region": "천안 동남구 삼룡동",
+   "sido": "충남",
+   "cls": "local",
+   "yr": 2029,
+   "mo": 3,
+   "n": 1051,
+   "brand": 8,
+   "builder": "동문건설",
+   "trans": 10,
+   "conv": 5,
+   "edu": 5,
+   "price": 5.825,
+   "price_note": "84A 3.94~5.83억(최고가는 다락·테라스 최상층, 21층↑ 일반층 4.5억대)",
+   "comps": [
+    "sr_hoban",
+    "cd_lotte"
+   ],
+   "benefit": 0.05,
+   "benefit_src": "계약축하금 500만원(아파트투유 잔여세대 조건)",
+   "conf": "중",
+   "warn": "84A 최고가는 다락·테라스가 붙은 최상층 금액이다. 일반층(21층 이상 4.5억원대)을 기준으로 하면 격차가 약 1.3억원 줄어 -10% 안팎이 된다",
+   "firstcome_src": "https://blog.naver.com/7575roro/224472115854 (2026.11.10 분양 상담 글) · 아파트투유: 잔여세대 선착순 동·호 지정",
+   "price_src": "https://www.newsis.com/view/NISX20260430_0003614105",
+   "img": {
+    "aerial": "https://apttoyou.kr/deastparkcity/img/hero.jpg",
+    "location": "https://apttoyou.kr/deastparkcity/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "dujeong-granpeak",
+   "name": "두정역 푸르지오 그랑피크",
+   "region": "천안 서북구 성정동",
+   "sido": "충남",
+   "cls": "local",
+   "yr": 2030,
+   "mo": 1,
+   "n": 1438,
+   "brand": 20,
+   "builder": "대우건설",
+   "trans": 16,
+   "conv": 8,
+   "edu": 6,
+   "price": 5.53,
+   "price_note": "84㎡ 4.59~5.53억",
+   "comps": [
+    "dj_hs",
+    "dj_hr"
+   ],
+   "conf": "상",
+   "firstcome_src": "https://blog.naver.com/pparky/224479584730 (2026.11.16 분양 상담 글) · 아파트투유: 정당계약 종료·잔여세대 안내",
+   "price_src": "https://apttoyou.kr/granpeak/",
+   "img": {
+    "aerial": "https://apttoyou.kr/granpeak/img/hero.jpg",
+    "location": "https://apttoyou.kr/granpeak/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "eopseong-lake1",
+   "name": "업성 푸르지오 레이크시티",
+   "region": "천안 서북구 업성동(1블록)",
+   "sido": "충남",
+   "cls": "local",
+   "yr": 2029,
+   "mo": 9,
+   "n": 1460,
+   "brand": 20,
+   "builder": "대우건설",
+   "trans": 12,
+   "conv": 6,
+   "edu": 5,
+   "view": 7,
+   "price": 6.099,
+   "price_note": "84A 5.17~6.10억(84B 최고 6.19억)",
+   "comps": [
+    "cs_lakeside",
+    "dj_hs"
+   ],
+   "conf": "중",
+   "firstcome_src": "https://blog.naver.com/yeswin10/224470927142 (2026.11.10) · 아파트투유: 잔여세대 선착순 동·호지정 계약 진행 중",
+   "price_src": "https://blog.naver.com/ilta_joa/224471858591",
+   "img": {
+    "aerial": "https://apttoyou.kr/lakecity/img/g_kv.jpg",
+    "location": "https://apttoyou.kr/lakecity/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "eopseong-lake2",
+   "name": "업성 푸르지오 레이크시티 2단지",
+   "region": "천안 서북구 업성동(2블록)",
+   "sido": "충남",
+   "cls": "local",
+   "yr": 2029,
+   "mo": 9,
+   "n": 448,
+   "brand": 20,
+   "builder": "대우건설",
+   "trans": 12,
+   "conv": 6,
+   "edu": 5,
+   "view": 7,
+   "price": 5.775,
+   "price_note": "84A 5.28~5.78억",
+   "comps": [
+    "cs_lakeside",
+    "dj_hs"
+   ],
+   "conf": "중",
+   "firstcome_src": "https://blog.naver.com/rlaaudrb115/224464435103 (2026.11.04 선착순 동호지정 계약중) · https://blog.naver.com/b2527428/224465941314 (2026.11.05)",
+   "price_src": "https://apttoyou.kr/lakecity2/",
+   "img": {
+    "aerial": "https://apttoyou.kr/lakecity2/img/hero.jpg",
+    "location": "https://apttoyou.kr/lakecity2/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "cheonan-ipark34",
+   "name": "천안 아이파크 시티 3·4단지",
+   "region": "천안 서북구 부대동",
+   "sido": "충남",
+   "cls": "local",
+   "yr": 2029,
+   "mo": 6,
+   "n": 1714,
+   "brand": 20,
+   "builder": "HDC현대산업개발",
+   "trans": 12,
+   "conv": 5,
+   "edu": 5,
+   "price": 5.904,
+   "price_note": "3단지 84A 최고 5.90억(84B 5.76억)",
+   "comps": [
+    "bs_hanra",
+    "dj_hs"
+   ],
+   "conf": "중",
+   "firstcome_src": "https://blog.naver.com/5ejejr5/224476816341 (2026.11.14 선착순 동·호 지정·계약금 5%)",
+   "price_src": "https://apttoyou.kr/iparkcity34/",
+   "img": {
+    "aerial": "https://apttoyou.kr/iparkcity34/img/hero.jpg",
+    "location": "https://apttoyou.kr/iparkcity34/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "elif-seongseong",
+   "name": "엘리프 성성호수공원",
+   "region": "천안 서북구 업성동(1·2블록)",
+   "sido": "충남",
+   "cls": "local",
+   "yr": 2029,
+   "mo": 3,
+   "n": 1165,
+   "brand": 12,
+   "builder": "계룡건설",
+   "trans": 12,
+   "conv": 6,
+   "edu": 5,
+   "view": 7,
+   "price": 5.886,
+   "price_note": "1BL 84A 5.40~5.89억 · 2BL 84A 4.69~5.71억",
+   "comps": [
+    "cs_vista",
+    "dj_hs"
+   ],
+   "conf": "중",
+   "warn": "1블록 84A 최고가 기준이다. 2블록 84A(최고 5.71억원)를 고르면 1,800만원가량 낮아진다",
+   "firstcome_src": "https://blog.naver.com/bella_luv/224472932811 (2026.11.11 회사보유분) · https://blog.naver.com/ilta_joa/224474418535 (2026.11.12 잔여세대)",
+   "price_src": "https://blog.naver.com/ilta_eunwoo/224473211057",
+   "img": {
+    "aerial": "",
+    "location": "",
+    "src": ""
+   }
+  },
+  {
+   "key": "baekseok-xi",
+   "name": "백석시그니처자이",
+   "region": "천안 서북구 백석동",
+   "sido": "충남",
+   "cls": "local",
+   "yr": 2029,
+   "mo": 9,
+   "n": 1174,
+   "brand": 20,
+   "builder": "GS건설",
+   "trans": 14,
+   "conv": 7,
+   "edu": 7,
+   "price": 5.839,
+   "price_note": "84㎡ 5.24~5.84억",
+   "comps": [
+    "nt2",
+    "bd_lins"
+   ],
+   "conf": "중",
+   "warn": "불당 생활권 대단지(린스트라우스, KB 7.35억)가 적정가를 끌어올렸다. 바로 옆 노태 신축만 보면 적정가는 5.9억원대로 분양가와 비슷하다",
+   "firstcome_src": "https://blog.naver.com/love2455v/224475739689 (2026.11.13 선착순 동·호지정, 1차 계약금 500만원)",
+   "price_src": "https://apttoyou.kr/signaturexi/",
+   "img": {
+    "aerial": "https://apttoyou.kr/signaturexi/img/hero.jpg",
+    "location": "https://apttoyou.kr/signaturexi/img/g_lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "gongju-jinarehii",
+   "name": "공주월송 진아레히",
+   "region": "공주 금흥동(금흥2지구)",
+   "sido": "충남",
+   "cls": "local",
+   "yr": 2029,
+   "mo": 4,
+   "n": 811,
+   "brand": 8,
+   "builder": "리채·아이리스건설",
+   "trans": 13,
+   "conv": 5,
+   "edu": 6,
+   "price": 4.39,
+   "price_note": "84A 4.03~4.39억(84B 3.93~4.28억)",
+   "comps": [
+    "gj_well",
+    "gj_koa"
+   ],
+   "conf": "중",
+   "warn": "공주에는 10년 이내 500세대 이상 신축이 적어 2018년식 신관동 단지를 함께 비교했다",
+   "firstcome_src": "https://blog.naver.com/pparky/224474415430 (2026.11.12 선착순 계약조건) · 아파트투유: 잔여세대 선착순 동·호수 지정",
+   "price_src": "https://www.wikitree.co.kr/articles/1135198",
+   "img": {
+    "aerial": "https://apttoyou.kr/jinarehii/img/hero.jpg",
+    "location": "https://apttoyou.kr/jinarehii/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "hongseong-eph",
+   "name": "e편한세상 홍성 더센트럴",
+   "region": "홍성 홍성읍 월산리",
+   "sido": "충남",
+   "cls": "local",
+   "yr": 2025,
+   "mo": 2,
+   "n": 470,
+   "brand": 20,
+   "builder": "DL건설",
+   "trans": 16,
+   "conv": 7,
+   "edu": 6,
+   "price": 3.915,
+   "price_note": "84㎡ 3.71~3.92억(2022 공고)",
+   "comps": [
+    "hs_xi",
+    "np_yubora"
+   ],
+   "done": true,
+   "conf": "중",
+   "warn": "준공 단지지만 자기 단지 KB 시세가 없어 이웃 단지 비교로 계산했다. 분양 상담 글은 약 6,000만원 상당 혜택(잔금 유예·무상 옵션)을 안내하나 현금 할인 확정액이 아니라 빼지 않았다",
+   "firstcome_src": "https://blog.naver.com/landh1215/224476804550 (2026.11.14 즉시입주·특별 혜택 분양 글)",
+   "price_src": "https://apttoyou.kr/ethecentral/",
+   "img": {
+    "aerial": "https://apttoyou.kr/ethecentral/img/hero.jpg",
+    "location": "https://apttoyou.kr/ethecentral/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "seosan-trivn",
+   "name": "트리븐 서산",
+   "region": "서산 예천동",
+   "sido": "충남",
+   "cls": "local",
+   "yr": 2029,
+   "mo": 1,
+   "n": 829,
+   "brand": 16,
+   "builder": "두산건설",
+   "trans": 14,
+   "conv": 6,
+   "edu": 6,
+   "price": 5.334,
+   "price_note": "84A 최고 5.33억(84B 5.35억)",
+   "comps": [
+    "ss_prugio",
+    "ss_jh"
+   ],
+   "conf": "상",
+   "firstcome_src": "https://blog.naver.com/flejtm1996/224478309187 (2026.11.16 계약금 1,000만원 조건 분양 글)",
+   "price_src": "https://biz.newdaily.co.kr/site/data/html/2025/10/28/2025102800071.html",
+   "img": {
+    "aerial": "",
+    "location": "",
+    "src": ""
+   }
+  },
+  {
+   "key": "jiksan-dongil",
+   "name": "천안 직산 동일하이빌 파크레인",
+   "region": "천안 서북구 직산읍",
+   "sido": "충남",
+   "cls": "local",
+   "yr": 2029,
+   "mo": 1,
+   "n": 895,
+   "brand": 12,
+   "builder": "동일토건",
+   "trans": 11,
+   "conv": 4,
+   "edu": 5,
+   "price": 4.47,
+   "price_note": "84A 최고 4.47억(84㎡ 3.72~4.52억)",
+   "comps": [
+    "bc_xi",
+    "cs_vista"
+   ],
+   "conf": "하",
+   "l5": "성성지구 신축 2곳(비스타동원·푸르지오레이크사이드)만 비교하면 상한(+10%)까지 올라가, 같은 북천안 생활권(성거읍) 대단지 북천안자이포레스트로 1곳 교체",
+   "warn": "직산읍에는 84㎡ 신축 아파트가 없다(더샵 천안레이크마크는 65·75㎡뿐). 2016년식 북천안자이포레스트와 성성지구 신축을 함께 비교했다",
+   "firstcome_src": "https://blog.naver.com/k115002/224477848802 (2026.11.15 선착순 계약 중·계약금 0원) · https://blog.naver.com/sky4862n/224475914281 (2026.11.13)",
+   "price_src": "https://blog.naver.com/tc0706/224472945638",
+   "img": {
+    "aerial": "",
+    "location": "",
+    "src": ""
+   }
+  },
+  {
+   "key": "oryong-harrington",
+   "name": "해링턴 플레이스 오룡역",
+   "region": "대전 중구 용두동",
+   "sido": "대전",
+   "cls": "metro",
+   "yr": 2029,
+   "mo": 6,
+   "n": 427,
+   "brand": 16,
+   "builder": "진흥기업",
+   "trans": 18,
+   "conv": 7,
+   "edu": 7,
+   "price": 6.949,
+   "price_note": "84㎡ 5.79~6.95억(21층↑ 6.71~6.95억)",
+   "comps": [
+    "dj_elc",
+    "dj_mok"
+   ],
+   "conf": "상",
+   "firstcome_src": "https://blog.naver.com/bella_luv/224479030486 (2026.11.16 회사보유분) · 아파트투유: 선착순 동·호 지정",
+   "price_src": "https://apttoyou.kr/harringtonoryong/",
+   "img": {
+    "aerial": "https://apttoyou.kr/harringtonoryong/img/hero.jpg",
+    "location": "https://apttoyou.kr/harringtonoryong/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "seongnam-woomi",
+   "name": "대전 성남 우미린 뉴시티",
+   "region": "대전 동구 성남동",
+   "sido": "대전",
+   "cls": "metro",
+   "yr": 2027,
+   "mo": 6,
+   "n": 1213,
+   "brand": 12,
+   "builder": "우미건설",
+   "trans": 2,
+   "conv": 7,
+   "edu": 6,
+   "price": 5.821,
+   "price_note": "84㎡ 5.16~5.82억",
+   "comps": [
+    "dj_east",
+    "dj_sh"
+   ],
+   "conf": "상",
+   "firstcome_src": "https://blog.naver.com/mata1070/224479074394 (2026.11.16 미분양 분양 글) · 아파트투유: 선착순 잔여세대",
+   "price_src": "https://apttoyou.kr/newcity/",
+   "img": {
+    "aerial": "https://apttoyou.kr/newcity/img/hero.jpg",
+    "location": "https://apttoyou.kr/newcity/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "doan-centumriche",
+   "name": "도안자이 센텀리체",
+   "region": "대전 유성구 용계동(도안2단계)",
+   "sido": "대전",
+   "cls": "metro",
+   "yr": 2029,
+   "mo": 10,
+   "n": 2293,
+   "brand": 20,
+   "builder": "GS건설",
+   "trans": 0,
+   "conv": 5,
+   "edu": 6,
+   "price": 7.762,
+   "price_note": "1단지 84㎡ 7.17~7.76억(2단지 최고 7.77억)",
+   "comps": [
+    "dj_tree",
+    "dj_ipark2"
+   ],
+   "conf": "상",
+   "warn": "도안 1단계 대장(대전아이파크시티, KB 8.6억)이 비교군이라 적정가가 높게 나왔다. 바로 옆 도안우미린트리쉐이드(7.0억)만 보면 분양가와 거의 같다",
+   "firstcome_src": "https://blog.naver.com/kimshuly/224478985195 (2026.11.16 선착순 동호지정) · 아파트투유: 선착순 동·호 지정",
+   "price_src": "https://apttoyou.kr/centumriche/",
+   "img": {
+    "aerial": "https://apttoyou.kr/centumriche/img/hero.jpg",
+    "location": "https://apttoyou.kr/centumriche/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "munhwa-sujain",
+   "name": "대전 문화공원 수자인",
+   "region": "대전 중구 문화동",
+   "sido": "대전",
+   "cls": "metro",
+   "yr": 2027,
+   "mo": 11,
+   "n": 509,
+   "brand": 12,
+   "builder": "한양",
+   "trans": 0,
+   "conv": 5,
+   "edu": 6,
+   "price": 5.412,
+   "price_note": "84㎡ 5.03~5.41억",
+   "comps": [
+    "dj_mok",
+    "dj_hmr"
+   ],
+   "conf": "중",
+   "warn": "바로 옆 문화자이SK뷰가 아직 입주 전이라 시세가 없어, 2.5km 떨어진 원도심(목동·선화동) 신축과 비교했다",
+   "firstcome_src": "https://blog.naver.com/esin2756/224477989495 (2026.11.15 분양 글) · 아파트투유: 선착순 동·호 지정",
+   "price_src": "https://apttoyou.kr/munhwapark/",
+   "img": {
+    "aerial": "https://apttoyou.kr/munhwapark/img/hero.jpg",
+    "location": "https://apttoyou.kr/munhwapark/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "seonhwa-lucier",
+   "name": "대전 하늘채 루시에르",
+   "region": "대전 중구 선화동",
+   "sido": "대전",
+   "cls": "metro",
+   "yr": 2029,
+   "mo": 7,
+   "n": 998,
+   "brand": 16,
+   "builder": "코오롱글로벌",
+   "trans": 4,
+   "conv": 8,
+   "edu": 6,
+   "price": 6.6,
+   "price_note": "84A 5.63~6.60억",
+   "comps": [
+    "dj_sky",
+    "dj_hmr"
+   ],
+   "conf": "상",
+   "firstcome_src": "https://blog.naver.com/kjr1212a/224473924966 (2026.11.12 미분양 분양 글) · 한경 2025.08: 선착순 동·호 지정 계약",
+   "price_src": "https://biz.newdaily.co.kr/site/data/html/2025/07/15/2025071500143.html",
+   "img": {
+    "aerial": "",
+    "location": "",
+    "src": ""
+   }
+  },
+  {
+   "key": "eumseong-fullhouse",
+   "name": "음성 우미린 풀하우스",
+   "region": "음성 대소읍(성본산단)",
+   "sido": "충북",
+   "cls": "local",
+   "yr": 2025,
+   "mo": 10,
+   "n": 1019,
+   "brand": 12,
+   "builder": "우미건설",
+   "trans": 13,
+   "conv": 5,
+   "edu": 5,
+   "price": 3.26,
+   "price_note": "84㎡ 2.83~3.26억(분양가상한제)",
+   "comps": [
+    "es_first",
+    "es_dm"
+   ],
+   "done": true,
+   "own": 3.1,
+   "own_src": "KB 일반거래가 3.10억(2026.11.13)",
+   "conf": "상",
+   "firstcome_src": "https://blog.naver.com/frommong10/224476263130 (2026.11.14 잔여세대 선착순 동호지정)",
+   "price_src": "https://apttoyou.kr/fullhouse/",
+   "img": {
+    "aerial": "https://apttoyou.kr/fullhouse/img/hero.jpg",
+    "location": "https://apttoyou.kr/fullhouse/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "eumseong-markverre",
+   "name": "음성 푸르지오 마크베르",
+   "region": "음성 대소읍(성본산단)",
+   "sido": "충북",
+   "cls": "local",
+   "yr": 2025,
+   "mo": 4,
+   "n": 644,
+   "brand": 20,
+   "builder": "대우건설",
+   "trans": 13,
+   "conv": 5,
+   "edu": 5,
+   "price": 3.47,
+   "price_note": "84㎡ 3.01~3.47억",
+   "comps": [
+    "es_first",
+    "es_dm"
+   ],
+   "done": true,
+   "own": 3.34,
+   "own_src": "리치고 시세 3.34억(2026.11.16) · 최근 실거래 3.30억(2026.02)",
+   "conf": "중",
+   "warn": "선착순 근거가 10월 22일 분양 상담 글 1건이다. 남은 세대가 110㎡ 위주일 수 있어 84㎡ 잔여 여부를 먼저 확인해야 한다",
+   "firstcome_src": "https://blog.naver.com/kimzmen/224450026284 (2026.10.22 미분양 잔여세대 상담)",
+   "price_src": "https://apttoyou.kr/markverre/",
+   "img": {
+    "aerial": "https://apttoyou.kr/markverre/img/hero.jpg",
+    "location": "https://apttoyou.kr/markverre/img/lo.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   }
+  },
+  {
+   "key": "eumseong-xi",
+   "name": "음성자이 센트럴시티",
+   "region": "음성 금왕읍",
+   "sido": "충북",
+   "cls": "local",
+   "yr": 2025,
+   "mo": 11,
+   "n": 1505,
+   "brand": 20,
+   "builder": "GS건설",
+   "trans": 15,
+   "conv": 6,
+   "edu": 5,
+   "price": 3.95,
+   "price_note": "84A 16층↑ 3.95억(6~10층 3.85억)",
+   "comps": [
+    "gw_city",
+    "es_first"
+   ],
+   "done": true,
+   "conf": "하",
+   "warn": "공식 공고문 대신 분양 상담 글·매물 표기로 분양가를 확인했다. 완납 시 선납할인(84A 약 5,000만원)은 조건부라 빼지 않았다. 자기 단지 시세가 없고 금왕읍에 10년 이내 대단지 신축이 없어 2017년식 소단지와 대소읍 신축으로 비교했다(하향 편향 가능성)",
+   "firstcome_src": "https://blog.naver.com/hamwish/224479077588 (2026.11.16 선납할인 분양 글) · https://blog.naver.com/cherryya79/224454317030 (2026.10.26 선착순 동호수 지정)",
+   "price_src": "https://blog.naver.com/hamwish/224479077588",
+   "img": {
+    "aerial": "",
+    "location": "",
+    "src": ""
+   }
+  }
+ ],
+ "excluded": [
+  {
+   "name": "엘리프 논산 디에디션",
+   "reason": "청약 예정(특별공급 11/23, 1순위 11/24) — 아직 선착순 아님"
+  },
+  {
+   "name": "세종스마트시티 엘 수자인",
+   "reason": "청약 예정(특별공급 추천 접수 중) — 세종에는 선착순 분양 단지를 찾지 못함"
+  },
+  {
+   "name": "더샵 천안라크원",
+   "reason": "입주자모집공고 전(11/19 예정)"
+  },
+  {
+   "name": "신분평 에피트 더웨이시티",
+   "reason": "정당계약 진행 중(11/16~18) — 아직 선착순 전"
+  },
+  {
+   "name": "더샵 청주그리니티(2차)",
+   "reason": "청약홈 무순위 접수(11/17)"
+  },
+  {
+   "name": "힐스테이트 오송 레이크 센트럴",
+   "reason": "신규 분양(견본주택 개관, 청약 예정)"
+  },
+  {
+   "name": "e편한세상 서대전역 센트로",
+   "reason": "민간임대(10년 임대 후 분양전환)로 공급 중"
+  },
+  {
+   "name": "청주 한양립스 더 벨루체",
+   "reason": "지역주택조합(동남지역주택조합) 사업"
+  },
+  {
+   "name": "부여 골드클래스",
+   "reason": "84㎡ 마감, 남은 물량이 82·114㎡뿐"
+  },
+  {
+   "name": "아산모종 서한이다음 노블리스",
+   "reason": "84㎡ 마감, 남은 물량이 101㎡A뿐"
+  },
+  {
+   "name": "아산자이 그랜드파크",
+   "reason": "84㎡ 최초 공급금액을 공식 자료로 확인하지 못함(블로그는 \"3억 후반~4억대\"로만 표기)"
+  },
+  {
+   "name": "대전 롯데캐슬 더퍼스트",
+   "reason": "84㎡는 2026.03 조합원 취소분 청약분이고, 현재 회사보유분의 타입·가격을 공식 자료로 확인하지 못함"
+  },
+  {
+   "name": "충주 연수 경남아너스빌 센터원",
+   "reason": "선착순 진행 중이나 84㎡ 최고가 미공개(평균 5.26억, 2~3층 4.89억부터만 공개)"
+  },
+  {
+   "name": "서산 휴리움 레이크파크",
+   "reason": "분양가 비공개(전화 상담 안내), 178세대 주상복합"
+  },
+  {
+   "name": "내포 중흥S-클래스 더시티",
+   "reason": "회사보유분 가격 비공개(상담 안내)"
+  },
+  {
+   "name": "대전 경남아너스빌 센텀스카이",
+   "reason": "9월 청약 후 선착순 전환 근거(최근 1개월 영업 글·공식 안내)를 찾지 못함"
+  },
+  {
+   "name": "아산테크노밸리 더원 7차",
+   "reason": "분양가상한제 공공택지 단지로 선착순 동·호 지정 근거를 찾지 못함(최근 글은 일반 홍보)"
+  },
+  {
+   "name": "천안 아이파크 시티 5·6단지",
+   "reason": "공식 홈페이지 \"분양중\" 표시뿐, 최근 1개월 선착순 영업 글 미확인"
+  },
+  {
+   "name": "청주지북 B1블록(LH 공공분양)",
+   "reason": "LH 공공분양 잔여 공고(자격 요건 있는 공공 모집)라 민간 미분양 선착순과 성격이 달라 제외"
+  },
+  {
+   "name": "LH 충남 미분양 매입주택 134호(아산·천안·보령·공주)",
+   "reason": "LH 매입 후 재매각하는 구축 주택"
+  }
+ ],
+ "texts": {
+  "grancity-philhouse": [
+   "천안아산역 남쪽 휴대지구, 1,534세대 필하우스로 전체의 94%가 84㎡다. 84A 최고가 4.81억원은 배방 신축 e편한세상탕정퍼스트드림(KB 5.33억원)보다 낮고, 역세권 대장 지웰시티 푸르지오(7.8억원)와는 3억원 가까이 차이 난다.",
+   "천안아산역 생활권 신축 84㎡를 4억원대에 고른다. 삼성 온양·탕정 출퇴근 실거주자에게 좋은 기회다."
+  ],
+  "baekseok-xi": [
+   "천안 백석5지구, 1·2단지 합계 1,174세대 자이다. 84㎡ 최고가 5.84억원으로, 바로 옆 2024년 입주 노태 포레나(KB 5.25억원)와 불당 린스트라우스(7.35억원) 사이에 있다.",
+   "불당 생활권을 자이 신축으로 누리는 가격이다. 백석·불당 실거주자라면 지금이 동·호수를 고를 기회다."
+  ],
+  "doan-centumriche": [
+   "도안 2단계 용계동, 2,293세대 GS건설 자이다. 1단지 84㎡ 최고가 7.76억원은 길 건너 도안우미린트리쉐이드(KB 7.0억원)보다 7천만원가량 높지만, 도안 1단계 대전아이파크시티(8.6억원)보다는 9천만원가량 낮다.",
+   "도안 2단계 최대 단지를 시세 수준에 고른다. 대전 서남부 학군·신도시 실거주자에게 기회다."
+  ],
+  "munhwa-sujain": [
+   "대전문화공원 민간공원특례로 짓는 509세대 수자인이다. 84㎡ 최고가 5.41억원으로, 원도심 신축 목동더샵리슈빌(KB 6.95억원)·해모로더센트라(6.2억원)를 보정한 값보다 약간 낮다.",
+   "공원을 앞마당으로 쓰는 5억원대 84㎡다. 2027년 11월 입주라 기다림도 짧은 실거주 기회다."
+  ],
+  "dujeong-granpeak": [
+   "1호선 두정역 생활권, 1,438세대 푸르지오다. 84㎡ 최고가 5.53억원이 바로 옆 힐스테이트두정역(KB 5.38억원)·두정역효성해링턴플레이스(5.05억원)를 보정한 값보다 2,800만원가량 낮다.",
+   "두정역 대단지 푸르지오를 시세보다 조금 싸게 고른다. 천안 직장인 실거주자에게 기회다."
+  ],
+  "oryong-harrington": [
+   "1호선 오룡역 직선 250m, 427세대 해링턴 플레이스다. 84㎡ 최고가 6.95억원(21층 이상)으로, 원도심 신축 목동더샵리슈빌·하늘채엘센트로를 보정한 값과 비슷하다.",
+   "역 250m 초역세권을 시세 수준에 고른다. 지하철 출퇴근 실거주자에게 기회다."
+  ],
+  "gongju-jinarehii": [
+   "공주 금흥2지구, 811세대 진아레히로 공주 최대 규모 단지다. 84A 최고가 4.39억원이 같은 금흥동 지평더웰(KB 4.3억원)·신관동 코아루를 보정한 값과 거의 같다.",
+   "공주 새 대단지를 시세 그대로 고른다. 세종 출퇴근까지 보는 실거주자에게 무난한 선택이다."
+  ],
+  "seosan-trivn": [
+   "서산 예천동, 829세대 두산건설 트리븐이다. 84A 최고가 5.33억원이 바로 옆 서산푸르지오더센트럴(KB 5.2억원)·예천 중흥S-클래스를 보정한 값과 사실상 같다.",
+   "서산 중심 예천동 신축을 시세 그대로 고른다. 대산·테크노밸리 출퇴근 실거주자에게 기회다."
+  ],
+  "eopseong-lake2": [
+   "성성호수공원 앞 업성3지구 2블록, 448세대 푸르지오다. 84A 최고가 5.78억원으로, 이웃 천안푸르지오레이크사이드(KB 5.75억원)와 거의 같다.",
+   "호수 조망 푸르지오를 이웃 시세 수준에 고른다. 성성 생활권 실거주자에게 기회다."
+  ],
+  "jiksan-dongil": [
+   "천안 직산읍, 895세대 전 세대 84㎡ 동일하이빌이다. 84A 최고가 4.47억원으로, 북천안자이포레스트와 성성지구 신축을 보정한 값보다 1,000만원가량 높다.",
+   "천안에서 4억원대 신축 84㎡를 고를 수 있는 곳이다. 성성·북천안 산단 출퇴근 실거주자에게 기회다."
+  ],
+  "eopseong-lake1": [
+   "업성3지구 1블록, 1,460세대 푸르지오다. 84A 최고가 6.10억원은 이웃 레이크사이드(KB 5.75억원)보다 높지만, 저층부는 5.17억원부터다.",
+   "최고층 기준으로도 차이는 1,700만원대다. 호수 조망 대단지를 원하는 실거주자라면 층을 골라 볼 만하다."
+  ],
+  "eumseong-markverre": [
+   "음성 성본산단 B1블록, 2025년 4월 입주한 644세대 푸르지오다. 84㎡ 최고가 3.47억원, 리치고 시세는 3.34억원이다.",
+   "3억원대에 바로 입주하는 푸르지오다. 성본산단 출퇴근 실거주자라면 저층 할인까지 따져 볼 만하다."
+  ],
+  "elif-seongseong": [
+   "성성호수공원 서쪽 업성2지구, 1·2블록 합계 1,165세대 계룡건설 엘리프다. 1블록 84A 최고가 5.89억원은 바로 옆 성성비스타동원(KB 5.68억원)보다 조금 높다.",
+   "2블록을 고르면 같은 84A가 1,800만원가량 싸다. 성성 생활권 실거주자에게 블록 선택이 기회다."
+  ],
+  "hongseong-eph": [
+   "홍성읍 월산리, 2025년 2월 준공한 470세대 e편한세상이다. 84㎡ 최고가 3.92억원으로, 홍성자이(KB 3.6억원)·내포 유보라마크에디션(3.7억원)을 보정한 값보다 1,600만원가량 높다.",
+   "바로 입주하는 홍성읍 브랜드 신축이다. 잔금 유예·무상 옵션까지 챙기면 실거주자에게 괜찮은 기회다."
+  ],
+  "eumseong-fullhouse": [
+   "음성 성본산단 B4블록, 2025년 입주한 1,019세대 우미린이다. 분양가상한제로 84㎡ 최고가가 3.26억원이고, KB 시세는 3.10억원이다.",
+   "실내수영장을 갖춘 대단지에 3억원대로 바로 들어간다. 산단 출퇴근 실거주자에게 기회다."
+  ],
+  "seonhwa-lucier": [
+   "대전 원도심 선화동, 최고 49층 998세대 하늘채다. 84A 최고가 6.60억원으로, 바로 옆 하늘채스카이앤(KB 5.35억원)·해모로더센트라(6.2억원)를 보정한 값보다 높다.",
+   "원도심 49층 랜드마크다. 중·저층을 고르면 격차가 줄어 원도심 실거주자에게 기회가 된다."
+  ],
+  "seongnam-woomi": [
+   "대전역 북쪽 성남동1구역 재개발, 1,213세대 우미린이다. 84㎡ 최고가 5.82억원으로, 동구 신축 이스트시티·신흥SK뷰를 보정한 값보다 3,200만원가량 높다.",
+   "2027년 6월 입주로 기다림이 짧다. 중도금 무이자 조건을 활용하는 동구 실거주자에게 기회다."
+  ],
+  "cheonan-ipark34": [
+   "성성호수공원 남쪽 부대동, 3·4단지 합계 1,714세대 아이파크다. 3단지 84A 최고가 5.90억원으로, 같은 부대동 부성한라비발디(KB 4.4억원)·힐스테이트두정역을 보정한 값보다 높다.",
+   "아이파크 브랜드타운 마지막 블록이다. 저층·84B를 고르면 격차가 줄어 실거주자에게 기회가 된다."
+  ],
+  "asan-belcore": [
+   "아산시외버스터미널 바로 앞, 2026년 1월 입주한 최고 46층 299세대 스위첸이다. 84㎡ 최고가 4.65억원으로, 모종동 신축 힐스테이트모종네오루체(KB 4.3억원)보다 높다.",
+   "터미널·롯데마트를 걸어서 쓰는 즉시입주 단지다. 잔금 유예 조건이면 원도심 실거주자에게 기회다."
+  ],
+  "cheonan-humanvill": [
+   "성성호수공원 생활권 부대동, 1,541세대 전 세대 84㎡ 휴먼빌이다. 84D 최고가 5.56억원으로, 같은 부대동 부성한라비발디(KB 4.4억원)·힐스테이트두정역(5.38억원)을 보정한 값보다 높다.",
+   "저층 84A는 4.56억원부터다. 부성역(2029 예정) 개통을 보는 실거주자라면 저층부터 보자."
+  ],
+  "eumseong-xi": [
+   "음성 금왕읍, 2025년 11월 준공한 1,505세대 자이로 음성 최대 단지다. 84A 고층 정상가 3.95억원으로, 금왕·대소 비교 단지를 보정한 값보다 높다.",
+   "완납하면 선납할인 5,000만원으로 실매입가가 3.45억원까지 내려간다. 자금 여유가 있는 실거주자에게 기회다."
+  ],
+  "cheonan-deast": [
+   "천안 동남구 삼룡동, 1,051세대(일반분양 500세대) 동문 디 이스트다. 84A 최고가 5.83억원은 다락·테라스가 붙은 최상층 값이고, 21층 이상 일반층은 4.5억원대다.",
+   "최상층 특화 세대 가격은 이웃 신축보다 크게 높다. 일반층 84㎡를 고르면 청당 생활권 실거주 기회가 된다."
+  ]
+ },
+ "meta": {
+  "title_hook": "실거주로 해볼 만한 곳은?",
+  "groups": [
+   [
+    "지금 볼 만한 곳",
+    "시세 수준 + 입지 요건 좋음",
+    [
+     "천안아산역 그랑시티 필하우스",
+     "백석시그니처자이",
+     "도안자이 센텀리체",
+     "두정역 푸르지오 그랑피크",
+     "해링턴 플레이스 오룡역",
+     "대전 문화공원 수자인",
+     "트리븐 서산",
+     "공주월송 진아레히"
+    ]
+   ],
+   [
+    "즉시입주·조건 확인하면 기회",
+    "준공 단지, 잔금 유예·선납할인 조건",
+    [
+     "음성 푸르지오 마크베르",
+     "음성 우미린 풀하우스",
+     "e편한세상 홍성 더센트럴",
+     "아산 벨코어 스위첸",
+     "음성자이 센트럴시티"
+    ]
+   ],
+   [
+    "층·블록·타입이 열쇠",
+    "같은 단지 안에서도 가격 차 큼",
+    [
+     "업성 푸르지오 레이크시티 2단지",
+     "업성 푸르지오 레이크시티",
+     "엘리프 성성호수공원",
+     "천안 직산 동일하이빌 파크레인",
+     "대전 하늘채 루시에르",
+     "대전 성남 우미린 뉴시티",
+     "천안 아이파크 시티 3·4단지",
+     "천안 휴먼빌 퍼스트시티",
+     "천안 동문 디 이스트 파크시티"
+    ]
+   ]
+  ],
+  "risks": [
+   "충청권 선착순 단지는 판촉 조건이 제각각이다. 계약금 500만원 정액, 계약금 0원, 중도금 무이자, 잔금 30% 2~3년 유예, 완납 시 선납할인(음성자이 84A 약 5,000만원), 계약축하금(동문 500만원) 같은 조건이 붙지만, 이 글의 계산에는 확정된 현금 혜택만 뺐다. 조건은 동·호수와 시점마다 달라지니 계약 전 공급계약서로 확인해야 한다.",
+   "분양가는 대표 84㎡ 타입의 최고가로 비교했다. 천안 동문 디 이스트는 최고가가 다락·테라스 최상층이라 일반층(4.5억원대)과 1억원 넘게 차이 나고, 업성 푸르지오 1블록은 5.17억~6.10억원, 엘리프 성성호수공원은 블록에 따라 1,800만원이 다르다. 같은 단지라도 층·블록·타입 선택이 결과를 바꾼다.",
+   "지방은 비교할 신축 시세가 얇다. 직산·금왕·문화동처럼 같은 동네에 84㎡ 신축이 없거나 아직 입주 전인 곳은 차로 10분 거리 신축이나 2017년 전후 단지와 비교했고, 반대로 그랑시티·백석·도안은 생활권 대장 단지가 비교군에 들어가 적정가가 높게 나왔다. 아산 벨코어·홍성·음성자이는 준공 단지인데도 자기 단지 시세가 잡히지 않아 이웃 비교로 계산했다. 세종은 선착순 분양 단지를 찾지 못해 빠졌다."
+  ],
+  "conclusion": [
+   "충청권 선착순 22곳 가운데 7곳이 시세와 같거나 더 싸게 나왔다. 천안아산역 그랑시티 필하우스·백석시그니처자이·도안자이 센텀리체가 상위권이고, 두정역 그랑피크·해링턴 플레이스 오룡역·문화공원 수자인도 시세 수준이다. 청약통장 없이, 원하는 동·호수를, 시세 수준에 고를 수 있는 단지가 천안·대전에 고루 있다.",
+   "나머지 단지도 격차의 상당 부분은 최고층·특화 세대 가격에서 나온다. 업성·엘리프·아이파크처럼 성성호수공원 생활권 단지는 저층·다른 블록을 고르면 이웃 시세와 비슷해지고, 음성·홍성·아산 원도심의 준공 단지는 3~4억원대에 바로 입주할 수 있다. 실거주가 목적이라면 층과 조건을 골라 가격을 맞추는 것이 선착순의 장점이다."
+  ],
+  "sources": [
+   [
+    "아파트투유 — 충남 분양 단지 목록",
+    "https://apttoyou.kr/chungnam-apt"
+   ],
+   [
+    "아파트투유 — 대전 분양 단지 목록",
+    "https://apttoyou.kr/daejeon-apt"
+   ],
+   [
+    "아파트투유 — 충북 분양 단지 목록",
+    "https://apttoyou.kr/chungbuk-apt"
+   ],
+   [
+    "아파트투유 — 천안 휴먼빌 퍼스트시티 공급금액",
+    "https://apttoyou.kr/firstcity/"
+   ],
+   [
+    "아파트투유 — 아산 벨코어 스위첸 공급금액·선착순 안내",
+    "https://apttoyou.kr/belcore/"
+   ],
+   [
+    "아파트투유 — 천안 동문 디 이스트 파크시티 잔여세대 조건",
+    "https://apttoyou.kr/deastparkcity/"
+   ],
+   [
+    "아파트투유 — 두정역 푸르지오 그랑피크 공급금액",
+    "https://apttoyou.kr/granpeak/"
+   ],
+   [
+    "아파트투유 — 업성 푸르지오 레이크시티 선착순 계약",
+    "https://apttoyou.kr/lakecity/"
+   ],
+   [
+    "아파트투유 — 업성 푸르지오 레이크시티 2단지 공급금액",
+    "https://apttoyou.kr/lakecity2/"
+   ],
+   [
+    "아파트투유 — 천안 아이파크 시티 3·4단지 공급금액",
+    "https://apttoyou.kr/iparkcity34/"
+   ],
+   [
+    "아파트투유 — 백석시그니처자이 공급금액",
+    "https://apttoyou.kr/signaturexi/"
+   ],
+   [
+    "아파트투유 — 공주월송 진아레히 잔여세대",
+    "https://apttoyou.kr/jinarehii/"
+   ],
+   [
+    "아파트투유 — e편한세상 홍성 더센트럴 공고 분양가",
+    "https://apttoyou.kr/ethecentral/"
+   ],
+   [
+    "아파트투유 — 해링턴 플레이스 오룡역 분양가·거리",
+    "https://apttoyou.kr/harringtonoryong/"
+   ],
+   [
+    "아파트투유 — 대전 성남 우미린 뉴시티 분양가",
+    "https://apttoyou.kr/newcity/"
+   ],
+   [
+    "아파트투유 — 도안자이 센텀리체 분양가",
+    "https://apttoyou.kr/centumriche/"
+   ],
+   [
+    "아파트투유 — 대전 문화공원 수자인 분양가",
+    "https://apttoyou.kr/munhwapark/"
+   ],
+   [
+    "아파트투유 — 음성 우미린 풀하우스 분양가",
+    "https://apttoyou.kr/fullhouse/"
+   ],
+   [
+    "아파트투유 — 음성 푸르지오 마크베르 분양가",
+    "https://apttoyou.kr/markverre/"
+   ],
+   [
+    "mhb-blog — 천안아산역 그랑시티 필하우스 84㎡ 분양가",
+    "https://mhb-blog.com/?p=10470"
+   ],
+   [
+    "성성일타부동산 블로그 — 업성 푸르지오 레이크시티 1·2블록 분양가 비교(2026.11.10)",
+    "https://blog.naver.com/ilta_joa/224471858591"
+   ],
+   [
+    "블로그 — 엘리프 성성호수공원 1·2블록 분양가(2026.11.11)",
+    "https://blog.naver.com/ilta_eunwoo/224473211057"
+   ],
+   [
+    "뉴시스 — 천안 동문 디 이스트 파크시티 르포·84A 분양가(2026.04.30)",
+    "https://www.newsis.com/view/NISX20260430_0003614105"
+   ],
+   [
+    "위키트리 — 공주월송 진아레히 분양가",
+    "https://www.wikitree.co.kr/articles/1135198"
+   ],
+   [
+    "뉴데일리 — 트리븐 서산 84㎡ 분양가(2025.10.28)",
+    "https://biz.newdaily.co.kr/site/data/html/2025/10/28/2025102800071.html"
+   ],
+   [
+    "뉴데일리 — 대전 하늘채 루시에르 84㎡ 분양가·청약 결과(2025.07.15)",
+    "https://biz.newdaily.co.kr/site/data/html/2025/07/15/2025071500143.html"
+   ],
+   [
+    "블로그 — 천안 직산 동일하이빌 파크레인 타입별 분양가(2026.11.11)",
+    "https://blog.naver.com/tc0706/224472945638"
+   ],
+   [
+    "블로그 — 음성자이 센트럴시티 84A 분양가·선납할인(2026.11.16)",
+    "https://blog.naver.com/hamwish/224479077588"
+   ],
+   [
+    "리치고 — 음성푸르지오마크베르 시세(2026.11.16)",
+    "https://m.richgo.ai/realty/danji/a2YkUaR"
+   ],
+   [
+    "KB부동산 — 비교단지 84㎡ 일반거래가(2026.11.13)",
+    "https://kbland.kr/"
+   ],
+   [
+    "다음 블로그 검색 — 단지별 선착순 분양 상담 글(2026.10.17 이후)",
+    "https://search.daum.net/search?w=fusion&col=blog&q=%EC%84%A0%EC%B0%A9%EC%88%9C&sort=recency"
+   ]
+  ],
+  "tags": [
+   "충청권미분양",
+   "천안미분양아파트",
+   "대전미분양아파트",
+   "미분양아파트",
+   "선착순분양",
+   "잔여세대",
+   "동호수지정",
+   "예상프리미엄",
+   "천안아산역그랑시티필하우스",
+   "백석시그니처자이",
+   "도안자이센텀리체",
+   "두정역푸르지오그랑피크",
+   "업성푸르지오레이크시티",
+   "브동산"
+  ]
+ }
+}

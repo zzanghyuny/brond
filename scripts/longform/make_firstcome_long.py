@@ -320,7 +320,9 @@ def s_groups(t, L):
         d.rectangle((x, y, x + bw, y + 600), outline=BRASS if first else (70, 68, 64), width=2)
         d.rectangle((x, y, x + 10, y + 600), fill=BRASS if first else (90, 88, 84))
         text(img, (x + 44, y + 40), a, 44, BRASS if first else WHITE, anchor='l', bold=2, a=p)
-        text(img, (x + 44, y + 110), b, 28, GRAY, anchor='l', bold=0, a=p)
+        bpx = 28
+        while tw(b, bpx) > bw - 70 and bpx > 18: bpx -= 1
+        text(img, (x + 44, y + 110), b, bpx, GRAY, anchor='l', bold=0, a=p)
         for j, n in enumerate(names): text(img, (x + 44, y + 190 + j * 62), '· ' + n, 32, WHITE, anchor='l', bold=0, a=ease((t - 1.0 - i * 1.0 - j * 0.15) / 0.6))
     text(img, (CX, 900), '큰 웃돈을 노릴 시장은 아니지만, 살 집을 고르는 실거주자에게는 기회입니다.', 36, WHITE, bold=1, a=ease((t - 4.4) / 0.9))
     return img

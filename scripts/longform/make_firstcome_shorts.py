@@ -147,15 +147,17 @@ def s_groups(t, L_):
     img = blank(); d = ImageDraw.Draw(img)
     text(img, (CX, 300), '브동산 한줄평', 60, BRASS, sp=8, bold=2, a=ease(t / 0.6))
     y = 420
+    LH = 50; tot = sum(110 + LH * len(g[2]) + 26 for g in GROUPS)
+    while tot > 1010 and LH > 36: LH -= 2; tot = sum(100 + LH * len(g[2]) + 22 for g in GROUPS)
     for i, (a, b, names) in enumerate(GROUPS):
-        p = ease((t - 0.4 - i * 0.8) / 0.7); hh = 110 + 50 * len(names)
+        p = ease((t - 0.4 - i * 0.8) / 0.7); hh = (110 if LH == 50 else 100) + LH * len(names)
         if p > 0:
             first = i == 0
             d.rectangle((SL, y, SR, y + hh), outline=BRASS if first else (70, 68, 64), width=2)
             d.rectangle((SL, y, SL + 10, y + hh), fill=BRASS if first else (90, 88, 84))
             text(img, (SL + 40, y + 24), a, 42, BRASS if first else WHITE, anchor='l', bold=2, a=p)
-            for j, n in enumerate(names): text(img, (SL + 40, y + 96 + j * 50), '· ' + n, 32, WHITE, anchor='l', bold=0, a=p)
-        y += hh + 26
+            for j, n in enumerate(names): text(img, (SL + 40, y + 92 + j * LH), '· ' + n, 32 if LH >= 44 else 28, WHITE, anchor='l', bold=0, a=p)
+        y += hh + (26 if LH == 50 else 22)
     return img
 
 def s_end(t, L_):
