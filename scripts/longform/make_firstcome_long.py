@@ -307,7 +307,7 @@ def s_board(t, L):
     disc(img, ease((t - 1.0) / 1.0))
     return img
 
-GROUPS = [tuple(g) for g in FC.META.get('groups', [])]
+GROUPS = [(a, b, (n if len(n) <= 6 else n[:5] + [f'외 {len(n) - 5}곳'])) for a, b, n in FC.META.get('groups', [])]
 def s_groups(t, L):
     img = blank(); d = ImageDraw.Draw(img)
     text(img, (CX, 90), '브동산 한줄평 · 이렇게 보세요', 44, BRASS, sp=8, a=ease(t / 0.7))
@@ -319,7 +319,9 @@ def s_groups(t, L):
         first = i == 0
         d.rectangle((x, y, x + bw, y + 600), outline=BRASS if first else (70, 68, 64), width=2)
         d.rectangle((x, y, x + 10, y + 600), fill=BRASS if first else (90, 88, 84))
-        text(img, (x + 44, y + 40), a, 44, BRASS if first else WHITE, anchor='l', bold=2, a=p)
+        apx = 44
+        while tw(a, apx) > bw - 70 and apx > 28: apx -= 1
+        text(img, (x + 44, y + 40), a, apx, BRASS if first else WHITE, anchor='l', bold=2, a=p)
         bpx = 28
         while tw(b, bpx) > bw - 70 and bpx > 18: bpx -= 1
         text(img, (x + 44, y + 110), b, bpx, GRAY, anchor='l', bold=0, a=p)
