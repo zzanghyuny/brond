@@ -1417,33 +1417,37 @@
     {
       "slug": "mullae-harrington-place",
       "number": 69,
-      "title": "서울 - 해링턴 플레이스 문래 | 문래동 218세대 전 가구 84㎡, 브동산 적정가는 21.2억 (분양가는 공고 후 업데이트)",
+      "title": "서울 - 해링턴 플레이스 문래 | 문래동 218세대 전 가구 84㎡, 평균 분양가 17.92억, 예상 프리미엄 +9,060만",
       "category": "부동산",
       "naver_category": "부동산이야기",
-      "date": "2026-10-31",
+      "date": "2026-11-16",
       "site_url": "https://www.brandongsan.com/posts/mullae-harrington-place.html",
       "naver_html": "naver-html/mullae-harrington-place.html",
-      "naver_title": "해링턴 플레이스 문래 | 브동산 적정가 21.2억, 분양가 공개 전 총정리",
+      "naver_title": "해링턴 플레이스 문래 | 예상프리미엄 +9,060만, 분양가 총정리",
       "naver_tags": [
         "해링턴플레이스문래",
         "문래동",
-        "영등포",
+        "영등포청약",
+        "서울청약",
         "효성중공업",
         "해링턴플레이스",
-        "서울청약",
-        "분양예정",
-        "적정가",
-        "청약",
-        "분양가",
         "문래역",
+        "영등포",
+        "투기과열지구",
+        "전매제한3년",
+        "84분양가",
+        "청약일정",
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/mullae-harrington-place/aerial.jpg"
+        "https://www.brandongsan.com/posts/images/mullae-harrington-place/aerial-naver.jpg"
       ],
       "naver_published": true,
       "naver_post_id": "224460499551",
-      "published_at": "2026-10-31T00:00:00+07:00"
+      "published_at": "2026-10-31T00:00:00+07:00",
+      "naver_republish_needed": true,
+      "naver_republish_reason": "2026-11-13 입주자모집공고 반영 갱신본(분양가·일정·비교단지·적정가 변경). 기존 네이버 글(224460499551)은 공고 전 버전.",
+      "updated_at": "2026-11-16"
     },
     {
       "slug": "gyeyang-kive-yubora-ac34",

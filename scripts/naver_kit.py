@@ -540,10 +540,10 @@ def write_index(manifest):
     for e in manifest:
         s = e['slug']
         if os.path.exists(os.path.join(KIT, s + '.html')):
-            rows.append((e.get('number') or 0, s, e.get('naver_title') or e.get('title') or s, bool(e.get('naver_published'))))
+            rows.append((e.get('number') or 0, s, e.get('naver_title') or e.get('title') or s, '재발행 필요' if e.get('naver_republish_needed') else ('발행 완료' if e.get('naver_published') else '발행 전')))
     rows.sort(reverse=True)
     items = ''.join('<a href="%s.html"><b>No.%s %s</b><small>%s</small></a>'
-                    % (s, n, htmllib.escape(t), '발행 완료' if p else '발행 전') for n, s, t, p in rows)
+                    % (s, n, htmllib.escape(t), p) for n, s, t, p in rows)
     page = ('<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
             '<meta name="robots" content="noindex,nofollow"><title>네이버 발행 키트</title><style>%s</style></head><body>'
             '<header class="w"><h1>네이버 발행 키트</h1><div class="sub">폰에서 복사·저장하며 올리는 용도</div></header>'
