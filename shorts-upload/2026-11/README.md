@@ -88,3 +88,14 @@ Aside 배포용. 각 단지마다 영상(`<이름>.mp4`, 1080×1920 세로, 30~3
 - 제목·설명·해시태그는 `sudogwon-firstcome-top30-202611-shorts.txt`
 - 구성: 오프닝 → 한눈에(웃돈 남는 곳 2곳) → 30~21위·20~11위 순위판 → TOP 10 단지 카드 → 한줄평 3묶음 → 마무리
 - 생성기: `scripts/longform/make_firstcome_shorts.py`
+
+## 지방 4개 권역 미분양 선착순 랭킹 1회차 (2026.11.17)
+
+각 권역마다 유튜브 가로 풀영상(`-youtube.mp4`, 1920×1080)·썸네일(1280×720)·제목/설명/챕터(`-youtube.txt`)와 쇼츠·네이버 클립 세로 영상(`-shorts.mp4`, 1080×1920)·썸네일·제목/설명(`-shorts.txt`)이 한 묶음이다.
+
+| 권역 | 파일 이름 앞부분 | 가로 / 세로 길이 |
+|---|---|---|
+| 충청권 TOP22 | `chungcheong-firstcome-20261117` | 3분 14초 / 1분 27초 |
+| 부산·울산 TOP20 | `busan-ulsan-firstcome-20261117` | 3분 3초 / 1분 21초 |
+| 대구·경북·강원 TOP7 | `daegu-gyeongbuk-gangwon-firstcome-20261117` | 1분 53초 / 1분 3초 |
+| 경남·호남·제주 TOP16 | `gyeongnam-honam-jeju-firstcome-20261117` | 2분 43초 / 1분 21초 |
