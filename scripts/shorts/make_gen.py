@@ -104,6 +104,18 @@ CFG = {
     feature=dict(img='community1.jpg', title='단지 커뮤니티', cap='주민공동시설 피트니스', cap2='공식 홈페이지 CG · 실제와 다를 수 있음', c0=(0.5,0.5), c1=(0.55,0.5), z=(1.0,1.25), box=(840,520)),
     place=dict(img='location.jpg', title='입지', cap='시흥 거모동 생활권', cap2='공식 입지환경 · 교통 계획은 변경될 수 있음', graded=False, c0=(0.5,0.2), c1=(0.5,0.3), z=(1.0,1.15), box=(760,820)),
  ),
+ 'iksan': dict(
+    dir=_IMGROOT+'doosan-weve-trezium-iksan/', out='doosan-weve-trezium-iksan',
+    name='두산위브 트레지움 익산', name_px=64, loc_txt='전북 익산시 동산동', avg=4.53, rng='층별 4.22 ~ 4.84억 · 세대수 가중평균',
+    comps=[('익산풍경채어바니티 · 마동 · 2024.08', 4.25), ('익산자이그랜드파크 · 마동 · 2025.02', 4.75)],
+    cvmax=5.4, fair=4.48, prem='-500만', pct='약 1%', gvmax=5.2, thumb_sub='분양가, 적정가와 거의 같다',
+    disc='브동산 모형 추정치 · 확정 수익 아님 · 84㎡ 평균 · 2026.11.18 공고 기준',
+    info=[('청약', '11월 23일 ~ 25일'), ('전매제한', '없음'), ('계약금', '5%')],
+    scenes=[('title',2.6),('aerial',3.6),('price',3.2),('comps',3.9),('gap',4.3),('feature',3.6),('place',3.2),('info',2.6),('end',3.0)],
+    aerial=dict(img='cover.jpg', t1='전북 익산시 동산동', l1='지하 2층 ~ 지상 27층 · 6개 동', l2='591세대 중 일반분양 251세대', src='조감도는 CG이며 실제와 다를 수 있음 · 출처: 공식 분양 홈페이지'),
+    feature=dict(img='premium.jpg', title='분양 측 프리미엄', cap='교육 · 생활 · 설계 · 교통 · 직주 · 자연', cap2='분양 측 안내 · 공식 홈페이지', c0=(0.5,0.25), c1=(0.5,0.6), z=(1.0,1.0), box=(760,800)),
+    place=dict(img='location-zoom.jpg', title='입지', cap='동산초 · 이리동중 인근', cap2='공식 위치도 · 거리와 위치는 실제와 다를 수 있음', graded=False, box=(800,800)),
+ ),
  'ulsan': dict(
     dir=_IMGROOT+'ulsan-hwajeong1-arel/', out='ulsan-arel',
     name='화정1지구 아르엘', loc_txt='울산 동구 화정동', avg=5.56, rng='층별 5.23 ~ 5.67억 · 세대수 가중평균',
