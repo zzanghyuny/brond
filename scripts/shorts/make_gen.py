@@ -129,6 +129,18 @@ CFG = {
     feature=dict(img='community.jpg', title='단지 커뮤니티', cap='피트니스 · 골프 · 사우나 · 키즈', cap2='공식 홈페이지 CG · 실제와 다를 수 있음', c0=(0.5,0.4), c1=(0.5,0.6), z=(1.0,1.2), box=(800,740)),
     place=dict(img='location-map.jpg', title='입지', cap='구미역 생활권 · 도량동', cap2='공식 위치도 · 거리와 위치는 실제와 다를 수 있음', graded=False, box=(800,720)),
  ),
+ 'goyang': dict(
+    dir=_IMGROOT+'goyang-hanshin-thehue-firstone/', out='goyang-hanshin-thehue-firstone',
+    name='고양 한신더휴 퍼스트원', name_px=64, loc_txt='경기 고양시 행신동', avg=8.08, rng='층별 7.78 ~ 8.46억 · 세대수 가중평균',
+    comps=[('대곡역롯데캐슬엘클라씨 · 토당동 · 2022.12', 8.60), ('원흥호반베르디움더퍼스트 · 2017.09', 9.05)],
+    cvmax=10.5, fair=8.68, prem='+5,960만', pct='약 7%', gapword='낮음', gvmax=9.8, thumb_sub='분양가, 저평가일까?',
+    disc='브동산 모형 추정치 · 확정 수익 아님 · 84㎡ 평균 · 2026.11.19 공고 기준',
+    info=[('청약', '11월 30일 ~ 12월 2일'), ('전매제한', '1년'), ('계약금', '5%')],
+    scenes=[('title',2.6),('aerial',3.6),('price',3.2),('comps',3.9),('gap',4.3),('layout',3.6),('place',3.6),('info',2.6),('end',3.0)],
+    aerial=dict(img='cover.jpg', t1='경기 고양시 행신동', l1='지하 2층 ~ 지상 17층 · 4개 동', l2='272세대 중 일반분양 102세대', src='조감도는 CG이며 실제와 다를 수 있음 · 출처: 공식 분양 홈페이지'),
+    layout=dict(img='redevelop-aerial.jpg', title='행신 재건축 일대', cap='행신2의1구역 재건축', cap2='분양 측 개발 계획도 · 실제와 다를 수 있음', c0=(0.45,0.45), c1=(0.6,0.55), z=(1.0,1.35), box=(840,560)),
+    place=dict(img='location.jpg', title='입지', cap='행신동 생활권 · 경의중앙선 인근', cap2='공식 위치도 · 교통 계획은 변경될 수 있음', graded=False, c0=(0.3,0.5), c1=(0.35,0.5), z=(1.3,1.5), box=(840,600)),
+ ),
  'ulsan': dict(
     dir=_IMGROOT+'ulsan-hwajeong1-arel/', out='ulsan-arel',
     name='화정1지구 아르엘', loc_txt='울산 동구 화정동', avg=5.56, rng='층별 5.23 ~ 5.67억 · 세대수 가중평균',
