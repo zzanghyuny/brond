@@ -10,6 +10,40 @@
   },
   "posts": [
     {
+      "slug": "gumi-parkone-desian",
+      "number": 108,
+      "title": "경북 - 구미 파크원 데시앙 | 도량동 1단지 1,355세대, 84㎡ 평균 분양가 5.18억, 예상 프리미엄 +2,730만",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-18",
+      "site_url": "https://www.brandongsan.com/posts/gumi-parkone-desian.html",
+      "naver_html": "naver-html/gumi-parkone-desian.html",
+      "naver_title": "구미 파크원 데시앙 | 예상프리미엄 +2,730만, 분양가 총정리",
+      "naver_tags": [
+        "구미파크원데시앙",
+        "구미청약",
+        "구미아파트",
+        "도량동",
+        "꽃동산공원",
+        "태영건설",
+        "데시앙",
+        "구미분양가",
+        "84분양가",
+        "비규제지역",
+        "전매제한없음",
+        "도량롯데캐슬골드파크",
+        "구미아이파크더샵",
+        "민간공원특례사업",
+        "부동산정보"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/gumi-parkone-desian/aerial-cg.jpg"
+      ],
+      "naver_published": false,
+      "naver_post_id": null,
+      "published_at": null
+    },
+    {
       "slug": "doosan-weve-trezium-iksan",
       "number": 107,
       "title": "전북 - 두산위브 트레지움 익산 | 동산동 591세대 중 일반분양 251세대, 84㎡ 평균 분양가 4.53억, 예상 프리미엄 -500만",
