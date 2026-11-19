@@ -31,7 +31,9 @@
       "published_at": null,
       "title": "충남 - 더샵 천안라크원 | 전용 84㎡ 평균 6.17억, 11월 30일 특공",
       "naver_title": "더샵 천안라크원 | 전용 84㎡ 평균 6.17억, 11월 30일 특공",
-      "date": "2026-11-19"
+      "date": "2026-11-19",
+      "naver_republish_needed": true,
+      "naver_republish_reason": "입주자모집공고 기준 재작성 및 모바일 규격 보완"
     },
     {
       "slug": "goyang-hanshin-thehue-firstone",
@@ -952,7 +954,9 @@
       ],
       "naver_published": true,
       "naver_post_id": "224466839466",
-      "published_at": "2026-11-06T07:30:00+07:00"
+      "published_at": "2026-11-06T07:30:00+07:00",
+      "naver_republish_needed": true,
+      "naver_republish_reason": "입주자모집공고 기준 재작성 및 모바일 규격 보완"
     },
     {
       "slug": "songdo-the-sharp-granter-g5-6-musunwi",
