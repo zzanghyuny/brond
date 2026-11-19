@@ -10,6 +10,30 @@
   },
   "posts": [
     {
+      "slug": "thesharp-cheonan-lac-one",
+      "number": 110,
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "site_url": "https://www.brandongsan.com/posts/thesharp-cheonan-lac-one.html",
+      "naver_html": "naver-html/thesharp-cheonan-lac-one.html",
+      "naver_tags": [
+        "더샵천안라크원",
+        "천안청약",
+        "성성호수공원",
+        "천안분양",
+        "브동산"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/thesharp-cheonan-lac-one/cover.jpg"
+      ],
+      "naver_published": true,
+      "naver_post_id": "224483768421",
+      "published_at": null,
+      "title": "충남 - 더샵 천안라크원 | 전용 84㎡ 평균 6.17억, 11월 30일 특공",
+      "naver_title": "더샵 천안라크원 | 전용 84㎡ 평균 6.17억, 11월 30일 특공",
+      "date": "2026-11-19"
+    },
+    {
       "slug": "goyang-hanshin-thehue-firstone",
       "number": 109,
       "title": "경기 - 고양 한신더휴 퍼스트원 | 덕양구 행신동 일반분양 102세대, 84㎡ 평균 분양가 8.08억, 예상 프리미엄 +5,960만",
@@ -39,8 +63,8 @@
       "cover_candidates": [
         "https://www.brandongsan.com/posts/images/goyang-hanshin-thehue-firstone/cover.jpg"
       ],
-      "naver_published": false,
-      "naver_post_id": null,
+      "naver_published": true,
+      "naver_post_id": "224482947053",
       "published_at": null
     },
     {
@@ -902,13 +926,13 @@
     {
       "slug": "wangsuk-hanshin-theh-centum",
       "number": 91,
-      "title": "경기 - 왕숙 한신더휴 센텀 | 남양주 왕숙 A-17블록 59㎡ 379세대, 적정가 7.76억(분양가 미공개)",
+      "title": "경기 - 왕숙 한신더휴 센텀 | 전용 59㎡ 평균 6.02억, A-17 공공분양 일정",
       "category": "부동산",
       "naver_category": "부동산이야기",
-      "date": "2026-11-05",
+      "date": "2026-11-19",
       "site_url": "https://www.brandongsan.com/posts/wangsuk-hanshin-theh-centum.html",
       "naver_html": "naver-html/wangsuk-hanshin-theh-centum.html",
-      "naver_title": "왕숙 한신더휴 센텀 | 분양가 공개 전, 브동산 분석 적정가격 7.76억",
+      "naver_title": "왕숙 한신더휴 센텀 | 전용 59㎡ 평균 6.02억, A-17 공공분양 일정",
       "naver_tags": [
         "왕숙지구",
         "한신더휴센텀",
