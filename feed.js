@@ -21,6 +21,10 @@
 */
 (function () {
   function renderFeed(container) {
+    // 정적 HTML 링크는 검색 로봇과 스크립트 제한 환경의 대체 경로입니다.
+    // 데이터가 준비된 경우에만 정적 목록을 동적 피드로 교체합니다.
+    if (typeof POSTS === "undefined" || !Array.isArray(POSTS) || POSTS.length === 0) return;
+    container.innerHTML = "";
     var category = container.getAttribute("data-category");
     var pageSize = parseInt(container.getAttribute("data-page-size") || "5", 10);
     var emptyText = container.getAttribute("data-empty-text") || "곧 새로운 이야기로 찾아올게요.";
