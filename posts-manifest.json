@@ -77,9 +77,9 @@
       "cover_candidates": [
         "https://www.brandongsan.com/posts/images/yeonsan-sujain-centrio/cover.jpg"
       ],
-      "naver_published": false,
-      "naver_post_id": null,
-      "published_at": null
+      "naver_published": true,
+      "naver_post_id": "224484559449",
+      "published_at": "2026-11-20"
     },
     {
       "slug": "thesharp-cheonan-lac-one",
