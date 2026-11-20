@@ -10,6 +10,39 @@
   },
   "posts": [
     {
+      "slug": "gochang-desian",
+      "number": 114,
+      "title": "전북 - 고창 데시앙 | 덕산지구 888세대 공공·민영 동시 공급, 84㎡ 평균 분양가 4.22억, 예상 프리미엄 +1,360만",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-20",
+      "site_url": "https://www.brandongsan.com/posts/gochang-desian.html",
+      "naver_html": "naver-html/gochang-desian.html",
+      "naver_title": "고창 데시앙 | 예상프리미엄 +1,360만, 분양가 총정리",
+      "naver_tags": [
+        "고창데시앙",
+        "고창청약",
+        "고창아파트",
+        "고창덕산지구",
+        "덕산지구",
+        "전북개발공사",
+        "태영건설",
+        "데시앙",
+        "공공분양",
+        "고창분양가",
+        "84분양가",
+        "분양가상한제",
+        "고창광신프로그레스",
+        "정읍푸르지오더퍼스트",
+        "부동산정보"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/gochang-desian/aerial.jpg",
+        "https://www.brandongsan.com/posts/images/gochang-desian/chart-map-naver.png"
+      ],
+      "naver_published": false
+    },
+    {
       "slug": "doosan-weve-signature-gwangyang",
       "number": 113,
       "title": "전남 - 두산위브 시그니처 광양 | 중마동 120세대 공급, 84㎡ 평균 분양가 4.03억, 예상 프리미엄 −1,320만원",
