@@ -22,6 +22,7 @@
 */
 
 const POSTS = [
+  {"id": "yeonsan-sujain-centrio", "category": "realestate", "region": "부산", "tag": "청약 언박싱 No.111", "title": "부산 - 연산역 수자인 센트리오 | 59㎡ 평균 분양가 6.32억, 예상 프리미엄 +2,540만원", "date": "2026-11-20", "dateLabel": "2026. 11. 20", "url": "posts/yeonsan-sujain-centrio.html", "preview": "<p>부산 연제구 연산역 수자인 센트리오는 139세대를 분양한다. 전용 59㎡ 평균 분양가 6.32억 원, 브동산 적정가 6.57억 원, 예상 프리미엄 +2,540만원이다. 11월 30일 특별공급부터다.</p>"},
   {"id":"xi-beyond-living","category":"space","tag":"공간이야기 No.005","title":"거실이 침실로 바뀐다면? 자이가 공개한 미래 아파트의 가변형 설계","date":"2026-11-20","dateLabel":"2026. 11. 20","url":"posts/xi-beyond-living.html","preview":"<p>자이 비욘드 리빙의 가변형 벽 IX 월은 거실과 방의 경계를 어떻게 바꿀까. 실제 적용 시 확인할 채광·소음·관리와 AI 홈의 도입 계획을 살펴봅니다.</p>"},
   { id: "thesharp-cheonan-lac-one", category: "realestate", region: "충남", tag: "청약 언박싱 No.110", title: "충남 - 더샵 천안라크원 | 84㎡ 평균 분양가 6.17억, 예상 프리미엄 -5,420만", date: "2026-11-19", dateLabel: "2026. 11. 19", url: "posts/thesharp-cheonan-lac-one.html", preview: "<p>천안 부대동 1,032세대 분양. 전용 84㎡ 평균 6.17억, 특별공급 11월 30일.</p>" },
   { id: "goyang-hanshin-thehue-firstone", category: "realestate", region: "경기", tag: "청약 언박싱 No.109", title: "경기 - 고양 한신더휴 퍼스트원 | 덕양구 행신동 일반분양 102세대, 84㎡ 평균 분양가 8.08억, 예상 프리미엄 +5,960만", date: "2026-11-18", dateLabel: "2026. 11. 18", url: "posts/goyang-hanshin-thehue-firstone.html", preview: `<p>2026년 11월 19일 입주자모집공고가 나왔다. 고양 덕양구 행신2의1구역 재건축 272세대 중 일반분양 102세대, 84㎡ 31세대의 가중평균 분양가는 8.08억원으로 브동산 적정가 8.68억원보다 낮아 예상 프리미엄은 +5,960만(약 7% 저평가)이다. 청약은 11월 30일~12월 2일, 당첨자 발표 12월 9일, 입주 2029년 5월 예정.</p>` },

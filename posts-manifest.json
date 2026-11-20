@@ -10,6 +10,31 @@
   },
   "posts": [
     {
+      "slug": "yeonsan-sujain-centrio",
+      "number": 111,
+      "title": "부산 - 연산역 수자인 센트리오 | 59㎡ 평균 분양가 6.32억, 예상 프리미엄 +2,540만원",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-20",
+      "site_url": "https://www.brandongsan.com/posts/yeonsan-sujain-centrio.html",
+      "naver_html": "naver-html/yeonsan-sujain-centrio.html",
+      "naver_title": "연산역 수자인 센트리오 | 59㎡ 분양가·평면·청약 일정, 예상 프리미엄 +2,540만원",
+      "naver_tags": [
+        "연산역수자인센트리오",
+        "부산청약",
+        "연제구분양",
+        "연산동아파트",
+        "59분양가",
+        "브동산"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/yeonsan-sujain-centrio/cover.jpg"
+      ],
+      "naver_published": false,
+      "naver_post_id": null,
+      "published_at": null
+    },
+    {
       "slug": "thesharp-cheonan-lac-one",
       "number": 110,
       "category": "부동산",
