@@ -10,6 +10,29 @@
   },
   "posts": [
     {
+      "slug": "sosa-humanville",
+      "number": 112,
+      "title": "경기 - 소사 휴먼빌 | 59㎡ 평균 5.31억·84㎡ 7.51억, 청약 일정",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-20",
+      "site_url": "https://www.brandongsan.com/posts/sosa-humanville.html",
+      "naver_html": "naver-html/sosa-humanville.html",
+      "naver_title": "소사 휴먼빌 | 59㎡ 평균 5.31억·84㎡ 7.51억, 청약 일정",
+      "naver_tags": [
+        "소사휴먼빌",
+        "부천청약",
+        "소사본동",
+        "브동산"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/sosa-humanville/aerial.jpg"
+      ],
+      "naver_published": false,
+      "naver_post_id": null,
+      "published_at": null
+    },
+    {
       "slug": "yeonsan-sujain-centrio",
       "number": 111,
       "title": "부산 - 연산역 수자인 센트리오 | 59㎡ 평균 분양가 6.32억, 예상 프리미엄 +2,540만원",
