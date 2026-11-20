@@ -120,7 +120,7 @@
 
   .tablewrap{ overflow-x:auto; margin:16px 0; }
   table{ width:100%; border-collapse:collapse; min-width:460px; }
-  th,td{ text-align:left; padding:10px 12px; font-size:14.5px; border-bottom:1px solid var(--hair); }
+  th,td{ text-align:left; padding:8px 10px; font-size:14.5px; line-height:1.5; vertical-align:top; border-bottom:1px solid var(--hair); }
   thead th{ font-weight:800; border-bottom:2px solid var(--ink); }
   td.figure, th.figure{ font-variant-numeric:tabular-nums; }
   .note{ font-size:13px; color:var(--ink-faint); margin-top:8px; }
@@ -190,6 +190,8 @@
   .map-wrap svg{ width:100%; height:auto; display:block; background:#FAFAFA; }
 
   @media (max-width:520px){
+    .tablewrap table{ min-width:0; }
+    .tablewrap th,.tablewrap td{ padding:7px 5px; font-size:13px; overflow-wrap:anywhere; }
     .stat-pair, .split{ grid-template-columns:1fr; }
     .bar-row{ grid-template-columns:52px 1fr 44px; }
     .agent-side{ align-items:stretch; width:100%; }
