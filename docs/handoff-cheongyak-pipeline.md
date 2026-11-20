@@ -99,6 +99,8 @@ python3 scripts/beodongsan/comp_scan.py <시·구> --area 84      # 키워드 �
 
 ## 6. 네이버용 (`naver-html/<slug>.html`)
 
+> **2026.11.20 개정:** 레이아웃 기준이 더샵 천안라크원 글(`docs/naver-sample/thesharp-cheonan-lac-one-naver.html`)로 바뀌었다. 표 중심·짧은 문장·첫 문단 요약문·chart-b만 사용. 규칙 전문은 `docs/naver-sample/README.md` 맨 위 섹션이며, 아래 내용과 충돌하면 그쪽이 이긴다.
+
 기준: **승인 샘플** `docs/naver-sample/gwanggyo-jayeon-centreville-naver.html` + `docs/naver-sample/README.md` + `docs/naver-mobile-spec.md`. 샘플과 똑같은 구조·서식·문체(평서형)로 쓴다.
 
 - **6섹션:** 1 결론부터(예상 프리미엄) → 2 왜 이 가격이 나왔을까(입지·비교단지) → 3 브동산 한줄평 → 4 지역 최근 분양단지 → 5 분양 사이트 자료로 한 번에 보기 → 6 결론
