@@ -22,6 +22,7 @@
 */
 
 const POSTS = [
+  {"id": "doosan-weve-signature-gwangyang", "category": "realestate", "region": "전남", "tag": "청약 언박싱 No.113", "title": "전남 - 두산위브 시그니처 광양 | 84㎡ 평균 4.03억, 평면·청약 일정", "date": "2026-11-20", "dateLabel": "2026. 11. 20", "url": "posts/doosan-weve-signature-gwangyang.html", "preview": "<p>광양시 중동 575세대 중 120세대 분양. 전용 84㎡ 평균 4.03억 원. 11월 30일 특별공급.</p>"},
   {"id": "sosa-humanville", "category": "realestate", "region": "경기", "tag": "청약 언박싱 No.112", "title": "경기 - 소사 휴먼빌 | 59㎡ 평균 5.31억·84㎡ 7.51억, 청약 일정", "date": "2026-11-20", "dateLabel": "2026. 11. 20", "url": "posts/sosa-humanville.html", "preview": "<p>부천 소사본동 79세대 중 45세대 분양. 59㎡ 평균 5.31억 원, 84㎡ 7.51억 원. 11월 30일 특별공급.</p>"},
   {"id": "yeonsan-sujain-centrio", "category": "realestate", "region": "부산", "tag": "청약 언박싱 No.111", "title": "부산 - 연산역 수자인 센트리오 | 59㎡ 평균 분양가 6.32억, 예상 프리미엄 +2,540만원", "date": "2026-11-20", "dateLabel": "2026. 11. 20", "url": "posts/yeonsan-sujain-centrio.html", "preview": "<p>부산 연제구 연산역 수자인 센트리오는 139세대를 분양한다. 전용 59㎡ 평균 분양가 6.32억 원, 브동산 적정가 6.57억 원, 예상 프리미엄 +2,540만원이다. 11월 30일 특별공급부터다.</p>"},
   {"id":"xi-beyond-living","category":"space","tag":"공간이야기 No.005","title":"거실이 침실로 바뀐다면? 자이가 공개한 미래 아파트의 가변형 설계","date":"2026-11-20","dateLabel":"2026. 11. 20","url":"posts/xi-beyond-living.html","preview":"<p>자이 비욘드 리빙의 가변형 벽 IX 월은 거실과 방의 경계를 어떻게 바꿀까. 실제 적용 시 확인할 채광·소음·관리와 AI 홈의 도입 계획을 살펴봅니다.</p>"},

@@ -10,6 +10,29 @@
   },
   "posts": [
     {
+      "slug": "doosan-weve-signature-gwangyang",
+      "number": 113,
+      "title": "전남 - 두산위브 시그니처 광양 | 84㎡ 평균 4.03억, 평면·청약 일정",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-20",
+      "site_url": "https://www.brandongsan.com/posts/doosan-weve-signature-gwangyang.html",
+      "naver_html": "naver-html/doosan-weve-signature-gwangyang.html",
+      "naver_title": "두산위브 시그니처 광양 | 84㎡ 평균 4.03억, 평면·청약 일정",
+      "naver_tags": [
+        "두산위브시그니처광양",
+        "광양청약",
+        "광양중동",
+        "브동산"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/doosan-weve-signature-gwangyang/wide_main.jpg"
+      ],
+      "naver_published": false,
+      "naver_post_id": null,
+      "published_at": null
+    },
+    {
       "slug": "sosa-humanville",
       "number": 112,
       "title": "경기 - 소사 휴먼빌 | 59㎡ 평균 5.31억·84㎡ 7.51억, 청약 일정",
@@ -28,9 +51,9 @@
       "cover_candidates": [
         "https://www.brandongsan.com/posts/images/sosa-humanville/aerial.jpg"
       ],
-      "naver_published": false,
-      "naver_post_id": null,
-      "published_at": null
+      "naver_published": true,
+      "naver_post_id": "224484587384",
+      "published_at": "2026-11-20"
     },
     {
       "slug": "yeonsan-sujain-centrio",
