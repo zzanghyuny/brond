@@ -155,9 +155,22 @@ def dark_map(path):
     m = (np.abs(a - br).sum(2) < 0.25) & (sat > 0.3)
     m[int(a.shape[0] * 0.85):] = False
     ys, xs = np.nonzero(m)
-    site = (float(np.median(xs)), float(np.median(ys))) if len(xs) else (a.shape[1] / 2, a.shape[0] / 2)
+    if len(xs) > 50:
+        site = (float(np.median(xs)), float(np.median(ys)))
+    else:  # 예전 개략도: SITE가 검정 사각형 → 검정 픽셀이 가장 빽빽한 40px 칸
+        k = (a.sum(2) < 0.3)
+        k[int(a.shape[0] * 0.85):] = False
+        g = 40; hh, ww = k.shape[0] // g, k.shape[1] // g
+        cnt = k[:hh * g, :ww * g].reshape(hh, g, ww, g).sum((1, 3))
+        iy, ix = np.unravel_index(cnt.argmax(), cnt.shape)
+        site = (ix * g + g / 2, iy * g + g / 2)
     return Image.fromarray((np.clip(out, 0, 1) * 255).astype(np.uint8)), site
-MAP, MAP_SITE = dark_map(IMG + S2['map'])
+if S2.get('map_color'):  # 개략도가 없는 글: 공식 위치도를 원래 색 그대로 쓰고 SITE 위치는 site_px로 준다
+    MAP = load(S2['map']); MAP_SITE = (MAP.width / 2, MAP.height / 2)
+else:
+    MAP, MAP_SITE = dark_map(IMG + S2['map'])
+if S2.get('site_px'):  # 예전 개략도(SITE가 검정 사각형)는 위치를 직접 준다(1000px 원본 기준)
+    MAP_SITE = tuple(S2['site_px'])
 
 yy, xx = np.mgrid[0:H, 0:W]
 _r = np.sqrt(((xx - W / 2) / (W * 0.62)) ** 2 + ((yy - H / 2) / (H * 0.62)) ** 2)
@@ -190,8 +203,9 @@ def hook(img, t, alpha=1.0, anim=True, show_q=True):
     """s1과 마지막 루프가 함께 쓰는 첫 화면: 조감도 + 질문 2줄 + 단지명·지역."""
     a = (lambda d0: ease((t - d0) / 0.45) * alpha) if anim else (lambda d0: alpha)
     dy = (lambda d0: 18 * (1 - eo((t - d0) / 0.6))) if anim else (lambda d0: 0)
-    text(img, (CX, 975), S1['hook1'], fit(S1['hook1'], 88, 'X', 820), INK, 'X', alpha=a(0.15), dy=dy(0.15))
-    if show_q: text(img, (CX, 1072), S1['hook2'], 112, BRASS, 'X', alpha=a(0.6), dy=dy(0.6))
+    # 2026.11.22 확정 형식: '{지역} 신축 {평형} 분양가,' / '맞히면 부동산 고수'(황동) — 가격은 숨긴다
+    text(img, (CX, 975), S1['hook1'], fit(S1['hook1'], 84, 'X', 820), INK, 'X', alpha=a(0.15), dy=dy(0.15))
+    if show_q: text(img, (CX, 1075), S1.get('hook2', '맞히면 부동산 고수'), fit(S1.get('hook2', '맞히면 부동산 고수'), 100, 'X', 820), BRASS, 'X', alpha=a(0.6), dy=dy(0.6))
     rect(img, (CX - 60, 1212, CX + 60, 1214), fill=HAIR, alpha=a(1.0))
     text(img, (CX, 1228), S1['name'], fit(S1['name'], 44, 'B', 820), INK, 'B', alpha=a(1.0))
     text(img, (CX, 1288), S1['region'], fit(S1['region'], 32, 'R', 820), SOFT, 'R', alpha=a(1.2))
@@ -208,7 +222,7 @@ def s2(t, d, lead):
     y0, bh = 280, 900; bw = 900; x0 = CX - bw // 2      # 정사각 개략도를 자르지 않고 통째로 보여준 뒤 SITE 쪽으로 살짝 다가간다
     k = t / d
     sx, sy = MAP_SITE[0] / MAP.width, MAP_SITE[1] / MAP.height
-    box = band(img, MAP, k, y0, bh, (1.0, 1.05, 0.5, 0.5, 0.5, 0.5 + (sy - 0.5) * 0.3),
+    box = band(img, MAP, k, y0, bh, (1.0, 1.05, 0.5, 0.5, 0.5, 0.5 + (sy - 0.5) * 0.3) if not S2.get('map_color') else (1.0, 1.25, sx, 0.5, sx, sy),
                x0=x0, bw=bw, line=False)
     rect(img, (x0 - 1, y0 - 1, x0 + bw, y0 + bh), outline=HAIR, width=2)
     # SITE 위치(밴드 좌표)
@@ -217,7 +231,7 @@ def s2(t, d, lead):
     for i in range(2):
         ph = ((t * 0.9 + i * 0.5) % 1.0)
         ring(img, (px, py), 30 + 60 * ph, BRASS, 4, (1 - ph) * ease(t / 0.4))
-    text(img, (CX, y0 + bh + 12), '브동산 자체 제작 입지 개략도 · 방향·거리는 개략', 24, FAINT, 'R', alpha=ease(t / 0.3))
+    text(img, (CX, y0 + bh + 12), S2.get('caption', '브동산 자체 제작 입지 개략도 · 방향·거리는 개략'), 24, FAINT, 'R', alpha=ease(t / 0.3))
     times = [lead, lead + NAR['s2'] * 0.38, lead + NAR['s2'] * 0.66]
     n = sum(1 for x in times if t >= x) - 1
     if n >= 0:
@@ -300,7 +314,7 @@ def s6(t, d, lead):
 
 def s7(t, d, lead):
     S = C['s7']; img = new()
-    text(img, (CX, 470), '84m² 기준', 40, SOFT, 'B', alpha=ease(t / 0.3))
+    text(img, (CX, 470), C.get('area', '84m²') + ' 기준', 40, SOFT, 'B', alpha=ease(t / 0.3))
     for i, (lab, v, col) in enumerate(S['bars']):
         hbar(img, 600 + 160 * i, lab, v, S['vmax'], (t - 0.1 - 0.25 * i) / 0.6, BRASS if col == 'brass' else INK,
              lw='X' if col == 'brass' else 'R')
@@ -350,8 +364,9 @@ def finish(img, fi):
 def thumbnail(path):
     img = new()
     band(img, COVER, 0.6, 330, 820, S1['kb'])
-    text(img, (CX, 1190), S1['hook1'], fit(S1['hook1'], 100, 'X', 820), INK, 'X')
-    text(img, (CX, 1310), C.get('thumb_q', '얼마게요?'), 140, BRASS, 'X')
+    text(img, (CX, 1190), S1['hook1'], fit(S1['hook1'], 96, 'X', 820), INK, 'X')
+    q = S1.get('hook2', '맞히면 부동산 고수')
+    text(img, (CX, 1310), q, fit(q, 120, 'X', 820), BRASS, 'X')
     s = '   ·   '.join(f'{k} {v}' for k, v in S3['opts'])
     text(img, (CX, 1500), s, fit(s, 56, 'B', 820), INK, 'B')
     text(img, (CX, 1590), S1['name'], fit(S1['name'], 40, 'B', 820), SOFT, 'B')
@@ -419,7 +434,10 @@ if __name__ == '__main__':
     os.makedirs(OUT, exist_ok=True)
     cmd = sys.argv[2] if len(sys.argv) > 2 else 'render'
     if cmd == 'stills':
-        for s in sys.argv[3:]:
+        ts = sys.argv[3:]
+        if ts == ['auto']:  # 장면마다 정보가 가장 많은 순간(끝나기 직전) + 마지막 루프 프레임
+            ts = [f'{st + d - 0.35:.2f}' for _, st, d, _ in SC[:-1]] + [f'{SC[-1][1] + SC[-1][2] * 0.6:.2f}', f'{DUR - 0.05:.2f}']
+        for s in ts:
             T = float(s); Image.fromarray(finish(frame(T), 0)).save(OUT + f'still_{T:05.2f}.png')
         print([(k, round(s, 2), round(d, 2)) for k, s, d, _ in SC], round(DUR, 2))
     elif cmd == 'thumb':
