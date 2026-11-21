@@ -43,4 +43,4 @@ ffmpeg -i /tmp/shorts-out/bucheon-daejang-quiz.mp4 -c:v libx264 -preset veryfast
 - 나눔고딕에는 `㎡`·`−`(U+2212)·`①` 글자가 없다. 화면 글자는 `m²`, `-`, `1`로 쓴다.
 - 새 단지는 `make_quiz.py`의 장면 함수 안 숫자·문구(HINTS, OPTS, s5~s8)와 `IMG`, 원고 파일을 바꾼다. 다음 편부터는 단지별 설정을 `CFG`로 빼는 것이 좋다.
 - Edge 음성은 브라우저 '소리 내어 읽기' 서비스라 수익 채널의 상업적 사용 조건이 불분명하다. 수익화하면 같은 목소리를 Azure TTS(유료)로 다시 만들거나 Higgsfield 음성으로 바꾼다.
-- 영상 파일(mp4)은 저장소에 올리지 않는다(2026.11.20 Paul 요청으로 `shorts-upload/` 제거).
+- 완성 영상·썸네일은 `shorts-upload/<YYYY-MM>/`에 올리고 그 폴더 README에 제목·설명·해시태그를 적는다. Aside가 유튜브 업로드를 마치면 Paul이 삭제를 요청하고, 그때 지운다(2026.11.21).

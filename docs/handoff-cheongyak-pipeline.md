@@ -146,7 +146,7 @@ python3 scripts/beodongsan/comp_scan.py <시·구> --area 84      # 키워드 �
 ### 7-3. 전달 규칙
 - **영상을 줄 때는 항상 제목 + 썸네일을 같이 준다.** 제목 기본형: `단지명 | 예상프리미엄 ±N, 분양가 총정리`.
 - 설명 공통 문구: "브동산 모형 추정치이며 확정 수익이 아닙니다. 청약 자격·일정은 청약홈 입주자모집공고를 확인하세요. 더 궁금한 단지는 댓글로 남겨주세요."
-- Aside 배포용으로 `shorts-upload/<YYYY-MM>/`에 `<slug>.mp4`·`<slug>-thumbnail.png`를 올리고 같은 폴더 `README.md`에 순서·제목·설명·해시태그를 적는다. 이 폴더는 `.vercelignore`로 사이트 배포에서 빠진다.
+- Aside 배포용으로 `shorts-upload/<YYYY-MM>/`에 `<slug>.mp4`·`<slug>-thumbnail.png`를 올리고 같은 폴더 `README.md`에 순서·제목·설명·해시태그를 적는다. 이 폴더는 `.vercelignore`로 사이트 배포에서 빠진다. Aside가 유튜브 업로드를 마치면 Paul이 삭제를 요청하고, 그때 지운다(2026.11.21).
 - 수치가 바뀌면(글 갱신) 영상도 다시 만든다.
 
 ## 8. 배포와 확인
