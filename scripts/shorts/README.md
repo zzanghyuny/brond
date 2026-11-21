@@ -42,3 +42,24 @@ python3 make_quiz.py quiz/sangok.json render                 # → /tmp/shorts-o
 - 입지 개략도는 포스팅마다 만드는 `posts/images/<slug>/chart-map-naver.png`를 그대로 쓴다. SITE는 황동 사각형 위치로 자동으로 찾는다.
 - Edge 음성은 브라우저 '소리 내어 읽기' 서비스라 수익 채널의 상업적 사용 조건이 불분명하다. 수익화하면 같은 목소리를 Azure TTS(유료)로 다시 만들거나 Higgsfield 음성으로 바꾼다.
 - 완성 영상·썸네일은 `shorts-upload/<YYYY-MM>/`에 올리고 그 폴더 README에 제목·설명·해시태그를 적는다. Aside가 유튜브 업로드를 마치면 Paul이 삭제를 요청하고, 그때 지운다(2026.11.21).
+
+## 4안 '진짜 걸어보면' 도보 검증 쇼츠 — `make_walk.py` (2026.11.22)
+
+단지 → 역 2곳의 실제 도보 경로를 Mapbox 어두운 지도(dark-v11) 위에 그리고 타이머로 시간을 보여 주는 27~29초 영상. 나레이션·음악·효과음은 퀴즈와 같다.
+**구도심·기존 시가지 단지에만 쓴다** — 신규 택지·신도시는 Mapbox 지도에 새 길과 예정역이 없어 경로가 엉뚱하게 나온다(천안라크원 시험작에서 확인).
+
+준비(단지마다, Mapbox MCP 사용)
+1. SITE 좌표: KB 통합검색 결과의 `WGS84_LAT/LNG`(`scripts/beodongsan/kb.py`의 `get('land-complex/serch/intgraSerch', …)`). Mapbox는 한국 지번 주소를 못 찾는다.
+2. 역 좌표: Mapbox `search_and_geocode_tool`(types=poi, proximity=SITE)로 역 POI.
+3. 경로: `directions_tool`(mapbox/walking, geometries=geojson, overview=full) SITE → 역 2곳.
+4. `walk/<키>.routes.json`에 site·routes(dest, distance, duration, coords)·map(center, zoom, size=1280)을 넣는다. map은 경로 전체가 1280px 중 가로 ~760px·세로 ~780px에 들도록 bbox로 계산.
+5. 지도: `static_map_image_tool`(mapbox/dark-v11, 1280×1280, routes.json의 center·zoom 그대로) → `$WALK_MAPS/<키>.png`(기본 /tmp/walk-maps). **지도 이미지는 저장소에 넣지 않는다.** 하단 Mapbox 로고·저작권 표기는 자르지 않는다.
+6. `walk/<키>.json`에 훅·라벨·결과 문구·정리 카드·나레이션을 쓴다(`s1.img/kb`는 퀴즈 설정에서 가져옴). 예: `walk/mullae.json`.
+
+렌더
+```
+python3 make_walk.py walk/<키>.json tts      # $WALK_TTS/<out>/s1~s5.wav
+python3 make_walk.py walk/<키>.json stills   # 장면 시간표 출력 (뒤에 초를 주면 정지 화면 저장)
+python3 make_walk.py walk/<키>.json render   # $WALK_OUT/<out>.mp4 + -thumbnail.png
+```
+정직성 규칙: 홍보 문구는 공식 표기만 인용하고(출구 기준 직선거리인지 밝힘) 비꼬지 않는다. 도보는 '단지 중심 → 역 중심점' 기준이라 출구에 따라 1~2분 차이 날 수 있다는 문구를 화면 하단과 설명에 넣는다. 걸어보니 광고와 맞으면 맞다고 쓴다(문래).
