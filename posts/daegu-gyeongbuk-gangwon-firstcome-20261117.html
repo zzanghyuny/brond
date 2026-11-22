@@ -196,7 +196,11 @@
     .agent-side{ align-items:stretch; width:100%; }
   }
 </style>
-<style>.note{font-size:13px;color:#8A8A8A}.stat{border:1px solid #111;padding:14px 16px;margin:12px 0}.big{font-size:22px;font-weight:800}td.num{text-align:right;white-space:nowrap}.tblwrap{overflow-x:auto}.content table{width:100%;min-width:0;border-collapse:collapse;margin:14px 0;font-size:14px}.content th,.content td{border:1px solid #D8D8D8;padding:7px;vertical-align:top;text-align:left}.content th{background:#F5F5F5}.content td,.content th{white-space:normal;overflow-wrap:anywhere;word-break:keep-all}.content td.num{white-space:nowrap}.content .note{overflow-wrap:anywhere}.content img{max-width:100%;display:block}.content{padding-left:24px;padding-right:24px}.content h2{margin-top:44px}.tblwrap table{min-width:620px}.tblwrap td,.tblwrap th{overflow-wrap:normal}.tblwrap td:nth-child(2){min-width:170px}.content table.kv{table-layout:fixed}.content table.kv th{width:26%}</style>
+<style>.note{font-size:13px;color:#8A8A8A}.stat{border:1px solid #111;padding:14px 16px;margin:12px 0}.big{font-size:22px;font-weight:800}td.num{text-align:right;white-space:nowrap}.tblwrap{overflow-x:auto}.content table{width:100%;min-width:0;border-collapse:collapse;margin:14px 0;font-size:14px}.content th,.content td{border:1px solid #D8D8D8;padding:7px;vertical-align:top;text-align:left}.content th{background:#F5F5F5}.content td,.content th{white-space:normal;overflow-wrap:anywhere;word-break:keep-all}.content td.num{white-space:nowrap}.content .note{overflow-wrap:anywhere}.content img{max-width:100%;display:block}.content{padding-left:24px;padding-right:24px}.content h2{margin-top:44px}.tblwrap table{min-width:620px}.tblwrap td,.tblwrap th{overflow-wrap:normal}.tblwrap td:nth-child(2){min-width:170px}.content table.kv{table-layout:fixed}.content table.kv th{width:26%}
+/* 좌우 여백 복구 (2026.11.22): .content 단축 padding이 .wrap 좌우 여백을 0으로 덮어쓰던 문제 */
+.wrap.content{ padding-left:24px; padding-right:24px; }
+@media (max-width:520px){ .wrap, .wrap.content{ padding-left:20px; padding-right:20px; } }
+</style>
 </head>
 <body>
 <div class="top-eyebrow"><div class="wrap"><a class="brand-mark" href="https://brandongsan.com/"><span class="bm-b">브</span><span class="bm-rest">동산</span></a><a class="list-btn" href="https://brandongsan.com/realestate.html">☰ 목록</a></div></div>

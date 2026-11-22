@@ -90,6 +90,7 @@ python3 scripts/beodongsan/comp_scan.py <시·구> --area 84      # 키워드 �
 - **광고 문의 카드(`section#ad`/`.sponsor`)는 넣지 않는다.** 기존 글을 복사했으면 남아 있는지 확인.
 - 제목 형식: `지역 - 단지명 | 핵심 한 줄, 84㎡ 평균 분양가 X.XX억, 예상 프리미엄 ±N`
 - 이미지는 별도 파일 + 상대경로, **모든 `<img>`에 `style="width:100%;display:block;"`** 유지. `figure.photo-block`에 넣는 차트 PNG(1000px)도 예외 없음 — 빠지면 본문 폭을 넘어 삐져나온다(2026.11.20 산곡역 무순위 글 등 11개 글에서 발생, 페이지 CSS에 `.content img{max-width:100%}`를 추가해 고침).
+- 본문 컨테이너가 `class="wrap content"`면 `.content{padding:30px 0 10px}` 단축 속성이 `.wrap`의 좌우 여백을 0으로 덮어쓴다. 새 글 스타일에 `.wrap.content{padding-left:24px;padding-right:24px}`(모바일 20px)가 있는지 확인한다(2026.11.22, 117개 글 일괄 수정).
 - **등록 4종 + 1**(빠뜨리면 목록·피드에 안 나온다):
   1. `posts-data.js` — `POSTS` 배열에 객체 하나(id, category "realestate", region, tag "청약 언박싱 No.NNN", title, date, dateLabel, url, preview)
   2. `posts-manifest.json` — number(기존 최대+1), title, naver_html, naver_title, naver_tags, cover_candidates, `naver_published: false`
