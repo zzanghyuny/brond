@@ -1,0 +1,308 @@
+{
+ "out": "dec1-cheongyak-top7",
+ "src": [
+  "출처: 입주자모집공고 · KB시세(2026.11) · 브동산 모형 추정치 · 투자 권유 아님",
+  "단지별 대표 평형(84·59m²) 기준 · 평형이 달라 금액 단순 비교 주의"
+ ],
+ "scenes": [
+  {
+   "id": "s1",
+   "type": "hook",
+   "layout": "grid",
+   "imgs": [
+    {
+     "img": "goyang-hanshin-thehue-firstone/cover.jpg",
+     "kb": [
+      1.0,
+      1.15,
+      0.5,
+      0.5,
+      0.52,
+      0.45
+     ],
+     "label": "고양 행신"
+    },
+    {
+     "img": "thesharp-cheonan-lac-one/cover.jpg",
+     "kb": [
+      1.0,
+      1.15,
+      0.5,
+      0.62,
+      0.5,
+      0.55
+     ],
+     "label": "천안"
+    },
+    {
+     "img": "wangsuk-hanshin-theh-centum/overview2.jpg",
+     "kb": [
+      2.3,
+      2.5,
+      0.2,
+      0.17,
+      0.21,
+      0.17
+     ],
+     "label": "남양주 왕숙"
+    },
+    {
+     "img": "gochang-desian/aerial.jpg",
+     "kb": [
+      1.0,
+      1.12,
+      0.5,
+      0.5,
+      0.5,
+      0.45
+     ],
+     "label": "고창"
+    },
+    {
+     "img": "yeonsan-sujain-centrio/cover.jpg",
+     "kb": [
+      1.0,
+      1.12,
+      0.3,
+      0.5,
+      0.35,
+      0.5
+     ],
+     "label": "부산 연산"
+    },
+    {
+     "img": "doosan-weve-signature-gwangyang/wide_main.jpg",
+     "kb": [
+      1.0,
+      1.15,
+      0.5,
+      0.5,
+      0.55,
+      0.5
+     ],
+     "label": "광양"
+    },
+    {
+     "img": "sosa-humanville/aerial.jpg",
+     "kb": [
+      1.2,
+      1.35,
+      0.5,
+      0.55,
+      0.5,
+      0.6
+     ],
+     "label": "부천 소사"
+    }
+   ],
+   "lines": [
+    {
+     "t": "12월 1일 청약 7곳",
+     "px": 70
+    },
+    {
+     "t": "1억 넘는 곳은 단 1곳",
+     "px": 100
+    }
+   ],
+   "narr": "12월 1일 청약 7곳. 예상 프리미엄 1억 넘는 곳은 딱 한 곳입니다."
+  },
+  {
+   "id": "r7",
+   "type": "rank",
+   "rank": "7위",
+   "of": "/ 7",
+   "img": {
+    "img": "thesharp-cheonan-lac-one/cover.jpg",
+    "kb": [
+     1.0,
+     1.15,
+     0.5,
+     0.62,
+     0.5,
+     0.55
+    ]
+   },
+   "name": "더샵 천안라크원",
+   "region": "충남 천안 서북구 · 84m²",
+   "prem": "-5,420만",
+   "kind": "minus",
+   "judge": "(고평가)",
+   "narr": "7위 천안, 마이너스 5,420만.",
+   "tail": 0.25
+  },
+  {
+   "id": "r6",
+   "type": "rank",
+   "rank": "6위",
+   "of": "/ 7",
+   "img": {
+    "img": "doosan-weve-signature-gwangyang/wide_main.jpg",
+    "kb": [
+     1.0,
+     1.15,
+     0.5,
+     0.5,
+     0.55,
+     0.5
+    ]
+   },
+   "name": "두산위브 시그니처 광양",
+   "region": "전남 광양 중동 · 84m²",
+   "prem": "-1,320만",
+   "kind": "minus",
+   "judge": "(고평가)",
+   "narr": "6위 광양, 마이너스 1,320만.",
+   "tail": 0.25
+  },
+  {
+   "id": "r5",
+   "type": "rank",
+   "rank": "5위",
+   "of": "/ 7",
+   "img": {
+    "img": "gochang-desian/aerial.jpg",
+    "kb": [
+     1.0,
+     1.12,
+     0.5,
+     0.5,
+     0.5,
+     0.45
+    ]
+   },
+   "name": "고창 데시앙",
+   "region": "전북 고창 덕산지구 · 84m²",
+   "prem": "+1,360만",
+   "kind": "plus",
+   "judge": "(저평가)",
+   "narr": "5위 고창, 플러스 1,360만.",
+   "tail": 0.25
+  },
+  {
+   "id": "r4",
+   "type": "rank",
+   "rank": "4위",
+   "of": "/ 7",
+   "img": {
+    "img": "yeonsan-sujain-centrio/cover.jpg",
+    "kb": [
+     1.0,
+     1.12,
+     0.3,
+     0.5,
+     0.35,
+     0.5
+    ]
+   },
+   "name": "연산역 수자인 센트리오",
+   "region": "부산 연제구 연산동 · 59m²",
+   "prem": "+2,540만",
+   "kind": "plus",
+   "judge": "(저평가)",
+   "narr": "4위 부산 연산, 플러스 2,540만.",
+   "tail": 0.25
+  },
+  {
+   "id": "r3",
+   "type": "rank",
+   "rank": "3위",
+   "of": "/ 7",
+   "img": {
+    "img": "goyang-hanshin-thehue-firstone/cover.jpg",
+    "kb": [
+     1.0,
+     1.15,
+     0.5,
+     0.5,
+     0.52,
+     0.45
+    ]
+   },
+   "name": "고양 한신더휴 퍼스트원",
+   "region": "경기 고양 행신동 · 84m²",
+   "prem": "+5,960만",
+   "kind": "plus",
+   "judge": "(저평가)",
+   "narr": "3위 고양 행신, 플러스 5,960만.",
+   "tail": 0.25
+  },
+  {
+   "id": "r2",
+   "type": "rank",
+   "rank": "2위",
+   "of": "/ 7",
+   "img": {
+    "img": "sosa-humanville/aerial.jpg",
+    "kb": [
+     1.2,
+     1.35,
+     0.5,
+     0.55,
+     0.5,
+     0.6
+    ]
+   },
+   "name": "소사 휴먼빌",
+   "region": "경기 부천 소사본동 · 59m²",
+   "prem": "+6,460만",
+   "kind": "plus",
+   "judge": "(저평가)",
+   "narr": "2위 부천 소사, 플러스 6,460만.",
+   "tail": 0.25,
+   "note": "79세대 1개 동 · 59m² 24세대"
+  },
+  {
+   "id": "r1",
+   "type": "rank",
+   "rank": "1위",
+   "of": "/ 7",
+   "img": {
+    "img": "wangsuk-hanshin-theh-centum/overview2.jpg",
+    "kb": [
+     2.3,
+     2.5,
+     0.2,
+     0.17,
+     0.21,
+     0.17
+    ]
+   },
+   "name": "왕숙 한신더휴 센텀",
+   "region": "경기 남양주 왕숙지구 · 59m²",
+   "prem": "+1.74억",
+   "kind": "plus",
+   "judge": "(저평가)",
+   "narr": "1위는 남양주 왕숙, 플러스 1억 7,400만 원.",
+   "tail": 0.6,
+   "note": "공공분양 · 소득·자산 기준 확인 · 왕숙역·학교는 계획 단계",
+   "top": true,
+   "hit": "lowhit",
+   "hit_at": 0.6
+  },
+  {
+   "id": "s9",
+   "type": "close",
+   "lines": [
+    {
+     "t": "예상 프리미엄 1억 넘는 곳",
+     "px": 48
+    },
+    {
+     "t": "왕숙 단 1곳",
+     "px": 96,
+     "c": "brass"
+    },
+    {
+     "t": "브동산 모형 추정치 · 확정 수익 아님",
+     "px": 30,
+     "c": "faint",
+     "w": "R"
+    }
+   ],
+   "sched": "특별공급 11.30(월) · 1순위 12.1(화)",
+   "q": "어디 넣으세요?",
+   "narr": "브동산 모형 추정치입니다. 여러분은 어디 넣으세요?"
+  }
+ ]
+}

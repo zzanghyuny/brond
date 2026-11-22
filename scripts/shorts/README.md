@@ -63,3 +63,12 @@ python3 make_walk.py walk/<키>.json stills   # 장면 시간표 출력 (뒤에 
 python3 make_walk.py walk/<키>.json render   # $WALK_OUT/<out>.mp4 + -thumbnail.png
 ```
 정직성 규칙: 홍보 문구는 공식 표기만 인용하고(출구 기준 직선거리인지 밝힘) 비꼬지 않는다. 도보는 '단지 중심 → 역 중심점' 기준이라 출구에 따라 1~2분 차이 날 수 있다는 문구를 화면 하단과 설명에 넣는다. 걸어보니 광고와 맞으면 맞다고 쓴다(문래).
+
+## 조회수형 기획 쇼츠 — `make_viral.py` (2026.11.22)
+
+장면 목록 JSON(`viral/<키>.json`)으로 5가지 기획을 만든다: 가격 대결(`duel-*`), 이번 주 랭킹(`dec1-top7`), 당첨 시 필요한 돈(`cash-*`), 옆 단지 격차(`gap-*`), 공고문 탐정(`detective-*`).
+장면 type: `hook`(layout single·split·grid·map·doc) · `cards`(countdown 가능) · `bars` · `pay` · `rank` · `floors` · `table` · `close`(첫 화면으로 루프).
+```
+python3 make_viral.py viral/<키>.json tts | stills [초…] | render     # 출력 $VIRAL_OUT (기본 /tmp/viral-out)
+```
+원칙: 첫 화면은 단지명이 아니라 질문·숫자. 예상 프리미엄은 금액 먼저, 판정은 괄호. 숫자를 바꾸는 조건(공공분양 자격, 대출 '알선 예정', 저층 비중 등)은 화면 하단 출처 줄이나 본문에 넣는다. map 레이아웃의 지도는 Mapbox 정적 지도(`$WALK_MAPS`, 저장소에 넣지 않음).
