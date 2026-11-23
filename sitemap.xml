@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 새 포스팅을 추가할 때마다 <url> 블록을 하나씩 추가하면 됩니다. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.brandongsan.com/posts/jeongja-thesharp-bundanghighest-musunwi.html</loc><lastmod>2026-11-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.brandongsan.com/posts/dongtan-geumgang-penterium-7-musunwi.html</loc><lastmod>2026-11-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.brandongsan.com/posts/sangok-xi-hillstate-haneulchae-musunwi.html</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.brandongsan.com/posts/gochang-desian.html</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
