@@ -10,6 +10,39 @@
   },
   "posts": [
     {
+      "slug": "gyeyang-a2-a3-first-move-in",
+      "number": 118,
+      "title": "인천 - 계양신도시 첫 입주 루시안트·리프포레 | 3기 신도시 첫 1,285가구, 84㎡ 분양가 5.84억, 예상 프리미엄 +2,720만",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-25",
+      "site_url": "https://www.brandongsan.com/posts/gyeyang-a2-a3-first-move-in.html",
+      "naver_html": "naver-html/gyeyang-a2-a3-first-move-in.html",
+      "naver_title": "계양신도시 첫 입주 루시안트·리프포레 | 예상프리미엄 +2,720만, 분양가 시세 총정리",
+      "naver_tags": [
+        "계양신도시",
+        "계양루시안트",
+        "계양리프포레",
+        "3기신도시",
+        "3기신도시입주",
+        "인천계양",
+        "계양테크노밸리",
+        "공공분양",
+        "신혼희망타운",
+        "박촌역",
+        "계양구아파트",
+        "인천아파트",
+        "예상프리미엄",
+        "입주",
+        "부동산정보"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/gyeyang-a2-a3-first-move-in/lh-land-use-a2a3.jpg",
+        "https://www.brandongsan.com/posts/images/gyeyang-a2-a3-first-move-in/chart-84-price.png"
+      ],
+      "naver_published": false
+    },
+    {
       "slug": "jeongja-thesharp-bundanghighest-musunwi",
       "number": 117,
       "title": "경기 - 더샵 분당하이스트 무순위 | 정자역 34세대 재공급 시세차익 점검, 84㎡ 평균 분양가 27.82억, 예상 프리미엄 -6.89억",
@@ -1650,13 +1683,13 @@
     {
       "slug": "junghwa-raon-private-centro",
       "number": 77,
-      "title": "서울 - 중화역 라온프라이빗 센트로 | 중화3구역 아파트 176세대·오피스텔 74실, 브동산 적정가는 11.8억 (분양가는 공고 후 업데이트)",
+      "title": "서울 - 중화역 라온프라이빗 센트로 | 7호선 중화역 초역세권 176세대, 84㎡ 평균 분양가 12.51억, 예상 프리미엄 +6,380만",
       "category": "부동산",
       "naver_category": "부동산이야기",
-      "date": "2026-11-01",
+      "date": "2026-11-25",
       "site_url": "https://www.brandongsan.com/posts/junghwa-raon-private-centro.html",
       "naver_html": "naver-html/junghwa-raon-private-centro.html",
-      "naver_title": "중화역 라온프라이빗 센트로 | 브동산 적정가 11.8억, 분양가 공개 전 총정리",
+      "naver_title": "중화역 라온프라이빗 센트로 | 예상프리미엄 +6,380만, 분양가 평면 총정리",
       "naver_tags": [
         "중화역라온프라이빗센트로",
         "중화동",
@@ -1664,24 +1697,25 @@
         "라온건설",
         "라온프라이빗",
         "서울청약",
-        "분양예정",
-        "적정가",
-        "청약",
         "분양가",
+        "예상프리미엄",
+        "청약경쟁률",
+        "당첨가점",
         "중화역",
-        "부동산정보",
-        "중화3구역",
         "7호선",
-        "중랑구아파트"
+        "중화3구역",
+        "중랑구아파트",
+        "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/junghwa-raon-private-centro/aerial.jpg"
+        "https://www.brandongsan.com/posts/images/junghwa-raon-private-centro/official-aerial.jpg",
+        "https://www.brandongsan.com/posts/images/junghwa-raon-private-centro/official-siteplan.jpg"
       ],
       "naver_published": true,
       "naver_post_id": "224461823945",
       "published_at": "2026-11-02T05:58:46+07:00",
       "naver_republish_needed": true,
-      "naver_republish_reason": "공식 분양 자료 재확인 및 도면·단지 정보 보완"
+      "naver_republish_reason": "입주자모집공고(2026.11.06) 분양가·청약 결과 반영, 비교단지 재선정, 제목 변경"
     },
     {
       "slug": "dh-sinbanpo-esterra",
