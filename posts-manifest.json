@@ -10,6 +10,67 @@
   },
   "posts": [
     {
+      "slug": "dec-2026-move-in",
+      "number": 120,
+      "title": "전국 - 12월 아파트 입주 1만6,486가구 총정리 | 인천 3,812·부산 3,686·서울 903, 1년 전의 절반",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-26",
+      "site_url": "https://www.brandongsan.com/posts/dec-2026-move-in.html",
+      "naver_html": "naver-html/dec-2026-move-in.html",
+      "naver_title": "12월 아파트 입주 1만6,486가구 총정리 | 인천·부산 몰리고 서울 903가구",
+      "naver_tags": [
+        "12월입주",
+        "입주물량",
+        "아파트입주",
+        "인천입주",
+        "부산입주",
+        "해링턴마레",
+        "위례자이더파크",
+        "계양신도시",
+        "힐스테이트동작시그니처",
+        "전세",
+        "입주예정",
+        "부동산정보"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/dec-2026-move-in/chart-region.png",
+        "https://www.brandongsan.com/posts/images/dec-2026-move-in/chart-complex.png"
+      ],
+      "naver_published": false
+    },
+    {
+      "slug": "wirye-xi-the-park",
+      "number": 119,
+      "title": "경기 - 위례자이더파크 12월 입주 | 1,309세대 중 650세대는 군관사, 55㎡ 6.2억 신혼희망타운의 수익공유형 모기지",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-26",
+      "site_url": "https://www.brandongsan.com/posts/wirye-xi-the-park.html",
+      "naver_html": "naver-html/wirye-xi-the-park.html",
+      "naver_title": "위례자이더파크 12월 입주 | 신혼희망타운 6.2억, 공고문 속 숨은 한 줄 수익공유형 모기지",
+      "naver_tags": [
+        "위례자이더파크",
+        "위례신혼희망타운",
+        "위례A2-7",
+        "신혼희망타운",
+        "수익공유형모기지",
+        "위례",
+        "창곡동",
+        "성남아파트",
+        "군관사",
+        "12월입주",
+        "입주",
+        "위례트램",
+        "부동산정보"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/wirye-xi-the-park/chart-units.png",
+        "https://www.brandongsan.com/posts/images/wirye-xi-the-park/chart-share.png"
+      ],
+      "naver_published": false
+    },
+    {
       "slug": "gyeyang-a2-a3-first-move-in",
       "number": 118,
       "title": "인천 - 계양신도시 첫 입주 루시안트·리프포레 | 3기 신도시 첫 1,285가구, 84㎡ 분양가 5.84억, 예상 프리미엄 +2,720만",
@@ -2081,34 +2142,37 @@
     {
       "slug": "banpo-dh-classtre",
       "number": 55,
-      "title": "서울 - 디에이치 반포 124 | 5,007세대 반포주공1단지, 브동산 적정가는 72억 (분양가는 공고 후 업데이트)",
+      "title": "서울 - 디에이치 반포124 | 분양가 재심의 12월 4일, 평당 9천만~1억이면 84㎡ 30.6억~34억, 브동산 적정가 57.3억",
       "category": "부동산",
       "naver_category": "부동산이야기",
-      "date": "2026-10-31",
+      "date": "2026-11-26",
       "site_url": "https://www.brandongsan.com/posts/banpo-dh-classtre.html",
       "naver_html": "naver-html/banpo-dh-classtre.html",
-      "naver_title": "디에이치 반포 124 | 브동산 적정가 72억, 분양가 공개 전 총정리",
+      "naver_title": "디에이치 반포124 | 분양가 재심의 12월 4일, 브동산 적정가 57.3억 시나리오 총정리",
       "naver_tags": [
         "디에이치반포124",
-        "디에이치클래스트",
         "반포주공1단지",
+        "분양가재심의",
         "반포",
         "서초구",
         "현대건설",
         "서울청약",
-        "분양예정",
         "분양가상한제",
-        "적정가",
+        "래미안원베일리",
+        "반포래미안트리니원",
+        "예상프리미엄",
         "청약",
-        "분양가",
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/banpo-dh-classtre/cover.jpg"
+        "https://www.brandongsan.com/posts/images/banpo-dh-classtre/cover.jpg",
+        "https://www.brandongsan.com/posts/images/banpo-dh-classtre/chart-scenario.png"
       ],
       "naver_published": true,
       "naver_post_id": "224429690570",
-      "published_at": "2026-11-02T22:55:00+07:00"
+      "published_at": "2026-11-02T22:55:00+07:00",
+      "naver_republish_needed": true,
+      "naver_republish_reason": "분양가 재심의(12.4) 일정·평당 9천만~1억 시나리오 반영, 비교단지 재선정(KB)으로 적정가 72.0억→57.28억, 제목 변경"
     },
     {
       "slug": "sangdaewon2-redevelopment",

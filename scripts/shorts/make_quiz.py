@@ -44,7 +44,7 @@ def make_tts():
     os.makedirs(TTS, exist_ok=True)
     for k, text in C['narration'].items():
         mp3 = TTS + f'{k}.mp3'
-        asyncio.run(edge_tts.Communicate(text, VOICE[0], rate=VOICE[1], pitch=VOICE[2]).save(mp3))
+        asyncio.run(edge_tts.Communicate(text, VOICE[0], rate=VOICE[1], pitch=VOICE[2], proxy=os.environ.get('HTTPS_PROXY') or None).save(mp3))
         subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-i', mp3, '-af',
                         'silenceremove=start_periods=1:start_threshold=-45dB,areverse,'
                         'silenceremove=start_periods=1:start_threshold=-45dB,areverse',

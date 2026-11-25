@@ -37,7 +37,7 @@ if sys.argv[2] == 'tts':
     os.makedirs(TTS, exist_ok=True)
     for S in SC_CFG:
         mp3 = TTS + S['id'] + '.mp3'
-        asyncio.run(edge_tts.Communicate(S['narr'], VOICE[0], rate=VOICE[1], pitch=VOICE[2]).save(mp3))
+        asyncio.run(edge_tts.Communicate(S['narr'], VOICE[0], rate=VOICE[1], pitch=VOICE[2], proxy=os.environ.get('HTTPS_PROXY') or None).save(mp3))
         subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-i', mp3, '-af',
                         'silenceremove=start_periods=1:start_threshold=-45dB,areverse,silenceremove=start_periods=1:start_threshold=-45dB,areverse',
                         '-ar', '44100', '-ac', '1', TTS + S['id'] + '.wav'], check=True)
