@@ -20,6 +20,7 @@ def _get(path, **params):  # 디스크 캐시 없이(대량 수집 시 kb.py의 
     raise RuntimeError('kb fail')
 kb.get = _get; k.get = _get
 _done = [0]
+FLOORS = os.environ.get('KB_FLOORS') == '1'
 
 def collect(kws, addr):
     seen = {}
@@ -41,6 +42,8 @@ def p84(c):
                     v = s[0][1] / 10000
                     if best is None or v > best[0]: best = (v, s[0][3], float(ex))
         if best: c.update(p=round(best[0], 2), date=best[1], ex=best[2])
+        if FLOORS:
+            i = k.info(c['no']); c['fl'] = int(i.get('최고층수') or 0)
     except Exception as e:
         c['err'] = str(e)[:60]
     _done[0] += 1
@@ -57,6 +60,6 @@ if __name__ == '__main__':
     else:
         cs = [c for c in cs if c['hh'] >= a.min_hh]
         with ThreadPoolExecutor(8) as ex: cs = list(ex.map(p84, cs))
-        cs = sorted([c for c in cs if c.get('p')], key=lambda c: -c['p'])
+        cs = sorted([c for c in cs if c.get('p') or c.get('fl')], key=lambda c: -(c.get('p') or 0))
     json.dump(cs, open(a.out, 'w'), ensure_ascii=False, indent=0)
     for i, c in enumerate(cs[:15], 1): print(i, c['name'], c['hh'], c['ym'], c.get('p'), c.get('date'), c.get('ex'), c['addr'])

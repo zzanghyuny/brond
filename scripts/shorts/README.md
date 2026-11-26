@@ -84,3 +84,6 @@ python3 make_rank.py rank/<키>.json tts | stills [초…] | render             
 ```
 규칙: 임대·장기전세 집계분과 입주 전 단지는 빼고, 같은 단지 여러 블록은 최고가 1곳만. 동률은 `label: "공동 N위"`, `lrank`. 위성 좌표(KB)가 단지 중심과 어긋나면 `ring: false`.
 출처 줄에 위성사진 © Mapbox © Maxar(촬영 시점 다를 수 있음)과 KB 기준일을 항상 넣는다. Mapbox 공개 토큰은 Mapbox MCP `list_public_tokens_tool`로 받는다(코드에 넣지 않음).
+
+### 예약 업로드(하루 3편) — `release_queue.sh` (2026.11.26)
+미리 만든 영상은 `shorts-queue` 브랜치의 `queue/<날짜>/`(mp4·썸네일·README-section.md)에 넣어 두고, 그날 `bash scripts/shorts/release_queue.sh <날짜>`로 main의 `shorts-upload/<YYYY-MM>/`에 옮겨 push한다(Aside는 main만 본다). 2026.11.27~29 랭킹 7편이 이 방식으로 예약돼 있다.
