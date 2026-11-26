@@ -91,3 +91,7 @@ master 문서는 claude.ai 클라우드 채팅 세션 기준으로 작성돼 일
 - 청약 사이트 글은 `.claude/skills/beodongsan-realestate-post/SKILL.md`(특히 1-1 섹션 배치·중복 금지, 6-2 예상 프리미엄·판정 분리), 네이버 발행본은 `.claude/skills/beodongsan-naver-copy/SKILL.md`(2026.11.21판)를 따른다. 위의 예전 네이버 규칙과 충돌하면 이 두 스킬이 이긴다. 판정은 금액 뒤에 따로(괄호 또는 별도 문장) 쓴다.
 - 사이트 글: 커버 = `chart-map-naver.png`(한 번만), 1번 섹션 = 브리프 → 스탯 박스 → 레이더 → 브릿지 → 평점표 → 점수 근거 → 비교단지 후보 표, `chart-b-price.png`와 일정 표는 넣지 않는다, 청약 일정은 `chart-c-schedule.png` 하나, 공식 평면도는 모든 타입을 싣는다. 레이더·브릿지·평점표는 `scripts/beodongsan/charts.py`의 `radar`/`bridge`/`table`.
 - 네이버: 본문 첫 두 문장(검색 미리보기) → 바이라인 → 6섹션. 섹션 1에 `chart-b-price.png`, 섹션 2에 `chart-a-score.png`(둘 다 `make_naver_charts.py`), 섹션 5에 공식 이미지 전부·평면 전 타입·`chart-c-schedule.png`. 표는 `python3 scripts/naver_tables_to_png.py naver-html/<slug>.html posts/images/<slug> <slug>`로 PNG로 바꾼 뒤 `apply_naver_shop.py <slug>`를 실행한다.
+
+## 네이버 원고는 고양 한신더휴 퍼스트원과 똑같이 — 대표사진은 입지 개략도 (2026.11.26, 항상 적용)
+- 네이버 원고의 기준 파일은 `naver-html/goyang-hanshin-thehue-firstone.html`이다. 굵은 첫 두 문장 → 회색 바이라인 → h1 제목 → 6섹션. 섹션 1은 chart-b → 공식 조감도 → 단지 개요 표, 섹션 2는 입지 문단 → **입지 개략도(`chart-map-naver.png`)** → 비교단지 → chart-a → 보정 표, 섹션 5는 공식 이미지·평면 전부(`이미지 NN` 연번) + 청약 일정 인포그래픽.
+- **대표사진은 항상 입지 개략도**다. 메타 주석은 `cover_candidates: chart-map-naver.png (대표사진 = 입지 개략도)`, `posts-manifest.json`의 cover_candidates도 개략도 URL 하나로 둔다. 위의 2026.11.20 '차트는 chart-b 1장만, 개략도는 공식 입지도로 대신' 규칙은 이 규칙으로 대체한다.
