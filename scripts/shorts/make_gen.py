@@ -185,7 +185,7 @@ CFG = {
     name='병점복합타운 주복1블록', name_px=60, loc_txt='경기 화성시 병점동', avg=6.77, rng='층별 6.31 ~ 6.92억 · 84A 가중평균 · LH 공공분양',
     plabel='84㎡A 평균 분양가', glabel='실제 분양가 (84㎡A 평균)', csub='84㎡ 일반거래가 · 2026.11.20',
     comps=[('병점역아이파크캐슬 · 병점동 · 2021.03', 9.50), ('반정아이파크캐슬5단지 · 반정동 · 2022.12', 9.70)],
-    cvmax=11.0, fair=9.48, prem='+2.70억', pct='약 29%', gapword='낮음', gvmax=10.5, thumb_sub='분양가, 저평가일까?',
+    cvmax=11.0, fair=9.48, prem='+2.70억', pct='약 29%', gapword='낮음', gvmax=10.5, thumb_sub='분양가, 저평가일까?', thumb_style='title',
     disc='브동산 모형 추정치 · 확정 수익 아님 · 84㎡A 평균 · 2026.11.26 기준',
     info=[('청약', '12월 7일 ~ 10일'), ('전매제한', '3년'), ('거주의무', '3년'), ('기금 융자', '9,000만 원 포함')],
     scenes=[('title',2.6),('aerial',3.6),('price',3.0),('comps',3.8),('gap',4.2),('layout',3.4),('feature',3.6),('place',3.2),('info',3.0),('end',3.0)],
@@ -373,6 +373,15 @@ def make_thumbnail(key, path):
     """썸네일(커버) 이미지 1080x1920: 대표 이미지를 어둡게 깔고 단지명·예상 프리미엄을 황동 포인트로."""
     from PIL import ImageFilter
     c = CFG[key]
+    if c.get('thumb_style') == 'title':   # 검정 바탕 + 브동산 + 단지명 + '예상프리미엄 분석' (예전 인기 쇼츠 첫 화면 구도)
+        img = Image.new('RGB', (W, H), BG)
+        draw_text(img, (CX, 700), '브동산', 50, BRASS, spacing=18, bold=1)
+        hline(img, 850, CX - 300, CX + 300, 1.0)
+        px = 118 if len(c['name']) <= 8 else (96 if len(c['name']) <= 10 else 76)
+        draw_text(img, (CX, 910), c['name'], px, WHITE, spacing=4, bold=2)
+        draw_text(img, (CX, 910 + px + 60), '예상프리미엄 분석', 70, (190, 186, 178), spacing=10, bold=1)
+        img.save(path)
+        return path
     ld = lambda n: Image.open(c['dir'] + n).convert('RGB')
     hero = c.get('aerial', {}).get('img') or c.get('loc', {}).get('img') or c.get('place', {}).get('img')
     src = grade(ld(hero), bright=0.55)
