@@ -244,6 +244,22 @@ CFG = {
         avg=8.61, avg_label='두 보정가격 평균', fair=8.61, fair_label='브동산 적정가 (84m²)', price=8.80, price_label='평균 분양가 (592세대 가중평균)',
         prem='-1,870만', judge='(적정)', kind='even'),
  ),
+ 'parkvalley2': dict(
+    dir=_IMGROOT+'yongin-dongil-hivill-parkvalley-2/', out='yongin-dongil-hivill-parkvalley-2', slow=True,
+    name='동일하이빌 파크밸리 2단지', name_px=60, avg=5.63, rng='84A 층별 5.29 ~ 5.68억 · 176세대 가중평균',
+    plabel='84㎡A 평균 분양가', glabel='실제 분양가 (84㎡A 평균)',
+    thumb_style='title', thumb_sub='분양가, 적정할까?', thumb_name_px=58,
+    disc='브동산 모형 추정치 · 확정 수익 아님 · 2026.11.27 공고 기준',
+    info=[('1순위', '12월 9일'), ('전매제한', '3년'), ('거주의무', '없음'), ('입주', '2029년 5월')],
+    scenes=[('title',3.4),('loc',5.2),('price',4.8),('bridge',15.0),('place',5.6),('info',5.6),('end',4.2)],
+    loc=dict(img='location-map.jpg', title='용인반도체클러스터 D1-2블록', cap='SK하이닉스 클러스터 안 · 661세대', cap2='공식 위치도 · 예정 도로 포함 · 출처: 공식 홈페이지', box=(900,700), z=(1.0,1.5), c0=(0.5,0.5), c1=(0.82,0.78)),
+    place=dict(img='location-inset.jpg', title='단지 주변', cap='원삼초 길 건너 · 1단지 바로 남쪽', cap2='공식 근거리 위치도 · 예정 시설 포함', graded=False, box=(860,860), z=(1.0,1.3), c0=(0.5,0.5), c1=(0.45,0.55)),
+    bridge=dict(title='브동산 적정가는 이렇게', sub='비교단지 84m² KB 상한가(2026.11.20) → 평점·연령 보정 → 평균', vmax=8.0,
+        comps=[dict(name='한숲시티4단지', meta='남사읍 · 2018.06 준공 · 710세대', kb=4.40, mult=0.960, adj=4.22),
+               dict(name='용인드마크데시앙', meta='김량장동 · 2024.03 준공 · 1,308세대', kb=7.68, mult=0.833, adj=6.39)],
+        avg=5.31, avg_label='두 보정가격 평균', fair=5.31, fair_label='브동산 적정가 (84m²)', price=5.63, price_label='84A 평균 분양가 (176세대 가중평균)',
+        prem='-3,170만', judge='(고평가)', kind='minus'),
+ ),
 }
 
 def build(key):

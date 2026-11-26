@@ -55,6 +55,7 @@ PICKS_BY_SLUG = {
     'gold-vs-apartment-trading-costs': ['asset-book', 'tax-book', 'planner'],   # 금 vs 아파트 거래비용 비교 글
     'acro-de-seocho': ['rebuild-book', 'cheongyak-book', 'laser'],               # 서초 재건축·만점통장 글
     'gyeongbuk-docheong-prugio-firstion': ['location-book', 'battery', 'planner'],  # 도청신도시 2단계·차량 임장·중도금 일정
+    'yongin-dongil-hivill-parkvalley-2': ['cheongyak-book', 'school-prep', 'battery'],  # 이전기관 특공 134세대·가점제, 원삼초 길 건너, 수지 견본주택~원삼 현장 임장
     'songdo-logebien-moaelgaa': ['cheongyak-book', 'laser', 'location-book'],     # 인천 50% 우선·특공 398세대, 견본주택 실측, 트램·GTX 예정 입지
 }
 
