@@ -42,7 +42,7 @@
    RID=<RID> python3 scripts/firstcome/region_charts.py
    RID=<RID> python3 scripts/firstcome/region_build.py build
    ```
-   이미지는 `posts/images/<slug>/`에서 직접 열어 확인한다(위치도가 잘렸거나 홍보 그림이면 손으로 잘라 다시 저장). 사이트 글은 Playwright로 390px 폭 가로 넘침이 없는지 확인. 네이버 kit: `python3 scripts/naver_kit.py <slug>`.
+   이미지는 `posts/images/<slug>/`에서 직접 열어 확인한다(위치도가 잘렸거나 홍보 그림이면 손으로 잘라 다시 저장). 사이트 글은 Playwright로 390px 폭 가로 넘침이 없는지 확인.
 5. **영상**: `RID=<RID> LONG_OUT=/tmp/long-out/ python3 scripts/longform/make_firstcome_long.py` 와 `... make_firstcome_shorts.py`. 정지 화면(인자로 초 지정)으로 먼저 확인. 결과 mp4·썸네일·txt를 `shorts-upload/YYYY-MM/`에 복사하고 그 폴더 README에 한 줄씩 추가.
 6. **등록·기록**: `RID=<RID> python3 scripts/firstcome/region_build.py register` 후 `... history`.
 7. **배포**: 커밋 → `git fetch origin main` → 바뀌었으면 `git merge origin/main`(등록 파일 충돌은 손으로 합침) → `git push origin HEAD:main`. 배포 후 글·이미지·네이버 HTML URL이 200인지 확인(처음 404면 잠시 후 재시도).

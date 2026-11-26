@@ -4,7 +4,7 @@
 
 기준 글: 네이버 `blog.naver.com/bds_unboxing/224483930499`(더샵 천안라크원) · 샘플 파일 `docs/naver-sample/thesharp-cheonan-lac-one-naver.html`. 아래 규칙이 이전 샘플(광교, 2026.11.09/11.15 규칙)과 충돌하면 **이 섹션이 이긴다.**
 
-**원칙: 긴 문장 대신 표와 짧은 문장.** 비교·수치·조건은 표로, 설명은 문단당 1~2문장으로 짧게 요약한다. 4열 이하 표만 쓴다(`table style="width:100%;border-collapse:collapse;word-break:keep-all"`, 셀 `border:1px solid #ccc;padding:6px;text-align:left`). 폰 키트가 표를 이미지로 바꿔 올린다.
+**원칙: 긴 문장 대신 표와 짧은 문장.** 비교·수치·조건은 표로, 설명은 문단당 1~2문장으로 짧게 요약한다. 4열 이하 표만 쓴다(`table style="width:100%;border-collapse:collapse;word-break:keep-all"`, 셀 `border:1px solid #ccc;padding:6px;text-align:left`).
 
 순서(h2는 짧게, 부제 없이):
 0. **맨 첫 문단 = 요약문**(합니다체 2~3문장): 지역+단지명, 세대수, 84㎡ 가중평균 분양가, 브동산 분석 적정가격, 1순위 날짜. 그다음 바이라인 `브동산 청약 언박싱 · YYYY.MM.DD` (h1 제목은 본문에 넣지 않는다 — 네이버 제목 칸에 입력).

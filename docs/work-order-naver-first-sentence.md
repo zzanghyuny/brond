@@ -62,10 +62,9 @@
    - 바이라인 위치를 바꾼다.
    - 첫 문단에 요약문을 넣는다.
 2. `CLAUDE.md`, `docs/naver-mobile-spec.md`, `docs/handoff-cheongyak-pipeline.md`(6장)에 규칙을 한 줄씩 추가한다.
-3. 폰 키트(`scripts/naver_kit.py`)의 "본문 전체 복사" 결과에서도 요약문이 맨 앞에 오는지 확인한다.
-4. **아직 네이버에 발행하지 않은 글**의 `naver-html/<slug>.html`을 새 순서로 고치고, 키트를 다시 만든다.
+3. (폰 키트는 2026.11.26 폐지 — 해당 없음)
+4. **아직 네이버에 발행하지 않은 글**의 `naver-html/<slug>.html`을 새 순서로 고친다.
    - 발행하지 않은 글은 `posts-manifest.json`에서 `naver_published`가 false인 글이다.
-   - 키트 재생성 명령: `python3 scripts/naver_kit.py <slug>`
 5. 커밋·push하고 수정한 글 목록을 Paul에게 보고한다.
 
 ### B. Aside (이미 발행된 글)

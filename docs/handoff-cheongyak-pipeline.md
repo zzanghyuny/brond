@@ -14,7 +14,7 @@
 | 3. 비교단지 선정 | 비교단지 2곳 + 후보표 | `scripts/beodongsan/comp_scan.py` |
 | 4. 적정가 산출 | 평점·보정·적정가·예상 프리미엄 | `scripts/beodongsan/model.py` |
 | 5. 사이트 글 | `posts/<slug>.html` + 등록 4종 | 사이트(brandongsan.com) |
-| 6. 네이버용 | `naver-html/<slug>.html`, 차트 PNG, 폰 키트 | GitHub + 사이트 `/naver-kit/` |
+| 6. 네이버용 | `naver-html/<slug>.html`, 차트 PNG | GitHub |
 | 7. 영상 | 쇼츠 mp4 + 썸네일 + 제목 | `scripts/shorts/`, `shorts-upload/<YYYY-MM>/` |
 | 8. 배포·확인 | main push, URL 200 확인 | Vercel 자동 배포 |
 
@@ -111,10 +111,8 @@ python3 scripts/beodongsan/comp_scan.py <시·구> --area 84      # 키워드 �
 - **차트:** `scripts/beodongsan/make_naver_charts.py`의 `chart_a`(평점)·`chart_b`(적정가격)·`chart_map`(위치)·`chart_c`(일정). 흑백 + **황동 포인트 `#C8A45C`**(`ACCENT`). `posts/images/<slug>/chart-a-score.png`·`chart-b-price.png`·`chart-map-naver.png`·`chart-c-schedule.png`로 저장하고 `https://www.brandongsan.com/posts/images/<slug>/...` 절대경로로 참조. 만든 PNG는 열어서 겹침·한글 깨짐을 확인하고 390px로 줄여 읽히는지 본다.
 - **상단:** `<meta name="robots" content="noindex,nofollow">` + 메타 주석(slug/title/category/naver_category/tags/cover_candidates).
 - **네이버 제목:** `단지명 | 예상프리미엄 ±N, 분양가 평면 총정리` (세로선 구분자, 평면도 없으면 "평면" 삭제)
-- **폰 키트:** `python3 scripts/naver_kit.py <slug>` → `naver-kit/<slug>.html`, `.zip`, 이미지 폴더. 키트 제목은 manifest의 `naver_title`에서 가져온다.
-  - **manifest를 고친 뒤에는 키트를 반드시 다시 만든다.** (문래 갱신 때 키트 제목만 예전 제목 "적정가 21.2억, 분양가 공개 전"으로 남았던 사고, 2026.11.16)
-  - 키트는 **사이트 링크로 열어야** 이미지가 나온다. HTML 파일만 따로 열면 이미지가 빠진다. 키트 목록 `naver-kit/index.html`은 사이트에서 403이 난다(개별 링크는 정상).
-- Aside 전달용 링크: GitHub `naver-html/<slug>.html`, 사이트 `naver-kit/<slug>.html`·`.zip`.
+- **폰 키트는 만들지 않는다**(2026.11.26 폐지).
+- Aside 전달용 링크: GitHub `naver-html/<slug>.html`.
 
 ## 7. 쇼츠·네이버 클립·릴스 영상
 
@@ -189,7 +187,6 @@ python3 scripts/beodongsan/comp_scan.py <시·구> --area 84      # 키워드 �
 - [ ] 적정가·예상 프리미엄(6-1 적용 여부와 근거 문장)
 - [ ] 사이트 글(광고 카드 없음) + 등록 4종 + processed
 - [ ] 네이버 HTML(섹션1 개요표, 섹션5 이미지 연속, 황동 차트 4종) + manifest naver_title·tags
-- [ ] 폰 키트 생성(제목 확인)
 - [ ] push 후 URL 200 확인
 - [ ] 영상 + 썸네일 + 제목, `shorts-upload/` README 갱신
 - [ ] Paul 보고: 핵심 수치, 링크(사이트·GitHub 네이버 HTML·키트), 확인 못 한 항목
@@ -201,6 +198,6 @@ python3 scripts/beodongsan/comp_scan.py <시·구> --area 84      # 키워드 �
 - `claude/handoff-master.md` — 전체 업무 기준
 - `.claude/skills/beodongsan-realestate-post/SKILL.md` — 사이트 글·모형·6-1
 - `docs/naver-sample/` — 네이버 승인 샘플과 README
-- `docs/naver-mobile-spec.md`, `docs/naver-kit.md` — 모바일 규격, 키트
+- `docs/naver-mobile-spec.md` — 모바일 규격
 - `docs/publishing-workflow.md`, `docs/aside-handoff.md` — 발행 흐름, Aside 절차
 - `scripts/beodongsan/README.md`, `scripts/shorts/README.md` — 스크립트 사용법

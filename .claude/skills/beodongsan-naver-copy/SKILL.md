@@ -11,7 +11,7 @@ description: "브동산 사이트(zzanghyuny/brond)의 포스팅(posts/*.html)�
 >
 > 기준 글: 네이버 `blog.naver.com/bds_unboxing/224483930499`(더샵 천안라크원) · 샘플 파일 `docs/naver-sample/thesharp-cheonan-lac-one-naver.html`. 아래 규칙이 이전 샘플(광교, 2026.11.09/11.15 규칙)과 충돌하면 **이 섹션이 이긴다.**
 >
-> **원칙: 긴 문장 대신 표와 짧은 문장.** 비교·수치·조건은 표로, 설명은 문단당 1~2문장으로 짧게 요약한다. 4열 이하 표만 쓴다(`table style="width:100%;border-collapse:collapse;word-break:keep-all"`, 셀 `border:1px solid #ccc;padding:6px;text-align:left`). 폰 키트가 표를 이미지로 바꿔 올린다.
+> **원칙: 긴 문장 대신 표와 짧은 문장.** 비교·수치·조건은 표로, 설명은 문단당 1~2문장으로 짧게 요약한다. 4열 이하 표만 쓴다(`table style="width:100%;border-collapse:collapse;word-break:keep-all"`, 셀 `border:1px solid #ccc;padding:6px;text-align:left`).
 >
 > 순서(h2는 짧게, 부제 없이):
 > 0. **맨 첫 문단 = 요약문**(합니다체 2~3문장): 지역+단지명, 세대수, 84㎡ 가중평균 분양가, 브동산 분석 적정가격, 1순위 날짜. 그다음 바이라인 `브동산 청약 언박싱 · YYYY.MM.DD` (h1 제목은 본문에 넣지 않는다 — 네이버 제목 칸에 입력).
@@ -46,7 +46,7 @@ description: "브동산 사이트(zzanghyuny/brond)의 포스팅(posts/*.html)�
 > 네이버 글·이미지는 **폰 폭 기준**으로 만든다. 전문: `docs/naver-mobile-spec.md`.
 > - 차트 이미지: 캔버스 폭 1000px, 글씨 28px 이상(값 32px, 제목 36px). 생성은 저장소의 `scripts/beodongsan/make_naver_charts.py`(`chart_a`/`chart_b`/`chart_map`/`chart_c`, 기본 `mobile=True`)만 쓴다. 이 문서 13번의 스크립트는 구버전이니 쓰지 않는다. 만든 PNG는 390px로 줄여 읽히는지 확인한다.
 > - 표는 4열 이하, 아니면 이미지로. 문단은 2~3문장. 공식 사진은 가로 ≤1000px·≤400KB.
-> - 폰 발행용으로 글마다 `naver-kit/<slug>.html`(블록별 복사·이미지 저장 버튼)을 함께 만든다(`scripts/naver_kit.py <slug>`).
+> - 폰 키트(`naver-kit/`)는 만들지 않는다(2026.11.26 폐지).
 > - 섹션 구성·문체·굵은 3수치 문장·`이미지 NN` 번호 규칙은 승인 샘플(`docs/naver-sample/`) 그대로.
 
 
