@@ -433,17 +433,17 @@ def build_detail(s, same_region, plans):
   <p class="jj-note">정보 기준일 {e(s['date'].replace('-', '.'))}{src} · 분양가·혜택·남은 세대는 수시로 바뀝니다.</p>
 </section>
 {loc}
-<section class="wrap jj-sec">
-  <h2>{e(s['rlabel'])} 다른 줍줍 단지</h2>
-  <div class="jj-grid jj-grid-rel">{rel}</div>
-  <p><a class="jj-btn" href="/jupjup/?r={s['rid']}">{e(s['rlabel'])} 전체 보기</a></p>
-</section>
 <section class="wrap jj-sec jj-agents" id="agents" data-site="{e(s['key'])}" data-site-name="{e(s['name'])}" data-open="{0 if closed else 1}" data-slots="{plans['slotsPerSite']}">
   <h2>이 단지 분양 상담</h2>
   <p class="jj-adnote"><span class="jj-ad">AD</span> 아래 상담사 카드는 상담사가 직접 등록한 유료 광고입니다. 브동산은 상담 내용과 계약에 관여하지 않습니다.</p>
   <div class="jj-agent-list" data-agent-list>
     {f'<a class="jj-slot" href="/jupjup/agent.html?site={e(s["key"])}"><b>상담사 카드 자리 <em data-free>{plans["slotsPerSite"]}칸 중 {plans["slotsPerSite"]}칸 비어 있음</em></b><span>이 단지를 상담하시나요? {e(plan0["label"])} {comma(plan0["price"])}원부터 연락처 카드를 올릴 수 있습니다. {'계좌이체 후 메일로 신청합니다.' if plans.get('payment') == 'transfer' else '카드결제 즉시 게재됩니다.'}</span></a>' if not closed else '<p class="jj-note">선착순 마감이 확인된 단지라 새 상담사 카드를 받지 않습니다.</p>'}
   </div>
+</section>
+<section class="wrap jj-sec">
+  <h2>{e(s['rlabel'])} 다른 줍줍 단지</h2>
+  <div class="jj-grid jj-grid-rel">{rel}</div>
+  <p><a class="jj-btn" href="/jupjup/?r={s['rid']}">{e(s['rlabel'])} 전체 보기</a></p>
 </section>
 '''
     out += footer()
