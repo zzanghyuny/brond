@@ -72,3 +72,15 @@ python3 make_walk.py walk/<키>.json render   # $WALK_OUT/<out>.mp4 + -thumbnail
 python3 make_viral.py viral/<키>.json tts | stills [초…] | render     # 출력 $VIRAL_OUT (기본 /tmp/viral-out)
 ```
 원칙: 첫 화면은 단지명이 아니라 질문·숫자. 예상 프리미엄은 금액 먼저, 판정은 괄호. 숫자를 바꾸는 조건(공공분양 자격, 대출 '알선 예정', 저층 비중 등)은 화면 하단 출처 줄이나 본문에 넣는다. map 레이아웃의 지도는 Mapbox 정적 지도(`$WALK_MAPS`, 저장소에 넣지 않음).
+
+## '가장 ○○한 곳은?' 랭킹 쇼츠 — `make_rank.py` (2026.11.26)
+
+채널 인기순 상위 형식(지역 + 가장 ○○한 단지)을 현재 KB 데이터로 만드는 렌더러. 전체 화면 위성사진 + 10위→1위 + 남자 나레이션.
+```
+python3 rank/kb_rank.py hh  /tmp/x.json --addr 서울 "강남구 아파트" …          # 세대수 순위 (KB 통합검색 구 단위 전수 수집)
+python3 rank/kb_rank.py p84 /tmp/x.json --addr 인천 "연수구 아파트" …          # 84㎡ KB 일반거래가 순위(300세대 이상)
+MAPBOX_TOKEN=pk... python3 rank/fetch_sat.py rank/<키>.json                   # 위성사진 1080×1920 → $RANK_IMG/<키>/ (저장소에 넣지 않음)
+python3 make_rank.py rank/<키>.json tts | stills [초…] | render                 # $RANK_OUT/<out>.mp4 + -thumbnail.png
+```
+규칙: 임대·장기전세 집계분과 입주 전 단지는 빼고, 같은 단지 여러 블록은 최고가 1곳만. 동률은 `label: "공동 N위"`, `lrank`. 위성 좌표(KB)가 단지 중심과 어긋나면 `ring: false`.
+출처 줄에 위성사진 © Mapbox © Maxar(촬영 시점 다를 수 있음)과 KB 기준일을 항상 넣는다. Mapbox 공개 토큰은 Mapbox MCP `list_public_tokens_tool`로 받는다(코드에 넣지 않음).
