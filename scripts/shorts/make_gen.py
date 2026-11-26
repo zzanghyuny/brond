@@ -180,6 +180,20 @@ CFG = {
     feature=dict(img='community.jpg', title='단지 커뮤니티', cap='킨더센터 · 어린이집 · 다함께돌봄센터', cap2='계획 시설 · 공식 분양 홈페이지 안내', c0=(0.5,0.28), c1=(0.5,0.62), z=(1.0,1.0), box=(780,740)),
     place=dict(img='location.jpg', title='입지', cap='대장역(가칭) 인접 · 초품아 예정', cap2='예정 노선·학교는 개통·개교 전이며 변경될 수 있음', graded=False, box=(820,780)),
  ),
+ 'byeongjeom': dict(
+    dir=_IMGROOT+'byeongjeom-bokhap-jubok1-public/', out='byeongjeom-bokhap-jubok1',
+    name='병점복합타운 주복1블록', name_px=60, loc_txt='경기 화성시 병점동', avg=6.77, rng='층별 6.31 ~ 6.92억 · 84A 가중평균 · LH 공공분양',
+    plabel='84㎡A 평균 분양가', glabel='실제 분양가 (84㎡A 평균)', csub='84㎡ 일반거래가 · 2026.11.20',
+    comps=[('병점역아이파크캐슬 · 병점동 · 2021.03', 9.50), ('반정아이파크캐슬5단지 · 반정동 · 2022.12', 9.70)],
+    cvmax=11.0, fair=9.48, prem='+2.70억', pct='약 29%', gapword='낮음', gvmax=10.5, thumb_sub='분양가, 저평가일까?',
+    disc='브동산 모형 추정치 · 확정 수익 아님 · 84㎡A 평균 · 2026.11.26 기준',
+    info=[('청약', '12월 7일 ~ 10일'), ('전매제한', '3년'), ('거주의무', '3년'), ('기금 융자', '9,000만 원 포함')],
+    scenes=[('title',2.6),('aerial',3.6),('price',3.0),('comps',3.8),('gap',4.2),('layout',3.4),('feature',3.6),('place',3.2),('info',3.0),('end',3.0)],
+    aerial=dict(img='cover.jpg', t1='경기 화성시 병점동', l1='최고 19~21층 · 6개 동 주상복합', l2='726세대 · LH 공공분양', src='조감도는 이미지컷이며 실제와 다를 수 있음 · 출처: LH 팸플릿'),
+    layout=dict(img='siteplan.jpg', title='단지 배치', cap='6개 동 · 84㎡A는 42세대', c0=(0.5,0.40), c1=(0.5,0.55), z=(1.0,1.3), box=(820,640)),
+    feature=dict(img='district-aerial.jpg', title='병점복합타운', cap='병점역 바로 옆 블록', cap2='지구 조감도 · 이미지컷 · 상업·업무용지는 아직 비어 있음', c0=(0.5,0.5), c1=(0.52,0.48), z=(1.0,1.25), box=(820,640)),
+    place=dict(img='location-map.jpg', title='입지', cap='1호선 병점역 직선 약 360m', cap2='동탄~인덕원선 등은 공사 중 · 개통 시기 미확정', graded=False, box=(820,700)),
+ ),
 }
 
 def build(key):
