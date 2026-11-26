@@ -86,3 +86,8 @@ master 문서는 claude.ai 클라우드 채팅 세션 기준으로 작성돼 일
 - 청약·미분양(부동산·부동산이야기·부동산정보) 네이버 원고에는 **바이라인 바로 아래 회색 대가성 안내 한 줄**과 **맨 끝(출처 아래) '부동산 공부할 때 곁에 두면 좋은 것' 칸**이 항상 들어간다. 칸에는 회색 `[쇼핑커넥트 상품: ○○ — 이유]` 자리 3개만 두고, Aside가 네이버 글쓰기 창의 쇼핑커넥트로 같은 종류 상품을 넣은 뒤 회색 줄을 지운다. 네이버 원고에는 쿠팡 링크를 넣지 않는다. 공간·브랜드 글은 제외.
 - 상품은 **부동산·청약 투자에 관심 있는 사람이 살 만한 것**(투자 입문서, 레이저 거리측정기, 서류 보관 파일 / 미분양·선착순 글은 사전점검 키트)으로, 글 종류별 목록은 `scripts/shopconnect/apply_naver_shop.py`의 `PICKS`에 있다.
 - 새 네이버 원고를 만들면 `python3 scripts/shopconnect/apply_naver_shop.py <slug>`를 실행한다(인자 없이 실행하면 전체 재적용, 여러 번 실행해도 결과 동일). 문구·상품을 바꿀 땐 스크립트의 `TOP`/`PICKS`만 고치고 전체 재실행한다.
+
+## 청약 글·네이버 발행본은 저장소 스킬이 기준 (2026.11.26, 항상 적용)
+- 청약 사이트 글은 `.claude/skills/beodongsan-realestate-post/SKILL.md`(특히 1-1 섹션 배치·중복 금지, 6-2 예상 프리미엄·판정 분리), 네이버 발행본은 `.claude/skills/beodongsan-naver-copy/SKILL.md`(2026.11.21판)를 따른다. 위의 예전 네이버 규칙과 충돌하면 이 두 스킬이 이긴다. 판정은 금액 뒤에 따로(괄호 또는 별도 문장) 쓴다.
+- 사이트 글: 커버 = `chart-map-naver.png`(한 번만), 1번 섹션 = 브리프 → 스탯 박스 → 레이더 → 브릿지 → 평점표 → 점수 근거 → 비교단지 후보 표, `chart-b-price.png`와 일정 표는 넣지 않는다, 청약 일정은 `chart-c-schedule.png` 하나, 공식 평면도는 모든 타입을 싣는다. 레이더·브릿지·평점표는 `scripts/beodongsan/charts.py`의 `radar`/`bridge`/`table`.
+- 네이버: 본문 첫 두 문장(검색 미리보기) → 바이라인 → 6섹션. 섹션 1에 `chart-b-price.png`, 섹션 2에 `chart-a-score.png`(둘 다 `make_naver_charts.py`), 섹션 5에 공식 이미지 전부·평면 전 타입·`chart-c-schedule.png`. 표는 `python3 scripts/naver_tables_to_png.py naver-html/<slug>.html posts/images/<slug> <slug>`로 PNG로 바꾼 뒤 `apply_naver_shop.py <slug>`를 실행한다.
