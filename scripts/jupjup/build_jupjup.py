@@ -239,6 +239,7 @@ HEAD = '''<!doctype html>
       <a href="/jupjup/">줍줍찬스</a>
       <a href="/brand.html">브랜드이야기</a>
       <a href="/space-story.html">공간이야기</a>
+      <a href="/city-story.html">도시이야기</a>
       <a href="/contact.html">문의</a>
     </nav>
   </div>

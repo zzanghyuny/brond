@@ -5,7 +5,7 @@
 
   각 항목:
   - id        : 파일명과 동일한 슬러그 (참고용)
-  - category  : "realestate" 또는 "brand" 또는 "space" (vietnam은 보관·비노출)
+  - category  : "realestate" 또는 "brand" 또는 "space" 또는 "city"(도시이야기) (vietnam은 보관·비노출)
   - region    : realestate 전용, 2글자 지역명("서울"·"경기"·"인천"·"부산"·"경남" 등).
                 brand 포스팅은 생략(비워둠). 청약·분양 페이지의 지역 서브카테고리
                 필터와, 포스팅 제목 맨 앞의 "지역 - 단지명" 표기에 함께 쓰입니다.
@@ -22,6 +22,16 @@
 */
 
 const POSTS = [
+  {
+    id: "chongqing-city-structure",
+    category: "city",
+    tag: "도시이야기 No.002",
+    title: "충칭은 왜 8D 도시가 됐을까 — 두 강과 산이 만든 입체 도시",
+    date: "2026-11-27",
+    dateLabel: "2026. 11. 27",
+    url: "posts/chongqing-city-structure.html",
+    preview: `<p>충칭시는 서울의 136배, 인구 3,187만 명. 장강과 자링강이 만나는 좁은 반도에서 시작해 강 건너편과 북쪽 신도시로 커지면서, 길과 집과 철도를 층층이 쌓은 '8D 도시'가 됐다.</p>`
+  },
   {
     id: "yongin-dongil-hivill-parkvalley-2",
     category: "realestate",
