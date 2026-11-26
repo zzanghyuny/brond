@@ -1,0 +1,112 @@
+{
+ "ben_thanh": {
+  "lat": 10.7725301,
+  "lon": 106.6980365,
+  "name": "Chợ Bến Thành, Công trường Quách Thị Trang, Khu phố 1, Phường Bến Thành, Thành phố Hồ Chí "
+ },
+ "opera": {
+  "lat": 10.7767437,
+  "lon": 106.7032488,
+  "name": "Nhà hát Thành phố, 7, Công trường Lam Sơn, Khu phố 5, Phường Sài Gòn, Thành phố Hồ Chí Min"
+ },
+ "binh_tay": {
+  "lat": 10.7492965,
+  "lon": 106.650728,
+  "name": "Chợ Bình Tây, 57A, Tháp Mười, Khu phố 5, Phường Bình Tây, Thành phố Hồ Chí Minh, 73121, Vi"
+ },
+ "crescent": {
+  "lat": 10.7288715,
+  "lon": 106.7197365,
+  "name": "Crescent Mall, Hoàng Văn Thái, Phường Tân Mỹ, Nhà Bè, Thành phố Hồ Chí Minh, 72916, Việt N"
+ },
+ "thu_thiem_sq": {
+  "lat": 10.780405,
+  "lon": 106.7085056,
+  "name": "Cầu Ba Son, Khu phố 4, Phường Sài Gòn, Thành phố Hồ Chí Minh, 71016, Việt Nam"
+ },
+ "tsn": {
+  "lat": 10.8179793,
+  "lon": 106.6562645,
+  "name": "Sân bay quốc tế Tân Sơn Nhất, Hẻm 83/15 Phạm Văn Bạch, Phường Tân Sơn, Thành phố Hồ Chí Mi"
+ },
+ "thu_dau_mot": {
+  "lat": 11.024199,
+  "lon": 106.6506069,
+  "name": "Thành phố Thủ Dầu Một, Thành phố Hồ Chí Minh, Việt Nam"
+ },
+ "vung_tau": {
+  "lat": 10.4021918,
+  "lon": 107.1385198,
+  "name": "Thành phố Vũng Tàu, Việt Nam"
+ },
+ "suoi_tien": {
+  "lat": 10.8796111,
+  "lon": 106.8140678,
+  "name": "Bến xe Suối Tiên, Xa lộ Hà Nội, Khu phố Hiệp Thắng, Phường Đông Hòa, Thành phố Hồ Chí Minh"
+ },
+ "landmark81": {
+  "lat": 10.7969577,
+  "lon": 106.7504543,
+  "name": "PetroVietnam Landmark, Phường Bình Trưng, Thành phố Hồ Chí Minh, 71322, Việt Nam"
+ },
+ "nha_be": {
+  "lat": 10.6956953,
+  "lon": 106.7395591,
+  "name": "Nhà Bè, Thành phố Hồ Chí Minh, 73206, Việt Nam"
+ },
+ "long_binh": {
+  "lat": 10.850056,
+  "lon": 106.8149774,
+  "name": "Ban Chỉ huy Phòng thủ khu vực 1 – Long Bình, Phường Long Bình, Thành phố Hồ Chí Minh, 7121"
+ },
+ "kis": {
+  "lat": 10.7220355,
+  "lon": 106.7322514,
+  "name": "Trường Quốc tế Hàn Quốc, Tân Phú, Phường Tân Mỹ, Nhà Bè, Thành phố Hồ Chí Minh, 72916, Việ"
+ },
+ "ba_son": {
+  "lat": 10.7793665,
+  "lon": 106.7105608,
+  "name": "Cầu Ba Son, Khu phố 27, Phường An Khánh, Thành phố Hồ Chí Minh, 71108, Việt Nam"
+ },
+ "new_city_bd": {
+  "lat": 21.0461767,
+  "lon": 105.7785096,
+  "name": "Đường sắt đô thị số 8 Hà Nội (Hoà Lạc - Sân bay Gia Bình - Hưng Yên), Ngõ 106 Hoàng Quốc V"
+ },
+ "can_gio": {
+  "lat": 10.3939038,
+  "lon": 106.9326866,
+  "name": "Cần Giờ, Phan Đức, Ấp Long Hòa, Xã Cần Giờ, Thành phố Hồ Chí Minh, 72018, Việt Nam"
+ },
+ "thao_dien": {
+  "lat": 10.8004871,
+  "lon": 106.7336512,
+  "name": "Thảo Điền, Song Hành Võ Nguyên Giáp, Khu phố 5, Phường An Khánh, Thành phố Hồ Chí Minh, 71"
+ },
+ "long_thanh": {
+  "lat": 10.7713688,
+  "lon": 107.0416907,
+  "name": "Sân bay quốc tế Long Thành, Đường T1, Khu phố Bình Sơn 1, Phường Long Thành, Xã Xuân Đường"
+ },
+ "shtp": {
+  "lat": 10.8589744,
+  "lon": 106.7888389,
+  "name": "Khu Công Nghệ Cao, Song Hành Xa Lộ Hà Nội, Khu phố 11, Phường Linh Xuân, Thành phố Hồ Chí "
+ },
+ "thu_duc": {
+  "lat": 10.8483995,
+  "lon": 106.7730954,
+  "name": "Ngã tư Thủ Đức, Võ Nguyên Giáp, Khu phố 14, Phường Thủ Đức, Thành phố Hồ Chí Minh, 71319, "
+ },
+ "metro_depot": {
+  "lat": 10.8791057,
+  "lon": 106.8224069,
+  "name": "Depot Long Bình, Phường Long Bình, Thành phố Hồ Chí Minh, 71217, Việt Nam"
+ },
+ "vincom_thao_dien": {
+  "lat": 10.8016627,
+  "lon": 106.7332826,
+  "name": "Chung Cư Thảo Điền Pearl, 12, Quốc Hương, Khu phố 5, Phường An Khánh, Thành phố Hồ Chí Min"
+ }
+}
