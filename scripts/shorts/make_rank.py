@@ -128,7 +128,7 @@ def sc_end(img_unused, S, t, d):
     text(img, (CX, 300), C['end']['title'], 46, INK, 'X', alpha=ease(t / 0.3) * ai, maxw=860)
     rows = sorted(C['items'], key=lambda it: it['rank'])
     for i, it in enumerate(rows):
-        y = 390 + i * 66; a = ease((t - 0.15 - 0.06 * i) / 0.3) * ai
+        y = 390 + i * min(66, 660 // len(rows)); a = ease((t - 0.15 - 0.06 * i) / 0.3) * ai
         c = BRASS if it['rank'] <= 3 else INK
         text(img, (SAFE_L, y), str(it.get('lrank', it['rank'])), 38, c, 'X', anchor='l', alpha=a)
         text(img, (SAFE_L + 70, y + 2), it['name'], 36, c, 'B', anchor='l', alpha=a, maxw=560)
