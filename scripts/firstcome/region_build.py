@@ -288,6 +288,10 @@ def cmd_register():
                               "naver_tags": TAGS, "cover_candidates": [BASE + "chart-summary.png"], "naver_published": False, "naver_post_id": None, "published_at": None})
         json.dump(m, open(mf, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
     print('registered', SLUG)
+    # 줍줍찬스(/jupjup/)도 이번 회차 데이터로 다시 만든다. 새 단지의 장점 문구는 scripts/jupjup/points.json에 추가한다.
+    jb = os.path.join(ROOT, 'scripts', 'jupjup', 'build_jupjup.py')
+    if os.path.exists(jb):
+        subprocess.run([sys.executable, jb], check=False)
 
 def cmd_history():
     hd = os.path.join(HERE, 'history', F.RID); os.makedirs(hd, exist_ok=True)

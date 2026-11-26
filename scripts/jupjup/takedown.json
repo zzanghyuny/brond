@@ -1,0 +1,65 @@
+{
+ "allnew-champions-city-1cha": {
+  "key": "gwangju-champions",
+  "fair": 7.55,
+  "sale": 8.03,
+  "pct": -6.0,
+  "date": "2026-11-26"
+ },
+ "dalseo-xi-zenic": {
+  "key": "dalseo-xi-zenik",
+  "fair": 5.54,
+  "sale": 5.92,
+  "pct": -6.4,
+  "date": "2026-11-26"
+ },
+ "doosan-weve-the-zenith-daeyeon": {
+  "key": "zenith-daeyeon",
+  "fair": 10.45,
+  "sale": 10.94,
+  "pct": -4.5,
+  "date": "2026-11-26"
+ },
+ "eco-delta-city-geumgang-penterium-ecoriver": {
+  "key": "edc-ecoriver",
+  "fair": 4.1,
+  "sale": 4.55,
+  "pct": -9.9,
+  "date": "2026-11-26"
+ },
+ "hyangnam-station-grove-switzen": {
+  "key": "hyangnam",
+  "fair": 5.31,
+  "sale": 5.54,
+  "pct": -4.2,
+  "date": "2026-11-26"
+ },
+ "incheon-guwol-artpark": {
+  "key": "guwol-artpark",
+  "fair": 7.24,
+  "sale": 8.25,
+  "pct": -12.2,
+  "date": "2026-11-26"
+ },
+ "osan-heritage-xi-2danji": {
+  "key": "osan-heritage",
+  "fair": 6.51,
+  "sale": 7.53,
+  "pct": -13.5,
+  "date": "2026-11-26"
+ },
+ "yangpyeong-ssangyong-platinum-hangang": {
+  "key": "ssy-hangang",
+  "fair": 5.28,
+  "sale": 6.84,
+  "pct": -22.8,
+  "date": "2026-11-26"
+ },
+ "yeongju-hyosung-harrington-place": {
+  "key": "yeongju-harrington",
+  "fair": 4.35,
+  "sale": 4.53,
+  "pct": -4.0,
+  "date": "2026-11-26"
+ }
+}

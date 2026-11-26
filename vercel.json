@@ -21,6 +21,51 @@
       "permanent": false
     },
     {
+      "source": "/posts/allnew-champions-city-1cha.html",
+      "destination": "https://www.brandongsan.com/jupjup/gwangju-champions.html",
+      "permanent": true
+    },
+    {
+      "source": "/posts/dalseo-xi-zenic.html",
+      "destination": "https://www.brandongsan.com/jupjup/dalseo-xi-zenik.html",
+      "permanent": true
+    },
+    {
+      "source": "/posts/doosan-weve-the-zenith-daeyeon.html",
+      "destination": "https://www.brandongsan.com/jupjup/zenith-daeyeon.html",
+      "permanent": true
+    },
+    {
+      "source": "/posts/eco-delta-city-geumgang-penterium-ecoriver.html",
+      "destination": "https://www.brandongsan.com/jupjup/edc-ecoriver.html",
+      "permanent": true
+    },
+    {
+      "source": "/posts/hyangnam-station-grove-switzen.html",
+      "destination": "https://www.brandongsan.com/jupjup/hyangnam.html",
+      "permanent": true
+    },
+    {
+      "source": "/posts/incheon-guwol-artpark.html",
+      "destination": "https://www.brandongsan.com/jupjup/guwol-artpark.html",
+      "permanent": true
+    },
+    {
+      "source": "/posts/osan-heritage-xi-2danji.html",
+      "destination": "https://www.brandongsan.com/jupjup/osan-heritage.html",
+      "permanent": true
+    },
+    {
+      "source": "/posts/yangpyeong-ssangyong-platinum-hangang.html",
+      "destination": "https://www.brandongsan.com/jupjup/ssy-hangang.html",
+      "permanent": true
+    },
+    {
+      "source": "/posts/yeongju-hyosung-harrington-place.html",
+      "destination": "https://www.brandongsan.com/jupjup/yeongju-harrington.html",
+      "permanent": true
+    },
+    {
       "source": "/((?!ads\\.txt$).*)",
       "has": [
         {
