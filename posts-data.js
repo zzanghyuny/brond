@@ -23,6 +23,19 @@
 
 const POSTS = [
   {
+    id: "yongin-dongil-hivill-parkvalley-2",
+    category: "realestate",
+    region: "경기",
+    tag: "청약 언박싱 No.126",
+    title: "경기 - 용인반도체클러스터 동일하이빌 파크밸리 2단지 | SK하이닉스 산단 D1-2블록 661세대, 84㎡ 평균 분양가 5.63억, 예상 프리미엄 -3,170만",
+    date: "2026-11-27",
+    dateLabel: "2026. 11. 27",
+    url: "posts/yongin-dongil-hivill-parkvalley-2.html",
+    preview: `
+      <p>2026년 11월 27일 입주자모집공고가 나왔다. 용인 처인구 원삼면 용인반도체클러스터 일반산업단지 D1-2블록 661세대 가운데 84㎡A 176세대의 가중평균 분양가는 5.63억원으로, 브동산 적정가 5.31억원보다 높아 예상 프리미엄은 -3,170만이다. 브동산 판정은 고평가다.</p><p>분양가상한제·전매제한 3년·거주의무 없음, 특별공급 12월 7~8일, 1순위 12월 9일, 당첨자 발표 12월 16일, 입주 2029년 5월 예정이다.</p>
+    `
+  },
+  {
     id: "gyeongbuk-docheong-prugio-firstion",
     category: "realestate",
     region: "경북",
