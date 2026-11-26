@@ -10,6 +10,37 @@
   },
   "posts": [
     {
+      "slug": "thesharp-firstworld-seoul-officetel",
+      "number": 121,
+      "title": "서울 - 더샵 퍼스트월드 서울 오피스텔 | 상봉역 옛 상봉터미널 308실, 84㎡ 평균 분양가 9.80억, 예상 프리미엄 +1.45억",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-26",
+      "site_url": "https://www.brandongsan.com/posts/thesharp-firstworld-seoul-officetel.html",
+      "naver_html": "naver-html/thesharp-firstworld-seoul-officetel.html",
+      "naver_title": "더샵 퍼스트월드 서울 오피스텔 | 예상프리미엄 +1.45억, 분양가 총정리",
+      "naver_tags": [
+        "더샵퍼스트월드",
+        "더샵퍼스트월드서울",
+        "더샵퍼스트월드오피스텔",
+        "상봉터미널",
+        "상봉역",
+        "중랑구",
+        "오피스텔청약",
+        "포스코이앤씨",
+        "서울오피스텔",
+        "GTX-B",
+        "예상프리미엄",
+        "분양가",
+        "부동산정보"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/thesharp-firstworld-seoul-officetel/cover.jpg",
+        "https://www.brandongsan.com/posts/images/thesharp-firstworld-seoul-officetel/chart-price.png"
+      ],
+      "naver_published": false
+    },
+    {
       "slug": "dec-2026-move-in",
       "number": 120,
       "title": "전국 - 12월 아파트 입주 1만6,486가구 총정리 | 인천 3,812·부산 3,686·서울 903, 1년 전의 절반",
