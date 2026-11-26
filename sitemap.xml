@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 새 포스팅을 추가할 때마다 <url> 블록을 하나씩 추가하면 됩니다. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.brandongsan.com/posts/sacheon-seonin-hanlim-fullever.html</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.brandongsan.com/posts/sinbunpyeong-efete-thewaycity-musunwi.html</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.brandongsan.com/posts/thesharp-firstworld-seoul-officetel.html</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.brandongsan.com/posts/dec-2026-move-in.html</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>

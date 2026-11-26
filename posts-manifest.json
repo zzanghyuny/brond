@@ -3410,6 +3410,41 @@
         "https://www.brandongsan.com/posts/images/sinbunpyeong-efete-thewaycity-musunwi/chart-b-price.png"
       ],
       "naver_published": false
+    },
+    {
+      "slug": "sacheon-seonin-hanlim-fullever",
+      "number": 123,
+      "title": "경남 - 사천선인 한림풀에버 | 선인지구 첫 분양 562세대, 84㎡ 평균 분양가 4.64억, 예상 프리미엄 -4,630만",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-26",
+      "site_url": "https://www.brandongsan.com/posts/sacheon-seonin-hanlim-fullever.html",
+      "naver_html": "naver-html/sacheon-seonin-hanlim-fullever.html",
+      "naver_title": "사천선인 한림풀에버 | 예상프리미엄 -4,630만, 분양가 총정리",
+      "naver_tags": [
+        "사천선인한림풀에버",
+        "한림풀에버",
+        "사천선인지구",
+        "사천아파트",
+        "사천분양",
+        "사천청약",
+        "사천선인공공주택지구",
+        "경남아파트분양",
+        "분양가상한제",
+        "한림건설",
+        "사천KCC스위첸",
+        "사천삼정그린코아포레스트",
+        "청약일정",
+        "아파트청약",
+        "부동산정보"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/sacheon-seonin-hanlim-fullever/cover.jpg",
+        "https://www.brandongsan.com/posts/images/sacheon-seonin-hanlim-fullever/chart-b-price.png"
+      ],
+      "naver_published": false,
+      "naver_post_id": null,
+      "published_at": null
     }
   ]
 }
