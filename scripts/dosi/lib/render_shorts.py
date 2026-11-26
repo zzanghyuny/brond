@@ -164,7 +164,7 @@ def render_scene(k):
             kk = eout((t - 0.12) / 0.45)
             if kk > 0: fr.alpha_composite(chip, (int(-chip.width + (40 + chip.width) * kk), 170))
         if mm is not None:
-            k2 = eout((t - 0.3) / 0.5)
+            k2 = eout((t - (3.1 if hook is not None else 0.3)) / 0.5)
             if k2 > 0:
                 m = mm.copy()
                 if mdot:
@@ -224,4 +224,5 @@ if __name__ == '__main__':
     final = f'{OUT}{NAME}.mp4'; tmp = final[:-4] + '.tmp.mp4'
     subprocess.run(['ffmpeg', '-v', 'error', '-y'] + ins + ['-i', f'{OUT}audio.wav', '-filter_complex', ';'.join(fl), '-map', f'[{cur}]', '-map', f'{len(files)}:a',
                     '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '21', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', '-shortest', tmp], check=True)
-    os.replace(tmp, final); print('done', final, round(probe(final), 1))
+    os.replace(tmp, final); json.dump(dict(timeline=[dict(i=t['i'], start=round(t['start'], 2), dur=round(t['dur'], 2)) for t in timeline], total=TOTAL), open(f'{OUT}timeline.json', 'w'))
+    print('done', final, round(probe(final), 1))
