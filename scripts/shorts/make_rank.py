@@ -63,6 +63,25 @@ def rect(img, box, fill=None, outline=None, width=2, alpha=1.0, radius=0):
     d.rounded_rectangle(box, radius=radius, fill=(fill + (a,)) if fill else None, outline=(outline + (a,)) if outline else None, width=width)
     img.alpha_composite(lay)
 
+BROLL = os.environ.get('RANK_BROLL', '/tmp/broll/')          # 무료 실사 영상(Pexels 등) 1080×1920 mp4 — 저장소에 넣지 않음
+_vf = {}
+def vframe(name, start, t, dur):
+    """실사 영상 name.mp4의 start+t 초 프레임(처음 한 번 JPEG로 풀어 둠)."""
+    key = f'{name}@{start}'
+    if key not in _vf:
+        d = f'/tmp/broll-frames/{name}_{start}/'
+        if not os.path.exists(d + 'done'):
+            os.makedirs(d, exist_ok=True)
+            subprocess.run(['ffmpeg', '-nostdin', '-v', 'error', '-y', '-ss', str(start), '-i', BROLL + name + '.mp4', '-t', str(dur + 1),
+                            '-vf', f'fps={FPS},scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}', '-q:v', '3', d + '%05d.jpg'], check=True)
+            open(d + 'done', 'w').close()
+        _vf[key] = (d, len([f for f in os.listdir(d) if f.endswith('.jpg')]))
+    d, n = _vf[key]; k = max(0, int(t * FPS)); per = max(1, 2 * (n - 1))
+    k %= per; i = (k if k < n else per - k) + 1            # 영상보다 길면 앞뒤로 왕복(멈춤 방지)
+    im = Image.open(d + f'{i:05d}.jpg').convert('RGB')
+    a = np.asarray(im).astype(np.float32) * 0.86
+    return Image.fromarray(a.astype(np.uint8)).convert('RGBA')
+
 _im = {}
 def photo(name):
     if name not in _im:
@@ -77,8 +96,37 @@ def kb(src, k, z0=1.0, z1=1.14):
     z = z0 + (z1 - z0) * ease(k); sw, sh = W / z, H / z
     l, t = (W - sw) / 2, (H - sh) / 2 - 40 * ease(k) / z
     return src.crop((l, t, l + sw, t + sh)).resize((W, H), Image.BICUBIC)
-def base(name, k, ring=False, t=0.0):
-    img = kb(photo(name), k).convert('RGBA')
+def merc(lon, lat, z):
+    import math
+    ws = 512 * 2 ** z; x = (lon + 180) / 360 * ws
+    y = (1 - math.log(math.tan(math.radians(lat)) + 1 / math.cos(math.radians(lat))) / math.pi) / 2 * ws
+    return x, y
+def route_layer(it, prog, t):
+    """도보 경로(이미지 좌표)를 prog(0~1)만큼 그린다. it: sat_center/sat_zoom/route/station."""
+    lon0, lat0 = it['sat_center']; z = it['sat_zoom']; x0, y0 = merc(lon0, lat0, z)
+    P = [((merc(lo, la, z)[0] - x0) * 2 + W / 2, (merc(lo, la, z)[1] - y0) * 2 + H / 2) for lo, la in it['route']]
+    lay = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(lay)
+    seg = [0.0]
+    for a, b in zip(P, P[1:]): seg.append(seg[-1] + ((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2) ** 0.5)
+    L = seg[-1] * max(0, min(1, prog)); pts = [P[0]]
+    for i in range(1, len(P)):
+        if seg[i] <= L: pts.append(P[i])
+        else:
+            f = (L - seg[i - 1]) / max(1e-6, seg[i] - seg[i - 1]); pts.append((P[i - 1][0] + (P[i][0] - P[i - 1][0]) * f, P[i - 1][1] + (P[i][1] - P[i - 1][1]) * f)); break
+    if len(pts) > 1:
+        d.line(pts, fill=(8, 8, 9, 200), width=22, joint='curve'); d.line(pts, fill=BRASS + (255,), width=12, joint='curve')
+    sx, sy = P[-1]; ax, ay = P[0]
+    d.ellipse((ax - 16, ay - 16, ax + 16, ay + 16), fill=INK + (255,), outline=BG + (255,), width=5)
+    if prog >= 0.98 or it.get('station_always'):
+        r = 30 + 6 * (0.5 + 0.5 * np.sin(t * 5))
+        d.ellipse((sx - r, sy - r, sx + r, sy + r), fill=BRASS + (255,), outline=BG + (255,), width=6)
+        d.text((sx - 15, sy - 21), 'M', font=F(34, 'X'), fill=BG + (255,))
+    return lay
+def base(name, k, ring=False, t=0.0, it=None, prog=1.0):
+    src = photo(name)
+    if it and it.get('route'):
+        src = src.convert('RGBA'); src.alpha_composite(route_layer(it, prog, t)); src = src.convert('RGB')
+    img = kb(src, k, 1.0, 1.06 if it and it.get('route') else 1.14).convert('RGBA')
     if ring:
         lay = Image.new('RGBA', img.size, (0, 0, 0, 0)); d = ImageDraw.Draw(lay)
         cx, cy = W / 2, H / 2 - 40 * ease(k)
@@ -97,7 +145,8 @@ def footer(img):
 
 def sc_hook(img_unused, S, t, d, still=False):
     k = 0 if still else t / max(d, 1e-3)
-    img = base('hook.jpg', k * 0.6)
+    hv = C['hook'].get('video')
+    img = vframe(hv, C['hook'].get('vstart', 0), (C['hook'].get('thumb_t', 1.0) if still else t), 12) if hv else base('hook.jpg', k * 0.6)
     a = (lambda d0: 1.0) if still else (lambda d0: ease((t - d0) / 0.4))
     rect(img, (0, 760, W, 1130), fill=BG, alpha=0.84)
     q1, q2 = C['hook']['q1'], C['hook']['q2']
@@ -109,7 +158,8 @@ def sc_hook(img_unused, S, t, d, still=False):
 
 def sc_rank(img_unused, S, t, d):
     it = S['it']; top = it['rank'] <= 3
-    img = base(f"{it['rank']}.jpg", t / d, ring=C.get('ring', True), t=t)
+    img = base(f"{it['rank']}.jpg", t / d, ring=C.get('ring', True) and not it.get('route'), t=t, it=it,
+               prog=ease((t - 0.3) / max(0.8, min(2.2, d * 0.55))))
     rect(img, (0, 1140, W, 1500), fill=BG, alpha=0.88)
     nar0 = S['_lead'] + S['_nar'] * (0.35 if top else 0.15)
     ar = ease(t / 0.25); an = ease((t - nar0) / 0.3)
@@ -122,12 +172,30 @@ def sc_rank(img_unused, S, t, d):
     footer(img)
     return img
 
+def sc_inter(img_unused, S, t, d):
+    I = C['interlude']; img = vframe(I['video'], I.get('vstart', 0), t, d)
+    a = ease((t - 0.2) / 0.4) * (1 - ease((t - d + 0.35) / 0.3))
+    rect(img, (0, 820, W, 1060), fill=BG, alpha=0.78 * a)
+    text(img, (CX, 860), I['text'], 120, BRASS, 'X', alpha=a, maxw=880)
+    if I.get('sub'): text(img, (CX, 1000), I['sub'], 34, SOFT, 'B', alpha=a, maxw=860)
+    footer(img)
+    return img
+
 def sc_end(img_unused, S, t, d):
     loop = ease((t - (d - 1.2)) / 0.9); ai = 1 - loop
     img = Image.new('RGBA', (W, H), BG + (255,))
     text(img, (CX, 300), C['end']['title'], 46, INK, 'X', alpha=ease(t / 0.3) * ai, maxw=860)
     rows = sorted(C['items'], key=lambda it: it['rank'])
-    for i, it in enumerate(rows):
+    if C['end'].get('desc'): rows = rows[::-1]
+    if len(rows) > 12:                               # 2열(25개 구 등)
+        half = (len(rows) + 1) // 2
+        for i, it in enumerate(rows):
+            col, r = divmod(i, half); x = SAFE_L + col * 430; y = 380 + r * 52
+            a = ease((t - 0.15 - 0.03 * i) / 0.3) * ai; c = BRASS if it['rank'] <= 3 else INK
+            text(img, (x, y), it.get('end_name', it.get('label', it['name'])), 30, c, 'B', anchor='l', alpha=a, maxw=230)
+            text(img, (x + 400, y), it['short'], 30, c, 'X', anchor='r', alpha=a, maxw=160)
+    else:
+      for i, it in enumerate(rows):
         y = 390 + i * min(66, 660 // len(rows)); a = ease((t - 0.15 - 0.06 * i) / 0.3) * ai
         c = BRASS if it['rank'] <= 3 else INK
         text(img, (SAFE_L, y), str(it.get('lrank', it['rank'])), 38, c, 'X', anchor='l', alpha=a)
@@ -142,8 +210,15 @@ def sc_end(img_unused, S, t, d):
         img = Image.blend(img, lo, loop)
     return img
 
+MIN_ITEM = C.get('min_item', 2.7); MIN_TOP = C.get('min_top', 0)
+SCN2 = []
+for sid, txt in SCN:
+    if C.get('interlude') and sid == f"r{C['interlude']['before']}": SCN2.append(('inter', None))
+    SCN2.append((sid, txt))
 SC = []
-for sid, _ in SCN:
+for sid, _ in SCN2:
+    if sid == 'inter':
+        S = dict(id='inter', _nar=0, _lead=0, draw=sc_inter, tail=0); S['_dur'] = C['interlude'].get('dur', 2.4); SC.append(S); continue
     S = dict(id=sid, _nar=wav_len(TTS + sid + '.wav'))
     S['_lead'] = 0.25 if sid == 's1' else 0.15
     if sid == 's1': S.update(draw=sc_hook, tail=0.35)
@@ -153,7 +228,8 @@ for sid, _ in SCN:
         S.update(draw=sc_rank, it=it, tail=0.55 if it['rank'] <= 3 else 0.2)
     S['_dur'] = S['_lead'] + S['_nar'] + S['tail']
     if sid == 'end': S['_dur'] = max(S['_dur'], 5.4)
-    elif S.get('it') and S['it']['rank'] > 3: S['_dur'] = max(S['_dur'], 2.7)
+    elif S.get('it') and S['it']['rank'] > 3: S['_dur'] = max(S['_dur'], MIN_ITEM)
+    elif S.get('it'): S['_dur'] = max(S['_dur'], MIN_TOP)
     SC.append(S)
 T0 = 0
 for S in SC: S['_t0'] = T0; T0 += S['_dur']
@@ -176,6 +252,7 @@ def build_audio(path):
     mus = np.zeros((n, 2)); L = min(n, len(m)); mus[:L] = m[:L]
     nar = np.zeros(n)
     for S in SC:
+        if S['id'] == 'inter': continue
         with wave.open(TTS + S['id'] + '.wav') as w: x = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32768
         i = int((S['_t0'] + S['_lead']) * SR); nar[i:i + len(x)] += x[:max(0, n - i)]
     nar /= max(1e-6, np.abs(nar).max()); nar *= 0.85
