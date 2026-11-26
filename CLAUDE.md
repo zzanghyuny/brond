@@ -93,5 +93,6 @@ master 문서는 claude.ai 클라우드 채팅 세션 기준으로 작성돼 일
 - 네이버: 본문 첫 두 문장(검색 미리보기) → 바이라인 → 6섹션. 섹션 1에 `chart-b-price.png`, 섹션 2에 `chart-a-score.png`(둘 다 `make_naver_charts.py`), 섹션 5에 공식 이미지 전부·평면 전 타입·`chart-c-schedule.png`. 표는 `python3 scripts/naver_tables_to_png.py naver-html/<slug>.html posts/images/<slug> <slug>`로 PNG로 바꾼 뒤 `apply_naver_shop.py <slug>`를 실행한다.
 
 ## 네이버 원고는 고양 한신더휴 퍼스트원과 똑같이 — 대표사진은 입지 개략도 (2026.11.26, 항상 적용)
-- 네이버 원고의 기준 파일은 `naver-html/goyang-hanshin-thehue-firstone.html`이다. 굵은 첫 두 문장 → 회색 바이라인 → h1 제목 → 6섹션. 섹션 1은 chart-b → 공식 조감도 → 단지 개요 표, 섹션 2는 입지 문단 → **입지 개략도(`chart-map-naver.png`)** → 비교단지 → chart-a → 보정 표, 섹션 5는 공식 이미지·평면 전부(`이미지 NN` 연번) + 청약 일정 인포그래픽.
+- 네이버 원고의 기준 파일은 `naver-html/goyang-hanshin-thehue-firstone.html`이다. 굵은 첫 두 문장 → 회색 바이라인 → h1 제목 → 6섹션. 섹션 1은 chart-b → 공식 조감도 → 단지 개요 표, 섹션 2는 입지 문단 → **입지 개략도(`chart-map-naver.png`)** → 비교단지 → chart-a → 보정 표, 섹션 5는 공식 이미지(위치도·조감도·커뮤니티·단지배치도·동호수배치도·평면 전부)를 쭉 나열하고 맨 끝에 청약 일정 인포그래픽.
 - **대표사진은 항상 입지 개략도**다. 메타 주석은 `cover_candidates: chart-map-naver.png (대표사진 = 입지 개략도)`, `posts-manifest.json`의 cover_candidates도 개략도 URL 하나로 둔다. 위의 2026.11.20 '차트는 chart-b 1장만, 개략도는 공식 입지도로 대신' 규칙은 이 규칙으로 대체한다.
+- **섹션 5 이미지는 번호를 붙이지 않는다(2026.11.26, 앞으로 새로 쓰는 원고부터).** 홈페이지 공식 이미지를 `이미지 01 ·` 같은 연번 캡션 없이 이미지만 이어 붙이고, 그다음에 청약 일정 인포그래픽(`chart-c-schedule.png`)을 둔다. 이미 발행한 원고는 그대로 둔다.
