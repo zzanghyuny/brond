@@ -345,8 +345,8 @@ def anim_card(W, H, D, cues, o, geo, short=False):
 # 7) 건물 단면(층 구간)
 def anim_stack(W, H, D, cues, o, geo, short=False):
     s = (W / 1080) if short else H / 803; floors = o['floors']; segs = o['segs']
-    bw = (420 if short else 300) * s; fh = (44 if short else 30) * s; bx = W / 2 - bw / 2 - (0 if short else 260 * s)
-    by = (1500 if short else 720) * s
+    bw = (380 if short else 300) * s; fh = (42 if short else 30) * s; bx = W / 2 - bw / 2 - (150 * s if short else 260 * s)
+    by = (1270 if short else 720) * s
     for fi in range(int(round(D * FPS))):
         t = fi / FPS; surf, cr = new_frame(W, H)
         put_text(cr, o['title'], W / 2, (210 if short else 70) * s, 'se7', (56 if short else 44) * s, INK, fade(t, 0.0, 0.35), 'mm')

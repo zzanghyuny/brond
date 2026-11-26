@@ -76,6 +76,12 @@ def sticker_img(t1, t2):
 def wrap2(text, f, maxw, d):
     if d.textlength(text, font=f) <= maxw: return [text]
     words = text.split(' '); best = None
+    lines = ['']
+    for w in words:
+        c = (lines[-1] + ' ' + w).strip()
+        if d.textlength(c, font=f) <= maxw: lines[-1] = c
+        else: lines.append(w)
+    if len(lines) > 2: return lines
     for k in range(1, len(words)):
         a, b = ' '.join(words[:k]), ' '.join(words[k:]); wa, wb = d.textlength(a, font=f), d.textlength(b, font=f)
         if max(wa, wb) > maxw: continue

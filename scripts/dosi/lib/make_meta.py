@@ -9,6 +9,14 @@ TODAY = datetime.date.today().isoformat()
 def mmss(t): t = int(round(t)); return f'{t // 60}:{t % 60:02d}'
 tl = json.load(open(W + 'out_LONG/timeline.json'))
 chap = [(0, '오프닝')] + [(st, n) for st, n in tl['chapters'] if st > 0]
+# 유튜브 챕터는 10초 이상이어야 해서 짧은 챕터는 다음 챕터와 합친다
+i = 0
+while i < len(chap) - 1:
+    if chap[i + 1][0] - chap[i][0] < 10.0 and i > 0:
+        chap[i] = (chap[i][0], chap[i][1] + ' · ' + chap[i + 1][1]); del chap[i + 1]
+    elif chap[i + 1][0] - chap[i][0] < 10.0:
+        chap[i + 1] = (chap[i + 1][0], chap[i + 1][1]); i += 1
+    else: i += 1
 tags = ' '.join('#' + t for t in S.TAGS[:8])
 src = '\n'.join(f'· {t} — {u}' for t, u in S.SOURCES)
 site = EP.get('site_url', 'https://www.brandongsan.com/city-story.html')
