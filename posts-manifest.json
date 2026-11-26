@@ -10,6 +10,39 @@
   },
   "posts": [
     {
+      "slug": "gyeongbuk-docheong-prugio-firstion",
+      "number": 125,
+      "title": "경북 - 경북도청 푸르지오 퍼스티온 | 도청신도시 2단계 1,165세대, 84㎡ 평균 분양가 4.39억, 예상 프리미엄 -2,440만",
+      "category": "부동산",
+      "naver_category": "부동산이야기",
+      "date": "2026-11-27",
+      "site_url": "https://www.brandongsan.com/posts/gyeongbuk-docheong-prugio-firstion.html",
+      "naver_html": "naver-html/gyeongbuk-docheong-prugio-firstion.html",
+      "naver_title": "경북도청 푸르지오 퍼스티온 | 예상프리미엄 -2,440만, 분양가 총정리",
+      "naver_tags": [
+        "경북도청푸르지오퍼스티온",
+        "푸르지오퍼스티온",
+        "경북도청신도시",
+        "도청신도시청약",
+        "예천청약",
+        "안동청약",
+        "호명읍",
+        "경북청약",
+        "대우건설",
+        "푸르지오",
+        "분양가상한제",
+        "전매제한1년",
+        "84분양가",
+        "청약일정",
+        "부동산정보"
+      ],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/gyeongbuk-docheong-prugio-firstion/chart-map-naver.png"
+      ],
+      "naver_published": false,
+      "published_at": null
+    },
+    {
       "slug": "byeongjeom-bokhap-jubok1-public",
       "number": 124,
       "title": "경기 - 병점복합타운 주복1블록 공공분양 | 병점역 초역세권 LH 726세대, 84㎡ 평균 분양가 6.77억, 예상 프리미엄 +2.70억",
@@ -1403,33 +1436,37 @@
     {
       "slug": "songdo-logebien-moaelgaa",
       "number": 86,
-      "title": "인천 - 송도 대광로제비앙 모아엘가 | 11공구 RC2블록 592세대, 84㎡ 적정가 6.49억(분양가 미공개)",
+      "title": "인천 - 송도 대광로제비앙 모아엘가 | 11공구 워터프론트 앞 592세대, 84㎡ 평균 분양가 8.80억, 예상 프리미엄 -1,870만",
       "category": "부동산",
       "naver_category": "부동산이야기",
-      "date": "2026-11-04",
+      "date": "2026-11-27",
       "site_url": "https://www.brandongsan.com/posts/songdo-logebien-moaelgaa.html",
       "naver_html": "naver-html/songdo-logebien-moaelgaa.html",
-      "naver_title": "송도 대광로제비앙 모아엘가 | 84㎡ 적정가 6.49억, 분양가·청약일정 공고 전 총정리",
+      "naver_title": "송도 대광로제비앙 모아엘가 | 예상프리미엄 -1,870만, 분양가 총정리",
       "naver_tags": [
         "송도대광로제비앙모아엘가",
-        "모아엘가",
         "대광로제비앙",
+        "모아엘가",
         "송도11공구",
         "송도RC2블록",
         "송도청약",
-        "송도신축",
         "인천청약",
-        "분양예정",
-        "부동산정보",
-        "힐스테이트레이크송도3차",
-        "호반써밋송도"
+        "연수구청약",
+        "송도워터프론트",
+        "비규제지역",
+        "전매제한6개월",
+        "84분양가",
+        "청약일정",
+        "부동산정보"
       ],
       "cover_candidates": [
         "https://www.brandongsan.com/posts/images/songdo-logebien-moaelgaa/chart-map-naver.png"
       ],
       "naver_published": true,
       "naver_post_id": "224464912646",
-      "published_at": "2026-11-04T15:15:00+07:00"
+      "published_at": "2026-11-04T15:15:00+07:00",
+      "naver_republish_needed": true,
+      "naver_republish_reason": "2026-11-27 입주자모집공고 반영 갱신본(분양가 8.80억·예상 프리미엄 -1,870만, 일정, 비교단지 재선정(롯데캐슬캠퍼스타운·힐스테이트송도더스카이), 적정가 6.49억→8.61억, 제목 변경). 기존 네이버 글(224464912646)은 공고 전 버전."
     },
     {
       "slug": "yongdu-lottecastle",

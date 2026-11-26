@@ -212,6 +212,38 @@ CFG = {
         fair=11.25, fair_label='브동산 적정가 (오피스텔 84m²)', price=9.80, price_label='평균 분양가 (308실 가중평균)',
         prem='+1.45억', judge='(저평가)', kind='plus'),
  ),
+ 'firstion': dict(
+    dir=_IMGROOT+'gyeongbuk-docheong-prugio-firstion/', out='gyeongbuk-docheong-prugio-firstion', slow=True,
+    name='경북도청 푸르지오 퍼스티온', name_px=60, avg=4.39, rng='층별 3.83 ~ 4.50억 · 1,165세대 가중평균',
+    thumb_style='title', thumb_sub='분양가, 적정할까?', thumb_name_px=62,
+    disc='브동산 모형 추정치 · 확정 수익 아님 · 2026.11.27 공고 기준',
+    info=[('1순위', '12월 8일'), ('전매제한', '1년'), ('거주의무', '없음'), ('입주', '2029년 8월')],
+    scenes=[('title',3.4),('aerial',5.2),('price',4.8),('bridge',15.0),('place',5.6),('info',5.6),('end',4.2)],
+    aerial=dict(img='cover.jpg', t1='경북 예천군 호명읍', l1='도청신도시 2단계 · 지상 최고 25층', l2='1,165세대 · 전 세대 84㎡', src='조감도는 CG이며 실제와 다를 수 있음 · 출처: 공식 홈페이지'),
+    place=dict(img='location.jpg', title='입지', cap='중앙공원 옆 2단계 첫 블록', cap2='개발계획도 · 계획 시설 포함 · 출처: 공식 홈페이지', graded=False, box=(900,540), z=(1.0,1.6), c0=(0.5,0.5), c1=(0.36,0.42)),
+    map=dict(title='비교단지 위치', cap='하천 건너 1단계 대단지 2곳', cap2='브동산 자체 제작 개략도 · 축척은 개략적'),
+    bridge=dict(title='브동산 적정가는 이렇게', sub='비교단지 84m² KB시세(2026.11.20) → 평점·연령 보정 → 평균', vmax=5.0,
+        comps=[dict(name='호반베르디움2차', meta='호명읍 · 2017.11 준공 · 1,133세대', kb=3.45, mult=1.244, adj=4.29),
+               dict(name='동일스위트더파크', meta='호명읍 · 2019.02 준공 · 1,499세대', kb=3.20, mult=1.253, adj=4.01)],
+        avg=4.15, avg_label='두 보정가격 평균', fair=4.15, fair_label='브동산 적정가 (84m²)', price=4.39, price_label='평균 분양가 (1,165세대 가중평균)',
+        prem='-2,440만', judge='(고평가)', kind='minus'),
+ ),
+ 'songdo': dict(
+    dir=_IMGROOT+'songdo-logebien-moaelgaa/', out='songdo-logebien-moaelgaa', slow=True,
+    name='송도 대광로제비앙 모아엘가', name_px=56, avg=8.80, rng='층별 8.45 ~ 8.88억 · 592세대 가중평균',
+    thumb_style='title', thumb_sub='분양가, 적정할까?', thumb_name_px=56,
+    disc='브동산 모형 추정치 · 확정 수익 아님 · 2026.11.27 공고 기준',
+    info=[('1순위', '12월 8일'), ('전매제한', '6개월'), ('재당첨제한', '없음'), ('입주', '2030년 1월')],
+    scenes=[('title',3.4),('aerial',5.2),('price',4.8),('bridge',15.0),('feature',4.8),('place',5.2),('info',5.6),('end',4.2)],
+    aerial=dict(img='aerial.jpg', t1='인천 송도 11공구 RC2블록', l1='지상 18~29층 · 7개 동', l2='592세대 · 전 세대 84㎡', src='조감도는 CG이며 실제와 다를 수 있음 · 출처: 공식 홈페이지'),
+    feature=dict(img='perspective.jpg', title='워터프론트 앞', cap='수변 상가 · 송도 트램 정거장 계획', cap2='투시도 CG · 계획은 바뀔 수 있음 · 출처: 공식 홈페이지', c0=(0.45,0.45), c1=(0.55,0.5), z=(1.0,1.25), box=(820,560)),
+    place=dict(img='location.jpg', title='입지', cap='인천1호선 역까지 직선 약 2.4km', cap2='공식 입지환경 · 트램·GTX-B는 계획·공사 단계', graded=False, box=(860,690), z=(1.0,1.35), c0=(0.5,0.5), c1=(0.68,0.42)),
+    bridge=dict(title='브동산 적정가는 이렇게', sub='비교단지 84m² KB시세(2026.11.20) → 평점·연령 보정 → 평균', vmax=13.0,
+        comps=[dict(name='롯데캐슬캠퍼스타운', meta='7공구 · 2016.03 준공 · 1,230세대', kb=7.75, mult=0.901, adj=6.98),
+               dict(name='힐스테이트송도더스카이', meta='국제업무지구 · 2024.05 준공 · 1,205세대', kb=12.25, mult=0.836, adj=10.24)],
+        avg=8.61, avg_label='두 보정가격 평균', fair=8.61, fair_label='브동산 적정가 (84m²)', price=8.80, price_label='평균 분양가 (592세대 가중평균)',
+        prem='-1,870만', judge='(적정)', kind='even'),
+ ),
 }
 
 def build(key):
@@ -429,7 +461,7 @@ def make_thumbnail(key, path):
         img = Image.new('RGB', (W, H), BG)
         draw_text(img, (CX, 700), '브동산', 50, BRASS, spacing=18, bold=1)
         hline(img, 850, CX - 300, CX + 300, 1.0)
-        px = 118 if len(c['name']) <= 8 else (96 if len(c['name']) <= 10 else 76)
+        px = c.get('thumb_name_px') or (118 if len(c['name']) <= 8 else (96 if len(c['name']) <= 10 else 76))
         draw_text(img, (CX, 910), c['name'], px, WHITE, spacing=4, bold=2)
         draw_text(img, (CX, 910 + px + 60), '예상프리미엄 분석', 70, (190, 186, 178), spacing=10, bold=1)
         img.save(path)

@@ -54,6 +54,8 @@ POOL_BY_ID = {x[0]: x for x in POOL}
 PICKS_BY_SLUG = {
     'gold-vs-apartment-trading-costs': ['asset-book', 'tax-book', 'planner'],   # 금 vs 아파트 거래비용 비교 글
     'acro-de-seocho': ['rebuild-book', 'cheongyak-book', 'laser'],               # 서초 재건축·만점통장 글
+    'gyeongbuk-docheong-prugio-firstion': ['location-book', 'battery', 'planner'],  # 도청신도시 2단계·차량 임장·중도금 일정
+    'songdo-logebien-moaelgaa': ['cheongyak-book', 'laser', 'location-book'],     # 인천 50% 우선·특공 398세대, 견본주택 실측, 트램·GTX 예정 입지
 }
 
 
