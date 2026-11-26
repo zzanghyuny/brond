@@ -1,5 +1,13 @@
 # 쇼츠·클립·릴스 영상 생성기 (2026.11.15)
 
+> **2026.11.26 개정 — 청약 새 글마다 1번·2번 두 편, 천천히, 브릿지 애니메이션**
+> - 1번 시네마틱 `make_gen.py`(나레이션 없음, `thumb_style='title'` 검정 타이틀 썸네일) + 2번 가격 맞히기 `make_quiz.py`(나레이션)를 **둘 다** 만든다.
+> - 두 편 모두 적정가는 `bridge_anim.py`로 보여 준다: 비교단지 KB 막대(회색) → 평점·연령 보정으로 늘거나 줄며 황동으로 바뀜(KB 위치에 흰 눈금, `보정 ×1.133` 칩) → 두 막대 끝이 한 점으로 모여 평균 → (오피스텔이면 ×0.9 감액) → 브동산 적정가 → 분양가 막대와의 차이를 판정색으로 칠하고 `+1.45억 (저평가)`.
+>   단계 사이 최소 간격 `GAP`(2.0~3.0초)와 마지막 3.2초 머무름을 지키도록 장면 길이가 자동으로 늘어난다.
+> - `make_gen.py`: CFG에 `slow=True`와 `bridge=dict(...)`를 넣고 장면 목록에서 `comps`·`gap` 대신 `('bridge', 15.0)`. slow에서는 애니메이션을 늘리지 않고 원래 속도로 그린 뒤 남는 시간은 머문다(사진 줌만 장면 전체에 걸쳐 천천히). 장면 길이 기준: title 3.4 · aerial 5.2 · price 4.8 · bridge 15+ · 사진 4.8 · info 5.6 · end 4.2 (약 50초).
+> - `make_quiz.py`: JSON에 `bridge`를 넣으면 s6·s7 대신 `bridge` 장면 하나가 들어가고 `slow`(장면 뒤 머무름 TAIL)가 자동으로 켜진다(약 60초).
+> - bridge 스펙(두 파일 공통): `title, sub, vmax, comps=[{name, meta, kb, mult, adj}], avg, avg_label, disc={label, mult}(오피스텔만), fair, fair_label, price, price_label, prem, judge, kind('plus'|'minus'), phase(선택)`. 숫자는 포스팅의 평점표·보정값을 그대로 옮기고 새로 계산하지 않는다. 기준 예: `make_gen.py`의 `firstworld`, `quiz/firstworld.json`.
+
 단지 하나당 9:16(1080×1920) 30~33초 시네마틱 영상을 코드로 렌더링한다. 외부 AI 서비스 없음.
 
 ```

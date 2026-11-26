@@ -4,7 +4,7 @@
 import sys, numpy as np, subprocess, os
 from PIL import Image, ImageDraw, ImageOps
 import make_video as mv
-import audio_orig, sfx
+import audio_orig, sfx, bridge_anim
 from make_video import (ease, ease_out, draw_text, text_w, kenburns, hline, finish, overlay, push, grade,
                         W, H, FPS, CX, SAFE_L, SAFE_R, WHITE, GRAY, BG, BRASS)
 
@@ -194,6 +194,24 @@ CFG = {
     feature=dict(img='district-aerial.jpg', title='병점복합타운', cap='병점역 바로 옆 블록', cap2='지구 조감도 · 이미지컷 · 상업·업무용지는 아직 비어 있음', c0=(0.5,0.5), c1=(0.52,0.48), z=(1.0,1.25), box=(820,640)),
     place=dict(img='location-map.jpg', title='입지', cap='1호선 병점역 직선 약 360m', cap2='동탄~인덕원선 등은 공사 중 · 개통 시기 미확정', graded=False, box=(820,700)),
  ),
+ # 2026.11.26 개정판: 느린 템포(slow) + 비교단지→보정→평균→적정가 브릿지 애니메이션. gap/comps 대신 bridge 한 장면.
+ 'firstworld': dict(
+    dir=_IMGROOT+'thesharp-firstworld-seoul-officetel/', out='thesharp-firstworld-seoul-officetel', slow=True,
+    name='더샵 퍼스트월드 서울', name_px=76, avg=9.80, rng='층별 8.31 ~ 11.11억 · 308실 가중평균 · 전 실 84㎡',
+    plabel='오피스텔 84㎡ 평균 분양가', thumb_style='title', thumb_sub='분양가, 저평가일까?',
+    disc='브동산 모형 추정치 · 확정 수익 아님 · 2026.11.26 공고 기준',
+    info=[('청약', '12월 1일 하루'), ('청약통장', '필요 없음'), ('전매', '등기 전까지 불가'), ('입주', '2029년 8월')],
+    scenes=[('title',3.4),('aerial',5.2),('price',4.8),('bridge',15.0),('feature',4.8),('place',4.8),('info',5.6),('end',4.2)],
+    aerial=dict(img='cover.jpg', t1='서울 중랑구 상봉동', l1='옛 상봉터미널 · 지상 48층', l2='오피스텔 308실 · 전 실 84㎡', src='조감도는 이미지컷이며 실제와 다를 수 있음 · 출처: 공식 홈페이지'),
+    feature=dict(img='tower-night.jpg', title='48층 랜드마크', cap='아파트 999가구와 한 단지', cap2='투시도 · 이미지컷 · 출처: 공식 홈페이지', c0=(0.5,0.35), c1=(0.5,0.5), z=(1.0,1.15), box=(620,860)),
+    place=dict(img='location-map.jpg', title='입지', cap='7호선·경의중앙선 상봉역 앞', cap2='위치도 · 예정·계획 포함 · 출처: 공식 홈페이지', graded=False, box=(840,620)),
+    bridge=dict(title='브동산 적정가는 이렇게', sub='비교 아파트 59m² KB시세(2026.11.20) → 평점·연령 보정 → 평균 → 오피스텔 감액', vmax=15,
+        comps=[dict(name='e편한세상화랑대', meta='묵동 · 2017.12 준공 · 아파트 59m²', kb=10.00, mult=1.133, adj=11.33),
+               dict(name='사가정센트럴아이파크', meta='면목동 · 2020.07 준공 · 아파트 59m²', kb=12.75, mult=1.073, adj=13.68)],
+        avg=12.50, avg_label='두 보정가격 평균 (아파트 59m² 기준)', disc=dict(label='오피스텔 10% 감액', mult=0.9),
+        fair=11.25, fair_label='브동산 적정가 (오피스텔 84m²)', price=9.80, price_label='평균 분양가 (308실 가중평균)',
+        prem='+1.45억', judge='(저평가)', kind='plus'),
+ ),
 }
 
 def build(key):
@@ -314,7 +332,34 @@ def build(key):
         return img
 
     # 사진 장면: 원래 길이(L0)를 장면 길이로 정규화하기 위해 L=1.0 사용 → 장면 함수에 (lt*l0/len) 넘기므로 L0로 설정
-    def mk(kind):
+    # 비교단지 KB → 평점·연령 보정 → 평균 → (감액) → 브동산 적정가 → 분양가와 차이. bridge_anim.py 공용.
+    def _btext(img, xy, s, px, color, anchor='l', alpha=1.0, w='R', maxw=None):
+        b = 0 if w == 'R' or px < 40 else 1      # WQY 획 두께: 작은 글씨는 굵게 하지 않는다(뭉개짐)
+        if maxw:
+            while px > 20 and text_w(s, px) > maxw: px -= 2
+        x = xy[0] - text_w(s, px) if anchor == 'r' else xy[0]
+        draw_text(img, (x, xy[1]), s, px, color, anchor='c' if anchor == 'c' else 'l', bold=b, alpha=alpha)
+    BR = c.get('bridge')
+    BRIDGE = bridge_anim.Bridge(BR, _btext, SAFE_L, SAFE_R, CX) if BR else None
+    def bridge_T(ln):
+        return bridge_anim.phase_times(BR, 0.4, max(6.0, ln - 4.0))
+    def bridge_len(ln):                 # 단계 간격(GAP)을 지키도록 장면 길이를 늘린다
+        return max(ln, bridge_T(ln)['end'] + 0.5)
+
+    def mk(kind, ln=None):
+        slow = c.get('slow')
+        if kind == 'bridge':
+            T = bridge_T(ln)
+            def f(t):
+                img = Image.new('RGB', (W, H), BG); BRIDGE.draw(img, t, T); disc(img, ease(t / 0.8)); return img
+            return f, ln
+        if slow and kind in ('layout', 'feature', 'place', 'loc') and kind in c:
+            ph = photo_scene(c[kind], dark=0.8 if kind == 'loc' else 0.85,
+                             graded=c[kind].get('graded', True) if kind == 'place' else False)
+            return (lambda t: ph(t, ln)), ln     # 실제 초 단위로 그리고, 줌은 장면 전체에 걸쳐 천천히
+        if slow and ln and kind in ('title', 'aerial', 'price', 'info', 'end'):
+            fn, _ = mk(kind)
+            return fn, ln                        # 늘리지 않음: 애니메이션은 원래 속도, 남는 시간은 머무름
         if kind == 'layout': return photo_scene(c['layout']), 3.0
         if kind == 'feature' and 'feature' in c: return photo_scene(c['feature']), 3.0
         if kind == 'feature': return feature_list, 3.0
@@ -337,19 +382,26 @@ def build(key):
 
     scenes = []; cur = 0.0
     for kind, ln in c['scenes']:
-        fn, l0 = mk(kind)
+        if kind == 'bridge': ln = bridge_len(ln)
+        fn, l0 = mk(kind, ln)
         scenes.append((cur, cur + ln, fn, l0, kind)); cur += ln
+    DUR = cur; mv.DUR = DUR
     XF = 0.45
     rise = [s for s, _, _, _, _ in scenes[1:]]
-    gi = [i for i, s in enumerate(scenes) if s[4] == 'gap'][0]
     mv.RISE = rise
-    mv.BOOM = [(scenes[gi][0] + 2.8 * (scenes[gi][1] - scenes[gi][0]) / 4.8, 0.8), (scenes[-1][0], 0.5)]
+    gi = [i for i, s in enumerate(scenes) if s[4] == 'gap']
+    if gi:
+        gi = gi[0]; reveal = scenes[gi][0] + 2.8 * (scenes[gi][1] - scenes[gi][0]) / 4.8
+    else:                               # 브릿지: 예상 프리미엄이 뜨는 순간
+        bi = [i for i, s in enumerate(scenes) if s[4] == 'bridge'][0]
+        reveal = scenes[bi][0] + bridge_T(scenes[bi][1] - scenes[bi][0])['prem'] + 0.2
+    mv.BOOM = [(reveal, 0.8), (scenes[-1][0], 0.5)]
 
     def render(i, t):
         s, e, fn, l0, kind = scenes[i]
         lt = t - s
         img = fn(lt * l0 / (e - s))
-        if kind not in ('aerial',):
+        if kind not in ('aerial', 'bridge'):
             img = push(img, lt, e - s)
         return img
 

@@ -137,9 +137,9 @@ def hbar(img, y, label, val, vmax, p, color, alpha=1.0, lw='R', sub=None):
     text(img, (xe + 16, by - 2), f'{val * eo(p):.2f}억' if p < 1 else f'{val:.2f}억', 40, INK, 'X', anchor='l', alpha=alpha * ease(p * 3))
 
 # ------------------------------------------------------------------ 이미지 준비
-S1 = C['s1']; S2 = C['s2']; S6 = C['s6']
+S1 = C['s1']; S2 = C['s2']; S6 = C.get('s6', {})
 COVER = load(S1['img'], 0.92)
-BAND6 = load(S6['img'], 0.55)
+BAND6 = load(S6['img'], 0.55) if S6 else None
 
 def dark_map(path):
     """밝은 바탕 입지 개략도(chart-map-naver.png)를 영상용 어두운 테마로 바꾼다.
@@ -179,13 +179,19 @@ _rng = np.random.default_rng(7)
 GRAIN = [_rng.normal(0, 2.4, (H, W, 1)).astype(np.float32) for _ in range(6)]
 
 # ------------------------------------------------------------------ 타임라인 (나레이션이 기준)
-KEYS = ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8']
+import bridge_anim
+BR = C.get('bridge')                  # 있으면 s6·s7 대신 적정가 브릿지 애니메이션 한 장면
+KEYS = ['s1', 's2', 's3', 's4', 's5', 'bridge', 's8'] if BR else ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8']
 NAR = {k: wav_len(TTS + f'{k}.wav') for k in KEYS}
 LEAD = {'s1': 0.25, 's4': 0.6}        # 정답 공개 직전 멈춤
 TAIL = {'s3': 3.0, 's8': 0.7}         # s3: 3초 카운트다운, s8: 마지막 질문 여운
+if C.get('slow', bool(BR)):           # 2026.11.26: 장면이 너무 빨리 넘어가지 않게 — 다 읽을 시간을 준다
+    TAIL.update({'s1': 0.9, 's2': 1.6, 's4': 1.1, 's5': 1.4, 'bridge': 2.4, 's8': 1.3, 's6': 1.2, 's7': 1.4})
+TAIL.update(C.get('tail', {}))
 SC = []; t0 = 0.0
 for k in KEYS:
     lead = LEAD.get(k, 0.18); dur = lead + NAR[k] + TAIL.get(k, 0.26)
+    if k == 'bridge': dur = max(dur, bridge_anim.phase_times(BR, lead, max(NAR['bridge'], 9.0))['end'])
     SC.append((k, t0, dur, lead)); t0 += dur
 DUR = t0
 
@@ -347,7 +353,16 @@ def s8(t, d, lead):
     text(img, (CX, 1080), S['q'], 96, BRASS, 'X', alpha=aq, dy=16 * (1 - eo((t - tq) / 0.5)))
     return img
 
-FN = {'s1': s1, 's2': s2, 's3': s3, 's4': s4, 's5': s5, 's6': s6, 's7': s7, 's8': s8}
+import bridge_anim
+def _btext(img, xy, s, px, color, anchor, alpha, w, maxw=None):
+    text(img, xy, s, fit(s, px, w, maxw) if maxw else px, color, w, anchor, alpha)
+BRIDGE = bridge_anim.Bridge(BR, _btext, SAFE_L, SAFE_R, CX) if BR else None
+def bridge_T(lead):
+    n = NAR['bridge']; return bridge_anim.phase_times(BR, lead, max(n, 9.0))
+def bridge(t, d, lead):
+    img = new(); BRIDGE.draw(img, t, bridge_T(lead)); return img
+
+FN = {'s1': s1, 's2': s2, 's3': s3, 's4': s4, 's5': s5, 's6': s6, 's7': s7, 's8': s8, 'bridge': bridge}
 
 def frame(T):
     for i, (k, st, d, lead) in enumerate(SC):
@@ -381,7 +396,7 @@ def build_audio(path):
     st = {k: (s, d, l) for k, s, d, l in SC}
     starts = [s for _, s, _, _ in SC]
     reveal = st['s4'][0] + st['s4'][2]
-    verdict = st['s7'][0] + st['s7'][2] + 0.35
+    verdict = (st['bridge'][0] + bridge_T(st['bridge'][2])['prem'] + 0.2) if BR else (st['s7'][0] + st['s7'][2] + 0.35)
     tmp = OUT + '_music.wav'
     audio_orig.make_audio(tmp, DUR + 1.0, RISE=tuple(starts[1:]), BOOM=((reveal, 0.7), (verdict, 0.6)))
     with wave.open(tmp) as w:

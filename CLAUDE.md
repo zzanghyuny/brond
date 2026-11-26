@@ -79,7 +79,7 @@ master 문서는 claude.ai 클라우드 채팅 세션 기준으로 작성돼 일
 - 오피스텔 공고는 청약홈 APT 목록이 아니라 `오피스텔/생활숙박시설/도시형생활주택/민간임대` 목록(`selectOtherLttotPblancListView.do`)에 올라온다. 분양가는 공고문 층별 공급금액을 실수로 가중평균한다.
 
 ## 글 작성 지시 = 한 세트 + 묻지 않고 push (2026.11.26, 항상 적용 — 위 2번 '커밋 전 확인' 규칙보다 우선)
-- 브동산 글 작성을 지시받으면 ① 사이트 글 작성·배포 ② `naver-html/` ③ 쇼츠·클립 영상(`shorts-upload/<YYYY-MM>/` mp4 + 썸네일 + README)까지 한 번에 끝낸다. 영상은 반응이 좋은 **'가격 맞히기'**(`scripts/shorts/make_quiz.py`)와 **'공고문 속 숨은 한 줄'**(`scripts/shorts/make_viral.py`, detective 형식) 시리즈로 만든다.
+- 브동산 글 작성을 지시받으면 ① 사이트 글 작성·배포 ② `naver-html/` ③ 쇼츠·클립 영상(`shorts-upload/<YYYY-MM>/` mp4 + 썸네일 + README)까지 한 번에 끝낸다. 영상은 **1번 시네마틱 '분양가 총정리'**(`scripts/shorts/make_gen.py`, 나레이션 없음·검정 타이틀 썸네일)와 **2번 '가격 맞히기'**(`scripts/shorts/make_quiz.py`, 남자 나레이션) **두 편을 항상 함께** 만든다(2026.11.26 Paul 지시). 두 편 모두 ① 장면을 천천히 넘기고(길어져도 됨, `slow`) ② 적정가 장면은 `scripts/shorts/bridge_anim.py` 브릿지 애니메이션(비교단지 KB → 평점·연령 보정 → 평균 → (오피스텔 감액) → 브동산 적정가 → 분양가와 차이)으로 보여 준다. 기준 예: `make_gen.py`의 `firstworld` CFG, `quiz/firstworld.json`. 절차는 `beodongsan-video-team` 스킬.
 - 커밋·push는 Paul에게 묻지 않고 진행한다. 다만 push 직전 `git fetch` → 원격이 바뀌었으면 병합 후 push하는 절차는 그대로 지킨다.
 
 ## 네이버 원고 하단 쇼핑커넥트 칸 (2026.11.26, 항상 적용)
