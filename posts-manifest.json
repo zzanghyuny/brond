@@ -66,8 +66,8 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/thesharp-firstworld-seoul-officetel/cover.jpg",
-        "https://www.brandongsan.com/posts/images/thesharp-firstworld-seoul-officetel/chart-price.png"
+        "https://www.brandongsan.com/posts/images/thesharp-firstworld-seoul-officetel/chart-map-naver.png",
+        "https://www.brandongsan.com/posts/images/thesharp-firstworld-seoul-officetel/cover.jpg"
       ],
       "naver_published": false
     },
@@ -160,8 +160,8 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/gyeyang-a2-a3-first-move-in/lh-land-use-a2a3.jpg",
-        "https://www.brandongsan.com/posts/images/gyeyang-a2-a3-first-move-in/chart-84-price.png"
+        "https://www.brandongsan.com/posts/images/gyeyang-a2-a3-first-move-in/chart-map-naver.png",
+        "https://www.brandongsan.com/posts/images/gyeyang-a2-a3-first-move-in/lh-traffic.jpg"
       ],
       "naver_published": false
     },
@@ -382,6 +382,7 @@
         "브동산"
       ],
       "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/thesharp-cheonan-lac-one/chart-map-naver.png",
         "https://www.brandongsan.com/posts/images/thesharp-cheonan-lac-one/cover.jpg"
       ],
       "naver_published": true,
@@ -453,6 +454,7 @@
         "부동산정보"
       ],
       "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/gumi-parkone-desian/chart-map-naver.png",
         "https://www.brandongsan.com/posts/images/gumi-parkone-desian/aerial-cg.jpg"
       ],
       "naver_published": true,
@@ -486,6 +488,7 @@
         "부동산정보"
       ],
       "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/doosan-weve-trezium-iksan/chart-map-naver.png",
         "https://www.brandongsan.com/posts/images/doosan-weve-trezium-iksan/cover.jpg"
       ],
       "naver_published": true,
@@ -722,8 +725,8 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/gyeongsan-richel-eduforet/aerial.jpg",
-        "https://www.brandongsan.com/posts/images/gyeongsan-richel-eduforet/chart-map-naver.png"
+        "https://www.brandongsan.com/posts/images/gyeongsan-richel-eduforet/chart-map-naver.png",
+        "https://www.brandongsan.com/posts/images/gyeongsan-richel-eduforet/aerial.jpg"
       ],
       "naver_published": false
     },
@@ -755,7 +758,8 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/ulsan-hwajeong1-arel/aerial-cg.jpg"
+        "https://www.brandongsan.com/posts/images/ulsan-hwajeong1-arel/chart-map-naver.png",
+        "https://www.brandongsan.com/posts/images/ulsan-hwajeong1-arel/aerial-wide.jpg"
       ],
       "naver_published": false,
       "naver_post_id": null,
@@ -788,8 +792,7 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/ansan-sinkil2-a6-newlywed/chart-map-naver.png",
-        "https://www.brandongsan.com/posts/images/ansan-sinkil2-a6-newlywed/chart-b-price.png"
+        "https://www.brandongsan.com/posts/images/ansan-sinkil2-a6-newlywed/chart-map-naver.png"
       ],
       "naver_published": false
     },
@@ -819,7 +822,8 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/hoban-summit-choryang/chart-map-naver.png"
+        "https://www.brandongsan.com/posts/images/hoban-summit-choryang/chart-map-naver.png",
+        "https://www.brandongsan.com/posts/images/hoban-summit-choryang/location.jpg"
       ],
       "naver_published": false,
       "naver_post_id": null,
@@ -853,8 +857,7 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/bucheon-daejang-haustory-decent/cover.jpg",
-        "https://www.brandongsan.com/posts/images/bucheon-daejang-haustory-decent/chart-b-price.png"
+        "chart-map-naver.png (대표사진 = 입지 개략도)"
       ],
       "naver_published": true,
       "naver_post_id": "224476917011",
@@ -1053,8 +1056,8 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/namchuncheon-centreville/cover.jpg",
-        "https://www.brandongsan.com/posts/images/namchuncheon-centreville/location.jpg"
+        "https://www.brandongsan.com/posts/images/namchuncheon-centreville/chart-map-naver.png",
+        "https://www.brandongsan.com/posts/images/namchuncheon-centreville/cover.jpg"
       ],
       "naver_published": true,
       "naver_post_id": "224469214071",
@@ -1086,6 +1089,7 @@
         "부동산정보"
       ],
       "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/gwangju-jeil-foredu/chart-map-naver.png",
         "https://www.brandongsan.com/posts/images/gwangju-jeil-foredu/cover.jpg"
       ],
       "naver_published": true,
@@ -1118,6 +1122,7 @@
         "부동산정보"
       ],
       "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/siheung-geomo-artera/chart-map-naver.png",
         "https://www.brandongsan.com/posts/images/siheung-geomo-artera/cover.jpg"
       ],
       "naver_published": true,
@@ -1182,7 +1187,7 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/guri-galmae-insville-decent/chart-map.png"
+        "https://www.brandongsan.com/posts/images/guri-galmae-insville-decent/chart-map-naver.png"
       ],
       "naver_published": true,
       "naver_post_id": "224466591533",
@@ -1214,7 +1219,7 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/ansan-sinkil2-b1-public/chart-map.png"
+        "https://www.brandongsan.com/posts/images/ansan-sinkil2-b1-public/chart-map-naver.png"
       ],
       "naver_published": true,
       "naver_post_id": "224466592226",
@@ -1245,6 +1250,7 @@
         "부동산정보"
       ],
       "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/yongin-jungang-hights-guseong/chart-map-naver.png",
         "https://www.brandongsan.com/posts/images/yongin-jungang-hights-guseong/cover.jpg"
       ],
       "naver_published": true,
@@ -1275,6 +1281,7 @@
         "부동산정보"
       ],
       "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/gyeyang-daebang-elium-eduhpark/chart-map-naver.png",
         "https://www.brandongsan.com/posts/images/gyeyang-daebang-elium-eduhpark/busi_01cont01.jpg"
       ],
       "naver_published": true,
@@ -1306,6 +1313,7 @@
         "부동산정보"
       ],
       "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/wangsuk-hanshin-theh-centum/chart-map-naver.png",
         "https://www.brandongsan.com/posts/images/wangsuk-hanshin-theh-centum/overview2.jpg"
       ],
       "naver_published": true,
@@ -1338,8 +1346,8 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/songdo-the-sharp-granter-g5-6-musunwi/location.jpg",
-        "https://www.brandongsan.com/posts/images/songdo-the-sharp-granter-g5-6-musunwi/layout.jpg"
+        "https://www.brandongsan.com/posts/images/songdo-the-sharp-granter-g5-6-musunwi/chart-map-naver.png",
+        "https://www.brandongsan.com/posts/images/songdo-the-sharp-granter-g5-6-musunwi/location.jpg"
       ],
       "naver_published": true,
       "naver_post_id": "224466840149",
@@ -1435,7 +1443,9 @@
         "힐스테이트레이크송도3차",
         "호반써밋송도"
       ],
-      "cover_candidates": [],
+      "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/songdo-logebien-moaelgaa/chart-map-naver.png"
+      ],
       "naver_published": true,
       "naver_post_id": "224464912646",
       "published_at": "2026-11-04T15:15:00+07:00"
@@ -1465,6 +1475,7 @@
         "부동산정보"
       ],
       "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/yongdu-lottecastle/chart-map-naver.png",
         "https://www.brandongsan.com/posts/images/yongdu-lottecastle/press-cg.jpg"
       ],
       "naver_published": true,
@@ -1567,6 +1578,7 @@
         "의정부역센트럴자이"
       ],
       "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/uijeongbu-feliztower-yangwoo/chart-map-naver.png",
         "https://www.brandongsan.com/posts/images/uijeongbu-feliztower-yangwoo/perspective.jpg"
       ],
       "naver_published": true,
@@ -1599,6 +1611,7 @@
         "안산파크푸르지오"
       ],
       "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/armusee-xi-ansan/chart-map-naver.png",
         "https://www.brandongsan.com/posts/images/armusee-xi-ansan/aerial-cg.jpg"
       ],
       "naver_published": true,
@@ -1632,7 +1645,8 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/nonsan-elif-the-edition/cover.jpg"
+        "https://www.brandongsan.com/posts/images/nonsan-elif-the-edition/chart-map-naver.png",
+        "https://www.brandongsan.com/posts/images/nonsan-elif-the-edition/landscape.jpg"
       ],
       "naver_published": false,
       "naver_post_id": null,
@@ -1664,6 +1678,7 @@
         "부동산정보"
       ],
       "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/pyeongtaek-godeok-woomi-lynn-premier/chart-map-naver.png",
         "https://www.brandongsan.com/posts/images/pyeongtaek-godeok-woomi-lynn-premier/cover.jpg"
       ],
       "naver_published": true,
@@ -1696,6 +1711,7 @@
         "부동산정보"
       ],
       "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/hanwha-forena-jije/chart-map-naver.png",
         "https://www.brandongsan.com/posts/images/hanwha-forena-jije/cover.jpg"
       ],
       "naver_published": true,
@@ -1729,6 +1745,7 @@
         "이수역리가"
       ],
       "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/hillstate-isu-central/chart-map-naver.png",
         "https://www.brandongsan.com/posts/images/hillstate-isu-central/cover.jpg"
       ],
       "naver_published": true,
@@ -1762,7 +1779,7 @@
         "59㎡"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/acro-de-seocho/cover.jpg",
+        "https://www.brandongsan.com/posts/images/acro-de-seocho/chart-map-naver.png",
         "https://www.brandongsan.com/posts/images/acro-de-seocho/aerial.jpg"
       ],
       "naver_published": true,
@@ -1796,8 +1813,8 @@
         "디에이치반포124"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/raemian-trinion/cover.jpg",
-        "https://www.brandongsan.com/posts/images/raemian-trinion/aerial.jpg"
+        "https://www.brandongsan.com/posts/images/raemian-trinion/chart-map-naver.png",
+        "https://www.brandongsan.com/posts/images/raemian-trinion/cover.jpg"
       ],
       "naver_published": true,
       "naver_post_id": "224461824583",
@@ -1831,8 +1848,8 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/junghwa-raon-private-centro/official-aerial.jpg",
-        "https://www.brandongsan.com/posts/images/junghwa-raon-private-centro/official-siteplan.jpg"
+        "https://www.brandongsan.com/posts/images/junghwa-raon-private-centro/chart-map-naver.png",
+        "https://www.brandongsan.com/posts/images/junghwa-raon-private-centro/official-aerial.jpg"
       ],
       "naver_published": true,
       "naver_post_id": "224461823945",
@@ -1866,7 +1883,7 @@
         "반포신축"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/dh-sinbanpo-esterra/cover.jpg",
+        "https://www.brandongsan.com/posts/images/dh-sinbanpo-esterra/chart-map-naver.png",
         "https://www.brandongsan.com/posts/images/dh-sinbanpo-esterra/aerial.jpg"
       ],
       "naver_published": true,
@@ -1900,6 +1917,7 @@
         "부동산정보"
       ],
       "cover_candidates": [
+        "https://www.brandongsan.com/posts/images/seocho-lottecastle-artpalace/chart-map-naver.png",
         "https://www.brandongsan.com/posts/images/seocho-lottecastle-artpalace/cover.jpg"
       ],
       "naver_published": true,
@@ -1936,8 +1954,8 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/gwacheon-detre-prestige/cover.jpg",
-        "https://www.brandongsan.com/posts/images/gwacheon-detre-prestige/perspective.jpg"
+        "https://www.brandongsan.com/posts/images/gwacheon-detre-prestige/chart-map-naver.png",
+        "https://www.brandongsan.com/posts/images/gwacheon-detre-prestige/cover.jpg"
       ],
       "naver_published": true,
       "naver_post_id": "224461686740",
@@ -1970,7 +1988,7 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/gwanggyo-jayeon-centreville/cover.jpg",
+        "https://www.brandongsan.com/posts/images/gwanggyo-jayeon-centreville/chart-map-naver.png",
         "https://www.brandongsan.com/posts/images/gwanggyo-jayeon-centreville/aerial.jpg"
       ],
       "naver_published": true,
@@ -2098,7 +2116,8 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/mullae-harrington-place/aerial-naver.jpg"
+        "https://www.brandongsan.com/posts/images/mullae-harrington-place/chart-map-naver.png",
+        "https://www.brandongsan.com/posts/images/mullae-harrington-place/aerial.jpg"
       ],
       "naver_published": true,
       "naver_post_id": "224460499551",
@@ -2227,8 +2246,8 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/banpo-dh-classtre/cover.jpg",
-        "https://www.brandongsan.com/posts/images/banpo-dh-classtre/chart-scenario.png"
+        "https://www.brandongsan.com/posts/images/banpo-dh-classtre/chart-map-naver.png",
+        "https://www.brandongsan.com/posts/images/banpo-dh-classtre/cover.jpg"
       ],
       "naver_published": true,
       "naver_post_id": "224429690570",
@@ -2439,8 +2458,8 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/gyeonghuigung-efit/aerial-2.jpg",
-        "https://www.brandongsan.com/posts/images/gyeonghuigung-efit/site-layout.jpg"
+        "https://www.brandongsan.com/posts/images/gyeonghuigung-efit/chart-map-naver.png",
+        "https://www.brandongsan.com/posts/images/gyeonghuigung-efit/aerial-2.jpg"
       ],
       "naver_published": true,
       "naver_post_id": "224429691604",
@@ -3437,8 +3456,8 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/sinbunpyeong-efete-thewaycity-musunwi/cover.jpg",
-        "https://www.brandongsan.com/posts/images/sinbunpyeong-efete-thewaycity-musunwi/chart-b-price.png"
+        "https://www.brandongsan.com/posts/images/sinbunpyeong-efete-thewaycity-musunwi/chart-map-naver.png",
+        "https://www.brandongsan.com/posts/images/sinbunpyeong-efete-thewaycity-musunwi/aerial.jpg"
       ],
       "naver_published": false
     },
@@ -3470,8 +3489,8 @@
         "부동산정보"
       ],
       "cover_candidates": [
-        "https://www.brandongsan.com/posts/images/sacheon-seonin-hanlim-fullever/cover.jpg",
-        "https://www.brandongsan.com/posts/images/sacheon-seonin-hanlim-fullever/chart-b-price.png"
+        "https://www.brandongsan.com/posts/images/sacheon-seonin-hanlim-fullever/chart-map-naver.png",
+        "https://www.brandongsan.com/posts/images/sacheon-seonin-hanlim-fullever/official-location.jpg"
       ],
       "naver_published": false,
       "naver_post_id": null,

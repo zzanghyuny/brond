@@ -113,10 +113,13 @@ def main(src, out_dir, slug):
     tables = list(re.finditer(r'<table[^>]*>.*?</table>', doc, flags=re.S))
     base = f'https://www.brandongsan.com/posts/images/{slug}/'
     made = []
+    # 이미 문서에서 쓰는 naver-table-NN 번호와 겹치지 않게 그다음 번호부터 매긴다(재실행 시 기존 표 이미지 덮어쓰기 방지)
+    used = [int(n) for n in re.findall(r'naver-table-(\d+)\.png', doc)]
+    start = max(used) + 1 if used else 1
     with sync_playwright() as p:
         b = p.chromium.launch()
         pg = b.new_page(viewport={'width': W, 'height': 200}, device_scale_factor=SCALE)
-        for i, m in enumerate(tables, 1):
+        for i, m in enumerate(tables, start):
             t, fs = prepare(m.group(0))
             css = CSS % (W, fs, fs - 1, fs + 1, fs - 1, fs)
             pg.set_content(f'<html><head><meta charset="utf-8"><style>{css}</style></head><body>{t}</body></html>')
