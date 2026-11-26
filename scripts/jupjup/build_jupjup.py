@@ -157,6 +157,29 @@ def collect():
                 'aerial': img('aerial'), 'location': img('location'),
                 'psrc': psrc, 'psrc_label': src_label(psrc), 'date': d['date'], 'status': 'open',
             })
+    # 광고 레이더 등으로 먼저 확인한 단지(권역 회차에 아직 없는 것)
+    xp = os.path.join(HERE, 'extra_sites.json')
+    have = {s['key'] for s in sites}
+    if os.path.exists(xp):
+        for s in json.load(open(xp, encoding='utf-8')).get('sites', []):
+            if s['key'] in have:
+                continue
+            badge, mi = move_in(s)
+            psrc = first_url(s.get('price_src', ''))
+            sites.append({
+                'key': s['key'], 'name': s['name'], 'rid': s['rid'], 'rlabel': SHORT.get(s['rid'], s['rid']),
+                'sido': s.get('sido') or s['region'].split()[0], 'area': s['region'],
+                'n': s['n'], 'builder': s.get('builder', ''), 'yr': s['yr'], 'mo': s['mo'],
+                'done': bool(s.get('done')), 'badge': badge, 'movein': mi,
+                'size': str(s.get('size', '84')), 'price': round(float(s['price']), 3), 'range': s.get('price_note', ''),
+                'benefit': s.get('benefit', ''), 'points': POINTS.get(s['key']) or default_points(s),
+                'aerial': s.get('aerial'), 'location': s.get('location'),
+                'psrc': psrc, 'psrc_label': '청약홈 입주자모집공고' if 'applyhome' in psrc else src_label(psrc),
+                'date': s['date'], 'status': 'open', 'extra': True,
+            })
+            for r in regions:
+                if r['rid'] == s['rid']:
+                    r['count'] += 1
     return sites, regions
 
 

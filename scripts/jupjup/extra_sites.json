@@ -1,0 +1,21 @@
+{
+ "_note": "권역 회차(랭킹)에 아직 없지만 선착순 분양이 확인된 단지를 줍줍찬스에 먼저 올리는 목록(광고 레이더). 같은 key가 권역 데이터에 들어오면 권역 데이터가 우선한다. confirmed는 선착순 확인 근거와 날짜.",
+ "sites": [
+  {
+   "key": "gunsan-harrington",
+   "name": "효성해링턴 플레이스 군산",
+   "rid": "gyeongnam-honam-jeju",
+   "sido": "전북",
+   "region": "군산 경장동",
+   "n": 275,
+   "builder": "진흥기업",
+   "yr": 2026, "mo": 12, "done": false,
+   "size": "84",
+   "price": 4.594,
+   "price_note": "84A 3.96~4.57억 · 84B 4.22~4.59억(입주자모집공고 공급금액)",
+   "date": "2026-11-27",
+   "confirmed": "2026.11.27 네이버 메인 분양 배너광고 집행 확인(Paul 제보), 2024.09.27부터 선착순 동·호 지정 계약(데일리안·스마트투데이)",
+   "price_src": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2023000598&pblancNo=2023000598&atchmnflSeqNo=1313226&atchmnflSn=2"
+  }
+ ]
+}

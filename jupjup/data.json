@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "regions": [
   {
    "rid": "sudogwon",
@@ -34,7 +34,7 @@
    "label": "경남·호남·제주",
    "areas": "경남·광주·전북·전남·제주",
    "date": "2026-11-17",
-   "count": 16
+   "count": 17
   }
  ],
  "sites": [
@@ -616,6 +616,37 @@
    "psrc_label": "m.richgo.ai",
    "date": "2026-11-17",
    "status": "open"
+  },
+  {
+   "key": "gunsan-harrington",
+   "name": "효성해링턴 플레이스 군산",
+   "rid": "gyeongnam-honam-jeju",
+   "rlabel": "경남·호남·제주",
+   "sido": "전북",
+   "area": "군산 경장동",
+   "n": 275,
+   "builder": "진흥기업",
+   "yr": 2026,
+   "mo": 12,
+   "done": false,
+   "badge": "2026.12 입주",
+   "movein": "2026년 12월 입주 예정",
+   "size": "84",
+   "price": 4.594,
+   "range": "84A 3.96~4.57억 · 84B 4.22~4.59억(입주자모집공고 공급금액)",
+   "benefit": "",
+   "points": [
+    "군산 경장동 최고 39층 주상복합 랜드마크",
+    "번영로 바로 앞, 군산시청·법원 등 관공서 인접",
+    "2026년 12월 입주 예정"
+   ],
+   "aerial": null,
+   "location": null,
+   "psrc": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2023000598&pblancNo=2023000598&atchmnflSeqNo=1313226&atchmnflSn=2",
+   "psrc_label": "청약홈 입주자모집공고",
+   "date": "2026-11-27",
+   "status": "open",
+   "extra": true
   },
   {
    "key": "dalseo-xi-zenik",
