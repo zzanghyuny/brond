@@ -105,7 +105,7 @@ cover_candidates: cover.jpg, aerial.jpg
 - 표는 진짜 `<table>`, `<dl class="spec">`는 헤더 없는 2열 `<table>`, `.stat-box`는 템플릿의 `<div class="stat">`.
 - 제외: `#ad`, `#related`, 광고카드 언급 문장, 팀장 연락처 안내문. 면책 문구만 남긴다.
 
-- **쇼핑커넥트 칸(2026.11.26~ 항상)**: 파일을 다 쓴 뒤 `python3 scripts/shopconnect/apply_naver_shop.py {slug}`를 실행해 바이라인 아래 회색 대가성 안내와 맨 끝 '부동산 공부할 때 곁에 두면 좋은 것' 칸(회색 상품 자리 3개)을 넣는다. 손으로 쓰지 않는다. 쿠팡 링크는 넣지 않는다.
+- **쇼핑커넥트 칸(2026.11.26~ 항상)**: 파일을 다 쓴 뒤 `python3 scripts/shopconnect/apply_naver_shop.py {slug}`를 실행해 바이라인 아래 회색 대가성 안내와 맨 끝 '부동산 공부할 때 곁에 두면 좋은 것' 칸(회색 상품 자리 3개)을 넣는다. 상품은 글마다 다르게, 글 내용을 보고 고른다(스킬 `beodongsan-shopconnect`). 손으로 쓰지 않는다. 쿠팡 링크는 넣지 않는다.
 
 ### 4. 검증
 - 이미지 URL이 모두 배포 후 200인지(`curl -sL -o /dev/null -w "%{http_code}"`), `{{`가 남지 않았는지, `data:image`/`<svg` 가 없는지 확인한다.
