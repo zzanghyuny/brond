@@ -45,6 +45,22 @@ BUSINESS = {
 e = lambda s: H.escape(str(s), quote=True)
 PLANS = json.load(open(os.path.join(OUT, 'plans.json'), encoding='utf-8'))
 POINTS = json.load(open(os.path.join(HERE, 'points.json'), encoding='utf-8'))
+_NP = os.path.join(HERE, 'notices.json')
+NOTICES = json.load(open(_NP, encoding='utf-8')) if os.path.exists(_NP) else {}
+
+
+def notice_links(key):
+    n = NOTICES.get(key)
+    if not n:
+        return ''
+    btns = ''.join(
+        f'<a class="jj-btn solid" href="{e(x["pdf"])}" target="_blank" rel="noopener nofollow">모집공고 보기{(" · " + e(x["label"])) if x.get("label") else ""}</a>'
+        for x in n.get('notices', []) if x.get('pdf'))
+    home = (f'<a class="jj-btn" href="{e(n["home"])}" target="_blank" rel="noopener nofollow">분양 홈페이지</a>' if n.get('home') else '')
+    if not (btns or home):
+        return ''
+    return (f'<div class="jj-links">{btns}{home}</div>'
+            '<p class="jj-note">모집공고는 청약홈(한국부동산원)에 올라온 입주자모집공고문이고, 분양 홈페이지는 청약홈에 등록된 주소입니다.</p>')
 
 
 def eok(v):
@@ -389,6 +405,7 @@ def build_detail(s, same_region, plans):
 <section class="wrap jj-sec">
   <h2>단지 정보</h2>
   <table class="jj-kv"><tbody>{kv_rows(s)}</tbody></table>
+  {notice_links(s['key'])}
   <p class="jj-note">정보 기준일 {e(s['date'].replace('-', '.'))}{src} · 분양가·혜택·남은 세대는 수시로 바뀝니다.</p>
 </section>
 {loc}
