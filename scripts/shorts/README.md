@@ -90,7 +90,7 @@ python3 rank/kb_rank.py p84 /tmp/x.json --addr 인천 "연수구 아파트" … 
 MAPBOX_TOKEN=pk... python3 rank/fetch_sat.py rank/<키>.json                   # 위성사진 1080×1920 → $RANK_IMG/<키>/ (저장소에 넣지 않음)
 python3 make_rank.py rank/<키>.json tts | stills [초…] | render                 # $RANK_OUT/<out>.mp4 + -thumbnail.png
 ```
-규칙: 임대·장기전세 집계분과 입주 전 단지는 빼고, 같은 단지 여러 블록은 최고가 1곳만. 동률은 `label: "공동 N위"`, `lrank`. 위성 좌표(KB)가 단지 중심과 어긋나면 `ring: false`.
+**면적은 '평'으로 쓰지 않고 `84m²`(나레이션 '84제곱미터')로 쓴다** — '33평' 표기 경기 편만 조회수가 낮아 2026.11.27 84㎡로 다시 만들었다. 규칙: 임대·장기전세 집계분과 입주 전 단지는 빼고, 같은 단지 여러 블록은 최고가 1곳만. 동률은 `label: "공동 N위"`, `lrank`. 위성 좌표(KB)가 단지 중심과 어긋나면 `ring: false`.
 출처 줄에 위성사진 © Mapbox © Maxar(촬영 시점 다를 수 있음)과 KB 기준일을 항상 넣는다. Mapbox 공개 토큰은 Mapbox MCP `list_public_tokens_tool`로 받는다(코드에 넣지 않음).
 
 ### 예약 업로드(하루 3편) — `release_queue.sh` (2026.11.26)
