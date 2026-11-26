@@ -1,0 +1,27 @@
+{
+ "_note": "상담사 카드 상품·결제 방식. payment가 transfer면 계좌이체+메일 신청, card면 토스 카드결제(api/). 가격·기간·칸 수를 바꾸면 생성기를 다시 돌린다. 가격 확정(Paul 2026-11-26): 2주 5만원·4주 7만원.",
+ "slotsPerSite": 3,
+ "plans": [
+  {
+   "id": "2w",
+   "label": "2주",
+   "days": 14,
+   "price": 50000
+  },
+  {
+   "id": "4w",
+   "label": "4주",
+   "days": 28,
+   "price": 70000
+  }
+ ],
+ "payment": "transfer",
+ "transfer": {
+  "bank": "국민은행",
+  "account": "59190101200577",
+  "holder": "김혜인",
+  "applyEmail": "seodangdog81@gmail.com",
+  "depositHours": 24,
+  "postHours": 24
+ }
+}

@@ -85,11 +85,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.brandongsan.com/posts/yeongju-hyosung-harrington-place.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.brandongsan.com/posts/changwon-hanshin-thehue.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -120,17 +115,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.brandongsan.com/posts/eco-delta-city-geumgang-penterium-ecoriver.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.brandongsan.com/posts/munsuro-vista-the-park.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.brandongsan.com/posts/incheon-guwol-artpark.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -256,16 +241,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.brandongsan.com/posts/hyangnam-station-grove-switzen.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.brandongsan.com/posts/yangpyeong-ssangyong-platinum-hangang.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.brandongsan.com/posts/daegu-thesharp-dongin-centriche.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -387,11 +362,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.brandongsan.com/posts/doosan-weve-the-zenith-daeyeon.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.brandongsan.com/posts/hoban-summit-cheomdan3.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -422,27 +392,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.brandongsan.com/posts/osan-heritage-xi-2danji.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.brandongsan.com/posts/thesharp-tricente.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.brandongsan.com/posts/hangang-prugio-riverfront.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.brandongsan.com/posts/allnew-champions-city-1cha.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.brandongsan.com/posts/dalseo-xi-zenic.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -558,4 +513,102 @@
   <url><loc>https://www.brandongsan.com/posts/gumi-parkone-desian.html</loc><lastmod>2026-11-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.brandongsan.com/posts/goyang-hanshin-thehue-firstone.html</loc><lastmod>2026-11-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.brandongsan.com/posts/gyeongbuk-docheong-prugio-firstion.html</loc><lastmod>2026-11-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/gochon-xi.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/seoulsan-parkgrande.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/hs-parkforet.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/hongseong-eph.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/eumseong-markverre.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/eumseong-fullhouse.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/eumseong-xi.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/asan-belcore.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/omokcheon-thelive.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/dalseo-prugio.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/beomil-queens.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/hs-icheon.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/edc-sclass16.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/icheon-yemiji.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/yeonsu-meridian.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/hs-gaya.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/uam-harrington.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/dalseo-xi-zenik.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/seongnam-woomi.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/jangan-sclass.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/gwangju-jungang-lotte.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/suncheon-greenwell.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/centum-highvenue.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/munhwa-sujain.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/gwangju-songam.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/seonam-hs.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/pine-avenue.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/yeoju-rosebien.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/elif-suwon.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/jeju-yeondong.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/imok-dietre2.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/bc-medis.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/edc-eduriver.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/bc-annature.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/yangsan-parkpalice.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/yeongju-harrington.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/cheomdan3-hoban.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/chuncheon-urbanforet.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/bc-vista.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/onam1.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/godeok-woomi.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/iksan-felipia.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/godeok-sujain.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/onam3.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/gyeongsan-hoban.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/parkvista.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/gimhae-laciel.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/jiksan-dongil.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/seosan-trivn.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/godeok-housed.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/edc-ecoriver.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/gimhae-sinmun-ipark.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/cheonan-deast.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/elif-seongseong.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/gongju-jinarehii.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/gangneung-umirin.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/yangsan-thesky.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/yeosu-soje.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/inha-roicent.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/forena-dangri.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/cheonan-humanvill.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/munsuro-vista.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/ssy-hangang.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/jeonju-artiem.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/edc-rivercity.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/cheonan-ipark34.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/edc-elga.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/hyangnam.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/oryong-harrington.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/richmond-soyang.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/seonhwa-lucier.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/changwon-megacentum.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/grancity-philhouse.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/geoje-asterium.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/osan-heritage.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/eopseong-lake1.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/baekseok-xi.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/eopseong-lake2.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/forena-sicheong.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/doan-centumriche.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/bukosan-deforet.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/yeongjong-dietre.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/hwaseo-honors.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/grandlac.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/geoje-marinepiece.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/dujeong-granpeak.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/eomgung-travis.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/dongnae-eduforet.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/cityociel9.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/leel-centum.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/zenith-daeyeon.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/guwol-artpark.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/gwangju-champions.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/doosan-bucheon.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/sangdong-lotte.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/agent.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/jupjup/terms.html</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>

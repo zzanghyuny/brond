@@ -1,0 +1,3276 @@
+{
+ "updated": "2026-11-26",
+ "regions": [
+  {
+   "rid": "sudogwon",
+   "label": "수도권",
+   "areas": "서울·경기·인천",
+   "date": "2026-11-16",
+   "count": 30
+  },
+  {
+   "rid": "chungcheong",
+   "label": "충청권",
+   "areas": "충남·대전·충북·세종",
+   "date": "2026-11-17",
+   "count": 22
+  },
+  {
+   "rid": "busan-ulsan",
+   "label": "부산·울산",
+   "areas": "부산·울산",
+   "date": "2026-11-17",
+   "count": 20
+  },
+  {
+   "rid": "daegu-gyeongbuk-gangwon",
+   "label": "대구·경북·강원",
+   "areas": "대구·경북·강원",
+   "date": "2026-11-17",
+   "count": 7
+  },
+  {
+   "rid": "gyeongnam-honam-jeju",
+   "label": "경남·호남·제주",
+   "areas": "경남·광주·전북·전남·제주",
+   "date": "2026-11-17",
+   "count": 16
+  }
+ ],
+ "sites": [
+  {
+   "key": "gochon-xi",
+   "name": "고촌센트럴자이",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "김포",
+   "area": "김포 고촌읍",
+   "n": 1297,
+   "builder": "GS건설",
+   "yr": 2024,
+   "mo": 6,
+   "done": true,
+   "badge": "바로 입주",
+   "movein": "2024년 6월 준공 · 바로 입주",
+   "size": "84",
+   "price": 7.584,
+   "range": "84A 7.45~7.58억(최초 분양가)",
+   "benefit": "",
+   "points": [
+    "2024년 6월 준공, 바로 입주 가능",
+    "김포 고촌읍 1,297세대 자이"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/gochon-xi-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/gochon-xi-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "seoulsan-parkgrande",
+   "name": "e편한세상 서울산 파크그란데",
+   "rid": "busan-ulsan",
+   "rlabel": "부산·울산",
+   "sido": "울산",
+   "area": "울산 울주군 상북면",
+   "n": 607,
+   "builder": "DL건설",
+   "yr": 2024,
+   "mo": 9,
+   "done": true,
+   "badge": "바로 입주",
+   "movein": "2024년 9월 준공 · 바로 입주",
+   "size": "84",
+   "price": 3.81,
+   "range": "84A 최고 3.81억(2022 공고가)",
+   "benefit": "",
+   "points": [
+    "2024년 입주, 바로 입주 가능",
+    "영남알프스 앞 607세대 e편한세상"
+   ],
+   "aerial": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/seoulsan-parkgrande-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/seoulsan-parkgrande-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/parkgrande/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "hs-parkforet",
+   "name": "힐스테이트 수원파크포레",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "수원",
+   "area": "수원 권선 서둔동",
+   "n": 482,
+   "builder": "현대엔지니어링",
+   "yr": 2024,
+   "mo": 12,
+   "done": true,
+   "badge": "바로 입주",
+   "movein": "2024년 12월 준공 · 바로 입주",
+   "size": "84",
+   "price": 8.94,
+   "range": "84 8.94억~(준공 후 분양)",
+   "benefit": "",
+   "points": [
+    "2024년 12월 준공, 바로 입주 가능",
+    "482세대 힐스테이트"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/hs-parkforet-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/hs-parkforet-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "hongseong-eph",
+   "name": "e편한세상 홍성 더센트럴",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "충남",
+   "area": "홍성 홍성읍 월산리",
+   "n": 470,
+   "builder": "DL건설",
+   "yr": 2025,
+   "mo": 2,
+   "done": true,
+   "badge": "바로 입주",
+   "movein": "2025년 2월 준공 · 바로 입주",
+   "size": "84",
+   "price": 3.915,
+   "range": "84㎡ 3.71~3.92억(2022 공고)",
+   "benefit": "",
+   "points": [
+    "2025년 2월 준공, 바로 입주 가능",
+    "홍성읍 월산리 470세대 e편한세상"
+   ],
+   "aerial": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/hongseong-eph-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/hongseong-eph-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/ethecentral/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "eumseong-markverre",
+   "name": "음성 푸르지오 마크베르",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "충북",
+   "area": "음성 대소읍(성본산단)",
+   "n": 644,
+   "builder": "대우건설",
+   "yr": 2025,
+   "mo": 4,
+   "done": true,
+   "badge": "바로 입주",
+   "movein": "2025년 4월 준공 · 바로 입주",
+   "size": "84",
+   "price": 3.47,
+   "range": "84㎡ 3.01~3.47억",
+   "benefit": "",
+   "points": [
+    "2025년 4월 입주, 바로 입주 가능",
+    "음성 성본산단 644세대 푸르지오"
+   ],
+   "aerial": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/eumseong-markverre-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/eumseong-markverre-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/markverre/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "eumseong-fullhouse",
+   "name": "음성 우미린 풀하우스",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "충북",
+   "area": "음성 대소읍(성본산단)",
+   "n": 1019,
+   "builder": "우미건설",
+   "yr": 2025,
+   "mo": 10,
+   "done": true,
+   "badge": "바로 입주",
+   "movein": "2025년 10월 준공 · 바로 입주",
+   "size": "84",
+   "price": 3.26,
+   "range": "84㎡ 2.83~3.26억(분양가상한제)",
+   "benefit": "",
+   "points": [
+    "2025년 입주, 바로 입주 가능",
+    "음성 성본산단 1,019세대 우미린",
+    "분양가상한제 적용"
+   ],
+   "aerial": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/eumseong-fullhouse-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/eumseong-fullhouse-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/fullhouse/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "eumseong-xi",
+   "name": "음성자이 센트럴시티",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "충북",
+   "area": "음성 금왕읍",
+   "n": 1505,
+   "builder": "GS건설",
+   "yr": 2025,
+   "mo": 11,
+   "done": true,
+   "badge": "바로 입주",
+   "movein": "2025년 11월 준공 · 바로 입주",
+   "size": "84",
+   "price": 3.95,
+   "range": "84A 16층↑ 3.95억(6~10층 3.85억)",
+   "benefit": "",
+   "points": [
+    "2025년 11월 준공, 바로 입주 가능",
+    "1,505세대, 음성 최대 단지"
+   ],
+   "aerial": null,
+   "location": null,
+   "psrc": "https://blog.naver.com/hamwish/224479077588",
+   "psrc_label": "blog.naver.com",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "asan-belcore",
+   "name": "아산 벨코어 스위첸",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "충남",
+   "area": "아산 모종동",
+   "n": 299,
+   "builder": "KCC건설",
+   "yr": 2025,
+   "mo": 12,
+   "done": true,
+   "badge": "바로 입주",
+   "movein": "2025년 12월 준공 · 바로 입주",
+   "size": "84",
+   "price": 4.65,
+   "range": "84㎡ 4.30~4.65억(2022 공고)",
+   "benefit": "",
+   "points": [
+    "아산시외버스터미널 바로 앞",
+    "2026년 1월 입주, 바로 입주 가능",
+    "최고 46층 299세대 스위첸"
+   ],
+   "aerial": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/asan-belcore-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/asan-belcore-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/belcore/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "omokcheon-thelive",
+   "name": "오목천역 더리브",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "수원",
+   "area": "수원 권선 오목천동",
+   "n": 201,
+   "builder": "SGC이테크건설",
+   "yr": 2026,
+   "mo": 2,
+   "done": true,
+   "badge": "바로 입주",
+   "movein": "2026년 2월 준공 · 바로 입주",
+   "size": "84",
+   "price": 7.687,
+   "range": "84C 7.69억(84 최고 8.22억)",
+   "benefit": "84㎡ 페이백 1억원+이자지원 1천만원",
+   "points": [
+    "수인분당선 오목천역 앞",
+    "2026년 2월 준공, 바로 입주 가능",
+    "84㎡ 1억원 페이백·이자 지원 1천만원 조건"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/omokcheon-thelive-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/omokcheon-thelive-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "dalseo-prugio",
+   "name": "달서 푸르지오 시그니처",
+   "rid": "daegu-gyeongbuk-gangwon",
+   "rlabel": "대구·경북·강원",
+   "sido": "대구",
+   "area": "대구 달서구 본리동",
+   "n": 993,
+   "builder": "대우건설",
+   "yr": 2026,
+   "mo": 3,
+   "done": true,
+   "badge": "바로 입주",
+   "movein": "2026년 3월 준공 · 바로 입주",
+   "size": "84",
+   "price": 6.298,
+   "range": "84A·B·C 5.56~6.30억(2022년 최초 공고가) · 현재 최대 1억 할인(호실별)",
+   "benefit": "",
+   "points": [
+    "2026년 3월 준공, 바로 입주 가능",
+    "본리네거리 최고 49층 993세대 푸르지오"
+   ],
+   "aerial": {
+    "url": "/posts/images/daegu-gyeongbuk-gangwon-firstcome-20261117/dalseo-prugio-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/daegu-gyeongbuk-gangwon-firstcome-20261117/dalseo-prugio-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/dalseoprugio/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "beomil-queens",
+   "name": "범일 퀸즈이즈카운티",
+   "rid": "busan-ulsan",
+   "rlabel": "부산·울산",
+   "sido": "부산",
+   "area": "부산 동구 범일동",
+   "n": 268,
+   "builder": "대성문·리즈건설·이채건설",
+   "yr": 2026,
+   "mo": 5,
+   "done": true,
+   "badge": "바로 입주",
+   "movein": "2026년 5월 준공 · 바로 입주",
+   "size": "84",
+   "price": 8.19,
+   "range": "84 7.54~8.19억(공고가, 84B 최고)",
+   "benefit": "",
+   "points": [
+    "2호선 문현역 약 330m",
+    "2026년 입주, 바로 입주 가능",
+    "268세대 주상복합"
+   ],
+   "aerial": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/beomil-queens-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": null,
+   "psrc": "https://apttoyou.kr/queensiscounty/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "hs-icheon",
+   "name": "힐스테이트 이천역",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "이천",
+   "area": "이천 증일동",
+   "n": 885,
+   "builder": "현대건설",
+   "yr": 2026,
+   "mo": 7,
+   "done": true,
+   "badge": "바로 입주",
+   "movein": "2026년 7월 준공 · 바로 입주",
+   "size": "84",
+   "price": 6.1,
+   "range": "2단지 84 평균 6.10억",
+   "benefit": "",
+   "points": [
+    "경강선 이천역 앞",
+    "2026년 7월 준공, 바로 입주 가능",
+    "885세대 힐스테이트"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/hs-icheon-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/hs-icheon-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "edc-sclass16",
+   "name": "에코델타 중흥S클래스",
+   "rid": "busan-ulsan",
+   "rlabel": "부산·울산",
+   "sido": "부산",
+   "area": "부산 강서구 에코델타시티 16BL",
+   "n": 1067,
+   "builder": "중흥토건",
+   "yr": 2026,
+   "mo": 9,
+   "done": true,
+   "badge": "바로 입주",
+   "movein": "2026년 9월 준공 · 바로 입주",
+   "size": "84",
+   "price": 5.02,
+   "range": "84A 4.54~5.02억(분양가상한제)",
+   "benefit": "",
+   "points": [
+    "2026년 11월 입주 시작, 바로 입주 가능",
+    "에코델타시티 16블록 1,067세대"
+   ],
+   "aerial": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/edc-sclass16-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/edc-sclass16-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/edcsclass/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "icheon-yemiji",
+   "name": "이천역 예미지 센트럴파크",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "이천",
+   "area": "이천 중리동",
+   "n": 1009,
+   "builder": "금성백조",
+   "yr": 2026,
+   "mo": 11,
+   "done": true,
+   "badge": "바로 입주",
+   "movein": "2026년 11월 준공 · 바로 입주",
+   "size": "84",
+   "price": 5.47,
+   "range": "84 5.09~5.47억",
+   "benefit": "",
+   "points": [
+    "이천 중리지구 1,009세대",
+    "2026년 11월 입주, 바로 입주 가능"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/icheon-yemiji-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/icheon-yemiji-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "yeonsu-meridian",
+   "name": "연수 월드메르디앙 어반포레",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "인천",
+   "area": "인천 연수 동춘동",
+   "n": 133,
+   "builder": "월드건설",
+   "yr": 2026,
+   "mo": 4,
+   "done": false,
+   "badge": "2026.04 입주",
+   "movein": "2026년 4월 입주 예정",
+   "size": "60",
+   "price": 4.92,
+   "range": "60A 4.38~4.92억",
+   "benefit": "",
+   "points": [
+    "2026년 4월 준공, 바로 입주 가능",
+    "연수 동춘동 133세대"
+   ],
+   "aerial": null,
+   "location": null,
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "hs-gaya",
+   "name": "힐스테이트 가야",
+   "rid": "busan-ulsan",
+   "rlabel": "부산·울산",
+   "sido": "부산",
+   "area": "부산 부산진구 가야동",
+   "n": 487,
+   "builder": "현대건설",
+   "yr": 2026,
+   "mo": 12,
+   "done": false,
+   "badge": "2026.12 입주",
+   "movein": "2026년 12월 입주 예정",
+   "size": "84",
+   "price": 8.99,
+   "range": "84A 8.33~8.99억",
+   "benefit": "",
+   "points": [
+    "2호선 동의대역 약 220m",
+    "487세대 힐스테이트"
+   ],
+   "aerial": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/hs-gaya-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/hs-gaya-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/hillstategaya/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "uam-harrington",
+   "name": "우암 해링턴마레",
+   "rid": "busan-ulsan",
+   "rlabel": "부산·울산",
+   "sido": "부산",
+   "area": "부산 남구 우암동",
+   "n": 2205,
+   "builder": "효성중공업·진흥기업",
+   "yr": 2026,
+   "mo": 12,
+   "done": false,
+   "badge": "2026.12 입주",
+   "movein": "2026년 12월 입주 예정",
+   "size": "84",
+   "price": 7.94,
+   "range": "84A 최고 7.94억(84C 7.50억)",
+   "benefit": "",
+   "points": [
+    "북항 옆 2,205세대 대단지",
+    "2026년 12월 입주 예정"
+   ],
+   "aerial": null,
+   "location": null,
+   "psrc": "https://m.richgo.ai/realty/parcel/a9rGJdL",
+   "psrc_label": "m.richgo.ai",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "dalseo-xi-zenik",
+   "name": "달서자이 제니크",
+   "rid": "daegu-gyeongbuk-gangwon",
+   "rlabel": "대구·경북·강원",
+   "sido": "대구",
+   "area": "대구 달서구 본리동",
+   "n": 360,
+   "builder": "GS건설",
+   "yr": 2027,
+   "mo": 2,
+   "done": false,
+   "badge": "2027.02 입주",
+   "movein": "2027년 2월 입주 예정",
+   "size": "84",
+   "price": 5.973,
+   "range": "84A 4.63~5.87억 · 84B 4.84~5.97억",
+   "benefit": "",
+   "points": [
+    "본리네거리 최고 49층 자이",
+    "발코니 확장·시스템 에어컨 4대 공급가 포함",
+    "2027년 2월 입주 후분양"
+   ],
+   "aerial": {
+    "url": "/posts/images/daegu-gyeongbuk-gangwon-firstcome-20261117/dalseo-xi-zenik-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/daegu-gyeongbuk-gangwon-firstcome-20261117/dalseo-xi-zenik-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/dalseoxizenik/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "seongnam-woomi",
+   "name": "대전 성남 우미린 뉴시티",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "대전",
+   "area": "대전 동구 성남동",
+   "n": 1213,
+   "builder": "우미건설",
+   "yr": 2027,
+   "mo": 6,
+   "done": false,
+   "badge": "2027.06 입주",
+   "movein": "2027년 6월 입주 예정",
+   "size": "84",
+   "price": 5.821,
+   "range": "84㎡ 5.16~5.82억",
+   "benefit": "",
+   "points": [
+    "대전역 북쪽 성남동1구역 재개발",
+    "1,213세대 우미린"
+   ],
+   "aerial": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/seongnam-woomi-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/seongnam-woomi-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/newcity/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "jangan-sclass",
+   "name": "장안지구 중흥S클래스",
+   "rid": "busan-ulsan",
+   "rlabel": "부산·울산",
+   "sido": "부산",
+   "area": "부산 기장군 장안읍",
+   "n": 514,
+   "builder": "중흥토건",
+   "yr": 2027,
+   "mo": 6,
+   "done": false,
+   "badge": "2027.06 입주",
+   "movein": "2027년 6월 입주 예정",
+   "size": "84",
+   "price": 5.137,
+   "range": "84 5.14억(분양가상한제)",
+   "benefit": "",
+   "points": [
+    "선시공 후분양, 2027년 6월 입주",
+    "기장군 장안지구 514세대"
+   ],
+   "aerial": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/jangan-sclass-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/jangan-sclass-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/jasclass/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "gwangju-jungang-lotte",
+   "name": "중앙공원 롯데캐슬 시그니처",
+   "rid": "gyeongnam-honam-jeju",
+   "rlabel": "경남·호남·제주",
+   "sido": "광주",
+   "area": "광주 서구 풍암·금호동",
+   "n": 2772,
+   "builder": "롯데건설",
+   "yr": 2027,
+   "mo": 8,
+   "done": false,
+   "badge": "2027.08 입주",
+   "movein": "2027년 8월 입주 예정",
+   "size": "84",
+   "price": 8.053,
+   "range": "84㎡ 7.26~8.05억(2-2BL 84A 10층 이상 최고가)",
+   "benefit": "",
+   "points": [
+    "중앙공원을 품은 2,772세대",
+    "롯데건설 롯데캐슬"
+   ],
+   "aerial": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/gwangju-jungang-lotte-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/gwangju-jungang-lotte-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/jungangcastle/price",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "suncheon-greenwell",
+   "name": "순천 지에이그린웰 하이드원",
+   "rid": "gyeongnam-honam-jeju",
+   "rlabel": "경남·호남·제주",
+   "sido": "전남",
+   "area": "순천 덕암동",
+   "n": 475,
+   "builder": "지에이건설",
+   "yr": 2027,
+   "mo": 9,
+   "done": false,
+   "badge": "2027.09 입주",
+   "movein": "2027년 9월 입주 예정",
+   "size": "84",
+   "price": 4.511,
+   "range": "84A 4.09~4.51억 · 84B 최고 4.60억",
+   "benefit": "",
+   "points": [
+    "순천역 인근 덕암동",
+    "475세대 지에이그린웰"
+   ],
+   "aerial": null,
+   "location": null,
+   "psrc": "https://files-scs.pstatic.net/2024/12/15/TzeHR1Kq0F/순천",
+   "psrc_label": "files-scs.pstatic.net",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "centum-highvenue",
+   "name": "e편한세상 센텀 하이베뉴",
+   "rid": "busan-ulsan",
+   "rlabel": "부산·울산",
+   "sido": "부산",
+   "area": "부산 해운대구 재송동",
+   "n": 924,
+   "builder": "DL이앤씨",
+   "yr": 2027,
+   "mo": 10,
+   "done": false,
+   "badge": "2027.10 입주",
+   "movein": "2027년 10월 입주 예정",
+   "size": "59",
+   "price": 6.18,
+   "range": "59A 5.95~6.18억",
+   "benefit": "",
+   "points": [
+    "재송중 약 240m·반산초 약 310m",
+    "924세대 e편한세상"
+   ],
+   "aerial": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/centum-highvenue-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/centum-highvenue-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/highvenue/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "munhwa-sujain",
+   "name": "대전 문화공원 수자인",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "대전",
+   "area": "대전 중구 문화동",
+   "n": 509,
+   "builder": "한양",
+   "yr": 2027,
+   "mo": 11,
+   "done": false,
+   "badge": "2027.11 입주",
+   "movein": "2027년 11월 입주 예정",
+   "size": "84",
+   "price": 5.412,
+   "range": "84㎡ 5.03~5.41억",
+   "benefit": "",
+   "points": [
+    "대전문화공원 민간공원특례 단지",
+    "509세대 수자인"
+   ],
+   "aerial": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/munhwa-sujain-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/munhwa-sujain-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/munhwapark/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "gwangju-songam",
+   "name": "송암공원 중흥S클래스 SK뷰",
+   "rid": "gyeongnam-honam-jeju",
+   "rlabel": "경남·호남·제주",
+   "sido": "광주",
+   "area": "광주 남구 송하동",
+   "n": 1575,
+   "builder": "중흥토건·SK에코플랜트",
+   "yr": 2027,
+   "mo": 12,
+   "done": false,
+   "badge": "2027.12 입주",
+   "movein": "2027년 12월 입주 예정",
+   "size": "84",
+   "price": 5.545,
+   "range": "84A 4.99~5.55억 · 84C 4.95~5.50억",
+   "benefit": "",
+   "points": [
+    "송암공원과 함께 짓는 공원 단지",
+    "1,575세대 대단지"
+   ],
+   "aerial": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/gwangju-songam-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/gwangju-songam-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/songamsclass/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "seonam-hs",
+   "name": "힐스테이트 선암호수공원",
+   "rid": "busan-ulsan",
+   "rlabel": "부산·울산",
+   "sido": "울산",
+   "area": "울산 남구 야음동",
+   "n": 631,
+   "builder": "현대건설",
+   "yr": 2028,
+   "mo": 2,
+   "done": false,
+   "badge": "2028.02 입주",
+   "movein": "2028년 2월 입주 예정",
+   "size": "84",
+   "price": 9.395,
+   "range": "84 8.78~9.40억",
+   "benefit": "",
+   "points": [
+    "울산 남구 야음사거리 앞 최고 44층",
+    "631세대, 펜트하우스 외 전 세대 84㎡"
+   ],
+   "aerial": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/seonam-hs-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/seonam-hs-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/seonamlake/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "pine-avenue",
+   "name": "더 플래티넘 파인애비뉴",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "평택",
+   "area": "평택 팽성읍",
+   "n": 1048,
+   "builder": "쌍용건설",
+   "yr": 2028,
+   "mo": 3,
+   "done": false,
+   "badge": "2028.03 입주",
+   "movein": "2028년 3월 입주 예정",
+   "size": "84",
+   "price": 5.39,
+   "range": "84 4.96~5.39억",
+   "benefit": "",
+   "points": [
+    "평택 팽성읍 1,048세대",
+    "쌍용건설 더 플래티넘"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/pine-avenue-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": null,
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "yeoju-rosebien",
+   "name": "여주역 로제비앙 더센텀",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "여주",
+   "area": "여주 홍문동",
+   "n": 744,
+   "builder": "대광건영",
+   "yr": 2028,
+   "mo": 4,
+   "done": false,
+   "badge": "2028.04 입주",
+   "movein": "2028년 4월 입주 예정",
+   "size": "84",
+   "price": 5.36,
+   "range": "84 4.30~5.36억",
+   "benefit": "",
+   "points": [
+    "경강선 여주역 도보 5분",
+    "744세대 로제비앙"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/yeoju-rosebien-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/yeoju-rosebien-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "elif-suwon",
+   "name": "엘리프 한신더휴 수원 D3",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "수원",
+   "area": "수원 권선 당수1지구",
+   "n": 697,
+   "builder": "계룡건설·한신공영",
+   "yr": 2028,
+   "mo": 4,
+   "done": false,
+   "badge": "2028.04 입주",
+   "movein": "2028년 4월 입주 예정",
+   "size": "84",
+   "price": 7.95,
+   "range": "84A 6.89~7.95억",
+   "benefit": "",
+   "points": [
+    "수원 당수1지구 697세대",
+    "분양가상한제 적용 단지"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/elif-suwon-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/elif-suwon-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "jeju-yeondong",
+   "name": "이안 연동스퀘어",
+   "rid": "gyeongnam-honam-jeju",
+   "rlabel": "경남·호남·제주",
+   "sido": "제주",
+   "area": "제주시 연동",
+   "n": 96,
+   "builder": "대우산업개발",
+   "yr": 2028,
+   "mo": 4,
+   "done": false,
+   "badge": "2028.04 입주",
+   "movein": "2028년 4월 입주 예정",
+   "size": "84",
+   "price": 8.64,
+   "range": "84㎡ 7.77~8.64억(2025.11 공고)",
+   "benefit": "",
+   "points": [
+    "제주도청 약 550m, 연동 중심",
+    "96세대 1개동 아파트"
+   ],
+   "aerial": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/jeju-yeondong-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/jeju-yeondong-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/yeondongsquare/price",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "imok-dietre2",
+   "name": "북수원이목 디에트르 더 리체Ⅱ",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "수원",
+   "area": "수원 장안 이목동",
+   "n": 1744,
+   "builder": "대방건설",
+   "yr": 2028,
+   "mo": 5,
+   "done": false,
+   "badge": "2028.05 입주",
+   "movein": "2028년 5월 입주 예정",
+   "size": "84",
+   "price": 10.307,
+   "range": "84C 10.31억(84 최고 11.41억)",
+   "benefit": "",
+   "points": [
+    "북수원 이목지구 1,744세대",
+    "대방건설 디에트르"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/imok-dietre2-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/imok-dietre2-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "bc-medis",
+   "name": "브레인시티 메디스파크 대광로제비앙 모아엘가",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "평택",
+   "area": "평택 브레인시티",
+   "n": 1215,
+   "builder": "대광건영·모아건설",
+   "yr": 2028,
+   "mo": 5,
+   "done": false,
+   "badge": "2028.05 입주",
+   "movein": "2028년 5월 입주 예정",
+   "size": "84",
+   "price": 5.43,
+   "range": "84 최고 5.43억",
+   "benefit": "",
+   "points": [
+    "평택 브레인시티 1,215세대",
+    "대광 로제비앙·모아엘가 브랜드 단지"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/bc-medis-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": null,
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "edc-eduriver",
+   "name": "에코델타시티 중흥S-클래스 에듀리버",
+   "rid": "busan-ulsan",
+   "rlabel": "부산·울산",
+   "sido": "부산",
+   "area": "부산 강서구 에코델타시티 4BL",
+   "n": 728,
+   "builder": "중흥토건",
+   "yr": 2028,
+   "mo": 6,
+   "done": false,
+   "badge": "2028.06 입주",
+   "movein": "2028년 6월 입주 예정",
+   "size": "84",
+   "price": 5.49,
+   "range": "84C 4.84~5.49억(84A 최고 5.44억, 분양가상한제)",
+   "benefit": "",
+   "points": [
+    "단지 안 초등학교·유치원 계획",
+    "분양가상한제 적용",
+    "에코델타시티 4블록 728세대"
+   ],
+   "aerial": null,
+   "location": null,
+   "psrc": "https://listup24.com/%EC%97%90%EC%BD%94%EB%8D%B8%ED%83%80%EC%8B%9C%ED%8B%B0-%EC%A4%91%ED%9D%A5s-%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%97%90%EB%93%80%EB%A6%AC%EB%B2%84-%EB%B6%84%EC%96%91%EA%B0%80-%EC%B2%AD%EC%95%BD-%EC%9D%BC/",
+   "psrc_label": "리스트업24",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "bc-annature",
+   "name": "브레인시티 앤네이처 미래도",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "평택",
+   "area": "평택 브레인시티 10BL",
+   "n": 1413,
+   "builder": "미래도건설",
+   "yr": 2028,
+   "mo": 7,
+   "done": false,
+   "badge": "2028.07 입주",
+   "movein": "2028년 7월 입주 예정",
+   "size": "84",
+   "price": 4.952,
+   "range": "84C 4.80~4.95억",
+   "benefit": "",
+   "points": [
+    "평택 브레인시티 10블록 1,413세대",
+    "브레인시티 선착순 단지 중 84㎡ 분양가가 가장 낮은 편"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/bc-annature-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/bc-annature-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "yangsan-parkpalice",
+   "name": "양산자이 파크팰리체",
+   "rid": "gyeongnam-honam-jeju",
+   "rlabel": "경남·호남·제주",
+   "sido": "경남",
+   "area": "양산 평산동(웅상)",
+   "n": 842,
+   "builder": "GS건설",
+   "yr": 2028,
+   "mo": 7,
+   "done": false,
+   "badge": "2028.07 입주",
+   "movein": "2028년 7월 입주 예정",
+   "size": "84",
+   "price": 5.153,
+   "range": "84㎡ 4.57~5.15억",
+   "benefit": "",
+   "points": [
+    "양산의 첫 자이",
+    "웅상 평산동 842세대"
+   ],
+   "aerial": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/yangsan-parkpalice-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": null,
+   "psrc": "https://apttoyou.kr/parkpalice/price",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "yeongju-harrington",
+   "name": "효성해링턴 플레이스 영주 더리버",
+   "rid": "daegu-gyeongbuk-gangwon",
+   "rlabel": "대구·경북·강원",
+   "sido": "경북",
+   "area": "경북 영주 휴천동",
+   "n": 445,
+   "builder": "진흥기업",
+   "yr": 2028,
+   "mo": 9,
+   "done": false,
+   "badge": "2028.09 입주",
+   "movein": "2028년 9월 입주 예정",
+   "size": "84",
+   "price": 4.752,
+   "range": "84A 4.25~4.75억 · 84B 4.20~4.72억",
+   "benefit": "",
+   "points": [
+    "영주 서천 변",
+    "445세대 해링턴 플레이스"
+   ],
+   "aerial": {
+    "url": "/posts/images/daegu-gyeongbuk-gangwon-firstcome-20261117/yeongju-harrington-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/daegu-gyeongbuk-gangwon-firstcome-20261117/yeongju-harrington-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/harringtonriver/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "cheomdan3-hoban",
+   "name": "첨단3지구 호반써밋 A7",
+   "rid": "gyeongnam-honam-jeju",
+   "rlabel": "경남·호남·제주",
+   "sido": "광주",
+   "area": "광주 북구 월출동(첨단3지구 A7BL)",
+   "n": 356,
+   "builder": "호반건설",
+   "yr": 2028,
+   "mo": 9,
+   "done": false,
+   "badge": "2028.09 입주",
+   "movein": "2028년 9월 입주 예정",
+   "size": "84",
+   "price": 5.43,
+   "range": "A7 84A 4.94~5.43억 · 84B 4.89~5.37억(분양가상한제)",
+   "benefit": "",
+   "points": [
+    "광주연구개발특구 첨단3지구",
+    "분양가상한제 적용 356세대"
+   ],
+   "aerial": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/cheomdan3-hoban-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/cheomdan3-hoban-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/chumdansummit/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "chuncheon-urbanforet",
+   "name": "춘천 동문 디 이스트 어반포레",
+   "rid": "daegu-gyeongbuk-gangwon",
+   "rlabel": "대구·경북·강원",
+   "sido": "강원",
+   "area": "강원 춘천 동면 만천리",
+   "n": 569,
+   "builder": "동문건설",
+   "yr": 2028,
+   "mo": 10,
+   "done": false,
+   "badge": "2028.10 입주",
+   "movein": "2028년 10월 입주 예정",
+   "size": "84",
+   "price": 5.66,
+   "range": "84A 4.83~5.66억 · 59㎡ 3.59~3.95억",
+   "benefit": "",
+   "points": [
+    "춘천 동면 만천리 569세대",
+    "84㎡가 536세대"
+   ],
+   "aerial": {
+    "url": "/posts/images/daegu-gyeongbuk-gangwon-firstcome-20261117/chuncheon-urbanforet-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/daegu-gyeongbuk-gangwon-firstcome-20261117/chuncheon-urbanforet-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/urbanforet/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "bc-vista",
+   "name": "브레인시티 비스타동원",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "평택",
+   "area": "평택 브레인시티 4BL",
+   "n": 1600,
+   "builder": "동원개발",
+   "yr": 2028,
+   "mo": 12,
+   "done": false,
+   "badge": "2028.12 입주",
+   "movein": "2028년 12월 입주 예정",
+   "size": "84",
+   "price": 5.66,
+   "range": "84B 5.24~5.66억",
+   "benefit": "",
+   "points": [
+    "평택 브레인시티 4블록",
+    "1,600세대 대단지 비스타동원"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/bc-vista-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/bc-vista-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "onam1",
+   "name": "오남역 서희스타힐스 여의재 1단지",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "남양주",
+   "area": "남양주 오남읍",
+   "n": 1308,
+   "builder": "서희건설",
+   "yr": 2028,
+   "mo": 12,
+   "done": false,
+   "badge": "2028.12 입주",
+   "movein": "2028년 12월 입주 예정",
+   "size": "84",
+   "price": 7.19,
+   "range": "84 6.70~7.19억",
+   "benefit": "",
+   "points": [
+    "4호선 진접선 오남역 도보권",
+    "1,308세대 대단지"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/onam1-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/onam1-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "godeok-woomi",
+   "name": "평택 고덕 우미린 프레스티지",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "평택",
+   "area": "평택 고덕(Abc-36BL)",
+   "n": 743,
+   "builder": "우미건설 외",
+   "yr": 2028,
+   "mo": 12,
+   "done": false,
+   "badge": "2028.12 입주",
+   "movein": "2028년 12월 입주 예정",
+   "size": "84",
+   "price": 5.873,
+   "range": "84A 5.29~5.87억",
+   "benefit": "",
+   "points": [
+    "고덕국제신도시 Abc-36블록",
+    "743세대 우미린 프레스티지"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/godeok-woomi-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/godeok-woomi-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "iksan-felipia",
+   "name": "익산 펠리피아",
+   "rid": "gyeongnam-honam-jeju",
+   "rlabel": "경남·호남·제주",
+   "sido": "전북",
+   "area": "익산 팔봉동",
+   "n": 572,
+   "builder": "세움종합건설",
+   "yr": 2028,
+   "mo": 12,
+   "done": false,
+   "badge": "2028.12 입주",
+   "movein": "2028년 12월 입주 예정",
+   "size": "84",
+   "price": 4.18,
+   "range": "84㎡ 3.76~4.18억",
+   "benefit": "",
+   "points": [
+    "익산 팔봉동 572세대",
+    "84㎡ 3.76억~4.18억원"
+   ],
+   "aerial": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/iksan-felipia-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/iksan-felipia-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/felipia/price",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "godeok-sujain",
+   "name": "고덕 수자인풍경채 1·2단지",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "평택",
+   "area": "평택 고덕(Abc-61BL 등)",
+   "n": 1126,
+   "builder": "BS한양·제일건설",
+   "yr": 2029,
+   "mo": 1,
+   "done": false,
+   "badge": "2029.01 입주",
+   "movein": "2029년 1월 입주 예정",
+   "size": "84",
+   "price": 5.671,
+   "range": "84A 5.11~5.67억",
+   "benefit": "",
+   "points": [
+    "고덕국제신도시 2단계 블록",
+    "1·2단지 합계 1,126세대"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/godeok-sujain-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/godeok-sujain-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "onam3",
+   "name": "오남역 서희스타힐스 여의재 3단지",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "남양주",
+   "area": "남양주 오남읍",
+   "n": 1056,
+   "builder": "서희건설",
+   "yr": 2029,
+   "mo": 1,
+   "done": false,
+   "badge": "2029.01 입주",
+   "movein": "2029년 1월 입주 예정",
+   "size": "84",
+   "price": 7.09,
+   "range": "84 6.88~7.09억",
+   "benefit": "",
+   "points": [
+    "4호선 진접선 오남역 도보권",
+    "1,056세대 서희스타힐스"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/onam3-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/onam3-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "gyeongsan-hoban",
+   "name": "경산 상방공원 호반써밋",
+   "rid": "daegu-gyeongbuk-gangwon",
+   "rlabel": "대구·경북·강원",
+   "sido": "경북",
+   "area": "경북 경산 상방동",
+   "n": 1004,
+   "builder": "호반건설",
+   "yr": 2029,
+   "mo": 1,
+   "done": false,
+   "badge": "2029.01 입주",
+   "movein": "2029년 1월 입주 예정",
+   "size": "84",
+   "price": 5.469,
+   "range": "84A 4.64~5.47억 · 84B 4.46~5.27억",
+   "benefit": "",
+   "points": [
+    "64만㎡ 상방공원 조성",
+    "경산동부초 약 450m",
+    "1,004세대 호반써밋"
+   ],
+   "aerial": {
+    "url": "/posts/images/daegu-gyeongbuk-gangwon-firstcome-20261117/gyeongsan-hoban-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/daegu-gyeongbuk-gangwon-firstcome-20261117/gyeongsan-hoban-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/hobansummitpark/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "parkvista",
+   "name": "더파크 비스타동원",
+   "rid": "busan-ulsan",
+   "rlabel": "부산·울산",
+   "sido": "부산",
+   "area": "부산 사상구 감전동",
+   "n": 852,
+   "builder": "동원개발",
+   "yr": 2029,
+   "mo": 1,
+   "done": false,
+   "badge": "2029.01 입주",
+   "movein": "2029년 1월 입주 예정",
+   "size": "84",
+   "price": 5.953,
+   "range": "84A 5.45~5.95억(테라스 84T 최고 6.07억)",
+   "benefit": "",
+   "points": [
+    "62만㎡ 사상근린공원 안 공원 단지",
+    "2호선 감전역 약 480m",
+    "전 세대 84㎡ 852세대"
+   ],
+   "aerial": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/parkvista-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/parkvista-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/theparkvista/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "gimhae-laciel",
+   "name": "신문 대상 웰라움 라시엘",
+   "rid": "gyeongnam-honam-jeju",
+   "rlabel": "경남·호남·제주",
+   "sido": "경남",
+   "area": "김해 신문동",
+   "n": 375,
+   "builder": "대상건설",
+   "yr": 2029,
+   "mo": 1,
+   "done": false,
+   "badge": "2029.01 입주",
+   "movein": "2029년 1월 입주 예정",
+   "size": "84",
+   "price": 4.993,
+   "range": "84A 4.60~4.99억 · 84B 4.60~4.99억",
+   "benefit": "",
+   "points": [
+    "장유신문지구",
+    "375세대 웰라움 라시엘"
+   ],
+   "aerial": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/gimhae-laciel-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": null,
+   "psrc": "https://apttoyou.kr/laciel/price",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "jiksan-dongil",
+   "name": "천안 직산 동일하이빌 파크레인",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "충남",
+   "area": "천안 서북구 직산읍",
+   "n": 895,
+   "builder": "동일토건",
+   "yr": 2029,
+   "mo": 1,
+   "done": false,
+   "badge": "2029.01 입주",
+   "movein": "2029년 1월 입주 예정",
+   "size": "84",
+   "price": 4.47,
+   "range": "84A 최고 4.47억(84㎡ 3.72~4.52억)",
+   "benefit": "",
+   "points": [
+    "천안 직산읍 895세대",
+    "전 세대 84㎡"
+   ],
+   "aerial": null,
+   "location": null,
+   "psrc": "https://blog.naver.com/tc0706/224472945638",
+   "psrc_label": "blog.naver.com",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "seosan-trivn",
+   "name": "트리븐 서산",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "충남",
+   "area": "서산 예천동",
+   "n": 829,
+   "builder": "두산건설",
+   "yr": 2029,
+   "mo": 1,
+   "done": false,
+   "badge": "2029.01 입주",
+   "movein": "2029년 1월 입주 예정",
+   "size": "84",
+   "price": 5.334,
+   "range": "84A 최고 5.33억(84B 5.35억)",
+   "benefit": "",
+   "points": [
+    "서산 예천동 829세대",
+    "두산건설 트리븐"
+   ],
+   "aerial": null,
+   "location": null,
+   "psrc": "https://biz.newdaily.co.kr/site/data/html/2025/10/28/2025102800071.html",
+   "psrc_label": "biz.newdaily.co.kr",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "godeok-housed",
+   "name": "고덕 수자인하우스디",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "평택",
+   "area": "평택 고덕(A-67BL)",
+   "n": 403,
+   "builder": "대보건설",
+   "yr": 2029,
+   "mo": 2,
+   "done": false,
+   "badge": "2029.02 입주",
+   "movein": "2029년 2월 입주 예정",
+   "size": "84",
+   "price": 5.698,
+   "range": "84A 5.13~5.70억",
+   "benefit": "",
+   "points": [
+    "고덕국제신도시 A-67블록",
+    "403세대 아담한 단지"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/godeok-housed-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/godeok-housed-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "edc-ecoriver",
+   "name": "에코델타시티 금강펜테리움 에코리버",
+   "rid": "busan-ulsan",
+   "rlabel": "부산·울산",
+   "sido": "부산",
+   "area": "부산 강서구 에코델타시티 6BL",
+   "n": 358,
+   "builder": "금강주택",
+   "yr": 2029,
+   "mo": 2,
+   "done": false,
+   "badge": "2029.02 입주",
+   "movein": "2029년 2월 입주 예정",
+   "size": "59",
+   "price": 5.32,
+   "range": "59B 4.31~5.32억(59A 4.32~5.11억, 분양가상한제)",
+   "benefit": "",
+   "points": [
+    "에코델타시티 6블록 358세대",
+    "분양가상한제 적용 59㎡ 단지"
+   ],
+   "aerial": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/edc-ecoriver-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/edc-ecoriver-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/ecoriver/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "gimhae-sinmun-ipark",
+   "name": "김해 신문 센트럴 아이파크",
+   "rid": "gyeongnam-honam-jeju",
+   "rlabel": "경남·호남·제주",
+   "sido": "경남",
+   "area": "김해 신문동(장유신문지구 A34-1BL)",
+   "n": 1379,
+   "builder": "HDC현대산업개발",
+   "yr": 2029,
+   "mo": 3,
+   "done": false,
+   "badge": "2029.03 입주",
+   "movein": "2029년 3월 입주 예정",
+   "size": "84",
+   "price": 5.517,
+   "range": "84A 4.33~5.52억 · 84B 4.41~5.63억(발코니 확장 무상)",
+   "benefit": "",
+   "points": [
+    "김해 첫 5베이 평면(84㎡B)",
+    "장유신문지구 1,379세대 아이파크"
+   ],
+   "aerial": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/gimhae-sinmun-ipark-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": null,
+   "psrc": "https://apttoyou.kr/sinmuncentral/price",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "cheonan-deast",
+   "name": "천안 동문 디 이스트 파크시티",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "충남",
+   "area": "천안 동남구 삼룡동",
+   "n": 1051,
+   "builder": "동문건설",
+   "yr": 2029,
+   "mo": 3,
+   "done": false,
+   "badge": "2029.03 입주",
+   "movein": "2029년 3월 입주 예정",
+   "size": "84",
+   "price": 5.825,
+   "range": "84A 3.94~5.83억(최고가는 다락·테라스 최상층, 21층↑ 일반층 4.5억대)",
+   "benefit": "계약축하금 500만원",
+   "points": [
+    "천안 동남구 삼룡동 1,051세대",
+    "최상층 다락·테라스 특화 타입",
+    "계약축하금 500만원 조건"
+   ],
+   "aerial": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/cheonan-deast-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/cheonan-deast-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://www.newsis.com/view/NISX20260430_0003614105",
+   "psrc_label": "newsis.com",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "elif-seongseong",
+   "name": "엘리프 성성호수공원",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "충남",
+   "area": "천안 서북구 업성동(1·2블록)",
+   "n": 1165,
+   "builder": "계룡건설",
+   "yr": 2029,
+   "mo": 3,
+   "done": false,
+   "badge": "2029.03 입주",
+   "movein": "2029년 3월 입주 예정",
+   "size": "84",
+   "price": 5.886,
+   "range": "1BL 84A 5.40~5.89억 · 2BL 84A 4.69~5.71억",
+   "benefit": "",
+   "points": [
+    "성성호수공원 서쪽 업성2지구",
+    "1·2블록 합계 1,165세대 엘리프"
+   ],
+   "aerial": null,
+   "location": null,
+   "psrc": "https://blog.naver.com/ilta_eunwoo/224473211057",
+   "psrc_label": "blog.naver.com",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "gongju-jinarehii",
+   "name": "공주월송 진아레히",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "충남",
+   "area": "공주 금흥동(금흥2지구)",
+   "n": 811,
+   "builder": "리채·아이리스건설",
+   "yr": 2029,
+   "mo": 4,
+   "done": false,
+   "badge": "2029.04 입주",
+   "movein": "2029년 4월 입주 예정",
+   "size": "84",
+   "price": 4.39,
+   "range": "84A 4.03~4.39억(84B 3.93~4.28억)",
+   "benefit": "",
+   "points": [
+    "공주 금흥2지구",
+    "811세대, 공주 최대 규모 단지"
+   ],
+   "aerial": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/gongju-jinarehii-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/gongju-jinarehii-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://www.wikitree.co.kr/articles/1135198",
+   "psrc_label": "wikitree.co.kr",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "gangneung-umirin",
+   "name": "강릉 우미린 더 프리미어",
+   "rid": "daegu-gyeongbuk-gangwon",
+   "rlabel": "대구·경북·강원",
+   "sido": "강원",
+   "area": "강원 강릉 송정동",
+   "n": 772,
+   "builder": "우미건설",
+   "yr": 2029,
+   "mo": 4,
+   "done": false,
+   "badge": "2029.04 입주",
+   "movein": "2029년 4월 입주 예정",
+   "size": "84",
+   "price": 5.484,
+   "range": "84 4.67~5.48억 · 확장비 1,540만~1,760만원 별도",
+   "benefit": "",
+   "points": [
+    "동명초 직선 약 130m",
+    "송정해변 약 960m",
+    "772세대 우미린"
+   ],
+   "aerial": {
+    "url": "/posts/images/daegu-gyeongbuk-gangwon-firstcome-20261117/gangneung-umirin-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/daegu-gyeongbuk-gangwon-firstcome-20261117/gangneung-umirin-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/umirinpremier/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "yangsan-thesky",
+   "name": "힐스테이트 양산더스카이",
+   "rid": "gyeongnam-honam-jeju",
+   "rlabel": "경남·호남·제주",
+   "sido": "경남",
+   "area": "양산 물금읍",
+   "n": 598,
+   "builder": "현대건설",
+   "yr": 2029,
+   "mo": 4,
+   "done": false,
+   "badge": "2029.04 입주",
+   "movein": "2029년 4월 입주 예정",
+   "size": "84",
+   "price": 5.295,
+   "range": "84㎡ 4.83~5.30억(계약 시 500만원 정액·중도금 무이자)",
+   "benefit": "",
+   "points": [
+    "서남초 바로 옆",
+    "물금신도시 2개 단지 598세대 힐스테이트"
+   ],
+   "aerial": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/yangsan-thesky-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/yangsan-thesky-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/thesky/price",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "yeosu-soje",
+   "name": "여수 소제 중흥S-클래스 우미린",
+   "rid": "gyeongnam-honam-jeju",
+   "rlabel": "경남·호남·제주",
+   "sido": "전남",
+   "area": "여수 소호동(소제지구 A3·A4BL)",
+   "n": 1679,
+   "builder": "중흥건설·우미건설",
+   "yr": 2029,
+   "mo": 4,
+   "done": false,
+   "badge": "2029.04 입주",
+   "movein": "2029년 4월 입주 예정",
+   "size": "84",
+   "price": 4.91,
+   "range": "A4BL 84A 3.95~4.91억(분양가상한제, 계약금 1,000만원 정액)",
+   "benefit": "",
+   "points": [
+    "여수 소제지구 첫 분양",
+    "A3·A4블록 합계 1,679세대",
+    "분양가상한제 적용"
+   ],
+   "aerial": null,
+   "location": null,
+   "psrc": "https://soje-jnw.com/pdf/gonggo_a4_full.pdf",
+   "psrc_label": "soje-jnw.com",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "inha-roicent",
+   "name": "인하대역 수자인 로이센트",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "인천",
+   "area": "인천 용현동",
+   "n": 1199,
+   "builder": "BS한양",
+   "yr": 2029,
+   "mo": 4,
+   "done": false,
+   "badge": "2029.04 입주",
+   "movein": "2029년 4월 입주 예정",
+   "size": "84",
+   "price": 6.991,
+   "range": "84 6.52~6.99억",
+   "benefit": "",
+   "points": [
+    "수인분당선 인하대역 인근",
+    "1,199세대 수자인"
+   ],
+   "aerial": null,
+   "location": null,
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "forena-dangri",
+   "name": "한화포레나 부산당리",
+   "rid": "busan-ulsan",
+   "rlabel": "부산·울산",
+   "sido": "부산",
+   "area": "부산 사하구 당리동",
+   "n": 543,
+   "builder": "한화 건설부문",
+   "yr": 2029,
+   "mo": 4,
+   "done": false,
+   "badge": "2029.04 입주",
+   "movein": "2029년 4월 입주 예정",
+   "size": "84",
+   "price": 7.87,
+   "range": "84 6.93~7.87억",
+   "benefit": "",
+   "points": [
+    "1호선 사하역 도보권",
+    "당리2구역 재개발 543세대 포레나"
+   ],
+   "aerial": null,
+   "location": null,
+   "psrc": "https://mhb-blog.com/?p=5503",
+   "psrc_label": "mhb-blog.com",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "cheonan-humanvill",
+   "name": "천안 휴먼빌 퍼스트시티",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "충남",
+   "area": "천안 서북구 부대동",
+   "n": 1541,
+   "builder": "일신건영",
+   "yr": 2029,
+   "mo": 5,
+   "done": false,
+   "badge": "2029.05 입주",
+   "movein": "2029년 5월 입주 예정",
+   "size": "84",
+   "price": 5.563,
+   "range": "84D 4.75~5.56억(84A 4.56~5.46억)",
+   "benefit": "",
+   "points": [
+    "성성호수공원 생활권 부대동",
+    "1,541세대 전 세대 84㎡"
+   ],
+   "aerial": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/cheonan-humanvill-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/cheonan-humanvill-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/firstcity/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "munsuro-vista",
+   "name": "문수로 비스타 더파크",
+   "rid": "busan-ulsan",
+   "rlabel": "부산·울산",
+   "sido": "울산",
+   "area": "울산 남구 무거동",
+   "n": 700,
+   "builder": "동원개발",
+   "yr": 2029,
+   "mo": 5,
+   "done": false,
+   "badge": "2029.05 입주",
+   "movein": "2029년 5월 입주 예정",
+   "size": "84",
+   "price": 8.32,
+   "range": "84 7.60~8.32억",
+   "benefit": "",
+   "points": [
+    "울산제일고·옥현초 도보권",
+    "삼호산과 태화강 국가정원 사이",
+    "700세대 비스타"
+   ],
+   "aerial": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/munsuro-vista-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/munsuro-vista-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/vistapark/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "ssy-hangang",
+   "name": "쌍용 더 플래티넘 한강",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "양평",
+   "area": "양평 양서면",
+   "n": 333,
+   "builder": "쌍용건설",
+   "yr": 2029,
+   "mo": 5,
+   "done": false,
+   "badge": "2029.05 입주",
+   "movein": "2029년 5월 입주 예정",
+   "size": "84",
+   "price": 7.48,
+   "range": "84A 5.87~7.48억",
+   "benefit": "",
+   "points": [
+    "경의중앙선 양수역 도보 3분",
+    "333세대 쌍용 더 플래티넘"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/ssy-hangang-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/ssy-hangang-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "jeonju-artiem",
+   "name": "아르티엠 라 테라스",
+   "rid": "gyeongnam-honam-jeju",
+   "rlabel": "경남·호남·제주",
+   "sido": "전북",
+   "area": "전주 덕진구 우아동3가",
+   "n": 300,
+   "builder": "세영건설",
+   "yr": 2029,
+   "mo": 5,
+   "done": false,
+   "badge": "2029.05 입주",
+   "movein": "2029년 5월 입주 예정",
+   "size": "84",
+   "price": 5.12,
+   "range": "84A 4.39~5.12억(동·라인별 두 갈래) · 84B 최고 5.26억",
+   "benefit": "",
+   "points": [
+    "KTX 전주역 앞",
+    "84㎡ 단일 300세대, 일부 프라이빗 테라스"
+   ],
+   "aerial": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/jeonju-artiem-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유) — 대표 이미지는 단지 상부 투시도"
+   },
+   "location": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/jeonju-artiem-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유) — 대표 이미지는 단지 상부 투시도"
+   },
+   "psrc": "https://apttoyou.kr/artiemlaterrace/price",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "edc-rivercity",
+   "name": "에코델타시티 중흥S-클래스 리버시티",
+   "rid": "busan-ulsan",
+   "rlabel": "부산·울산",
+   "sido": "부산",
+   "area": "부산 강서구 에코델타시티 2BL",
+   "n": 501,
+   "builder": "중흥토건",
+   "yr": 2029,
+   "mo": 5,
+   "done": false,
+   "badge": "2029.05 입주",
+   "movein": "2029년 5월 입주 예정",
+   "size": "59",
+   "price": 4.21,
+   "range": "59A 3.75~4.21억(59B 3.54~3.99억)",
+   "benefit": "",
+   "points": [
+    "에코델타시티 2블록 501세대",
+    "59㎡ 단일 구성"
+   ],
+   "aerial": null,
+   "location": null,
+   "psrc": "https://blog.naver.com/gaon5586/224479531134",
+   "psrc_label": "blog.naver.com",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "cheonan-ipark34",
+   "name": "천안 아이파크 시티 3·4단지",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "충남",
+   "area": "천안 서북구 부대동",
+   "n": 1714,
+   "builder": "HDC현대산업개발",
+   "yr": 2029,
+   "mo": 6,
+   "done": false,
+   "badge": "2029.06 입주",
+   "movein": "2029년 6월 입주 예정",
+   "size": "84",
+   "price": 5.904,
+   "range": "3단지 84A 최고 5.90억(84B 5.76억)",
+   "benefit": "",
+   "points": [
+    "성성호수공원 남쪽 부대동",
+    "3·4단지 합계 1,714세대 아이파크"
+   ],
+   "aerial": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/cheonan-ipark34-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/cheonan-ipark34-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/iparkcity34/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "edc-elga",
+   "name": "에코델타시티 엘가 로제비앙",
+   "rid": "busan-ulsan",
+   "rlabel": "부산·울산",
+   "sido": "부산",
+   "area": "부산 강서구 에코델타시티 5BL",
+   "n": 998,
+   "builder": "모아건설산업·로제비앙건설",
+   "yr": 2029,
+   "mo": 6,
+   "done": false,
+   "badge": "2029.06 입주",
+   "movein": "2029년 6월 입주 예정",
+   "size": "84",
+   "price": 6.06,
+   "range": "84A 5.09~6.06억(84B·C 4.92~5.47억)",
+   "benefit": "",
+   "points": [
+    "에코델타시티 5블록 998세대",
+    "84㎡·104㎡ 중대형 구성"
+   ],
+   "aerial": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/edc-elga-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/edc-elga-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/edclogebien/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "hyangnam",
+   "name": "향남역 그로브 스위첸",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "화성",
+   "area": "화성 향남",
+   "n": 933,
+   "builder": "KCC건설",
+   "yr": 2029,
+   "mo": 6,
+   "done": false,
+   "badge": "2029.06 입주",
+   "movein": "2029년 6월 입주 예정",
+   "size": "84",
+   "price": 5.575,
+   "range": "84A 5.14~5.58억",
+   "benefit": "",
+   "points": [
+    "서해선 향남역(예정) 인근",
+    "933세대 KCC건설 스위첸"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/hyangnam-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/hyangnam-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "oryong-harrington",
+   "name": "해링턴 플레이스 오룡역",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "대전",
+   "area": "대전 중구 용두동",
+   "n": 427,
+   "builder": "진흥기업",
+   "yr": 2029,
+   "mo": 6,
+   "done": false,
+   "badge": "2029.06 입주",
+   "movein": "2029년 6월 입주 예정",
+   "size": "84",
+   "price": 6.949,
+   "range": "84㎡ 5.79~6.95억(21층↑ 6.71~6.95억)",
+   "benefit": "",
+   "points": [
+    "1호선 오룡역 직선 250m",
+    "427세대 해링턴 플레이스"
+   ],
+   "aerial": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/oryong-harrington-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/oryong-harrington-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/harringtonoryong/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "richmond-soyang",
+   "name": "더 리치먼드 리버센트 소양",
+   "rid": "daegu-gyeongbuk-gangwon",
+   "rlabel": "대구·경북·강원",
+   "sido": "강원",
+   "area": "강원 춘천 소양로1가",
+   "n": 178,
+   "builder": "태원건설산업",
+   "yr": 2029,
+   "mo": 6,
+   "done": false,
+   "badge": "2029.06 입주",
+   "movein": "2029년 6월 입주 예정",
+   "size": "84",
+   "price": 5.889,
+   "range": "84 5.19~5.89억(84A 최고층) · 발코니 확장 2,900만원 별도",
+   "benefit": "",
+   "points": [
+    "소양강스카이워크 앞",
+    "전 세대 84㎡ 178세대"
+   ],
+   "aerial": {
+    "url": "/posts/images/daegu-gyeongbuk-gangwon-firstcome-20261117/richmond-soyang-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/daegu-gyeongbuk-gangwon-firstcome-20261117/richmond-soyang-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/richmondrivercent/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "seonhwa-lucier",
+   "name": "대전 하늘채 루시에르",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "대전",
+   "area": "대전 중구 선화동",
+   "n": 998,
+   "builder": "코오롱글로벌",
+   "yr": 2029,
+   "mo": 7,
+   "done": false,
+   "badge": "2029.07 입주",
+   "movein": "2029년 7월 입주 예정",
+   "size": "84",
+   "price": 6.6,
+   "range": "84A 5.63~6.60억",
+   "benefit": "",
+   "points": [
+    "대전 원도심 선화동",
+    "최고 49층 998세대 하늘채"
+   ],
+   "aerial": null,
+   "location": null,
+   "psrc": "https://biz.newdaily.co.kr/site/data/html/2025/07/15/2025071500143.html",
+   "psrc_label": "biz.newdaily.co.kr",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "changwon-megacentum",
+   "name": "창원 한신더휴 메가센텀",
+   "rid": "gyeongnam-honam-jeju",
+   "rlabel": "경남·호남·제주",
+   "sido": "경남",
+   "area": "창원 마산회원구 회원동",
+   "n": 2016,
+   "builder": "한신공영",
+   "yr": 2029,
+   "mo": 8,
+   "done": false,
+   "badge": "2029.08 입주",
+   "movein": "2029년 8월 입주 예정",
+   "size": "84",
+   "price": 6.115,
+   "range": "84㎡ 5.29~6.12억",
+   "benefit": "",
+   "points": [
+    "회원2구역 재개발 2,016세대 대단지",
+    "34평 분양권 거래가 활발한 단지"
+   ],
+   "aerial": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/changwon-megacentum-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/changwon-megacentum-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/megacentum/price",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "grancity-philhouse",
+   "name": "천안아산역 그랑시티 필하우스",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "충남",
+   "area": "아산 배방읍 휴대지구",
+   "n": 1534,
+   "builder": "한성건설",
+   "yr": 2029,
+   "mo": 8,
+   "done": false,
+   "badge": "2029.08 입주",
+   "movein": "2029년 8월 입주 예정",
+   "size": "84",
+   "price": 4.806,
+   "range": "84A 4.55~4.81억(84B 최고 4.83억)",
+   "benefit": "",
+   "points": [
+    "천안아산역 남쪽 휴대지구",
+    "1,534세대, 전체의 94%가 84㎡"
+   ],
+   "aerial": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/grancity-philhouse-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/grancity-philhouse-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://mhb-blog.com/?p=10470",
+   "psrc_label": "mhb-blog.com",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "geoje-asterium",
+   "name": "센트레빌 아스테리움 거제",
+   "rid": "gyeongnam-honam-jeju",
+   "rlabel": "경남·호남·제주",
+   "sido": "경남",
+   "area": "거제 상동동",
+   "n": 1307,
+   "builder": "동부건설",
+   "yr": 2029,
+   "mo": 8,
+   "done": false,
+   "badge": "2029.08 입주",
+   "movein": "2029년 8월 입주 예정",
+   "size": "84",
+   "price": 5.29,
+   "range": "84A·B 4.87~5.29억(11층 이상 최고가)",
+   "benefit": "",
+   "points": [
+    "고현초 약 340m",
+    "1,307세대 센트레빌"
+   ],
+   "aerial": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/geoje-asterium-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/geoje-asterium-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/asterium/price",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "osan-heritage",
+   "name": "오산헤리티지자이",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "오산",
+   "area": "오산 양산동",
+   "n": 1783,
+   "builder": "GS건설",
+   "yr": 2029,
+   "mo": 9,
+   "done": false,
+   "badge": "2029.09 입주",
+   "movein": "2029년 9월 입주 예정",
+   "size": "84",
+   "price": 7.83,
+   "range": "84 7.12~7.83억",
+   "benefit": "",
+   "points": [
+    "1호선 병점역 생활권",
+    "1·2블록 합계 1,783세대 자이"
+   ],
+   "aerial": null,
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/osan-heritage-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "eopseong-lake1",
+   "name": "업성 푸르지오 레이크시티",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "충남",
+   "area": "천안 서북구 업성동(1블록)",
+   "n": 1460,
+   "builder": "대우건설",
+   "yr": 2029,
+   "mo": 9,
+   "done": false,
+   "badge": "2029.09 입주",
+   "movein": "2029년 9월 입주 예정",
+   "size": "84",
+   "price": 6.099,
+   "range": "84A 5.17~6.10억(84B 최고 6.19억)",
+   "benefit": "",
+   "points": [
+    "업성3지구 1블록 1,460세대 푸르지오",
+    "저층부 84A 5.17억원부터"
+   ],
+   "aerial": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/eopseong-lake1-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/eopseong-lake1-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://blog.naver.com/ilta_joa/224471858591",
+   "psrc_label": "blog.naver.com",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "baekseok-xi",
+   "name": "백석시그니처자이",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "충남",
+   "area": "천안 서북구 백석동",
+   "n": 1174,
+   "builder": "GS건설",
+   "yr": 2029,
+   "mo": 9,
+   "done": false,
+   "badge": "2029.09 입주",
+   "movein": "2029년 9월 입주 예정",
+   "size": "84",
+   "price": 5.839,
+   "range": "84㎡ 5.24~5.84억",
+   "benefit": "",
+   "points": [
+    "천안 백석5지구",
+    "1·2단지 합계 1,174세대 자이"
+   ],
+   "aerial": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/baekseok-xi-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/baekseok-xi-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/signaturexi/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "eopseong-lake2",
+   "name": "업성 푸르지오 레이크시티 2단지",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "충남",
+   "area": "천안 서북구 업성동(2블록)",
+   "n": 448,
+   "builder": "대우건설",
+   "yr": 2029,
+   "mo": 9,
+   "done": false,
+   "badge": "2029.09 입주",
+   "movein": "2029년 9월 입주 예정",
+   "size": "84",
+   "price": 5.775,
+   "range": "84A 5.28~5.78억",
+   "benefit": "",
+   "points": [
+    "성성호수공원 앞 업성3지구 2블록",
+    "448세대 푸르지오"
+   ],
+   "aerial": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/eopseong-lake2-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/eopseong-lake2-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/lakecity2/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "forena-sicheong",
+   "name": "포레나더샵 인천시청역",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "인천",
+   "area": "인천 간석동",
+   "n": 2568,
+   "builder": "한화·포스코이앤씨",
+   "yr": 2029,
+   "mo": 9,
+   "done": false,
+   "badge": "2029.09 입주",
+   "movein": "2029년 9월 입주 예정",
+   "size": "59",
+   "price": 6.656,
+   "range": "59A 5.78~6.66억",
+   "benefit": "",
+   "points": [
+    "인천1·2호선 인천시청역 더블역세권",
+    "2,568세대 대단지",
+    "59㎡ 단일 구성"
+   ],
+   "aerial": null,
+   "location": null,
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "doan-centumriche",
+   "name": "도안자이 센텀리체",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "대전",
+   "area": "대전 유성구 용계동(도안2단계)",
+   "n": 2293,
+   "builder": "GS건설",
+   "yr": 2029,
+   "mo": 10,
+   "done": false,
+   "badge": "2029.10 입주",
+   "movein": "2029년 10월 입주 예정",
+   "size": "84",
+   "price": 7.762,
+   "range": "1단지 84㎡ 7.17~7.76억(2단지 최고 7.77억)",
+   "benefit": "",
+   "points": [
+    "도안 2단계 용계동",
+    "2,293세대 대단지 자이"
+   ],
+   "aerial": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/doan-centumriche-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/doan-centumriche-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/centumriche/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "bukosan-deforet",
+   "name": "북오산자이 드포레",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "오산",
+   "area": "오산 내삼미동",
+   "n": 1517,
+   "builder": "GS건설",
+   "yr": 2029,
+   "mo": 10,
+   "done": false,
+   "badge": "2029.10 입주",
+   "movein": "2029년 10월 입주 예정",
+   "size": "84",
+   "price": 6.72,
+   "range": "84A 6.21~6.72억",
+   "benefit": "",
+   "points": [
+    "오산 내삼미동 1,517세대",
+    "GS건설 자이"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/bukosan-deforet-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/bukosan-deforet-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "yeongjong-dietre",
+   "name": "영종 디에트르 라 메르Ⅰ",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "인천",
+   "area": "인천 영종 중산동",
+   "n": 1009,
+   "builder": "대방건설",
+   "yr": 2029,
+   "mo": 10,
+   "done": false,
+   "badge": "2029.10 입주",
+   "movein": "2029년 10월 입주 예정",
+   "size": "84",
+   "price": 6.61,
+   "range": "84A 5.67~6.61억",
+   "benefit": "",
+   "points": [
+    "영종 중산동 1,009세대 디에트르",
+    "잔여세대 선착순 동·호 지정 중"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/yeongjong-dietre-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/yeongjong-dietre-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "hwaseo-honors",
+   "name": "화서역 호수공원 아너스빌",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "수원",
+   "area": "수원 권선 서둔동",
+   "n": 476,
+   "builder": "경남기업",
+   "yr": 2029,
+   "mo": 10,
+   "done": false,
+   "badge": "2029.10 입주",
+   "movein": "2029년 10월 입주 예정",
+   "size": "84",
+   "price": 8.98,
+   "range": "84 8.32~8.98억",
+   "benefit": "",
+   "points": [
+    "화서역 도보권",
+    "476세대 아너스빌"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/hwaseo-honors-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/hwaseo-honors-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "grandlac",
+   "name": "그랑라크 에일린의 뜰",
+   "rid": "busan-ulsan",
+   "rlabel": "부산·울산",
+   "sido": "울산",
+   "area": "울산 남구 야음동",
+   "n": 1521,
+   "builder": "아이에스동서",
+   "yr": 2029,
+   "mo": 11,
+   "done": false,
+   "badge": "2029.11 입주",
+   "movein": "2029년 11월 입주 예정",
+   "size": "84",
+   "price": 7.66,
+   "range": "84 6.84~7.66억",
+   "benefit": "",
+   "points": [
+    "선암호수공원 약 500m",
+    "1,521세대 대단지"
+   ],
+   "aerial": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/grandlac-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": null,
+   "psrc": "https://apttoyou.kr/granglac/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "geoje-marinepiece",
+   "name": "거제 푸르지오 마린피스",
+   "rid": "gyeongnam-honam-jeju",
+   "rlabel": "경남·호남·제주",
+   "sido": "경남",
+   "area": "거제 장평동",
+   "n": 423,
+   "builder": "대우건설",
+   "yr": 2029,
+   "mo": 11,
+   "done": false,
+   "badge": "2029.11 입주",
+   "movein": "2029년 11월 입주 예정",
+   "size": "84",
+   "price": 5.14,
+   "range": "84㎡ 4.11~5.14억(2026.07 공고 확정가)",
+   "benefit": "",
+   "points": [
+    "안방 오션뷰 특화(일부 세대 제외)",
+    "삼성중공업 거제조선소와 맞닿은 장평동",
+    "36층 423세대 푸르지오"
+   ],
+   "aerial": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/geoje-marinepiece-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/geoje-marinepiece-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/marinepiece/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "dujeong-granpeak",
+   "name": "두정역 푸르지오 그랑피크",
+   "rid": "chungcheong",
+   "rlabel": "충청권",
+   "sido": "충남",
+   "area": "천안 서북구 성정동",
+   "n": 1438,
+   "builder": "대우건설",
+   "yr": 2030,
+   "mo": 1,
+   "done": false,
+   "badge": "2030.01 입주",
+   "movein": "2030년 1월 입주 예정",
+   "size": "84",
+   "price": 5.53,
+   "range": "84㎡ 4.59~5.53억",
+   "benefit": "",
+   "points": [
+    "1호선 두정역 생활권",
+    "1,438세대 푸르지오"
+   ],
+   "aerial": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/dujeong-granpeak-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/chungcheong-firstcome-20261117/dujeong-granpeak-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/granpeak/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "eomgung-travis",
+   "name": "엄궁역 트라비스 하늘채",
+   "rid": "busan-ulsan",
+   "rlabel": "부산·울산",
+   "sido": "부산",
+   "area": "부산 사상구 엄궁동",
+   "n": 1670,
+   "builder": "코오롱글로벌",
+   "yr": 2030,
+   "mo": 2,
+   "done": false,
+   "badge": "2030.02 입주",
+   "movein": "2030년 2월 입주 예정",
+   "size": "84",
+   "price": 6.978,
+   "range": "84 5.97~6.98억",
+   "benefit": "",
+   "points": [
+    "사상~하단선 엄궁역(예정) 직접 연결 계획",
+    "1,670세대 하늘채"
+   ],
+   "aerial": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/eomgung-travis-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/eomgung-travis-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/travis/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "dongnae-eduforet",
+   "name": "동래 푸르지오 에듀포레",
+   "rid": "busan-ulsan",
+   "rlabel": "부산·울산",
+   "sido": "부산",
+   "area": "부산 동래구 안락동",
+   "n": 1481,
+   "builder": "대우건설",
+   "yr": 2030,
+   "mo": 3,
+   "done": false,
+   "badge": "2030.03 입주",
+   "movein": "2030년 3월 입주 예정",
+   "size": "84",
+   "price": 8.293,
+   "range": "84A 7.54~8.29억",
+   "benefit": "",
+   "points": [
+    "충렬초(약 170m)·충렬중·충렬고가 둘러싼 학세권",
+    "1,481세대 푸르지오"
+   ],
+   "aerial": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/dongnae-eduforet-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/dongnae-eduforet-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/eduforet/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "cityociel9",
+   "name": "시티오씨엘 9단지 오션파크뷰",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "인천",
+   "area": "인천 학익동",
+   "n": 1949,
+   "builder": "HDC현산 컨소시엄",
+   "yr": 2030,
+   "mo": 4,
+   "done": false,
+   "badge": "2030.04 입주",
+   "movein": "2030년 4월 입주 예정",
+   "size": "84",
+   "price": 7.129,
+   "range": "84A 6.68~7.13억",
+   "benefit": "",
+   "points": [
+    "시티오씨엘 마지막 블록",
+    "최고 49층 1,949세대 대단지"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/cityociel9-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/cityociel9-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "leel-centum",
+   "name": "르엘 리버파크 센텀",
+   "rid": "busan-ulsan",
+   "rlabel": "부산·울산",
+   "sido": "부산",
+   "area": "부산 해운대구 재송동",
+   "n": 2070,
+   "builder": "롯데건설",
+   "yr": 2030,
+   "mo": 5,
+   "done": false,
+   "badge": "2030.05 입주",
+   "movein": "2030년 5월 입주 예정",
+   "size": "84",
+   "price": 13.94,
+   "range": "84 12.70~13.94억",
+   "benefit": "",
+   "points": [
+    "수영강변 최고 67층 2,070세대",
+    "동해선 재송역 약 260m",
+    "롯데건설 르엘"
+   ],
+   "aerial": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/leel-centum-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/leel-centum-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/leelriverpark/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "zenith-daeyeon",
+   "name": "두산위브더제니스 대연",
+   "rid": "busan-ulsan",
+   "rlabel": "부산·울산",
+   "sido": "부산",
+   "area": "부산 남구 대연동",
+   "n": 258,
+   "builder": "두산건설",
+   "yr": 2030,
+   "mo": 8,
+   "done": false,
+   "badge": "2030.08 입주",
+   "movein": "2030년 8월 입주 예정",
+   "size": "84",
+   "price": 10.938,
+   "range": "84 최고 10.94억",
+   "benefit": "",
+   "points": [
+    "2호선 못골역 약 310m",
+    "최고 42층 258세대 하이엔드 단지"
+   ],
+   "aerial": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/zenith-daeyeon-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/busan-ulsan-firstcome-20261117/zenith-daeyeon-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/zenithdaeyeon/",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "guwol-artpark",
+   "name": "힐스테이트 구월아트파크",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "인천",
+   "area": "인천 구월동",
+   "n": 496,
+   "builder": "현대엔지니어링",
+   "yr": 2030,
+   "mo": 10,
+   "done": false,
+   "badge": "2030.10 입주",
+   "movein": "2030년 10월 입주 예정",
+   "size": "84",
+   "price": 8.88,
+   "range": "84A 7.63~8.88억",
+   "benefit": "",
+   "points": [
+    "인천1호선 예술회관역 직결",
+    "496세대 힐스테이트"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/guwol-artpark-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/guwol-artpark-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "gwangju-champions",
+   "name": "올 뉴 챔피언스시티 1차",
+   "rid": "gyeongnam-honam-jeju",
+   "rlabel": "경남·호남·제주",
+   "sido": "광주",
+   "area": "광주 북구 임동",
+   "n": 3216,
+   "builder": "우미건설·신영씨앤디",
+   "yr": 2030,
+   "mo": 11,
+   "done": false,
+   "badge": "2030.11 입주",
+   "movein": "2030년 11월 입주 예정",
+   "size": "84",
+   "price": 8.7,
+   "range": "84㎡(A~F) 7.08~8.70억",
+   "benefit": "",
+   "points": [
+    "옛 전방·일신방직 부지 최고 49층 3,216세대",
+    "더현대 광주가 같은 부지에 들어섬"
+   ],
+   "aerial": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/gwangju-champions-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/gyeongnam-honam-jeju-firstcome-20261117/gwangju-champions-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "https://apttoyou.kr/championscity/price",
+   "psrc_label": "아파트투유 단지 페이지",
+   "date": "2026-11-17",
+   "status": "open"
+  },
+  {
+   "key": "doosan-bucheon",
+   "name": "두산위브더제니스 부천",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "부천",
+   "area": "부천 소사본동",
+   "n": 1728,
+   "builder": "두산건설",
+   "yr": 2032,
+   "mo": 2,
+   "done": false,
+   "badge": "2032.02 입주",
+   "movein": "2032년 2월 입주 예정",
+   "size": "84",
+   "price": 11.82,
+   "range": "84A 10.11~11.82억",
+   "benefit": "",
+   "points": [
+    "1호선·서해선 소사역 도보권",
+    "1,728세대 두산위브더제니스"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/doosan-bucheon-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/doosan-bucheon-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  },
+  {
+   "key": "sangdong-lotte",
+   "name": "상동역 롯데캐슬 시그니처",
+   "rid": "sudogwon",
+   "rlabel": "수도권",
+   "sido": "부천",
+   "area": "부천 상동",
+   "n": 1859,
+   "builder": "롯데건설",
+   "yr": 2032,
+   "mo": 3,
+   "done": false,
+   "badge": "2032.03 입주",
+   "movein": "2032년 3월 입주 예정",
+   "size": "84",
+   "price": 16.38,
+   "range": "84A 14.01~16.38억",
+   "benefit": "",
+   "points": [
+    "7호선 상동역 바로 앞 역세권",
+    "최고 49층 1,859세대 대단지",
+    "롯데건설 롯데캐슬"
+   ],
+   "aerial": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/sangdong-lotte-aerial.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "location": {
+    "url": "/posts/images/sudogwon-firstcome-top30-202611/sangdong-lotte-location.jpg",
+    "src": "분양 홍보 페이지(아파트투유)"
+   },
+   "psrc": "",
+   "psrc_label": "",
+   "date": "2026-11-16",
+   "status": "open"
+  }
+ ]
+}

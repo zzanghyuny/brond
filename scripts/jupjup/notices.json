@@ -1,0 +1,1138 @@
+{
+ "_note": "줍줍찬스 단지별 청약홈 입주자모집공고(PDF)와 청약홈에 등록된 분양 홈페이지 주소. scripts/jupjup/applyhome.py로 찾는다. 새 단지는 여기에 추가하고 build_jupjup.py를 다시 돌린다.",
+ "asan-belcore": {
+  "notices": [
+   {
+    "label": "",
+    "name": "아산 벨코어 스위첸",
+    "pblancNo": "2022000143",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2022000143&pblancNo=2022000143&atchmnflSeqNo=685048&atchmnflSn=3"
+   }
+  ],
+  "home": "http://아산벨코어스위첸.com"
+ },
+ "baekseok-xi": {
+  "notices": [
+   {
+    "label": "1단지",
+    "name": "백석시그니처자이 1단지",
+    "pblancNo": "2026000225",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000225&pblancNo=2026000225&atchmnflSeqNo=1817054&atchmnflSn=3"
+   },
+   {
+    "label": "2단지",
+    "name": "백석시그니처자이 2단지",
+    "pblancNo": "2026000226",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000226&pblancNo=2026000226&atchmnflSeqNo=1817055&atchmnflSn=5"
+   }
+  ],
+  "home": "https://xi.co.kr/bs"
+ },
+ "bc-annature": {
+  "notices": [
+   {
+    "label": "",
+    "name": "평택 브레인시티 10BL 앤네이처 미래도",
+    "pblancNo": "2025000118",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000118&pblancNo=2025000118&atchmnflSeqNo=1531098&atchmnflSn=3"
+   }
+  ],
+  "home": "http://www.앤네이처미래도.com"
+ },
+ "bc-medis": {
+  "notices": [
+   {
+    "label": "",
+    "name": "브레인시티 메디스파크 로제비앙 모아엘가",
+    "pblancNo": "2025000258",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000258&pblancNo=2025000258&atchmnflSeqNo=1548022&atchmnflSn=10"
+   }
+  ],
+  "home": "https://브레인시티메디스파크.com"
+ },
+ "bc-vista": {
+  "notices": [
+   {
+    "label": "",
+    "name": "브레인시티 비스타동원",
+    "pblancNo": "2025000529",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000529&pblancNo=2025000529&atchmnflSeqNo=1611146&atchmnflSn=4"
+   }
+  ],
+  "home": "http://www.브레인시티비스타동원.com"
+ },
+ "beomil-queens": {
+  "notices": [
+   {
+    "label": "",
+    "name": "퀸즈이즈카운티",
+    "pblancNo": "2025000413",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000413&pblancNo=2025000413&atchmnflSeqNo=1582649&atchmnflSn=1"
+   }
+  ],
+  "home": "https://www.퀸즈이즈카운티.com"
+ },
+ "bukosan-deforet": {
+  "notices": [
+   {
+    "label": "",
+    "name": "북오산자이 드포레",
+    "pblancNo": "2026000248",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000248&pblancNo=2026000248&atchmnflSeqNo=1854074&atchmnflSn=6"
+   }
+  ],
+  "home": "https://www.xi.co.kr/osantf"
+ },
+ "centum-highvenue": {
+  "notices": [
+   {
+    "label": "",
+    "name": "e편한세상 센텀 하이베뉴",
+    "pblancNo": "2026000002",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000002&pblancNo=2026000002&atchmnflSeqNo=1703052&atchmnflSn=1"
+   }
+  ],
+  "home": "https://www.elife.co.kr"
+ },
+ "changwon-megacentum": {
+  "notices": [
+   {
+    "label": "",
+    "name": "창원 한신더휴 메가센텀",
+    "pblancNo": "2026000282",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000282&pblancNo=2026000282&atchmnflSeqNo=1911272&atchmnflSn=3"
+   }
+  ],
+  "home": "https://cw-thehue.com/"
+ },
+ "cheomdan3-hoban": {
+  "notices": [
+   {
+    "label": "",
+    "name": "호반써밋 첨단3지구(A7BL)",
+    "pblancNo": "2026000242",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000242&pblancNo=2026000242&atchmnflSeqNo=1844233&atchmnflSn=4"
+   }
+  ],
+  "home": "https://hobansummit-kjcd.co.kr"
+ },
+ "cheonan-deast": {
+  "notices": [
+   {
+    "label": "",
+    "name": "천안 동문 디 이스트 파크시티",
+    "pblancNo": "2026000096",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000096&pblancNo=2026000096&atchmnflSeqNo=1797363&atchmnflSn=3"
+   }
+  ],
+  "home": "https://www.천안동문디이스트파크시티.com"
+ },
+ "cheonan-humanvill": {
+  "notices": [
+   {
+    "label": "1회차",
+    "name": "천안 휴먼빌 퍼스트시티",
+    "pblancNo": "2025000509",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000509&pblancNo=2025000509&atchmnflSeqNo=1605269&atchmnflSn=4"
+   },
+   {
+    "label": "2회차",
+    "name": "천안 휴먼빌 퍼스트시티(2회차)",
+    "pblancNo": "2026000127",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000127&pblancNo=2026000127&atchmnflSeqNo=1797362&atchmnflSn=2"
+   }
+  ],
+  "home": "http://휴먼빌퍼스트시티.com/"
+ },
+ "cheonan-ipark34": {
+  "notices": [
+   {
+    "label": "3단지",
+    "name": "천안 아이파크 시티 3단지",
+    "pblancNo": "2026000422",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000422&pblancNo=2026000422&atchmnflSeqNo=1966012&atchmnflSn=2"
+   },
+   {
+    "label": "4단지",
+    "name": "천안 아이파크 시티 4단지",
+    "pblancNo": "2026000426",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000426&pblancNo=2026000426&atchmnflSeqNo=1966014&atchmnflSn=2"
+   }
+  ],
+  "home": "https://cheonan-iparkcity3-4.com/"
+ },
+ "chuncheon-urbanforet": {
+  "notices": [
+   {
+    "label": "",
+    "name": "춘천 동문 디 이스트 어반포레",
+    "pblancNo": "2025000291",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000291&pblancNo=2025000291&atchmnflSeqNo=1561257&atchmnflSn=1"
+   }
+  ],
+  "home": "http://chuncheon-dmapt.co.kr/"
+ },
+ "cityociel9": {
+  "notices": [
+   {
+    "label": "",
+    "name": "시티오씨엘 9단지 오션파크뷰",
+    "pblancNo": "2026000388",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000388&pblancNo=2026000388&atchmnflSeqNo=1954055&atchmnflSn=3"
+   }
+  ],
+  "home": "https://cityociel9.com/"
+ },
+ "dalseo-prugio": {
+  "notices": [
+   {
+    "label": "",
+    "name": "달서 푸르지오 시그니처",
+    "pblancNo": "2022000010",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2022000010&pblancNo=2022000010&atchmnflSeqNo=646069&atchmnflSn=2"
+   }
+  ],
+  "home": "https://www.prugio.com/hc/2021/dalseo"
+ },
+ "dalseo-xi-zenik": {
+  "notices": [
+   {
+    "label": "",
+    "name": "달서자이 제니크",
+    "pblancNo": "2026000376",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000376&pblancNo=2026000376&atchmnflSeqNo=1930070&atchmnflSn=11"
+   }
+  ],
+  "home": "https://www.xi.co.kr/ds"
+ },
+ "doan-centumriche": {
+  "notices": [
+   {
+    "label": "1단지",
+    "name": "도안자이 센텀리체 1단지",
+    "pblancNo": "2026000104",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000104&pblancNo=2026000104&atchmnflSeqNo=1788067&atchmnflSn=1"
+   },
+   {
+    "label": "2단지",
+    "name": "도안자이 센텀리체 2단지",
+    "pblancNo": "2026000105",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000105&pblancNo=2026000105&atchmnflSeqNo=1788068&atchmnflSn=1"
+   }
+  ],
+  "home": "https://www.xi.co.kr/DAX"
+ },
+ "dongnae-eduforet": {
+  "notices": [
+   {
+    "label": "",
+    "name": "동래 푸르지오 에듀포레",
+    "pblancNo": "2025000629",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000629&pblancNo=2025000629&atchmnflSeqNo=1645743&atchmnflSn=2"
+   }
+  ],
+  "home": "https://prugio.com/hb/2025/eduforet/"
+ },
+ "doosan-bucheon": {
+  "notices": [
+   {
+    "label": "",
+    "name": "두산위브더제니스 부천",
+    "pblancNo": "2026000382",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000382&pblancNo=2026000382&atchmnflSeqNo=1952108&atchmnflSn=2"
+   }
+  ],
+  "home": "https://두산위브더제니스부천.com"
+ },
+ "dujeong-granpeak": {
+  "notices": [
+   {
+    "label": "",
+    "name": "두정역 푸르지오 그랑피크",
+    "pblancNo": "2026000423",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000423&pblancNo=2026000423&atchmnflSeqNo=1963212&atchmnflSn=3"
+   }
+  ],
+  "home": "https://prugio.com/hb/2026/granpeak"
+ },
+ "edc-ecoriver": {
+  "notices": [
+   {
+    "label": "",
+    "name": "에코델타시티 금강펜테리움 에코리버",
+    "pblancNo": "2026000443",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000443&pblancNo=2026000443&atchmnflSeqNo=1980180&atchmnflSn=3"
+   }
+  ],
+  "home": "http://에코델타시티금강펜테리움.com"
+ },
+ "edc-eduriver": {
+  "notices": [
+   {
+    "label": "",
+    "name": "에코델타시티 중흥S-클래스 에듀리버",
+    "pblancNo": "2025000165",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000165&pblancNo=2025000165&atchmnflSeqNo=1516278&atchmnflSn=2"
+   }
+  ],
+  "home": "https://edc2-sclass.com/"
+ },
+ "edc-elga": {
+  "notices": [
+   {
+    "label": "",
+    "name": "에코델타시티 엘가 로제비앙",
+    "pblancNo": "2026000057",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000057&pblancNo=2026000057&atchmnflSeqNo=1764032&atchmnflSn=2"
+   }
+  ],
+  "home": "https://www.에코델타시티엘가로제비앙.com"
+ },
+ "edc-rivercity": {
+  "notices": [
+   {
+    "label": "",
+    "name": "에코델타시티 중흥S-클래스 리버시티",
+    "pblancNo": "2026000234",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000234&pblancNo=2026000234&atchmnflSeqNo=1861004&atchmnflSn=3"
+   }
+  ],
+  "home": "https://www.edc3-sclass.com/"
+ },
+ "edc-sclass16": {
+  "notices": [
+   {
+    "label": "",
+    "name": "부산 에코델타시티 16블록 중흥S-클래스",
+    "pblancNo": "2023000534",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2023000534&pblancNo=2023000534&atchmnflSeqNo=1094109&atchmnflSn=2"
+   }
+  ],
+  "home": "http://www.edc-sclass.com/"
+ },
+ "elif-seongseong": {
+  "notices": [
+   {
+    "label": "1BL",
+    "name": "엘리프 성성호수공원 1BL",
+    "pblancNo": "2026000149",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000149&pblancNo=2026000149&atchmnflSeqNo=1797349&atchmnflSn=3"
+   },
+   {
+    "label": "2BL",
+    "name": "엘리프 성성호수공원 2BL",
+    "pblancNo": "2026000150",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000150&pblancNo=2026000150&atchmnflSeqNo=1800064&atchmnflSn=3"
+   }
+  ],
+  "home": "http://www.엘리프성성호수공원.com"
+ },
+ "elif-suwon": {
+  "notices": [
+   {
+    "label": "",
+    "name": "엘리프 한신더휴 수원 D3블록(본청약)",
+    "pblancNo": "2025000307",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000307&pblancNo=2025000307&atchmnflSeqNo=1555166&atchmnflSn=3"
+   }
+  ],
+  "home": "http://www.엘리프한신더휴수원.com"
+ },
+ "eomgung-travis": {
+  "notices": [
+   {
+    "label": "",
+    "name": "엄궁역 트라비스 하늘채",
+    "pblancNo": "2026000074",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000074&pblancNo=2026000074&atchmnflSeqNo=1774019&atchmnflSn=3"
+   }
+  ],
+  "home": "https://hanulche-eg.com/"
+ },
+ "eopseong-lake1": {
+  "notices": [
+   {
+    "label": "",
+    "name": "업성 푸르지오 레이크시티",
+    "pblancNo": "2026000086",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000086&pblancNo=2026000086&atchmnflSeqNo=1783103&atchmnflSn=7"
+   }
+  ],
+  "home": "https://prugio-lakecity.com"
+ },
+ "eopseong-lake2": {
+  "notices": [
+   {
+    "label": "",
+    "name": "업성 푸르지오 레이크시티 2단지",
+    "pblancNo": "2026000276",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000276&pblancNo=2026000276&atchmnflSeqNo=1861013&atchmnflSn=4"
+   }
+  ],
+  "home": "https://prugio-lakecity.com"
+ },
+ "eumseong-fullhouse": {
+  "notices": [
+   {
+    "label": "",
+    "name": "음성 우미린 풀하우스",
+    "pblancNo": "2022000723",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2022000723&pblancNo=2022000723&atchmnflSeqNo=804169&atchmnflSn=4"
+   }
+  ],
+  "home": "https://es1.lynn.co.kr/"
+ },
+ "eumseong-markverre": {
+  "notices": [
+   {
+    "label": "",
+    "name": "음성 푸르지오 마크베르",
+    "pblancNo": "2022000592",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2022000592&pblancNo=2022000592&atchmnflSeqNo=773077&atchmnflSn=2"
+   }
+  ],
+  "home": "https://www.prugio.com/hc/2022/eumseong3/"
+ },
+ "eumseong-xi": {
+  "notices": [
+   {
+    "label": "",
+    "name": "음성자이 센트럴시티",
+    "pblancNo": "2022000649",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2022000649&pblancNo=2022000649&atchmnflSeqNo=787013&atchmnflSn=3"
+   }
+  ],
+  "home": "http://xi.co.kr/es"
+ },
+ "forena-dangri": {
+  "notices": [
+   {
+    "label": "",
+    "name": "한화포레나 부산당리",
+    "pblancNo": "2026000066",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000066&pblancNo=2026000066&atchmnflSeqNo=1763318&atchmnflSn=3"
+   }
+  ],
+  "home": "https://dangni.forena.co.kr/"
+ },
+ "forena-sicheong": {
+  "notices": [
+   {
+    "label": "",
+    "name": "포레나더샵 인천시청역",
+    "pblancNo": "2025000572",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000572&pblancNo=2025000572&atchmnflSeqNo=1699066&atchmnflSn=3"
+   }
+  ],
+  "home": "https://incheon.forena.co.kr/"
+ },
+ "gangneung-umirin": {
+  "notices": [
+   {
+    "label": "",
+    "name": "강릉 우미 린 더 프리미어",
+    "pblancNo": "2026000089",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000089&pblancNo=2026000089&atchmnflSeqNo=1794997&atchmnflSn=5"
+   }
+  ],
+  "home": "https://강릉우미린더프리미어.com"
+ },
+ "geoje-asterium": {
+  "notices": [
+   {
+    "label": "",
+    "name": "센트레빌 아스테리움 거제",
+    "pblancNo": "2026000331",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000331&pblancNo=2026000331&atchmnflSeqNo=1928049&atchmnflSn=4"
+   }
+  ],
+  "home": "https://센트레빌아스테리움거제.com"
+ },
+ "geoje-marinepiece": {
+  "notices": [
+   {
+    "label": "",
+    "name": "거제 푸르지오 마린피스",
+    "pblancNo": "2026000253",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000253&pblancNo=2026000253&atchmnflSeqNo=1887028&atchmnflSn=6"
+   }
+  ],
+  "home": "http://www.prugio.com/hb/2026/marinepiece"
+ },
+ "gimhae-laciel": {
+  "notices": [
+   {
+    "label": "",
+    "name": "신문 대상 웰라움 라시엘",
+    "pblancNo": "2026000263",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000263&pblancNo=2026000263&atchmnflSeqNo=1855045&atchmnflSn=6"
+   }
+  ],
+  "home": "https://www.신문대상라시엘.com"
+ },
+ "gimhae-sinmun-ipark": {
+  "notices": [
+   {
+    "label": "",
+    "name": "김해 신문 센트럴 아이파크",
+    "pblancNo": "2026000270",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000270&pblancNo=2026000270&atchmnflSeqNo=1867014&atchmnflSn=5"
+   }
+  ],
+  "home": "https://www.i-park.com/sinmuncentral/"
+ },
+ "gochon-xi": {
+  "notices": [
+   {
+    "label": "",
+    "name": "고촌센트럴자이",
+    "pblancNo": "2023000579",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2023000579&pblancNo=2023000579&atchmnflSeqNo=1101030&atchmnflSn=3"
+   }
+  ],
+  "home": "https://xi.co.kr/kps"
+ },
+ "godeok-housed": {
+  "notices": [
+   {
+    "label": "",
+    "name": "고덕국제신도시 수자인하우스디",
+    "pblancNo": "2026000258",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000258&pblancNo=2026000258&atchmnflSeqNo=1849006&atchmnflSn=4"
+   }
+  ],
+  "home": "https://고덕국제신도시수자인하우스디.com"
+ },
+ "godeok-sujain": {
+  "notices": [
+   {
+    "label": "1단지",
+    "name": "고덕국제신도시 수자인풍경채 1단지",
+    "pblancNo": "2026000154",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000154&pblancNo=2026000154&atchmnflSeqNo=1797751&atchmnflSn=8"
+   },
+   {
+    "label": "2단지",
+    "name": "고덕국제신도시 수자인풍경채 2단지",
+    "pblancNo": "2026000155",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000155&pblancNo=2026000155&atchmnflSeqNo=1807072&atchmnflSn=5"
+   }
+  ],
+  "home": "https://고덕국제신도시수자인풍경채.com"
+ },
+ "godeok-woomi": {
+  "notices": [
+   {
+    "label": "",
+    "name": "평택 고덕 우미 린 프레스티지(Abc-36BL)",
+    "pblancNo": "2026000237",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000237&pblancNo=2026000237&atchmnflSeqNo=1832453&atchmnflSn=6"
+   }
+  ],
+  "home": "https://pg1.lynn.co.kr"
+ },
+ "gongju-jinarehii": {
+  "notices": [
+   {
+    "label": "",
+    "name": "공주월송 진아레히",
+    "pblancNo": "2026000053",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000053&pblancNo=2026000053&atchmnflSeqNo=1797697&atchmnflSn=2"
+   }
+  ],
+  "home": "https://www.gjws-jinarehii.co.kr/"
+ },
+ "grancity-philhouse": {
+  "notices": [
+   {
+    "label": "",
+    "name": "아산 그랑시티필하우스",
+    "pblancNo": "2026000267",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000267&pblancNo=2026000267&atchmnflSeqNo=1992075&atchmnflSn=3"
+   }
+  ],
+  "home": "https://www.천안아산역그랑시티필하우스.com/"
+ },
+ "grandlac": {
+  "notices": [
+   {
+    "label": "",
+    "name": "그랑라크 에일린의 뜰",
+    "pblancNo": "2026000403",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000403&pblancNo=2026000403&atchmnflSeqNo=1951383&atchmnflSn=10"
+   }
+  ],
+  "home": "http://www.그랑라크에일린의뜰.com"
+ },
+ "guwol-artpark": {
+  "notices": [
+   {
+    "label": "",
+    "name": "힐스테이트 구월아트파크",
+    "pblancNo": "2026000147",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000147&pblancNo=2026000147&atchmnflSeqNo=1808107&atchmnflSn=3"
+   }
+  ],
+  "home": "https://www.hillstate-hec.co.kr/s/guweol"
+ },
+ "gwangju-champions": {
+  "notices": [
+   {
+    "label": "",
+    "name": "올 뉴 챔피언스시티 1차",
+    "pblancNo": "2026000419",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000419&pblancNo=2026000419&atchmnflSeqNo=1966064&atchmnflSn=3"
+   }
+  ],
+  "home": "https://www.championscity.co.kr"
+ },
+ "gwangju-jungang-lotte": {
+  "notices": [
+   {
+    "label": "1BL",
+    "name": "중앙공원 롯데캐슬 시그니처 1BL",
+    "pblancNo": "2024000127",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2024000127&pblancNo=2024000127&atchmnflSeqNo=1232389&atchmnflSn=6"
+   },
+   {
+    "label": "2-1BL",
+    "name": "중앙공원 롯데캐슬 시그니처 2-1BL",
+    "pblancNo": "2024000128",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2024000128&pblancNo=2024000128&atchmnflSeqNo=1232390&atchmnflSn=4"
+   },
+   {
+    "label": "2-2BL",
+    "name": "중앙공원 롯데캐슬 시그니처 2-2BL",
+    "pblancNo": "2024000129",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2024000129&pblancNo=2024000129&atchmnflSeqNo=1236021&atchmnflSn=3"
+   }
+  ],
+  "home": "https://중앙공원-롯데캐슬시그니처.com"
+ },
+ "gwangju-songam": {
+  "notices": [
+   {
+    "label": "",
+    "name": "광주 송암공원 중흥S-클래스 SK VIEW",
+    "pblancNo": "2024000042",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2024000042&pblancNo=2024000042&atchmnflSeqNo=1199031&atchmnflSn=3"
+   }
+  ],
+  "home": "http://www.gj-jns.com/"
+ },
+ "gyeongsan-hoban": {
+  "notices": [
+   {
+    "label": "",
+    "name": "경산 상방공원 호반써밋 1단지",
+    "pblancNo": "2026000008",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000008&pblancNo=2026000008&atchmnflSeqNo=1738026&atchmnflSn=2"
+   }
+  ],
+  "home": "https://hobansummit-sangbang.co.kr"
+ },
+ "hongseong-eph": {
+  "notices": [
+   {
+    "label": "",
+    "name": "e편한세상 홍성 더센트럴",
+    "pblancNo": "2022000714",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2022000714&pblancNo=2022000714&atchmnflSeqNo=800100&atchmnflSn=4"
+   }
+  ],
+  "home": "https://www.dlcon-apt.co.kr/danji/221092/index.html#/"
+ },
+ "hs-gaya": {
+  "notices": [
+   {
+    "label": "1단지",
+    "name": "힐스테이트 가야 1단지",
+    "pblancNo": "2025000441",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000441&pblancNo=2025000441&atchmnflSeqNo=1591153&atchmnflSn=3"
+   },
+   {
+    "label": "2단지",
+    "name": "힐스테이트 가야 2단지",
+    "pblancNo": "2025000442",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000442&pblancNo=2025000442&atchmnflSeqNo=1590176&atchmnflSn=3"
+   }
+  ],
+  "home": "https://hillstate.co.kr/s/gy"
+ },
+ "hs-icheon": {
+  "notices": [
+   {
+    "label": "1단지",
+    "name": "힐스테이트 이천역 1단지",
+    "pblancNo": "2024000290",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2024000290&pblancNo=2024000290&atchmnflSeqNo=1302022&atchmnflSn=7"
+   },
+   {
+    "label": "2단지",
+    "name": "힐스테이트 이천역 2단지",
+    "pblancNo": "2024000291",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2024000291&pblancNo=2024000291&atchmnflSeqNo=1286995&atchmnflSn=4"
+   }
+  ],
+  "home": "http://hillstate.co.kr/s/ics"
+ },
+ "hs-parkforet": {
+  "notices": [
+   {
+    "label": "",
+    "name": "힐스테이트 수원파크포레",
+    "pblancNo": "2023000502",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2023000502&pblancNo=2023000502&atchmnflSeqNo=1079311&atchmnflSn=2"
+   }
+  ],
+  "home": "https://www.hillstate-hec.co.kr/s/suwon-parkfore"
+ },
+ "hwaseo-honors": {
+  "notices": [
+   {
+    "label": "",
+    "name": "화서역 호수공원 아너스빌",
+    "pblancNo": "2026000449",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000449&pblancNo=2026000449&atchmnflSeqNo=1971234&atchmnflSn=2"
+   }
+  ],
+  "home": "https://www.화서역아너스빌.com"
+ },
+ "hyangnam": {
+  "notices": [
+   {
+    "label": "",
+    "name": "향남역 그로브 스위첸",
+    "pblancNo": "2026000463",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000463&pblancNo=2026000463&atchmnflSeqNo=1978209&atchmnflSn=6"
+   }
+  ],
+  "home": "https://향남역스위첸.com"
+ },
+ "icheon-yemiji": {
+  "notices": [
+   {
+    "label": "",
+    "name": "이천 중리지구 B3블록 금성백조 예미지",
+    "pblancNo": "2025000581",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000581&pblancNo=2025000581&atchmnflSeqNo=1639158&atchmnflSn=5"
+   }
+  ],
+  "home": "https://ic-yemizi.com/"
+ },
+ "iksan-felipia": {
+  "notices": [
+   {
+    "label": "",
+    "name": "익산 펠리피아",
+    "pblancNo": "2026000184",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000184&pblancNo=2026000184&atchmnflSeqNo=1836088&atchmnflSn=1"
+   }
+  ],
+  "home": "https://www.익산펠리피아.kr"
+ },
+ "imok-dietre2": {
+  "notices": [
+   {
+    "label": "",
+    "name": "북수원이목지구 대방 디에트르 더 리체Ⅱ(A3BL)",
+    "pblancNo": "2025000127",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000127&pblancNo=2025000127&atchmnflSeqNo=1503072&atchmnflSn=11"
+   }
+  ],
+  "home": "http://detre-sw2.co.kr"
+ },
+ "inha-roicent": {
+  "notices": [
+   {
+    "label": "",
+    "name": "인하대역 수자인 로이센트",
+    "pblancNo": "2025000425",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000425&pblancNo=2025000425&atchmnflSeqNo=1591026&atchmnflSn=6"
+   }
+  ],
+  "home": "https://sujain-roicent.co.kr"
+ },
+ "jangan-sclass": {
+  "notices": [
+   {
+    "label": "",
+    "name": "부산 장안지구 B-2블록 중흥S-클래스(본청약)",
+    "pblancNo": "2026000308",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000308&pblancNo=2026000308&atchmnflSeqNo=1906999&atchmnflSn=2"
+   }
+  ],
+  "home": "https://www.ja-sclass.com/index.html"
+ },
+ "jeju-yeondong": {
+  "notices": [
+   {
+    "label": "",
+    "name": "이안 연동스퀘어",
+    "pblancNo": "2025000592",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000592&pblancNo=2025000592&atchmnflSeqNo=1629148&atchmnflSn=2"
+   }
+  ],
+  "home": "http://www.iaanydsquare.com"
+ },
+ "jeonju-artiem": {
+  "notices": [
+   {
+    "label": "",
+    "name": "아르티엠 라 테라스",
+    "pblancNo": "2026000368",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000368&pblancNo=2026000368&atchmnflSeqNo=1951360&atchmnflSn=3"
+   }
+  ],
+  "home": "http://www.아르티엠.com"
+ },
+ "jiksan-dongil": {
+  "notices": [
+   {
+    "label": "",
+    "name": "천안 동일하이빌 파크레인",
+    "pblancNo": "2026000078",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000078&pblancNo=2026000078&atchmnflSeqNo=1770407&atchmnflSn=3"
+   }
+  ],
+  "home": "http://천안동일하이빌파크레인.com"
+ },
+ "leel-centum": {
+  "notices": [
+   {
+    "label": "",
+    "name": "르엘 리버파크 센텀",
+    "pblancNo": "2024000694",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2024000694&pblancNo=2024000694&atchmnflSeqNo=1555205&atchmnflSn=6"
+   }
+  ],
+  "home": "https://르엘리버파크센텀.com/"
+ },
+ "munhwa-sujain": {
+  "notices": [
+   {
+    "label": "",
+    "name": "대전 문화공원 수자인",
+    "pblancNo": "2025000252",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000252&pblancNo=2025000252&atchmnflSeqNo=1552204&atchmnflSn=3"
+   }
+  ],
+  "home": "https://sujain-munhwapark.co.kr"
+ },
+ "munsuro-vista": {
+  "notices": [
+   {
+    "label": "",
+    "name": "문수로 비스타 더파크",
+    "pblancNo": "2026000441",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000441&pblancNo=2026000441&atchmnflSeqNo=1973044&atchmnflSn=2"
+   }
+  ],
+  "home": "http://munsuro-vista-park.com"
+ },
+ "omokcheon-thelive": {
+  "notices": [
+   {
+    "label": "",
+    "name": "오목천역 더리브",
+    "pblancNo": "2023000442",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2023000442&pblancNo=2023000442&atchmnflSeqNo=1063109&atchmnflSn=11"
+   }
+  ],
+  "home": "http://www.오목천역더리브.com"
+ },
+ "onam1": {
+  "notices": [
+   {
+    "label": "",
+    "name": "오남역 서희스타힐스 여의재 1단지",
+    "pblancNo": "2026000365",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000365&pblancNo=2026000365&atchmnflSeqNo=1948004&atchmnflSn=5"
+   }
+  ],
+  "home": "https://오남역서희스타힐스1단지.com"
+ },
+ "onam3": {
+  "notices": [
+   {
+    "label": "",
+    "name": "오남역 서희스타힐스 여의재 3단지",
+    "pblancNo": "2025000422",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000422&pblancNo=2025000422&atchmnflSeqNo=1759014&atchmnflSn=11"
+   }
+  ],
+  "home": "http://www.오남역서희스타힐스여의재.com"
+ },
+ "oryong-harrington": {
+  "notices": [
+   {
+    "label": "",
+    "name": "해링턴플레이스 오룡역",
+    "pblancNo": "2026000033",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000033&pblancNo=2026000033&atchmnflSeqNo=1747196&atchmnflSn=2"
+   }
+  ],
+  "home": "http://해링턴플레이스오룡역.com/"
+ },
+ "osan-heritage": {
+  "notices": [
+   {
+    "label": "1단지",
+    "name": "오산헤리티지자이 1단지",
+    "pblancNo": "2026000315",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000315&pblancNo=2026000315&atchmnflSeqNo=1891001&atchmnflSn=3"
+   },
+   {
+    "label": "2단지",
+    "name": "오산헤리티지자이 2단지",
+    "pblancNo": "2026000316",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000316&pblancNo=2026000316&atchmnflSeqNo=1891002&atchmnflSn=3"
+   }
+  ],
+  "home": "https://www.xi.co.kr/osxi"
+ },
+ "parkvista": {
+  "notices": [
+   {
+    "label": "",
+    "name": "더파크 비스타동원",
+    "pblancNo": "2025000462",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000462&pblancNo=2025000462&atchmnflSeqNo=1599248&atchmnflSn=5"
+   }
+  ],
+  "home": "http://더파크비스타동원.com"
+ },
+ "pine-avenue": {
+  "notices": [
+   {
+    "label": "",
+    "name": "더 플래티넘 파인애비뉴",
+    "pblancNo": "2026000111",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000111&pblancNo=2026000111&atchmnflSeqNo=1797054&atchmnflSn=5"
+   }
+  ],
+  "home": "http://더플래티넘파인애비뉴.com"
+ },
+ "richmond-soyang": {
+  "notices": [
+   {
+    "label": "",
+    "name": "더 리치먼드 리버센트 소양",
+    "pblancNo": "2026000173",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000173&pblancNo=2026000173&atchmnflSeqNo=1830074&atchmnflSn=4"
+   }
+  ],
+  "home": "http://www.더리치먼드리버센트소양.com/"
+ },
+ "sangdong-lotte": {
+  "notices": [
+   {
+    "label": "",
+    "name": "상동역 롯데캐슬 시그니처",
+    "pblancNo": "2026000354",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000354&pblancNo=2026000354&atchmnflSeqNo=1948010&atchmnflSn=4"
+   }
+  ],
+  "home": "https://www.lottecastle.co.kr/APT/AT00430/main/index.do"
+ },
+ "seonam-hs": {
+  "notices": [
+   {
+    "label": "1단지",
+    "name": "힐스테이트 선암호수공원 1단지",
+    "pblancNo": "2025000605",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000605&pblancNo=2025000605&atchmnflSeqNo=1654012&atchmnflSn=1"
+   },
+   {
+    "label": "2단지",
+    "name": "힐스테이트 선암호수공원 2단지",
+    "pblancNo": "2025000606",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000606&pblancNo=2025000606&atchmnflSeqNo=1645796&atchmnflSn=1"
+   }
+  ],
+  "home": "https://www.hillstate.co.kr/s/seonam"
+ },
+ "seongnam-woomi": {
+  "notices": [
+   {
+    "label": "",
+    "name": "대전 성남 우미린 뉴시티",
+    "pblancNo": "2024000086",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2024000086&pblancNo=2024000086&atchmnflSeqNo=1204020&atchmnflSn=3"
+   }
+  ],
+  "home": "https://dsr.lynn.co.kr/"
+ },
+ "seonhwa-lucier": {
+  "notices": [
+   {
+    "label": "1회차",
+    "name": "대전 하늘채 루시에르(1회차)",
+    "pblancNo": "2025000203",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000203&pblancNo=2025000203&atchmnflSeqNo=1550064&atchmnflSn=2"
+   },
+   {
+    "label": "2회차",
+    "name": "대전 하늘채 루시에르(2회차)",
+    "pblancNo": "2026000009",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000009&pblancNo=2026000009&atchmnflSeqNo=1690011&atchmnflSn=2"
+   }
+  ],
+  "home": "http://www.hanulche-lucier.com/"
+ },
+ "seosan-trivn": {
+  "notices": [
+   {
+    "label": "",
+    "name": "트리븐 서산",
+    "pblancNo": "2025000498",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000498&pblancNo=2025000498&atchmnflSeqNo=1608231&atchmnflSn=1"
+   }
+  ],
+  "home": "http://www.trivn-doosan-seosan.com"
+ },
+ "seoulsan-parkgrande": {
+  "notices": [
+   {
+    "label": "",
+    "name": " e편한세상 서울산 파크그란데",
+    "pblancNo": "2022000424",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2022000424&pblancNo=2022000424&atchmnflSeqNo=736101&atchmnflSn=1"
+   }
+  ],
+  "home": "https://www.dlcon-apt.co.kr"
+ },
+ "ssy-hangang": {
+  "notices": [
+   {
+    "label": "",
+    "name": "쌍용 더 플래티넘 한강",
+    "pblancNo": "2026000468",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000468&pblancNo=2026000468&atchmnflSeqNo=1990183&atchmnflSn=2"
+   }
+  ],
+  "home": "http://쌍용더플래티넘한강.com"
+ },
+ "suncheon-greenwell": {
+  "notices": [
+   {
+    "label": "",
+    "name": "순천 지에이그린웰 하이드원",
+    "pblancNo": "2024000698",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2024000698&pblancNo=2024000698&atchmnflSeqNo=1412103&atchmnflSn=1"
+   }
+  ],
+  "home": "http://순천지에이그린웰하이드원.com/"
+ },
+ "uam-harrington": {
+  "notices": [
+   {
+    "label": "",
+    "name": "해링턴 마레",
+    "pblancNo": "2023000625",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2023000625&pblancNo=2023000625&atchmnflSeqNo=1109988&atchmnflSn=1"
+   }
+  ],
+  "home": "http://www.해링턴마레.com/"
+ },
+ "yangsan-parkpalice": {
+  "notices": [
+   {
+    "label": "",
+    "name": "양산자이 파크팰리체",
+    "pblancNo": "2025000257",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000257&pblancNo=2025000257&atchmnflSeqNo=1550218&atchmnflSn=2"
+   }
+  ],
+  "home": "https://www.xi.co.kr/YSX"
+ },
+ "yangsan-thesky": {
+  "notices": [
+   {
+    "label": "1단지",
+    "name": "힐스테이트 양산더스카이 1단지",
+    "pblancNo": "2026000223",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000223&pblancNo=2026000223&atchmnflSeqNo=1854157&atchmnflSn=2"
+   },
+   {
+    "label": "2단지",
+    "name": "힐스테이트 양산더스카이 2단지",
+    "pblancNo": "2026000224",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000224&pblancNo=2026000224&atchmnflSeqNo=1852529&atchmnflSn=2"
+   }
+  ],
+  "home": "https://hillstate.co.kr/s/ysthesky"
+ },
+ "yeoju-rosebien": {
+  "notices": [
+   {
+    "label": "",
+    "name": "여주역 로제비앙 더센텀",
+    "pblancNo": "2025000179",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000179&pblancNo=2025000179&atchmnflSeqNo=1538008&atchmnflSn=7"
+   }
+  ],
+  "home": "https://여주역로제비앙.com"
+ },
+ "yeongjong-dietre": {
+  "notices": [
+   {
+    "label": "",
+    "name": "인천영종국제도시 디에트르 라 메르Ⅰ(RC4-1,2BL)(본청약)",
+    "pblancNo": "2025000602",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000602&pblancNo=2025000602&atchmnflSeqNo=1649013&atchmnflSn=14"
+   }
+  ],
+  "home": "http://www.detre-yj1.co.kr"
+ },
+ "yeongju-harrington": {
+  "notices": [
+   {
+    "label": "",
+    "name": "효성해링턴 플레이스 영주 더리버",
+    "pblancNo": "2025000512",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2025000512&pblancNo=2025000512&atchmnflSeqNo=1608344&atchmnflSn=1"
+   }
+  ],
+  "home": "http://효성해링턴플레이스영주더리버.com"
+ },
+ "yeonsu-meridian": {
+  "notices": [
+   {
+    "label": "",
+    "name": "연수 월드메르디앙 어반포레",
+    "pblancNo": "2026000035",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000035&pblancNo=2026000035&atchmnflSeqNo=1736995&atchmnflSn=5"
+   }
+  ],
+  "home": "https://www.연수월드메르디앙어반포레.com"
+ },
+ "yeosu-soje": {
+  "notices": [
+   {
+    "label": "A3BL",
+    "name": "소제지구 A3BL 중흥S-클래스 우미린",
+    "pblancNo": "2026000090",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000090&pblancNo=2026000090&atchmnflSeqNo=1797480&atchmnflSn=5"
+   },
+   {
+    "label": "A4BL",
+    "name": "소제지구 A4BL 중흥S-클래스 우미린",
+    "pblancNo": "2026000091",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000091&pblancNo=2026000091&atchmnflSeqNo=1802992&atchmnflSn=4"
+   }
+  ],
+  "home": "https://soje-jnw.com"
+ },
+ "zenith-daeyeon": {
+  "notices": [
+   {
+    "label": "",
+    "name": "두산위브더제니스 대연",
+    "pblancNo": "2026000356",
+    "pdf": "https://static.applyhome.co.kr/ai/aia/getAtchmnfl.do?houseManageNo=2026000356&pblancNo=2026000356&atchmnflSeqNo=1929440&atchmnflSn=3"
+   }
+  ],
+  "home": "http://www.두산위브더제니스대연.com"
+ }
+}
