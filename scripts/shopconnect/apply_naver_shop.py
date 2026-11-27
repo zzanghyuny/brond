@@ -56,6 +56,7 @@ PICKS_BY_SLUG = {
     'acro-de-seocho': ['rebuild-book', 'cheongyak-book', 'laser'],               # 서초 재건축·만점통장 글
     'gyeongbuk-docheong-prugio-firstion': ['location-book', 'battery', 'planner'],  # 도청신도시 2단계·차량 임장·중도금 일정
     'yongin-dongil-hivill-parkvalley-2': ['cheongyak-book', 'school-prep', 'battery'],  # 이전기관 특공 134세대·가점제, 원삼초 길 건너, 수지 견본주택~원삼 현장 임장
+    'ilgwang-the-s': ['tax-book', 'planner', 'laser'],  # 9억대 84㎡·전매 6개월(취득세·양도세), 중도금 6회·잔금 35% 일정, 5개 타입 평면·해운대 견본주택 실측
     'songdo-logebien-moaelgaa': ['cheongyak-book', 'laser', 'location-book'],     # 인천 50% 우선·특공 398세대, 견본주택 실측, 트램·GTX 예정 입지
 }
 
