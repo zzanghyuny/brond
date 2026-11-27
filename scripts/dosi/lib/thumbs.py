@@ -57,7 +57,7 @@ for which in ('S1', 'S2'):
         G.stroke_geom(cr, city, pj, G.BRASS, 1.0, 4.0, fill_alpha=0.18)
         se = shape(GEO['seoul']); at = c['seoul_at']
         cr.set_source_rgba(*G.rgb(G.INK, 0.95)); G.path_km(cr, se, (se.centroid.x, se.centroid.y), pj, at); cr.fill()
-        x, y = pj(*at); G.label(cr, '서울', x + 22, y - 30, 40, G.INK, 1.0, 'lm'); G.label(cr, c.get('city_label', EP['city']), *pj(city.bounds[2] - 1.0, city.bounds[3] - 0.3), 44, G.BRASS, 1.0, 'rm')
+        x, y = pj(*at); G.label(cr, '서울', x + 22, y - 30, 40, G.INK, 1.0, 'lm'); G.label(cr, c.get('city_label', EP['city']), *pj(*(c.get('city_label_at') or (city.bounds[2] - 1.0, city.bounds[3] - 0.3))), 44, G.BRASS, 1.0, 'rm')
         cv.paste(Image.frombytes('RGB', (Wm, Hm), G.to_bytes(surf, Wm, Hm)), (0, 500))
     else:
         cv.paste(ImageEnhance.Color(crop(frame(c['clip'], c['t']), 1080, 1000, c.get('cx', 0.5), c.get('cy', 0.5))).enhance(1.1), (0, 500))

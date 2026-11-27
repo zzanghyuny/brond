@@ -23,6 +23,16 @@
 
 const POSTS = [
   {
+    id: "mexico-city-city-structure",
+    category: "city",
+    tag: "도시이야기 No.003",
+    title: "멕시코시티는 왜 가라앉을까 — 호수를 메워 세운 도시 700년",
+    date: "2026-11-28",
+    dateLabel: "2026. 11. 28",
+    url: "posts/mexico-city-city-structure.html",
+    preview: `<p>멕시코시티는 서울의 약 2.5배, 인구 922만 명. 1325년 텍스코코 호수 위 작은 섬에 세운 테노치티틀란에서 시작해, 호수의 물을 빼고 그 바닥 위로 커진 도시라 빠른 곳은 해마다 50cm까지 가라앉는다.</p>`
+  },
+  {
     id: "chongqing-city-structure",
     category: "city",
     tag: "도시이야기 No.002",

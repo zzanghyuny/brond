@@ -20,6 +20,8 @@ TXT = (240, 234, 220); DIMT = (160, 154, 142); GOLD = (214, 188, 128); CHAP = (1
 _f = {}
 def SERIF(s, w=500):
     if ('se', s, w) not in _f:
+        st = FP + f'NotoSerifKR-{w}.ttf'   # 가변 글꼴을 못 받으면 굵기별 정적 파일(Google Fonts)
+        if os.path.exists(st): _f[('se', s, w)] = ImageFont.truetype(st, s); return _f[('se', s, w)]
         f = ImageFont.truetype(FP + 'NotoSerifKR.ttf', s)
         try: f.set_variation_by_axes([w])
         except Exception: pass
