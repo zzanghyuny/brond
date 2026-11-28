@@ -83,7 +83,7 @@
 **사이트 글 배치**: 커버 = 입지 개략도(`chart-map-naver.png`, 한 번만) → 1장 핵심요약(브리프 → 스탯 박스 → 레이더 → 브릿지 → 평점표 → 점수 근거 → 비교단지 후보 표) → 2장 입지 → 3장 상품(공식 조감도, 공급금액, **평면 전 타입**, 청약 일정은 `chart-c-schedule.png` 하나) → 4장 공급 → 5장 결론. 같은 정보는 한 번만. 결론 아래 쿠팡 카드(`scripts/coupang/apply_coupang.py`).
 - 등록: `posts-data.js`(제목 형식 `지역 - 단지명 | …, 84㎡ 평균 분양가 X.XX억, 예상 프리미엄 ±N` — 홈 대문·계산기가 이 제목을 읽는다), `posts-manifest.json`, `sitemap.xml`, `feed.xml`, 썸네일 `python3 scripts/build_thumbs.py`.
 
-**네이버 원고** (기준 파일 `naver-html/goyang-hanshin-thehue-firstone.html`, 스킬 `beodongsan-naver-copy`): 굵은 첫 두 문장(검색 미리보기) → 회색 바이라인 → 제목 → 6섹션(1 결론부터: chart-b → 조감도 → 개요 표 / 2 왜 이 가격: 입지 개략도 → 비교단지 → chart-a → 보정 표 / 3 한줄평 / 4 지역 최근 분양 / 5 공식 이미지 **번호 없이** 나열 + 일정 인포그래픽 / 6 결론 + 사이트 링크 + 계산기 링크). **대표사진 = 입지 개략도.** 표는 PNG로(`scripts/naver_tables_to_png.py`), 하단 쇼핑커넥트 칸(`scripts/shopconnect/apply_naver_shop.py`), 모바일 폭(이미지 1000px·글씨 28px+).
+**네이버 원고** (기준 파일 `naver-html/goyang-hanshin-thehue-firstone.html`, 스킬 `beodongsan-naver-copy`): 굵은 첫 두 문장(검색 미리보기) → 회색 바이라인 → 제목 → 6섹션(1 결론부터: chart-b → 조감도 → 개요 표 / 2 왜 이 가격: 입지 개략도 → 비교단지 → chart-a → 보정 표 / 3 한줄평 / 4 지역 최근 분양 / 5 공식 이미지 **번호 없이** 나열 + 일정 인포그래픽 / 6 결론 + 사이트 링크 + 계산기 링크). **대표사진 = 입지 개략도.** 표는 PNG로(`scripts/naver_tables_to_png.py`), 하단 쇼핑커넥트 칸(`scripts/shopconnect/apply_naver_shop.py`, 글 내용을 보고 상품 3개를 글마다 다르게 — 스킬 `beodongsan-shopconnect`), 모바일 폭(이미지 1000px·글씨 28px+).
 
 **쇼츠 3편** (`scripts/shorts/README.md`, 스킬 `beodongsan-video-team`): ① 시네마틱 분양가 총정리 `make_gen.py`(나레이션 없음, slow + 브릿지) ② 가격 맞히기 `make_quiz.py`(InJoon 남자 나레이션) ③ 1분 총정리 `make_brief.py brief/<키>.json`(현금 → 예상프리미엄 → 입지 → 단지·평면 → 모집공고 유의사항, InJoon +40%). '공고문 속 숨은 한 줄'은 요청 시만. 영상마다 썸네일·제목을 함께 준다.
 

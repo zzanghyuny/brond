@@ -2,13 +2,13 @@
 
 > **2026.11.28 변경:** 네이버 원고·영상·썸네일·README는 이제 GitHub가 아니라 구글 드라이브 'Aside 작업용 폴더' → '브동산'(청약·미분양) / '브동산 도시이야기' 안 글별 폴더에 있다. 폴더의 `README.txt`에 제목·태그·대표사진·영상 설명이 정리돼 있다. 아래의 GitHub 경로 안내는 예전 방식이다(`CLAUDE.md` 맨 아래 섹션 참고).
 
-Aside는 Claude Code가 GitHub에 올린 **네이버용 HTML을 읽고**, 네이버 블로그 에디터에서 이미지 업로드·카테고리 설정·발행을 한다.
+Aside는 Claude Code가 구글 드라이브 콘텐츠 폴더에 올린 **네이버용 HTML(`01_네이버원고.html`)을 읽고**, 네이버 블로그 에디터에서 이미지 업로드·카테고리 설정·발행을 한다.
 글 작성·웹사이트 배포는 Claude Code가 한다. Aside는 내용을 임의로 고치지 않는다(오탈자·깨진 표시 발견 시 Paul/Claude Code에 알린다).
 
 ## 0. 준비
 - 저장소: `https://github.com/zzanghyuny/brond` (공개). 브랜치 `main`.
 - 발행 대기 목록: `posts-manifest.json`의 `posts[]` 중 `naver_html`이 있고 `naver_published`가 `true`가 아닌 항목.
-- HTML 원본: `https://raw.githubusercontent.com/zzanghyuny/brond/main/naver-html/{slug}.html` (또는 저장소를 clone/pull 한 `naver-html/{slug}.html`).
+- HTML 원본: 드라이브 'Aside 작업용 폴더' → '브동산 청약' / '브동산 미분양 랭킹' → `YYYY-MM-DD 단지명 (slug)` 폴더의 `01_네이버원고.html`과 `이미지/`. (2026.11.27 이전 글은 GitHub `naver-html/{slug}.html`에만 있을 수 있다.)
 - 네이버 로그인은 Paul이 직접 한다. 비밀번호·쿠키·토큰을 대화나 저장소에 남기지 않는다.
 
 ## 1. 발행 전 확인

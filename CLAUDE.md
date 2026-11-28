@@ -20,9 +20,9 @@ master 문서는 claude.ai 클라우드 채팅 세션 기준으로 작성돼 일
 - master 4-3의 적정가 산출 절차, 4-4의 지도 마킹 색 규칙(SITE=빨강, 비교단지=초록, 배정초등학교=파랑)을 그대로 따를 것.
 - 작업 중 master 문서와 실제 최신 게시물([posts/](posts/)) 코드가 다르면 실제 코드 쪽을 우선 참고하고 master 문서 업데이트가 필요한지 Paul에게 확인(master 10-1 교훈).
 
-## 포스팅 운영 방식 변경 (2026.10.31) — 네이버용 HTML은 GitHub에 올린다
+## 포스팅 운영 방식 변경 (2026.10.31) — 네이버용 HTML 작업 원본은 `naver-html/`
 
-- **네이버용 HTML은 로컬 PC 폴더(`D:\Paul Kim\네이버용` 등)에 저장하지 않고 `naver-html/{slug}.html`로 저장해 커밋·push한다.** Paul과 Aside가 GitHub에서 내려받아 네이버 블로그에 발행한다(발행은 Aside, 작성·push·배포확인은 Claude Code).
+- **네이버용 HTML 작업 원본은 `naver-html/{slug}.html`로 만든다**(manifest·쇼핑커넥트·표 PNG 스크립트가 여기서 읽는다). ~~Paul과 Aside가 GitHub에서 내려받아 발행~~ → **2026.11.28부터 어사이드 전달은 구글 드라이브 콘텐츠 폴더의 `01_네이버원고.html` 사본으로 하고, `naver-html/`에 새 파일을 커밋하지 않는다**(맨 아래 '어사이드 전달물은 구글 드라이브에 올린다' 섹션). 발행은 Aside, 작성·배포확인은 Claude Code.
 - 네이버 제목 구분자는 **세로선 ` | `** (예: `아크메르 동탄 | 예상프리미엄 +2.9억, 분양가 평면 총정리`). 슬래시(` / `) 아님.
 - 네이버용에는 차트(레이더·브릿지) 이미지를 넣지 않는다. 위치 개략도 `chart-map.png`만 쓴다.
 - `naver-html/*.html`에는 `<meta name="robots" content="noindex,nofollow">`와 상단 메타 주석(slug/title/category/naver_category/tags/cover_candidates)을 넣고, `posts-manifest.json`을 `scripts/build-manifest.ps1`로 갱신한다.
