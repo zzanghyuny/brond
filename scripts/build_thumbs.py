@@ -8,7 +8,7 @@ posts-data.js의 글마다 대표 이미지를 골라 posts/images/<slug>/thumb.
 대표 이미지 고르는 순서:
   0. 청약(realestate) 글은 공식 조감도·투시도(alt에 조감·투시 → 대표 이미지·전경 순, 위치·배치·평면 등 제외)
   1. og:image  2. 커버(.cover) 안의 첫 img
-  3. 미분양 랭킹 글은 1위 단지 조감도(*-aerial.jpg)  4. 본문 첫 img(아바타·로고 제외)
+  3. 미분양 랭킹 글은 제목의 1위 단지 조감도(없으면 그 단지 위치도), 그다음 첫 *-aerial.jpg  4. 본문 첫 img(아바타·로고 제외)
 세로로 긴 합성 이미지는 위쪽(조감도가 있는 쪽)을 4:3으로 잘라 쓴다. 원본은 건드리지 않는다.
 
 사용법:
@@ -45,6 +45,24 @@ def find_aerial(html):
             if test(s, t):
                 return s
     return None
+
+
+def find_top1(html, title):
+    """미분양 랭킹 글: 제목의 '1위 ○○' 단지 조감도(없으면 그 단지의 다른 공식 이미지)."""
+    m = re.search(r'1위\s*(.+?)\s*예상', title or '')
+    if not m:
+        return None
+    key = m.group(1).replace(' ', '')
+    hits = []
+    for a in re.findall(r'<img([^>]+)>', html.split('<body', 1)[-1]):
+        s = re.search(r'src=["\']([^"\']+)', a)
+        t = re.search(r'alt=["\']([^"\']*)', a)
+        if s and t and key in t.group(1).replace(' ', '') and 'chart-' not in s.group(1):
+            hits.append((s.group(1), t.group(1)))
+    for s, t in hits:
+        if GOOD.search(t):
+            return s
+    return hits[0][0] if hits else None
 
 
 def find_source(html):
@@ -94,21 +112,18 @@ def make_thumb(im, out):
 
 
 def set_field(js, url, thumb):
-    """posts-data.js에서 url 줄 바로 뒤에 thumb 필드를 넣거나 고친다."""
-    pat = re.compile(r'(?P<k>"?)url(?P=k)\s*:\s*"' + re.escape(url) + r'"\s*,?')
+    """posts-data.js에서 그 글의 url 바로 뒤에 thumb 필드를 넣거나 고친다(다른 글은 건드리지 않음)."""
+    u = re.escape(url)
+    have = re.compile(r'((?P<k>"?)url(?P=k)\s*:\s*"' + u + r'"\s*,\s*"?thumb"?\s*:\s*)"[^"]*"')
+    if have.search(js):
+        return have.sub(lambda m: m.group(1) + '"' + thumb + '"', js, count=1), True
+    pat = re.compile(r'(?P<k>"?)url(?P=k)\s*:\s*"' + u + r'"\s*,?')
     m = pat.search(js)
     if not m:
         return js, False
-    start = js.rfind('{', 0, m.start())
-    end = js.find('\n  }', m.end())
-    block = js[start:end]
     q = m.group('k')
-    if re.search(r'"?thumb"?\s*:', block):
-        nb = re.sub(r'("?thumb"?\s*:\s*)"[^"]*"', lambda x: x.group(1) + '"' + thumb + '"', block)
-        return js[:start] + nb + js[end:], True
     s = m.group(0)
-    ins = s if s.rstrip().endswith(',') else s + ','
-    ins += ' %sthumb%s: "%s",' % (q, q, thumb)
+    ins = (s if s.rstrip().endswith(',') else s + ',') + ' %sthumb%s: "%s",' % (q, q, thumb)
     return js[:m.start()] + ins + js[m.end():], True
 
 
@@ -117,12 +132,15 @@ def main():
     force = '--force' in sys.argv
     js = open(DATA, encoding='utf8').read()
     urls = re.findall(r'"?url"?\s*:\s*"(posts/[^"]+\.html)"', js)
-    cats = {}
+    cats, titles = {}, {}
     for blk in re.split(r'\n  \{', js):
         u = re.search(r'"?url"?\s*:\s*"(posts/[^"]+\.html)"', blk)
         c = re.search(r'"?category"?\s*:\s*"([^"]+)"', blk)
+        t = re.search(r'"?title"?\s*:\s*"([^"]+)"', blk)
         if u and c:
             cats[u.group(1)] = c.group(1)
+        if u and t:
+            titles[u.group(1)] = t.group(1)
     made, skipped = [], []
     for url in urls:
         slug = os.path.basename(url)[:-5]
@@ -137,7 +155,8 @@ def main():
         if not os.path.exists(path):
             skipped.append((slug, '글 파일 없음')); continue
         html = open(path, encoding='utf8', errors='ignore').read()
-        src = (find_aerial(html) if cats.get(url) == 'realestate' else None) or find_source(html)
+        src = (find_top1(html, titles.get(url)) or (find_aerial(html) if cats.get(url) == 'realestate' else None)
+               or find_source(html))
         im = load(src) if src else None
         if im is None:
             skipped.append((slug, '대표 이미지 없음: %s' % (src or '-')[:80])); continue

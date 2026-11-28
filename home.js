@@ -52,6 +52,16 @@
     return e;
   }
 
+  // 대표사진(조감도) — posts-data.js의 thumb (scripts/build_thumbs.py)
+  function thumb(p, cls) {
+    if (!p.thumb) return null;
+    var f = el("div", cls);
+    var im = document.createElement("img");
+    im.src = p.thumb; im.alt = ""; im.loading = "lazy"; im.decoding = "async";
+    f.appendChild(im);
+    return f;
+  }
+
   var posts = POSTS.filter(function (p) { return p.category !== "vietnam" && p.hidden !== true; })
     .slice().sort(function (a, b) { return (b.date || "").localeCompare(a.date || ""); });
 
@@ -92,6 +102,8 @@
       pick.querySelector("[data-k=name]").textContent = shortName(best.post);
       pick.querySelector("[data-k=sub]").textContent = best.area + " 평균 분양가 " + fmtEok(best.price) + " · 브동산 적정가격 " + fmtEok(best.fair);
       pick.href = best.post.url;
+      var hp = thumb(best.post, "hp-photo");
+      if (hp && !pick.querySelector(".hp-photo")) pick.insertBefore(hp, pick.firstChild);
       pick.hidden = false;
     }
   }
@@ -104,6 +116,8 @@
       var m = Math.max(j.price, j.fair) * 1.04;
       var a = el("a", "jc");
       a.href = j.post.url;
+      var ph = thumb(j.post, "jc-photo");
+      if (ph) a.appendChild(ph);
       var top = el("div", "jc-top");
       top.appendChild(el("span", null, j.post.tag || ""));
       top.appendChild(el("span", null, (j.post.region || "") + " · " + j.area));
@@ -151,6 +165,8 @@
       items.forEach(function (it) {
         var a = el("a", "rk");
         a.href = it.post.url;
+        var ph = thumb(it.post, "rk-photo");
+        if (ph) a.appendChild(ph);
         a.appendChild(el("div", "rk-region", it.region + (it.n ? " · TOP" + it.n : "")));
         a.appendChild(el("div", "rk-name", it.name));
         var cls = Math.abs(it.prem) < 0.05 ? "even" : (it.prem > 0 ? "plus" : "minus");
