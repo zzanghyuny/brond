@@ -132,6 +132,13 @@ def bg_stream(k, s, L):
                                   f'setpts=(PTS-STARTPTS)*{f:.4f},fps={FPS},scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},eq=saturation=1.35:contrast=1.08:brightness=0.02',
                                   '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'], stdout=subprocess.PIPE)
             procs.append(('p', p, int(round(seg * FPS))))
+        elif sh[0] == 'ge':
+            src = sh[1]; z0, z1, px, py = (list(sh[2:]) + [1.0, 1.12, 0.0, 0.0][len(sh) - 2:])[:4]; Nf = int(round(seg * FPS)) + 2
+            p = subprocess.Popen(['ffmpeg', '-v', 'error', '-loop', '1', '-framerate', str(FPS), '-t', f'{seg + 0.3:.3f}', '-i', src, '-vf',
+                                  f"scale=2160:3840:force_original_aspect_ratio=increase,crop=2160:3840,"
+                                  f"zoompan=z='{z0}+({z1}-{z0})*on/{Nf}':x='(iw-iw/zoom)/2*(1+{px}*on/{Nf})':y='(ih-ih/zoom)/2*(1+{py}*on/{Nf})':d=1:s={W}x{H}:fps={FPS},eq=saturation=1.2:contrast=1.06",
+                                  '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'], stdout=subprocess.PIPE)
+            procs.append(('p', p, int(round(seg * FPS))))
         else:
             cues = [sb['t0'] for sb in timeline[k]['subs']]
             procs.append(('g', gfx.frames(sh[1], W, H, seg, cues, sh[2], GEO, short=True), int(round(seg * FPS))))
@@ -153,7 +160,7 @@ def render_scene(k):
     if os.environ.get('SKIP_EXISTING') and os.path.exists(out): return out
     L = tl['dur'] + (0 if last else XF); N = int(round(L * FPS))
     enc = subprocess.Popen(['ffmpeg', '-v', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '19', '-pix_fmt', 'yuv420p', out + '.tmp.mp4'], stdin=subprocess.PIPE)
-    clip = s['shots'][0][0] == 'clip'
+    clip = s['shots'][0][0] in ('clip', 'ge')
     chip = chip_img(s['tag']) if s.get('tag') else None
     mm, mdot = minimap(s.get('loc')) if clip else (None, None)
     subs = [sub_img(sb['text'], sb['hl']) for sb in tl['subs']]

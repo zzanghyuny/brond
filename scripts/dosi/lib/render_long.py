@@ -109,7 +109,7 @@ def chapter_img(text, path):
     d.text((W / 2, 405), num, font=SERIF(34, 600), fill=GOLD, anchor='mm'); d.text((W / 2, 478), name, font=SERIF(58, 600), fill=TXT, anchor='mm')
     im.save(path)
 
-CREDITS = ['영상  Pexels', EP.get('credits_map', '지도  © OpenStreetMap contributors · Natural Earth'), '음악  브동산 자체 제작 · 내레이션 AI 음성(인준)', '숫자 출처는 설명란에 있어요']
+CREDITS = ['영상  Pexels'] + ([EP['credits_ge']] if EP.get('credits_ge') else []) + [EP.get('credits_map', '지도  © OpenStreetMap contributors · Natural Earth'), '음악  브동산 자체 제작 · 내레이션 AI 음성(인준)', '숫자 출처는 설명란에 있어요']
 def end_img(path):
     im = Image.new('RGBA', (W, H), (8, 8, 9, 225)); d = ImageDraw.Draw(im); cx = W // 2; y = 330
     wordmark(d, cx, y, 92, anchor='m')
@@ -141,6 +141,13 @@ def render_scene(k):
             inputs += ['-ss', str(sh[2]), '-i', src]
             filt.append(f"[{j}:v]setpts=(PTS-STARTPTS)*{f:.4f},fps={FPS},scale=2112:884:force_original_aspect_ratio=increase,crop=2112:884,"
                         f"zoompan=z='1+0.05*on/{N}':x='(iw-iw/zoom)/2':y='(ih-ih/zoom)/2':d=1:s={PW}x{PH}:fps={FPS},{GRADE},trim=duration={seg:.3f},setpts=PTS-STARTPTS,setsar=1[b{j}]")
+        elif sh[0] == 'ge':
+            # 구글 어스 정지 캡처(또는 드론 사진) — ('ge', 경로, 시작배율, 끝배율, 가로이동 -1~1, 세로이동 -1~1)
+            src = sh[1]; z0, z1, px, py = (list(sh[2:]) + [1.0, 1.12, 0.0, 0.0][len(sh) - 2:])[:4]
+            inputs += ['-loop', '1', '-framerate', str(FPS), '-t', f'{seg + 0.2:.3f}', '-i', src]
+            filt.append(f"[{j}:v]scale=3840:1608:force_original_aspect_ratio=increase,crop=3840:1608,"
+                        f"zoompan=z='{z0}+({z1}-{z0})*on/{N}':x='(iw-iw/zoom)/2*(1+{px}*on/{N})':y='(ih-ih/zoom)/2*(1+{py}*on/{N})':d=1:s={PW}x{PH}:fps={FPS},"
+                        f"{GRADE},trim=duration={seg:.3f},setpts=PTS-STARTPTS,setsar=1[b{j}]")
         else:
             src = render_anim(k, sh[1], sh[2], seg); inputs += ['-i', src]
             filt.append(f'[{j}:v]fps={FPS},noise=alls=4:allf=t,trim=duration={seg:.3f},setpts=PTS-STARTPTS,setsar=1[b{j}]')

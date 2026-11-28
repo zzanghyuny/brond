@@ -2,6 +2,7 @@
 """도시이야기 3편 — 멕시코시티는 왜 가라앉을까. 가로 본편(LONG, A안) + 쇼츠 2편(S1 호수, S2 침하, B안).
 shot: ('clip', pexels_id, start) | ('anim', name, {opts})
 line: (자막, 읽을 문장 또는 None)  — 숫자는 읽을 문장에서 한글로 푼다.
+2026.11.28 다시 제작: 나레이션 약 1.2배(lib 기본값), 구글 어스 장면 추가(('ge', 캡처, 시작배율, 끝배율, 가로이동, 세로이동)).
 오프닝 순서(2026.11.27 확정): 제목+실사 → 서울과 면적 비교 → 숫자로 보는 도시 → 나머지 꼭지.
 실사 없는 장면은 짧게(면적 비교 8초 안팎, 숫자 12초 안쪽, 그 밖의 그래픽 12초 이하).
 """
@@ -15,7 +16,7 @@ EP = dict(
     work='/home/claude/work/ep3/', center=(-99.133, 19.433),
     minimap_bounds=(-99.31, 19.23, -98.97, 19.52), minimap_layers=['a_cuauhtemoc'], minimap_rivers=[],
     names={'LONG': 'mexico-city-dosi-3-youtube', 'S1': 'mexico-city-dosi-3-shorts-lake', 'S2': 'mexico-city-dosi-3-shorts-sinking'},
-    credits_map='지도  © OpenStreetMap contributors · Natural Earth',
+    credits_map='지도  © OpenStreetMap contributors · Natural Earth', credits_ge='위성·3D 화면  Google Earth', ge_attrib='Google Earth',
     site_url='https://www.brandongsan.com/posts/mexico-city-city-structure.html',
     yt_intro='1325년 텍스코코 호수 위 작은 섬에 세운 테노치티틀란. 스페인이 그 폐허 위에 새 수도를 짓고 호수의 물을 빼면서, 멕시코시티는 옛 호수 바닥 진흙 위에 선 도시가 됐어요. 빠른 곳은 해마다 50cm까지 가라앉는 이유, 주거 중심이 센트로에서 로마·폴랑코, 산타페로 옮겨 간 순서, 1905년 제물포에서 떠난 한인 이민, 한국에서 가는 법까지 지도와 실사로 정리했어요.',
     shorts_desc={'S1': '멕시코 국기의 독수리는 도시가 태어난 이야기예요. 아스테카 사람들은 1325년 텍스코코 호수 위 작은 섬에 테노치티틀란을 세웠고, 물 위에 흙을 쌓은 밭(치남파)으로 도시를 넓혔어요. 남쪽 소치밀코에는 그 물길이 지금도 남아 있어요.\n출처: UNAM Global(2025), 멕시코 데스코노시도, INAH(소치밀코 · 유네스코 세계유산)',
@@ -24,6 +25,8 @@ EP = dict(
                 S1=dict(kind='photo', clip='32058674', t=4, cx=0.5, cy=0.45, big='1325년', small='호수 위 작은 섬에 세운 도시'),
                 S2=dict(kind='photo', clip='35614829', t=8, cx=0.5, cy=0.45, big='+14계단', small='땅이 꺼지며 늘어난 천사상 계단')),
 )
+GE = '/home/claude/media/gearth_mx/'
+GEA = 'Google Earth · 2013 이미지'
 OSM = '© OpenStreetMap contributors · Natural Earth'
 SELF = '브동산 자체 제작 개략도 · 실제 경계·축척과 다를 수 있음'
 ALC = ['a_alvaro_obregon', 'a_azcapotzalco', 'a_benito_juarez', 'a_coyoacan', 'a_cuajimalpa', 'a_cuauhtemoc', 'a_gam', 'a_iztacalco', 'a_iztapalapa',
@@ -70,6 +73,8 @@ LONG = [
   dict(chap='Ⅰ   오프닝', loc=(-99.13, 19.43), title=True, shots=[('clip', '35691533', 0)], lines=[
     ('해발 2,240m, 산과 화산에 둘러싸인 분지에 멕시코시티가 있어요.', '해발 이천이백사십 미터, 산과 화산에 둘러싸인 분지에 멕시코시티가 있어요.'),
     ('그런데 이 도시는 해마다 조금씩 가라앉고 있어요. 왜일까요?', None)]),
+  dict(chap='Ⅰ   오프닝', attrib=GEA, loc=(-99.10, 19.42), shots=[('ge', GE + 'g1_valley.jpg', 1.0, 1.2, 0.0, 0.0)], lines=[
+    ('위에서 보면 산 사이 평평한 바닥을 도시가 가득 채우고 있어요.', None)]),
   dict(chap='Ⅰ   오프닝', chapter='01  멕시코시티는 얼마나 클까', attrib=OSM, note=SELF, shots=[('anim', 'overlay', dict(
       city='cdmx', compare=None, city_label='멕시코시티', city_label_at=(-99.02, 19.57), seoul_at=(-99.13, 19.34),
       side=dict(title=('멕시코시티 면적', 0), big=('1,494㎢', 0), sub=('서울의 약 2.5배', 0), sub2=('알카디아(구) 16곳', 0))))], lines=[
@@ -84,6 +89,8 @@ LONG = [
   dict(chap='Ⅲ   호수 위의 섬 도시', chapter='03  호수 위의 섬 도시', loc='zocalo', shots=[('clip', '4044986', 2)], lines=[
     ('도시 한가운데, 소칼로 광장이에요.', None),
     ('7백 년 전 이곳은 텍스코코 호수 위의 작은 섬이었어요.', '칠백 년 전 이곳은 텍스코코 호수 위의 작은 섬이었어요.')]),
+  dict(chap='Ⅲ   호수 위의 섬 도시', attrib=GEA, loc='zocalo', shots=[('ge', GE + 'g2_centro3d.jpg', 1.0, 1.15, 0.0, 0.0)], lines=[
+    ('지금은 빈틈없이 건물이 들어찬 구시가지 한가운데예요.', None)]),
   dict(chap='Ⅲ   호수 위의 섬 도시', attrib=OSM, note=SELF, shots=[lake_map()], lines=[
     ('아스테카 사람들은 1325년, 이 섬에 테노치티틀란을 세웠어요.', '아스테카 사람들은 천삼백이십오년, 이 섬에 테노치티틀란을 세웠어요.'),
     ('섬에서 둑길을 놓아 호숫가와 이었어요.', None)]),
@@ -98,7 +105,7 @@ LONG = [
   dict(chap='Ⅲ   호수 위의 섬 도시', loc=(-99.165, 19.43), shots=[('clip', '28730770', 1)], caption=dict(line=1, t1='1900', t2='대운하 개통 · 47.5km'), lines=[
     ('호숫가 도시라 홍수가 잦았어요. 1607년엔 첫 배수로를 팠고,', '호숫가 도시라 홍수가 잦았어요. 천육백칠년엔 첫 배수로를 팠고,'),
     ('1900년엔 47.5km 대운하를 열었어요.', '천구백년엔 사십칠 점 오 킬로미터 대운하를 열었어요.')]),
-  dict(chap='Ⅲ   호수 위의 섬 도시', loc=None, shots=[('clip', '4591141', 0)], lines=[
+  dict(chap='Ⅲ   호수 위의 섬 도시', loc=None, attrib=GEA, shots=[('ge', GE + 'g1_valley.jpg', 1.25, 1.45, 0.1, 0.0)], lines=[
     ('그렇게 호수는 거의 다 말라 사라졌고, 그 바닥 위로 시가지가 퍼졌어요.', None)]),
   # ── Ⅳ 가라앉는 도시
   dict(chap='Ⅳ   가라앉는 도시', chapter='04  가라앉는 도시', loc='angel', shots=[('clip', '13638459', 0)], caption=dict(line=1, t1='+14계단', t2='독립기념탑 · 1910년 이후'), lines=[
@@ -110,6 +117,8 @@ LONG = [
   dict(chap='Ⅳ   가라앉는 도시', attrib=OSM, note=SELF, shots=[sink_map()], lines=[
     ('빠른 곳은 1년에 50cm까지 내려앉아요.', '빠른 곳은 일 년에 오십 센티미터까지 내려앉아요.'),
     ('나사 위성은 공항 주변이 한 달에 2cm 넘게 꺼지는 걸 잡아냈어요.', '나사 위성은 공항 주변이 한 달에 이 센티미터 넘게 꺼지는 걸 잡아냈어요.')]),
+  dict(chap='Ⅳ   가라앉는 도시', attrib=GEA, loc='aicm', shots=[('ge', GE + 'g7_aicm.jpg', 1.0, 1.18, 0.0, 0.0)], lines=[
+    ('옛 호수 바닥 한복판에 놓인 공항 주변이 가장 빨리 꺼지는 곳 중 하나예요.', None)]),
   dict(chap='Ⅳ   가라앉는 도시', loc=None, shots=[('clip', '30056250', 4)], lines=[
     ('그래도 펌프를 멈추기는 어려워요. 수돗물 절반 이상을 땅속 우물에서 뽑아 쓰거든요.', None)]),
   dict(chap='Ⅳ   가라앉는 도시', loc=(-99.135, 19.35), shots=[('clip', '27053435', 8)], lines=[
@@ -122,21 +131,25 @@ LONG = [
   dict(chap='Ⅴ   주거축 이동 3단계', attrib=OSM, note=SELF, shots=[axis(2)], lines=[
     ('1902년엔 서쪽에 상하수도를 처음 갖춘 로마 지구가 생겼어요.', '천구백이년엔 서쪽에 상하수도를 처음 갖춘 로마 지구가 생겼어요.'),
     ('1937년엔 더 서쪽, 폴랑코가 개발됐어요.', '천구백삼십칠년엔 더 서쪽, 폴랑코가 개발됐어요.')]),
-  dict(chap='Ⅴ   주거축 이동 3단계', loc='roma', shots=[('clip', '31623394', 0), ('clip', '36301273', 0)], caption=dict(line=0, t1='472채', t2='1985년 지진 · 로마 지구'), lines=[
+  dict(chap='Ⅴ   주거축 이동 3단계', loc='roma', attrib=GEA, shots=[('ge', GE + 'g3_roma3d.jpg', 1.0, 1.15, 0.0, 0.0)], caption=dict(line=0, t1='472채', t2='1985년 지진 · 로마 지구'), lines=[
     ('1985년 대지진 때는 로마 지구에서만 건물 472채가 무너지거나 부서졌어요.', '천구백팔십오년 대지진 때는 로마 지구에서만 건물 사백칠십이 채가 무너지거나 부서졌어요.')]),
   dict(chap='Ⅴ   주거축 이동 3단계', loc='polanco', shots=[('clip', '12943393', 2)], lines=[
     ('폴랑코는 지금 고급 상점과 빌딩이 늘어선 동네가 됐어요.', None)]),
   dict(chap='Ⅴ   주거축 이동 3단계', attrib=OSM, note=SELF, shots=[axis(3)], lines=[
     ('세 번째는 서쪽 언덕의 산타페예요.', None),
     ('모래 채굴장과 쓰레기 매립지였던 땅이 1980년대부터 업무지구로 바뀌었어요.', '모래 채굴장과 쓰레기 매립지였던 땅이 천구백팔십년대부터 업무지구로 바뀌었어요.')]),
+  dict(chap='Ⅴ   주거축 이동 3단계', attrib=GEA, loc='santafe', shots=[('ge', GE + 'g4_santafe3d.jpg', 1.0, 1.15, 0.0, 0.0)], lines=[
+    ('위에서 보면 골짜기 사이 언덕에 빌딩이 모여 있어요.', None)]),
   dict(chap='Ⅴ   주거축 이동 3단계', loc='santafe', shots=[('clip', '28833289', 2)], lines=[
     ('지금은 고층 빌딩과 대형 쇼핑몰, 대학이 모인 신도심이에요.', None)]),
   # ── Ⅵ 사는 집
-  dict(chap='Ⅵ   멕시코시티 사람들이 사는 집', chapter='06  멕시코시티 사람들이 사는 집', loc='tlatelolco_u', shots=[('clip', '38659251', 0)], caption=dict(line=1, t1='102동', t2='틀라텔롤코 · 1960~1965년'), lines=[
-    ('1960년대 정부는 거대한 아파트 단지를 지었어요. 틀라텔롤코예요.', '천구백육십년대 정부는 거대한 아파트 단지를 지었어요. 틀라텔롤코예요.'),
+  dict(chap='Ⅵ   멕시코시티 사람들이 사는 집', chapter='06  멕시코시티 사람들이 사는 집', loc='tlatelolco_u', shots=[('clip', '38659251', 0)], lines=[
+    ('1960년대 정부는 거대한 아파트 단지를 지었어요. 틀라텔롤코예요.', '천구백육십년대 정부는 거대한 아파트 단지를 지었어요. 틀라텔롤코예요.')]),
+  dict(chap='Ⅵ   멕시코시티 사람들이 사는 집', loc='tlatelolco_u', attrib=GEA, shots=[('ge', GE + 'g6_tlatelolco3d.jpg', 1.0, 1.12, 0.0, 0.0)], caption=dict(line=0, t1='102동', t2='틀라텔롤코 · 1960~1965년'), lines=[
     ('처음엔 아파트가 102동, 멕시코에서 가장 큰 단지였어요.', '처음엔 아파트가 백두 동, 멕시코에서 가장 큰 단지였어요.')]),
-  dict(chap='Ⅵ   멕시코시티 사람들이 사는 집', loc=None, shots=[('clip', '30404668', 2), ('clip', '37796402', 0)], lines=[
-    ('도시 바깥쪽으로는 낮은 집이 끝없이 이어져요.', None),
+  dict(chap='Ⅵ   멕시코시티 사람들이 사는 집', loc='xochimilco_c', attrib=GEA, shots=[('ge', GE + 'g5_xochimilco.jpg', 1.0, 1.2, 0.0, 0.0)], lines=[
+    ('도시 바깥쪽으로는 낮은 집이 끝없이 이어져요.', None)]),
+  dict(chap='Ⅵ   멕시코시티 사람들이 사는 집', loc=None, shots=[('clip', '37796402', 0)], lines=[
     ('2020년 멕시코시티의 집은 276만 채, 한 집에 3.3명꼴로 살아요.', '이천이십년 멕시코시티의 집은 이백칠십육만 채, 한 집에 삼 점 삼 명꼴로 살아요.')]),
   # ── Ⅶ 사람들
   dict(chap='Ⅶ   멕시코시티 사람들', chapter='07  멕시코시티 사람들', loc='zocalo', shots=[('clip', '30138330', 2)], lines=[
@@ -184,6 +197,7 @@ S1 = [
       ('선인장 위에서 뱀을 먹는 독수리가 보이면 거기 도시를 세우라는 계시였죠.', None, '독수리')]),
   dict(tag='테노치티틀란 · 개략도', attrib=OSM, shots=[lake_map(short=True)], lines=[
       ('그 독수리를 찾은 곳이 텍스코코 호수 위의 작은 섬이었어요.', None, '작은 섬'), ('1325년, 테노치티틀란이에요.', '천삼백이십오년, 테노치티틀란이에요.', '1325년')]),
+  dict(tag='위에서 본 소치밀코', attrib=GEA, loc='xochimilco_c', shots=[('ge', GE + 'g5_xochimilco.jpg', 1.0, 1.25, 0.2, 0.0)], lines=[('위에서 보면 지금도 물길이 마을 사이를 지나요.', None, '물길')]),
   dict(tag='소치밀코 운하', loc='xochimilco_c', shots=[('clip', '34464113', 3)], sticker=dict(line=0, delay=0.8, t1='치남파', t2='물 위에 흙을 쌓은 밭'), lines=[
       ('사람들은 물 위에 흙을 쌓아 밭을 만들며 도시를 넓혔어요.', None, '물 위에 흙')]),
   dict(tag='소치밀코', loc='xochimilco_c', shots=[('clip', '34567570', 2)], lines=[('남쪽 소치밀코엔 그 물길이 지금도 남아 있어요.', None, '지금도')]),
@@ -200,7 +214,7 @@ S2 = [
       ('도시가 옛 호수 바닥 진흙 위에 서 있는데,', None, '진흙'), ('땅속 물을 계속 퍼 올리자 진흙이 눌려 꺼지는 거예요.', None, '땅속 물')]),
   dict(tag='멕시코시티 하늘', loc=None, shots=[('clip', '13580874', 2)], lines=[('그런데 펌프를 멈추기도 어려워요. 수돗물 절반 이상이 땅속 우물에서 나오거든요.', None, '절반 이상')]),
   dict(tag='멕시코시티 지하철', loc=None, shots=[('clip', '39883705', 1)], lines=[('땅이 꺼지면서 길과 건물, 지하철까지 피해를 입고 있어요.', None, '지하철까지')]),
-  dict(tag='멕시코시티 상공', loc=None, shots=[('clip', '35528982', 6)], bubble=dict(line=0, t1='한 달 2cm+', t2='NISAR 위성 · 공항 주변'), lines=[
+  dict(tag='멕시코시티 상공', loc='aicm', attrib=GEA, shots=[('ge', GE + 'g7_aicm.jpg', 1.0, 1.25, 0.0, 0.0)], bubble=dict(line=0, t1='한 달 2cm+', t2='NISAR 위성 · 공항 주변'), lines=[
       ('나사 위성은 공항 주변이 한 달에 2cm 넘게 꺼지는 걸 잡았어요.', '나사 위성은 공항 주변이 한 달에 이 센티미터 넘게 꺼지는 걸 잡았어요.', '2cm')]),
   dict(tag='레포르마의 밤', loc='angel', end=True, shots=[('clip', '34381882', 1)], lines=[('호수 위에 세운 도시의 이야기, 본편에서 이어 볼게요.', None, '호수 위')]),
 ]
