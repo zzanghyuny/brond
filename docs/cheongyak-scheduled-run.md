@@ -21,12 +21,16 @@
 ## 3. 단지마다 한 세트 (빠지면 그 단지는 미완성 — push하지 않는다)
 1. **사이트 글** `posts/<slug>.html`: realestate-post 스킬 1-1번 배치. 비교단지는 `scripts/beodongsan/comp_scan.py`로 전수 스캔 후 고정 기준(같은 생활권 이웃 1 + 가까운 중심권 신축 대단지 1), 후보 표 포함. 오피스텔 84는 아파트 59와 비교 후 ×0.9. 커버 = `chart-map-naver.png`(입지 개략도). 공식 홈페이지 이미지(조감도·위치도·배치도·동호수·평면 전부·커뮤니티) 최대한. 광고 문의 카드 금지. 등록: `posts-data.js`, `posts-manifest.json`(cover_candidates = 개략도 URL), `sitemap.xml`, `feed.xml`, `apply_coupang.py`, `apply_naver_shop.py`, `scripts/build_thumbs.py`(목록 카드 대표사진).
 2. **네이버 원고**: `naver-html/goyang-hanshin-thehue-firstone.html`과 똑같은 양식. 대표사진은 입지 개략도. 섹션 5는 공식 이미지를 **번호 없이** 쭉 나열한 뒤 청약 일정 인포그래픽. 예상 프리미엄은 금액 먼저, 판정은 괄호(`+5,960만 (저평가)`). 표는 `scripts/naver_tables_to_png.py`로 PNG.
-3. **쇼츠 2편**: ① 가격 맞히기 `scripts/shorts/make_quiz.py quiz/<키>.json` (tts → stills 확인 → render), ② 공고문 속 숨은 한 줄 `scripts/shorts/make_viral.py viral/detective-<키>.json`. 각각 썸네일 포함. ffprobe 길이, `-af volumedetect` 음량, 정지 화면을 직접 본다.
+3. **쇼츠 3편** (2026.11.28 Paul: 가격 맞히기 + 숨은 한 줄 + 1분 총정리 세 편을 매 단지 기본으로):
+   ① 가격 맞히기 `scripts/shorts/make_quiz.py quiz/<키>.json` (tts → stills 확인 → render)
+   ② 공고문 속 숨은 한 줄 `scripts/shorts/make_viral.py viral/detective-<키>.json`
+   ③ **1분 총정리** `scripts/shorts/make_brief.py brief/<키>.json` — 현금 → 예상프리미엄 → 입지 → 단지·평면 → 모집공고 속 유의사항(개수 제한 없음). JSON 쓰는 법·재료 모으기(`brief_assets.py`)는 `scripts/shorts/README.md` '1분 총정리', 기준 예 `brief/trivn-gaheung.json`. Google Earth 캡처·Pexels 실사 영상은 브라우저가 될 때만 넣고, 안 되면 Mapbox 위성(city·area)으로 대신한다.
+   각각 썸네일 포함. ffprobe 길이, `-af volumedetect` 음량, 정지 화면을 직접 본다.
 4. 모든 이미지·정지 화면은 Read로 열어 글자 잘림·겹침을 확인하고, 사이트 글은 390px 폭 스크린샷으로 순서를 확인한다.
 
 ## 4. 어사이드 전달물 저장 (Paul 컴퓨터 우선)
 - 위치: `G:\내 드라이브\Aside 작업용 폴더\브동산 청약\YYYY-MM-DD 단지명 (slug)\` (드라이브 '브동산 청약' 폴더, id `1s1qEU2ykR2P8UCC25OLgbu0foKssSEoX`).
-- 파일: `00_읽어주세요.txt`(올릴 순서·네이버 제목·카테고리·태그·대표사진), `01_네이버원고.html` + `이미지\NN_<파일명>`(원고 img src도 `이미지/NN_<파일명>`), `02_쇼츠1-가격퀴즈.mp4`·`02_쇼츠1-썸네일.png`, `03_쇼츠2-숨은한줄.mp4`·`03_쇼츠2-썸네일.png`, `04_쇼츠-업로드-정보.txt`(영상별 제목·설명·해시태그·고정 댓글).
+- 파일: `00_읽어주세요.txt`(올릴 순서·네이버 제목·카테고리·태그·대표사진), `01_네이버원고.html` + `이미지\NN_<파일명>`(원고 img src도 `이미지/NN_<파일명>`), `02_쇼츠1-가격퀴즈.mp4`·`02_쇼츠1-썸네일.png`, `03_쇼츠2-숨은한줄.mp4`·`03_쇼츠2-썸네일.png`, `04_쇼츠3-1분총정리.mp4`·`04_쇼츠3-썸네일.png`, `05_쇼츠-업로드-정보.txt`(영상 3편의 제목·설명·해시태그·고정 댓글).
 - 방법: 결과물을 `/mnt/user-data/outputs/<slug>/`에 위 이름으로 모으고 `device_commit_files`로 쓴다(폴더는 자동 생성, 원본 화질 그대로). 쓴 뒤 `device_list_dir`로 파일 수·크기를 대조한다.
 - 컴퓨터가 응답하지 않으면(한 번 재시도 후) Google Drive 커넥터 `create_file`로 같은 구조를 만든다(파일당 약 3.1MB 한도 — 넘는 영상은 3MB 이하로 다시 인코딩해 올리고 원본은 `SendUserFile`로 대화에 남긴다).
 - `naver-html/`·`shorts-upload/`에 새 파일을 커밋하지 않는다(작업 원본으로 `naver-html/<slug>.html`이 필요하면 CLAUDE.md 규칙대로).

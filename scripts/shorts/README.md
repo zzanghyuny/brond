@@ -109,4 +109,17 @@ python3 make_rank.py rank/<키>.json tts | stills [초…] | render             
 - 스타일: Pretendard 고딕(명조 안 씀), 검정·황동, 필름 그레인·비네팅·장 전환 빛 번짐. 썸네일 = 위성지도 + 단지 위치 표시 + 큰 단지명 + 체크리스트(같은 함수 `thumbnail`). Google Earth는 본문에만, 썸네일에는 쓰지 않는다.
 - 유의사항은 사업주체 관련 조항은 빼고 **가격 조건**(중도금 무이자 조건·분양조건 변경 소급 등)과 **주변·단지 안 시설**(방음벽·도로·산업단지·공원·주차장 빛공해·커뮤니티 소음·분리수거장·TV 안테나·정압기 등, 공식 위치도·배치도로 위치 확인)만 고른다. 유해시설 쪽은 관심이 높으니 공고문에 있는 건 최대한 싣는다.
 - 자료: `brief/<키>.json`. 이미지 폴더(`img`)에 Mapbox `open.jpg`(540×960@2x, 단지 중심)·`dist.jpg`(거리 지도), Google Earth 캡처(Chrome 화면, 1568×778 — `ge_crop`이 메뉴를 잘라냄), 위키미디어 사진을 둔다(저장소에 넣지 않음). 단지 좌표는 공식 위치도와 대조한다.
-- `python3 make_brief.py brief/<키>.json tts` → `stills <초…>` → 렌더(`BRIEF_OUT`). 결과물은 드라이브 청약 단지 폴더에 `<slug>-brief.mp4`·썸네일·업로드정보.txt.
+- **청약 단지마다 만드는 기본 쇼츠 3편 중 ③**(① 가격 맞히기 ② 숨은 한 줄 ③ 1분 총정리, 2026.11.28 Paul). 드라이브 단지 폴더 이름은 `04_쇼츠3-1분총정리.mp4`·`04_쇼츠3-썸네일.png`.
+- 만드는 순서
+  1. `brief/<키>.json`을 `brief/trivn-gaheung.json`을 본떠 쓴다. 숫자·문구는 모두 사이트 글과 입주자모집공고(pdftotext 후 검색)에서 가져온다.
+     - `site_ll` [lon, lat](KB 좌표, 공식 위치도와 대조), `slug`, `img`(재료 폴더, 저장소 밖), `voice` `["ko-KR-InJoonNeural","+40%","-3Hz"]`
+     - `checklist` 5줄 + `tick_at`(오프닝 나레이션에서 각 항목 단어가 나오는 글자 비율), `chapters` ["현금","예상프리미엄","입지","상품","유의사항"]
+     - `narration` open·cash·prem·loc·prod·trap·end(빼면 그 장이 빠진다). 장면 전환 `at`은 나레이션 글자 비율로 맞춘다.
+     - `cash` 납부 일정 막대·카드(공고문 납부일정·발코니 확장·취득세 가정), `bridge` 사이트 글 브릿지 숫자 그대로
+     - `loc` 컷: `video`(Pexels, 선택) · `image`(Google Earth 캡처 또는 `city.jpg`/`area.jpg`) · `map`(`dist.jpg`, 점은 `{"ll":[lon,lat],"view":"dist"}`로 쓰면 픽셀이 자동 계산)
+     - `prod` 컷: `site`(배치도 위 가운데 정원 등 링+핀) · `comm`(커뮤니티 칩 B1/1F) · `plan`(평면 베이 번호·알파룸 링). 좌표는 공식 이미지 픽셀.
+     - `trap`: `quotes`(가격 조건 공고문 원문, 사업주체 조항 제외) · `shots`(위성 위 주변 시설 링, `{"ll":…,"r":…}` 가능) · `site`(배치도 위 단지 안·경계 유의사항 번호 링 + 목록). 공고문의 비선호·소음·빛공해·정압기·안테나 등 시설 문구는 최대한 싣는다.
+     - `end` rows 5줄·일정·질문
+  2. `MAPBOX_TOKEN=<list_public_tokens_tool의 pk> python3 brief_assets.py brief/<키>.json` → open·dist·city·area 위성 + 공식 이미지 복사(평면·배치도 크롭은 필요하면 따로).
+  3. (선택) Google Earth 캡처: Claude in Chrome으로 `earth.google.com/web/@lat,lon,alt a,dist d,35y,heading h,tilt t,0r` → 약 17초 대기 → 커서를 위로 치우고 스크린샷(1568×778, `ge_crop`이 메뉴를 자름). Pexels 실사 영상은 `$RANK_BROLL`. 안 되면 city·area 위성으로 대신한다.
+  4. `python3 make_brief.py brief/<키>.json tts` → `stills <초…>`로 정보가 가장 많은 컷을 Read로 확인 → 렌더(`BRIEF_OUT`, 약 2~3분) → `<out>.mp4` + `<out>-thumbnail.png`.

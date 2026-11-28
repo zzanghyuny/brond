@@ -120,6 +120,18 @@ def line(img, pts, color, width, alpha):
     d.line(pts, fill=color + (int(255 * alpha),), width=width, joint='curve')
     img.paste(lay, (0, 0), lay)
 
+def merc(lon, lat, z):
+    ws = 512 * 2 ** z
+    return (lon + 180) / 360 * ws, (1 - math.log(math.tan(math.radians(lat)) + 1 / math.cos(math.radians(lat))) / math.pi) / 2 * ws
+
+def P(pt, view=None):
+    """점 좌표: 픽셀 [x, y] 그대로, 또는 {'ll': [lon, lat]} → view(center·zoom, Mapbox 540×960@2x) 위 픽셀."""
+    if isinstance(pt, dict):
+        v = view or C['views'][pt.get('view', 'open')]
+        (cx, cy), (x, y) = merc(*v['center'], v['zoom']), merc(*pt['ll'], v['zoom'])
+        return [(x - cx) * 2 + 540, (y - cy) * 2 + 960]
+    return pt
+
 _im = {}
 def load(name):
     if name not in _im: _im[name] = Image.open(IMG + name).convert('RGB')
@@ -220,7 +232,7 @@ OPEN = None
 def open_bg(t, k):
     global OPEN
     if OPEN is None: OPEN = shade_tb(darken(load('open.jpg'), 0.66), top=0.30, bot=0.56)
-    sx, sy = C['site_open']
+    sx, sy = C.get('site_open') or P({'ll': C['site_ll'], 'view': 'open'})
     out, tf = kb(OPEN, k, 1.0, 1.22, sx / W, sy / H, sx / W, sy / H, W, H)
     return out, tf((sx, sy))
 
@@ -252,7 +264,7 @@ def sc_open(t, d, nar):
     return img
 
 def sc_cash(t, d, nar, lead):
-    c = C['cash']; img = bg_blur('aerial-wide.jpg', 0.26)
+    c = C['cash']; img = bg_blur(c.get('bg', 'aerial-wide.jpg'), 0.26)
     tn = t - lead
     chapter(img, t, num('cash'), '당첨되면 현금 얼마?')
     # 분양가 막대
@@ -305,7 +317,7 @@ def bridge_T(d=None):
 def sc_prem(t, d, nar, lead):
     global BRIDGE
     if BRIDGE is None: BRIDGE = bridge_anim.Bridge(C['bridge'], _btext, L, R, CX)
-    img = bg_blur('ge2.jpg', 0.18, 30)
+    img = bg_blur(C.get('prem_bg', 'ge2.jpg'), 0.18, 30)
     chapter(img, t, num('prem'), '예상프리미엄 얼마?')
     BRIDGE.draw(img, t, bridge_T(d))
     footer(img, None, ease((t - 0.8) / 0.5))
@@ -363,12 +375,12 @@ def sc_loc(t, d, nar, lead):
         img = map_shot(sh, lt, dur)
     else:
         src = vframe(sh['src'], sh['start'], lt) if sh['type'] == 'video' else load(sh['src'])
-        img = bg_blur(sh['src'] if sh['type'] != 'video' else 'ge1.jpg', 0.22, 30)
+        img = bg_blur(sh['src'] if sh['type'] != 'video' else sh.get('bg', 'ge1.jpg'), 0.22, 30)
         kbp = sh.get('kb', [1.0, 1.06, 0.5, 0.5, 0.5, 0.5])
         out, tf = band_img(src, lt / dur, kbp)
         # 띠 위 표시
         if sh.get('pin'):
-            p = tf(sh['pin']); bimg = out
+            p = tf(P(sh['pin'])); bimg = out
             pulse(bimg, p, lt, ease((lt - 0.5) / 0.4), 0.8)
             if sh.get('pin_label'): label_chip(bimg, (p[0] + 40, p[1] - 110), sh['pin_label'], ease((lt - 0.8) / 0.4))
         draw_band(img, out, ease(lt / 0.35) if i == 0 else 1.0)
@@ -381,16 +393,18 @@ def sc_loc(t, d, nar, lead):
 MAPS = {}
 def map_shot(sh, lt, dur):
     if sh['src'] not in MAPS: MAPS[sh['src']] = shade_tb(darken(load(sh['src']), 0.62), top=0.28, bot=0.70)
-    out, tf = kb(MAPS[sh['src']], lt / dur, 1.18, 1.0, sh['site'][0] / W + 0.18, sh['site'][1] / H, 0.5, 0.5, W, H)
+    site = P(sh['site'])
+    out, tf = kb(MAPS[sh['src']], lt / dur, 1.18, 1.0, site[0] / W + 0.18, site[1] / H, 0.5, 0.5, W, H)
     img = out.copy()
-    sp = tf(sh['site'])
-    for j, (name, dist, pt, side) in enumerate(sh['pois']):
+    sp = tf(site)
+    pois = [(n, ds, P(pt), sd) for n, ds, pt, sd in sh['pois']]
+    for j, (name, dist, pt, side) in enumerate(pois):
         tj = 0.6 + j * 0.9; k = eo((lt - tj) / 0.8); a = ease((lt - tj) / 0.3)
         if a <= 0: continue
         pp = tf(pt); ep = (lerp(sp[0], pp[0], k), lerp(sp[1], pp[1], k))
         line(img, [sp, ep], BR, 5, a * 0.95)
         if k > 0.95: dot(img, pp, 13, INK, a, BR, 4)
-    for j, (name, dist, pt, side) in enumerate(sh['pois']):
+    for j, (name, dist, pt, side) in enumerate(pois):
         tj = 0.6 + j * 0.9; pp = tf(pt)
         if eo((lt - tj) / 0.8) > 0.95:
             lx = pp[0] + 26 if side == 'r' else pp[0] - 26
@@ -474,11 +488,13 @@ def sc_prod(t, d, nar, lead):
 
 # ---------- 유의사항: 공고문 문구(가격 조건) → 위성(주변 시설) → 배치도(단지 안·경계)
 def sc_trap(t, d, nar, lead):
-    T = C['trap']; S = T.get('site')
-    ats = [T['shots'][0]['at'] - 0.0001] + [s['at'] for s in T['shots']] + ([S['at']] if S else [])
-    i, lt, dur = pick(shot_slots(lead, nar, d, ats), t)
-    if i == 0 and t < lead + nar * T['shots'][0]['at'] - 0.2:
-        img = bg_blur('ge3.jpg', 0.16, 32)
+    T = C['trap']; S = T.get('site'); shots = T.get('shots', [])
+    segs = ([('q', None)] if T.get('quotes') else []) + [('s', sh) for sh in shots] + ([('site', S)] if S else [])
+    slots = [(0.0 if kd == 'q' else max(0.0, lead + nar * x['at'] - 0.2)) for kd, x in segs]
+    slots = [(s0, (slots[j + 1] if j + 1 < len(slots) else d) - s0) for j, s0 in enumerate(slots)]
+    i, lt, dur = pick(slots, t); kind, sh = segs[i]
+    if kind == 'q':
+        img = bg_blur(T.get('bg', 'ge3.jpg'), 0.16, 32)
         for i, q in enumerate(T['quotes']):
             y = 420 + i * 470; t0 = lead + nar * q['at']; a = ease((t - t0) / 0.3); k = eo((t - t0) / 0.45)
             if a <= 0: continue
@@ -495,7 +511,7 @@ def sc_trap(t, d, nar, lead):
             ra = ease((t - t0 - 0.9) / 0.35)
             text(img, (L + 44, y + 330 + yo), '→ ' + q['r'], 42, BR_INK, 'X', 'l', ra, maxw=R - L - 90)
         footer(img, None, 1)
-    elif S and i == len(ats) - 1:
+    elif kind == 'site':
         img = bg_blur(S['src'], 0.2, 30)
         out, tf = band_img(load(S['src']), lt / max(1.0, dur), S['kb'])
         for it in S['items']:
@@ -517,15 +533,15 @@ def sc_trap(t, d, nar, lead):
             text(img, (L + 66, y + 52 + yo), it['v'], 27, SOFT, 'M', 'l', a, maxw=R - L - 70)
         text(img, (L, 1508), S['credit'], 22, FAINT, 'M', 'l', 1)
     else:
-        sh = T['shots'][i - 1]
         img = bg_blur(sh['src'], 0.2, 30)
         out, tf = band_img(load(sh['src']), lt / max(1.0, dur), sh['kb'])
-        p = tf(sh['pin']); pulse(out, p, lt, ease((lt - 0.3) / 0.4), 0.7)
-        rc = tf(sh['ring'][:2]); ra = ease((lt - 0.5) / 0.4)
+        if sh.get('pin'): pulse(out, tf(P(sh['pin'])), lt, ease((lt - 0.3) / 0.4), 0.7)
+        rg = sh['ring']; rp, rr = (P(rg), rg['r']) if isinstance(rg, dict) else (rg[:2], rg[2])
+        rc = tf(rp); ra = ease((lt - 0.5) / 0.4)
         for k in range(2):
-            ring(out, rc, sh['ring'][2] * (0.85 + 0.15 * k) * (0.9 + 0.1 * math.sin(lt * 4)), MINUS, 6 - 2 * k, ra * (0.95 - 0.4 * k))
+            ring(out, rc, rr * (0.85 + 0.15 * k) * (0.9 + 0.1 * math.sin(lt * 4)), MINUS, 6 - 2 * k, ra * (0.95 - 0.4 * k))
         lw = F(32, 'X').getlength(sh['ring_label']) + 36
-        label_chip(out, (min(max(24, rc[0] - lw / 2), W - 200 - lw), max(20, rc[1] - sh['ring'][2] - 70)), sh['ring_label'], ease((lt - 0.8) / 0.3), 32, BG, MINUS, 'l')
+        label_chip(out, (min(max(24, rc[0] - lw / 2), W - 200 - lw), max(20, rc[1] - rr - 70)), sh['ring_label'], ease((lt - 0.8) / 0.3), 32, BG, MINUS, 'l')
         draw_band(img, out, ease(lt / 0.3))
         label_chip(img, (L, BAND_Y - 74), sh['chip'], ease((lt - 0.1) / 0.3), 32, BG, MINUS)
         caption(img, sh['cap'], sh['sub'], ease((lt - 0.7) / 0.4))
@@ -627,7 +643,7 @@ def build_audio(path):
     ev += [(reveal, 'lowhit', 0.3), (reveal, 'ping', 0.2)]
     for cd in C['cash']['cards']:
         ev.append((st['cash'][0] + st['cash'][2] + NAR['cash'] * cd['at'] + 0.4, 'tick', 0.2))
-    for s in C['trap']['shots'] + C['trap'].get('site', {}).get('items', []):
+    for s in C['trap'].get('shots', []) + C['trap'].get('site', {}).get('items', []):
         ev.append((st['trap'][0] + st['trap'][2] + NAR['trap'] * s['at'] + 0.4, 'lowhit', 0.2))
     ev += [(DUR - 2.0, 'shimmer', 0.2)]
     for t0, name, g in ev:
