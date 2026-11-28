@@ -212,6 +212,13 @@ footer a{ color:var(--ink-faint); text-decoration:underline; }
 .jc-foot{ display:flex; justify-content:space-between; align-items:baseline; gap:8px; border-top:1px solid var(--hair); padding-top:12px; }
 .jc-prem{ font-size:17px; font-weight:800; font-variant-numeric:tabular-nums; }
 .jc-date{ font-size:12.5px; color:var(--ink-soft); }
+/* 대표사진(조감도) — 2026.11.28 */
+.jc-photo{ margin:-20px -22px 4px; aspect-ratio:16/9; overflow:hidden; background:var(--soft-bg); border-bottom:1px solid var(--hair); }
+.rk-photo{ margin:-20px -20px 12px; aspect-ratio:4/3; overflow:hidden; background:var(--soft-bg); }
+.home-pick{ overflow:hidden; }
+.hp-photo{ margin:-26px -28px 18px; aspect-ratio:16/9; overflow:hidden; background:#fff; border-bottom:1px solid var(--brass); }
+.jc-photo img,.rk-photo img,.hp-photo img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .3s ease; }
+.jc:hover .jc-photo img,.rk:hover .rk-photo img,.home-pick:hover .hp-photo img{ transform:scale(1.03); }
 .jc-prem.plus,.rk-prem.plus{ color:var(--plus); } .jc-prem.minus,.rk-prem.minus{ color:var(--minus); } .jc-prem.even,.rk-prem.even{ color:var(--ink-soft); }
 
 /* 미분양 랭킹 */
@@ -241,4 +248,5 @@ footer a{ color:var(--ink-faint); text-decoration:underline; }
 @media (max-width:520px){
   .home-hero{ padding:44px 0 40px; gap:32px; }
   .home-pick{ padding:22px; }
+  .hp-photo{ margin:-22px -22px 16px; }
 }
