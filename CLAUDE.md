@@ -2,6 +2,9 @@
 
 이 저장소에서 작업을 시작하기 전에 **[claude/handoff-master.md](claude/handoff-master.md)를 반드시 전체 읽을 것.** 디자인 기준, 콘텐츠 제작 기준(부동산/브랜드), 적정가 산출법("브동산 모형"), 지도 어노테이션 절차, IT/배포 기준, 반복 실수 노트 등 모든 업무 기준이 그 문서 하나에 정리돼 있다. 이 문서는 그 위에 **Claude Code(로컬 세션) 전용으로 달라지는 부분만** 보충한다.
 
+## 브동산 통합 지침서 (2026.11.28) — 먼저 읽을 것
+- 모든 콘텐츠·배포·전달·표기 기준을 한 장으로 모은 **[docs/brond-master-guide.md](docs/brond-master-guide.md)**(프로젝트 문서 `claude/brond-master-guide.md`와 같은 내용)를 먼저 읽는다. 이 CLAUDE.md의 세부 규칙과 다르면 Paul에게 알리고 둘 다 고친다. 규칙을 바꿀 때는 이 지침서도 함께 고친다.
+
 ## Claude Code 세션에서 달라지는 점 (master 문서와의 차이, 2026.09.12 확인)
 
 master 문서는 claude.ai 클라우드 채팅 세션 기준으로 작성돼 일부 제약이 있는데, 이 저장소를 직접 다루는 Claude Code 로컬 세션에서는 아래 사항들이 다르다.
