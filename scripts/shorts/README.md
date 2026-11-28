@@ -49,7 +49,7 @@ python3 make_quiz.py quiz/sangok.json render                 # → /tmp/shorts-o
 - 나눔고딕에는 `㎡`·`−`(U+2212)·`①` 글자가 없다. 화면 글자는 `m²`, `-`, `1`로 쓴다(나레이션은 '제곱미터').
 - 입지 개략도는 포스팅마다 만드는 `posts/images/<slug>/chart-map-naver.png`를 그대로 쓴다. SITE는 황동 사각형 위치로 자동으로 찾는다.
 - Edge 음성은 브라우저 '소리 내어 읽기' 서비스라 수익 채널의 상업적 사용 조건이 불분명하다. 수익화하면 같은 목소리를 Azure TTS(유료)로 다시 만들거나 Higgsfield 음성으로 바꾼다.
-- 완성 영상·썸네일은 `shorts-upload/<YYYY-MM>/`에 올리고 그 폴더 README에 제목·설명·해시태그를 적는다. Aside가 유튜브 업로드를 마치면 Paul이 삭제를 요청하고, 그때 지운다(2026.11.21).
+- 완성 영상·썸네일·업로드 정보는 **구글 드라이브 'Aside 작업용 폴더'**에 원본 화질로 올린다(2026.11.28부터, GitHub `shorts-upload/`에는 새 파일 금지 — CLAUDE.md '어사이드 전달물'). 25MB 넘는 파일은 `SendUserFile`로 file_uuid를 받아 `device_commit_files`로 쓴다.
 
 ## 4안 '진짜 걸어보면' 도보 검증 쇼츠 — `make_walk.py` (2026.11.22)
 
@@ -101,4 +101,4 @@ python3 make_rank.py rank/<키>.json tts | stills [초…] | render             
 - Google Earth: 한국은 3D 건물 데이터가 거의 없고 화면 캡처 해상도가 낮아 쓰지 않는다(2026.11.27 시험).
 
 ### 예약 업로드(하루 3편) — `release_queue.sh` (2026.11.26)
-미리 만든 영상은 `shorts-queue` 브랜치의 `queue/<날짜>/`(mp4·썸네일·README-section.md)에 넣어 두고, 그날 `bash scripts/shorts/release_queue.sh <날짜>`로 main의 `shorts-upload/<YYYY-MM>/`에 옮겨 push한다(Aside는 main만 본다). 2026.11.27~29 랭킹 7편이 이 방식으로 예약돼 있다.
+~~`shorts-queue` 브랜치 + `release_queue.sh`~~(2026.11.27~28만 사용). **2026.11.28부터는 미리 만든 영상을 드라이브 '브동산 랭킹 쇼츠\YYYY-MM-DD 랭킹 쇼츠 3편' 폴더에 날짜별로 바로 넣어 둔다.**
