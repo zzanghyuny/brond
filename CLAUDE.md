@@ -108,3 +108,13 @@ master 문서는 claude.ai 클라우드 채팅 세션 기준으로 작성돼 일
 - 카드결제(토스) 코드(`api/jupjup-*.js`, plans.json `payment: "card"`)는 사업자등록·가맹 후 쓰려고 남겨 둔 것이다. 상담사 카드는 단지 정보·순서에 영향을 주지 않는다.
 - **줍줍에 들어온 단지의 청약 분석 글 정리(Paul 2026.11.26)**: 같은 단지의 '부동산이야기' 청약 글 중 예상 프리미엄이 **분양가 대비 −3%보다 낮은 글은 사이트에서 내리고** `vercel.json` 영구 리다이렉트로 `/jupjup/<key>.html`에 연결한다(posts-data.js·sitemap·feed·realestate/archive 목록에서 제거, 글 파일은 남김). −3% 이내·플러스 글은 그대로 둔다. 상담사 결제 여부와 무관하게 같은 기준. 이번에 내린 9편은 `scripts/jupjup/takedown.json`에 기록돼 있고 빌더가 그 상태를 유지한다. **단지와 글을 자동으로 짝짓지 않는다** — 새 단지는 Paul이 지시할 때만 기록에 추가한다. 미분양 랭킹 글·홈 권역별 1위는 이 규칙 대상이 아니다.
 - `jupjup/agents.json`·`holds.json`·`jupjup/agents/*.jpg`를 고칠 때는 push 직전 fetch·병합 규칙을 그대로 지킨다.
+
+## 어사이드 전달물은 구글 드라이브에 올린다 — GitHub 아님 (2026.11.28 Paul 지시, 항상 적용 — 이 문서·docs·스킬의 이전 'GitHub naver-html/·shorts-upload/로 전달' 규칙보다 우선)
+- 네이버 원고, 쇼츠·클립 영상, 썸네일, 제목·설명·해시태그처럼 **어사이드가 할 일은 구글 드라이브 'Aside 작업용 폴더'(id `1_JKxY2Q9wIX0o3e_xXMtNhc5CsRhzbd-`)에 올린다.** 사이트 글·이미지 배포만 GitHub(main push)로 한다.
+  - 청약 글: '브동산 청약'(id `1dUznOvWJU9ReGb4rB1l9snRfT6s1biTa`) 안에 단지마다 `YYYY-MM-DD 단지명 (slug)` 폴더(공고 전 글 갱신이면 끝에 ` — 수정 발행`).
+  - 미분양 선착순 랭킹: '브동산 미분양 랭킹'(id `18s2lUC_1386GrNrnJ213DK2Wobvl6c6j`) 안에 회차마다 `YYYY-MM-DD 권역 (slug)` 폴더.
+  - 도시이야기: '브동산 도시이야기'(id `1v1ySIq0dpNMCwkg8SIlAZ4G7wHeqTHpV`), 절차는 `scripts/dosi/RUNBOOK.md`.
+- 폴더에 넣을 것: `README.txt`(네이버 제목·카테고리·태그·대표사진, 수정 발행 여부, 쇼츠별 제목·설명·해시태그·고정 댓글, 올릴 순서·기한), `<slug>-naver.html`, 영상 mp4, `-thumbnail.png`.
+- 올리는 법: Google Drive 커넥터 `create_file`(`parentId`=폴더, `disableConversionToGoogleType: true`, `base64Content`에 `sha256:<hex>:<절대경로>` 파일 참조). **이 연결은 호출 한 번에 약 3.1MB까지만 실린다.** 그보다 큰 영상은 ① 이 세션에 Paul 컴퓨터(`jhi`)의 `G:\내 드라이브\Aside 작업용 폴더`가 연결돼 있으면 `device_commit_files`로 그 안 같은 폴더에 쓰고, ② 연결이 없으면 `SendUserFile`로 대화에 올리고 보고에 "영상 ○○는 대화에만 있음 — 드라이브 폴더에 넣어 주세요"라고 적는다(도시이야기 RUNBOOK 7단계와 같은 방식). 영상을 화질을 떨어뜨려 줄이지 않는다.
+- `shorts-upload/`에는 새 영상을 올리지 않는다(남아 있는 옛 파일은 Paul이 삭제를 요청할 때 지운다). `naver-html/<slug>.html`은 manifest·쇼핑커넥트·표 PNG 스크립트가 쓰는 **작업 원본**이라 저장소에 계속 두지만, 어사이드 전달과 보고 링크는 드라이브 폴더로 한다.
+- 보고에는 GitHub 링크 대신 드라이브 폴더 주소를 적는다.
