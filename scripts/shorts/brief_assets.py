@@ -8,7 +8,7 @@ JSON에 필요한 것: slug, img, site_ll [lon, lat], views {이름: {center [lo
     city  z12.2  도시 전경(Google Earth 캡처가 없을 때 대신)   → city.jpg
     area  z15.4  단지 주변(유의사항 위성 컷·배경 대신)        → area.jpg
 위성사진은 저장소에 넣지 않는다(영상에 © Mapbox © Maxar). 토큰은 Mapbox MCP list_public_tokens_tool.
-공식 이미지(posts/images/<slug>/의 siteplan·community-*·plan-*·aerial*·landscape·location)는 그대로 복사한다."""
+공식 이미지(posts/images/<slug>/의 차트·표·썸네일을 뺀 사진 전부, webp는 jpg로)를 복사한다."""
 import os, sys, json, shutil, subprocess, glob
 p = sys.argv[1]; C = json.load(open(p, encoding='utf8'))
 IMG = C['img']; os.makedirs(IMG, exist_ok=True)
@@ -25,7 +25,9 @@ for k, v in V.items():
     url = f'https://api.mapbox.com/styles/v1/mapbox/satellite-v9/static/{x},{y},{z}/540x960@2x?access_token={tok}'
     subprocess.run(['curl', '-s', '-f', '-o', out, url], check=True); print(k, z)
 root = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'posts', 'images', C['slug'])
-for f in sorted(glob.glob(root + '/*.jpg')):
-    b = os.path.basename(f)
-    if b.split('.')[0].split('-')[0] in ('siteplan', 'community', 'plan', 'aerial', 'landscape', 'location', 'overview', 'dongho'):
-        shutil.copy(f, IMG + b); print('copy', b)
+from PIL import Image
+for f in sorted(glob.glob(root + '/*')):
+    b = os.path.basename(f); stem, ext = os.path.splitext(b)
+    if ext.lower() not in ('.jpg', '.jpeg', '.png', '.webp') or stem.startswith(('chart-', 'naver-table', 'thumb')): continue
+    if ext.lower() == '.webp': Image.open(f).convert('RGB').save(IMG + stem + '.jpg', quality=92); print('copy', stem + '.jpg (webp)')
+    else: shutil.copy(f, IMG + b); print('copy', b)

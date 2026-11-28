@@ -120,6 +120,7 @@ python3 make_rank.py rank/<키>.json tts | stills [초…] | render             
      - `prod` 컷: `site`(배치도 위 가운데 정원 등 링+핀) · `comm`(커뮤니티 칩 B1/1F) · `plan`(평면 베이 번호·알파룸 링). 좌표는 공식 이미지 픽셀.
      - `trap`: `quotes`(가격 조건 공고문 원문, 사업주체 조항 제외) · `shots`(위성 위 주변 시설 링, `{"ll":…,"r":…}` 가능) · `site`(배치도 위 단지 안·경계 유의사항 번호 링 + 목록). 공고문의 비선호·소음·빛공해·정압기·안테나 등 시설 문구는 최대한 싣는다.
      - `end` rows 5줄·일정·질문
+  0. `python3 brief_prep.py <slug> <청약홈 키워드> [KB 키워드]` → `/tmp/brief/<slug>/`에 사이트 글·공고문 텍스트·KB 좌표·유의사항 후보(hits.txt). 취득세는 6억 이하 1.1%, 6~9억 (가액×2/3−3)%+교육세, 9억 초과 3.3%, 오피스텔 4.6%로 계산한다.
   2. `MAPBOX_TOKEN=<list_public_tokens_tool의 pk> python3 brief_assets.py brief/<키>.json` → open·dist·city·area 위성 + 공식 이미지 복사(평면·배치도 크롭은 필요하면 따로).
   3. (선택) Google Earth 캡처: Claude in Chrome으로 `earth.google.com/web/@lat,lon,alt a,dist d,35y,heading h,tilt t,0r` → 약 17초 대기 → 커서를 위로 치우고 스크린샷(1568×778, `ge_crop`이 메뉴를 자름). Pexels 실사 영상은 `$RANK_BROLL`. 안 되면 city·area 위성으로 대신한다.
   4. `python3 make_brief.py brief/<키>.json tts` → `stills <초…>`로 정보가 가장 많은 컷을 Read로 확인 → 렌더(`BRIEF_OUT`, 약 2~3분) → `<out>.mp4` + `<out>-thumbnail.png`.

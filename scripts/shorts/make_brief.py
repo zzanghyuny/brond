@@ -340,6 +340,7 @@ def label_chip(img, xy, s, a, px=34, fg=BG, bg=BR, anchor='l'):
     f = F(px, 'X'); tw = f.getlength(s); x, y = xy
     if anchor == 'r': x -= tw + 36
     elif anchor == 'c': x -= (tw + 36) / 2
+    x = min(max(x, 16), W - 16 - (tw + 36))         # 화면 밖으로 나가지 않게
     rrect(img, (x, y, x + tw + 36, y + px * 1.5), bg, a, int(px * 0.75))
     text(img, (x + 18, y + px * 0.18), s, px, fg, 'X', 'l', a)
 
@@ -445,20 +446,22 @@ def sc_prod(t, d, nar, lead):
     sh = shots[i]; tn = t - lead
     img = bg_blur(sh['src'], 0.2, 30)
     out, tf = band_img(load(sh['src']), lt / max(1.0, dur), sh['kb'])
-    if sh['type'] == 'site':
+    if sh['type'] == 'site' and sh.get('ring'):
         rc = tf(sh['ring'][:2]); ra = ease((lt - 0.5) / 0.4)
         ring(out, rc, sh['ring'][2] * (0.95 + 0.05 * math.sin(lt * 4)), BR, 6, ra)
         label_chip(out, (max(24, rc[0] - 200), max(16, rc[1] - sh['ring'][2] - 66)), sh['ring_label'], ease((lt - 0.8) / 0.3), 30)
-        pp = tf(sh['pin']); pulse(out, pp, lt, ease((lt - 1.4) / 0.4), 0.55)
-        label_chip(out, (max(24, pp[0] - 260), pp[1] + 40), sh['pin_label'], ease((lt - 1.7) / 0.3), 30, BG, INK)
+        if sh.get('pin'):
+            pp = tf(sh['pin']); pulse(out, pp, lt, ease((lt - 1.4) / 0.4), 0.55)
+            label_chip(out, (max(24, pp[0] - 260), pp[1] + 40), sh['pin_label'], ease((lt - 1.7) / 0.3), 30, BG, INK)
     elif sh['type'] == 'plan':
-        for j, b in enumerate(sh['bays']):
+        for j, b in enumerate(sh.get('bays', [])):
             ba = ease((lt - 0.4 - j * 0.22) / 0.25); bp = tf(b)
             dot(out, bp, 26, BR, ba, BG, 4)
             text(out, (bp[0], bp[1] - 21), str(j + 1), 30, BG, 'K', 'c', ba)
-        ap = tf(sh['alpha']); aa = ease((lt - 1.6) / 0.4)
-        ring(out, ap, 70 * (0.95 + 0.05 * math.sin(lt * 4)), BR, 6, aa)
-        label_chip(out, (ap[0] + 60, ap[1] - 90), '알파룸', ease((lt - 1.8) / 0.3), 32)
+        if sh.get('alpha'):
+            ap = tf(sh['alpha']); aa = ease((lt - 1.6) / 0.4)
+            ring(out, ap, 70 * (0.95 + 0.05 * math.sin(lt * 4)), BR, 6, aa)
+            label_chip(out, (ap[0] + 60, ap[1] - 90), sh.get('alpha_label', '알파룸'), ease((lt - 1.8) / 0.3), 32)
     draw_band(img, out, ease(lt / 0.3))
     label_chip(img, (L, BAND_Y - 74), sh['chip'], ease((lt - 0.1) / 0.3), 32)
     ca = ease((lt - 0.4) / 0.4)
@@ -509,15 +512,15 @@ def sc_trap(t, d, nar, lead):
                 text(img, (L + 44, ly), ln, 40, INK, 'M', 'l', a)
             text(img, (L + 44, y + 112 + len(lines) * 56 + 6 + yo), '— 입주자모집공고', 24, FAINT, 'M', 'l', a)
             ra = ease((t - t0 - 0.9) / 0.35)
-            text(img, (L + 44, y + 330 + yo), '→ ' + q['r'], 42, BR_INK, 'X', 'l', ra, maxw=R - L - 90)
+            text(img, (L + 44, max(y + 330, y + 112 + len(lines) * 56 + 48) + yo), '→ ' + q['r'], 42, BR_INK, 'X', 'l', ra, maxw=R - L - 90)
         footer(img, None, 1)
     elif kind == 'site':
         img = bg_blur(S['src'], 0.2, 30)
         out, tf = band_img(load(S['src']), lt / max(1.0, dur), S['kb'])
         for it in S['items']:
             at = lead + nar * it['at']; a = ease((t - at) / 0.3)
-            if a <= 0: continue
-            c = tf(it['pt']); cur = t < (lead + nar * S['items'][min(len(S['items']) - 1, S['items'].index(it) + 1)]['at']) or it is S['items'][-1]
+            if a <= 0 or not it.get('pt'): continue
+            c = tf(P(it['pt'])); cur = t < (lead + nar * S['items'][min(len(S['items']) - 1, S['items'].index(it) + 1)]['at']) or it is S['items'][-1]
             ring(out, c, it['r'] * (0.9 + 0.1 * math.sin((t - at) * 5)) if cur else it['r'], MINUS, 6 if cur else 4, a * (1.0 if cur else 0.55))
             dot(out, (c[0] + it['r'] * 0.72, c[1] - it['r'] * 0.72), 24, MINUS, a, BG, 3)
             text(out, (c[0] + it['r'] * 0.72, c[1] - it['r'] * 0.72 - 20), it['n'], 30, BG, 'K', 'c', a)
@@ -536,15 +539,19 @@ def sc_trap(t, d, nar, lead):
         img = bg_blur(sh['src'], 0.2, 30)
         out, tf = band_img(load(sh['src']), lt / max(1.0, dur), sh['kb'])
         if sh.get('pin'): pulse(out, tf(P(sh['pin'])), lt, ease((lt - 0.3) / 0.4), 0.7)
-        rg = sh['ring']; rp, rr = (P(rg), rg['r']) if isinstance(rg, dict) else (rg[:2], rg[2])
-        rc = tf(rp); ra = ease((lt - 0.5) / 0.4)
-        for k in range(2):
-            ring(out, rc, rr * (0.85 + 0.15 * k) * (0.9 + 0.1 * math.sin(lt * 4)), MINUS, 6 - 2 * k, ra * (0.95 - 0.4 * k))
-        lw = F(32, 'X').getlength(sh['ring_label']) + 36
-        label_chip(out, (min(max(24, rc[0] - lw / 2), W - 200 - lw), max(20, rc[1] - rr - 70)), sh['ring_label'], ease((lt - 0.8) / 0.3), 32, BG, MINUS, 'l')
+        rg = sh.get('ring')
+        if rg:
+            rp, rr = (P(rg), rg['r']) if isinstance(rg, dict) else (rg[:2], rg[2])
+            rc = tf(rp); ra = ease((lt - 0.5) / 0.4)
+            for k in range(2):
+                ring(out, rc, rr * (0.85 + 0.15 * k) * (0.9 + 0.1 * math.sin(lt * 4)), MINUS, 6 - 2 * k, ra * (0.95 - 0.4 * k))
+            lw = F(32, 'X').getlength(sh['ring_label']) + 36
+            label_chip(out, (min(max(24, rc[0] - lw / 2), W - 200 - lw), max(20, rc[1] - rr - 70)), sh['ring_label'], ease((lt - 0.8) / 0.3), 32, BG, MINUS, 'l')
+        if sh.get('pin_label') and sh.get('pin'):
+            pp = tf(P(sh['pin'])); label_chip(out, (pp[0] + 40, pp[1] - 100), sh['pin_label'], ease((lt - 0.6) / 0.3), 30)
         draw_band(img, out, ease(lt / 0.3))
         label_chip(img, (L, BAND_Y - 74), sh['chip'], ease((lt - 0.1) / 0.3), 32, BG, MINUS)
-        caption(img, sh['cap'], sh['sub'], ease((lt - 0.7) / 0.4))
+        caption(img, sh['cap'], sh.get('sub'), ease((lt - 0.7) / 0.4))
         text(img, (L, 1508), sh['credit'], 22, FAINT, 'M', 'l', 1)
     chapter(img, t, num('trap'), '모집공고 속 유의사항은?')
     return img
