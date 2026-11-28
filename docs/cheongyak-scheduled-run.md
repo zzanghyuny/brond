@@ -35,6 +35,12 @@
 - 컴퓨터가 응답하지 않으면(한 번 재시도 후) Google Drive 커넥터 `create_file`로 같은 구조를 만든다(파일당 약 3.1MB 한도 — 넘는 영상은 3MB 이하로 다시 인코딩해 올리고 원본은 `SendUserFile`로 대화에 남긴다).
 - `naver-html/`·`shorts-upload/`에 새 파일을 커밋하지 않는다(작업 원본으로 `naver-html/<slug>.html`이 필요하면 CLAUDE.md 규칙대로).
 
+## 4-1. 교차링크 (2026.11.28, 기준 `docs/cross-linking.md`)
+- 네이버 원고 결론의 홈페이지 링크 문장 바로 뒤에 한 줄: `<p>이 단지에 당첨되면 언제 얼마가 필요한지는 <a href="https://www.brandongsan.com/calc/cash-plan.html?apt=<slug>">브동산 계산기</a>에서 바로 계산해 볼 수 있습니다.</p>`
+- `05_쇼츠-업로드-정보.txt` 맨 위에 '교차링크 할 일' 블록: ① 각 쇼츠 '관련 동영상' = 같은 권역 최신 미분양 랭킹 본편(없으면 채널 최신 가로 영상) ② 네이버 클립은 '정보 스티커 → 블로그'로 이 단지 네이버 글 ③ 다 올린 뒤 `06_업로드주소.txt`에 주소 적기.
+- `06_업로드주소.txt`(빈 양식: 유튜브 쇼츠 1·2·3 / 네이버 블로그 글 / 네이버 클립)를 폴더에 함께 넣는다.
+- 회차 시작 때(2단계 전): `device_list_dir`로 '브동산 청약' 최근 14일 폴더의 `06_업로드주소.txt`를 보고, 유튜브 주소가 채워졌는데 사이트 글에 영상이 없으면 `python3 scripts/embed_video.py <slug> <주소...>`로 넣는다(이번 회차 push에 포함, 보고에 한 줄).
+
 ## 5. 배포 (회차당 push 한 번)
 - 완성된 단지만 커밋, 관리번호를 `scripts/applyhome-processed.json`에 추가. `~/.secrets/`, `scripts/beodongsan/kbcache.json` 등 캐시, `*-result.json`, `__pycache__` 커밋 금지.
 - 커밋 trailer는 이 세션의 저자 표기를 따른다. push 직전 `git fetch origin main` → 바뀌었으면 merge 후 등록 파일 4종을 대조 → `git push origin HEAD:main`.
