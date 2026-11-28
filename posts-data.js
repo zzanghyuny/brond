@@ -43,6 +43,16 @@ const POSTS = [
     preview: `<p>충칭시는 서울의 136배, 인구 3,187만 명. 장강과 자링강이 만나는 좁은 반도에서 시작해 강 건너편과 북쪽 신도시로 커지면서, 길과 집과 철도를 층층이 쌓은 '8D 도시'가 됐다.</p>`
   },
   {
+    id: "hcmc-city-structure",
+    category: "city",
+    tag: "도시이야기 No.001",
+    title: "호치민은 왜 이런 모양이 됐을까 — 강을 따라 자란 도시 300년",
+    date: "2026-11-26",
+    dateLabel: "2026. 11. 26",
+    url: "posts/hcmc-city-structure.html",
+    preview: `<p>사이공강과 운하, 프랑스의 격자 도심, 쩌런, 푸미흥·투티엠, 2025년 합병까지 호치민이 지금의 모양이 된 순서를 위성사진으로 정리했다.</p>`
+  },
+  {
     id: "trivn-gaheung",
     category: "realestate",
     region: "경북",
