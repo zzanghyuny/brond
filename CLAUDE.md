@@ -110,11 +110,9 @@ master 문서는 claude.ai 클라우드 채팅 세션 기준으로 작성돼 일
 - `jupjup/agents.json`·`holds.json`·`jupjup/agents/*.jpg`를 고칠 때는 push 직전 fetch·병합 규칙을 그대로 지킨다.
 
 ## 어사이드 전달물은 구글 드라이브에 올린다 — GitHub 아님 (2026.11.28 Paul 지시, 항상 적용 — 이 문서·docs·스킬의 이전 'GitHub naver-html/·shorts-upload/로 전달' 규칙보다 우선)
-- 네이버 원고, 쇼츠·클립 영상, 썸네일, 제목·설명·해시태그처럼 **어사이드가 할 일은 구글 드라이브 'Aside 작업용 폴더'(id `1_JKxY2Q9wIX0o3e_xXMtNhc5CsRhzbd-`)에 올린다.** 사이트 글·이미지 배포만 GitHub(main push)로 한다.
-  - 청약 글: '브동산 청약'(id `1dUznOvWJU9ReGb4rB1l9snRfT6s1biTa`) 안에 단지마다 `YYYY-MM-DD 단지명 (slug)` 폴더(공고 전 글 갱신이면 끝에 ` — 수정 발행`).
-  - 미분양 선착순 랭킹: '브동산 미분양 랭킹'(id `18s2lUC_1386GrNrnJ213DK2Wobvl6c6j`) 안에 회차마다 `YYYY-MM-DD 권역 (slug)` 폴더.
-  - 도시이야기: '브동산 도시이야기'(id `1v1ySIq0dpNMCwkg8SIlAZ4G7wHeqTHpV`), 절차는 `scripts/dosi/RUNBOOK.md`.
-- 폴더에 넣을 것: `README.txt`(네이버 제목·카테고리·태그·대표사진, 수정 발행 여부, 쇼츠별 제목·설명·해시태그·고정 댓글, 올릴 순서·기한), `<slug>-naver.html`, 영상 mp4, `-thumbnail.png`.
-- 올리는 법: Google Drive 커넥터 `create_file`(`parentId`=폴더, `disableConversionToGoogleType: true`, `base64Content`에 `sha256:<hex>:<절대경로>` 파일 참조). **이 연결은 호출 한 번에 약 3.1MB까지만 실린다.** 그보다 큰 영상은 ① 이 세션에 Paul 컴퓨터(`jhi`)의 `G:\내 드라이브\Aside 작업용 폴더`가 연결돼 있으면 `device_commit_files`로 그 안 같은 폴더에 쓰고, ② 연결이 없으면 `SendUserFile`로 대화에 올리고 보고에 "영상 ○○는 대화에만 있음 — 드라이브 폴더에 넣어 주세요"라고 적는다(도시이야기 RUNBOOK 7단계와 같은 방식). 영상을 화질을 떨어뜨려 줄이지 않는다.
-- `shorts-upload/`에는 새 영상을 올리지 않는다(남아 있는 옛 파일은 Paul이 삭제를 요청할 때 지운다). `naver-html/<slug>.html`은 manifest·쇼핑커넥트·표 PNG 스크립트가 쓰는 **작업 원본**이라 저장소에 계속 두지만, 어사이드 전달과 보고 링크는 드라이브 폴더로 한다.
-- 보고에는 GitHub 링크 대신 드라이브 폴더 주소를 적는다.
+- 공통 지침: 드라이브 'Aside 작업용 폴더'의 문서 「배포 지침 — 배포 자료는 'Aside 작업용 폴더'로」(원본 https://claude.ai/artifact/LLrfMY7iFbBSB61rRDxDMU). 사이트 글·이미지만 GitHub(main push)로 배포하고, 네이버 원고·쇼츠/클립 영상·썸네일·업로드 정보는 GitHub에 올리지 않는다(`naver-html/`·`shorts-upload/`에 새 파일 커밋 금지, 옛 파일은 그대로).
+- 브동산 청약·미분양 랭킹 자료는 'Aside 작업용 폴더'(id `1_JKxY2Q9wIX0o3e_xXMtNhc5CsRhzbd-`) → **'브동산'(id `1RXISeTG40Mgr79ZE7S11EgwVZhIzGmDw`)** 안에 콘텐츠마다 폴더 하나(`YYYY-MM-DD 단지명 (slug)`, 미분양은 `YYYY-MM-DD 권역 미분양 랭킹 (slug)`, 공고 전 글 갱신이면 끝에 ` — 수정 발행`). 도시이야기는 '브동산 도시이야기'(id `1v1ySIq0dpNMCwkg8SIlAZ4G7wHeqTHpV`), 절차는 `scripts/dosi/RUNBOOK.md`. 게시를 마치면 어사이드가 폴더 이름 앞에 [게시완료]를 붙인다.
+- 파일 이름·구성(청약): `00_읽어주세요.txt`(올릴 순서·네이버 제목·태그·대표사진), `01_네이버원고.html` + `이미지/NN_<파일명>`, `02_쇼츠1-가격퀴즈.mp4`·`02_쇼츠1-썸네일.png`, `03_쇼츠2-숨은한줄.mp4`·`03_쇼츠2-썸네일.png`, `04_쇼츠-업로드-정보.txt`(제목·설명·해시태그·고정 댓글). 세부는 예약 작업 '브동산 자동 글 배포' 지시문이 기준.
+- 올리는 법: Google Drive 커넥터 `create_file`(폴더는 `application/vnd.google-apps.folder`, 파일은 `disableConversionToGoogleType: true` + `base64Content`에 `sha256:<hex>:<절대경로>` — 작업 폴더나 scratchpad 아래 파일만, /tmp는 안 됨).
+- **크기 한도:** 클라우드 예약 세션에서는 이 커넥터 호출 한 번에 약 3.1MB까지만 실린다(세션 쪽 한도라 Paul 설정으로 바뀌지 않음, 2026.11.28 확인 — 세션 종류에 따라 더 클 수 있으니 실패하면 같은 파일을 다시 보내지 않는다). 3MB 넘는 영상은 ① 세션에 Paul 컴퓨터(`jhi`)의 `G:\내 드라이브\Aside 작업용 폴더`가 연결돼 있으면 `device_commit_files`로 원본을 같은 폴더에 쓰고, ② 연결이 없으면 공통 지침대로 3MB 이하로 다시 인코딩해 올리고(정지 화면으로 화질 확인), 원본은 `SendUserFile`로 대화에도 남긴다.
+- 보고에는 GitHub 링크 대신 드라이브 폴더 주소를 적는다. `naver-html/<slug>.html`은 manifest·쇼핑커넥트·표 PNG 스크립트가 읽는 작업 원본이라 저장소에 남아 있을 수 있지만 어사이드 전달은 드라이브 사본으로 한다.

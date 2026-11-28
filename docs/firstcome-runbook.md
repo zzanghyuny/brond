@@ -43,7 +43,7 @@
    RID=<RID> python3 scripts/firstcome/region_build.py build
    ```
    이미지는 `posts/images/<slug>/`에서 직접 열어 확인한다(위치도가 잘렸거나 홍보 그림이면 손으로 잘라 다시 저장). 사이트 글은 Playwright로 390px 폭 가로 넘침이 없는지 확인.
-5. **영상**: `RID=<RID> LONG_OUT=/tmp/long-out/ python3 scripts/longform/make_firstcome_long.py` 와 `... make_firstcome_shorts.py`. 정지 화면(인자로 초 지정)으로 먼저 확인. 결과 mp4·썸네일·txt와 네이버 원고, `README.txt`(제목·설명·태그)를 구글 드라이브 'Aside 작업용 폴더/브동산 미분양 랭킹'(id `18s2lUC_1386GrNrnJ213DK2Wobvl6c6j`) 안 `YYYY-MM-DD 권역 (slug)` 폴더에 올린다(2026.11.28~, `shorts-upload/`에는 올리지 않음. 방법·3MB 한도는 `CLAUDE.md` 맨 아래 섹션).
+5. **영상**: `RID=<RID> LONG_OUT=/tmp/long-out/ python3 scripts/longform/make_firstcome_long.py` 와 `... make_firstcome_shorts.py`. 정지 화면(인자로 초 지정)으로 먼저 확인. 결과 mp4·썸네일·txt와 네이버 원고, `README.txt`(제목·설명·태그)를 구글 드라이브 'Aside 작업용 폴더/브동산'(id `1RXISeTG40Mgr79ZE7S11EgwVZhIzGmDw`) 안 `YYYY-MM-DD 권역 미분양 랭킹 (slug)` 폴더에 올린다(2026.11.28~, `shorts-upload/`에는 올리지 않음. 방법·3MB 한도는 `CLAUDE.md` 맨 아래 섹션).
 6. **등록·기록**: `RID=<RID> python3 scripts/firstcome/region_build.py register` 후 `... history`.
 7. **배포**: 커밋 → `git fetch origin main` → 바뀌었으면 `git merge origin/main`(등록 파일 충돌은 손으로 합침) → `git push origin HEAD:main`. 배포 후 글·이미지·네이버 HTML URL이 200인지 확인(처음 404면 잠시 후 재시도).
 8. **보고**: 1위와 플러스 단지 수, 지난 회차 대비 변화, 재검토한 단지, 이미지 못 구한 단지, 확인 필요 사항, 영상 제목.

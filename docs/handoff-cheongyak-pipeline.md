@@ -15,7 +15,7 @@
 | 4. 적정가 산출 | 평점·보정·적정가·예상 프리미엄 | `scripts/beodongsan/model.py` |
 | 5. 사이트 글 | `posts/<slug>.html` + 등록 4종 | 사이트(brandongsan.com) |
 | 6. 네이버용 | `naver-html/<slug>.html`, 차트 PNG | GitHub |
-| 7. 영상 | 쇼츠 mp4 + 썸네일 + 제목 | `scripts/shorts/` → 구글 드라이브 '브동산 청약' 단지 폴더 |
+| 7. 영상 | 쇼츠 mp4 + 썸네일 + 제목 | `scripts/shorts/` → 구글 드라이브 '브동산' 단지 폴더 |
 | 8. 배포·확인 | main push, URL 200 확인 | Vercel 자동 배포 |
 
 - 사이트는 `main` 브랜치가 Vercel로 자동 배포된다. Paul 지시로 청약 글은 **확인 없이 main에 바로 배포**한다(2026.11.11).
@@ -143,7 +143,7 @@ python3 scripts/beodongsan/comp_scan.py <시·구> --area 84      # 키워드 �
 4. 확인: `ffprobe`로 길이, `ffmpeg -af volumedetect`로 음량(평균 약 −15dB, 최대 약 −1dB면 정상), 몇 장면 캡처.
 
 ### 7-3. 전달 규칙
-> **2026.11.28 변경:** 영상·썸네일·네이버 원고·README는 `shorts-upload/`·GitHub 링크가 아니라 구글 드라이브 'Aside 작업용 폴더/브동산 청약'(id `1dUznOvWJU9ReGb4rB1l9snRfT6s1biTa`)의 단지 폴더에 올린다. 방법·크기 한도는 `CLAUDE.md` 맨 아래 섹션. 아래 `shorts-upload/` 안내는 예전 방식이다.
+> **2026.11.28 변경:** 영상·썸네일·네이버 원고·README는 `shorts-upload/`·GitHub 링크가 아니라 구글 드라이브 'Aside 작업용 폴더/브동산'(id `1RXISeTG40Mgr79ZE7S11EgwVZhIzGmDw`)의 단지 폴더에 올린다. 방법·크기 한도는 `CLAUDE.md` 맨 아래 섹션. 아래 `shorts-upload/` 안내는 예전 방식이다.
 - **영상을 줄 때는 항상 제목 + 썸네일을 같이 준다.** 제목 기본형: `단지명 | 예상프리미엄 ±N, 분양가 총정리`.
 - 설명 공통 문구: "브동산 모형 추정치이며 확정 수익이 아닙니다. 청약 자격·일정은 청약홈 입주자모집공고를 확인하세요. 더 궁금한 단지는 댓글로 남겨주세요."
 - Aside 배포용으로 `shorts-upload/<YYYY-MM>/`에 `<slug>.mp4`·`<slug>-thumbnail.png`를 올리고 같은 폴더 `README.md`에 순서·제목·설명·해시태그를 적는다. 이 폴더는 `.vercelignore`로 사이트 배포에서 빠진다. Aside가 유튜브 업로드를 마치면 Paul이 삭제를 요청하고, 그때 지운다(2026.11.21).
