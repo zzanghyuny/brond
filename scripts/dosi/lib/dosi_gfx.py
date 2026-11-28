@@ -4,11 +4,12 @@ frames(name, W, H, D, cues, opts, geo, short=False) -> RGB bytes 프레임 생�
 A안(본편) 톤: 어두운 바탕, 가는 금색 선, 명조 숫자. 쇼츠도 같은 그림을 세로로 쓴다.
 그래픽 장면은 짧게(본편 12초 이하) — 모든 요소가 1초 안에 다 뜨도록 빠르게 등장시킨다.
 """
-import json, math, functools
+import os, json, math, functools
 import numpy as np, cairo
 from PIL import Image, ImageDraw, ImageFont
 from shapely.geometry import shape, box
 from shapely.ops import unary_union
+from shapely.affinity import translate
 
 FPS = 30
 UI = 1.0   # 글자 크기 배율(네이버 모바일 이미지 1.3)
@@ -33,6 +34,8 @@ def col(c): return COL[c] if isinstance(c, str) else c
 @functools.lru_cache(maxsize=1024)
 def _font(font, size):
     if font.startswith('se'):
+        st = FP + f'NotoSerifKR-{int(font[2:] or 5) * 100}.ttf'   # 가변 글꼴을 못 받으면 굵기별 정적 파일(Google Fonts)
+        if os.path.exists(st): return ImageFont.truetype(st, size)
         f = ImageFont.truetype(FONTS['se'], size)
         try: f.set_variation_by_axes([int(font[2:] or 5) * 100])
         except Exception: pass
@@ -116,8 +119,14 @@ def land_frame(pj, W, H, pad=0.5):
     lat1 = pj.lat0 + (pj.cy - 0) / (pj.ky * pj.spk); lat0 = pj.lat0 + (pj.cy - H) / (pj.ky * pj.spk)
     k = (round(lon0 - pad, 1), round(lat0 - pad, 1), round(lon1 + pad, 1), round(lat1 + pad, 1))
     if k not in _land:
-        win = box(*k); feats = json.load(open(LAND10))['features']
-        _land[k] = unary_union([shape(f['geometry']).intersection(win) for f in feats if shape(f['geometry']).intersects(win)])
+        feats = [shape(f['geometry']) for f in json.load(open(LAND10))['features']]
+        parts = []
+        for sh in (0, 360, -360):   # 태평양을 건너는 지도(경도 180° 넘김)는 육지를 ±360° 옮겨 함께 그린다
+            win = box(k[0] - sh, k[1], k[2] - sh, k[3])
+            if win.bounds[2] < -180 or win.bounds[0] > 180: continue
+            got = [g.intersection(win) for g in feats if g.intersects(win)]
+            if got: parts.append(translate(unary_union(got), xoff=sh) if sh else unary_union(got))
+        _land[k] = unary_union(parts) if parts else box(0, 0, 0, 0)
     return _land[k]
 
 def new_frame(W, H):
@@ -205,7 +214,7 @@ def anim_overlay(W, H, D, cues, o, geo, short=False):
         x, y = pj(*at); label(cr, o.get('seoul_label', '서울 605㎢'), x + 18 * s, y - 24 * s, 28 * s, INK, a_s, 'lm')
         if comp:
             kx, ky = pj(comp_at[0] - 1.8, comp_at[1] + 1.6); label(cr, o.get('compare_label', ''), kx, ky, 28 * s, INK, a_k, 'mm')
-        label(cr, o.get('city_label', ''), *pj(b[2] - 0.8, b[3] - 0.2), 30 * s, BRASS, a_c, 'rm')
+        label(cr, o.get('city_label', ''), *pj(*(o.get('city_label_at') or (b[2] - 0.8, b[3] - 0.2))), 30 * s, BRASS, a_c, 'rm')
         if short: side_text(cr, o.get('side'), t, cues, W / 2, H * 0.66, s, True)
         else: side_text(cr, o.get('side'), t, cues, W * 0.66, H * 0.22, s)
         yield to_bytes(surf, W, H)

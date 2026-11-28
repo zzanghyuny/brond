@@ -33,3 +33,4 @@ kbcache.json
 geo_cache.json
 *.json.*.tmp
 scripts/shorts/__pycache__/
+scripts/jupjup/__pycache__/

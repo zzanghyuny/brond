@@ -9,6 +9,7 @@
 - 글꼴: `/tmp/fonts`(Pretendard 5종, NotoSerifKR.ttf), `/tmp/nanum`(NanumGothic Regular/ExtraBold). 없으면 받는다
   (Pretendard: `https://github.com/orioncactus/pretendard` 릴리스, NotoSerifKR: `https://github.com/google/fonts/raw/main/ofl/notoserifkr/NotoSerifKR%5Bwght%5D.ttf`, 나눔고딕: `https://github.com/google/fonts/tree/main/ofl/nanumgothic`).
 - `pip install --break-system-packages edge-tts pycairo shapely pyproj pillow numpy playwright`.
+- 글꼴이 GitHub raw에서 막히면(예약 실행 세션): Pretendard는 `https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/public/static/Pretendard-<굵기>.otf`, 노토 세리프는 `curl https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;800`(기본 UA)이 주는 굵기별 TTF를 `/tmp/fonts/NotoSerifKR-<굵기>.ttf`로 받는다(공용 코드가 이 파일을 먼저 쓴다), 나눔고딕은 `https://cdn.jsdelivr.net/gh/google/fonts@main/ofl/nanumgothic/`.
 - Natural Earth: `/home/claude/media/geo/`에 `ne_land10.geojson`, `ne_admin1.geojson`, `ne_countries50.geojson`, `ne_rivers10.geojson`이 없으면 `raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/`에서 받는다.
 - 서울 경계: `ep2-chongqing/geo.json`의 `seoul`을 그대로 복사해 쓴다.
 
@@ -22,6 +23,8 @@
 - **실사 양에 맞춰 본편 길이를 정한다**: 도시 영상 60개 이상 → 5~7분, 20~60개 → 4~5분, 그 아래 → 3~4분. 실사 없는 장면으로 길이를 채우지 않는다. 실사가 모자란 꼭지는 줄이거나 합치거나 뺀다.
 - 금지: 생성형 이미지, 구글 어스를 썸네일·표지에, 건물 하나를 크게 잡은 사진을 썸네일에, Editorial 전용·CC-NC.
 - 받은 클립으로 접촉 시트(장면 40% 지점 프레임 모음)를 만들어 눈으로 고른다.
+- Chrome 확장이 끊겨 있으면 같은 PC의 **Claude 데스크톱 앱 내장 브라우저**(`mcp__remote-devices__Claude_Browser__*`, `preview_start`로 pexels 검색 페이지 열고 `javascript_tool`)로도 같은 방법이 된다(2026.11.28 멕시코시티 편). 세로(1080×1920) 원본은 쇼츠용으로만 쓰고 본편에는 가로 원본만 쓴다.
+- 태평양을 건너는 지도(인천→아메리카)는 도착지 경도에 360을 더한 장소 키(예: `aicm360`)를 geo.json에 넣어 쓴다. 공용 `land_frame`이 육지를 ±360° 옮겨 함께 그린다.
 
 ## 3. 지도 데이터 (`geo_prep.py`)
 Natural Earth로 시 경계(`ne_admin1`)·비교 영역(남한 `KOR`)·강, OSM Nominatim(`polygon_geojson=1`)으로 구 경계와 장소 좌표, 강은 OSM `waterway` 관계(필요하면 `viewbox`+`bounded=1`)로 받아 도심 창으로 자른다. Nominatim은 1.2초 간격, 629 오류면 쉬었다 재시도. 결과는 `epN-<city>/geo.json`.

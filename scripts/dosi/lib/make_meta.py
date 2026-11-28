@@ -41,6 +41,8 @@ desc = f"""{EP['yt_title']}
 브동산 brandongsan.com
 {tags}
 """
+if len(desc) > 4900:   # 유튜브 설명란은 5,000자까지 — 넘으면 출처를 '자료명 — 주소'로 줄인다
+    desc = desc.replace(src, '\n'.join(f"· {t.split(' — ')[0]} — {u}" for t, u in S.SOURCES))
 open(O + f"{N['LONG']}-description.txt", 'w', encoding='utf-8').write(
     f"[제목]\n{EP['yt_title']}\n\n[태그]\n{', '.join(S.TAGS)}\n\n[설명]\n" + desc)
 for w in ('S1', 'S2'):
