@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<link rel="canonical" href="https://www.brandongsan.com/calc/cash-plan.html">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7TD8E3J131"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7TD8E3J131');
+</script>
+
+<meta charset="utf-8">
+<meta name="google-adsense-account" content="ca-pub-1191746063892692">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1191746063892692"
+     crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>청약 당첨되면 필요한 돈 계산기 — 브동산</title>
+<meta name="description" content="계약금·중도금·잔금, 취득세, 옵션, 후불 이자까지 더해 청약 당첨 후 계약할 때와 입주할 때 필요한 내 돈을 계산합니다.">
+<meta property="og:title" content="청약 당첨되면 필요한 돈 계산기 — 브동산">
+<meta property="og:description" content="계약금·중도금·잔금, 취득세, 옵션, 후불 이자까지 더해 청약 당첨 후 계약할 때와 입주할 때 필요한 내 돈을 계산합니다.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.brandongsan.com/calc/cash-plan.html">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/calc/calc.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap sh-row">
+    <a class="brand" href="/"><span class="b">브</span><span class="rest">동산</span></a>
+    <nav class="site-nav">
+      <a href="/">홈</a>
+      <a href="/realestate.html">부동산이야기</a>
+      <a href="/jupjup/">줍줍찬스</a>
+      <a href="/calc/">계산기</a>
+      <a href="/brand.html">브랜드이야기</a>
+      <a href="/space-story.html">공간이야기</a>
+      <a href="/city-story.html">도시이야기</a>
+      <a href="/contact.html">문의</a>
+    </nav>
+  </div>
+</header>
+<div class="hairline"></div>
+<div class="wrap"><div class="page calc-page">
+  <h1>청약 당첨되면 필요한 돈 계산기</h1>
+  <p class="calc-lede">분양가와 납부 조건을 넣으면 계약할 때, 중도금 기간, 입주할 때 각각 내 돈이 얼마 필요한지 순서대로 보여 줍니다. 브동산이 분석한 단지를 고르면 분양가가 자동으로 채워집니다.</p>
+  <span class="calc-asof">기준: 단지별 입주자모집공고문 · 취득세는 지방세법 기준 · 2026.11.28 확인</span>
+
+  <form class="calc-card" id="f" onsubmit="return false">
+    <h2>단지와 분양가</h2>
+    <div class="fld">
+      <label for="apt">브동산 분석 단지에서 고르기 (선택)</label>
+      <select id="apt"><option value="">직접 입력</option></select>
+      <span class="hint" id="aptLink"></span>
+    </div>
+    <div class="row2">
+      <div class="fld">
+        <label for="price">분양가</label>
+        <div class="unit"><input type="number" id="price" min="0" step="100" value="60000" inputmode="numeric"><span>만원</span></div>
+        <span class="hint" id="priceTxt"></span>
+      </div>
+      <div class="fld">
+        <label for="opt">발코니 확장·유상옵션</label>
+        <div class="unit"><input type="number" id="opt" min="0" step="100" value="1500" inputmode="numeric"><span>만원</span></div>
+        <span class="hint">공고문의 발코니 확장 금액과 고를 옵션 합계. 보통 계약금 10%·잔금 90% 등으로 나눠 내지만 여기서는 입주 때 한 번에 넣었습니다.</span>
+      </div>
+    </div>
+
+    <h2>납부 조건 (공고문 그대로)</h2>
+    <div class="row3">
+      <div class="fld"><label for="dep">계약금</label><div class="unit"><input type="number" id="dep" min="0" max="100" value="10"><span>%</span></div></div>
+      <div class="fld"><label for="mid">중도금</label><div class="unit"><input type="number" id="mid" min="0" max="100" value="60"><span>%</span></div></div>
+      <div class="fld"><label>잔금</label><div class="unit"><input type="number" id="bal" readonly><span>%</span></div></div>
+    </div>
+    <div class="row2">
+      <div class="fld"><label for="midN">중도금 횟수</label><div class="unit"><input type="number" id="midN" min="1" max="12" value="6"><span>회</span></div></div>
+      <div class="fld"><label for="months">계약부터 입주까지</label><div class="unit"><input type="number" id="months" min="1" max="72" value="36"><span>개월</span></div></div>
+    </div>
+    <div class="fld">
+      <span class="lbl">중도금은 어떻게 내나요?</span>
+      <div class="seg">
+        <label><input type="radio" name="midHow" value="free" checked>중도금 대출 · 무이자</label>
+        <label><input type="radio" name="midHow" value="defer">중도금 대출 · 이자후불제</label>
+        <label><input type="radio" name="midHow" value="cash">내 돈으로</label>
+      </div>
+    </div>
+    <div class="fld" id="rateBox" hidden>
+      <label for="rate">중도금 대출 금리 (예상)</label>
+      <div class="unit"><input type="number" id="rate" min="0" max="15" step="0.1" value="4.5"><span>%</span></div>
+      <span class="hint">이자후불제는 중도금 대출 이자를 입주 때 한꺼번에 냅니다. 회차마다 대출이 늘어나는 것을 반영해 대략 계산합니다.</span>
+    </div>
+
+    <h2>입주 때</h2>
+    <div class="fld">
+      <label for="loan">잔금대출(주택담보대출)로 받을 금액</label>
+      <div class="unit"><input type="number" id="loan" min="0" step="100" value="0" inputmode="numeric"><span>만원</span></div>
+      <span class="hint">중도금 대출은 입주 때 잔금대출로 바꾸거나 갚아야 합니다. 한도는 소득(DSR)·지역(LTV)에 따라 다르니 은행에서 미리 확인하세요.</span>
+    </div>
+    <div class="row2">
+      <div class="fld">
+        <label for="homes">입주 때 세대 주택 수 (이 집 포함)</label>
+        <select id="homes"><option value="1">1주택</option><option value="2">2주택</option><option value="3">3주택</option><option value="4">4주택 이상</option></select>
+      </div>
+      <div class="fld">
+        <span class="lbl">취득세 조건</span>
+        <label class="chk"><input type="checkbox" id="adj"><span>조정대상지역</span></label>
+        <label class="chk"><input type="checkbox" id="over85"><span>전용 85㎡ 초과</span></label>
+        <label class="chk" id="firstBox"><input type="checkbox" id="first"><span>생애최초 구입</span></label>
+      </div>
+    </div>
+    <div class="fld">
+      <label for="etc">기타 입주 비용 (선택)</label>
+      <div class="unit"><input type="number" id="etc" min="0" step="10" value="0" inputmode="numeric"><span>만원</span></div>
+      <span class="hint">등기 비용(법무사·국민주택채권), 이사·입주 청소, 관리비 예치금 등. 모르면 0으로 두세요.</span>
+    </div>
+  </form>
+
+  <div class="result" aria-live="polite">
+    <div class="r-k">내 돈으로 준비할 금액 합계</div>
+    <div class="r-big" id="total">0원</div>
+    <div class="r-sub" id="summary"></div>
+    <ol class="steps" id="steps"></ol>
+  </div>
+
+  <section class="calc-notes">
+    <h2>이렇게 계산합니다</h2>
+    <ul>
+      <li>계약금·중도금·잔금 비율은 단지마다 다릅니다. 입주자모집공고문의 '공급금액 및 납부일정' 표를 보고 고쳐 넣으세요. 계약금을 두 번(예: 5%+5%)에 나눠 내는 단지도 있습니다.</li>
+      <li>중도금 대출은 사업주체가 알선하는 집단대출 기준입니다. 무이자면 이자가 없고, 이자후불제는 회차마다 대출 잔액이 늘어난다고 보고 입주 때 낼 이자를 대략 계산했습니다(실제 이자는 대출 실행일·금리에 따라 다릅니다).</li>
+      <li>취득세는 분양가와 옵션을 더한 금액으로 <a href="/calc/acquisition-tax.html">취득세 계산기</a>와 같은 방식(지방교육세·농특세 포함)으로 계산했습니다.</li>
+      <li>중도금 대출과 잔금대출 가능 여부·한도는 계산하지 않습니다. 대출 규제는 금융위원회 발표와 은행 심사에 따라 달라집니다.</li>
+    </ul>
+    <p>단지 분양가는 브동산 청약 분석 글 제목의 84㎡(또는 대표 타입) 평균 분양가입니다. 동·호수별 실제 금액은 공고문을 확인하세요. 근거: 각 단지 입주자모집공고(<a href="https://www.applyhome.co.kr" target="_blank" rel="noopener">청약홈</a>), 지방세법, <a href="https://www.wetax.go.kr" target="_blank" rel="noopener">위택스</a>.</p>
+  </section>
+  <nav class="calc-more" aria-label="다른 계산기"><a href="/calc/cheongyak-score.html">청약 가점 계산기<span>84점 만점 가점</span></a><a href="/calc/acquisition-tax.html">취득세 계산기<span>중과·생애최초 감면</span></a><a href="/calc/">계산기 모음<span>전체 보기</span></a></nav>
+</div></div>
+<script src="/posts-data.js"></script>
+<script src="/calc/calc.js"></script>
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var list = BDS.complexes(), sel = $('apt');
+  list.forEach(function(c){ var o = document.createElement('option'); o.value = c.id; o.textContent = (c.region ? c.region + ' · ' : '') + c.name + ' (' + c.area + '㎡ ' + (c.price/1e8).toFixed(2) + '억)'; sel.appendChild(o); });
+  var q = new URLSearchParams(location.search);
+  if (q.get('apt')) sel.value = q.get('apt');
+  function pick(){
+    var c = list.filter(function(x){ return x.id === sel.value; })[0];
+    if (c) { $('price').value = Math.round(c.price / 10000); $('over85').checked = c.area > 85; $('adj').checked = false; $('aptLink').innerHTML = '<a href="' + c.url + '">' + c.name + ' 분석 글 보기 →</a> 조정대상지역 여부와 납부 비율은 공고문대로 확인해 주세요.'; }
+    else $('aptLink').textContent = '';
+  }
+  sel.addEventListener('change', function(){ pick(); calc(); });
+  if (sel.value) pick();
+
+  function li(when, what, amt, why){ return '<li><div class="st-head"><b>' + when + ' · ' + what + '</b><span class="amt">' + BDS.man(amt) + '</span></div>' + (why ? '<div class="why">' + why + '</div>' : '') + '</li>'; }
+  function calc(){
+    var price = (+$('price').value || 0) * 1e4, opt = (+$('opt').value || 0) * 1e4;
+    var dp = Math.max(0, +$('dep').value || 0), mp = Math.max(0, +$('mid').value || 0);
+    var bp = Math.max(0, 100 - dp - mp); $('bal').value = bp;
+    var n = Math.max(1, Math.round(+$('midN').value || 1)), mon = Math.max(1, +$('months').value || 1);
+    var how = document.querySelector('input[name=midHow]:checked').value;
+    $('rateBox').hidden = how !== 'defer';
+    var homes = +$('homes').value; $('firstBox').hidden = homes !== 1;
+    var dep = price * dp / 100, mid = price * mp / 100, bal = price * bp / 100;
+    // 이자후불제: 중도금이 회차마다 같은 간격으로 실행된다고 보고, 각 회차부터 입주까지의 이자를 더함
+    var interest = 0;
+    if (how === 'defer') {
+      var r = (+$('rate').value || 0) / 100, gap = mon / (n + 1), each = mid / n;
+      for (var i = 1; i <= n; i++) interest += each * r * ((mon - gap * i) / 12);
+    }
+    var t = BDS.acqTax({ price: price + opt, homes: homes, adjusted: $('adj').checked, temp2: false, over85: $('over85').checked, first: homes === 1 && $('first').checked });
+    var loan = (+$('loan').value || 0) * 1e4, etc = (+$('etc').value || 0) * 1e4;
+    var midCash = how === 'cash' ? mid : 0;
+    var repay = how === 'cash' ? 0 : mid;
+    var moveIn = bal + repay + opt + t.total + interest + etc - loan;
+    var total = dep + midCash + moveIn;
+    var h = '';
+    h += li('계약할 때', '계약금 ' + dp + '%', dep, '당첨 후 계약일에 냅니다.');
+    if (how === 'cash') h += li('중도금 기간', '중도금 ' + mp + '% · ' + n + '회', mid, '회당 약 ' + BDS.man(mid / n));
+    else h += li('중도금 기간', '중도금 ' + mp + '% · 대출', 0, '중도금 대출로 내서 이 기간에는 내 돈이 들지 않습니다' + (how === 'free' ? '(무이자).' : '(이자는 입주 때).'));
+    var parts = '잔금 ' + bp + '% ' + BDS.man(bal);
+    if (repay) parts += ' + 중도금 대출 상환 ' + BDS.man(repay);
+    parts += ' + 옵션·발코니 ' + BDS.man(opt) + ' + 취득세 등 ' + BDS.man(t.total);
+    if (interest) parts += ' + 후불 이자 약 ' + BDS.man(interest);
+    if (etc) parts += ' + 기타 ' + BDS.man(etc);
+    if (loan) parts += ' − 잔금대출 ' + BDS.man(loan);
+    h += li('입주할 때', '잔금·세금', Math.max(0, moveIn), parts);
+    $('steps').innerHTML = h;
+    $('priceTxt').textContent = price ? '= ' + BDS.won(price) : '';
+    $('total').textContent = BDS.man(Math.max(0, total));
+    if (moveIn >= 0 && repay && !loan) { $('summary').textContent = '중도금 대출 ' + BDS.man(repay) + '을 입주 때 갚는 것까지 넣은 금액입니다. 잔금대출을 받을 계획이면 “잔금대출로 받을 금액” 칸에 넣어 보세요. 그만큼 줄어듭니다.'; return; }
+    $('summary').textContent = moveIn < 0 ? '잔금대출이 입주 때 필요한 돈보다 많게 입력됐습니다. 대출 금액을 확인하세요.' : '분양가 ' + BDS.man(price) + ' 기준 · 취득세 등 ' + BDS.man(t.total) + (t.heavy ? ' (중과 ' + t.heavy + '%)' : '');
+  }
+  $('f').addEventListener('input', calc); $('f').addEventListener('change', calc);
+  calc();
+})();
+</script>
+
+<footer>
+  <div class="wrap">
+    <p>브동산은 부동산 정보와 브랜드 이야기를 담백하게 전하는 공간입니다. 게시된 내용은 정보 제공 목적이며, 투자 판단의 근거로 사용할 수 없습니다.</p>
+    <p><a href="/about.html">소개</a> · <a href="/privacy.html">개인정보처리방침</a> · <a href="/contact.html">문의</a> · © 2026 브동산</p>
+  </div>
+</footer>
+
+</body>
+</html>

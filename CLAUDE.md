@@ -123,3 +123,8 @@ master 문서는 claude.ai 클라우드 채팅 세션 기준으로 작성돼 일
 ## 글 목록 카드에는 대표사진(썸네일)을 붙인다 (2026.11.28 Paul 지시)
 - 모든 글은 `posts/images/<slug>/thumb.jpg`(가로 720px)와 `posts-data.js`의 `thumb` 필드를 가진다. `feed.js`가 카드 오른쪽(폰은 위쪽)에 사진으로 보여 준다.
 - **새 글을 posts-data.js에 등록한 뒤 `python3 scripts/build_thumbs.py`를 실행한다**(썸네일 없는 글만 만듦, 특정 글만 다시 만들 땐 slug 인자). 청약 글은 공식 조감도·투시도를 고르고, 없으면 커버(입지 개략도)를 쓴다. 다른 사진을 쓰고 싶으면 그 글의 thumb.jpg만 바꿔 넣으면 된다.
+
+## 브동산 계산기 `/calc/` (2026.11.28 Paul 지시)
+- 청약 가점(`cheongyak-score`)·당첨되면 필요한 돈(`cash-plan`)·취득세(`acquisition-tax`) 계산기와 모음 페이지. 상단 메뉴 '계산기'(줍줍찬스 뒤).
+- 본문은 `scripts/calc/src/*.html`, 공통 머리·메뉴·사이트맵은 `python3 scripts/calc/build_calc.py`가 만든다. 취득세 세율·생애최초 감면·**조정대상지역 목록**은 `calc/calc.js` 한 곳에 있다 — 규정·규제지역이 바뀌면 calc.js와 build_calc.py의 `ADJ_ASOF`, 각 화면의 확인 날짜를 고치고 다시 빌드한다. 숫자는 공식 법령·보도자료에서만 가져온다.
+- 당첨 자금 계산기의 단지 목록은 posts-data.js 청약 글 제목(`NN㎡ (평균) 분양가 X.XX억`)에서 자동으로 만든다. `/calc/cash-plan.html?apt=<slug>`로 단지를 미리 고른 채 열 수 있다.

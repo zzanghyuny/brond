@@ -620,4 +620,8 @@
   <url><loc>https://www.brandongsan.com/jupjup/sangdong-lotte.html</loc><lastmod>2026-11-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.brandongsan.com/jupjup/agent.html</loc><lastmod>2026-11-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.brandongsan.com/jupjup/terms.html</loc><lastmod>2026-11-27</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/calc/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/calc/cheongyak-score.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/calc/cash-plan.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.brandongsan.com/calc/acquisition-tax.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
