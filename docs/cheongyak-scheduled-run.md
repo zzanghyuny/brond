@@ -19,7 +19,7 @@
 - 새 공고가 없으면 아무것도 바꾸지 않고 6단계 한 줄 보고만 한다.
 
 ## 3. 단지마다 한 세트 (빠지면 그 단지는 미완성 — push하지 않는다)
-1. **사이트 글** `posts/<slug>.html`: realestate-post 스킬 1-1번 배치. 비교단지는 `scripts/beodongsan/comp_scan.py`로 전수 스캔 후 고정 기준(같은 생활권 이웃 1 + 가까운 중심권 신축 대단지 1), 후보 표 포함. 오피스텔 84는 아파트 59와 비교 후 ×0.9. 커버 = `chart-map-naver.png`(입지 개략도). 공식 홈페이지 이미지(조감도·위치도·배치도·동호수·평면 전부·커뮤니티) 최대한. 광고 문의 카드 금지. 등록: `posts-data.js`, `posts-manifest.json`(cover_candidates = 개략도 URL), `sitemap.xml`, `feed.xml`, `apply_coupang.py`, `apply_naver_shop.py`.
+1. **사이트 글** `posts/<slug>.html`: realestate-post 스킬 1-1번 배치. 비교단지는 `scripts/beodongsan/comp_scan.py`로 전수 스캔 후 고정 기준(같은 생활권 이웃 1 + 가까운 중심권 신축 대단지 1), 후보 표 포함. 오피스텔 84는 아파트 59와 비교 후 ×0.9. 커버 = `chart-map-naver.png`(입지 개략도). 공식 홈페이지 이미지(조감도·위치도·배치도·동호수·평면 전부·커뮤니티) 최대한. 광고 문의 카드 금지. 등록: `posts-data.js`, `posts-manifest.json`(cover_candidates = 개략도 URL), `sitemap.xml`, `feed.xml`, `apply_coupang.py`, `apply_naver_shop.py`, `scripts/build_thumbs.py`(목록 카드 대표사진).
 2. **네이버 원고**: `naver-html/goyang-hanshin-thehue-firstone.html`과 똑같은 양식. 대표사진은 입지 개략도. 섹션 5는 공식 이미지를 **번호 없이** 쭉 나열한 뒤 청약 일정 인포그래픽. 예상 프리미엄은 금액 먼저, 판정은 괄호(`+5,960만 (저평가)`). 표는 `scripts/naver_tables_to_png.py`로 PNG.
 3. **쇼츠 2편**: ① 가격 맞히기 `scripts/shorts/make_quiz.py quiz/<키>.json` (tts → stills 확인 → render), ② 공고문 속 숨은 한 줄 `scripts/shorts/make_viral.py viral/detective-<키>.json`. 각각 썸네일 포함. ffprobe 길이, `-af volumedetect` 음량, 정지 화면을 직접 본다.
 4. 모든 이미지·정지 화면은 Read로 열어 글자 잘림·겹침을 확인하고, 사이트 글은 390px 폭 스크린샷으로 순서를 확인한다.

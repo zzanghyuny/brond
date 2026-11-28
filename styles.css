@@ -124,6 +124,18 @@ footer a{ color:var(--ink-faint); text-decoration:underline; }
 .feed-more{ display:inline-block; margin-top:14px; font-size:13.5px; font-weight:700; color:var(--ink-faint); }
 .feed-card:hover .feed-more{ color:var(--ink); }
 
+/* 대표사진(썸네일) 카드 — 2026.11.28. 넓은 화면은 오른쪽, 폰은 위쪽 */
+.feed-card.has-thumb{ display:grid; grid-template-columns:minmax(0,1fr) 220px; column-gap:24px; align-items:start; }
+.feed-card.has-thumb .feed-thumb{ grid-column:2; grid-row:1; }
+.feed-card.has-thumb .feed-body{ grid-column:1; grid-row:1; min-width:0; }
+.feed-thumb{ aspect-ratio:4/3; overflow:hidden; border:1px solid var(--hair); border-radius:8px; background:var(--soft-bg); margin-top:4px; }
+.feed-thumb img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .3s ease; }
+.feed-card:hover .feed-thumb img{ transform:scale(1.03); }
+@media (max-width:600px){
+  .feed-card.has-thumb{ display:block; }
+  .feed-thumb{ aspect-ratio:16/9; margin:0 0 14px; }
+}
+
 .load-more-wrap{ padding:10px 0 30px; text-align:center; }
 .load-more-btn{
   display:inline-block; padding:11px 26px; border:1px solid var(--hair);

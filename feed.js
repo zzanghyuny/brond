@@ -124,11 +124,29 @@
         more.className = "feed-more";
         more.textContent = "전체보기 →";
 
-        card.appendChild(tag);
-        card.appendChild(title);
-        card.appendChild(meta);
-        card.appendChild(preview);
-        card.appendChild(more);
+        // 대표사진(썸네일): posts-data.js의 thumb — scripts/build_thumbs.py가 만든다
+        var body = card;
+        if (post.thumb) {
+          card.className += " has-thumb";
+          var fig = document.createElement("div");
+          fig.className = "feed-thumb";
+          var img = document.createElement("img");
+          img.src = post.thumb;
+          img.alt = "";
+          img.loading = "lazy";
+          img.decoding = "async";
+          fig.appendChild(img);
+          card.appendChild(fig);
+          body = document.createElement("div");
+          body.className = "feed-body";
+          card.appendChild(body);
+        }
+
+        body.appendChild(tag);
+        body.appendChild(title);
+        body.appendChild(meta);
+        body.appendChild(preview);
+        body.appendChild(more);
         list.appendChild(card);
       });
       shown += next.length;
