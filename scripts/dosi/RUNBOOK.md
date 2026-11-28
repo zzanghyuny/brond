@@ -62,5 +62,6 @@ python3 ../epN-<city>/make_posts.py                # 사이트 글 + 네이버�
 ## 7. 배포·전달
 - 커밋 → push 직전 `git fetch origin main`, 바뀌었으면 병합 → push → 1~3분 뒤 글·이미지 URL 200 확인.
 - Google 드라이브: 'Aside 작업용 폴더'(id `1_JKxY2Q9wIX0o3e_xXMtNhc5CsRhzbd-`) 안 '브동산 도시이야기'(id `1v1ySIq0dpNMCwkg8SIlAZ4G7wHeqTHpV`)에 `NN 도시명` 폴더를 만들고 썸네일 3장(png·jpg), 네이버용 HTML, 설명란 txt 3개, credits_log.csv, `README.txt`(제목·업로드 순서)를 올린다. 연결 도구는 파일당 약 3MB까지라 `create_file`의 `base64Content`에 `sha256:<hex>:<절대경로>` 참조를 쓴다(작업 폴더 아래 파일만).
-- 영상(mp4): 3MB를 넘어 드라이브 연결로는 못 올린다. Paul 컴퓨터의 드라이브 폴더가 이 세션에 연결돼 있으면(`get_device_info` connectedFolders) 그 안 같은 폴더에 쓴다. 없으면 `SendUserFile`로 대화에 올려 Paul이 받게 하고, 보고에 그렇게 적는다.
+- 영상(mp4): 드라이브 연결 도구는 파일당 10MB까지라(2026.11.28 확인) 영상은 못 올린다. Paul 컴퓨터의 드라이브 폴더가 이 세션에 연결돼 있으면(`get_device_info` connectedFolders) 그 안 같은 폴더에 쓴다. 없으면 `SendUserFile`로 대화에 올려 Paul이 받게 하고, 보고에 그렇게 적는다.
+- **본편은 줄이지 않는다(Paul 2026.11.28):** 렌더 원본(`out_LONG/<이름>.mp4`)을 그대로 전달한다. 스킬의 '2-pass 5Mbps로 줄여서'보다 이 규칙이 우선한다.
 - 보고: SendUserMessage + PushNotification — 도시, 본편 길이·제목, 쇼츠 제목 2개, 사이트 글 주소, 드라이브 폴더 주소, 확인이 필요한 것.
