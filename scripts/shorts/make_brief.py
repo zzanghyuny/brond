@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """청약 단지 '1분 총정리' 쇼츠 (2026.11.28, 트리븐 가흥 첫 편).
 
-구성: 오프닝(단지명 + '청약하실 분은 이것만 보세요' + 체크리스트 4) → 01 현금 → 02 예상프리미엄(브릿지)
-      → 03 입지(실사·Google Earth·지도) → 04 함정·유해시설(공고문 문구 + 위성 사진) → 마무리 요약.
+구성: 오프닝(단지명 + '청약하실 분은 이것만 보세요' + 체크리스트) → 01 현금 → 02 예상프리미엄(브릿지, 나레이션 길이에 맞춰 짧게)
+      → 03 입지(실사·Google Earth·지도) → 04 단지·평면(배치도·커뮤니티·평면, C['prod'])
+      → 05 모집공고 속 유의사항(공고문 문구 → 위성 사진 → 배치도 위 단지 안·경계 항목, 개수 제한 없음) → 마무리 요약.
+나레이션은 edge-tts InJoon +40%(기존 +16%의 약 1.2배, 2026.11.28 Paul).
 모던 고딕(Pretendard), 검정·황동, 필름 그레인·비네팅·빛 번짐 전환, 단지 위치 깜빡임.
 
   python3 make_brief.py brief/<키>.json tts      # 나레이션
@@ -174,6 +176,10 @@ def progress(img, ci, p, a=1.0):
     text(img, (L, 72), '브동산', 30, BR, 'K', 'l', a)
     text(img, (L + 98, 74), '1분 총정리 · ' + C['name'], 28, SOFT, 'M', 'l', a)
 
+def num(k):
+    ks = [x for x in ('cash', 'prem', 'loc', 'prod', 'trap') if x in C['narration']]
+    return f'{ks.index(k) + 1:02d}'
+
 def chapter(img, t, num, title, y=228):
     a = ease((t - 0.05) / 0.35); k = eo((t - 0.05) / 0.5)
     text(img, (L, y + (1 - k) * 18), num, 40, BR, 'K', 'l', a)
@@ -218,6 +224,16 @@ def open_bg(t, k):
     out, tf = kb(OPEN, k, 1.0, 1.22, sx / W, sy / H, sx / W, sy / H, W, H)
     return out, tf((sx, sy))
 
+TICKS = C.get('tick_at', [0.30, 0.45, 0.60, 0.74])
+def checklist(img, ca, ons):
+    n = len(C['checklist']); gap = 96 if n <= 4 else 82; px = 58 if n <= 4 else 52; y0 = 1150 if n <= 4 else 1112
+    rrect(img, (95, y0 - 36, 885, y0 + n * gap + 10), (10, 10, 11), 0.86 * ca, 26, BR, 2, 0.6 * ca)
+    for i, r in enumerate(C['checklist']):
+        y = y0 + i * gap; on = ons[i]; b = px - 8
+        rrect(img, (150, y + 8, 150 + b, y + 8 + b), BR if on > 0.5 else None, ca, 10, BR, 4, ca)
+        if on > 0: line(img, [(158, y + 8 + b * 0.52), (150 + b * 0.42, y + 8 + b * 0.8), (150 + b * 0.84, y + 8 + b * 0.2)], BG, 7, on * ca)
+        text(img, (226, y), r, px, INK if on > 0.5 else SOFT, 'B', 'l', ca, maxw=640)
+
 def sc_open(t, d, nar):
     img, sp = open_bg(t, t / d)
     pulse(img, sp, t, ease((t - 0.3) / 0.6))
@@ -227,14 +243,7 @@ def sc_open(t, d, nar):
     text(img, (CX, 225 + (1 - k) * 40), C['name'], 168, INK, 'K', 'c', ease((t - 0.25) / 0.5), maxw=900, track=-2)
     text(img, (CX, 445), '청약하실 분은 이것만 보세요', 64, INK, 'X', 'c', ease((t - 0.9) / 0.4), maxw=880)
     ca = ease((t - 1.6) / 0.4)
-    rrect(img, (95, 1120, 845 + 40, 1580 - 30), (10, 10, 11), 0.86 * ca, 26, BR, 2, 0.6 * ca)
-    times = [nar * f for f in (0.30, 0.45, 0.60, 0.74)]
-    for i, r in enumerate(C['checklist']):
-        y = 1158 + i * 96; on = ease((t - times[i]) / 0.25)
-        rrect(img, (150, y + 8, 200, y + 58), BR if on > 0.5 else None, ca, 10, BR, 4, ca)
-        if on > 0:
-            line(img, [(160, y + 34), (172 + 0 * on, y + 48), (192, y + 18)], BG, 7, on * ca)
-        text(img, (226, y), r, 58, INK if on > 0.5 else SOFT, 'B', 'l', ca, maxw=630)
+    checklist(img, ca, [ease((t - nar * f) / 0.25) for f in TICKS])
     pa = ease((t - nar * 0.86) / 0.3); pk = eo((t - nar * 0.86) / 0.45)
     w = 330 * pk
     rrect(img, (CX - w, 1592 - 30, CX + w, 1680 - 30), BR, pa, 46)
@@ -245,7 +254,7 @@ def sc_open(t, d, nar):
 def sc_cash(t, d, nar, lead):
     c = C['cash']; img = bg_blur('aerial-wide.jpg', 0.26)
     tn = t - lead
-    chapter(img, t, '01', '당첨되면 현금 얼마?')
+    chapter(img, t, num('cash'), '당첨되면 현금 얼마?')
     # 분양가 막대
     ya = 400; ab = ease((t - 0.4) / 0.4)
     text(img, (L, ya), c['price'], 38, INK, 'X', 'l', ab)
@@ -288,14 +297,16 @@ def sc_cash(t, d, nar, lead):
 BRIDGE = None
 def _btext(img, xy, s, px, color, anchor='l', alpha=1.0, w='R', maxw=None):
     text(img, (xy[0], xy[1] - px * 0.12), s, px, color, {'R': 'M', 'B': 'B', 'X': 'K'}[w], anchor, alpha, maxw=maxw)
-def bridge_T(d):
-    bridge_anim.GAP.update(adj=1.7, avg=2.0, disc=2.0, price=1.8, prem=1.5)
-    return bridge_anim.phase_times(C['bridge'], 0.9, max(6.0, d - 4.4))
+def bridge_T(d=None):
+    bridge_anim.GAP.update(adj=1.0, avg=1.25, disc=1.2, price=1.15, prem=1.0)
+    T = bridge_anim.phase_times(C['bridge'], 0.45, NAR['prem'] + 0.4)
+    T['end'] = T['prem'] + 1.9
+    return T
 def sc_prem(t, d, nar, lead):
     global BRIDGE
     if BRIDGE is None: BRIDGE = bridge_anim.Bridge(C['bridge'], _btext, L, R, CX)
     img = bg_blur('ge2.jpg', 0.18, 30)
-    chapter(img, t, '02', '예상프리미엄 얼마?')
+    chapter(img, t, num('prem'), '예상프리미엄 얼마?')
     BRIDGE.draw(img, t, bridge_T(d))
     footer(img, None, ease((t - 0.8) / 0.5))
     return img
@@ -341,7 +352,7 @@ def loc_times(d):
     shots = C['loc']
     fixed = sum(sh.get('dur', 0) for sh in shots if sh['type'] != 'map')
     for sh in shots:
-        dur = sh['dur'] if sh['type'] != 'map' else max(4.5, d - fixed)
+        dur = sh['dur'] if sh['type'] != 'map' else max(4.0, d - fixed)
         ts.append((s, dur)); s += dur
     return ts
 
@@ -364,7 +375,7 @@ def sc_loc(t, d, nar, lead):
         ca = ease((lt - 0.3) / 0.4)
         text(img, (L, BAND_Y + BAND_H + 40), sh['cap'], 50, INK, 'X', 'l', ca, maxw=R - L)
         text(img, (L, BAND_Y + BAND_H + 112), sh['credit'], 24, FAINT, 'M', 'l', ca)
-    chapter(img, t, '03', '어떤 동네인가?')
+    chapter(img, t, num('loc'), '어떤 동네인가?')
     return img
 
 MAPS = {}
@@ -398,47 +409,128 @@ def map_shot(sh, lt, dur):
     text(img, (L, 1508), sh['credit'], 22, FAINT, 'M', 'l', 1)
     return img
 
+def shot_slots(lead, nar, d, ats):
+    """[(시작, 길이)] — 나레이션 비율 at 기준, 0.2초 먼저 들어온다."""
+    st = [max(0.0, lead + nar * a - 0.2) for a in ats]
+    return [(s0, (st[i + 1] if i + 1 < len(st) else d) - s0) for i, s0 in enumerate(st)]
+
+def pick(slots, t):
+    i = max(j for j, (s0, _) in enumerate(slots) if t >= s0 or j == 0); return i, t - slots[i][0], slots[i][1]
+
+def caption(img, cap, sub, ca, y=None):
+    y = BAND_Y + BAND_H + 36 if y is None else y
+    lines = wrap(cap, 46, 'X', R - L)
+    for j, ln in enumerate(lines): text(img, (L, y + j * 60), ln, 46, INK, 'X', 'l', ca)
+    if sub: text(img, (L, y + 4 + len(lines) * 60), sub, 30, SOFT, 'M', 'l', ca, maxw=R - L)
+    return y + 4 + len(lines) * 60 + (48 if sub else 0)
+
+# ---------- 상품: 단지 배치 → 커뮤니티 → 평면
+def sc_prod(t, d, nar, lead):
+    P = C['prod']; shots = P['shots']
+    i, lt, dur = pick(shot_slots(lead, nar, d, [sh['at'] for sh in shots]), t)
+    sh = shots[i]; tn = t - lead
+    img = bg_blur(sh['src'], 0.2, 30)
+    out, tf = band_img(load(sh['src']), lt / max(1.0, dur), sh['kb'])
+    if sh['type'] == 'site':
+        rc = tf(sh['ring'][:2]); ra = ease((lt - 0.5) / 0.4)
+        ring(out, rc, sh['ring'][2] * (0.95 + 0.05 * math.sin(lt * 4)), BR, 6, ra)
+        label_chip(out, (max(24, rc[0] - 200), max(16, rc[1] - sh['ring'][2] - 66)), sh['ring_label'], ease((lt - 0.8) / 0.3), 30)
+        pp = tf(sh['pin']); pulse(out, pp, lt, ease((lt - 1.4) / 0.4), 0.55)
+        label_chip(out, (max(24, pp[0] - 260), pp[1] + 40), sh['pin_label'], ease((lt - 1.7) / 0.3), 30, BG, INK)
+    elif sh['type'] == 'plan':
+        for j, b in enumerate(sh['bays']):
+            ba = ease((lt - 0.4 - j * 0.22) / 0.25); bp = tf(b)
+            dot(out, bp, 26, BR, ba, BG, 4)
+            text(out, (bp[0], bp[1] - 21), str(j + 1), 30, BG, 'K', 'c', ba)
+        ap = tf(sh['alpha']); aa = ease((lt - 1.6) / 0.4)
+        ring(out, ap, 70 * (0.95 + 0.05 * math.sin(lt * 4)), BR, 6, aa)
+        label_chip(out, (ap[0] + 60, ap[1] - 90), '알파룸', ease((lt - 1.8) / 0.3), 32)
+    draw_band(img, out, ease(lt / 0.3))
+    label_chip(img, (L, BAND_Y - 74), sh['chip'], ease((lt - 0.1) / 0.3), 32)
+    ca = ease((lt - 0.4) / 0.4)
+    y = caption(img, sh['cap'], sh.get('sub'), ca)
+    if sh['type'] == 'comm':
+        cx, cy = L, y + 6
+        for j, (fl, name) in enumerate(sh['chips']):
+            at = lead + nar * sh['chip_at'][j]; a = ease((t - at) / 0.3)
+            w = F(32, 'B').getlength(name) + F(24, 'K').getlength(fl) + 66
+            if cx + w > R: cx = L; cy += 70
+            if a > 0:
+                yo = (1 - eo((t - at) / 0.4)) * 16
+                rrect(img, (cx, cy + yo, cx + w, cy + 56 + yo), CARD, 0.92 * a, 28, BR if fl == 'B1' else SOFT, 2, a)
+                text(img, (cx + 20, cy + 14 + yo), fl, 24, BR if fl == 'B1' else SOFT, 'K', 'l', a)
+                text(img, (cx + 34 + F(24, 'K').getlength(fl), cy + 8 + yo), name, 32, INK, 'B', 'l', a)
+            cx += w + 14
+    elif sh.get('chips'):
+        cx, cy = L, y + 6
+        for j, name in enumerate(sh['chips']):
+            a = ease((lt - 1.0 - j * 0.35) / 0.3); w = F(32, 'B').getlength(name) + 44
+            if cx + w > R: cx = L; cy += 70
+            rrect(img, (cx, cy, cx + w, cy + 56), CARD, 0.92 * a, 28, BR, 2, a)
+            text(img, (cx + 22, cy + 8), name, 32, INK, 'B', 'l', a); cx += w + 14
+    text(img, (L, 1508), P['credit'], 22, FAINT, 'M', 'l', 1)
+    chapter(img, t, num('prod'), '단지·평면은 어떤가?')
+    return img
+
+# ---------- 유의사항: 공고문 문구(가격 조건) → 위성(주변 시설) → 배치도(단지 안·경계)
 def sc_trap(t, d, nar, lead):
-    T = C['trap']; tn = t - lead
-    st = [lead + nar * s['at'] for s in T['shots']]
-    if t < st[0] - 0.2:
+    T = C['trap']; S = T.get('site')
+    ats = [T['shots'][0]['at'] - 0.0001] + [s['at'] for s in T['shots']] + ([S['at']] if S else [])
+    i, lt, dur = pick(shot_slots(lead, nar, d, ats), t)
+    if i == 0 and t < lead + nar * T['shots'][0]['at'] - 0.2:
         img = bg_blur('ge3.jpg', 0.16, 32)
         for i, q in enumerate(T['quotes']):
-            y = 420 + i * 470; t0 = lead + nar * q['at']; a = ease((t - t0) / 0.4); k = eo((t - t0) / 0.6)
+            y = 420 + i * 470; t0 = lead + nar * q['at']; a = ease((t - t0) / 0.3); k = eo((t - t0) / 0.45)
             if a <= 0: continue
             yo = (1 - k) * 36
             rrect(img, (L, y + yo, R, y + 420 + yo), CARD, 0.92 * a, 24, HAIR, 2, a)
             label_chip(img, (L + 30, y + 30 + yo), q['chip'], a, 32)
-            # 공고문 문구 + 형광펜
-            words = q['q']; lines = wrap(words, 40, 'M', R - L - 90)
-            hl = eo((t - t0 - 0.5) / 1.0)
+            lines = wrap(q['q'], 40, 'M', R - L - 90)
+            hl = eo((t - t0 - 0.3) / 0.8)
             for j, ln in enumerate(lines):
                 ly = y + 112 + j * 56 + yo; tw = F(40, 'M').getlength(ln)
                 rrect(img, (L + 40, ly + 8, L + 46 + tw * clamp(hl * len(lines) - j), ly + 50), (90, 74, 40), a * 0.9, 6)
                 text(img, (L + 44, ly), ln, 40, INK, 'M', 'l', a)
             text(img, (L + 44, y + 112 + len(lines) * 56 + 6 + yo), '— 입주자모집공고', 24, FAINT, 'M', 'l', a)
-            ra = ease((t - t0 - 1.4) / 0.4)
+            ra = ease((t - t0 - 0.9) / 0.35)
             text(img, (L + 44, y + 330 + yo), '→ ' + q['r'], 42, BR_INK, 'X', 'l', ra, maxw=R - L - 90)
         footer(img, None, 1)
+    elif S and i == len(ats) - 1:
+        img = bg_blur(S['src'], 0.2, 30)
+        out, tf = band_img(load(S['src']), lt / max(1.0, dur), S['kb'])
+        for it in S['items']:
+            at = lead + nar * it['at']; a = ease((t - at) / 0.3)
+            if a <= 0: continue
+            c = tf(it['pt']); cur = t < (lead + nar * S['items'][min(len(S['items']) - 1, S['items'].index(it) + 1)]['at']) or it is S['items'][-1]
+            ring(out, c, it['r'] * (0.9 + 0.1 * math.sin((t - at) * 5)) if cur else it['r'], MINUS, 6 if cur else 4, a * (1.0 if cur else 0.55))
+            dot(out, (c[0] + it['r'] * 0.72, c[1] - it['r'] * 0.72), 24, MINUS, a, BG, 3)
+            text(out, (c[0] + it['r'] * 0.72, c[1] - it['r'] * 0.72 - 20), it['n'], 30, BG, 'K', 'c', a)
+        draw_band(img, out, ease(lt / 0.3))
+        label_chip(img, (L, BAND_Y - 74), S['chip'], ease((lt - 0.1) / 0.3), 32, BG, MINUS)
+        for j, it in enumerate(S['items']):
+            at = lead + nar * it['at']; a = ease((t - at) / 0.3); yo = (1 - eo((t - at) / 0.4)) * 20
+            y = BAND_Y + BAND_H + 34 + j * 98
+            if a <= 0: continue
+            dot(img, (L + 24, y + 26 + yo), 22, MINUS, a, BG, 2)
+            text(img, (L + 24, y + 6 + yo), it['n'], 28, BG, 'K', 'c', a)
+            text(img, (L + 66, y + yo), it['k'], 40, INK, 'X', 'l', a, maxw=R - L - 70)
+            text(img, (L + 66, y + 52 + yo), it['v'], 27, SOFT, 'M', 'l', a, maxw=R - L - 70)
+        text(img, (L, 1508), S['credit'], 22, FAINT, 'M', 'l', 1)
     else:
-        i = 0 if t < st[1] - 0.2 or len(st) < 2 else 1
-        sh = T['shots'][i]; lt = t - (st[i] - 0.2); dur = (st[i + 1] - 0.2 - (st[i] - 0.2)) if i + 1 < len(st) else d - (st[i] - 0.2)
+        sh = T['shots'][i - 1]
         img = bg_blur(sh['src'], 0.2, 30)
-        out, tf = band_img(load(sh['src']), lt / max(1, dur), sh['kb'])
+        out, tf = band_img(load(sh['src']), lt / max(1.0, dur), sh['kb'])
         p = tf(sh['pin']); pulse(out, p, lt, ease((lt - 0.3) / 0.4), 0.7)
-        rc = tf(sh['ring'][:2]); ra = ease((lt - 0.7) / 0.4)
+        rc = tf(sh['ring'][:2]); ra = ease((lt - 0.5) / 0.4)
         for k in range(2):
             ring(out, rc, sh['ring'][2] * (0.85 + 0.15 * k) * (0.9 + 0.1 * math.sin(lt * 4)), MINUS, 6 - 2 * k, ra * (0.95 - 0.4 * k))
         lw = F(32, 'X').getlength(sh['ring_label']) + 36
-        label_chip(out, (min(max(24, rc[0] - lw / 2), W - 200 - lw), max(20, rc[1] - sh['ring'][2] - 70)), sh['ring_label'], ease((lt - 1.0) / 0.3), 32, BG, MINUS, 'l')
+        label_chip(out, (min(max(24, rc[0] - lw / 2), W - 200 - lw), max(20, rc[1] - sh['ring'][2] - 70)), sh['ring_label'], ease((lt - 0.8) / 0.3), 32, BG, MINUS, 'l')
         draw_band(img, out, ease(lt / 0.3))
         label_chip(img, (L, BAND_Y - 74), sh['chip'], ease((lt - 0.1) / 0.3), 32, BG, MINUS)
-        ca = ease((lt - 1.2) / 0.4)
-        lines = wrap(sh['cap'], 46, 'X', R - L)
-        for j, ln in enumerate(lines): text(img, (L, BAND_Y + BAND_H + 36 + j * 60), ln, 46, INK, 'X', 'l', ca)
-        text(img, (L, BAND_Y + BAND_H + 40 + len(lines) * 60), sh['sub'], 30, SOFT, 'M', 'l', ca, maxw=R - L)
+        caption(img, sh['cap'], sh['sub'], ease((lt - 0.7) / 0.4))
         text(img, (L, 1508), sh['credit'], 22, FAINT, 'M', 'l', 1)
-    chapter(img, t, '04', '모집공고 속 유의사항은?')
+    chapter(img, t, num('trap'), '모집공고 속 유의사항은?')
     return img
 
 def wrap(s, px, w, maxw):
@@ -457,30 +549,33 @@ def sc_end(t, d, nar, lead):
     text(img, (CX, 220), C['name'], 120, INK, 'K', 'c', ease(t / 0.4), maxw=880, track=-2)
     text(img, (CX, 372), '1분 총정리', 46, BR, 'X', 'c', ease((t - 0.2) / 0.4))
     E = C['end']
-    rrect(img, (L, 470, R, 1130), (10, 10, 11), 0.9 * ease((t - 0.2) / 0.4), 26, BR, 2, 0.6)
-    for i, (n, k, v) in enumerate(E['rows']):
-        y = 510 + i * 152; a = ease((t - 0.35 - i * 0.22) / 0.35)
+    n = len(E['rows']); gap = 152 if n <= 4 else 124
+    rrect(img, (L, 470, R, 470 + 40 + n * gap - 30), (10, 10, 11), 0.9 * ease((t - 0.2) / 0.4), 26, BR, 2, 0.6)
+    for i, (n_, k, v) in enumerate(E['rows']):
+        n = n_; y = 506 + i * gap; a = ease((t - 0.35 - i * 0.18) / 0.35)
         text(img, (L + 36, y), n, 34, BR, 'K', 'l', a)
         text(img, (L + 100, y - 4), k, 40, INK, 'X', 'l', a)
-        text(img, (L + 100, y + 54), v, 34, SOFT, 'B', 'l', a, maxw=R - L - 140)
-        if i < 3: rrect(img, (L + 36, y + 118, R - 36, y + 120), HAIR, a)
+        text(img, (L + 100, y + 52), v, 32, SOFT, 'B', 'l', a, maxw=R - L - 140)
+        if i < len(E['rows']) - 1: rrect(img, (L + 36, y + gap - 32, R - 36, y + gap - 30), HAIR, a)
     sa = ease((t - 1.4) / 0.4)
-    rrect(img, (L, 1170, R, 1260), None, sa, 45, BR, 3, sa)
-    text(img, (CX, 1190), E['sched'], 40, BR_INK, 'X', 'c', sa, maxw=R - L - 60)
+    rrect(img, (L, 1180, R, 1270), None, sa, 45, BR, 3, sa)
+    text(img, (CX, 1200), E['sched'], 40, BR_INK, 'X', 'c', sa, maxw=R - L - 60)
     qa = ease((t - nar * 0.82) / 0.4); qk = eo((t - nar * 0.82) / 0.6)
-    text(img, (CX, 1300 + (1 - qk) * 30), E['q'], 96, BR, 'K', 'c', qa)
+    text(img, (CX, 1310 + (1 - qk) * 30), E['q'], 96, BR, 'K', 'c', qa)
     footer(img, None, 1)
     return img
 
 # ------------------------------------------------------------------ 타임라인
 NAR = {k: wav_len(TTS + f'{k}.wav') for k in C['narration']}
-SCN = [('open', sc_open, 0.2, 0.9), ('cash', sc_cash, 0.5, 1.4), ('prem', sc_prem, 0.5, 0.6),
-       ('loc', sc_loc, 0.3, 1.0), ('trap', sc_trap, 0.4, 1.5), ('end', sc_end, 0.3, 1.6)]
+SCN = [('open', sc_open, 0.2, 0.6), ('cash', sc_cash, 0.4, 1.0), ('prem', sc_prem, 0.35, 0.3),
+       ('loc', sc_loc, 0.3, 0.7), ('prod', sc_prod, 0.3, 0.9), ('trap', sc_trap, 0.3, 1.3), ('end', sc_end, 0.3, 1.6)]
+SCN = [x for x in SCN if x[0] in C['narration']]
+CH = [k for k, *_ in SCN if k not in ('open', 'end')]   # 진행 막대 순서
 SC = []; cur = 0.0
 for k, fn, lead, tail in SCN:
     d = lead + NAR[k] + tail
-    if k == 'prem': d = max(d, bridge_anim.phase_times(C['bridge'], 0.9, max(6.0, d - 4.4))['end'] + 0.3)
-    if k == 'loc': d = max(d, sum(s.get('dur', 0) for s in C['loc'] if s['type'] != 'map') + 4.5)
+    if k == 'prem': d = max(d, bridge_T()['end'] + 0.2)
+    if k == 'loc': d = max(d, sum(s.get('dur', 0) for s in C['loc'] if s['type'] != 'map') + 4.0)
     SC.append((k, fn, cur, d, lead)); cur += d
 DUR = cur
 XF = 0.3
@@ -490,8 +585,8 @@ def draw_scene(i, t):
     if k == 'open': img = fn(lt, d, NAR[k])
     else: img = fn(lt, d, NAR[k], lead)
     if k != 'open':
-        ci = ['cash', 'prem', 'loc', 'trap'].index(k) if k in ('cash', 'prem', 'loc', 'trap') else 4
-        progress(img, min(ci, 3) if ci < 4 else 4, clamp(lt / d) if ci < 4 else 1.0, ease(lt / 0.4) if k == 'cash' else 1.0)
+        ci = CH.index(k) if k in CH else len(CH)
+        progress(img, ci, clamp(lt / d) if ci < len(CH) else 1.0, ease(lt / 0.4) if k == CH[0] else 1.0)
         sweep(img, lt)
     return img
 
@@ -526,12 +621,14 @@ def build_audio(path):
     out = mus * 0.15 * duck[:, None] + nar[:, None]
     lib = {'whoosh': sfx.whoosh(), 'lowhit': sfx.lowhit(), 'tick': sfx.tick(), 'shimmer': sfx.shimmer(), 'ping': sfx.ping()}
     ev = [(s - 0.3, 'whoosh', 0.16) for s in starts[1:]]
-    ev += [(st['open'][0] + NAR['open'] * f + 0.2, 'tick', 0.22) for f in (0.30, 0.45, 0.60, 0.74)]
+    ev += [(st['open'][0] + NAR['open'] * f + 0.2, 'tick', 0.22) for f in TICKS]
+    if 'prod' in st:
+        ev += [(st['prod'][0] + st['prod'][2] + NAR['prod'] * sh['at'] - 0.25, 'whoosh', 0.1) for sh in C['prod']['shots'][1:]]
     ev += [(reveal, 'lowhit', 0.3), (reveal, 'ping', 0.2)]
     for cd in C['cash']['cards']:
         ev.append((st['cash'][0] + st['cash'][2] + NAR['cash'] * cd['at'] + 0.4, 'tick', 0.2))
-    for s in C['trap']['shots']:
-        ev.append((st['trap'][0] + st['trap'][2] + NAR['trap'] * s['at'] + 0.6, 'lowhit', 0.22))
+    for s in C['trap']['shots'] + C['trap'].get('site', {}).get('items', []):
+        ev.append((st['trap'][0] + st['trap'][2] + NAR['trap'] * s['at'] + 0.4, 'lowhit', 0.2))
     ev += [(DUR - 2.0, 'shimmer', 0.2)]
     for t0, name, g in ev:
         i = int(max(0, t0) * SR); x = lib[name] * g; Lx = min(len(x), n - i)
@@ -553,12 +650,7 @@ def thumbnail(path):
     text(img, (CX, 150), C['region'], 52, BR, 'B', 'c')
     text(img, (CX, 225), C['name'], 168, INK, 'K', 'c', maxw=900, track=-2)
     text(img, (CX, 445), '청약하실 분은 이것만 보세요', 64, INK, 'X', 'c', maxw=880)
-    rrect(img, (95, 1120, 885, 1550), (10, 10, 11), 0.86, 26, BR, 2, 0.6)
-    for i, r in enumerate(C['checklist']):
-        y = 1158 + i * 96
-        rrect(img, (150, y + 8, 200, y + 58), BR, 1, 10)
-        line(img, [(160, y + 34), (172, y + 48), (192, y + 18)], BG, 7, 1)
-        text(img, (226, y), r, 58, INK, 'B', 'l', maxw=630)
+    checklist(img, 1.0, [1.0] * len(C['checklist']))
     rrect(img, (CX - 330, 1562, CX + 330, 1650), BR, 1, 46)
     text(img, (CX, 1574), '청약 전 1분 총정리', 56, BG, 'K', 'c')
     text(img, (24, 1888), '© Mapbox © Maxar', 20, FAINT, 'M', 'l')
