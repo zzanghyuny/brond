@@ -13,8 +13,8 @@
 
 ## 2. 새 공고 찾기
 - 청약홈 APT 분양정보 목록을 브라우저 UA로 받는다: `curl -s -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36' ...` → `<tr data-pbno data-hmno data-honm>` 행.
-- `scripts/applyhome-processed.json`의 `processed`에 없는 아파트 입주자모집공고가 후보(도생·민간임대·무순위·임의공급 제외).
-- **오피스텔도 본다**: `selectOtherLttotPblancListView.do` 목록의 '오피스텔' 행(같은 UA curl). 처리 방법은 CLAUDE.md 오피스텔 규칙(아파트 59㎡ 비교 후 ×0.9). 같은 단지의 아파트 글이 이미 있으면(예: 청라 아크원 푸르지오·중화역 라온프라이빗 센트로·아르뮤제자이) 새 글 없이 processed에만 넣는다. 이미 '공고 전' 글이 있는 단지는 새 글 대신 그 글을 공고 기준으로 갱신(폴더 이름 끝 ` — 수정 발행`).
+- `scripts/applyhome-processed.json`의 `processed`에 없는 **아파트** 입주자모집공고만 후보(청약홈 APT 목록만 본다. 오피스텔·도생·민간임대·무순위·임의공급은 보지 않는다 — Paul 2026.11.28 '아파트만 봐').
+- 이미 '공고 전' 글이 있는 단지는 새 글 대신 그 글을 공고 기준으로 갱신(폴더 이름 끝 ` — 수정 발행`).
 - 한 회차 최대 2단지(접수일이 빠른 순). 나머지는 processed에 넣지 않고 다음 회차로 넘긴다.
 - 새 공고가 없으면 아무것도 바꾸지 않고 6단계 한 줄 보고만 한다.
 
