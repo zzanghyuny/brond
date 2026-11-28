@@ -23,6 +23,16 @@
 
 const POSTS = [
   {
+    id: "brasilia-city-structure",
+    category: "city",
+    tag: "도시이야기 No.004",
+    title: "브라질리아는 왜 비행기 모양일까 — 41개월 만에 세운 수도",
+    date: "2026-11-28",
+    dateLabel: "2026. 11. 28",
+    url: "posts/brasilia-city-structure.html", thumb: "posts/images/brasilia-city-structure/thumb.jpg",
+    preview: `<p>브라질리아는 1956년부터 41개월 만에 텅 빈 내륙 고원에 세운 계획 수도다. 하늘에서 보면 비행기 모양인 이유, 6층 슈퍼쿼드라와 위성 도시, 50만 명 계획에 300만 명이 사는 지금까지 정리했다.</p>`
+  },
+  {
     id: "mexico-city-city-structure",
     category: "city",
     tag: "도시이야기 No.003",

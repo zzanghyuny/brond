@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """도시이야기 나레이션(인준). 사용: python3 dosi_tts.py <에피소드 폴더> LONG S1 S2
-본편 ko-KR-InJoonNeural -4% -2Hz / 쇼츠 같은 목소리 기본 속도(+0%)."""
+본편 ko-KR-InJoonNeural +15% -2Hz / 쇼츠 +20% (2026.11.28 Paul: 예전보다 약 1.2배 빠르게).
+에피소드 script.py의 EP에 tts={'LONG': (rate, pitch), ...}를 넣으면 그 값을 쓴다(호치민·충칭·멕시코시티는 예전 속도 -4%·+0%로 만들었다)."""
 import sys, os, json, subprocess, asyncio, ssl, importlib.util
 CA = '/root/.ccr/ca-bundle.crt'
 if os.path.exists(CA):
@@ -8,7 +9,7 @@ if os.path.exists(CA):
 import edge_tts, edge_tts.communicate as c
 if os.path.exists(CA): c._SSL_CTX = ssl.create_default_context(cafile=CA)
 VOICE = 'ko-KR-InJoonNeural'
-PARAMS = {'LONG': ('-4%', '-2Hz'), 'S1': ('+0%', '+0Hz'), 'S2': ('+0%', '+0Hz')}
+PARAMS = {'LONG': ('+15%', '-2Hz'), 'S1': ('+20%', '+0Hz'), 'S2': ('+20%', '+0Hz')}
 
 def load(ep_dir):
     spec = importlib.util.spec_from_file_location('script', os.path.join(ep_dir, 'script.py')); m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m); return m
@@ -26,7 +27,7 @@ async def one(text, out, rate, pitch):
     raise SystemExit('TTS 실패: ' + text)
 
 async def main(ep_dir, which):
-    S = load(ep_dir); W = S.EP['work']; sc = getattr(S, which); rate, pitch = PARAMS[which]
+    S = load(ep_dir); W = S.EP['work']; sc = getattr(S, which); rate, pitch = S.EP.get('tts', PARAMS).get(which, PARAMS[which])
     os.makedirs(f'{W}tts_{which}', exist_ok=True); meta = []
     for i, s in enumerate(sc):
         for j, ln in enumerate(s['lines']):

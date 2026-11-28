@@ -1,8 +1,10 @@
-# 도시이야기 한 편 만들기 — 런북 (2026.11.27, 충칭 편 기준)
+# 도시이야기 한 편 만들기 — 런북 (2026.11.28 개정, 브라질리아 편 기준)
+
+> **2026.11.28 Paul 새 기준(브라질리아부터, 멕시코시티는 다시 제작):** ① 나레이션을 예전보다 약 1.2배 빠르게 — 본편 `+15% -2Hz`, 쇼츠 `+20%`(`lib/dosi_tts.py` 기본값). ② 실사를 최대한 많이 — Pexels 드론 영상에 더해 **구글 어스 위성·3D 캡처를 장면으로 적극 쓴다**(`('ge', 캡처, 시작배율, 끝배율, 가로이동, 세로이동)` 샷). 지도·표 그래픽 사이사이와 장소 설명에는 그 장소의 구글 어스 화면을 붙인다. 한 장면에 실사·구글 어스·그래픽을 섞지 말고 장면을 나눈다(아래 화면 출처가 장면 단위라서).
 
 한 도시 = **가로 본편 1 + 쇼츠 2 + 썸네일 3 + 사이트 글 1(배포) + 네이버용 HTML 1**.
 사이트 글은 직접 배포하고, 나머지(영상·썸네일·네이버용 HTML·설명란)는 **Google 드라이브 'Aside 작업용 폴더'**에 올린다(GitHub `shorts-upload/`에는 올리지 않는다, Paul 2026.11.27). Aside가 유튜브·네이버에 게시한다.
-기준 예시는 `ep2-chongqing/`(대본 `script.py`, 지도 `geo_prep.py`, 글 `make_posts.py`)이고, 공용 코드는 `lib/`다. 스킬 `beodongsan-city-video`가 보이면 함께 따른다.
+기준 예시는 `ep4-brasilia/`(대본 `script.py`, 지도 `geo_prep.py`, 글 `make_posts.py`; 충칭 `ep2-chongqing/`도 참고)이고, 공용 코드는 `lib/`다. 스킬 `beodongsan-city-video`가 보이면 함께 따른다.
 
 ## 0. 준비
 - 작업 폴더: `/home/claude/work/epN/`, 실사: `/home/claude/media/pexels_<key>/`.
@@ -26,6 +28,12 @@
 - Chrome 확장이 끊겨 있으면 같은 PC의 **Claude 데스크톱 앱 내장 브라우저**(`mcp__remote-devices__Claude_Browser__*`, `preview_start`로 pexels 검색 페이지 열고 `javascript_tool`)로도 같은 방법이 된다(2026.11.28 멕시코시티 편). 세로(1080×1920) 원본은 쇼츠용으로만 쓰고 본편에는 가로 원본만 쓴다.
 - 태평양을 건너는 지도(인천→아메리카)는 도착지 경도에 360을 더한 장소 키(예: `aicm360`)를 geo.json에 넣어 쓴다. 공용 `land_frame`이 육지를 ±360° 옮겨 함께 그린다.
 
+## 2-1. 구글 어스 캡처 (Chrome, 2026.11.28)
+- Claude in Chrome으로 `https://earth.google.com/web/@<위도>,<경도>,<고도>a,<거리>d,35y,<방위>h,<기울기>t,0r`을 연다. 처음 한 번만 왼쪽 위 '지도 스타일 → 깔끔하게(라벨 없음)'로 바꾼다.
+- 장면 종류: 도시 전체(거리 30~80km, 기울기 0), 동네 위에서(2.5~3.5km, 기울기 0), 3D 비스듬히(1~4km, 기울기 62~72, 방위로 방향). 8~10초 기다린 뒤 `computer zoom`(region 0,0~1568,778, scale 1, save_to_disk)으로 저장하고, 위 툴바·아래 출처줄을 잘라(`crop((0,52,1568,708))`) `/home/claude/media/gearth_<key>/gN_<이름>.jpg`로 둔다.
+- 대본에서 `('ge', GE + 'gN_이름.jpg', 1.0, 1.15, 0.0, 0.0)`(5~25% 천천히 다가감)으로 쓰고, 그 장면에 `attrib='Google Earth · <영상 연도> 이미지'`를 단다(화면 왼쪽 아래에 계속 표시). 출처 줄은 `EP['credits_ge']`·`EP['ge_attrib']`로 끝 크레딧·설명란·credits_log.csv에 자동으로 들어간다.
+- 썸네일·사이트 표지에는 쓰지 않는다. 사이트 글 본문 사진으로는 출처를 달아 쓴다.
+
 ## 3. 지도 데이터 (`geo_prep.py`)
 Natural Earth로 시 경계(`ne_admin1`)·비교 영역(남한 `KOR`)·강, OSM Nominatim(`polygon_geojson=1`)으로 구 경계와 장소 좌표, 강은 OSM `waterway` 관계(필요하면 `viewbox`+`bounded=1`)로 받아 도심 창으로 자른다. Nominatim은 1.2초 간격, 629 오류면 쉬었다 재시도. 결과는 `epN-<city>/geo.json`.
 - 강 선은 반드시 구 경계 위에 그린다(레이어 순서: 구 경계 → 강조 구역 → 강).
@@ -40,7 +48,7 @@ Natural Earth로 시 경계(`ne_admin1`)·비교 영역(남한 `KOR`)·강, OSM 
 ## 5. 만들기
 ```
 cd scripts/dosi/lib
-python3 dosi_tts.py ../epN-<city> LONG S1 S2      # 인준(본편 -4% -2Hz, 쇼츠 기본)
+python3 dosi_tts.py ../epN-<city> LONG S1 S2      # 인준(본편 +15% -2Hz, 쇼츠 +20% — 2026.11.28부터)
 python3 render_long.py ../epN-<city> timeline      # 그래픽 장면 길이 확인
 python3 preview_gfx.py ../epN-<city> LONG          # 그래픽 마지막 프레임 모아 보기(잘린 글자·강 위치 확인)
 python3 render_long.py ../epN-<city> check 0:4 5:8 # 장면 몇 개 미리 렌더해 프레임 확인
