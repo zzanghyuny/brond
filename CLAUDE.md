@@ -112,7 +112,10 @@ master 문서는 claude.ai 클라우드 채팅 세션 기준으로 작성돼 일
 ## 어사이드 전달물은 구글 드라이브에 올린다 — GitHub 아님 (2026.11.28 Paul 지시, 항상 적용 — 이 문서·docs·스킬의 이전 'GitHub naver-html/·shorts-upload/로 전달' 규칙보다 우선)
 - 공통 지침: 드라이브 'Aside 작업용 폴더'의 문서 「배포 지침 — 배포 자료는 'Aside 작업용 폴더'로」(원본 https://claude.ai/artifact/LLrfMY7iFbBSB61rRDxDMU). 사이트 글·이미지만 GitHub(main push)로 배포하고, 네이버 원고·쇼츠/클립 영상·썸네일·업로드 정보는 GitHub에 올리지 않는다(`naver-html/`·`shorts-upload/`에 새 파일 커밋 금지, 옛 파일은 그대로).
 - 브동산 청약·미분양 랭킹 자료는 'Aside 작업용 폴더'(id `1_JKxY2Q9wIX0o3e_xXMtNhc5CsRhzbd-`) → **'브동산'(id `1RXISeTG40Mgr79ZE7S11EgwVZhIzGmDw`)** 안에 콘텐츠마다 폴더 하나(`YYYY-MM-DD 단지명 (slug)`, 미분양은 `YYYY-MM-DD 권역 미분양 랭킹 (slug)`, 공고 전 글 갱신이면 끝에 ` — 수정 발행`). 도시이야기는 '브동산 도시이야기'(id `1v1ySIq0dpNMCwkg8SIlAZ4G7wHeqTHpV`), 절차는 `scripts/dosi/RUNBOOK.md`. 게시를 마치면 어사이드가 폴더 이름 앞에 [게시완료]를 붙인다.
-- 파일 이름·구성(청약): `00_읽어주세요.txt`(올릴 순서·네이버 제목·태그·대표사진), `01_네이버원고.html` + `이미지/NN_<파일명>`, `02_쇼츠1-가격퀴즈.mp4`·`02_쇼츠1-썸네일.png`, `03_쇼츠2-숨은한줄.mp4`·`03_쇼츠2-썸네일.png`, `04_쇼츠-업로드-정보.txt`(제목·설명·해시태그·고정 댓글). 세부는 예약 작업 '브동산 자동 글 배포' 지시문이 기준.
+- 파일 이름·구성(청약): `00_읽어주세요.txt`(올릴 순서·네이버 제목·태그·대표사진), `01_네이버원고.html` + `이미지/NN_<파일명>`, `02_쇼츠1-가격퀴즈.mp4`·`02_쇼츠1-썸네일.png`, `03_쇼츠2-숨은한줄.mp4`·`03_쇼츠2-썸네일.png`, `04_쇼츠-업로드-정보.txt`(제목·설명·해시태그·고정 댓글). 세부는 `docs/cheongyak-scheduled-run.md`(청약 예약 회차 지시서)가 기준.
 - 올리는 법: Google Drive 커넥터 `create_file`(폴더는 `application/vnd.google-apps.folder`, 파일은 `disableConversionToGoogleType: true` + `base64Content`에 `sha256:<hex>:<절대경로>` — 작업 폴더나 scratchpad 아래 파일만, /tmp는 안 됨).
 - **크기 한도:** 클라우드 예약 세션에서는 이 커넥터 호출 한 번에 약 3.1MB까지만 실린다(세션 쪽 한도라 Paul 설정으로 바뀌지 않음, 2026.11.28 확인 — 세션 종류에 따라 더 클 수 있으니 실패하면 같은 파일을 다시 보내지 않는다). 3MB 넘는 영상은 ① 세션에 Paul 컴퓨터(`jhi`)의 `G:\내 드라이브\Aside 작업용 폴더`가 연결돼 있으면 `device_commit_files`로 원본을 같은 폴더에 쓰고, ② 연결이 없으면 공통 지침대로 3MB 이하로 다시 인코딩해 올리고(정지 화면으로 화질 확인), 원본은 `SendUserFile`로 대화에도 남긴다.
 - 보고에는 GitHub 링크 대신 드라이브 폴더 주소를 적는다. `naver-html/<slug>.html`은 manifest·쇼핑커넥트·표 PNG 스크립트가 읽는 작업 원본이라 저장소에 남아 있을 수 있지만 어사이드 전달은 드라이브 사본으로 한다.
+
+## 청약 자동 글 배포는 Paul 대화 세션 안에서 돈다 (2026.11.28 Paul 지시)
+- 매일 8:47·14:47(베트남 시간) 예약 메시지가 Paul과의 브동산 대화로 들어와 `docs/cheongyak-scheduled-run.md` 절차대로 새 공고를 처리하고, 결과물은 Paul 컴퓨터의 `G:\내 드라이브\Aside 작업용 폴더\브동산 청약\` 아래 단지 폴더에 바로 저장한다(원본 화질). 보고도 그 대화로 한다. 각 회차가 다음 회차를 예약한다.
