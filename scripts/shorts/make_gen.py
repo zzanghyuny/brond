@@ -260,6 +260,23 @@ CFG = {
         avg=5.31, avg_label='두 보정가격 평균', fair=5.31, fair_label='브동산 적정가 (84m²)', price=5.63, price_label='84A 평균 분양가 (176세대 가중평균)',
         prem='-3,170만', judge='(고평가)', kind='minus'),
  ),
+ 'trivn': dict(
+    dir=_IMGROOT+'trivn-gaheung/', out='trivn-gaheung', slow=True,
+    name='트리븐 가흥', name_px=76, avg=5.11, rng='층별 4.19 ~ 5.57억 · 708세대 가중평균',
+    thumb_style='title', thumb_sub='분양가, 적정할까?',
+    disc='브동산 모형 추정치 · 확정 수익 아님 · 2026.11.27 공고 기준',
+    info=[('1순위', '12월 3일'), ('전매제한', '없음'), ('계약금', '5%'), ('입주', '2030년 2월')],
+    scenes=[('title',3.4),('aerial',5.2),('price',4.8),('bridge',15.0),('layout',4.8),('feature',4.8),('place',5.2),('info',5.6),('end',4.2)],
+    aerial=dict(img='aerial.jpg', t1='경북 영주시 가흥동', l1='지하 2층 ~ 지상 29층 · 8개 동', l2='765세대 · 84㎡ 708세대', src='조감도는 CG이며 실제와 다를 수 있음 · 출처: 공식 홈페이지'),
+    layout=dict(img='siteplan.jpg', title='단지 배치', cap='가운데 정원을 감싼 부채꼴 8개 동', c0=(0.5,0.45), c1=(0.52,0.48), z=(1.0,1.3), box=(840,580)),
+    feature=dict(img='community-b1.jpg', title='지하 커뮤니티', cap='피트니스 · 7타석 골프 · 스터디카페', cap2='CG · 실제와 다를 수 있음 · 출처: 공식 홈페이지', c0=(0.5,0.32), c1=(0.5,0.42), z=(1.0,1.25), box=(800,760)),
+    place=dict(img='location.jpg', title='입지', cap='영주종합터미널 직선 약 0.8km', cap2='KTX 영주역 약 2.4km · 공식 위치도 · 계획 시설 포함', graded=False, box=(840,780)),
+    bridge=dict(title='브동산 적정가는 이렇게', sub='비교단지 84m² 시세(2026.11.27) → 평점·연령 보정 → 평균', vmax=6.0,
+        comps=[dict(name='영주가흥더리브스위트엠', meta='가흥동 · 2021.09 준공 · KB 일반거래가', kb=4.15, mult=1.233, adj=5.12),
+               dict(name='영주자이시그니처', meta='상망동 · 2026.11 준공 · 국토부 실거래', kb=4.76, mult=1.039, adj=4.95)],
+        avg=5.03, avg_label='두 보정가격 평균', fair=5.03, fair_label='브동산 적정가 (84m²)', price=5.11, price_label='평균 분양가 (708세대 가중평균)',
+        prem='-800만', judge='(적정)', kind='even'),
+ ),
 }
 
 def build(key):

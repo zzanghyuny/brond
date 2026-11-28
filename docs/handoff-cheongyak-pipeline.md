@@ -116,7 +116,7 @@ python3 scripts/beodongsan/comp_scan.py <시·구> --area 84      # 키워드 �
 
 ## 7. 쇼츠·네이버 클립·릴스 영상
 
-> **2026.11.28 기준: 단지마다 쇼츠 3편(① 가격 맞히기 `make_quiz.py` ② 공고문 속 숨은 한 줄 `make_viral.py` ③ 1분 총정리 `make_brief.py`)을 만들어 구글 드라이브 단지 폴더에 올린다.** 절차·파일 이름은 `docs/cheongyak-scheduled-run.md` 3·4단계와 `scripts/shorts/README.md`가 기준이고, 아래 7-1~7-2의 나레이션 없는 시네마틱(`make_gen.py`)은 Paul이 따로 요청할 때만 쓴다.
+> **2026.11.28 기준: 단지마다 쇼츠 3편(① 시네마틱 분양가 총정리 `make_gen.py`(아래 7-1~7-2, 단 `slow`+브릿지 판) ② 가격 맞히기 `make_quiz.py` ③ 1분 총정리 `make_brief.py`)을 만들어 구글 드라이브 단지 폴더에 올린다.** 절차·파일 이름은 `docs/cheongyak-scheduled-run.md` 3·4단계와 `scripts/shorts/README.md`가 기준이다. 공고문 속 숨은 한 줄(`make_viral.py`)은 Paul이 따로 요청할 때만.
 
 생성기: `scripts/shorts/` (`README.md` 참고). 코드 렌더링이라 외부 AI 서비스가 필요 없다(Pillow·numpy·ffmpeg·WQY Zen Hei 폰트).
 
